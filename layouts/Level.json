@@ -1,0 +1,1959 @@
+{
+	"name": "Level",
+	"layers": [
+		{
+			"name": "Bkg",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "objetos_fundo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"sid": 769823242941763,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 769823242941763,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 960,
+						"y": 540,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "configuracoes",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 15,
+					"sid": 493042523158829,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 493042523158829,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1796,
+						"y": 125,
+						"width": 111,
+						"height": 111,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.36755297971040446,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "pendulo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 16,
+					"sid": 120124014316439,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 3.75,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 30,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 120124014316439,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 316,
+						"y": 361,
+						"width": 77,
+						"height": 194,
+						"originX": 0.5,
+						"originY": 0.015463917525773162,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ponteiro_hora",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"sid": 963240718086516,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 20,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 963240718086516,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 313.5,
+						"y": 245,
+						"width": 16,
+						"height": 30,
+						"originX": 0.5291666666666667,
+						"originY": 0.9333333333333333,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ponteiro_hora",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 17,
+					"sid": 855710463703259,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Rotate": {
+							"properties": {
+								"speed": 2,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 855710463703259,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 313.5,
+						"y": 244,
+						"width": 13,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.8888888888888888,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Enemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Mad Hatter",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"sid": 926097711855883,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 6,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 926097711855883,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 969,
+						"y": 717,
+						"width": 445,
+						"height": 635,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "mesa",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"sid": 252183340638402,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 252183340638402,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 960,
+						"y": 540,
+						"width": 1922,
+						"height": 482,
+						"originX": 0.5,
+						"originY": -0.12240663900414937,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 449102946239965,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Game",
+			"overriden": 0,
+			"subLayers": [
+				{
+					"name": "Objects",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Deck_Numb_Sprite",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Back",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 8,
+							"sid": 391484371740638,
+							"tags": "",
+							"instanceVariables": {
+								"IsCard": false,
+								"myID": 999
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "horizontal",
+										"wave": "sine",
+										"period": 0.2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 3,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 391484371740638,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1731,
+								"y": 782,
+								"width": 243.38235294117652,
+								"height": 173.1332357247438,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 6.169507587830494,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Deck_Power_Sprite",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Back",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 9,
+							"sid": 478812977642442,
+							"tags": "",
+							"instanceVariables": {
+								"IsCard": false,
+								"myID": ""
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "horizontal",
+										"wave": "sine",
+										"period": 0.2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 3,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 478812977642442,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 174,
+								"y": 772,
+								"width": 239.87422360248448,
+								"height": 167.24651162790698,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0.16994001252198193,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Btn_Stop",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 25,
+							"sid": 991413070611223,
+							"tags": "",
+							"instanceVariables": {
+								"Player": true
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 0.25,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 991413070611223,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1530,
+								"y": 948,
+								"width": 137,
+								"height": 147,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Btn_Stop",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 40,
+							"sid": 317559654629826,
+							"tags": "",
+							"instanceVariables": {
+								"Player": false
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 0.25,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 317559654629826,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 432,
+								"y": 616,
+								"width": 102,
+								"height": 109,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 700841420985412,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
+			"instances": [
+				{
+					"type": "Relic_Slot",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 63,
+					"sid": 107744178976292,
+					"tags": "",
+					"instanceVariables": {
+						"HasRelic": false
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 107744178976292,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1642,
+						"y": 314,
+						"width": 142,
+						"height": 110,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Relic_Slot",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 64,
+					"sid": 227010407916168,
+					"tags": "",
+					"instanceVariables": {
+						"HasRelic": false
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 227010407916168,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1642,
+						"y": 506,
+						"width": 142,
+						"height": 110,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Table_Player",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 7,
+					"sid": 245633864583541,
+					"tags": "",
+					"instanceVariables": {
+						"Cards": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 245633864583541,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 466,
+						"y": 915,
+						"width": 985,
+						"height": 148,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Table_CPU",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 10,
+					"sid": 688171581131504,
+					"tags": "",
+					"instanceVariables": {
+						"Cards": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 688171581131504,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 549,
+						"y": 707.5,
+						"width": 816,
+						"height": 129,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Hand_Player",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"sid": 522251730563473,
+					"tags": "",
+					"instanceVariables": {
+						"PowerMaxLimit": 2,
+						"PowerLimit_Rounds": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 522251730563473,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 960,
+						"y": 1082,
+						"width": 480,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Hand_CPU",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 27,
+					"sid": 345541289253979,
+					"tags": "",
+					"instanceVariables": {
+						"PowerMaxLimit": 2,
+						"PowerLimit_Rounds": 0,
+						"PowersAvailable": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 345541289253979,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 958,
+						"y": 601,
+						"width": 329,
+						"height": 140,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Relic_card",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"sid": 665861918690379,
+					"tags": "",
+					"instanceVariables": {
+						"Order": 4,
+						"ChoosenOne": false
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 1,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 665861918690379,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1080,
+						"y": -222,
+						"width": 612.0450033090668,
+						"height": 397.5111111111111,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 427009402370981,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HUD",
+			"overriden": 0,
+			"subLayers": [
+				{
+					"name": "Turn",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Bkg_Turn_Txt",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 23,
+							"sid": 434624741805822,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 434624741805822,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 958,
+								"y": 529,
+								"width": 1998,
+								"height": 281,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									0.7
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Text_Turn",
+							"properties": {
+								"text": "Nobody won this round. No poins award for both players.",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 56,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": false,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 24,
+							"sid": 409288641912338,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 409288641912338,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 3,
+								"y": 458,
+								"width": 1926,
+								"height": 143,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 181092800968336,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Power_Enemy",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Bkg_Power_Txt",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 38,
+							"sid": 104002287932110,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 104002287932110,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 959,
+								"y": 482,
+								"width": 889,
+								"height": 487,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									0.7
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Text_Power",
+							"properties": {
+								"text": "[u]Card 7[/u]\n\n\nGet the card 7 if it's in the deck.",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 39,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": false,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 39,
+							"sid": 930223321202259,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.2,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 930223321202259,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 750,
+								"y": 248,
+								"width": 639,
+								"height": 467,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 359441906278237,
+					"effectTypes": [],
+					"isInitiallyVisible": false,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Power_Player",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Bkg_Power_Txt",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 36,
+							"sid": 689709670509508,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 689709670509508,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 955,
+								"y": 494,
+								"width": 668,
+								"height": 487,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									0.7
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Text_Power",
+							"properties": {
+								"text": "[u]Card 7[/u]\n\n\nGet the card 7 if it's in the deck.",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 39,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": false,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 37,
+							"sid": 339730167081802,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.2,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 339730167081802,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 636,
+								"y": 260,
+								"width": 639,
+								"height": 467,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 899299254535831,
+					"effectTypes": [],
+					"isInitiallyVisible": false,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Choose_Relics",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Relic_card",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "drink_me",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 32,
+							"sid": 196404799243243,
+							"tags": "",
+							"instanceVariables": {
+								"Order": 1,
+								"ChoosenOne": false
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.5,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 196404799243243,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 326,
+								"y": 726,
+								"width": 590.2409000661813,
+								"height": 355.8488888888889,
+								"originX": 0.49967595593000647,
+								"originY": 0.5005370569280344,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Relic_card",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "crown",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 33,
+							"sid": 852161668628734,
+							"tags": "",
+							"instanceVariables": {
+								"Order": 2,
+								"ChoosenOne": false
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 1,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 852161668628734,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 960,
+								"y": 600,
+								"width": 590.2409000661813,
+								"height": 355.8488888888889,
+								"originX": 0.49967595593000647,
+								"originY": 0.5005370569280344,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Relic_card",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "card_13",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 34,
+							"sid": 487621148699590,
+							"tags": "",
+							"instanceVariables": {
+								"Order": 3,
+								"ChoosenOne": false
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 1.5,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 487621148699590,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1596,
+								"y": 728,
+								"width": 590.2409000661813,
+								"height": 355.8488888888889,
+								"originX": 0.49967595593000647,
+								"originY": 0.5005370569280344,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 313972057459966,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Pause",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Bkg_Common",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 56,
+							"sid": 636598639240370,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 636598639240370,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 961,
+								"y": 539.5,
+								"width": 1955,
+								"height": 1142,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									0.7
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "carta_opt_bg",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 57,
+							"sid": 110390410305646,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 110390410305646,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 960,
+								"y": 482,
+								"width": 462,
+								"height": 543,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Btn_Sound",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 58,
+							"sid": 408116881887369,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 408116881887369,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 960,
+								"y": 356,
+								"width": 138,
+								"height": 126,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Btn_Pause",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Menu",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 59,
+							"sid": 313699089213168,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 313699089213168,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 960,
+								"y": 612,
+								"width": 213,
+								"height": 79,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Btn_Pause",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Resume",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 60,
+							"sid": 984132849555935,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 984132849555935,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 960,
+								"y": 490,
+								"width": 280,
+								"height": 79,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 335448672371208,
+					"effectTypes": [],
+					"isInitiallyVisible": false,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Relic_Info",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [],
+					"sid": 698478137541974,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
+			"instances": [],
+			"sid": 173167528290621,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
+	"sid": 932921744102466,
+	"nonworld-instances": [
+		{
+			"type": "A_Deck_Numb",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 2,
+			"sid": 386533856518711,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "A_Deck_Power",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 5,
+			"sid": 862636602044243,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "A_EnemyPowers",
+			"properties": {
+				"width": 3,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 28,
+			"sid": 735428678194464,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "A_Relics",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 62,
+			"sid": 571191488393481,
+			"tags": "",
+			"instanceVariables": {}
+		}
+	],
+	"effectTypes": [],
+	"width": 1920,
+	"height": 1080,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "E_Level"
+}

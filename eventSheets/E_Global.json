@@ -1,0 +1,416 @@
+{
+	"name": "E_Global",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Deck_Numb_Pos_X",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 888796770012457
+		},
+		{
+			"eventType": "variable",
+			"name": "Deck_Numb_Pos_Y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 627155336212964
+		},
+		{
+			"eventType": "variable",
+			"name": "Deck_Power_Pos_X",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 189647784400793
+		},
+		{
+			"eventType": "variable",
+			"name": "Deck_Power_Pos_Y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 765911724488861
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 928677740867159
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 973655848264500,
+					"parameters": {
+						"layer": "\"Pause\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 900568670899167,
+					"parameters": {
+						"layer": "\"Choose_Relics\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 627677354337502,
+					"parameters": {
+						"tag": "\"numb_deck\"",
+						"file": "Number_Deck.json"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 580005296662856,
+					"parameters": {
+						"tag": "\"power_deck\"",
+						"file": "Power_Deck_Base.json"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 870162037489120,
+					"parameters": {
+						"tag": "\"relics\"",
+						"file": "Relics.json"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 316611322793635,
+					"parameters": {
+						"tag": "\"en-US\"",
+						"file": "en-US.json"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 660346023376797,
+					"parameters": {
+						"group-name": "\"Player's Turn / Actions\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 962006851602722,
+					"parameters": {
+						"variable": "PlayerPoints",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 615287858477496,
+					"parameters": {
+						"variable": "EnemyPoints",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 581706619779287,
+					"parameters": {
+						"variable": "Match",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 275619709824005,
+					"parameters": {
+						"variable": "GameRound",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 250764183402098,
+					"parameters": {
+						"variable": "Turn",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 970582726038929,
+					"parameters": {
+						"variable": "MatchReady",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 249049512380530,
+					"parameters": {
+						"variable": "EnemyName",
+						"value": "\"Mad Hatter\""
+					}
+				},
+				{
+					"id": "shuffle",
+					"objectClass": "A_Deck_Power",
+					"sid": 372424876515354,
+					"parameters": {
+						"axis": "x"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_Player",
+					"sid": 876826357134797,
+					"parameters": {
+						"instance-variable": "PowerLimit_Rounds",
+						"value": "PlayerPowerLimit_Rounds"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_CPU",
+					"sid": 200847449511769,
+					"parameters": {
+						"instance-variable": "PowerLimit_Rounds",
+						"value": "EnemyPowerLimit_Rounds"
+					}
+				}
+			],
+			"sid": 625864370784634
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 502996752325712,
+					"parameters": {
+						"object": "Buttons"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Buttons",
+					"sid": 969009916134735,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 440954881551929,
+					"parameters": {
+						"cursor-style": "pointer"
+					}
+				}
+			],
+			"sid": 213346950500442,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 823599249979308,
+							"parameters": {
+								"layer": "Buttons.LayerName"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 212179975521762
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 500732860801932
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Buttons",
+					"sid": 426956371413262,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 273063803143420,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 184305952900509,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 280025078679408,
+							"parameters": {
+								"layer": "Buttons.LayerName"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 124187949463529
+						}
+					],
+					"actions": [],
+					"sid": 426976663799357
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 367891287314897,
+					"parameters": {
+						"tag": "\"numb_deck\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_Deck_Numb",
+					"sid": 570713917589698,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 153032627006521
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 207013848657192,
+					"parameters": {
+						"tag": "\"power_deck\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_Deck_Power",
+					"sid": 741102925130122,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 118326133965623
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 264060348314272,
+					"parameters": {
+						"tag": "\"relics\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_Relics",
+					"sid": 374159879062772,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 682934471259331
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 529290463147432,
+					"parameters": {
+						"tag": "\"en-US\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load-from-json",
+					"objectClass": "Internationalization",
+					"sid": 642568730049308,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-locale",
+					"objectClass": "Internationalization",
+					"sid": 540429287964476,
+					"parameters": {
+						"locale": "\"en-US\""
+					}
+				}
+			],
+			"sid": 460365901085646
+		}
+	],
+	"sid": 466221253102104
+}

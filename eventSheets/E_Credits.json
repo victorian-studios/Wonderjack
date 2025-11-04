@@ -1,0 +1,232 @@
+{
+	"name": "E_Credits",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "E_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 337688675100564,
+					"parameters": {
+						"object": "Victorian_Studio"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Victorian_Studio",
+					"sid": 508010829591036,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 514998483830038,
+					"parameters": {
+						"cursor-style": "pointer"
+					}
+				}
+			],
+			"sid": 491471775789843
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 600403245591419
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Victorian_Studio",
+					"sid": 131458108755872,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 636159663958786,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 825352099726035
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 324456340834093,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Victorian_Studio"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 469205062474788,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Victorian_Studio",
+							"sid": 407151564569894,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "open-url-in-new-window",
+							"objectClass": "Browser",
+							"sid": 327838130164798,
+							"parameters": {
+								"url": "\"https://www.behance.net/anabarata1\"",
+								"tag": "\"NewWindow\""
+							}
+						}
+					],
+					"sid": 190865956349307
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Victorian_Studio",
+							"sid": 839742865895106,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "open-url-in-new-window",
+							"objectClass": "Browser",
+							"sid": 320408581667984,
+							"parameters": {
+								"url": "\"https://vector-gamer.itch.io/\"",
+								"tag": "\"NewWindow\""
+							}
+						}
+					],
+					"sid": 143518098570245
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Victorian_Studio",
+							"sid": 807357907293075,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "open-url-in-new-window",
+							"objectClass": "Browser",
+							"sid": 523582617431104,
+							"parameters": {
+								"url": "\"https://ana-vss-caldeira.itch.io/\"",
+								"tag": "\"NewWindow\""
+							}
+						}
+					],
+					"sid": 517869074880642
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Victorian_Studio",
+							"sid": 379233027740477,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "open-url-in-new-window",
+							"objectClass": "Browser",
+							"sid": 873978741778244,
+							"parameters": {
+								"url": "\"https://linktr.ee/VictorianStudio\"",
+								"tag": "\"NewWindow\""
+							}
+						}
+					],
+					"sid": 330684137385117
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 186768801877126,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Back"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 618938064373206,
+					"parameters": {
+						"audio-file": "button_2_sfx",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 212794346562397,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 849824271965112
+		}
+	],
+	"sid": 530830677248360
+}

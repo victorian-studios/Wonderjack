@@ -1,0 +1,156 @@
+{
+	"name": "Enemy",
+	"plugin-id": "Sprite",
+	"sid": 591549721682591,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 557345644747675
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 220623070596288
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 900120424906998
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 648,
+						"height": 573,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2524856,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 348825122474876,
+				"name": "Cheshire Cat",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 695,
+						"height": 991,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5685176,
+						"collisionPoly": {
+							"points": [
+								0.376978417266187,
+								0.007063572149344097,
+								0.9251798561151079,
+								0.43491422805247226,
+								0.9971223021582734,
+								0.557013118062563,
+								0.8877697841726618,
+								0.7033299697275479,
+								0.33237410071942447,
+								0.9848637739656912,
+								0.15683453237410072,
+								0.9788092835519678,
+								0.0057553956834532375,
+								0.7588294651866802,
+								0.025899280575539568,
+								0.1584258324924319,
+								0.08776978417266187,
+								0.08476286579212916
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 437171370379806,
+				"name": "Mad Hatter",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 673,
+						"height": 967,
+						"originX": 0.5022288261515602,
+						"originY": 0.5346432264736298,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1328032,
+						"collisionPoly": {
+							"points": [
+								0.4947994056463596,
+								0.002068252326783868,
+								0.5809806835066865,
+								0.04446742502585315,
+								0.9851411589895989,
+								0.3960703205791106,
+								0.9970282317979198,
+								0.5853154084798345,
+								0.8023774145616642,
+								0.9358841778697001,
+								0.6389301634472511,
+								0.9948293691830404,
+								0.49925705794947994,
+								0.9979317476732161,
+								0.29569093610698366,
+								0.9720785935884177,
+								0.04011887072808321,
+								0.8583247156153051,
+								0.0014858841010401188,
+								0.7156153050672183,
+								0.01188707280832095,
+								0.42916235780765255,
+								0.3967310549777117,
+								0.045501551189245086
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 716160620818563,
+				"name": "Red Queen",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

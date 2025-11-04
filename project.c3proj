@@ -1,0 +1,457 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 45802,
+	"name": "GameJamPlus (2025)",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Internationalization",
+			"name": "Internationalization",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "hc2xnh35e6q",
+	"objectTypes": {
+		"items": [
+			"A_Deck_Numb",
+			"AJAX",
+			"Mouse",
+			"A_Deck_Power",
+			"Keyboard",
+			"Deck_Numb_Sprite",
+			"Deck_Power_Sprite",
+			"Table_Player",
+			"Table_CPU",
+			"Card_Numb",
+			"Card_Power",
+			"mesa",
+			"objetos_fundo",
+			"configuracoes",
+			"pendulo",
+			"ponteiro_hora",
+			"Hand_Player",
+			"Browser",
+			"Relics",
+			"Enemy",
+			"Bkg_Turn_Txt",
+			"Text_Turn",
+			"Btn_Stop",
+			"Hand_CPU",
+			"A_EnemyPowers",
+			"Card_Power_Enemy",
+			"Relic_card",
+			"Internationalization",
+			"Bkg_Power_Txt",
+			"Text_Power",
+			"creditos",
+			"Victorian_Studio",
+			"Btn_Back",
+			"menu_bg",
+			"menu_poste",
+			"placa_",
+			"logo",
+			"tutorial",
+			"Bkg_Common",
+			"carta_opt_bg",
+			"Btn_Sound",
+			"Btn_Pause",
+			"Audio",
+			"A_Relics",
+			"Relic_Slot",
+			"Text",
+			"AliceMenu"
+		],
+		"subfolders": []
+	},
+	"functionsName": "Funções",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Buttons"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Level",
+			"Bank",
+			"Credits",
+			"Menu"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"E_Level",
+			"E_Global",
+			"E_Menu",
+			"E_Credits"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "bell.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 177333777014748,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu-select-button-182476-_mp3cut.net_.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 789556355012303,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "flipcard-91468.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 615037272957624,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "button_2_sfx.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 327143524225941,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "button_select_sfx.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 463872688116712,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "494768__alderman2k__error.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 618050194199641,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "enchanted-fantasy-356791.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 141033192323767,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "OfenbacherSchwabCAT.woff",
+					"type": "application/font-woff",
+					"sid": 245829204053375,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Berry Rotunda.woff",
+					"type": "application/font-woff",
+					"sid": 803043078209512,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 281187882932706,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 279743173225910,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 455983699093305,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 510036844808489,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 443435514517094,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 361669216806928,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 994167450340678,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "Number_Deck.json",
+					"type": "application/json",
+					"sid": 913405336427601,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Power_Deck_Base.json",
+					"type": "application/json",
+					"sid": 857063601346542,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "en-US.json",
+					"type": "application/json",
+					"sid": 502566048440624,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Relics.json",
+					"type": "application/json",
+					"sid": 275220845934895,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Linha do tempo 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Fluxograma 1"
+		],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"uidAllocationMode": "increment",
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"scriptsType": "module"
+	},
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": "Menu"
+}

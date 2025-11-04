@@ -1,0 +1,521 @@
+{
+	"name": "E_Menu",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "E_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 303601096552291
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "tutorial",
+					"sid": 235233602932283,
+					"parameters": {
+						"y": "-600"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Btn_Back",
+					"sid": 145960894371548,
+					"parameters": {
+						"x": "-200"
+					}
+				}
+			],
+			"sid": 156210455576702,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Animation Intro"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "logo",
+							"sid": 640304741259995,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "1500",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "menu_poste",
+							"sid": 636524498311930,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "682",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "AliceMenu",
+							"sid": 599510157604962,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "0",
+								"end-y": "0",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 666472252999667
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 722095562880814,
+							"parameters": {
+								"tag": "\"main\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 252559608030213,
+							"parameters": {
+								"audio-file": "enchanted-fantasy-356791",
+								"loop": "looping",
+								"volume": "-15",
+								"stereo-pan": "0",
+								"tag-optional": "\"main\""
+							}
+						}
+					],
+					"sid": 172243147882523
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 774074465596806,
+					"parameters": {
+						"object": "placa_"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 559339036084278,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "placa_",
+							"sid": 722215092490907,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"grow\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 999155688274870,
+							"parameters": {
+								"layer": "\"Tutorial\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "placa_",
+							"sid": 745710030696788,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"grow\"",
+								"property": "size",
+								"end-x": "Self.my_width * 1.1",
+								"end-y": "Self.my_height * 1.1",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 716171889978039
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 167636746008395
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 488622605900650
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "placa_",
+					"sid": 355131477669471,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"normal\"",
+						"property": "size",
+						"end-x": "Self.my_width",
+						"end-y": "Self.my_height",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 915803860415737
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 635015740004574,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "placa_"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 919144028828144,
+					"parameters": {
+						"layer": "\"Tutorial\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 997698899752205,
+					"parameters": {
+						"audio-file": "menu-select-button-182476-_mp3cut.net_",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 958451120717711,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "placa_",
+							"sid": 457251139656219,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 819665893742362,
+							"parameters": {
+								"layout": "Level"
+							}
+						}
+					],
+					"sid": 191887291043306
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "placa_",
+							"sid": 233568626771760,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 629472617206527,
+							"parameters": {
+								"layer": "\"Tutorial\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-fade-in-time",
+							"objectClass": "Bkg_Power_Txt",
+							"sid": 998535153109590,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-in-time": "0.5"
+							}
+						},
+						{
+							"id": "set-fade-out-time",
+							"objectClass": "Bkg_Power_Txt",
+							"sid": 150184603284067,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-out-time": "0"
+							}
+						},
+						{
+							"id": "restart-fade",
+							"objectClass": "Bkg_Power_Txt",
+							"sid": 628995593935033,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 581363036709701,
+							"parameters": {
+								"seconds": "0.25",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "tutorial",
+							"sid": 196586448720865,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"down\"",
+								"property": "offsetY",
+								"end-value": "531",
+								"time": "0.4",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Btn_Back",
+							"sid": 526624582992384,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "190",
+								"time": "0.4",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 572956527465628
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "placa_",
+							"sid": 952541992493834,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 826326671820679,
+							"parameters": {
+								"layout": "Credits"
+							}
+						}
+					],
+					"sid": 785060712113452
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 217999440552311,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Back"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 152657439879012,
+					"parameters": {
+						"audio-file": "button_2_sfx",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "Bkg_Power_Txt",
+					"sid": 789632102476139,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "Bkg_Power_Txt",
+					"sid": 445115372907058,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "0.2"
+					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "Bkg_Power_Txt",
+					"sid": 784889495718023,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "tutorial",
+					"sid": 485608285069341,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"down\"",
+						"property": "offsetY",
+						"end-value": "-600",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "Btn_Back",
+					"sid": 669450058170401,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetX",
+						"end-value": "-200",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 944280104927302,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 715850162727911,
+					"parameters": {
+						"layer": "\"Tutorial\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 115917713396352
+		}
+	],
+	"sid": 468746933081532
+}

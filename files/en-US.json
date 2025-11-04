@@ -1,0 +1,44 @@
+{
+	"locale": "en-US",
+	"strings": {
+        "common": {
+            "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",
+            "power": "[u]The Power Deck[/u]: \n\nDraw 1 card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
+            "number" : "[u]The Number Deck[/u] \n\nDraw 1 card and place it on the board.",
+            "numbers": "Alice: {0} / {1}: {2}. {3} won this round!",
+            "points": "Alice: {0} / {1}: {2}",
+            "new_round": "Round {0} starting now!",
+            "new_match": "New opponent appears: {0}",
+            "tie": "Nobody won this round.",
+            "looser": "You lost this match... that's unfortunate.",
+            "winner": "You won this match. Keep going!",
+            "end": "You've won all the 3 opponents! Congratulations!",
+            "revive": "You got a second chance! But your relic was destroyed."
+        },
+		"relics": {
+            "card_13": "",
+            "cat_eye" : "",
+            "watch" : "",
+            "eat_me" : "",
+            "crown" : "",
+            "spear" : "",
+            "tea" : "",
+            "drink_me" : "",
+            "hat" : ""
+        },
+		"powers": {
+			"card": "[u]Card {0}[/u]\n\n\nGet the card {0} if it's in the deck.",
+            "protect": "",
+            "impulse": "[u]Impulse[/u]\n\n\nGet the highest card number from the deck",
+            "gift": "[u]Gift[/u]\n\n\nGive the highest card number to your opponent.",
+            "return": "[u]Return[/u]\n\n\nDiscard the last number card to the end of the deck.",
+            "compel": "[u]Compel[/u]\n\n\nForces your opponent to discard the last number card to the end of the deck.",
+            "exchange": "",
+            "secretexchange": "",
+            "menu": "",
+            "hurricane": "[u]Hurricane[/u]\n\n\nBoth players discard all their not hidden number cards to the end of the deck.",
+            "time": "",
+            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the first 2 number cards of the deck."
+        }
+    }
+}

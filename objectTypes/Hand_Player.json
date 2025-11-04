@@ -1,0 +1,55 @@
+{
+	"name": "Hand_Player",
+	"plugin-id": "Sprite",
+	"sid": 814978674778296,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "PowerMaxLimit",
+			"type": "number",
+			"desc": "Limite máximo de cartas de poder na mão",
+			"show": true,
+			"sid": 396237210925042
+		},
+		{
+			"name": "PowerLimit_Rounds",
+			"type": "number",
+			"desc": "Quantas cartas de poder podem ser compradas nesta rodada / se atualiza de acordo com a variavel global",
+			"show": true,
+			"sid": 456435005577298
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 439378,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 956818934450199,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

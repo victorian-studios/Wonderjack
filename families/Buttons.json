@@ -1,0 +1,14 @@
+{
+	"name": "Buttons",
+	"plugin-id": "Sprite",
+	"sid": 901731045629822,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"configuracoes",
+		"Relics",
+		"Btn_Back",
+		"Btn_Pause"
+	]
+}
