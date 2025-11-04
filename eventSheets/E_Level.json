@@ -246,6 +246,26 @@
 			"sid": 738430913021742
 		},
 		{
+			"eventType": "variable",
+			"name": "Relic_Tea",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true - comprar poder dá um turno extra",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 493573139906383
+		},
+		{
+			"eventType": "variable",
+			"name": "Relic_Hat",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true - descartar e comprar um novo número após estourar",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 697730505531139
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -9004,6 +9024,44 @@
 									"sid": 888413696469678
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Reliíquia cat_eye"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Relics",
+									"sid": 573220368692878,
+									"parameters": {
+										"animation": "\"cat_eye\""
+									}
+								},
+								{
+									"id": "is-effect-enabled",
+									"objectClass": "Relics",
+									"sid": 123876848574708,
+									"parameters": {
+										"effect": "\"Tint\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Relic Feedback",
+									"sid": 483160550612425,
+									"parameters": [
+										"Relics.AnimationName",
+										false,
+										true,
+										false
+									]
+								}
+							],
+							"sid": 686454522477827
 						}
 					]
 				},
@@ -9138,43 +9196,176 @@
 							"sid": 962373109647941
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 476168217348562,
+					"children": [
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 941583535240789,
-							"parameters": {
-								"variable": "PowerDone",
-								"value": "false"
-							}
-						},
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 851560453966182,
-							"parameters": {
-								"type": "log",
-								"message": "\"Passando o turno após o poder\""
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 893587054918104,
-							"parameters": {
-								"seconds": "1.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"callFunction": "Change Turn",
-							"sid": 227457285245745,
-							"parameters": [
-								"0"
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 101369794074312,
+									"parameters": {
+										"variable": "Turn",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 911987384764344,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 126580658730483,
+											"parameters": {
+												"variable": "Relic_Tea"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Relic Feedback",
+											"sid": 352821071865634,
+											"parameters": [
+												"\"tea\"",
+												true,
+												false,
+												true
+											]
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 599935184571890,
+											"parameters": {
+												"variable": "Relic_Tea",
+												"value": "false"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 993283020443655,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 816002933787666,
+											"parameters": {
+												"variable": "Stop_Turn",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 814720642229363
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 572725388282609
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 766080125401622,
+											"parameters": {
+												"variable": "PowerDone",
+												"value": "false"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 856851285600955,
+											"parameters": {
+												"type": "log",
+												"message": "\"Passando o turno após o poder\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 533355206166804,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "Change Turn",
+											"sid": 549714023103231,
+											"parameters": [
+												"0"
+											]
+										}
+									],
+									"sid": 834705427994129
+								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 539446115514605
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 518774720386544,
+									"parameters": {
+										"variable": "PowerDone",
+										"value": "false"
+									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 801657097848727,
+									"parameters": {
+										"type": "log",
+										"message": "\"Passando o turno após o poder\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 413523955517645,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "Change Turn",
+									"sid": 178183071383777,
+									"parameters": [
+										"0"
+									]
+								}
+							],
+							"sid": 552644880387265
 						}
-					],
-					"sid": 476168217348562
+					]
 				},
 				{
 					"eventType": "group",
@@ -10152,25 +10343,77 @@
 										"0",
 										false
 									]
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 243180475826165,
-									"parameters": {
-										"seconds": "1.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"callFunction": "Change Turn",
-									"sid": 675664750304998,
-									"parameters": [
-										"2"
-									]
 								}
 							],
-							"sid": 995750056978360
+							"sid": 995750056978360,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 861343509768504,
+											"parameters": {
+												"variable": "Relic_Hat"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 302810149388694,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "Count_Numbers",
+											"sid": 854391058424135
+										}
+									],
+									"sid": 869033486187555,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [],
+											"sid": 678209370400328
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 628625468046031
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 909284653746658,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "Change Turn",
+											"sid": 476767593526617,
+											"parameters": [
+												"2"
+											]
+										}
+									],
+									"sid": 517833181957234
+								}
+							]
 						},
 						{
 							"eventType": "comment",
@@ -10245,7 +10488,7 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 330098671871805,
+									"sid": 210736134425241,
 									"parameters": {
 										"seconds": "1.5",
 										"use-timescale": true
@@ -10253,7 +10496,7 @@
 								},
 								{
 									"callFunction": "Change Turn",
-									"sid": 416036242211396,
+									"sid": 930765094667440,
 									"parameters": [
 										"2"
 									]
@@ -10744,7 +10987,17 @@
 							],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 867533931231914,
+									"parameters": {
+										"type": "log",
+										"message": "Specefic = \"\" ? \"Ação aleatória\" : \"Ação específica: \"&Specefic"
+									}
+								}
+							],
 							"sid": 630529936140089,
 							"children": [
 								{
@@ -10849,7 +11102,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 146212935431881,
+															"sid": 519370343364086,
 															"parameters": {
 																"variable": "Enemy_RNG",
 																"comparison": 3,
@@ -10884,7 +11137,7 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 424876838942295,
+															"sid": 113522059778236,
 															"parameters": {
 																"variable": "Enemy_RNG",
 																"comparison": 4,
@@ -13230,7 +13483,7 @@
 									"type": "string",
 									"initialValue": "",
 									"comment": "",
-									"isStatic": false,
+									"isStatic": true,
 									"isConstant": false,
 									"sid": 482390075263413
 								},
@@ -13480,7 +13733,17 @@
 													"isInverted": true
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 616799654037200,
+													"parameters": {
+														"type": "log",
+														"message": "power_id & \" / \" & int ( tokenat (power_id, 2, \"-\") )"
+													}
+												}
+											],
 											"sid": 299147585242876,
 											"children": [
 												{
@@ -14734,6 +14997,106 @@
 								}
 							],
 							"sid": 533913830343034
+						},
+						{
+							"eventType": "comment",
+							"text": "RELICS",
+							"text-color": [
+								1,
+								0.9686274509803922,
+								0,
+								1
+							],
+							"background-color": [
+								0.9607843137254902,
+								0.058823529411764705,
+								0.058823529411764705,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 112878421605019,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Watch"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relics",
+											"sid": 255253005617716,
+											"parameters": {
+												"animation": "\"watch\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Relics",
+											"sid": 981565761215347,
+											"parameters": {
+												"instance-variable": "Used"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Relic Feedback",
+											"sid": 531956619891293,
+											"parameters": [
+												"\"watch\"",
+												false,
+												true,
+												false
+											]
+										}
+									],
+									"sid": 215719086251236
+								},
+								{
+									"eventType": "comment",
+									"text": "Tea"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relics",
+											"sid": 697379490080691,
+											"parameters": {
+												"animation": "\"tea\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Relics",
+											"sid": 234248221724071,
+											"parameters": {
+												"instance-variable": "Used"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Relic Feedback",
+											"sid": 328461306393258,
+											"parameters": [
+												"\"tea\"",
+												false,
+												true,
+												false
+											]
+										}
+									],
+									"sid": 585717551968552
+								}
+							]
 						}
 					]
 				}
@@ -14977,6 +15340,123 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
+									"sid": 182116824051915,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"tea\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 264554689900389,
+									"parameters": {
+										"variable": "PlayerPowerLimit_Rounds",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 881923423955976,
+									"parameters": {
+										"variable": "Relic_Tea",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 644891102438790
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 931585493442697,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"hat\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 603497653295910,
+									"parameters": {
+										"variable": "Relic_Hat",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 976498430356983
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 812555312805564,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"eat_me\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Hand_Player",
+									"sid": 264675257509896,
+									"parameters": {
+										"instance-variable": "PowerMaxLimit",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 529000960828825
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 671796318264833,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"watch\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Hand_Player",
+									"sid": 611607738310939,
+									"parameters": {
+										"instance-variable": "PowerMaxLimit",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 496747612488424
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
 									"sid": 516640104963638,
 									"parameters": {
 										"variable": "relic_id",
@@ -15007,6 +15487,310 @@
 								}
 							],
 							"sid": 196600768197939
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 776580645286515,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"tea\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Hand_CPU",
+									"sid": 999764361191651,
+									"parameters": {
+										"instance-variable": "PowerMaxLimit",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 675282701400419
+						}
+					]
+				},
+				{
+					"functionName": "Relic Feedback",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "anim",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 141198817099942
+						},
+						{
+							"name": "Use",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "para escurecer a relíquia e torná-la inutilizável novamente",
+							"sid": 496923648550372
+						},
+						{
+							"name": "Reset",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 612929124982413
+						},
+						{
+							"name": "Flash",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "para piscar a relíquia",
+							"sid": 487531563557121
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 826367960306565,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 164549102661091,
+									"parameters": {
+										"variable": "Reset"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 924573949025160,
+									"parameters": {
+										"object": "Relics",
+										"expression": "Relics.AnimationName",
+										"comparison": 0,
+										"value": "anim"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Relics",
+									"sid": 296086269059728,
+									"parameters": {
+										"instance-variable": "Used",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Relics",
+									"sid": 290441477695535,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"Tint\""
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Relics",
+									"sid": 468960430737553,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 426931629317758
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 968153672588590,
+									"parameters": {
+										"variable": "Use"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 516589925123531,
+									"parameters": {
+										"object": "Relics",
+										"expression": "Relics.AnimationName",
+										"comparison": 0,
+										"value": "anim"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Relics",
+									"sid": 559908625581019,
+									"parameters": {
+										"instance-variable": "Used",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 765816449830036,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 839509916194900,
+											"parameters": {
+												"variable": "Flash"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "flash",
+											"objectClass": "Relics",
+											"sid": 624228703613037,
+											"behaviorType": "Flash",
+											"parameters": {
+												"on-time": "0.2",
+												"off-time": "0.2",
+												"duration": "0.8"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 922639443672948,
+											"parameters": {
+												"seconds": "1.2",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "Relics",
+											"sid": 787078294801974,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"Tint\""
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Relics",
+											"sid": 446614746258982,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "35",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 487941059836757
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 527572130737384
+										}
+									],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "Relics",
+											"sid": 405739333107359,
+											"parameters": {
+												"mode": "enable",
+												"effect": "\"Tint\""
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Relics",
+											"sid": 168236594189635,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "35",
+												"time": "1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 410888276321386
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 330062896588750
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 736774468706733,
+									"parameters": {
+										"variable": "Flash"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "flash",
+									"objectClass": "Relics",
+									"sid": 786030372407350,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.2",
+										"off-time": "0.2",
+										"duration": "0.8"
+									}
+								}
+							],
+							"sid": 540022060387125
 						}
 					]
 				},
@@ -15809,6 +16593,299 @@
 						}
 					],
 					"sid": 647756466975651
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Specific",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Cat Eye"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Relics",
+									"sid": 305112979975866,
+									"parameters": {
+										"animation": "\"cat_eye\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Relics",
+									"sid": 645083595454611,
+									"parameters": {
+										"instance-variable": "Used"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 949122219588212,
+									"parameters": {
+										"variable": "Turn",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 516139648168492,
+									"parameters": {
+										"variable": "GameRound",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "pick-nth-instance",
+									"objectClass": "System",
+									"sid": 486165366421652,
+									"parameters": {
+										"object": "Card_Numb",
+										"instance": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card_Numb",
+									"sid": 610187561872665,
+									"parameters": {
+										"instance-variable": "Original_Hidden",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Card_Numb",
+									"sid": 316440751685642,
+									"parameters": {
+										"animation": "\"Left\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Card_Numb",
+									"sid": 459395547860651,
+									"parameters": {
+										"frame-number": "Self.myID"
+									}
+								}
+							],
+							"sid": 713545072899919,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relics",
+											"sid": 439907447464399,
+											"parameters": {
+												"animation": "\"cat_eye\""
+											}
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 292294976240982
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Relic Feedback",
+											"sid": 291304043713906,
+											"parameters": [
+												"Relics.AnimationName",
+												true,
+												false,
+												true
+											]
+										}
+									],
+									"sid": 251524124670450
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Relics",
+									"sid": 136922434663984,
+									"parameters": {
+										"animation": "\"cat_eye\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Relics",
+									"sid": 933310930615555,
+									"parameters": {
+										"instance-variable": "Used"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 462899878680959,
+									"parameters": {
+										"variable": "Turn",
+										"comparison": 1,
+										"value": "1"
+									}
+								},
+								{
+									"id": "pick-nth-instance",
+									"objectClass": "System",
+									"sid": 208948468072396,
+									"parameters": {
+										"object": "Card_Numb",
+										"instance": "1"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 174286361308026
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card_Numb",
+									"sid": 716479645219488,
+									"parameters": {
+										"instance-variable": "Original_Hidden",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Card_Numb",
+									"sid": 384764016942219,
+									"parameters": {
+										"animation": "\"Back\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 958713818365107
+						},
+						{
+							"eventType": "comment",
+							"text": "Watch"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 509486753049237,
+									"parameters": {
+										"mouse-button": "right",
+										"click-type": "clicked",
+										"object-clicked": "Relics"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Relics",
+									"sid": 792098741491061,
+									"parameters": {
+										"animation": "\"watch\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Relics",
+									"sid": 813748289863694,
+									"parameters": {
+										"instance-variable": "Used"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 564389780797788,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each-ordered",
+											"objectClass": "System",
+											"sid": 840492274283863,
+											"parameters": {
+												"object": "Card_Numb",
+												"expression": "Card_Numb.X",
+												"order": "descending"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 139028282047042,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "Card_Numb",
+													"sid": 985053016007261,
+													"parameters": {
+														"object": "Table_Player"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop-loop",
+													"objectClass": "System",
+													"sid": 927341693942415
+												},
+												{
+													"callFunction": "Discard_Numb",
+													"sid": 855335006082442,
+													"parameters": [
+														"1",
+														"Card_Numb.myID",
+														false,
+														false
+													]
+												},
+												{
+													"callFunction": "Relic Feedback",
+													"sid": 817484771591480,
+													"parameters": [
+														"\"watch\"",
+														true,
+														false,
+														true
+													]
+												}
+											],
+											"sid": 542110191543056
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 776009816634706
 				}
 			],
 			"sid": 817672841300944

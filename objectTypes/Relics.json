@@ -4,15 +4,38 @@
 	"sid": 565525438396740,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Used",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 434337342647247
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 996077551010235
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 433774417985403
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 361500005713720
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "tint",
+			"name": "Tint"
+		}
+	],
 	"animations": {
 		"items": [
 			{
@@ -662,7 +685,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8995139,
+						"imageSpriteId": 1081170,
 						"collisionPoly": {
 							"points": [
 								0.4344262295081967,

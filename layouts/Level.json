@@ -917,6 +917,77 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Relics",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "tea",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 52,
+					"sid": 943183015417516,
+					"tags": "",
+					"instanceVariables": {
+						"Used": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Flash": {
+							"properties": {}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"Tint": {
+							"isEnabled": false,
+							"parameters": {
+								"color": [
+									0.3137254901960784,
+									0.3137254901960784,
+									0.3137254901960784,
+									1
+								]
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 943183015417516,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1626,
+						"y": 302,
+						"width": 122,
+						"height": 122,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 427009402370981,

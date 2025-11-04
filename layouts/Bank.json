@@ -330,11 +330,39 @@
 					"uid": 21,
 					"sid": 420732331146587,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Used": false
+					},
 					"behaviors": {
 						"Tween": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Flash": {
+							"properties": {}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"Tint": {
+							"isEnabled": false,
+							"parameters": {
+								"color": [
+									0.3137254901960784,
+									0.3137254901960784,
+									0.3137254901960784,
+									1
+								]
 							}
 						}
 					},
@@ -345,8 +373,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1470,
-						"y": 293,
+						"x": 1400.5785123966944,
+						"y": 269.0330578512396,
 						"width": 122,
 						"height": 122,
 						"originX": 0.5,
