@@ -33,12 +33,15 @@
             "gift": "[u]Gift[/u]\n\n\nGive the highest card number to your opponent.",
             "return": "[u]Return[/u]\n\n\nDiscard the last number card to the end of the deck.",
             "compel": "[u]Compel[/u]\n\n\nForces your opponent to discard the last number card to the end of the deck.",
-            "exchange": "",
-            "secretexchange": "",
+            "exchange": "[u]Exchange[/u]\n\n\nChoose a not hidden card to switch with your opponement.",
+            "exchange_tip_1": "[u]Select the opponent card:[/u]",
+            "exchange_tip_2": "[u]Select your card to switch:[/u]",
+            "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch the first hidden card with each other.",
             "menu": "",
             "hurricane": "[u]Hurricane[/u]\n\n\nBoth players discard all their not hidden number cards to the end of the deck.",
             "time": "",
             "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the first 2 number cards of the deck."
+            
         }
     }
 }

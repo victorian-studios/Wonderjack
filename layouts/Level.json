@@ -117,7 +117,7 @@
 					"locked": false,
 					"world": {
 						"x": 316,
-						"y": 361,
+						"y": -225,
 						"width": 77,
 						"height": 194,
 						"originX": 0.5,
@@ -163,7 +163,7 @@
 					"locked": false,
 					"world": {
 						"x": 313.5,
-						"y": 245,
+						"y": -341,
 						"width": 16,
 						"height": 30,
 						"originX": 0.5291666666666667,
@@ -209,7 +209,7 @@
 					"locked": false,
 					"world": {
 						"x": 313.5,
-						"y": 244,
+						"y": -342,
 						"width": 13,
 						"height": 18,
 						"originX": 0.5,
@@ -294,7 +294,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
-						"initial-frame": 0,
+						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -313,9 +313,9 @@
 						"x": 960,
 						"y": 540,
 						"width": 1922,
-						"height": 482,
+						"height": 480,
 						"originX": 0.5,
-						"originY": -0.12240663900414937,
+						"originY": -0.12708333333333333,
 						"color": [
 							1,
 							1,
@@ -919,64 +919,110 @@
 					}
 				},
 				{
-					"type": "Relics",
+					"type": "Candle_Flame",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "tea",
+						"initially-visible": false,
+						"initial-animation": "Player",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 52,
-					"sid": 943183015417516,
+					"uid": 68,
+					"sid": 687417610087719,
 					"tags": "",
 					"instanceVariables": {
-						"Used": false
+						"my_ID": 1
 					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0,
-								"wait-time": 0,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"effects": {
-						"Tint": {
-							"isEnabled": false,
-							"parameters": {
-								"color": [
-									0.3137254901960784,
-									0.3137254901960784,
-									0.3137254901960784,
-									1
-								]
-							}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 943183015417516,
+						"sid": 687417610087719,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1626,
-						"y": 302,
-						"width": 122,
-						"height": 122,
+						"x": 252,
+						"y": 62,
+						"width": 72,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Candle_Flame",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Player",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 69,
+					"sid": 277725608236881,
+					"tags": "",
+					"instanceVariables": {
+						"my_ID": 2
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 277725608236881,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 334,
+						"y": 56,
+						"width": 72,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Candle_Flame",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Player",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 70,
+					"sid": 942895885598128,
+					"tags": "",
+					"instanceVariables": {
+						"my_ID": 3
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 942895885598128,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 414,
+						"y": 60,
+						"width": 72,
+						"height": 72,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1436,6 +1482,153 @@
 						}
 					],
 					"sid": 899299254535831,
+					"effectTypes": [],
+					"isInitiallyVisible": false,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Click_On_Screen_Text",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Bkg_Power_Tip_Txt",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 75,
+							"sid": 468612954611353,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.2,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 468612954611353,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 969,
+								"y": 230,
+								"width": 786,
+								"height": 192,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									0.7
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Text_Power_Tip",
+							"properties": {
+								"text": "[u]Card 7[/u]\n\n\nGet the card 7 if it's in the deck.",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 39,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 52,
+							"sid": 793018279599338,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.2,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 793018279599338,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 584,
+								"y": 144,
+								"width": 774,
+								"height": 174,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 360306123345800,
 					"effectTypes": [],
 					"isInitiallyVisible": false,
 					"isInitiallyInteractive": true,
@@ -2015,6 +2208,18 @@
 			},
 			"uid": 62,
 			"sid": 571191488393481,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "A_Enemy_Choices",
+			"properties": {
+				"width": 11,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 71,
+			"sid": 766464673371039,
 			"tags": "",
 			"instanceVariables": {}
 		}

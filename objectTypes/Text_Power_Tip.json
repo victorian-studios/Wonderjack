@@ -1,0 +1,16 @@
+{
+	"name": "Text_Power_Tip",
+	"plugin-id": "Text",
+	"sid": 234835342718244,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 715382649428707
+		}
+	],
+	"effectTypes": []
+}

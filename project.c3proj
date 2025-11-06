@@ -168,7 +168,12 @@
 			"A_Relics",
 			"Relic_Slot",
 			"Text",
-			"AliceMenu"
+			"AliceMenu",
+			"Candle_Flame",
+			"Icon_Hand_Point",
+			"Bkg_Power_Tip_Txt",
+			"Text_Power_Tip",
+			"A_Enemy_Choices"
 		],
 		"subfolders": []
 	},

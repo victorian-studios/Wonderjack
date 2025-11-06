@@ -178,9 +178,44 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 153184837508380,
+					"parameters": {
+						"variable": "Relic_Tea",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 389888386552582,
+					"parameters": {
+						"variable": "Relic_Hat",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 940082376883865,
+					"parameters": {
+						"variable": "Relic_Card13",
+						"value": "false"
+					}
+				},
+				{
 					"id": "shuffle",
 					"objectClass": "A_Deck_Power",
 					"sid": 372424876515354,
+					"parameters": {
+						"axis": "x"
+					}
+				},
+				{
+					"id": "shuffle",
+					"objectClass": "A_Relics",
+					"sid": 944448432936453,
 					"parameters": {
 						"axis": "x"
 					}

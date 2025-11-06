@@ -25,6 +25,13 @@
 			"desc": "para a CPU ignorar quando olhar as cartas da mesa",
 			"show": true,
 			"sid": 417179240924511
+		},
+		{
+			"name": "Enemy_Hidden",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 716106272003604
 		}
 	],
 	"behaviorTypes": [
