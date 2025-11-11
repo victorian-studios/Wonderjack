@@ -515,6 +515,23 @@
 				}
 			],
 			"sid": 115917713396352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 885002926497969,
+					"parameters": {
+						"mouse-button": "right",
+						"click-type": "clicked",
+						"object-clicked": "AliceMenu"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 888725700082478
 		}
 	],
 	"sid": 468746933081532

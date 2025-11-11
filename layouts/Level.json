@@ -2190,7 +2190,7 @@
 		{
 			"type": "A_EnemyPowers",
 			"properties": {
-				"width": 3,
+				"width": 0,
 				"height": 1,
 				"depth": 1
 			},

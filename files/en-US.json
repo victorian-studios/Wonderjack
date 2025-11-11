@@ -28,6 +28,7 @@
         },
 		"powers": {
 			"card": "[u]Card {0}[/u]\n\n\nGet the card {0} if it's in the deck.",
+            "card_tip": "This card is not in the main deck...",
             "protect": "",
             "impulse": "[u]Impulse[/u]\n\n\nGet the highest card number from the deck",
             "gift": "[u]Gift[/u]\n\n\nGive the highest card number to your opponent.",
