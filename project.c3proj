@@ -173,7 +173,8 @@
 			"Icon_Hand_Point",
 			"Bkg_Power_Tip_Txt",
 			"Text_Power_Tip",
-			"A_Enemy_Choices"
+			"A_Enemy_Choices",
+			"Icon_Protect"
 		],
 		"subfolders": []
 	},
@@ -258,54 +259,41 @@
 					"file-info": {
 						"purpose": "none"
 					}
-				}
-			],
-			"subfolders": [
-				{
-					"items": [
-						{
-							"name": "enchanted-fantasy-356791.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 821125335506411,
-							"file-info": {
-								"purpose": "none"
-							}
-						}
-					],
-					"subfolders": [],
-					"name": "musics"
 				},
 				{
-					"items": [
-						{
-							"name": "flipcard-91468.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 554368261140797,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "menu-select-button-182476-_mp3cut.net_.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 352942149133371,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "bell.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 471413402456170,
-							"file-info": {
-								"purpose": "none"
-							}
-						}
-					],
-					"subfolders": [],
-					"name": "SFX"
+					"name": "flipcard-91468.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 826147782151715,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bell.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 418508434363541,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu-select-button-182476-_mp3cut.net_.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 208661578443388,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shield_sfx.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 261260831203376,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
-			]
+			],
+			"subfolders": []
 		},
 		"music": {
 			"items": [

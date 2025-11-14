@@ -39,9 +39,11 @@
             "exchange_tip_2": "[u]Select your card to switch:[/u]",
             "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch the first hidden card with each other.",
             "menu": "",
-            "hurricane": "[u]Hurricane[/u]\n\n\nBoth players discard all their not hidden number cards to the end of the deck.",
-            "time": "",
-            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the first 2 number cards of the deck."
+            "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their not hidden number cards to the end of the deck. Cannot be used in the last turn!",
+            "time": "The next numbers are: {0} and then {1}",
+            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the first 2 number cards of the deck.",
+            "clairvoyance_player": "",
+            "clairvoyance_cpu": "{0} had a nice view of the next 2 cards..."
             
         }
     }

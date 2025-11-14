@@ -25,6 +25,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 760742941268666
+		},
+		{
+			"name": "Protect_Turns",
+			"type": "number",
+			"desc": "turnos restantes do poder de proteção de perder cartas",
+			"show": true,
+			"sid": 347353118794928
+		},
+		{
+			"name": "Clairvoyance_Cards",
+			"type": "number",
+			"desc": "quantas cartas (que foram vistas) restam no baralho?",
+			"show": true,
+			"sid": 718032840195218
 		}
 	],
 	"behaviorTypes": [],

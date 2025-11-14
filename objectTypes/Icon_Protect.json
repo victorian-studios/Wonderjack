@@ -1,0 +1,87 @@
+{
+	"name": "Icon_Protect",
+	"plugin-id": "Sprite",
+	"sid": 778667394185571,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "FromPlayer",
+			"type": "boolean",
+			"desc": "true - player / false - CPU",
+			"show": true,
+			"sid": 104458454746278
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 547060518236041
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 109849841935063
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5057471264367817,
+						"originY": 0.5126903553299492,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8138670,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5057471264367817,
+						"originY": 0.5126903553299492,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9006644,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5057471264367817,
+						"originY": 0.5126903553299492,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9301694,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 870883951892912,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

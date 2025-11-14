@@ -18,6 +18,13 @@
 			"desc": "Quantas cartas de poder podem ser compradas nesta rodada / se atualiza de acordo com a variavel global",
 			"show": true,
 			"sid": 456435005577298
+		},
+		{
+			"name": "Protect_Turns",
+			"type": "number",
+			"desc": "turnos restantes do poder de proteção de perder cartas",
+			"show": true,
+			"sid": 395966250846950
 		}
 	],
 	"behaviorTypes": [],

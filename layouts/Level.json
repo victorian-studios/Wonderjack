@@ -795,7 +795,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"PowerMaxLimit": 2,
-						"PowerLimit_Rounds": 0
+						"PowerLimit_Rounds": 0,
+						"Protect_Turns": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -836,7 +837,9 @@
 					"instanceVariables": {
 						"PowerMaxLimit": 2,
 						"PowerLimit_Rounds": 0,
-						"PowersAvailable": 0
+						"PowersAvailable": 0,
+						"Protect_Turns": 0,
+						"Clairvoyance_Cards": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -1419,7 +1422,7 @@
 						{
 							"type": "Text_Power",
 							"properties": {
-								"text": "[u]Card 7[/u]\n\n\nGet the card 7 if it's in the deck.",
+								"text": "[u]Hurricane[/u]\n\nBoth players discard all their not hidden number cards to the end of the deck. Cannot be used in the last turn!",
 								"enable-bbcode": true,
 								"font": "Arial",
 								"size": 39,

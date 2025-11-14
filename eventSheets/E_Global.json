@@ -42,6 +42,16 @@
 			"sid": 765911724488861
 		},
 		{
+			"eventType": "variable",
+			"name": "MuteAll",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 678918041377073
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
