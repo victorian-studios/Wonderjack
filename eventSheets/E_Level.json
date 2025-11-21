@@ -2073,9 +2073,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 792093323920714,
+									"sid": 448194999388644,
 									"parameters": {
-										"seconds": "0.2",
+										"seconds": "0.25",
 										"use-timescale": true
 									}
 								},
@@ -2088,6 +2088,33 @@
 								}
 							],
 							"sid": 974557898892883
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Hand_CPU",
+									"sid": 222988951922661,
+									"parameters": {
+										"instance-variable": "Clairvoyance_Cards",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Hand_CPU",
+									"sid": 166665158786656,
+									"parameters": {
+										"instance-variable": "Clairvoyance_Cards",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 777794215455430
 						}
 					]
 				},
@@ -12452,6 +12479,15 @@
 							"id": "destroy",
 							"objectClass": "Icon_Hand_Point",
 							"sid": 812287493282289
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 342012291966906,
+							"parameters": {
+								"variable": "PowerDone",
+								"value": "false"
+							}
 						}
 					],
 					"sid": 853841391707622,
@@ -12540,6 +12576,7 @@
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
 											"sid": 306112123761182,
+											"disabled": true,
 											"parameters": {
 												"variable": "PowerDone",
 												"value": "false"
@@ -12589,6 +12626,7 @@
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 726240842442554,
+									"disabled": true,
 									"parameters": {
 										"variable": "PowerDone",
 										"value": "false"
@@ -14801,7 +14839,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "[1-70] Comprar 1 carta numérica\n[70-100] Comprar 1 carta de poder\n[70-100] Jogar 1 carta de poder\n[1-70] Parar a rodada"
+							"text": "[1-70] Comprar 1 carta numérica\n[70+] Comprar 1 carta de poder"
 						},
 						{
 							"functionName": "Enemy Action",
@@ -14972,14 +15010,9 @@
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "compare-eventvar",
+															"id": "else",
 															"objectClass": "System",
-															"sid": 513165182975235,
-															"parameters": {
-																"variable": "Enemy_RNG",
-																"comparison": 4,
-																"value": "70"
-															}
+															"sid": 507225375552381
 														}
 													],
 													"actions": [
@@ -15741,173 +15774,112 @@
 															"eventType": "block",
 															"conditions": [
 																{
-																	"id": "compare-boolean-eventvar",
-																	"objectClass": "System",
-																	"sid": 283927206870635,
+																	"id": "compare-instance-variable",
+																	"objectClass": "Hand_CPU",
+																	"sid": 125427129632243,
 																	"parameters": {
-																		"variable": "Relic_Card13"
+																		"instance-variable": "Clairvoyance_Cards",
+																		"comparison": 4,
+																		"value": "0"
 																	}
 																}
 															],
-															"actions": [
-																{
-																	"id": "push",
-																	"objectClass": "A_Enemy_Choices",
-																	"sid": 918869429309856,
-																	"parameters": {
-																		"where": "back",
-																		"value": "13",
-																		"axis": "x"
-																	}
-																}
-															],
-															"sid": 850809583229337
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "for-each",
-																	"objectClass": "System",
-																	"sid": 789682124372693,
-																	"parameters": {
-																		"object": "Card_Numb"
-																	}
-																},
-																{
-																	"id": "is-boolean-instance-variable-set",
-																	"objectClass": "Card_Numb",
-																	"sid": 154995004234892,
-																	"parameters": {
-																		"instance-variable": "Player_Hidden"
-																	},
-																	"isInverted": true
-																}
-															],
-															"actions": [
-																{
-																	"id": "delete",
-																	"objectClass": "A_Enemy_Choices",
-																	"sid": 398678344705578,
-																	"parameters": {
-																		"index": "A_Enemy_Choices.IndexOf(Card_Numb.myID)",
-																		"axis": "x"
-																	}
-																}
-															],
-															"sid": 600455616909752,
+															"actions": [],
+															"sid": 516902285248881,
 															"children": [
+																{
+																	"eventType": "comment",
+																	"text": "Se somarmos a próxima carta com o somatório atual do inimigo e o valor for menor ou igual à meta da partida, então pode comprar"
+																},
 																{
 																	"eventType": "block",
 																	"conditions": [
 																		{
 																			"id": "compare-two-values",
 																			"objectClass": "System",
-																			"sid": 476319790579694,
+																			"sid": 666003502958063,
 																			"parameters": {
-																				"first-value": "loopindex + 1",
-																				"comparison": 0,
-																				"second-value": "Card_Numb.Count"
+																				"first-value": "EnemyNumbers + A_Deck_Numb.At(0)",
+																				"comparison": 3,
+																				"second-value": "TheNumber"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Draw_Number",
+																			"sid": 837717944288765,
+																			"parameters": [
+																				"2",
+																				false,
+																				"0",
+																				false
+																			]
+																		},
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 408628580027461,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Como já vi a próxima carta, o risco é zero.\""
+																			}
+																		},
+																		{
+																			"id": "wait",
+																			"objectClass": "System",
+																			"sid": 122840577964254,
+																			"parameters": {
+																				"seconds": "1.5",
+																				"use-timescale": true
+																			}
+																		},
+																		{
+																			"callFunction": "Change Turn",
+																			"sid": 404141395093017,
+																			"parameters": [
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 755488524001548
+																},
+																{
+																	"eventType": "comment",
+																	"text": "Se somarmos a próxima carta com o somatório atual do inimigo e o valor for maior que a meta da partida, então ele se recusa a comprar um número"
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 204914447348193,
+																			"parameters": {
+																				"first-value": "EnemyNumbers + A_Deck_Numb.At(0)",
+																				"comparison": 4,
+																				"second-value": "TheNumber"
 																			}
 																		}
 																	],
 																	"actions": [],
-																	"sid": 825912999085744,
+																	"sid": 171224269980892,
 																	"children": [
 																		{
 																			"eventType": "comment",
-																			"text": "Risco zero",
-																			"text-color": [
-																				0.7607843137254902,
-																				0.9294117647058824,
-																				1,
-																				1
-																			]
+																			"text": "Se for cauteloso, ele pode..."
 																		},
 																		{
 																			"eventType": "block",
 																			"conditions": [
 																				{
-																					"id": "compare-two-values",
+																					"id": "compare-eventvar",
 																					"objectClass": "System",
-																					"sid": 901543709234522,
+																					"sid": 661825692330062,
 																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 5,
-																						"second-value": "0"
-																					}
-																				}
-																			],
-																			"actions": [
-																				{
-																					"callFunction": "Draw_Number",
-																					"sid": 463674458993451,
-																					"parameters": [
-																						"2",
-																						false,
-																						"0",
-																						false
-																					]
-																				},
-																				{
-																					"id": "log",
-																					"objectClass": "Browser",
-																					"sid": 679754202024155,
-																					"parameters": {
-																						"type": "log",
-																						"message": "\"O risco é zero\""
-																					}
-																				},
-																				{
-																					"id": "wait",
-																					"objectClass": "System",
-																					"sid": 687739809275513,
-																					"parameters": {
-																						"seconds": "1.5",
-																						"use-timescale": true
-																					}
-																				},
-																				{
-																					"callFunction": "Change Turn",
-																					"sid": 888204611809130,
-																					"parameters": [
-																						"1"
-																					]
-																				}
-																			],
-																			"sid": 703835755340607
-																		},
-																		{
-																			"eventType": "comment",
-																			"text": "Risco baixo",
-																			"text-color": [
-																				0.4196078431372549,
-																				1,
-																				0.592156862745098,
-																				1
-																			]
-																		},
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 498639501810173,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 2,
-																						"second-value": "0"
-																					}
-																				},
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 277496877454361,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 5,
-																						"second-value": "-3"
+																						"variable": "EnemyAI_Style",
+																						"comparison": 0,
+																						"value": "\"cautious\""
 																					}
 																				}
 																			],
@@ -15915,27 +15887,27 @@
 																				{
 																					"id": "set-eventvar-value",
 																					"objectClass": "System",
-																					"sid": 863623189735734,
+																					"sid": 946506749105451,
 																					"parameters": {
 																						"variable": "Enemy_RNG",
-																						"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
+																						"value": "int ( random ( 0, 101 ) ) + EnemyAI_Chaos"
 																					}
 																				},
 																				{
 																					"id": "log",
 																					"objectClass": "Browser",
-																					"sid": 938330067254560,
+																					"sid": 677071041755865,
 																					"parameters": {
 																						"type": "log",
-																						"message": "\"O risco é baixo: \"&Enemy_RNG"
+																						"message": "\"Enemy RNG clairvoyance: \" & Enemy_RNG"
 																					}
 																				}
 																			],
-																			"sid": 475966382147978,
+																			"sid": 224031297116580,
 																			"children": [
 																				{
 																					"eventType": "comment",
-																					"text": "Se ele é destemido, compra uma carta direto"
+																					"text": "... parar o jogo"
 																				},
 																				{
 																					"eventType": "block",
@@ -15943,18 +15915,228 @@
 																						{
 																							"id": "compare-eventvar",
 																							"objectClass": "System",
-																							"sid": 187998476462008,
+																							"sid": 106873914787304,
 																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"fearless\""
+																								"variable": "Enemy_RNG",
+																								"comparison": 4,
+																								"value": "50"
+																							}
+																						}
+																					],
+																					"actions": [
+																						{
+																							"callFunction": "Enemy Action",
+																							"sid": 126297864127381,
+																							"parameters": [
+																								"\"stop\""
+																							]
+																						},
+																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 542660121014064,
+																							"parameters": {
+																								"type": "log",
+																								"message": "\"Como sou cauteloso, eu escolho parar logo\""
+																							}
+																						}
+																					],
+																					"sid": 145720170253096
+																				},
+																				{
+																					"eventType": "comment",
+																					"text": "... analisar seus poderes"
+																				},
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "else",
+																							"objectClass": "System",
+																							"sid": 799561596080286
+																						}
+																					],
+																					"actions": [
+																						{
+																							"callFunction": "Enemy Check Powers",
+																							"sid": 786907275912621,
+																							"parameters": [
+																								"\"\""
+																							]
+																						},
+																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 762015808908400,
+																							"parameters": {
+																								"type": "warn",
+																								"message": "\"Como sou cauteloso, eu escolho analisar as opções de poder\""
+																							}
+																						}
+																					],
+																					"sid": 573715454520476
+																				}
+																			]
+																		},
+																		{
+																			"eventType": "comment",
+																			"text": "Se ele for destemido, tenta comprar uma carta de poder"
+																		},
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-eventvar",
+																					"objectClass": "System",
+																					"sid": 420958791921988,
+																					"parameters": {
+																						"variable": "EnemyAI_Style",
+																						"comparison": 0,
+																						"value": "\"fearless\""
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"callFunction": "Enemy Check Powers",
+																					"sid": 797224504334506,
+																					"parameters": [
+																						"\"\""
+																					]
+																				},
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 377605921512149,
+																					"parameters": {
+																						"type": "warn",
+																						"message": "\"Como sou destemido, quero mais é ver meus poderes\""
+																					}
+																				}
+																			],
+																			"sid": 107217913548869
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 516468293516377
+																}
+															],
+															"actions": [],
+															"sid": 577837838042853,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-boolean-eventvar",
+																			"objectClass": "System",
+																			"sid": 384838435145895,
+																			"parameters": {
+																				"variable": "Relic_Card13"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "push",
+																			"objectClass": "A_Enemy_Choices",
+																			"sid": 608505990002131,
+																			"parameters": {
+																				"where": "back",
+																				"value": "13",
+																				"axis": "x"
+																			}
+																		}
+																	],
+																	"sid": 704231736968301
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "for-each",
+																			"objectClass": "System",
+																			"sid": 900207101334309,
+																			"parameters": {
+																				"object": "Card_Numb"
+																			}
+																		},
+																		{
+																			"id": "is-boolean-instance-variable-set",
+																			"objectClass": "Card_Numb",
+																			"sid": 374635793708204,
+																			"parameters": {
+																				"instance-variable": "Player_Hidden"
+																			},
+																			"isInverted": true
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "delete",
+																			"objectClass": "A_Enemy_Choices",
+																			"sid": 769332781923427,
+																			"parameters": {
+																				"index": "A_Enemy_Choices.IndexOf(Card_Numb.myID)",
+																				"axis": "x"
+																			}
+																		}
+																	],
+																	"sid": 284028679908478,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-two-values",
+																					"objectClass": "System",
+																					"sid": 495845182235010,
+																					"parameters": {
+																						"first-value": "loopindex + 1",
+																						"comparison": 0,
+																						"second-value": "Card_Numb.Count"
+																					}
+																				}
+																			],
+																			"actions": [],
+																			"sid": 584245239957280,
+																			"children": [
+																				{
+																					"eventType": "comment",
+																					"text": "Risco zero",
+																					"text-color": [
+																						0.7607843137254902,
+																						0.9294117647058824,
+																						1,
+																						1
+																					]
+																				},
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "compare-two-values",
+																							"objectClass": "System",
+																							"sid": 410448236538163,
+																							"parameters": {
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 5,
+																								"second-value": "0"
 																							}
 																						}
 																					],
 																					"actions": [
 																						{
 																							"callFunction": "Draw_Number",
-																							"sid": 558935512022506,
+																							"sid": 667893930631138,
 																							"parameters": [
 																								"2",
 																								false,
@@ -15965,16 +16147,16 @@
 																						{
 																							"id": "log",
 																							"objectClass": "Browser",
-																							"sid": 348042923272065,
+																							"sid": 512443078601458,
 																							"parameters": {
 																								"type": "log",
-																								"message": "\"Sou destemido, vou comprar uma carta\""
+																								"message": "\"O risco é zero\""
 																							}
 																						},
 																						{
 																							"id": "wait",
 																							"objectClass": "System",
-																							"sid": 170303698033167,
+																							"sid": 902646317592644,
 																							"parameters": {
 																								"seconds": "1.5",
 																								"use-timescale": true
@@ -15982,216 +16164,92 @@
 																						},
 																						{
 																							"callFunction": "Change Turn",
-																							"sid": 456481518774879,
+																							"sid": 978739144332984,
 																							"parameters": [
 																								"1"
 																							]
 																						}
 																					],
-																					"sid": 599357195279094
+																					"sid": 319310565557531
 																				},
 																				{
 																					"eventType": "comment",
-																					"text": "Se ele é cauteloso, tem uma chance baixa de se recusar a comprar uma carta"
+																					"text": "Risco baixo",
+																					"text-color": [
+																						0.4196078431372549,
+																						1,
+																						0.592156862745098,
+																						1
+																					]
 																				},
 																				{
 																					"eventType": "block",
 																					"conditions": [
 																						{
-																							"id": "compare-eventvar",
+																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 532846776275400,
+																							"sid": 136835410112564,
 																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"cautious\""
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 2,
+																								"second-value": "0"
+																							}
+																						},
+																						{
+																							"id": "compare-two-values",
+																							"objectClass": "System",
+																							"sid": 903404987289707,
+																							"parameters": {
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 5,
+																								"second-value": "-3"
 																							}
 																						}
 																					],
-																					"actions": [],
-																					"sid": 904629904227119,
+																					"actions": [
+																						{
+																							"id": "set-eventvar-value",
+																							"objectClass": "System",
+																							"sid": 733758322781299,
+																							"parameters": {
+																								"variable": "Enemy_RNG",
+																								"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
+																							}
+																						},
+																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 590058076913563,
+																							"parameters": {
+																								"type": "log",
+																								"message": "\"O risco é baixo: \"&Enemy_RNG"
+																							}
+																						}
+																					],
+																					"sid": 463353078016347,
 																					"children": [
 																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "compare-eventvar",
-																									"objectClass": "System",
-																									"sid": 635794943509102,
-																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 4,
-																										"value": "20"
-																									}
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Draw_Number",
-																									"sid": 522443838411556,
-																									"parameters": [
-																										"2",
-																										false,
-																										"0",
-																										false
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 444486573704457,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou cauteloso, mas vou comprar um número\""
-																									}
-																								},
-																								{
-																									"id": "wait",
-																									"objectClass": "System",
-																									"sid": 316431453834135,
-																									"parameters": {
-																										"seconds": "1.5",
-																										"use-timescale": true
-																									}
-																								},
-																								{
-																									"callFunction": "Change Turn",
-																									"sid": 369215316741900,
-																									"parameters": [
-																										"1"
-																									]
-																								}
-																							],
-																							"sid": 208748600924876
+																							"eventType": "comment",
+																							"text": "Se ele é destemido, compra uma carta direto"
 																						},
 																						{
 																							"eventType": "block",
 																							"conditions": [
 																								{
-																									"id": "else",
-																									"objectClass": "System",
-																									"sid": 814264438580190
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Enemy Check Powers",
-																									"sid": 548970758461008,
-																									"parameters": [
-																										"\"\""
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 592377456550938,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou cauteloso, e prefiro analisar meus poderes\""
-																									}
-																								}
-																							],
-																							"sid": 683997071677429
-																						}
-																					]
-																				}
-																			]
-																		},
-																		{
-																			"eventType": "comment",
-																			"text": "Risco médio",
-																			"text-color": [
-																				0.9294117647058824,
-																				1,
-																				0.5803921568627451,
-																				1
-																			]
-																		},
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 267547736309241,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 2,
-																						"second-value": "-3"
-																					}
-																				},
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 792922432529933,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 5,
-																						"second-value": "-6"
-																					}
-																				}
-																			],
-																			"actions": [
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 793988507828644,
-																					"parameters": {
-																						"variable": "Enemy_RNG",
-																						"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
-																					}
-																				},
-																				{
-																					"id": "log",
-																					"objectClass": "Browser",
-																					"sid": 891500684029073,
-																					"parameters": {
-																						"type": "log",
-																						"message": "\"O risco é médio: \"&Enemy_RNG"
-																					}
-																				}
-																			],
-																			"sid": 773574032630407,
-																			"children": [
-																				{
-																					"eventType": "comment",
-																					"text": "Se ele é destemido, tem uma chance baixa de recusar a comprar uma carta"
-																				},
-																				{
-																					"eventType": "block",
-																					"conditions": [
-																						{
-																							"id": "compare-eventvar",
-																							"objectClass": "System",
-																							"sid": 747060953979538,
-																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"fearless\""
-																							}
-																						}
-																					],
-																					"actions": [],
-																					"sid": 563274358724071,
-																					"children": [
-																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
 																									"id": "compare-eventvar",
 																									"objectClass": "System",
-																									"sid": 995194045705132,
+																									"sid": 916767671289254,
 																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 4,
-																										"value": "20"
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"fearless\""
 																									}
 																								}
 																							],
 																							"actions": [
 																								{
 																									"callFunction": "Draw_Number",
-																									"sid": 689886460462295,
+																									"sid": 443168619086382,
 																									"parameters": [
 																										"2",
 																										false,
@@ -16202,7 +16260,7 @@
 																								{
 																									"id": "log",
 																									"objectClass": "Browser",
-																									"sid": 555031365170141,
+																									"sid": 240556669899972,
 																									"parameters": {
 																										"type": "log",
 																										"message": "\"Sou destemido, vou comprar uma carta\""
@@ -16211,7 +16269,7 @@
 																								{
 																									"id": "wait",
 																									"objectClass": "System",
-																									"sid": 379602681892231,
+																									"sid": 746277056283565,
 																									"parameters": {
 																										"seconds": "1.5",
 																										"use-timescale": true
@@ -16219,515 +16277,889 @@
 																								},
 																								{
 																									"callFunction": "Change Turn",
-																									"sid": 587939832076751,
+																									"sid": 725931016294035,
 																									"parameters": [
 																										"1"
 																									]
 																								}
 																							],
-																							"sid": 107654433537014
+																							"sid": 772624191777019
 																						},
 																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "else",
-																									"objectClass": "System",
-																									"sid": 845781475974983
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Enemy Check Powers",
-																									"sid": 609046353163018,
-																									"parameters": [
-																										"\"\""
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 869914173578739,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou destemido, mas vou analisar meus poderes\""
-																									}
-																								}
-																							],
-																							"sid": 402324723349552
-																						}
-																					]
-																				},
-																				{
-																					"eventType": "comment",
-																					"text": "Se ele é cauteloso, tem uma chance mediana de se recusar a comprar uma carta"
-																				},
-																				{
-																					"eventType": "block",
-																					"conditions": [
-																						{
-																							"id": "compare-eventvar",
-																							"objectClass": "System",
-																							"sid": 387236291835929,
-																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"cautious\""
-																							}
-																						}
-																					],
-																					"actions": [],
-																					"sid": 174893277551237,
-																					"children": [
+																							"eventType": "comment",
+																							"text": "Se ele é cauteloso, tem uma chance baixa de se recusar a comprar uma carta"
+																						},
 																						{
 																							"eventType": "block",
 																							"conditions": [
 																								{
 																									"id": "compare-eventvar",
 																									"objectClass": "System",
-																									"sid": 865688233843690,
+																									"sid": 204998479926398,
 																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 4,
-																										"value": "50"
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"cautious\""
 																									}
 																								}
 																							],
-																							"actions": [
+																							"actions": [],
+																							"sid": 305963860077402,
+																							"children": [
 																								{
-																									"callFunction": "Draw_Number",
-																									"sid": 759048954542391,
-																									"parameters": [
-																										"2",
-																										false,
-																										"0",
-																										false
-																									]
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 716891961926861,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 4,
+																												"value": "20"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Draw_Number",
+																											"sid": 526804087742903,
+																											"parameters": [
+																												"2",
+																												false,
+																												"0",
+																												false
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 682903256635465,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou cauteloso, mas vou comprar um número\""
+																											}
+																										},
+																										{
+																											"id": "wait",
+																											"objectClass": "System",
+																											"sid": 657524909737151,
+																											"parameters": {
+																												"seconds": "1.5",
+																												"use-timescale": true
+																											}
+																										},
+																										{
+																											"callFunction": "Change Turn",
+																											"sid": 772894405282377,
+																											"parameters": [
+																												"1"
+																											]
+																										}
+																									],
+																									"sid": 858092895381868
 																								},
 																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 419013096297531,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou cauteloso, mas vou comprar um número\""
-																									}
-																								},
-																								{
-																									"id": "wait",
-																									"objectClass": "System",
-																									"sid": 186869109866634,
-																									"parameters": {
-																										"seconds": "1.5",
-																										"use-timescale": true
-																									}
-																								},
-																								{
-																									"callFunction": "Change Turn",
-																									"sid": 854301424401932,
-																									"parameters": [
-																										"1"
-																									]
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "else",
+																											"objectClass": "System",
+																											"sid": 415348945941751
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Enemy Check Powers",
+																											"sid": 500989582565845,
+																											"parameters": [
+																												"\"\""
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 709258525468303,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou cauteloso, e prefiro analisar meus poderes\""
+																											}
+																										}
+																									],
+																									"sid": 191920254715978
 																								}
-																							],
-																							"sid": 861805809357668
-																						},
-																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "else",
-																									"objectClass": "System",
-																									"sid": 890016351453226
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Enemy Check Powers",
-																									"sid": 696377179151720,
-																									"parameters": [
-																										"\"\""
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 818423326001781,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou cauteloso, e prefiro analisar meus poderes\""
-																									}
-																								}
-																							],
-																							"sid": 453008945894918
+																							]
 																						}
 																					]
-																				}
-																			]
-																		},
-																		{
-																			"eventType": "comment",
-																			"text": "Risco alto",
-																			"text-color": [
-																				1,
-																				0.6901960784313725,
-																				0.4392156862745098,
-																				1
-																			]
-																		},
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 936327208189358,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 2,
-																						"second-value": "-6"
-																					}
 																				},
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 140595585620706,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 5,
-																						"second-value": "-9"
-																					}
-																				}
-																			],
-																			"actions": [
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 845705138721943,
-																					"parameters": {
-																						"variable": "Enemy_RNG",
-																						"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
-																					}
-																				},
-																				{
-																					"id": "log",
-																					"objectClass": "Browser",
-																					"sid": 605094952906303,
-																					"parameters": {
-																						"type": "log",
-																						"message": "\"O risco é alto: \"&Enemy_RNG"
-																					}
-																				}
-																			],
-																			"sid": 893671400852106,
-																			"children": [
 																				{
 																					"eventType": "comment",
-																					"text": "Se ele é destemido, tem uma chance mediana de recusar a comprar uma carta"
+																					"text": "Risco médio",
+																					"text-color": [
+																						0.9294117647058824,
+																						1,
+																						0.5803921568627451,
+																						1
+																					]
 																				},
 																				{
 																					"eventType": "block",
 																					"conditions": [
 																						{
-																							"id": "compare-eventvar",
+																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 724276178586403,
+																							"sid": 395891389369989,
 																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"fearless\""
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 2,
+																								"second-value": "-3"
+																							}
+																						},
+																						{
+																							"id": "compare-two-values",
+																							"objectClass": "System",
+																							"sid": 356770610663465,
+																							"parameters": {
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 5,
+																								"second-value": "-6"
 																							}
 																						}
 																					],
-																					"actions": [],
-																					"sid": 553399643499028,
+																					"actions": [
+																						{
+																							"id": "set-eventvar-value",
+																							"objectClass": "System",
+																							"sid": 815301305507709,
+																							"parameters": {
+																								"variable": "Enemy_RNG",
+																								"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
+																							}
+																						},
+																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 735669912609694,
+																							"parameters": {
+																								"type": "log",
+																								"message": "\"O risco é médio: \"&Enemy_RNG"
+																							}
+																						}
+																					],
+																					"sid": 745161706750043,
 																					"children": [
+																						{
+																							"eventType": "comment",
+																							"text": "Se ele é destemido, tem uma chance baixa de recusar a comprar uma carta"
+																						},
 																						{
 																							"eventType": "block",
 																							"conditions": [
 																								{
 																									"id": "compare-eventvar",
 																									"objectClass": "System",
-																									"sid": 849243507611257,
+																									"sid": 585192773080636,
 																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 4,
-																										"value": "50"
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"fearless\""
 																									}
 																								}
 																							],
-																							"actions": [
+																							"actions": [],
+																							"sid": 268955544500419,
+																							"children": [
 																								{
-																									"callFunction": "Draw_Number",
-																									"sid": 591718270971683,
-																									"parameters": [
-																										"2",
-																										false,
-																										"0",
-																										false
-																									]
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 497828212375939,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 4,
+																												"value": "20"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Draw_Number",
+																											"sid": 579390755993059,
+																											"parameters": [
+																												"2",
+																												false,
+																												"0",
+																												false
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 577730051376226,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou destemido, vou comprar uma carta\""
+																											}
+																										},
+																										{
+																											"id": "wait",
+																											"objectClass": "System",
+																											"sid": 862166564655997,
+																											"parameters": {
+																												"seconds": "1.5",
+																												"use-timescale": true
+																											}
+																										},
+																										{
+																											"callFunction": "Change Turn",
+																											"sid": 702097676618561,
+																											"parameters": [
+																												"1"
+																											]
+																										}
+																									],
+																									"sid": 241440830686653
 																								},
 																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 921036749277679,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou destemido, vou comprar uma carta\""
-																									}
-																								},
-																								{
-																									"id": "wait",
-																									"objectClass": "System",
-																									"sid": 769918947944003,
-																									"parameters": {
-																										"seconds": "1.5",
-																										"use-timescale": true
-																									}
-																								},
-																								{
-																									"callFunction": "Change Turn",
-																									"sid": 887571782769129,
-																									"parameters": [
-																										"1"
-																									]
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "else",
+																											"objectClass": "System",
+																											"sid": 280718278200701
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Enemy Check Powers",
+																											"sid": 448282326367120,
+																											"parameters": [
+																												"\"\""
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 245044584697102,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou destemido, mas vou analisar meus poderes\""
+																											}
+																										}
+																									],
+																									"sid": 668853735842106
 																								}
-																							],
-																							"sid": 698842972774288
+																							]
 																						},
 																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "else",
-																									"objectClass": "System",
-																									"sid": 151693878582296
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Enemy Check Powers",
-																									"sid": 188406062967430,
-																									"parameters": [
-																										"\"\""
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 637900915593688,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou destemido, mas vou analisar meus poderes\""
-																									}
-																								}
-																							],
-																							"sid": 956756947807793
-																						}
-																					]
-																				},
-																				{
-																					"eventType": "comment",
-																					"text": "Se ele é cauteloso, tem uma chance alta de se recusar a comprar uma carta"
-																				},
-																				{
-																					"eventType": "block",
-																					"conditions": [
-																						{
-																							"id": "compare-eventvar",
-																							"objectClass": "System",
-																							"sid": 153179807000536,
-																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"cautious\""
-																							}
-																						}
-																					],
-																					"actions": [],
-																					"sid": 970549305017314,
-																					"children": [
+																							"eventType": "comment",
+																							"text": "Se ele é cauteloso, tem uma chance mediana de se recusar a comprar uma carta"
+																						},
 																						{
 																							"eventType": "block",
 																							"conditions": [
 																								{
 																									"id": "compare-eventvar",
 																									"objectClass": "System",
-																									"sid": 688224092652079,
+																									"sid": 130126186897767,
 																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 4,
-																										"value": "80"
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"cautious\""
 																									}
 																								}
 																							],
-																							"actions": [
+																							"actions": [],
+																							"sid": 848044643482089,
+																							"children": [
 																								{
-																									"callFunction": "Draw_Number",
-																									"sid": 276926208204352,
-																									"parameters": [
-																										"2",
-																										false,
-																										"0",
-																										false
-																									]
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 658897134605374,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 4,
+																												"value": "50"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Draw_Number",
+																											"sid": 905900667533919,
+																											"parameters": [
+																												"2",
+																												false,
+																												"0",
+																												false
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 952610139924359,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou cauteloso, mas vou comprar um número\""
+																											}
+																										},
+																										{
+																											"id": "wait",
+																											"objectClass": "System",
+																											"sid": 610056009945481,
+																											"parameters": {
+																												"seconds": "1.5",
+																												"use-timescale": true
+																											}
+																										},
+																										{
+																											"callFunction": "Change Turn",
+																											"sid": 661768619404776,
+																											"parameters": [
+																												"1"
+																											]
+																										}
+																									],
+																									"sid": 904985916739807
 																								},
 																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 444444496184816,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou cauteloso, mas vou comprar um número\""
-																									}
-																								},
-																								{
-																									"id": "wait",
-																									"objectClass": "System",
-																									"sid": 309549907527533,
-																									"parameters": {
-																										"seconds": "1.5",
-																										"use-timescale": true
-																									}
-																								},
-																								{
-																									"callFunction": "Change Turn",
-																									"sid": 422294973894618,
-																									"parameters": [
-																										"1"
-																									]
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "else",
+																											"objectClass": "System",
+																											"sid": 977695372387386
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Enemy Check Powers",
+																											"sid": 644226936359020,
+																											"parameters": [
+																												"\"\""
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 594056293455867,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou cauteloso, e prefiro analisar meus poderes\""
+																											}
+																										}
+																									],
+																									"sid": 856328646460853
 																								}
-																							],
-																							"sid": 108504606216934
-																						},
-																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "else",
-																									"objectClass": "System",
-																									"sid": 403166419909340
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Enemy Check Powers",
-																									"sid": 585779323290928,
-																									"parameters": [
-																										"\"\""
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 833223678240347,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou cauteloso, e prefiro analisar meus poderes\""
-																									}
-																								}
-																							],
-																							"sid": 946630880518754
+																							]
 																						}
 																					]
-																				}
-																			]
-																		},
-																		{
-																			"eventType": "comment",
-																			"text": "Risco imenso",
-																			"text-color": [
-																				1,
-																				0.3803921568627451,
-																				0.3803921568627451,
-																				1
-																			]
-																		},
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 571761634679906,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 2,
-																						"second-value": "-9"
-																					}
 																				},
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 974725604825414,
-																					"parameters": {
-																						"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
-																						"comparison": 5,
-																						"second-value": "-12"
-																					}
-																				}
-																			],
-																			"actions": [
-																				{
-																					"id": "set-eventvar-value",
-																					"objectClass": "System",
-																					"sid": 249262733525164,
-																					"parameters": {
-																						"variable": "Enemy_RNG",
-																						"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
-																					}
-																				},
-																				{
-																					"id": "log",
-																					"objectClass": "Browser",
-																					"sid": 285018727640855,
-																					"parameters": {
-																						"type": "log",
-																						"message": "\"O risco é imenso: \"&Enemy_RNG"
-																					}
-																				}
-																			],
-																			"sid": 825901681805137,
-																			"children": [
 																				{
 																					"eventType": "comment",
-																					"text": "Se ele é destemido, tem uma chance alta de recusar a comprar uma carta"
+																					"text": "Risco alto",
+																					"text-color": [
+																						1,
+																						0.6901960784313725,
+																						0.4392156862745098,
+																						1
+																					]
 																				},
 																				{
 																					"eventType": "block",
 																					"conditions": [
 																						{
-																							"id": "compare-eventvar",
+																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 273088778865476,
+																							"sid": 546722247392035,
 																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"fearless\""
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 2,
+																								"second-value": "-6"
+																							}
+																						},
+																						{
+																							"id": "compare-two-values",
+																							"objectClass": "System",
+																							"sid": 189421336923918,
+																							"parameters": {
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 5,
+																								"second-value": "-9"
 																							}
 																						}
 																					],
-																					"actions": [],
-																					"sid": 749245832569561,
+																					"actions": [
+																						{
+																							"id": "set-eventvar-value",
+																							"objectClass": "System",
+																							"sid": 549525679056650,
+																							"parameters": {
+																								"variable": "Enemy_RNG",
+																								"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
+																							}
+																						},
+																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 230705828015394,
+																							"parameters": {
+																								"type": "log",
+																								"message": "\"O risco é alto: \"&Enemy_RNG"
+																							}
+																						}
+																					],
+																					"sid": 726192001174855,
 																					"children": [
+																						{
+																							"eventType": "comment",
+																							"text": "Se ele é destemido, tem uma chance mediana de recusar a comprar uma carta"
+																						},
 																						{
 																							"eventType": "block",
 																							"conditions": [
 																								{
 																									"id": "compare-eventvar",
 																									"objectClass": "System",
-																									"sid": 570419175944273,
+																									"sid": 454519970968642,
 																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 3,
-																										"value": "20"
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"fearless\""
+																									}
+																								}
+																							],
+																							"actions": [],
+																							"sid": 896336358519800,
+																							"children": [
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 734766564952924,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 4,
+																												"value": "50"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Draw_Number",
+																											"sid": 255764391025305,
+																											"parameters": [
+																												"2",
+																												false,
+																												"0",
+																												false
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 816593593042271,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou destemido, vou comprar uma carta\""
+																											}
+																										},
+																										{
+																											"id": "wait",
+																											"objectClass": "System",
+																											"sid": 956588165973565,
+																											"parameters": {
+																												"seconds": "1.5",
+																												"use-timescale": true
+																											}
+																										},
+																										{
+																											"callFunction": "Change Turn",
+																											"sid": 955696167476438,
+																											"parameters": [
+																												"1"
+																											]
+																										}
+																									],
+																									"sid": 403623865925644
+																								},
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "else",
+																											"objectClass": "System",
+																											"sid": 469160958147403
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Enemy Check Powers",
+																											"sid": 228054313167775,
+																											"parameters": [
+																												"\"\""
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 901002249338242,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou destemido, mas vou analisar meus poderes\""
+																											}
+																										}
+																									],
+																									"sid": 688550615584785
+																								}
+																							]
+																						},
+																						{
+																							"eventType": "comment",
+																							"text": "Se ele é cauteloso, tem uma chance alta de se recusar a comprar uma carta"
+																						},
+																						{
+																							"eventType": "block",
+																							"conditions": [
+																								{
+																									"id": "compare-eventvar",
+																									"objectClass": "System",
+																									"sid": 882222322893177,
+																									"parameters": {
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"cautious\""
+																									}
+																								}
+																							],
+																							"actions": [],
+																							"sid": 795001466505197,
+																							"children": [
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 412842915183155,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 4,
+																												"value": "80"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Draw_Number",
+																											"sid": 421019936505640,
+																											"parameters": [
+																												"2",
+																												false,
+																												"0",
+																												false
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 774113307985381,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou cauteloso, mas vou comprar um número\""
+																											}
+																										},
+																										{
+																											"id": "wait",
+																											"objectClass": "System",
+																											"sid": 124202659553777,
+																											"parameters": {
+																												"seconds": "1.5",
+																												"use-timescale": true
+																											}
+																										},
+																										{
+																											"callFunction": "Change Turn",
+																											"sid": 845651874387517,
+																											"parameters": [
+																												"1"
+																											]
+																										}
+																									],
+																									"sid": 125702700589974
+																								},
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "else",
+																											"objectClass": "System",
+																											"sid": 335050831979812
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Enemy Check Powers",
+																											"sid": 247101060831245,
+																											"parameters": [
+																												"\"\""
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 696339116895718,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou cauteloso, e prefiro analisar meus poderes\""
+																											}
+																										}
+																									],
+																									"sid": 316699067820485
+																								}
+																							]
+																						}
+																					]
+																				},
+																				{
+																					"eventType": "comment",
+																					"text": "Risco imenso",
+																					"text-color": [
+																						1,
+																						0.3803921568627451,
+																						0.3803921568627451,
+																						1
+																					]
+																				},
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "compare-two-values",
+																							"objectClass": "System",
+																							"sid": 265857521048823,
+																							"parameters": {
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 2,
+																								"second-value": "-9"
+																							}
+																						},
+																						{
+																							"id": "compare-two-values",
+																							"objectClass": "System",
+																							"sid": 707140763399632,
+																							"parameters": {
+																								"first-value": "TheNumber - ( EnemyNumbers + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1) )",
+																								"comparison": 5,
+																								"second-value": "-12"
+																							}
+																						}
+																					],
+																					"actions": [
+																						{
+																							"id": "set-eventvar-value",
+																							"objectClass": "System",
+																							"sid": 394598863875591,
+																							"parameters": {
+																								"variable": "Enemy_RNG",
+																								"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
+																							}
+																						},
+																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 834208398924036,
+																							"parameters": {
+																								"type": "log",
+																								"message": "\"O risco é imenso: \"&Enemy_RNG"
+																							}
+																						}
+																					],
+																					"sid": 673828921428725,
+																					"children": [
+																						{
+																							"eventType": "comment",
+																							"text": "Se ele é destemido, tem uma chance alta de recusar a comprar uma carta"
+																						},
+																						{
+																							"eventType": "block",
+																							"conditions": [
+																								{
+																									"id": "compare-eventvar",
+																									"objectClass": "System",
+																									"sid": 879174183248622,
+																									"parameters": {
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"fearless\""
+																									}
+																								}
+																							],
+																							"actions": [],
+																							"sid": 374829468192733,
+																							"children": [
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 723527382223880,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 3,
+																												"value": "20"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Enemy Action",
+																											"sid": 713157262697328,
+																											"parameters": [
+																												"\"stop\""
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 332534729827542,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou destemido, mas vou parar agora.\""
+																											}
+																										}
+																									],
+																									"sid": 918292867281742
+																								},
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 120989959566025,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 4,
+																												"value": "20"
+																											}
+																										},
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 770461540487684,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 3,
+																												"value": "90"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Enemy Check Powers",
+																											"sid": 495537644350272,
+																											"parameters": [
+																												"\"\""
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 810373755809853,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou destemido, mas vou analisar meus poderes\""
+																											}
+																										}
+																									],
+																									"sid": 528603741464155
+																								},
+																								{
+																									"eventType": "block",
+																									"conditions": [
+																										{
+																											"id": "compare-eventvar",
+																											"objectClass": "System",
+																											"sid": 804786512611678,
+																											"parameters": {
+																												"variable": "Enemy_RNG",
+																												"comparison": 4,
+																												"value": "90"
+																											}
+																										}
+																									],
+																									"actions": [
+																										{
+																											"callFunction": "Draw_Number",
+																											"sid": 152897506553520,
+																											"parameters": [
+																												"2",
+																												false,
+																												"0",
+																												false
+																											]
+																										},
+																										{
+																											"id": "log",
+																											"objectClass": "Browser",
+																											"sid": 428246768874924,
+																											"parameters": {
+																												"type": "log",
+																												"message": "\"Sou destemido e vou comprar uma carta!\""
+																											}
+																										},
+																										{
+																											"id": "wait",
+																											"objectClass": "System",
+																											"sid": 952071321323729,
+																											"parameters": {
+																												"seconds": "1.5",
+																												"use-timescale": true
+																											}
+																										},
+																										{
+																											"callFunction": "Change Turn",
+																											"sid": 206761157465776,
+																											"parameters": [
+																												"1"
+																											]
+																										}
+																									],
+																									"sid": 467282941840520
+																								}
+																							]
+																						},
+																						{
+																							"eventType": "comment",
+																							"text": "Se ele é cauteloso, vai parar a rodada"
+																						},
+																						{
+																							"eventType": "block",
+																							"conditions": [
+																								{
+																									"id": "compare-eventvar",
+																									"objectClass": "System",
+																									"sid": 227052055726240,
+																									"parameters": {
+																										"variable": "EnemyAI_Style",
+																										"comparison": 0,
+																										"value": "\"cautious\""
 																									}
 																								}
 																							],
 																							"actions": [
 																								{
 																									"callFunction": "Enemy Action",
-																									"sid": 120310848336538,
+																									"sid": 678536748393392,
 																									"parameters": [
 																										"\"stop\""
 																									]
@@ -16735,151 +17167,16 @@
 																								{
 																									"id": "log",
 																									"objectClass": "Browser",
-																									"sid": 105846686602495,
+																									"sid": 638291763768721,
 																									"parameters": {
 																										"type": "log",
-																										"message": "\"Sou destemido, mas vou parar agora.\""
+																										"message": "\"Sou cauteloso, e prefiro não arriscar e parar o jogo.\""
 																									}
 																								}
 																							],
-																							"sid": 868195759484749
-																						},
-																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "compare-eventvar",
-																									"objectClass": "System",
-																									"sid": 818279029414203,
-																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 4,
-																										"value": "20"
-																									}
-																								},
-																								{
-																									"id": "compare-eventvar",
-																									"objectClass": "System",
-																									"sid": 617929508041424,
-																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 3,
-																										"value": "90"
-																									}
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Enemy Check Powers",
-																									"sid": 614806390707966,
-																									"parameters": [
-																										"\"\""
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 108393404219030,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou destemido, mas vou analisar meus poderes\""
-																									}
-																								}
-																							],
-																							"sid": 606555291828977
-																						},
-																						{
-																							"eventType": "block",
-																							"conditions": [
-																								{
-																									"id": "compare-eventvar",
-																									"objectClass": "System",
-																									"sid": 381168659529313,
-																									"parameters": {
-																										"variable": "Enemy_RNG",
-																										"comparison": 4,
-																										"value": "90"
-																									}
-																								}
-																							],
-																							"actions": [
-																								{
-																									"callFunction": "Draw_Number",
-																									"sid": 740153278607607,
-																									"parameters": [
-																										"2",
-																										false,
-																										"0",
-																										false
-																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 918387526433757,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Sou destemido e vou comprar uma carta!\""
-																									}
-																								},
-																								{
-																									"id": "wait",
-																									"objectClass": "System",
-																									"sid": 968824111678022,
-																									"parameters": {
-																										"seconds": "1.5",
-																										"use-timescale": true
-																									}
-																								},
-																								{
-																									"callFunction": "Change Turn",
-																									"sid": 740011937411797,
-																									"parameters": [
-																										"1"
-																									]
-																								}
-																							],
-																							"sid": 257565197831916
+																							"sid": 365779582144016
 																						}
 																					]
-																				},
-																				{
-																					"eventType": "comment",
-																					"text": "Se ele é cauteloso, vai parar a rodada"
-																				},
-																				{
-																					"eventType": "block",
-																					"conditions": [
-																						{
-																							"id": "compare-eventvar",
-																							"objectClass": "System",
-																							"sid": 867298958427308,
-																							"parameters": {
-																								"variable": "EnemyAI_Style",
-																								"comparison": 0,
-																								"value": "\"cautious\""
-																							}
-																						}
-																					],
-																					"actions": [
-																						{
-																							"callFunction": "Enemy Action",
-																							"sid": 503216431400426,
-																							"parameters": [
-																								"\"stop\""
-																							]
-																						},
-																						{
-																							"id": "log",
-																							"objectClass": "Browser",
-																							"sid": 229828042424224,
-																							"parameters": {
-																								"type": "log",
-																								"message": "\"Sou cauteloso, e prefiro não arriscar e parar o jogo.\""
-																							}
-																						}
-																					],
-																					"sid": 901064727164530
 																				}
 																			]
 																		}
@@ -17892,25 +18189,197 @@
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 294740818875400,
+											"children": [
 												{
-													"callFunction": "Enemy Action",
-													"sid": 951128341402089,
-													"parameters": [
-														"\"draw_power\""
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 635664841106876,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"comparison": 0,
+																"value": "\"fearless\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 877272647331406,
+															"parameters": {
+																"variable": "Enemy_RNG",
+																"value": "int ( random ( 0, 101 ) ) + EnemyAI_Chaos"
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 841217629406989,
+															"parameters": {
+																"type": "log",
+																"message": "\"RNG fearless check powers: \"&Enemy_RNG"
+															}
+														}
+													],
+													"sid": 618563975712348,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Hand_CPU",
+																	"sid": 146435119742604,
+																	"parameters": {
+																		"instance-variable": "PowersAvailable",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 443092753450010,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 976489244309562,
+																			"parameters": {
+																				"variable": "Enemy_RNG",
+																				"comparison": 3,
+																				"value": "50"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 997423653887130,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Sou destermido, mas não quero usar agora esse poder...\""
+																			}
+																		},
+																		{
+																			"callFunction": "Enemy Action",
+																			"sid": 422660862964278,
+																			"parameters": [
+																				"\"draw_power\""
+																			]
+																		}
+																	],
+																	"sid": 264226081984744
+																},
+																{
+																	"eventType": "comment",
+																	"text": "O nível de chaos alto influencia nessa escolha"
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "else",
+																			"objectClass": "System",
+																			"sid": 775828887357184
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 535757931588249,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Sou destermido e tenho um poder, vou analisar ele logo\""
+																			}
+																		},
+																		{
+																			"callFunction": "Enemy Check Powers",
+																			"sid": 295954261352161,
+																			"parameters": [
+																				"A_EnemyPowers.At( 0 )"
+																			]
+																		}
+																	],
+																	"sid": 304486515203523
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 994918273321452
+																}
+															],
+															"actions": [
+																{
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 197114756460329,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"Sou destermido, mas não tenho poder mesmo, vou comprar um...\""
+																	}
+																},
+																{
+																	"callFunction": "Enemy Action",
+																	"sid": 486124572373379,
+																	"parameters": [
+																		"\"draw_power\""
+																	]
+																}
+															],
+															"sid": 703902345619707
+														}
 													]
 												},
 												{
-													"id": "log",
-													"objectClass": "Browser",
-													"sid": 730438308458766,
-													"parameters": {
-														"type": "log",
-														"message": "\"Hum, tenho preferência por comprar poderes.\""
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 117218766988964,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"comparison": 0,
+																"value": "\"cautious\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 492476020866043,
+															"parameters": {
+																"type": "log",
+																"message": "\"Hum, tenho preferência por comprar poderes.\""
+															}
+														},
+														{
+															"callFunction": "Enemy Action",
+															"sid": 768569700861574,
+															"parameters": [
+																"\"draw_power\""
+															]
+														}
+													],
+													"sid": 436803790416505
 												}
-											],
-											"sid": 294740818875400
+											]
 										},
 										{
 											"eventType": "comment",
@@ -18801,10 +19270,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 415151664493389,
+													"sid": 480313975782689,
 													"parameters": {
 														"variable": "Enemy_RNG",
-														"value": "int ( random ( 1, 101) )"
+														"value": "int ( random ( 1, 101) ) + EnemyAI_Chaos"
 													}
 												},
 												{
@@ -18835,23 +19304,27 @@
 													],
 													"actions": [
 														{
-															"callFunction": "Enemy Use Power",
-															"sid": 436168962248212,
+															"callFunction": "Enemy Check Powers",
+															"sid": 427881424191821,
 															"parameters": [
-																"tokenat( the_id, 0, \"/\" )"
+																"\"\""
 															]
 														},
 														{
 															"id": "log",
 															"objectClass": "Browser",
-															"sid": 966967234704284,
+															"sid": 140360964836528,
 															"parameters": {
 																"type": "log",
-																"message": "\"Vou usar\""
+																"message": "\"Melhor não agora...\""
 															}
 														}
 													],
 													"sid": 540780242947917
+												},
+												{
+													"eventType": "comment",
+													"text": "O nível de chaos alto influencia nessa escolha"
 												},
 												{
 													"eventType": "block",
@@ -18869,19 +19342,19 @@
 													],
 													"actions": [
 														{
-															"callFunction": "Enemy Check Powers",
-															"sid": 727799528789744,
+															"callFunction": "Enemy Use Power",
+															"sid": 237515020765905,
 															"parameters": [
-																"\"\""
+																"tokenat( the_id, 0, \"/\" )"
 															]
 														},
 														{
 															"id": "log",
 															"objectClass": "Browser",
-															"sid": 906346295599955,
+															"sid": 882338619412976,
 															"parameters": {
 																"type": "log",
-																"message": "\"Melhor não agora...\""
+																"message": "\"Vou usar\""
 															}
 														}
 													],
