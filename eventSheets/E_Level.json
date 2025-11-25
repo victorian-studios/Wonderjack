@@ -3570,9 +3570,9 @@
 								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
-									"sid": 711492075636698,
+									"sid": 352040876973688,
 									"parameters": {
-										"layer": "\"Click_On_Screen_Text\"",
+										"layer": "\"Click_On_Table_Text\"",
 										"visibility": "invisible"
 									}
 								},
@@ -6678,19 +6678,19 @@
 												{
 													"id": "set-layer-visible",
 													"objectClass": "System",
-													"sid": 845738992413223,
+													"sid": 146854496198722,
 													"parameters": {
-														"layer": "\"Click_On_Screen_Text\"",
+														"layer": "\"Click_On_Table_Text\"",
 														"visibility": "visible"
 													}
 												},
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 914991244859328,
+													"sid": 627341827595818,
 													"parameters": {
 														"object-to-create": "Icon_Hand_Point",
-														"layer": "\"Click_On_Screen_Text\"",
+														"layer": "\"Click_On_Table_Text\"",
 														"x": "-200",
 														"y": "Table_CPU.Y",
 														"create-hierarchy": false,
@@ -6868,19 +6868,19 @@
 												{
 													"id": "set-layer-visible",
 													"objectClass": "System",
-													"sid": 280147868658901,
+													"sid": 850757697112362,
 													"parameters": {
-														"layer": "\"Click_On_Screen_Text\"",
+														"layer": "\"Click_On_Table_Text\"",
 														"visibility": "visible"
 													}
 												},
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 608320120233812,
+													"sid": 538831820697013,
 													"parameters": {
 														"object-to-create": "Icon_Hand_Point",
-														"layer": "\"Click_On_Screen_Text\"",
+														"layer": "\"Click_On_Table_Text\"",
 														"x": "-200",
 														"y": "Table_Player.Y",
 														"create-hierarchy": false,
@@ -7663,7 +7663,51 @@
 								}
 							],
 							"actions": [],
-							"sid": 889578116015758
+							"sid": 889578116015758,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 502556600069517,
+											"parameters": {
+												"variable": "Who_Played",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 316194027441102,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [],
+											"sid": 839289144755188
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 373961577044998,
+											"parameters": {
+												"variable": "Who_Played",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 563319311292409
+								}
+							]
 						},
 						{
 							"eventType": "comment",
@@ -9575,9 +9619,9 @@
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 913497082053214,
+									"sid": 302297258310773,
 									"parameters": {
-										"layer": "\"Click_On_Screen_Text\""
+										"layer": "\"Click_On_Table_Text\""
 									}
 								},
 								{
@@ -9638,9 +9682,9 @@
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 978576389226565,
+									"sid": 205071896112624,
 									"parameters": {
-										"layer": "\"Click_On_Screen_Text\""
+										"layer": "\"Click_On_Table_Text\""
 									}
 								},
 								{
@@ -19074,7 +19118,7 @@
 									"children": [
 										{
 											"eventType": "comment",
-											"text": "Se o poder não estiver ativo, então ele aceita a usar",
+											"text": "Se não for o último turno e o poder não estiver ativo, então ele aceita a usar",
 											"text-color": [
 												0.21568627450980393,
 												1,
@@ -19086,9 +19130,18 @@
 											"eventType": "block",
 											"conditions": [
 												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 154993060865579,
+													"parameters": {
+														"variable": "FinishRound"
+													},
+													"isInverted": true
+												},
+												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_CPU",
-													"sid": 497815517494750,
+													"sid": 424670866514205,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 0,
@@ -19099,17 +19152,17 @@
 											"actions": [
 												{
 													"callFunction": "Enemy Use Power",
-													"sid": 744230279547413,
+													"sid": 839199020526974,
 													"parameters": [
 														"tokenat( the_id, 0, \"/\" )"
 													]
 												}
 											],
-											"sid": 957544137092157
+											"sid": 651111648413887
 										},
 										{
 											"eventType": "comment",
-											"text": "Se por algum acaso o poder já estiver ativo, ele se recusa a usar",
+											"text": "Se for o último turno ou o poder já estiver ativo, desiste de usar...",
 											"text-color": [
 												1,
 												0,
@@ -19123,19 +19176,19 @@
 												{
 													"id": "else",
 													"objectClass": "System",
-													"sid": 327344335904555
+													"sid": 170186044049039
 												}
 											],
 											"actions": [
 												{
 													"callFunction": "Enemy Use Power",
-													"sid": 945800617791229,
+													"sid": 421215150620151,
 													"parameters": [
 														"\"\""
 													]
 												}
 											],
-											"sid": 507099484502528
+											"sid": 282680027059405
 										}
 									]
 								},
@@ -19486,7 +19539,7 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "A CPU poderia saber a carta secreta do adversário (player) ao jogar um poder de número específico e avisar que o mesmo \"não está no baralho\". Mas isso vai dar muito trabalho por enquanto",
+									"text": "A CPU poderia saber a carta secreta do adversário (player) ao jogar um poder de número específico e avisar que o mesmo \"não está no baralho\". Mas isso vai dar muito trabalho...",
 									"text-color": [
 										1,
 										0.47843137254901963,
@@ -19925,16 +19978,6 @@
 									"text": "\"CLAIRVOYANCE\" - veja as próximas 2 cartas do baralho numérico"
 								},
 								{
-									"eventType": "comment",
-									"text": "Falta criar a nova ação no Enemy_Action para caso a clarividência ainda esteja ativa ! ! !",
-									"text-color": [
-										1,
-										0,
-										0,
-										1
-									]
-								},
-								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -19961,7 +20004,13 @@
 									"children": [
 										{
 											"eventType": "comment",
-											"text": "Se não for o último turno..."
+											"text": "Se não fo o último turno não tiver alcançado a meta ainda, usa o poder",
+											"text-color": [
+												0.21568627450980393,
+												1,
+												0,
+												1
+											]
 										},
 										{
 											"eventType": "block",
@@ -19974,81 +20023,32 @@
 														"variable": "FinishRound"
 													},
 													"isInverted": true
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 767003364292977,
+													"parameters": {
+														"variable": "EnemyNumbers",
+														"comparison": 2,
+														"value": "TheNumber"
+													}
 												}
 											],
-											"actions": [],
-											"sid": 499873894296200,
-											"children": [
+											"actions": [
 												{
-													"eventType": "comment",
-													"text": "Se não tiver alcançado a meta ainda, usa o poder",
-													"text-color": [
-														0.21568627450980393,
-														1,
-														0,
-														1
+													"callFunction": "Enemy Use Power",
+													"sid": 934272125031934,
+													"parameters": [
+														"tokenat( the_id, 0, \"/\" )"
 													]
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-eventvar",
-															"objectClass": "System",
-															"sid": 493729239780885,
-															"parameters": {
-																"variable": "EnemyNumbers",
-																"comparison": 2,
-																"value": "TheNumber"
-															}
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Enemy Use Power",
-															"sid": 706186010837204,
-															"parameters": [
-																"tokenat( the_id, 0, \"/\" )"
-															]
-														}
-													],
-													"sid": 986357630296144
-												},
-												{
-													"eventType": "comment",
-													"text": "Se já tiver alcançado a meta ou estourado, ignora esse poder",
-													"text-color": [
-														1,
-														0,
-														0,
-														1
-													]
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 432888648404824
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Enemy Use Power",
-															"sid": 617079896452647,
-															"parameters": [
-																"\"\""
-															]
-														}
-													],
-													"sid": 855446767579792
 												}
-											]
+											],
+											"sid": 499873894296200
 										},
 										{
 											"eventType": "comment",
-											"text": "Se for o último turno, não jogue essa carta",
+											"text": "Se for o último turno ou já tiver alcançado a meta, não jogue essa carta",
 											"text-color": [
 												1,
 												0,

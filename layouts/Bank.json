@@ -618,12 +618,72 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1080,
-						"y": 87,
+						"x": 1161,
+						"y": 287,
 						"width": 146,
 						"height": 146,
 						"originX": 0.5057471264367817,
 						"originY": 0.5126903553299492,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Icon_Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front",
+						"initial-frame": 13,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 79,
+					"sid": 600901053618156,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Player_Hidden": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 600901053618156,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 239,
+						"y": 988,
+						"width": 249.375,
+						"height": 250.00000000000003,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
