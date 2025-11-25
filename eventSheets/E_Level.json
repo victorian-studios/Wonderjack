@@ -3182,6 +3182,62 @@
 					]
 				},
 				{
+					"functionName": "Shuffle_Number",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "shuffle",
+							"objectClass": "A_Deck_Numb",
+							"sid": 109843002385872,
+							"parameters": {
+								"axis": "x"
+							}
+						},
+						{
+							"callFunction": "Play_RNG_Audio",
+							"sid": 288509112218841,
+							"parameters": [
+								"\"suffle\""
+							]
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Deck_Numb_Sprite",
+							"sid": 990706041039200,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 317976126319956,
+							"parameters": {
+								"seconds": "1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Deck_Numb_Sprite",
+							"sid": 348337213992361,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 374254691947720
+				},
+				{
 					"functionName": "Count_Numbers",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -6657,6 +6713,34 @@
 									"sid": 313789304517875,
 									"children": [
 										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 800106375172112,
+													"parameters": {
+														"object": "Text_Power_Tip",
+														"expression": "Text_Power_Tip.LayerName",
+														"comparison": 0,
+														"value": "\"Click_On_Table_Text\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "typewriter-text",
+													"objectClass": "Text_Power_Tip",
+													"sid": 834269041213559,
+													"parameters": {
+														"text": "Internationalization.Lookup(\"powers.exchange_tip_1\")",
+														"duration": "0.5"
+													}
+												}
+											],
+											"sid": 571942973636043
+										},
+										{
 											"eventType": "comment",
 											"text": "A CPU está desprotegida"
 										},
@@ -6729,15 +6813,6 @@
 													"objectClass": "Bkg_Power_Tip_Txt",
 													"sid": 537670541574904,
 													"behaviorType": "Fade"
-												},
-												{
-													"id": "typewriter-text",
-													"objectClass": "Text_Power_Tip",
-													"sid": 666379601523021,
-													"parameters": {
-														"text": "Internationalization.Lookup(\"powers.exchange_tip_1\")",
-														"duration": "0.5"
-													}
 												}
 											],
 											"sid": 841198616901091
@@ -6919,15 +6994,6 @@
 													"objectClass": "Bkg_Power_Tip_Txt",
 													"sid": 750828401532978,
 													"behaviorType": "Fade"
-												},
-												{
-													"id": "typewriter-text",
-													"objectClass": "Text_Power_Tip",
-													"sid": 905195561495586,
-													"parameters": {
-														"text": "Internationalization.Lookup(\"powers.exchange_tip_1\")",
-														"duration": "0.5"
-													}
 												}
 											],
 											"sid": 641263747934190
@@ -7679,16 +7745,159 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 337457344208931,
+											"parameters": {
+												"layer": "\"Click_On_Screen_Text\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Bkg_Power_Tip_Txt",
+											"sid": 889375011596695,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0.2"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Bkg_Power_Tip_Txt",
+											"sid": 863566230510222,
+											"behaviorType": "Fade"
+										}
+									],
 									"sid": 316194027441102,
 									"children": [
 										{
 											"eventType": "block",
-											"conditions": [],
-											"actions": [],
-											"sid": 839289144755188
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 208994762429784,
+													"parameters": {
+														"object": "Text_Power_Tip",
+														"expression": "Text_Power_Tip.LayerName",
+														"comparison": 0,
+														"value": "\"Click_On_Screen_Text\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "typewriter-text",
+													"objectClass": "Text_Power_Tip",
+													"sid": 252284068231768,
+													"parameters": {
+														"text": "Internationalization.Lookup(\"powers.menu_tip\")",
+														"duration": "0.5"
+													}
+												}
+											],
+											"sid": 318753763271091
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 484659734607917,
+													"parameters": {
+														"object": "Icon_Card_Numb"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Icon_Card_Numb",
+													"sid": 528013643563037,
+													"parameters": {
+														"instance-variable": "myID",
+														"value": "A_Deck_Numb.At(loopindex)"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Icon_Card_Numb",
+													"sid": 874788631396927,
+													"parameters": {
+														"animation": "\"Front\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Icon_Card_Numb",
+													"sid": 635602082254450,
+													"parameters": {
+														"frame-number": "Self.myID"
+													}
+												},
+												{
+													"id": "set-fade-in-time",
+													"objectClass": "Icon_Card_Numb",
+													"sid": 192345123293726,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-in-time": "0.6"
+													}
+												},
+												{
+													"id": "set-fade-out-time",
+													"objectClass": "Icon_Card_Numb",
+													"sid": 689701601891202,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-out-time": "0"
+													}
+												},
+												{
+													"id": "restart-fade",
+													"objectClass": "Icon_Card_Numb",
+													"sid": 315777963761812,
+													"behaviorType": "Fade"
+												}
+											],
+											"sid": 852200288507113
 										}
 									]
+								},
+								{
+									"eventType": "variable",
+									"name": "Num1",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 426046144302339
+								},
+								{
+									"eventType": "variable",
+									"name": "Num2",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 251712145359747
+								},
+								{
+									"eventType": "variable",
+									"name": "Num3",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 320275316844983
 								},
 								{
 									"eventType": "block",
@@ -7704,8 +7913,209 @@
 											}
 										}
 									],
-									"actions": [],
-									"sid": 563319311292409
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 444444857057041,
+											"parameters": {
+												"variable": "Num1",
+												"value": "A_Deck_Numb.At(0)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 581088053338440,
+											"parameters": {
+												"variable": "Num2",
+												"value": "A_Deck_Numb.At(1)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 436531540242382,
+											"parameters": {
+												"variable": "Num3",
+												"value": "A_Deck_Numb.At(2)"
+											}
+										}
+									],
+									"sid": 563319311292409,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Procurando a carta perfeita ... 1"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 337797511279571,
+													"parameters": {
+														"first-value": "TheNumber - ( EnemyNumbers + Num1 ) ",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Draw_Number",
+													"sid": 737874204110827,
+													"parameters": [
+														"2",
+														false,
+														"Num1",
+														false
+													]
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 219866293395482,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Shuffle_Number",
+													"sid": 402446920668100
+												}
+											],
+											"sid": 861003510040557
+										},
+										{
+											"eventType": "comment",
+											"text": "Procurando a carta perfeita ... 2"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 285971653393364
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 549224652014980,
+													"parameters": {
+														"first-value": "TheNumber - ( EnemyNumbers + Num2 ) ",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Draw_Number",
+													"sid": 143499131258323,
+													"parameters": [
+														"2",
+														false,
+														"Num2",
+														false
+													]
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 813414342567488,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Shuffle_Number",
+													"sid": 238425902011628
+												}
+											],
+											"sid": 902724366423133
+										},
+										{
+											"eventType": "comment",
+											"text": "Procurando a carta perfeita ... 3"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 266169812663873
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 969671890573162,
+													"parameters": {
+														"first-value": "TheNumber - ( EnemyNumbers + Num3 )",
+														"comparison": 0,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Draw_Number",
+													"sid": 450800402815163,
+													"parameters": [
+														"2",
+														false,
+														"Num3",
+														false
+													]
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 574795808613384,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Shuffle_Number",
+													"sid": 444346649510428
+												}
+											],
+											"sid": 747855788301153
+										},
+										{
+											"eventType": "comment",
+											"text": "Já que nenhuma é perfeita, qual chega mais próxima? ... 1"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 957335483369755
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 189735708194761,
+													"parameters": {
+														"first-value": "TheNumber - ( EnemyNumbers + Num1 )",
+														"comparison": 4,
+														"second-value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 657525921185099
+										}
+									]
 								}
 							]
 						},
@@ -10015,6 +10425,311 @@
 						}
 					],
 					"sid": 174810778165477
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Menu Power",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Feedback de seleção do mouse"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 669784906702799,
+									"parameters": {
+										"object": "Icon_Card_Numb"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Icon_Card_Numb",
+									"sid": 493701623533746,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Front\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 480297071838877,
+									"parameters": {
+										"layer": "\"Click_On_Screen_Text\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 548610045580514,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Icon_Card_Numb",
+									"sid": 795236611433963,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 992428704669874
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 412938568038036
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 656100228423640,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Icon_Card_Numb",
+									"sid": 590198269667617,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 698242909944662
+						},
+						{
+							"eventType": "comment",
+							"text": "Ao clicar na carta, ela inicia um fade-out, o sistema chama a função Draw_Number e por fim, a camada entra em fade-out"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 110385885787012,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Icon_Card_Numb"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Icon_Card_Numb",
+									"sid": 224877960264636,
+									"parameters": {
+										"animation": "\"Selected\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 539685022660190,
+									"parameters": {
+										"layer": "\"Click_On_Screen_Text\""
+									}
+								},
+								{
+									"id": "is-playing",
+									"objectClass": "Bkg_Power_Tip_Txt",
+									"sid": 678231847270326,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"layer_fade\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Icon_Card_Numb",
+									"sid": 875254518783962,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Icon_Card_Numb",
+									"sid": 699240385317259,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0.2"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Icon_Card_Numb",
+									"sid": 491307775610393,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 643941186317457,
+									"parameters": {
+										"seconds": "0.4",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "Draw_Number",
+									"sid": 982682809787918,
+									"parameters": [
+										"1",
+										false,
+										"Icon_Card_Numb.myID",
+										false
+									]
+								},
+								{
+									"id": "tween-value",
+									"objectClass": "Bkg_Power_Tip_Txt",
+									"sid": 620731988975534,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"layer_fade\"",
+										"start-value": "100",
+										"end-value": "0",
+										"time": "0.5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 493231978758286,
+									"parameters": {
+										"seconds": "2",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "Shuffle_Number",
+									"sid": 492449870879814
+								}
+							],
+							"sid": 305051455692084
+						},
+						{
+							"eventType": "comment",
+							"text": "Condição para a camada mudar a opacidade constantemente durante o tween do Bkg_Power_Tip_Txt"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 340198052381693,
+									"parameters": {
+										"layer": "\"Click_On_Screen_Text\""
+									}
+								},
+								{
+									"id": "is-playing",
+									"objectClass": "Bkg_Power_Tip_Txt",
+									"sid": 242493157140314,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"layer_fade\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 128445578005965,
+									"parameters": {
+										"layer": "\"Click_On_Screen_Text\"",
+										"opacity": "Bkg_Power_Tip_Txt.Tween.Value(\"layer_fade\")"
+									}
+								}
+							],
+							"sid": 971918847161031
+						},
+						{
+							"eventType": "comment",
+							"text": "Quando acabar o fade, significa que o poder também foi concluido"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "Bkg_Power_Tip_Txt",
+									"sid": 478383263656321,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"layer_fade\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 670649038922508,
+									"parameters": {
+										"layer": "\"Click_On_Screen_Text\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 408634155982140,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 733605408402732,
+									"parameters": {
+										"variable": "PowerDone",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 916545571363867
+						}
+					],
+					"sid": 401742045085397
 				}
 			],
 			"sid": 275612914074515
@@ -13227,6 +13942,24 @@
 												"comparison": 0,
 												"value": "1"
 											}
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 930044157452480,
+											"parameters": {
+												"layer": "\"Click_On_Screen_Text\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 561318566952034,
+											"parameters": {
+												"layer": "\"Click_On_Table_Text\""
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -13548,6 +14281,24 @@
 												"comparison": 0,
 												"value": "1"
 											}
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 663512897458358,
+											"parameters": {
+												"layer": "\"Click_On_Screen_Text\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 560821106540123,
+											"parameters": {
+												"layer": "\"Click_On_Table_Text\""
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -13834,6 +14585,24 @@
 												"comparison": 0,
 												"value": "1"
 											}
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 299950315351966,
+											"parameters": {
+												"layer": "\"Click_On_Screen_Text\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 734762632262143,
+											"parameters": {
+												"layer": "\"Click_On_Table_Text\""
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -19769,6 +20538,26 @@
 									"text": "\"MENU\" - veja as 3 primeiras cartas de número e escolha 1 para comprar"
 								},
 								{
+									"eventType": "comment",
+									"text": "A CPU poderia ver as cartas da mesa para decidir de vale a pena jogar esta carta. Mas isso vai dar muito trabalho...",
+									"text-color": [
+										1,
+										0.47843137254901963,
+										0.47843137254901963,
+										1
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "A CPU poderia atualizar sua matriz A_Enemy_Choices de acordo com essa carta de poder. Mas isso vai dar mais trabalho ainda...",
+									"text-color": [
+										1,
+										0.47843137254901963,
+										0.47843137254901963,
+										1
+									]
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -19782,16 +20571,188 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 926868937630868,
+									"children": [
 										{
-											"callFunction": "Enemy Use Power",
-											"sid": 717742987286286,
-											"parameters": [
-												"tokenat( the_id, 0, \"/\" )"
+											"eventType": "comment",
+											"text": "Se ele for destemido..."
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 890753404513623,
+													"parameters": {
+														"variable": "EnemyAI_Style",
+														"comparison": 0,
+														"value": "\"fearless\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 713257152242498,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "Se ainda estiver faltando, nem que seja muito pouco, para alcançar a meta",
+													"text-color": [
+														0,
+														1,
+														0,
+														1
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 945668794357094,
+															"parameters": {
+																"first-value": "TheNumber - EnemyNumbers",
+																"comparison": 4,
+																"second-value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "Enemy Use Power",
+															"sid": 829191311226173,
+															"parameters": [
+																"tokenat( the_id, 0, \"/\" )"
+															]
+														}
+													],
+													"sid": 197695190332875,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "Se estiver bem próximo da meta, não usa a carta de poder",
+															"text-color": [
+																1,
+																0,
+																0,
+																1
+															]
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 632495381215232
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "Enemy Use Power",
+															"sid": 338554505901782,
+															"parameters": [
+																"\"\""
+															]
+														}
+													],
+													"sid": 977873695301518
+												}
+											]
+										},
+										{
+											"eventType": "comment",
+											"text": "Se ele for cauteloso..."
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 137703480794710,
+													"parameters": {
+														"variable": "EnemyAI_Style",
+														"comparison": 0,
+														"value": "\"cautious\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 720275127819300,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "Se ainda estiver ligeiramente distante do meta, usa a carta de poder",
+													"text-color": [
+														0,
+														1,
+														0,
+														1
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 138012707047189,
+															"parameters": {
+																"first-value": "TheNumber - EnemyNumbers",
+																"comparison": 4,
+																"second-value": "4"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "Enemy Use Power",
+															"sid": 558400467129487,
+															"parameters": [
+																"tokenat( the_id, 0, \"/\" )"
+															]
+														}
+													],
+													"sid": 668044426563337
+												},
+												{
+													"eventType": "comment",
+													"text": "Se estiver próximo da meta, não usa a carta de poder",
+													"text-color": [
+														1,
+														0,
+														0,
+														1
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 817290889165149
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "Enemy Use Power",
+															"sid": 882640763408240,
+															"parameters": [
+																"\"\""
+															]
+														}
+													],
+													"sid": 300681454788677
+												}
 											]
 										}
-									],
-									"sid": 926868937630868
+									]
 								},
 								{
 									"eventType": "comment",
@@ -21297,7 +22258,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Music",
+			"title": "Music & Sounds",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -21465,6 +22426,158 @@
 						}
 					],
 					"sid": 880528600567598
+				},
+				{
+					"functionName": "Play_RNG_Audio",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Name",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 944542915234294
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 152432806512155,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "RNG_Audio",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 590064703717167
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 595137964039978,
+									"parameters": {
+										"variable": "Name",
+										"comparison": 0,
+										"value": "\"suffle\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 692467085683869,
+									"parameters": {
+										"variable": "RNG_Audio",
+										"value": "choose ( 1,2,3)"
+									}
+								}
+							],
+							"sid": 808038403965867,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 661317970245746,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 877963483519241,
+											"parameters": {
+												"audio-file": "card-deck-shuffle-1",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 286789807534353
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 348569750720146,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 898957689012906,
+											"parameters": {
+												"audio-file": "card-deck-shuffle-2",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 591202982620857
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 651113952925788,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 325150586541591,
+											"parameters": {
+												"audio-file": "card-deck-shuffle-3",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 516109565466173
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 208504328403946

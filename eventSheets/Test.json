@@ -1,0 +1,140 @@
+{
+	"name": "Test",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 344945564997040
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 565501720375161,
+					"parameters": {
+						"object-to-create": "Enemy",
+						"layer": "0",
+						"x": "1321",
+						"y": "866",
+						"create-hierarchy": false,
+						"template-name": "\"Cheshire_Cat\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Enemy",
+					"sid": 535071257832715,
+					"parameters": {
+						"animation": "\"Cheshire Cat\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 403834981134901,
+					"parameters": {
+						"object": "Enemy_Extra_Anim",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": true,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Enemy",
+					"sid": 999067749789964,
+					"parameters": {
+						"child": "Enemy_Extra_Anim",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-o": false,
+						"transform-z-elevation": true,
+						"transform-visibility": false,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Enemy_Extra_Anim",
+					"sid": 814585185935758,
+					"parameters": {
+						"animation": "\"Tail\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Enemy_Extra_Anim",
+					"sid": 314206063390498,
+					"parameters": {
+						"width": "190",
+						"height": "180"
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "Enemy_Extra_Anim",
+					"sid": 199202495147440
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 114290548962632,
+					"parameters": {
+						"object": "Enemy_Extra_Anim",
+						"layer": "0",
+						"image-point": "2",
+						"create-hierarchy": true,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Enemy",
+					"sid": 242440812426704,
+					"parameters": {
+						"child": "Enemy_Extra_Anim",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-o": false,
+						"transform-z-elevation": true,
+						"transform-visibility": false,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Enemy_Extra_Anim",
+					"sid": 529469341751405,
+					"parameters": {
+						"animation": "\"Cat_Eyes\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Enemy_Extra_Anim",
+					"sid": 136201696725258,
+					"parameters": {
+						"width": "126",
+						"height": "29"
+					}
+				}
+			],
+			"sid": 675326534018588
+		}
+	],
+	"sid": 666650112629329
+}

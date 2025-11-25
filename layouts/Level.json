@@ -1541,6 +1541,11 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
 								}
 							},
 							"instanceFolderItem": {
@@ -1688,6 +1693,11 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
 								}
 							},
 							"instanceFolderItem": {
@@ -1718,7 +1728,7 @@
 							"properties": {
 								"text": "[u]Choose a card to draw:[/u]",
 								"enable-bbcode": true,
-								"font": "Arial",
+								"font": "OfenbacherSchwabCAT",
 								"size": 39,
 								"line-height": 0,
 								"bold": false,
@@ -1812,6 +1822,16 @@
 									"properties": {
 										"enabled": true
 									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0.2,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"instanceFolderItem": {
@@ -1872,6 +1892,16 @@
 									"properties": {
 										"enabled": true
 									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0.2,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"instanceFolderItem": {
@@ -1881,7 +1911,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 970,
+								"x": 974,
 								"y": 450,
 								"width": 249.375,
 								"height": 250.00000000000003,
@@ -1932,6 +1962,16 @@
 									"properties": {
 										"enabled": true
 									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0.2,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"instanceFolderItem": {
@@ -1960,7 +2000,7 @@
 					],
 					"sid": 571677825879980,
 					"effectTypes": [],
-					"isInitiallyVisible": true,
+					"isInitiallyVisible": false,
 					"isInitiallyInteractive": true,
 					"isHTMLElementsLayer": false,
 					"color": [

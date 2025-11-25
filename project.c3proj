@@ -175,7 +175,8 @@
 			"Text_Power_Tip",
 			"A_Enemy_Choices",
 			"Icon_Protect",
-			"Icon_Card_Numb"
+			"Icon_Card_Numb",
+			"Enemy_Extra_Anim"
 		],
 		"subfolders": []
 	},
@@ -202,7 +203,8 @@
 			"E_Level",
 			"E_Global",
 			"E_Menu",
-			"E_Credits"
+			"E_Credits",
+			"Test"
 		],
 		"subfolders": []
 	},
@@ -289,6 +291,30 @@
 					"name": "shield_sfx.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 261260831203376,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "card-deck-shuffle-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 272537723482371,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "card-deck-shuffle-2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 194177173358878,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "card-deck-shuffle-3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 575439830819313,
 					"file-info": {
 						"purpose": "none"
 					}

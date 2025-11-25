@@ -35,13 +35,14 @@
             "return": "[u]Return[/u]\n\n\nDiscard the last number card to the end of the deck.",
             "compel": "[u]Compel[/u]\n\n\nForces your opponent to discard the last number card to the end of the deck.",
             "exchange": "[u]Exchange[/u]\n\n\nChoose a not hidden card to switch with your opponement.",
-            "exchange_tip_1": "[u]Select the opponent card:[/u]",
+            "exchange_tip_1": "[u]Select an opponent card:[/u]",
             "exchange_tip_2": "[u]Select your card to switch:[/u]",
             "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch the first hidden card with each other.",
-            "menu": "",
+            "menu": "[u]Menu[/u]\n\nSee the next 3 cards from the number deck and choose 1 to draw. Then, the number deck is shuffled.",
+            "menu_tip": "[u]Select a card to draw:[/u]",
             "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their not hidden number cards to the end of the deck. Cannot be used in the last turn!",
             "time": "The next numbers are: {0} and then {1}",
-            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the first 2 number cards of the deck.",
+            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the next 2 cards from of the number deck.",
             "clairvoyance_player": "",
             "clairvoyance_cpu": "{0} had a nice view of the next 2 cards..."
             
