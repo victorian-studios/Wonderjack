@@ -176,7 +176,9 @@
 			"A_Enemy_Choices",
 			"Icon_Protect",
 			"Icon_Card_Numb",
-			"Enemy_Extra_Anim"
+			"Enemy_Extra_Anim",
+			"Enemy_Menu",
+			"Icon_Hidden_Card"
 		],
 		"subfolders": []
 	},

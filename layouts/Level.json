@@ -716,7 +716,10 @@
 					"sid": 245633864583541,
 					"tags": "",
 					"instanceVariables": {
-						"Cards": 0
+						"Cards": 0,
+						"Cards_Hidden": 0,
+						"Visible_Count": 0,
+						"Next_Hidden": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -755,7 +758,8 @@
 					"sid": 688171581131504,
 					"tags": "",
 					"instanceVariables": {
-						"Cards": 0
+						"Cards": 0,
+						"Next_Hidden": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -2590,6 +2594,18 @@
 			},
 			"uid": 71,
 			"sid": 766464673371039,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "Enemy_Menu",
+			"properties": {
+				"width": 0,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 85,
+			"sid": 831081020576015,
 			"tags": "",
 			"instanceVariables": {}
 		}

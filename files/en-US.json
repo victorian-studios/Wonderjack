@@ -29,7 +29,7 @@
 		"powers": {
 			"card": "[u]Card {0}[/u]\n\n\nGet the card {0} if it's in the deck.",
             "card_tip": "This card is not in the main deck...",
-            "protect": "",
+            "protect": "[u]Protect[/u]\n\n\nProtect you from loosing any number card for 3 turns.",
             "impulse": "[u]Impulse[/u]\n\n\nGet the highest card number from the deck",
             "gift": "[u]Gift[/u]\n\n\nGive the highest card number to your opponent.",
             "return": "[u]Return[/u]\n\n\nDiscard the last number card to the end of the deck.",
@@ -41,9 +41,9 @@
             "menu": "[u]Menu[/u]\n\nSee the next 3 cards from the number deck and choose 1 to draw. Then, the number deck is shuffled.",
             "menu_tip": "[u]Select a card to draw:[/u]",
             "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their not hidden number cards to the end of the deck. Cannot be used in the last turn!",
-            "time": "The next numbers are: {0} and then {1}",
+            "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be hidden to the opponent.",
             "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the next 2 cards from of the number deck.",
-            "clairvoyance_player": "",
+            "clairvoyance_player": "The next numbers are: {0} and then {1}",
             "clairvoyance_cpu": "{0} had a nice view of the next 2 cards..."
             
         }

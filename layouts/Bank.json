@@ -346,9 +346,9 @@
 						},
 						"Fade": {
 							"properties": {
-								"fade-in-time": 0,
+								"fade-in-time": 1,
 								"wait-time": 0,
-								"fade-out-time": 1,
+								"fade-out-time": 0,
 								"destroy": false,
 								"enabled": true,
 								"live-preview": false
@@ -557,8 +557,8 @@
 						"y": 287,
 						"width": 146,
 						"height": 146,
-						"originX": 0.5057471264367817,
-						"originY": 0.5126903553299492,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1078,6 +1078,43 @@
 						"height": 28.999999999999996,
 						"originX": 0.4991394148020654,
 						"originY": 0.4626865671641791,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Icon_Hidden_Card",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 86,
+					"sid": 210206392296166,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 210206392296166,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1159,
+						"y": 515,
+						"width": 146,
+						"height": 146,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

@@ -1,25 +1,10 @@
 {
-	"name": "Table_CPU",
+	"name": "Icon_Hidden_Card",
 	"plugin-id": "Sprite",
-	"sid": 406662522526618,
+	"sid": 616522326485558,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "Cards",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 955676885130746
-		},
-		{
-			"name": "Next_Hidden",
-			"type": "boolean",
-			"desc": "true - ativou o poder \"secret\" / false - a próxima carta de número será visível",
-			"show": true,
-			"sid": 852224891866726
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -27,22 +12,22 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0,
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 876012,
+						"imageSpriteId": 5028441,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 757868159748972,
-				"name": "Animation 1",
+				"sid": 952615637974644,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
