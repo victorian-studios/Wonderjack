@@ -32,6 +32,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 716106272003604
+		},
+		{
+			"name": "PlayerSide",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 359672104778539
 		}
 	],
 	"behaviorTypes": [

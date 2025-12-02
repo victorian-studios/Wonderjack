@@ -22,7 +22,8 @@
 						"myID": 999,
 						"Original_Hidden": false,
 						"Player_Hidden": false,
-						"Enemy_Hidden": false
+						"Enemy_Hidden": false,
+						"PlayerSide": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -54,7 +55,7 @@
 					"world": {
 						"x": 249,
 						"y": 310,
-						"width": 249.375,
+						"width": 250,
 						"height": 250.00000000000003,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -152,7 +153,8 @@
 						"myID": 999,
 						"Original_Hidden": false,
 						"Player_Hidden": false,
-						"Enemy_Hidden": false
+						"Enemy_Hidden": false,
+						"PlayerSide": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -184,7 +186,7 @@
 					"world": {
 						"x": 509,
 						"y": 314,
-						"width": 166.25,
+						"width": 166,
 						"height": 166,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -429,8 +431,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 158,
-						"y": 668,
+						"x": 518,
+						"y": 147,
 						"width": 120,
 						"height": 188,
 						"originX": 0.5,

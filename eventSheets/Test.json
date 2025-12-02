@@ -133,7 +133,122 @@
 					}
 				}
 			],
-			"sid": 675326534018588
+			"sid": 675326534018588,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 511924201663530,
+							"parameters": {
+								"type": "log",
+								"message": "\"Meta Perfeita\""
+							}
+						}
+					],
+					"sid": 331282408943069
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 828127570849162,
+							"parameters": {
+								"type": "log",
+								"message": "\"Desestourar\""
+							}
+						}
+					],
+					"sid": 499087104377416
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 675877425318116,
+							"parameters": {
+								"type": "log",
+								"message": "\"Ferrar Player\""
+							}
+						}
+					],
+					"sid": 357127598326401
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 536662187290126,
+							"parameters": {
+								"object": "Card_Numb",
+								"expression": "Card_Numb.Width",
+								"comparison": 0,
+								"value": "250"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Icon_Hand_Point",
+							"sid": 926549599792618,
+							"parameters": {
+								"x": "Card_Numb.X",
+								"y": "Card_Numb.Y - 20"
+							}
+						}
+					],
+					"sid": 690685102826015
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 448185508377379,
+							"parameters": {
+								"object": "Card_Numb",
+								"expression": "Card_Numb.Width",
+								"comparison": 0,
+								"value": "166"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 676758526006520,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Icon_Hand_Point",
+							"sid": 349760619152978,
+							"parameters": {
+								"x": "Card_Numb.X",
+								"y": "Card_Numb.Y - 20"
+							}
+						}
+					],
+					"sid": 253174268836579
+				}
+			]
 		}
 	],
 	"sid": 666650112629329
