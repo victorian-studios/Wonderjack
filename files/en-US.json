@@ -16,15 +16,15 @@
             "revive": "You got a second chance! But your relic was destroyed."
         },
 		"relics": {
-            "card_13": "",
-            "cat_eye" : "",
-            "watch" : "",
-            "eat_me" : "",
-            "crown" : "",
-            "spear" : "",
-            "tea" : "",
-            "drink_me" : "",
-            "hat" : ""
+            "card_13": "Permanently adds card 13 to the number deck.",
+            "cat_eye" : "On the 3° round, your opponent’s hidden card will be revealed on the 1° turn.",
+            "watch" : "Right-click this relic to return the last number card you drew to the bottom of the deck (once per match). However, your hand limit for power cards is reduced by 1.",
+            "eat_me" : "Increases your hand limit for power cards by 1.",
+            "crown" : "When you lose a match, this relic breaks and you can try again.",
+            "spear" : "Reduces your opponents’ hand limit for power cards by 1.",
+            "tea" : "Allows you to draw 1 number card after playing a power card on the same turn (once per match).",
+            "drink_me" : "Increases the match goal to 24. Reduces your limit for drawing power cards per round by 1.",
+            "hat" : "When drawing a card that would exceed the match goal, the card is returned and a new one is drawn immediately."
         },
 		"powers": {
 			"card": "[u]Card {0}[/u]\n\n\nGet the card {0} if it's in the deck.",

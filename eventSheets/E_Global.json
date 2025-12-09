@@ -261,13 +261,21 @@
 					"parameters": {
 						"object": "Buttons"
 					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 618305176515343,
+					"parameters": {
+						"layer": "Buttons.LayerName"
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-animation-frame",
 					"objectClass": "Buttons",
-					"sid": 969009916134735,
+					"sid": 491249081632324,
 					"parameters": {
 						"frame-number": "1"
 					}
@@ -275,30 +283,13 @@
 				{
 					"id": "set-cursor-style2",
 					"objectClass": "Mouse",
-					"sid": 440954881551929,
+					"sid": 625549798906835,
 					"parameters": {
 						"cursor-style": "pointer"
 					}
 				}
 			],
-			"sid": 213346950500442,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "layer-is-visible",
-							"objectClass": "System",
-							"sid": 823599249979308,
-							"parameters": {
-								"layer": "Buttons.LayerName"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 212179975521762
-				}
-			]
+			"sid": 213346950500442
 		},
 		{
 			"eventType": "block",
@@ -313,7 +304,7 @@
 				{
 					"id": "set-animation-frame",
 					"objectClass": "Buttons",
-					"sid": 426956371413262,
+					"sid": 546253198355596,
 					"parameters": {
 						"frame-number": "0"
 					}
@@ -321,36 +312,13 @@
 				{
 					"id": "set-cursor-style2",
 					"objectClass": "Mouse",
-					"sid": 273063803143420,
+					"sid": 150028875682843,
 					"parameters": {
 						"cursor-style": "normal"
 					}
 				}
 			],
-			"sid": 184305952900509,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "layer-is-visible",
-							"objectClass": "System",
-							"sid": 280025078679408,
-							"parameters": {
-								"layer": "Buttons.LayerName"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 124187949463529
-						}
-					],
-					"actions": [],
-					"sid": 426976663799357
-				}
-			]
+			"sid": 184305952900509
 		},
 		{
 			"eventType": "block",

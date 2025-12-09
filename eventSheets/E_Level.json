@@ -207,6 +207,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "RelicPhase",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true - esta na etapa de choose relics",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 726206008334192
+		},
+		{
+			"eventType": "variable",
 			"name": "LastTurnCount",
 			"type": "number",
 			"initialValue": "-1",
@@ -468,6 +478,35 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 687633357974575
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "txt_debug",
+					"sid": 328109819827946,
+					"parameters": {
+						"text": "\"? + \"&Table_CPU.Visible_Count&newline&newline&PlayerNumbers"
+					}
+				}
+			],
+			"sid": 403715614006273,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 982239723881859
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
 					"sid": 358350198942421,
@@ -507,6 +546,23 @@
 					"parameters": {
 						"layer": "\"Pause\"",
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 975951828013359,
+					"parameters": {
+						"time-scale": "0"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 505297009994485,
+					"parameters": {
+						"group-name": "\"Player's Turn / Actions\"",
+						"state": "deactivated"
 					}
 				}
 			],
@@ -569,6 +625,23 @@
 							"parameters": {
 								"layer": "\"Pause\"",
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 283133992630452,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 639433043959650,
+							"parameters": {
+								"group-name": "\"Player's Turn / Actions\"",
+								"state": "activated"
 							}
 						}
 					],
@@ -711,6 +784,10 @@
 							"sid": 542501157146271,
 							"children": [
 								{
+									"eventType": "comment",
+									"text": "Carta oculta aleatória (inicial)"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -848,6 +925,10 @@
 									"isOrBlock": true
 								},
 								{
+									"eventType": "comment",
+									"text": "Carta oculta aleatória (clarevidência)"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -856,6 +937,16 @@
 											"sid": 682551041256964,
 											"parameters": {
 												"instance-variable": "Next_Hidden"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 181876774985673,
+											"parameters": {
+												"variable": "Specific",
+												"comparison": 0,
+												"value": "0"
 											}
 										}
 									],
@@ -990,8 +1081,11 @@
 											}
 										}
 									],
-									"sid": 413222828788724,
-									"isOrBlock": true
+									"sid": 413222828788724
+								},
+								{
+									"eventType": "comment",
+									"text": "Carta normal aleatória"
 								},
 								{
 									"eventType": "block",
@@ -1149,6 +1243,10 @@
 									"sid": 577098952783553
 								},
 								{
+									"eventType": "comment",
+									"text": "Carta específica"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -1167,15 +1265,6 @@
 											"sid": 481470423491674,
 											"parameters": {
 												"variable": "Hidden"
-											},
-											"isInverted": true
-										},
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Table_Player",
-											"sid": 123179622676196,
-											"parameters": {
-												"instance-variable": "Next_Hidden"
 											},
 											"isInverted": true
 										}
@@ -1576,6 +1665,10 @@
 							"sid": 579836624474215,
 							"children": [
 								{
+									"eventType": "comment",
+									"text": "Carta oculta aleatória (inicial)"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -1734,6 +1827,10 @@
 									]
 								},
 								{
+									"eventType": "comment",
+									"text": "Carta oculta aleatória (clarevidência)"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -1742,6 +1839,16 @@
 											"sid": 882907980977219,
 											"parameters": {
 												"instance-variable": "Next_Hidden"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 757711683346749,
+											"parameters": {
+												"variable": "Specific",
+												"comparison": 0,
+												"value": "0"
 											}
 										}
 									],
@@ -1874,6 +1981,10 @@
 									"sid": 670801246262817
 								},
 								{
+									"eventType": "comment",
+									"text": "Carta normal aleatória"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -1898,7 +2009,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Table_CPU",
-											"sid": 624664315027202,
+											"sid": 978080437727309,
 											"parameters": {
 												"instance-variable": "Next_Hidden"
 											},
@@ -2024,6 +2135,10 @@
 									"sid": 454894134736441
 								},
 								{
+									"eventType": "comment",
+									"text": "Carta específica"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -2042,15 +2157,6 @@
 											"sid": 259251031432541,
 											"parameters": {
 												"variable": "Hidden"
-											},
-											"isInverted": true
-										},
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Table_CPU",
-											"sid": 776130778404490,
-											"parameters": {
-												"instance-variable": "Next_Hidden"
 											},
 											"isInverted": true
 										}
@@ -3648,6 +3754,35 @@
 								"instance-variable": "Visible_Count",
 								"value": "0"
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Table_CPU",
+							"sid": 605745014267322,
+							"parameters": {
+								"instance-variable": "Visible_Count",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "A_NumbersEnemy",
+							"sid": 653632515723934,
+							"parameters": {
+								"width": "0",
+								"height": "1",
+								"depth": "1"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "A_NumbersPlayer",
+							"sid": 351782072580304,
+							"parameters": {
+								"width": "0",
+								"height": "1",
+								"depth": "1"
+							}
 						}
 					],
 					"sid": 115421162530555,
@@ -3901,9 +4036,63 @@
 												"instance-variable": "Visible_Count",
 												"value": "Card_Numb.myID"
 											}
+										},
+										{
+											"id": "push",
+											"objectClass": "A_NumbersPlayer",
+											"sid": 780404385328960,
+											"parameters": {
+												"where": "front",
+												"value": "Card_Numb.myID",
+												"axis": "x"
+											}
 										}
 									],
 									"sid": 231844328801953
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Card_Numb",
+											"sid": 178923088893018,
+											"parameters": {
+												"object": "Table_CPU"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card_Numb",
+											"sid": 640798245509056,
+											"parameters": {
+												"instance-variable": "Enemy_Hidden"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Table_CPU",
+											"sid": 870102400441078,
+											"parameters": {
+												"instance-variable": "Visible_Count",
+												"value": "Card_Numb.myID"
+											}
+										},
+										{
+											"id": "push",
+											"objectClass": "A_NumbersEnemy",
+											"sid": 663179188105260,
+											"parameters": {
+												"where": "front",
+												"value": "Card_Numb.myID",
+												"axis": "x"
+											}
+										}
+									],
+									"sid": 985240267727047
 								}
 							]
 						}
@@ -4175,6 +4364,15 @@
 							"parameters": {
 								"object": "Table_Player"
 							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 856885250232718,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -5559,7 +5757,17 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 485649958468381,
+									"parameters": {
+										"type": "log",
+										"message": "\"id and index \"&Card_Id & Enemy_Index"
+									}
+								}
+							],
 							"sid": 535697752863113,
 							"children": [
 								{
@@ -5583,7 +5791,7 @@
 												{
 													"id": "pick-by-comparison",
 													"objectClass": "System",
-													"sid": 697165969845530,
+													"sid": 223697540548286,
 													"parameters": {
 														"object": "Card_Power_Enemy",
 														"expression": "Card_Power_Enemy.myID",
@@ -5679,7 +5887,7 @@
 												{
 													"id": "pick-by-comparison",
 													"objectClass": "System",
-													"sid": 624515431036213,
+													"sid": 893876234749129,
 													"parameters": {
 														"object": "Card_Power_Enemy",
 														"expression": "Card_Power_Enemy.myID",
@@ -7181,7 +7389,17 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 700693838767212,
+									"parameters": {
+										"type": "log",
+										"message": "\"carta exchange\""
+									}
+								}
+							],
 							"sid": 885341966133118,
 							"children": [
 								{
@@ -7231,15 +7449,15 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "O Player está desprotegido"
+											"text": "A CPU está desprotegida"
 										},
 										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "compare-instance-variable",
-													"objectClass": "Hand_Player",
-													"sid": 165790434074006,
+													"objectClass": "Hand_CPU",
+													"sid": 981063051762082,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 3,
@@ -7308,7 +7526,7 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "O Player está protegido"
+											"text": "A CPU está protegida"
 										},
 										{
 											"eventType": "block",
@@ -7407,20 +7625,30 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 952618719263026,
+											"parameters": {
+												"type": "log",
+												"message": "\"player 2 jogou\""
+											}
+										}
+									],
 									"sid": 652128034315676,
 									"children": [
 										{
 											"eventType": "comment",
-											"text": "A CPU está desprotegida"
+											"text": "O Player está desprotegido"
 										},
 										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "compare-instance-variable",
-													"objectClass": "Hand_CPU",
-													"sid": 443474388489029,
+													"objectClass": "Hand_Player",
+													"sid": 421634135574662,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 3,
@@ -7430,14 +7658,23 @@
 											],
 											"actions": [
 												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 189841712580718,
+													"parameters": {
+														"type": "log",
+														"message": "\"if\""
+													}
+												},
+												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 538831820697013,
+													"sid": 540543675516858,
 													"parameters": {
 														"object-to-create": "Icon_Hand_Point",
-														"layer": "\"Click_On_Table_Text\"",
+														"layer": "\"HUD\"",
 														"x": "-200",
-														"y": "Table_Player.Y",
+														"y": "Table_CPU.Y",
 														"create-hierarchy": false,
 														"template-name": "\"\""
 													}
@@ -7465,7 +7702,7 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "A CPU está protegida"
+											"text": "O Player está protegido"
 										},
 										{
 											"eventType": "block",
@@ -7476,7 +7713,17 @@
 													"sid": 113268859615245
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 311473913372365,
+													"parameters": {
+														"type": "log",
+														"message": "\"else\""
+													}
+												}
+											],
 											"sid": 492709470874602,
 											"children": [
 												{
@@ -11315,34 +11562,6 @@
 									"initialValue": "0",
 									"comment": "",
 									"sid": 112984594079620
-								},
-								{
-									"name": "Meta_Perfeita",
-									"type": "boolean",
-									"initialValue": "false",
-									"comment": "",
-									"sid": 967033143272050
-								},
-								{
-									"name": "Desestourar",
-									"type": "boolean",
-									"initialValue": "false",
-									"comment": "",
-									"sid": 866413605843897
-								},
-								{
-									"name": "Ferrar_Player",
-									"type": "boolean",
-									"initialValue": "false",
-									"comment": "",
-									"sid": 349096971292938
-								},
-								{
-									"name": "Troca_Imperfeita",
-									"type": "boolean",
-									"initialValue": "false",
-									"comment": "",
-									"sid": 836502230157855
 								}
 							],
 							"eventType": "function-block",
@@ -11356,10 +11575,57 @@
 										"type": "log",
 										"message": "\"Vamos lá analisar as possibilidades de troca\""
 									}
+								},
+								{
+									"callFunction": "Count_Numbers",
+									"sid": 735926514612338,
+									"parameters": [
+										false
+									]
 								}
 							],
 							"sid": 127048544925160,
 							"children": [
+								{
+									"eventType": "variable",
+									"name": "Meta_Perfeita",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 280044514305735
+								},
+								{
+									"eventType": "variable",
+									"name": "Desestourar",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 719196341174797
+								},
+								{
+									"eventType": "variable",
+									"name": "Ferrar_Player",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 432633861746126
+								},
+								{
+									"eventType": "variable",
+									"name": "Troca_Imperfeita",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 670820419576746
+								},
 								{
 									"eventType": "variable",
 									"name": "Enemy_Big_Card",
@@ -11374,7 +11640,7 @@
 									"eventType": "variable",
 									"name": "Player_Small_Card",
 									"type": "number",
-									"initialValue": "0",
+									"initialValue": "999",
 									"comment": "",
 									"isStatic": true,
 									"isConstant": false,
@@ -11411,6 +11677,26 @@
 									"sid": 299081985176932
 								},
 								{
+									"eventType": "variable",
+									"name": "The_Choosen_Enemy_F_Card",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 468435004766791
+								},
+								{
+									"eventType": "variable",
+									"name": "The_Choosen_Player_F_Card",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 416068041082012
+								},
+								{
 									"eventType": "comment",
 									"text": "1) Verifica as cartas procurando alguma que o faça alcançar a meta perfeitamente"
 								},
@@ -11418,50 +11704,31 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "for",
-											"objectClass": "System",
-											"sid": 669024770889752,
+											"id": "for-each-element",
+											"objectClass": "A_NumbersEnemy",
+											"sid": 443427450912403,
 											"parameters": {
-												"name": "\"\"",
-												"start-index": "1",
-												"end-index": "Table_CPU.Cards"
+												"axes": "x"
 											}
-										},
-										{
-											"id": "is-overlapping-another-object",
-											"objectClass": "Card_Numb",
-											"sid": 169310906822590,
-											"parameters": {
-												"object": "Table_CPU"
-											}
-										},
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Card_Numb",
-											"sid": 780388010463337,
-											"parameters": {
-												"instance-variable": "Enemy_Hidden"
-											},
-											"isInverted": true
 										}
 									],
 									"actions": [
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 262138823473440,
+											"sid": 161949878262223,
 											"parameters": {
 												"variable": "Enemy_Card",
-												"value": "Card_Numb.myID"
+												"value": "A_NumbersEnemy.At(loopindex)"
 											}
 										},
 										{
 											"id": "log",
 											"objectClass": "Browser",
-											"sid": 894804598609876,
+											"sid": 280864927403819,
 											"parameters": {
 												"type": "log",
-												"message": "\"Olhando a carta enemy: \"&Card_Numb.myID"
+												"message": "\"Olhando a carta do inimigo: \"&A_NumbersEnemy.At(loopindex)"
 											}
 										}
 									],
@@ -11505,10 +11772,10 @@
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 456828887689445,
+													"sid": 871310641942774,
 													"parameters": {
 														"variable": "Enemy_Big_Card",
-														"value": "Card_Numb.myID"
+														"value": "A_NumbersEnemy.At(loopindex)"
 													}
 												}
 											],
@@ -11520,48 +11787,31 @@
 												{
 													"id": "for",
 													"objectClass": "System",
-													"sid": 868941648414008,
+													"sid": 318917856848568,
 													"parameters": {
 														"name": "\"\"",
-														"start-index": "1",
-														"end-index": "Table_Player.Cards"
+														"start-index": "0",
+														"end-index": "A_NumbersPlayer.Width - 1"
 													}
-												},
-												{
-													"id": "is-overlapping-another-object",
-													"objectClass": "Card_Numb",
-													"sid": 484320373479992,
-													"parameters": {
-														"object": "Table_Player"
-													}
-												},
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Card_Numb",
-													"sid": 254478493450211,
-													"parameters": {
-														"instance-variable": "Player_Hidden"
-													},
-													"isInverted": true
 												}
 											],
 											"actions": [
 												{
 													"id": "log",
 													"objectClass": "Browser",
-													"sid": 106414090387896,
+													"sid": 249605184136201,
 													"parameters": {
 														"type": "log",
-														"message": "\"com a carta player: \"&Card_Numb.myID"
+														"message": "\"com a carta do player: \"&A_NumbersPlayer.At(loopindex)"
 													}
 												},
 												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
-													"sid": 136421836026639,
+													"sid": 804494548435714,
 													"parameters": {
 														"variable": "Player_Card",
-														"value": "Card_Numb.myID"
+														"value": "A_NumbersPlayer.At(loopindex)"
 													}
 												}
 											],
@@ -11587,7 +11837,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 455468881040241,
+															"sid": 939344111052566,
 															"parameters": {
 																"variable": "Meta_Perfeita"
 															},
@@ -11598,7 +11848,7 @@
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 442486004295498,
+															"sid": 663615091792884,
 															"parameters": {
 																"variable": "Meta_Perfeita",
 																"value": "true"
@@ -11669,7 +11919,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 403481876752757,
+															"sid": 507372511990714,
 															"parameters": {
 																"variable": "Meta_Perfeita"
 															},
@@ -11680,7 +11930,7 @@
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 135711701084602,
+															"sid": 247889997513898,
 															"parameters": {
 																"variable": "Desestourar",
 																"value": "true"
@@ -11723,7 +11973,7 @@
 												},
 												{
 													"eventType": "comment",
-													"text": "Verificar a menor carta do player"
+													"text": "Ferrar o player: verificar a menor carta do player"
 												},
 												{
 													"eventType": "block",
@@ -11751,7 +12001,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 712966668041751,
+															"sid": 715163684765919,
 															"parameters": {
 																"variable": "Meta_Perfeita"
 															},
@@ -11760,7 +12010,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 977253193800244,
+															"sid": 356033112267225,
 															"parameters": {
 																"variable": "Desestourar"
 															},
@@ -11771,34 +12021,29 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 810522021282272,
+															"sid": 215116632850452,
 															"parameters": {
 																"variable": "Player_Small_Card",
-																"value": "Card_Numb.myID"
+																"value": "Player_Card"
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 993421700038090,
+															"sid": 584434519432609,
 															"parameters": {
-																"variable": "The_Choosen_Enemy_Card",
+																"variable": "The_Choosen_Enemy_F_Card",
 																"value": "Enemy_Card"
 															}
 														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 587689187007383,
+															"sid": 789384208682533,
 															"parameters": {
-																"variable": "The_Choosen_Player_Card",
+																"variable": "The_Choosen_Player_F_Card",
 																"value": "Player_Card"
 															}
-														},
-														{
-															"id": "stop-loop",
-															"objectClass": "System",
-															"sid": 853002354210809
 														},
 														{
 															"id": "log",
@@ -11822,7 +12067,7 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 177863727483404,
+															"sid": 493759670277403,
 															"parameters": {
 																"first-value": "(EnemyNumbers - Enemy_Card) + Player_Card",
 																"comparison": 2,
@@ -11832,7 +12077,7 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 243929658963841,
+															"sid": 943281401746804,
 															"parameters": {
 																"first-value": "(EnemyNumbers - Enemy_Card) + Player_Card",
 																"comparison": 4,
@@ -11842,7 +12087,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 920449146461781,
+															"sid": 696093372673715,
 															"parameters": {
 																"variable": "Meta_Perfeita"
 															},
@@ -11851,18 +12096,9 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 490513343750086,
+															"sid": 621944942754323,
 															"parameters": {
 																"variable": "Desestourar"
-															},
-															"isInverted": true
-														},
-														{
-															"id": "compare-boolean-eventvar",
-															"objectClass": "System",
-															"sid": 536505277613576,
-															"parameters": {
-																"variable": "Ferrar_Player"
 															},
 															"isInverted": true
 														}
@@ -11871,7 +12107,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 196010763800080,
+															"sid": 387748232637052,
 															"parameters": {
 																"variable": "Melhor_Somatorio",
 																"value": "(EnemyNumbers - Enemy_Card) + Player_Card"
@@ -11880,7 +12116,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 112216453670448,
+															"sid": 122935115520793,
 															"parameters": {
 																"variable": "The_Choosen_Enemy_Card",
 																"value": "Enemy_Card"
@@ -11889,28 +12125,23 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 992846979211770,
+															"sid": 955607000382462,
 															"parameters": {
 																"variable": "The_Choosen_Player_Card",
 																"value": "Player_Card"
 															}
 														},
 														{
-															"id": "stop-loop",
-															"objectClass": "System",
-															"sid": 796155801700196
-														},
-														{
 															"id": "log",
 															"objectClass": "Browser",
-															"sid": 267291580689608,
+															"sid": 826006798923747,
 															"parameters": {
 																"type": "log",
 																"message": "\"Achei uma troca imperfeita\" & The_Choosen_Enemy_Card & \" / \" & The_Choosen_Player_Card"
 															}
 														}
 													],
-													"sid": 213715662726481
+													"sid": 636135607077301
 												}
 											]
 										}
@@ -11919,6 +12150,24 @@
 								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 619375221190366,
+											"parameters": {
+												"variable": "Meta_Perfeita"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 977503462713801,
+											"parameters": {
+												"variable": "Desestourar"
+											},
+											"isInverted": true
+										},
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
@@ -11944,7 +12193,7 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 837427399861516,
+											"sid": 781185292462442,
 											"parameters": {
 												"variable": "Ferrar_Player",
 												"value": "true"
@@ -11961,6 +12210,60 @@
 										}
 									],
 									"sid": 251534910950787
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 622182582313380,
+											"parameters": {
+												"variable": "Meta_Perfeita"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 211908720255312,
+											"parameters": {
+												"variable": "Desestourar"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 113261828190554,
+											"parameters": {
+												"variable": "Melhor_Somatorio",
+												"comparison": 1,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 776987876431565,
+											"parameters": {
+												"variable": "Troca_Imperfeita",
+												"value": "true"
+											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 322885198844286,
+											"parameters": {
+												"type": "log",
+												"message": "\"Posso fazer a troca imperfeita\""
+											}
+										}
+									],
+									"sid": 837274418213889
 								},
 								{
 									"eventType": "block",
@@ -11984,7 +12287,7 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 260616664890881,
+											"sid": 398157185563504,
 											"parameters": {
 												"variable": "Meta_Perfeita"
 											}
@@ -12001,26 +12304,26 @@
 											}
 										},
 										{
-											"callFunction": "Exchange_Enemy",
-											"sid": 798180350698233,
+											"callFunction": "Enemy Use Power",
+											"sid": 948112153872296,
 											"parameters": [
-												"The_Choosen_Enemy_Card",
-												"The_Choosen_Player_Card"
+												"\"11-exchange\""
 											]
 										},
 										{
 											"id": "wait-for-signal",
 											"objectClass": "System",
-											"sid": 227730077136372,
+											"sid": 903834306359695,
 											"parameters": {
-												"tag": "\"Power_Show\""
+												"tag": "\"Power_Show_End\""
 											}
 										},
 										{
-											"callFunction": "Enemy Use Power",
-											"sid": 833343037603438,
+											"callFunction": "Exchange_Enemy",
+											"sid": 170477319739170,
 											"parameters": [
-												"\"exchange\""
+												"The_Choosen_Enemy_Card",
+												"The_Choosen_Player_Card"
 											]
 										}
 									],
@@ -12037,7 +12340,7 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 630904205815974,
+											"sid": 653567050454495,
 											"parameters": {
 												"variable": "Desestourar"
 											}
@@ -12054,26 +12357,26 @@
 											}
 										},
 										{
-											"callFunction": "Exchange_Enemy",
-											"sid": 165530764295698,
+											"callFunction": "Enemy Use Power",
+											"sid": 386957707979712,
 											"parameters": [
-												"The_Choosen_Enemy_Card",
-												"The_Choosen_Player_Card"
+												"\"11-exchange\""
 											]
 										},
 										{
 											"id": "wait-for-signal",
 											"objectClass": "System",
-											"sid": 217782605887236,
+											"sid": 327519337191263,
 											"parameters": {
-												"tag": "\"Power_Show\""
+												"tag": "\"Power_Show_End\""
 											}
 										},
 										{
-											"callFunction": "Enemy Use Power",
-											"sid": 628933475454629,
+											"callFunction": "Exchange_Enemy",
+											"sid": 420017531782744,
 											"parameters": [
-												"\"exchange\""
+												"The_Choosen_Enemy_Card",
+												"The_Choosen_Player_Card"
 											]
 										}
 									],
@@ -12090,7 +12393,7 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 695472852807001,
+											"sid": 250931100230047,
 											"parameters": {
 												"variable": "Ferrar_Player"
 											}
@@ -12107,26 +12410,26 @@
 											}
 										},
 										{
-											"callFunction": "Exchange_Enemy",
-											"sid": 514054156001455,
+											"callFunction": "Enemy Use Power",
+											"sid": 150084414370177,
 											"parameters": [
-												"The_Choosen_Enemy_Card",
-												"The_Choosen_Player_Card"
+												"\"11-exchange\""
 											]
 										},
 										{
 											"id": "wait-for-signal",
 											"objectClass": "System",
-											"sid": 426905295783060,
+											"sid": 626427043326240,
 											"parameters": {
-												"tag": "\"Power_Show\""
+												"tag": "\"Power_Show_End\""
 											}
 										},
 										{
-											"callFunction": "Enemy Use Power",
-											"sid": 435999519567704,
+											"callFunction": "Exchange_Enemy",
+											"sid": 827934686804198,
 											"parameters": [
-												"\"exchange\""
+												"The_Choosen_Enemy_F_Card",
+												"The_Choosen_Player_F_Card"
 											]
 										}
 									],
@@ -12143,7 +12446,7 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 779727681542671,
+											"sid": 230665466254684,
 											"parameters": {
 												"variable": "Troca_Imperfeita"
 											}
@@ -12161,22 +12464,22 @@
 										},
 										{
 											"callFunction": "Enemy Use Power",
-											"sid": 248925097633996,
+											"sid": 328011485472225,
 											"parameters": [
-												"\"exchange\""
+												"\"11-exchange\""
 											]
 										},
 										{
 											"id": "wait-for-signal",
 											"objectClass": "System",
-											"sid": 196943960079569,
+											"sid": 310066113343725,
 											"parameters": {
-												"tag": "\"Power_Show\""
+												"tag": "\"Power_Show_End\""
 											}
 										},
 										{
 											"callFunction": "Exchange_Enemy",
-											"sid": 509044519540332,
+											"sid": 546368932003704,
 											"parameters": [
 												"The_Choosen_Enemy_Card",
 												"The_Choosen_Player_Card"
@@ -13182,10 +13485,10 @@
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Text_Turn",
-									"sid": 894937940842977,
+									"sid": 885916732270117,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-in-time": "1"
+										"fade-in-time": "0.5"
 									}
 								},
 								{
@@ -13200,10 +13503,10 @@
 								{
 									"id": "set-fade-out-time",
 									"objectClass": "Text_Turn",
-									"sid": 938995647780066,
+									"sid": 101546790529900,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-out-time": "1"
+										"fade-out-time": "0.5"
 									}
 								},
 								{
@@ -13231,10 +13534,10 @@
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Bkg_Turn_Txt",
-									"sid": 892771572569350,
+									"sid": 453540631757795,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-in-time": "1"
+										"fade-in-time": "0.5"
 									}
 								},
 								{
@@ -13249,10 +13552,10 @@
 								{
 									"id": "set-fade-out-time",
 									"objectClass": "Bkg_Turn_Txt",
-									"sid": 734533674667310,
+									"sid": 537151965753192,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-out-time": "1"
+										"fade-out-time": "0.5"
 									}
 								},
 								{
@@ -13264,9 +13567,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 570943876469441,
+									"sid": 362517272139363,
 									"parameters": {
-										"seconds": "2.5",
+										"seconds": "1.5",
 										"use-timescale": true
 									}
 								},
@@ -13357,16 +13660,16 @@
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Text_Turn",
-									"sid": 767160209314765,
+									"sid": 930479129473836,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-in-time": "1"
+										"fade-in-time": "0.5"
 									}
 								},
 								{
 									"id": "set-wait-time",
 									"objectClass": "Text_Turn",
-									"sid": 818371633330643,
+									"sid": 450181635785124,
 									"behaviorType": "Fade",
 									"parameters": {
 										"wait-time": "1"
@@ -13375,10 +13678,10 @@
 								{
 									"id": "set-fade-out-time",
 									"objectClass": "Text_Turn",
-									"sid": 970100111809643,
+									"sid": 879279184453776,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-out-time": "1"
+										"fade-out-time": "0.5"
 									}
 								},
 								{
@@ -13406,28 +13709,28 @@
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Bkg_Turn_Txt",
-									"sid": 726646928308611,
+									"sid": 297249120349391,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-in-time": "1"
+										"fade-in-time": "0.5"
 									}
 								},
 								{
 									"id": "set-wait-time",
 									"objectClass": "Bkg_Turn_Txt",
-									"sid": 544226212833823,
+									"sid": 714948474376254,
 									"behaviorType": "Fade",
 									"parameters": {
-										"wait-time": "1"
+										"wait-time": "0.5"
 									}
 								},
 								{
 									"id": "set-fade-out-time",
 									"objectClass": "Bkg_Turn_Txt",
-									"sid": 865961453301312,
+									"sid": 499397226395826,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-out-time": "1"
+										"fade-out-time": "0.5"
 									}
 								},
 								{
@@ -13439,9 +13742,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 826198228561341,
+									"sid": 957416161432783,
 									"parameters": {
-										"seconds": "3",
+										"seconds": "2",
 										"use-timescale": true
 									}
 								},
@@ -15948,7 +16251,16 @@
 										{
 											"id": "layer-is-visible",
 											"objectClass": "System",
-											"sid": 930044157452480,
+											"sid": 375726042410358,
+											"parameters": {
+												"layer": "\"Pause\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 464615413780570,
 											"parameters": {
 												"layer": "\"Click_On_Screen_Text\""
 											},
@@ -15971,6 +16283,14 @@
 											"sid": 204248368975136,
 											"parameters": {
 												"frame-number": "1"
+											}
+										},
+										{
+											"id": "set-cursor-style2",
+											"objectClass": "Mouse",
+											"sid": 197885686907920,
+											"parameters": {
+												"cursor-style": "pointer"
 											}
 										}
 									],
@@ -16166,6 +16486,14 @@
 											],
 											"actions": [
 												{
+													"id": "set-cursor-style2",
+													"objectClass": "Mouse",
+													"sid": 784182472535336,
+													"parameters": {
+														"cursor-style": "normal"
+													}
+												},
+												{
 													"id": "set-fade-in-time",
 													"objectClass": "Text_Power",
 													"sid": 384731245767067,
@@ -16287,6 +16615,15 @@
 										{
 											"id": "layer-is-visible",
 											"objectClass": "System",
+											"sid": 293086106896053,
+											"parameters": {
+												"layer": "\"Pause\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
 											"sid": 663512897458358,
 											"parameters": {
 												"layer": "\"Click_On_Screen_Text\""
@@ -16310,6 +16647,14 @@
 											"sid": 450833261423224,
 											"parameters": {
 												"frame-number": "1"
+											}
+										},
+										{
+											"id": "set-cursor-style2",
+											"objectClass": "Mouse",
+											"sid": 352678819506195,
+											"parameters": {
+												"cursor-style": "pointer"
 											}
 										}
 									],
@@ -16490,6 +16835,14 @@
 									],
 									"actions": [
 										{
+											"id": "set-cursor-style2",
+											"objectClass": "Mouse",
+											"sid": 309417650190888,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
+										{
 											"id": "set-fade-in-time",
 											"objectClass": "Text_Power",
 											"sid": 679385952217694,
@@ -16591,6 +16944,15 @@
 										{
 											"id": "layer-is-visible",
 											"objectClass": "System",
+											"sid": 243706361362008,
+											"parameters": {
+												"layer": "\"Pause\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
 											"sid": 299950315351966,
 											"parameters": {
 												"layer": "\"Click_On_Screen_Text\""
@@ -16615,6 +16977,14 @@
 											"parameters": {
 												"frame-number": "1"
 											}
+										},
+										{
+											"id": "set-cursor-style2",
+											"objectClass": "Mouse",
+											"sid": 226940627506809,
+											"parameters": {
+												"cursor-style": "pointer"
+											}
 										}
 									],
 									"sid": 920902575441148,
@@ -16622,15 +16992,6 @@
 										{
 											"eventType": "block",
 											"conditions": [
-												{
-													"id": "layer-is-visible",
-													"objectClass": "System",
-													"sid": 126625433954953,
-													"parameters": {
-														"layer": "\"Pause\""
-													},
-													"isInverted": true
-												},
 												{
 													"id": "layer-is-visible",
 													"objectClass": "System",
@@ -16793,6 +17154,14 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "set-cursor-style2",
+											"objectClass": "Mouse",
+											"sid": 690773146612640,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
 										{
 											"id": "set-fade-in-time",
 											"objectClass": "Text_Power",
@@ -17809,8 +18178,7 @@
 															]
 														}
 													],
-													"sid": 928167569523056,
-													"disabled": true
+													"sid": 928167569523056
 												},
 												{
 													"eventType": "comment",
@@ -17828,8 +18196,7 @@
 														{
 															"id": "else",
 															"objectClass": "System",
-															"sid": 507225375552381,
-															"disabled": true
+															"sid": 507225375552381
 														}
 													],
 													"actions": [
@@ -20344,7 +20711,7 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "Usar um Poder",
+											"text": "Usar um Poder (Escolhe cartas de poder para analisar se valem a pena no contexto atual do jogo)",
 											"text-color": [
 												1,
 												0.6823529411764706,
@@ -20504,7 +20871,17 @@
 																	}
 																}
 															],
-															"actions": [],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 164040510044723,
+																	"parameters": {
+																		"variable": "power_id",
+																		"value": "A_EnemyPowers.At(0)"
+																	}
+																}
+															],
 															"sid": 523884210071299,
 															"children": [
 																{
@@ -20679,6 +21056,10 @@
 																	"sid": 133877470536914
 																},
 																{
+																	"eventType": "comment",
+																	"text": "Porém, se ela já estiver marcada como analisada..."
+																},
+																{
 																	"eventType": "block",
 																	"conditions": [
 																		{
@@ -20701,14 +21082,8 @@
 																	"sid": 592464717405517,
 																	"children": [
 																		{
-																			"eventType": "variable",
-																			"name": "CheckedPowers",
-																			"type": "number",
-																			"initialValue": "0",
-																			"comment": "",
-																			"isStatic": false,
-																			"isConstant": false,
-																			"sid": 367517028187625
+																			"eventType": "comment",
+																			"text": "Verfica todas as cartas de poder..."
 																		},
 																		{
 																			"eventType": "block",
@@ -20720,83 +21095,162 @@
 																					"parameters": {
 																						"axes": "x"
 																					}
-																				},
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 781483022202804,
-																					"parameters": {
-																						"first-value": "tokenat( A_EnemyPowers.At(loopindex), 1 ,\"/\" )",
-																						"comparison": 0,
-																						"second-value": "1"
-																					}
 																				}
 																			],
-																			"actions": [
-																				{
-																					"id": "add-to-eventvar",
-																					"objectClass": "System",
-																					"sid": 248943937070697,
-																					"parameters": {
-																						"variable": "CheckedPowers",
-																						"value": "1"
-																					}
-																				}
-																			],
+																			"actions": [],
 																			"sid": 657434162088446,
 																			"children": [
+																				{
+																					"eventType": "variable",
+																					"name": "CheckedPowers",
+																					"type": "number",
+																					"initialValue": "0",
+																					"comment": "",
+																					"isStatic": false,
+																					"isConstant": false,
+																					"sid": 804522582974271
+																				},
+																				{
+																					"eventType": "comment",
+																					"text": "Ao encontrar uma carta que ainda não foi analisada, então escolhe essa mesma"
+																				},
 																				{
 																					"eventType": "block",
 																					"conditions": [
 																						{
 																							"id": "compare-two-values",
 																							"objectClass": "System",
-																							"sid": 761122000569558,
+																							"sid": 153050929783345,
 																							"parameters": {
-																								"first-value": "loopindex",
+																								"first-value": "tokenat(A_EnemyPowers.At(loopindex), 1, \"/\")",
 																								"comparison": 0,
-																								"second-value": "A_EnemyPowers.Width - 1"
-																							}
-																						},
-																						{
-																							"id": "compare-eventvar",
-																							"objectClass": "System",
-																							"sid": 625370556822808,
-																							"parameters": {
-																								"variable": "CheckedPowers",
-																								"comparison": 0,
-																								"value": "A_EnemyPowers.Width"
+																								"second-value": "\"0\""
 																							}
 																						}
 																					],
 																					"actions": [
 																						{
-																							"id": "set-boolean-eventvar",
-																							"objectClass": "System",
-																							"sid": 188383712681427,
+																							"callFunction": "Enemy Check Powers",
+																							"sid": 270467474249108,
+																							"parameters": [
+																								"A_EnemyPowers.At(loopindex)"
+																							]
+																						},
+																						{
+																							"id": "set-at-x",
+																							"objectClass": "A_EnemyPowers",
+																							"sid": 171281864432655,
 																							"parameters": {
-																								"variable": "Enemy_No_Powers",
-																								"value": "true"
+																								"x": "Self.IndexOf( Self.At(loopindex) )",
+																								"value": "tokenat( Self.At(loopindex), 0, \"/\" ) & \"/1\""
 																							}
 																						},
 																						{
-																							"callFunction": "Enemy Check Powers",
-																							"sid": 896035438789658,
-																							"parameters": [
-																								"\"\""
-																							]
+																							"id": "stop-loop",
+																							"objectClass": "System",
+																							"sid": 158792463979179
+																						}
+																					],
+																					"sid": 201766894876438
+																				},
+																				{
+																					"eventType": "comment",
+																					"text": "Ao encontrar uma carta que já foi analisada..."
+																				},
+																				{
+																					"eventType": "block",
+																					"conditions": [
+																						{
+																							"id": "compare-two-values",
+																							"objectClass": "System",
+																							"sid": 973472720268518,
+																							"parameters": {
+																								"first-value": "tokenat( A_EnemyPowers.At(loopindex), 1 ,\"/\" )",
+																								"comparison": 0,
+																								"second-value": "\"1\""
+																							}
+																						}
+																					],
+																					"actions": [
+																						{
+																							"id": "add-to-eventvar",
+																							"objectClass": "System",
+																							"sid": 839289998538309,
+																							"parameters": {
+																								"variable": "CheckedPowers",
+																								"value": "1"
+																							}
 																						},
 																						{
 																							"id": "log",
 																							"objectClass": "Browser",
-																							"sid": 989843945816631,
+																							"sid": 390627109447484,
 																							"parameters": {
 																								"type": "log",
-																								"message": "\"Nenhum poder faz sentido jogar agora.\""
+																								"message": "\"Eita, essa carta já foi analisada...\""
 																							}
 																						}
 																					],
-																					"sid": 462472333235771
+																					"sid": 132415770780682,
+																					"children": [
+																						{
+																							"eventType": "comment",
+																							"text": "e terminar de olhar tudo e todas as cartas já tiverem sido previamente analisadas, então marca que não vale a pena jogar nenhum poder no momento"
+																						},
+																						{
+																							"eventType": "block",
+																							"conditions": [
+																								{
+																									"id": "compare-two-values",
+																									"objectClass": "System",
+																									"sid": 117914924644669,
+																									"parameters": {
+																										"first-value": "loopindex",
+																										"comparison": 0,
+																										"second-value": "A_EnemyPowers.Width - 1"
+																									}
+																								},
+																								{
+																									"id": "compare-eventvar",
+																									"objectClass": "System",
+																									"sid": 726195391380762,
+																									"parameters": {
+																										"variable": "CheckedPowers",
+																										"comparison": 0,
+																										"value": "A_EnemyPowers.Width"
+																									}
+																								}
+																							],
+																							"actions": [
+																								{
+																									"id": "set-boolean-eventvar",
+																									"objectClass": "System",
+																									"sid": 235844167918854,
+																									"parameters": {
+																										"variable": "Enemy_No_Powers",
+																										"value": "true"
+																									}
+																								},
+																								{
+																									"callFunction": "Enemy Check Powers",
+																									"sid": 766716411829287,
+																									"parameters": [
+																										"\"\""
+																									]
+																								},
+																								{
+																									"id": "log",
+																									"objectClass": "Browser",
+																									"sid": 454108034025780,
+																									"parameters": {
+																										"type": "log",
+																										"message": "\"Nenhum poder faz sentido jogar agora.\""
+																									}
+																								}
+																							],
+																							"sid": 865303578156529
+																						}
+																					]
 																				}
 																			]
 																		}
@@ -21077,7 +21531,7 @@
 									"children": [
 										{
 											"eventType": "comment",
-											"text": "Tem preferência para comprar um poder. Se puder comprar mais cartas e a quantidade na mão for menor que o limite por rodada, então compra"
+											"text": "Tem preferência para comprar um poder. Se puder comprar mais cartas e a quantidade na mão for menor que o limite por rodada, então ..."
 										},
 										{
 											"eventType": "block",
@@ -21124,7 +21578,7 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 877272647331406,
+															"sid": 529566425729204,
 															"parameters": {
 																"variable": "Enemy_RNG",
 																"value": "int ( random ( 0, 101 ) ) + EnemyAI_Chaos"
@@ -21133,167 +21587,62 @@
 														{
 															"id": "log",
 															"objectClass": "Browser",
-															"sid": 841217629406989,
+															"sid": 558369674071415,
 															"parameters": {
 																"type": "log",
-																"message": "\"RNG fearless check powers: \"&Enemy_RNG"
+																"message": "\"RNG de PODER: \"&Enemy_RNG"
 															}
 														}
 													],
 													"sid": 618563975712348,
 													"children": [
 														{
+															"eventType": "comment",
+															"text": "O nível de caos alto influencia nessa escolha",
+															"text-color": [
+																1,
+																0.6823529411764706,
+																0,
+																1
+															]
+														},
+														{
+															"eventType": "comment",
+															"text": "Por conta do azar, ele decidiu não querer usar essa carta de poder"
+														},
+														{
 															"eventType": "block",
 															"conditions": [
 																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Hand_CPU",
-																	"sid": 146435119742604,
+																	"id": "compare-eventvar",
+																	"objectClass": "System",
+																	"sid": 591181094714023,
 																	"parameters": {
-																		"instance-variable": "PowersAvailable",
-																		"comparison": 0,
-																		"value": "1"
+																		"variable": "Enemy_RNG",
+																		"comparison": 3,
+																		"value": "50"
 																	}
 																}
 															],
-															"actions": [],
-															"sid": 443092753450010,
-															"children": [
+															"actions": [
 																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-eventvar",
-																			"objectClass": "System",
-																			"sid": 976489244309562,
-																			"parameters": {
-																				"variable": "Enemy_RNG",
-																				"comparison": 3,
-																				"value": "50"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 997423653887130,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"Sou destermido, mas não quero usar agora esse poder...\""
-																			}
-																		},
-																		{
-																			"callFunction": "Enemy Action",
-																			"sid": 422660862964278,
-																			"parameters": [
-																				"\"draw_power\""
-																			]
-																		}
-																	],
-																	"sid": 264226081984744
+																	"id": "log",
+																	"objectClass": "Browser",
+																	"sid": 202358992955259,
+																	"parameters": {
+																		"type": "log",
+																		"message": "\"Sou destermido, mas quer comprar um poder\""
+																	}
 																},
 																{
-																	"eventType": "comment",
-																	"text": "O nível de chaos alto influencia nessa escolha"
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "else",
-																			"objectClass": "System",
-																			"sid": 775828887357184
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 343419843574057,
-																			"parameters": {
-																				"first-value": "tokenat(A_EnemyPowers.At(0), 1, \"/\")",
-																				"comparison": 0,
-																				"second-value": "\"0\""
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 535757931588249,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"Sou destermido e tenho um poder, vou analisar ele logo\""
-																			}
-																		},
-																		{
-																			"id": "set-at-x",
-																			"objectClass": "A_EnemyPowers",
-																			"sid": 264092850700744,
-																			"parameters": {
-																				"x": "0",
-																				"value": "tokenat(A_EnemyPowers.At( 0 ), 0, \"/\" ) & \"/1\""
-																			}
-																		},
-																		{
-																			"callFunction": "Enemy Check Powers",
-																			"sid": 229201435019849,
-																			"parameters": [
-																				"A_EnemyPowers.At( 0 )"
-																			]
-																		}
-																	],
-																	"sid": 304486515203523
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "else",
-																			"objectClass": "System",
-																			"sid": 761845199108561
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 750912118732132,
-																			"parameters": {
-																				"first-value": "tokenat(A_EnemyPowers.At(0), 1, \"/\")",
-																				"comparison": 0,
-																				"second-value": "\"1\""
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-boolean-eventvar",
-																			"objectClass": "System",
-																			"sid": 822692235782040,
-																			"parameters": {
-																				"variable": "Enemy_No_Powers",
-																				"value": "true"
-																			}
-																		},
-																		{
-																			"callFunction": "Enemy Check Powers",
-																			"sid": 116307560828971,
-																			"parameters": [
-																				"\"\""
-																			]
-																		},
-																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 447267396268377,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"Nenhum poder faz sentido jogar agora.\""
-																			}
-																		}
-																	],
-																	"sid": 101145906426302
+																	"callFunction": "Enemy Action",
+																	"sid": 264183936304590,
+																	"parameters": [
+																		"\"draw_power\""
+																	]
 																}
-															]
+															],
+															"sid": 309231592158314
 														},
 														{
 															"eventType": "block",
@@ -21301,28 +21650,58 @@
 																{
 																	"id": "else",
 																	"objectClass": "System",
-																	"sid": 994918273321452
+																	"sid": 110786556363429
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Hand_CPU",
+																	"sid": 900588133826191,
+																	"parameters": {
+																		"instance-variable": "PowersAvailable",
+																		"comparison": 5,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Enemy Action",
+																	"sid": 144666110872394,
+																	"parameters": [
+																		"\"use_power\""
+																	]
+																}
+															],
+															"sid": 253431617988750
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 473175446205528
 																}
 															],
 															"actions": [
 																{
 																	"id": "log",
 																	"objectClass": "Browser",
-																	"sid": 197114756460329,
+																	"sid": 190512821125616,
 																	"parameters": {
 																		"type": "log",
-																		"message": "\"Sou destermido, mas não tenho poder mesmo, vou comprar um...\""
+																		"message": "\"Não tenho cartas de poder ainda, tenho que comprar primeiro\""
 																	}
 																},
 																{
 																	"callFunction": "Enemy Action",
-																	"sid": 486124572373379,
+																	"sid": 253717156271958,
 																	"parameters": [
 																		"\"draw_power\""
 																	]
 																}
 															],
-															"sid": 703902345619707
+															"sid": 823176741221568
 														}
 													]
 												},
@@ -21393,445 +21772,7 @@
 													}
 												}
 											],
-											"sid": 835018624207091,
-											"children": [
-												{
-													"eventType": "comment",
-													"text": "Se nenhuma carta de poder for válida OU não houverem cartas de poder na mão, então pede pra parar"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-boolean-eventvar",
-															"objectClass": "System",
-															"sid": 952047955155364,
-															"parameters": {
-																"variable": "Enemy_No_Powers"
-															}
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Hand_CPU",
-															"sid": 748324403432024,
-															"parameters": {
-																"instance-variable": "PowersAvailable",
-																"comparison": 0,
-																"value": "0"
-															}
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Enemy Action",
-															"sid": 366176145827856,
-															"parameters": [
-																"\"stop\""
-															]
-														},
-														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 321918264530579,
-															"parameters": {
-																"type": "log",
-																"message": "\"Estou sem opções, então vou parar.\""
-															}
-														}
-													],
-													"sid": 738517294407661,
-													"disabled": true,
-													"isOrBlock": true
-												},
-												{
-													"eventType": "comment",
-													"text": "Caso contrário, se houverem cartas de poder na mão, analisa uma delas"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 501954517105360
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Hand_CPU",
-															"sid": 866020452181179,
-															"parameters": {
-																"instance-variable": "PowersAvailable",
-																"comparison": 4,
-																"value": "0"
-															}
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Enemy Action",
-															"sid": 687103052545873,
-															"disabled": true,
-															"parameters": [
-																"\"use_power\""
-															]
-														},
-														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 162477970318703,
-															"parameters": {
-																"type": "log",
-																"message": "\"Quero analisar meus poderes disponíveis\""
-															}
-														}
-													],
-													"sid": 297360575339897,
-													"disabled": true,
-													"children": [
-														{
-															"eventType": "comment",
-															"text": "Se só tiver 1 única carta, será essa mesma"
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Hand_CPU",
-																	"sid": 940722424902436,
-																	"parameters": {
-																		"instance-variable": "PowersAvailable",
-																		"comparison": 0,
-																		"value": "1"
-																	}
-																},
-																{
-																	"id": "compare-eventvar",
-																	"objectClass": "System",
-																	"sid": 904736833915622,
-																	"parameters": {
-																		"variable": "the_id",
-																		"comparison": 0,
-																		"value": "\"\""
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"callFunction": "Enemy Check Powers",
-																	"sid": 655829554082282,
-																	"parameters": [
-																		"A_EnemyPowers.At( 0 )"
-																	]
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 678886512001960,
-																	"parameters": {
-																		"variable": "power_id",
-																		"value": "A_EnemyPowers.At( 0 )"
-																	}
-																}
-															],
-															"sid": 245951999101509,
-															"disabled": true,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 498478071000156,
-																			"parameters": {
-																				"first-value": "tokenat( power_id, 1 ,\"/\" )",
-																				"comparison": 0,
-																				"second-value": "\"0\""
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-at-x",
-																			"objectClass": "A_EnemyPowers",
-																			"sid": 630810464204705,
-																			"parameters": {
-																				"x": "0",
-																				"value": "tokenat(power_id, 0, \"/\" ) & \"/1\""
-																			}
-																		}
-																	],
-																	"sid": 945296013607644
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "else",
-																			"objectClass": "System",
-																			"sid": 261552454978130
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 440322084476534,
-																			"parameters": {
-																				"first-value": "tokenat( power_id, 1 ,\"/\" )",
-																				"comparison": 0,
-																				"second-value": "\"1\""
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-boolean-eventvar",
-																			"objectClass": "System",
-																			"sid": 221152401156836,
-																			"parameters": {
-																				"variable": "Enemy_No_Powers",
-																				"value": "true"
-																			}
-																		},
-																		{
-																			"callFunction": "Enemy Check Powers",
-																			"sid": 458632935315281,
-																			"parameters": [
-																				"\"\""
-																			]
-																		},
-																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 266945784539694,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"Nenhum poder faz sentido jogar agora.\""
-																			}
-																		}
-																	],
-																	"sid": 206168297773396
-																}
-															]
-														},
-														{
-															"eventType": "comment",
-															"text": "Em caso de mais de uma carta de poder disponível, escolhe aleatoriamente"
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Hand_CPU",
-																	"sid": 739660702719015,
-																	"parameters": {
-																		"instance-variable": "PowersAvailable",
-																		"comparison": 4,
-																		"value": "1"
-																	}
-																},
-																{
-																	"id": "compare-eventvar",
-																	"objectClass": "System",
-																	"sid": 821523849299036,
-																	"parameters": {
-																		"variable": "the_id",
-																		"comparison": 0,
-																		"value": "\"\""
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 721005475029486,
-																	"parameters": {
-																		"variable": "Enemy_RNG",
-																		"value": "int ( random (1, Hand_CPU.PowersAvailable + 1) )"
-																	}
-																},
-																{
-																	"id": "log",
-																	"objectClass": "Browser",
-																	"sid": 558407505294010,
-																	"parameters": {
-																		"type": "log",
-																		"message": "\"Vamos escolher um poder na sorte: \"&Enemy_RNG"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 459360421779116,
-																	"parameters": {
-																		"variable": "power_id",
-																		"value": "A_EnemyPowers.At(Enemy_RNG - 1)"
-																	}
-																}
-															],
-															"sid": 449118145585961,
-															"disabled": true,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 365701177263425,
-																			"parameters": {
-																				"first-value": "tokenat( power_id, 1 ,\"/\" )",
-																				"comparison": 0,
-																				"second-value": "\"0\""
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"callFunction": "Enemy Check Powers",
-																			"sid": 409658194554264,
-																			"parameters": [
-																				"power_id"
-																			]
-																		},
-																		{
-																			"id": "set-at-x",
-																			"objectClass": "A_EnemyPowers",
-																			"sid": 444426701306879,
-																			"parameters": {
-																				"x": "Enemy_RNG - 1",
-																				"value": "tokenat(power_id, 0, \"/\" ) & \"/1\""
-																			}
-																		}
-																	],
-																	"sid": 970337421496366,
-																	"disabled": true
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "else",
-																			"objectClass": "System",
-																			"sid": 130285885597230
-																		},
-																		{
-																			"id": "compare-two-values",
-																			"objectClass": "System",
-																			"sid": 232024043801185,
-																			"parameters": {
-																				"first-value": "tokenat( power_id, 1 ,\"/\" )",
-																				"comparison": 0,
-																				"second-value": "\"1\""
-																			}
-																		}
-																	],
-																	"actions": [],
-																	"sid": 918285550853540,
-																	"disabled": true,
-																	"children": [
-																		{
-																			"eventType": "variable",
-																			"name": "CheckedPowers",
-																			"type": "number",
-																			"initialValue": "0",
-																			"comment": "",
-																			"isStatic": false,
-																			"isConstant": false,
-																			"sid": 850977356067724
-																		},
-																		{
-																			"eventType": "block",
-																			"conditions": [
-																				{
-																					"id": "for-each-element",
-																					"objectClass": "A_EnemyPowers",
-																					"sid": 489784346080074,
-																					"parameters": {
-																						"axes": "x"
-																					}
-																				},
-																				{
-																					"id": "compare-two-values",
-																					"objectClass": "System",
-																					"sid": 640186865068208,
-																					"parameters": {
-																						"first-value": "tokenat( A_EnemyPowers.At(loopindex), 1 ,\"/\" )",
-																						"comparison": 0,
-																						"second-value": "1"
-																					}
-																				}
-																			],
-																			"actions": [
-																				{
-																					"id": "add-to-eventvar",
-																					"objectClass": "System",
-																					"sid": 725212594969095,
-																					"parameters": {
-																						"variable": "CheckedPowers",
-																						"value": "1"
-																					}
-																				}
-																			],
-																			"sid": 772782041216230,
-																			"disabled": true,
-																			"children": [
-																				{
-																					"eventType": "block",
-																					"conditions": [
-																						{
-																							"id": "compare-two-values",
-																							"objectClass": "System",
-																							"sid": 604068569807820,
-																							"parameters": {
-																								"first-value": "loopindex",
-																								"comparison": 0,
-																								"second-value": "A_EnemyPowers.Width - 1"
-																							}
-																						},
-																						{
-																							"id": "compare-eventvar",
-																							"objectClass": "System",
-																							"sid": 676026970857168,
-																							"parameters": {
-																								"variable": "CheckedPowers",
-																								"comparison": 0,
-																								"value": "A_EnemyPowers.Width"
-																							}
-																						}
-																					],
-																					"actions": [
-																						{
-																							"id": "set-boolean-eventvar",
-																							"objectClass": "System",
-																							"sid": 244737852585250,
-																							"parameters": {
-																								"variable": "Enemy_No_Powers",
-																								"value": "true"
-																							}
-																						},
-																						{
-																							"callFunction": "Enemy Check Powers",
-																							"sid": 521429931556718,
-																							"parameters": [
-																								"\"\""
-																							]
-																						}
-																					],
-																					"sid": 678425784344076,
-																					"disabled": true
-																				}
-																			]
-																		}
-																	]
-																}
-															]
-														}
-													]
-												}
-											]
+											"sid": 835018624207091
 										}
 									]
 								},
@@ -21871,6 +21812,16 @@
 									"text": "\"CARD\" - compra uma carta de número específica"
 								},
 								{
+									"eventType": "variable",
+									"name": "power_potency",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 381626925974857
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -21884,7 +21835,26 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 124674009380590,
+											"parameters": {
+												"type": "log",
+												"message": "\"Potência: \"&power_potency"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 952199711482156,
+											"parameters": {
+												"variable": "power_potency",
+												"value": "int ( tokenat( tokenat(power_id, 2, \"-\"), 0, \"/\" ) )"
+											}
+										}
+									],
 									"sid": 659276688178108,
 									"children": [
 										{
@@ -21912,17 +21882,7 @@
 													"isInverted": true
 												}
 											],
-											"actions": [
-												{
-													"id": "log",
-													"objectClass": "Browser",
-													"sid": 616799654037200,
-													"parameters": {
-														"type": "log",
-														"message": "power_id & \" / \" & int ( tokenat (power_id, 2, \"-\") )"
-													}
-												}
-											],
+											"actions": [],
 											"sid": 299147585242876,
 											"children": [
 												{
@@ -21941,11 +21901,11 @@
 														{
 															"id": "compare-instance-variable",
 															"objectClass": "Card_Numb",
-															"sid": 310598012884571,
+															"sid": 847161167194244,
 															"parameters": {
 																"instance-variable": "myID",
 																"comparison": 0,
-																"value": "int ( tokenat (power_id, 2, \"-\") )"
+																"value": "power_potency"
 															}
 														}
 													],
@@ -21994,11 +21954,11 @@
 														{
 															"id": "compare-instance-variable",
 															"objectClass": "Card_Numb",
-															"sid": 857736738057876,
+															"sid": 731283579590875,
 															"parameters": {
 																"instance-variable": "myID",
 																"comparison": 1,
-																"value": "int ( tokenat (power_id, 2, \"-\") )"
+																"value": "power_potency"
 															}
 														}
 													],
@@ -22031,9 +21991,9 @@
 																{
 																	"id": "compare-two-values",
 																	"objectClass": "System",
-																	"sid": 306782550460806,
+																	"sid": 958002705938900,
 																	"parameters": {
-																		"first-value": "TheNumber - ( EnemyNumbers + int(tokenat(power_id, 2, \"-\")) ) ",
+																		"first-value": "TheNumber - ( EnemyNumbers + power_potency ) ",
 																		"comparison": 2,
 																		"second-value": "0"
 																	}
@@ -22075,9 +22035,9 @@
 																{
 																	"id": "compare-two-values",
 																	"objectClass": "System",
-																	"sid": 290981590730983,
+																	"sid": 177050993601472,
 																	"parameters": {
-																		"first-value": "TheNumber - ( EnemyNumbers + int(tokenat(power_id, 2, \"-\")) ) ",
+																		"first-value": "TheNumber - ( EnemyNumbers + power_potency ) ",
 																		"comparison": 5,
 																		"second-value": "0"
 																	}
@@ -22356,6 +22316,16 @@
 											"sid": 252897999523920,
 											"children": [
 												{
+													"eventType": "comment",
+													"text": "O nível de caos alto influencia nessa escolha",
+													"text-color": [
+														1,
+														0.6823529411764706,
+														0,
+														1
+													]
+												},
+												{
 													"eventType": "block",
 													"conditions": [
 														{
@@ -22388,10 +22358,6 @@
 														}
 													],
 													"sid": 540780242947917
-												},
-												{
-													"eventType": "comment",
-													"text": "O nível de chaos alto influencia nessa escolha"
 												},
 												{
 													"eventType": "block",
@@ -22449,16 +22415,265 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 859307349530288,
+									"children": [
 										{
-											"callFunction": "Enemy Use Power",
-											"sid": 834390500682850,
-											"parameters": [
-												"tokenat( the_id, 0, \"/\" )"
+											"eventType": "comment",
+											"text": "O nível de caos alto influencia nessa escolha",
+											"text-color": [
+												1,
+												0.6823529411764706,
+												0,
+												1
+											]
+										},
+										{
+											"eventType": "comment",
+											"text": "Se o inimigo é meio caótico, então ele joga a carta sem pensar",
+											"text-color": [
+												0,
+												1,
+												0,
+												1
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 374311318651119,
+													"parameters": {
+														"variable": "EnemyAI_Chaos",
+														"comparison": 4,
+														"value": "10"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Enemy Use Power",
+													"sid": 729264114492803,
+													"parameters": [
+														"tokenat( the_id, 0, \"/\" )"
+													]
+												}
+											],
+											"sid": 287901124805262
+										},
+										{
+											"eventType": "comment",
+											"text": "Caso contrário..."
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 370186495384171
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Enemy Action",
+													"sid": 215104484690531,
+													"parameters": [
+														"\"analy_numb\""
+													]
+												},
+												{
+													"id": "wait-for-signal",
+													"objectClass": "System",
+													"sid": 453164791250000,
+													"parameters": {
+														"tag": "\"Analy_Numb\""
+													}
+												}
+											],
+											"sid": 824213520822898,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "Se o inimigo é meio destemido..."
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 880884170560601,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"comparison": 0,
+																"value": "\"fearless\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 538718886621421,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "Se o somatório visível do player mais a maior carta possível do baralho for maior que a meta - 6, então ele joga a carta de poder",
+															"text-color": [
+																0,
+																1,
+																0,
+																1
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 891440678712173,
+																	"parameters": {
+																		"first-value": "Table_Player.Visible_Count + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1)",
+																		"comparison": 4,
+																		"second-value": "TheNumber - 6"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Enemy Use Power",
+																	"sid": 584806320390510,
+																	"parameters": [
+																		"tokenat( the_id, 0, \"/\" )"
+																	]
+																}
+															],
+															"sid": 576620264580925
+														},
+														{
+															"eventType": "comment",
+															"text": "Caso contrário, ele se recusa a usar agora",
+															"text-color": [
+																1,
+																0,
+																0,
+																1
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 359929589374042
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Enemy Check Powers",
+																	"sid": 950622888962849,
+																	"parameters": [
+																		"\"\""
+																	]
+																}
+															],
+															"sid": 307409692255234
+														}
+													]
+												},
+												{
+													"eventType": "comment",
+													"text": "Se o inimigo é meio cauteloso..."
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 978631168117116,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"comparison": 0,
+																"value": "\"cautious\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 987287431555309,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "Se o somatório visível do player mais a maior carta possível do baralho for maior que a meta - 2, então ele joga a carta de poder",
+															"text-color": [
+																0,
+																1,
+																0,
+																1
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 928206104990656,
+																	"parameters": {
+																		"first-value": "Table_Player.Visible_Count + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1)",
+																		"comparison": 4,
+																		"second-value": "TheNumber - 2"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Enemy Use Power",
+																	"sid": 794433271047155,
+																	"parameters": [
+																		"tokenat( the_id, 0, \"/\" )"
+																	]
+																}
+															],
+															"sid": 238088669582478
+														},
+														{
+															"eventType": "comment",
+															"text": "Caso contrário, ele se recusa a usar agora",
+															"text-color": [
+																1,
+																0,
+																0,
+																1
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 347829419038389
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Enemy Check Powers",
+																	"sid": 160424253781867,
+																	"parameters": [
+																		"\"\""
+																	]
+																}
+															],
+															"sid": 160368639498325
+														}
+													]
+												}
 											]
 										}
-									],
-									"sid": 859307349530288
+									]
 								},
 								{
 									"eventType": "comment",
@@ -22537,8 +22752,8 @@
 											],
 											"actions": [
 												{
-													"callFunction": "Enemy Use Power",
-													"sid": 436693656499477,
+													"callFunction": "Enemy Check Powers",
+													"sid": 431584582332892,
 													"parameters": [
 														"\"\""
 													]
@@ -22683,8 +22898,8 @@
 															],
 															"actions": [
 																{
-																	"callFunction": "Enemy Use Power",
-																	"sid": 456121575363822,
+																	"callFunction": "Enemy Check Powers",
+																	"sid": 511303940917284,
 																	"parameters": [
 																		"\"\""
 																	]
@@ -22782,8 +22997,8 @@
 															],
 															"actions": [
 																{
-																	"callFunction": "Enemy Use Power",
-																	"sid": 672425143282065,
+																	"callFunction": "Enemy Check Powers",
+																	"sid": 675270353083795,
 																	"parameters": [
 																		"\"\""
 																	]
@@ -22900,8 +23115,8 @@
 											],
 											"actions": [
 												{
-													"callFunction": "Enemy Use Power",
-													"sid": 743010194024682,
+													"callFunction": "Enemy Check Powers",
+													"sid": 367306480922647,
 													"parameters": [
 														"\"\""
 													]
@@ -22943,11 +23158,7 @@
 													"sid": 995819324504822,
 													"parameters": [
 														"0",
-														"0",
-														false,
-														false,
-														false,
-														false
+														"0"
 													]
 												}
 											],
@@ -23576,15 +23787,7 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"callFunction": "Enemy Use Power",
-											"sid": 959995615690333,
-											"parameters": [
-												"tokenat( the_id, 0, \"/\" )"
-											]
-										}
-									],
+									"actions": [],
 									"sid": 240696082779795,
 									"children": [
 										{
@@ -23917,10 +24120,10 @@
 									"actions": [
 										{
 											"callFunction": "Discard_Power",
-											"sid": 408777179204697,
+											"sid": 545567019372548,
 											"parameters": [
 												"2",
-												"A_EnemyPowers.At(0)",
+												"tokenat(power_id, 0, \"/\")",
 												false,
 												"0"
 											]
@@ -24052,9 +24255,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Text_Power",
-											"sid": 275845559554935,
+											"sid": 284464922348549,
 											"parameters": {
-												"text": "Internationalization.Lookup(\"powers.\" & tokenat(Card_Power.myID, 1, \"-\"), tokenat(Card_Power.myID, 2, \"-\") )"
+												"text": "Internationalization.Lookup(\"powers.\" & tokenat(Card_Power.myID, 1, \"-\"), left(tokenat(Card_Power.myID, 2, \"-\"), 1) )"
 											}
 										},
 										{
@@ -24101,9 +24304,9 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 866108184021137,
+											"sid": 800808365331599,
 											"parameters": {
-												"seconds": "3.5",
+												"seconds": "3.8",
 												"use-timescale": true
 											}
 										},
@@ -24219,9 +24422,9 @@
 										{
 											"id": "signal",
 											"objectClass": "System",
-											"sid": 397524857154285,
+											"sid": 201511670192392,
 											"parameters": {
-												"tag": "\"Power_Show\""
+												"tag": "\"Power_Show_End\""
 											}
 										}
 									],
@@ -25500,6 +25703,15 @@
 								"variable": "Stop_Turn",
 								"value": "false"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 242013245058607,
+							"parameters": {
+								"variable": "RelicPhase",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 533924914228371,
@@ -26150,6 +26362,15 @@
 							}
 						},
 						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 327253758646678,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						},
+						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 455504048266152,
@@ -26515,6 +26736,15 @@
 										"variable": "MatchReady",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 109119365476654,
+									"parameters": {
+										"variable": "RelicPhase",
+										"value": "false"
+									}
 								}
 							],
 							"sid": 865891989625382
@@ -26585,6 +26815,7 @@
 						}
 					],
 					"sid": 352813228127705,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -26674,7 +26905,8 @@
 									}
 								}
 							],
-							"sid": 352540689785063
+							"sid": 352540689785063,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -26728,9 +26960,141 @@
 									}
 								}
 							],
-							"sid": 413341374381476
+							"sid": 413341374381476,
+							"disabled": true
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 745685044411055,
+							"parameters": {
+								"object": "Relics"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 373073034016353,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 307235609213343,
+							"parameters": {
+								"layer": "\"Turn\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 743380586182799,
+							"parameters": {
+								"variable": "RelicPhase"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 738297088460359,
+							"parameters": {
+								"layer": "\"Choose_Relics\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Bkg_Relic_Info_Txt",
+							"sid": 415981575238921,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 160526803130944,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 631643582968233
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Relic_Info",
+									"sid": 102216970678526,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName )",
+										"duration": "0.75"
+									}
+								}
+							],
+							"sid": 403297679630310
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 179110007435894
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 879175791754774,
+							"parameters": {
+								"layer": "\"Choose_Relics\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 692006974280682,
+							"parameters": {
+								"variable": "RelicPhase"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 418124384305753,
+							"parameters": {
+								"layer": "\"Choose_Relics\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Bkg_Relic_Info_Txt",
+							"sid": 714732052882956,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 547563104094780
 				},
 				{
 					"eventType": "block",
@@ -26860,23 +27224,37 @@
 							}
 						},
 						{
+							"id": "is-visible",
+							"objectClass": "Relic_card",
+							"sid": 730901992982483
+						},
+						{
 							"id": "layer-is-visible",
 							"objectClass": "System",
 							"sid": 595594751606067,
 							"parameters": {
 								"layer": "\"Choose_Relics\""
 							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 778655775321324,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 384442098312771,
+							"parameters": {
+								"variable": "RelicPhase"
+							}
 						}
 					],
 					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Relic_card",
-							"sid": 851486511480224,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
@@ -26884,9 +27262,80 @@
 							"parameters": {
 								"cursor-style": "pointer"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Bkg_Relic_Info_Txt",
+							"sid": 460791636309511,
+							"parameters": {
+								"visibility": "visible"
+							}
 						}
 					],
-					"sid": 523610672599650
+					"sid": 523610672599650,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 473059681754378,
+									"parameters": {
+										"object": "Relic_card"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Relic_card",
+									"sid": 585747606081820,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 288359444659061
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Relic_card",
+									"sid": 464315484334600,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 689308245411070
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 578129071660208
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Relic_Info",
+									"sid": 402492570176620,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"relics.\" & Relic_card.AnimationName )",
+										"duration": "0.75"
+									}
+								}
+							],
+							"sid": 575240823277706
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -26897,23 +27346,37 @@
 							"sid": 139600637347302
 						},
 						{
+							"id": "is-visible",
+							"objectClass": "Relic_card",
+							"sid": 658540535696798
+						},
+						{
 							"id": "layer-is-visible",
 							"objectClass": "System",
 							"sid": 993170412181935,
 							"parameters": {
 								"layer": "\"Choose_Relics\""
 							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 681226086896426,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 756817522751961,
+							"parameters": {
+								"variable": "RelicPhase"
+							}
 						}
 					],
 					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Relic_card",
-							"sid": 354154487171660,
-							"parameters": {
-								"frame-number": "0"
-							}
-						},
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
@@ -26921,9 +27384,40 @@
 							"parameters": {
 								"cursor-style": "normal"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Bkg_Relic_Info_Txt",
+							"sid": 223384445334273,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
-					"sid": 647756466975651
+					"sid": 647756466975651,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 381322327240035
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Relic_card",
+									"sid": 385280588913980,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 962522327601428
+						}
+					]
 				},
 				{
 					"eventType": "group",

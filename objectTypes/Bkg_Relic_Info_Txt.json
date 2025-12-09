@@ -1,33 +1,17 @@
 {
-	"name": "Table_CPU",
+	"name": "Bkg_Relic_Info_Txt",
 	"plugin-id": "Sprite",
-	"sid": 406662522526618,
+	"sid": 895868519224369,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
+	"instanceVariables": [],
+	"behaviorTypes": [
 		{
-			"name": "Cards",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 955676885130746
-		},
-		{
-			"name": "Next_Hidden",
-			"type": "boolean",
-			"desc": "true - ativou o poder \"secret\" / false - a próxima carta de número será visível",
-			"show": true,
-			"sid": 852224891866726
-		},
-		{
-			"name": "Visible_Count",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 418283303197333
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 594515633529225
 		}
 	],
-	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -36,19 +20,19 @@
 					{
 						"width": 250,
 						"height": 250,
-						"originX": 0,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 876012,
+						"imageSpriteId": 6158093,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 757868159748972,
+				"sid": 525325881408134,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

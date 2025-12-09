@@ -178,7 +178,12 @@
 			"Icon_Card_Numb",
 			"Enemy_Extra_Anim",
 			"Enemy_Menu",
-			"Icon_Hidden_Card"
+			"Icon_Hidden_Card",
+			"A_NumbersEnemy",
+			"A_NumbersPlayer",
+			"txt_debug",
+			"Text_Relic_Info",
+			"Bkg_Relic_Info_Txt"
 		],
 		"subfolders": []
 	},
