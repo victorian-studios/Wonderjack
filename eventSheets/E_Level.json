@@ -686,6 +686,109 @@
 			]
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 844698880083717,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Toggle_Numbers"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 850129269178826,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Toggle_Numbers",
+							"sid": 852630379770335,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 425354111863135,
+							"parameters": {
+								"seconds": "0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Toggle_Numbers",
+							"sid": 409767509566427,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "txt_debug",
+							"sid": 812348771910981,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 227418621612995
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Toggle_Numbers",
+							"sid": 568021197070133,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 169363696020331,
+							"parameters": {
+								"seconds": "0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Toggle_Numbers",
+							"sid": 968396486021987,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "txt_debug",
+							"sid": 580818787478082,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 294424109402754
+				}
+			]
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Number Cards",

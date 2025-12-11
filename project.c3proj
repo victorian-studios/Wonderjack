@@ -167,7 +167,7 @@
 			"Audio",
 			"A_Relics",
 			"Relic_Slot",
-			"Text",
+			"Text_Ai_Da_Vida",
 			"AliceMenu",
 			"Candle_Flame",
 			"Icon_Hand_Point",
@@ -183,7 +183,9 @@
 			"A_NumbersPlayer",
 			"txt_debug",
 			"Text_Relic_Info",
-			"Bkg_Relic_Info_Txt"
+			"Bkg_Relic_Info_Txt",
+			"Toggle_Numbers",
+			"Text_Options_1"
 		],
 		"subfolders": []
 	},
