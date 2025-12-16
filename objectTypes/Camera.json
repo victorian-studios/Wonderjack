@@ -1,15 +1,20 @@
 {
-	"name": "Bkg_Common",
+	"name": "Camera",
 	"plugin-id": "Sprite",
-	"sid": 736320274575907,
+	"sid": 775016731357304,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Fade",
-			"name": "Fade",
-			"sid": 611913570080848
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 852848364483859
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 301882633042479
 		}
 	],
 	"effectTypes": [],
@@ -26,13 +31,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8409746,
+						"imageSpriteId": 2826343,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 555575916743095,
+				"sid": 322432563040116,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

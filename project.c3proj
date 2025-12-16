@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 45802,
+	"savedWithRelease": 46600,
 	"name": "GameJamPlus (2025)",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -112,6 +112,13 @@
 			"bundled": false
 		},
 		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "tint",
 			"name": "Tint",
@@ -134,7 +141,7 @@
 			"Card_Numb",
 			"Card_Power",
 			"mesa",
-			"objetos_fundo",
+			"Bkg_Main_Level",
 			"configuracoes",
 			"pendulo",
 			"ponteiro_hora",
@@ -160,7 +167,7 @@
 			"placa_",
 			"logo",
 			"tutorial",
-			"Bkg_Common",
+			"Bkg_Black_Common",
 			"carta_opt_bg",
 			"Btn_Sound",
 			"Btn_Pause",
@@ -185,7 +192,8 @@
 			"Text_Relic_Info",
 			"Bkg_Relic_Info_Txt",
 			"Toggle_Numbers",
-			"Text_Options_1"
+			"Text_Options_1",
+			"Camera"
 		],
 		"subfolders": []
 	},

@@ -85,7 +85,9 @@
 					"sid": 627677354337502,
 					"parameters": {
 						"tag": "\"numb_deck\"",
-						"file": "Number_Deck.json"
+						"file": {
+							"path": "Number_Deck.json"
+						}
 					}
 				},
 				{
@@ -94,7 +96,9 @@
 					"sid": 580005296662856,
 					"parameters": {
 						"tag": "\"power_deck\"",
-						"file": "Power_Deck_Base.json"
+						"file": {
+							"path": "Power_Deck_Base.json"
+						}
 					}
 				},
 				{
@@ -103,7 +107,9 @@
 					"sid": 870162037489120,
 					"parameters": {
 						"tag": "\"relics\"",
-						"file": "Relics.json"
+						"file": {
+							"path": "Relics.json"
+						}
 					}
 				},
 				{
@@ -112,7 +118,9 @@
 					"sid": 316611322793635,
 					"parameters": {
 						"tag": "\"en-US\"",
-						"file": "en-US.json"
+						"file": {
+							"path": "en-US.json"
+						}
 					}
 				},
 				{

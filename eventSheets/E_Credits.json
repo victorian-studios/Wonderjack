@@ -209,7 +209,9 @@
 					"objectClass": "Audio",
 					"sid": 618938064373206,
 					"parameters": {
-						"audio-file": "button_2_sfx",
+						"audio-file": {
+							"path": "button_2_sfx"
+						},
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",

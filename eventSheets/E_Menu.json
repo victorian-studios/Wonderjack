@@ -116,7 +116,9 @@
 							"objectClass": "Audio",
 							"sid": 252559608030213,
 							"parameters": {
-								"audio-file": "enchanted-fantasy-356791",
+								"audio-file": {
+									"path": "enchanted-fantasy-356791"
+								},
 								"loop": "looping",
 								"volume": "-15",
 								"stereo-pan": "0",
@@ -255,7 +257,9 @@
 					"objectClass": "Audio",
 					"sid": 997698899752205,
 					"parameters": {
-						"audio-file": "menu-select-button-182476-_mp3cut.net_",
+						"audio-file": {
+							"path": "menu-select-button-182476-_mp3cut.net_"
+						},
 						"loop": "not-looping",
 						"volume": "-5",
 						"stereo-pan": "0",
@@ -430,7 +434,9 @@
 					"objectClass": "Audio",
 					"sid": 152657439879012,
 					"parameters": {
-						"audio-file": "button_2_sfx",
+						"audio-file": {
+							"path": "button_2_sfx"
+						},
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",
