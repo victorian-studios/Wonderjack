@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -80,6 +87,13 @@
 			"type": "behavior",
 			"id": "Flash",
 			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -193,7 +207,9 @@
 			"Bkg_Relic_Info_Txt",
 			"Toggle_Numbers",
 			"Text_Options_1",
-			"Camera"
+			"Camera",
+			"Icon_power_arrow",
+			"Particles"
 		],
 		"subfolders": []
 	},
@@ -370,6 +386,14 @@
 					"name": "Berry Rotunda.woff",
 					"type": "application/font-woff",
 					"sid": 803043078209512,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Berry Rotunda.ttf",
+					"type": "application/font-sfnt",
+					"sid": 994368647564377,
 					"file-info": {
 						"purpose": "none"
 					}

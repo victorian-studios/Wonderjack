@@ -283,7 +283,7 @@
 							1,
 							1,
 							1,
-							1
+							0
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -327,54 +327,6 @@
 						"height": 482,
 						"originX": 0.5,
 						"originY": -0.12240663900414937,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Camera",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 94,
-					"sid": 244858591178360,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 244858591178360,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 960,
-						"y": 362,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -582,7 +534,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1530,
+								"x": 1542,
 								"y": 948,
 								"width": 137,
 								"height": 147,
@@ -636,7 +588,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 432,
+								"x": 440,
 								"y": 634,
 								"width": 102,
 								"height": 109,
@@ -830,7 +782,7 @@
 					"locked": false,
 					"world": {
 						"x": 549,
-						"y": 707.5,
+						"y": 707,
 						"width": 816,
 						"height": 129,
 						"originX": 0,
@@ -2873,12 +2825,60 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1630,
-						"y": 912,
+						"x": 1638,
+						"y": 892,
 						"width": 184,
 						"height": 164,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Camera",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 94,
+					"sid": 244858591178360,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 244858591178360,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 960,
+						"y": 362,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

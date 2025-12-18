@@ -352,7 +352,10 @@
 				},
 				{
 					"callFunction": "Transition",
-					"sid": 181142131752078
+					"sid": 625014113490734,
+					"parameters": [
+						true
+					]
 				},
 				{
 					"id": "set-visible",
@@ -494,306 +497,6 @@
 				}
 			],
 			"sid": 403715614006273
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 358350198942421,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "configuracoes"
-					}
-				},
-				{
-					"id": "layer-is-visible",
-					"objectClass": "System",
-					"sid": 264550010409555,
-					"parameters": {
-						"layer": "\"Pause\""
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 416978964606245,
-					"parameters": {
-						"audio-file": {
-							"path": "button_select_sfx"
-						},
-						"loop": "not-looping",
-						"volume": "0",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 104014553179368,
-					"parameters": {
-						"layer": "\"Pause\"",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 975951828013359,
-					"parameters": {
-						"time-scale": "0"
-					}
-				},
-				{
-					"id": "set-group-active",
-					"objectClass": "System",
-					"sid": 505297009994485,
-					"parameters": {
-						"group-name": "\"Player's Turn / Actions\"",
-						"state": "deactivated"
-					}
-				}
-			],
-			"sid": 300788495629259
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 326510920231458,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Btn_Pause"
-					}
-				},
-				{
-					"id": "layer-is-visible",
-					"objectClass": "System",
-					"sid": 490025476046605,
-					"parameters": {
-						"layer": "\"Pause\""
-					}
-				}
-			],
-			"actions": [],
-			"sid": 999473753528343,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-animation-playing",
-							"objectClass": "Btn_Pause",
-							"sid": 345812925135908,
-							"parameters": {
-								"animation": "\"Resume\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 547730231177505,
-							"parameters": {
-								"audio-file": {
-									"path": "button_2_sfx"
-								},
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 283133992630452,
-							"parameters": {
-								"time-scale": "1.0"
-							}
-						},
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 639433043959650,
-							"parameters": {
-								"group-name": "\"Player's Turn / Actions\"",
-								"state": "activated"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 992679933978043,
-							"parameters": {
-								"seconds": "0",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 595294989230502,
-							"parameters": {
-								"layer": "\"Pause\"",
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 210383266193618
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-animation-playing",
-							"objectClass": "Btn_Pause",
-							"sid": 476145828707196,
-							"parameters": {
-								"animation": "\"Menu\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 521143236666727,
-							"parameters": {
-								"audio-file": {
-									"path": "button_select_sfx"
-								},
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 929916945620809,
-							"parameters": {
-								"layout": "Menu"
-							}
-						}
-					],
-					"sid": 687770473331928
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 844698880083717,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Toggle_Numbers"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 850129269178826,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "Toggle_Numbers",
-							"sid": 852630379770335,
-							"parameters": {
-								"comparison": 0,
-								"number": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 425354111863135,
-							"parameters": {
-								"seconds": "0",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Toggle_Numbers",
-							"sid": 409767509566427,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "txt_debug",
-							"sid": 812348771910981,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 227418621612995
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "Toggle_Numbers",
-							"sid": 568021197070133,
-							"parameters": {
-								"comparison": 0,
-								"number": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 169363696020331,
-							"parameters": {
-								"seconds": "0",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Toggle_Numbers",
-							"sid": 968396486021987,
-							"parameters": {
-								"frame-number": "0"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "txt_debug",
-							"sid": 580818787478082,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 294424109402754
-				}
-			]
 		},
 		{
 			"eventType": "group",
@@ -1195,7 +898,33 @@
 											}
 										}
 									],
-									"sid": 413222828788724
+									"sid": 413222828788724,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 348498234469523,
+													"parameters": {
+														"object": "Icon_Hidden_Card",
+														"expression": "Icon_Hidden_Card.Y",
+														"comparison": 0,
+														"value": "915"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Icon_Hidden_Card",
+													"sid": 308903009974708
+												}
+											],
+											"sid": 156106278163434
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -2104,7 +1833,33 @@
 											}
 										}
 									],
-									"sid": 670801246262817
+									"sid": 670801246262817,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 730936159358640,
+													"parameters": {
+														"object": "Icon_Hidden_Card",
+														"expression": "Icon_Hidden_Card.Y",
+														"comparison": 0,
+														"value": "707"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Icon_Hidden_Card",
+													"sid": 789195092770235
+												}
+											],
+											"sid": 261738967941877
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -3899,6 +3654,15 @@
 						},
 						{
 							"id": "set-instvar-value",
+							"objectClass": "Table_Player",
+							"sid": 828054639790500,
+							"parameters": {
+								"instance-variable": "Cards_Hidden",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
 							"objectClass": "Table_CPU",
 							"sid": 605745014267322,
 							"parameters": {
@@ -4191,6 +3955,39 @@
 										}
 									],
 									"sid": 231844328801953
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Card_Numb",
+											"sid": 134010501172934,
+											"parameters": {
+												"object": "Table_Player"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card_Numb",
+											"sid": 833187899673480,
+											"parameters": {
+												"instance-variable": "Player_Hidden"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Table_Player",
+											"sid": 783793833830474,
+											"parameters": {
+												"instance-variable": "Cards_Hidden",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 304656265256603
 								},
 								{
 									"eventType": "block",
@@ -10036,6 +9833,37 @@
 												"instance-variable": "Next_Hidden",
 												"value": "true"
 											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 639739415580510,
+											"parameters": {
+												"object-to-create": "Icon_Hidden_Card",
+												"layer": "\"Game\"",
+												"x": "244",
+												"y": "915",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 978690085597855,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Icon_Hidden_Card",
+											"sid": 929540605823222,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "inactive"
+											}
 										}
 									],
 									"sid": 389809084911472
@@ -10063,6 +9891,37 @@
 												"instance-variable": "Next_Hidden",
 												"value": "true"
 											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 715624948985872,
+											"parameters": {
+												"object-to-create": "Icon_Hidden_Card",
+												"layer": "\"Game\"",
+												"x": "1472",
+												"y": "146",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 592390925973034,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Icon_Hidden_Card",
+											"sid": 861032168895274,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "inactive"
+											}
 										}
 									],
 									"sid": 154014834469406
@@ -10074,16 +9933,16 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 659906533965245,
+											"sid": 492495438422817,
 											"parameters": {
-												"seconds": "1.0",
+												"seconds": "2",
 												"use-timescale": true
 											}
 										},
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 882846703355905,
+											"sid": 215044465506280,
 											"parameters": {
 												"variable": "PowerDone",
 												"value": "true"
@@ -10419,6 +10278,39 @@
 								"variable": "Holding_Card",
 								"value": "true"
 							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 351657521215088,
+							"parameters": {
+								"object-to-create": "Particles",
+								"layer": "Card_Power.LayerName",
+								"x": "Card_Power.X",
+								"y": "Card_Power.Y - 25",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-bottom",
+							"objectClass": "Particles",
+							"sid": 467439437512681
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Particles",
+							"sid": 227703651981053,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Card_Power",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 378907011607508
@@ -10604,7 +10496,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Se a carta estover e, destaque, mas não selecionada, levanta e aumenta ela, além de mostrar a descrição da mesma"
+					"text": "Se a carta estiver em destaque, mas não selecionada, levanta e aumenta ela, além de mostrar a descrição da mesma"
 				},
 				{
 					"eventType": "block",
@@ -11109,12 +11001,26 @@
 							],
 							"actions": [
 								{
+									"id": "destroy",
+									"objectClass": "Particles",
+									"sid": 859000384289797
+								},
+								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Card_Power",
 									"sid": 498071927193948,
 									"parameters": {
 										"instance-variable": "Selected",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Card_Power",
+									"sid": 241181199122434,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "current-frame"
 									}
 								},
 								{
@@ -17406,6 +17312,132 @@
 									"sid": 724392315059372
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Particles",
+									"sid": 251868870665371,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "700"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-timeout",
+									"objectClass": "Particles",
+									"sid": 539405351446062,
+									"parameters": {
+										"timeout": "0"
+									}
+								}
+							],
+							"sid": 829982770862221
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 328360076086680
+								}
+							],
+							"actions": [
+								{
+									"id": "set-timeout",
+									"objectClass": "Particles",
+									"sid": 556987279474971,
+									"parameters": {
+										"timeout": "1"
+									}
+								}
+							],
+							"sid": 441206188064665
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Card_Power",
+									"sid": 907359263061686,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "700"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Power",
+									"sid": 748904317007200,
+									"parameters": {
+										"instance-variable": "Demo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 129552243192849
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Card_Power",
+									"sid": 665034769395462,
+									"parameters": {
+										"animation": "\"Highlight\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 615471467189768
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Card_Power",
+									"sid": 443456938352163,
+									"parameters": {
+										"comparison": 5,
+										"y-co-ordinate": "700"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Power",
+									"sid": 635284500351724,
+									"parameters": {
+										"instance-variable": "Demo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 695019540759021
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Card_Power",
+									"sid": 822469413574285,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 614404288842294
 						}
 					],
 					"sid": 737840400443652
@@ -17845,6 +17877,11 @@
 														}
 													],
 													"actions": [
+														{
+															"id": "destroy",
+															"objectClass": "Particles",
+															"sid": 831633181442754
+														},
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
@@ -18745,20 +18782,20 @@
 																	],
 																	"actions": [
 																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 124902391612557,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Sou destemido, vou usar um poder\""
+																			}
+																		},
+																		{
 																			"callFunction": "Enemy Action",
 																			"sid": 774478263824158,
 																			"parameters": [
 																				"\"use_power\""
 																			]
-																		},
-																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 575331415918243,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"Sou destemido, vou usar um poder\""
-																			}
 																		}
 																	],
 																	"sid": 820787853504842
@@ -18774,20 +18811,20 @@
 																	],
 																	"actions": [
 																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 437074540873437,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Sou destemido, e prefiro comprar um poder\""
+																			}
+																		},
+																		{
 																			"callFunction": "Enemy Action",
 																			"sid": 446334654373749,
 																			"parameters": [
 																				"\"stop\""
 																			]
-																		},
-																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 855361199200707,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"Sou destemido, e prefiro comprar um poder\""
-																			}
 																		}
 																	],
 																	"sid": 181657089850108
@@ -20982,20 +21019,20 @@
 													],
 													"actions": [
 														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 694072079862345,
+															"parameters": {
+																"type": "log",
+																"message": "\"Estou sem opções, então vou parar.\""
+															}
+														},
+														{
 															"callFunction": "Enemy Action",
 															"sid": 295089013406934,
 															"parameters": [
 																"\"stop\""
 															]
-														},
-														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 296950635637236,
-															"parameters": {
-																"type": "log",
-																"message": "\"Estou sem opções, então vou parar.\""
-															}
 														}
 													],
 													"sid": 538905757625368,
@@ -21084,20 +21121,29 @@
 																	],
 																	"actions": [
 																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 771575039286320,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Esse poder ainda não foi analisado\""
+																			}
+																		},
+																		{
+																			"id": "set-at-x",
+																			"objectClass": "A_EnemyPowers",
+																			"sid": 670416975010469,
+																			"parameters": {
+																				"x": "0",
+																				"value": "tokenat(power_id, 0, \"/\" ) & \"/1\""
+																			}
+																		},
+																		{
 																			"callFunction": "Enemy Check Powers",
 																			"sid": 776081130991709,
 																			"parameters": [
 																				"A_EnemyPowers.At( 0 )"
 																			]
-																		},
-																		{
-																			"id": "set-at-x",
-																			"objectClass": "A_EnemyPowers",
-																			"sid": 326584286267840,
-																			"parameters": {
-																				"x": "0",
-																				"value": "tokenat(power_id, 0, \"/\" ) & \"/1\""
-																			}
 																		}
 																	],
 																	"sid": 236787397334141
@@ -21123,6 +21169,15 @@
 																	],
 																	"actions": [
 																		{
+																			"id": "log",
+																			"objectClass": "Browser",
+																			"sid": 250080473149798,
+																			"parameters": {
+																				"type": "log",
+																				"message": "\"Nenhum poder faz sentido jogar agora.\""
+																			}
+																		},
+																		{
 																			"id": "set-boolean-eventvar",
 																			"objectClass": "System",
 																			"sid": 343366298459149,
@@ -21137,15 +21192,6 @@
 																			"parameters": [
 																				"\"\""
 																			]
-																		},
-																		{
-																			"id": "log",
-																			"objectClass": "Browser",
-																			"sid": 498466380840883,
-																			"parameters": {
-																				"type": "log",
-																				"message": "\"Nenhum poder faz sentido jogar agora.\""
-																			}
 																		}
 																	],
 																	"sid": 784555471744100
@@ -21183,7 +21229,7 @@
 																{
 																	"id": "log",
 																	"objectClass": "Browser",
-																	"sid": 264538545294695,
+																	"sid": 582858297837684,
 																	"parameters": {
 																		"type": "log",
 																		"message": "\"Vamos escolher um poder na sorte: \"&Enemy_RNG"
@@ -21675,10 +21721,10 @@
 								{
 									"id": "log",
 									"objectClass": "Browser",
-									"sid": 902055423334044,
+									"sid": 119415812374909,
 									"parameters": {
 										"type": "log",
-										"message": "\"Função Chamada: Enemy Check Powers -\" & the_id"
+										"message": "\"Função Chamada: Enemy Check Powers -> \" & the_id"
 									}
 								}
 							],
@@ -22003,7 +22049,7 @@
 									"type": "number",
 									"initialValue": "0",
 									"comment": "",
-									"isStatic": false,
+									"isStatic": true,
 									"isConstant": false,
 									"sid": 381626925974857
 								},
@@ -22023,21 +22069,21 @@
 									],
 									"actions": [
 										{
-											"id": "log",
-											"objectClass": "Browser",
-											"sid": 124674009380590,
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 633345526087872,
 											"parameters": {
-												"type": "log",
-												"message": "\"Potência: \"&power_potency"
+												"variable": "power_potency",
+												"value": "int ( tokenat( tokenat(the_id, 2, \"-\"), 0, \"/\" ) )"
 											}
 										},
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 952199711482156,
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 384636183668892,
 											"parameters": {
-												"variable": "power_potency",
-												"value": "int ( tokenat( tokenat(power_id, 2, \"-\"), 0, \"/\" ) )"
+												"type": "log",
+												"message": "\"Potência: \"&power_potency"
 											}
 										}
 									],
@@ -22068,7 +22114,17 @@
 													"isInverted": true
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 400811888460441,
+													"parameters": {
+														"type": "log",
+														"message": "\"loop \" & loopindex & \" - olhando a carta \"& Card_Numb.myID"
+													}
+												}
+											],
 											"sid": 299147585242876,
 											"children": [
 												{
@@ -22130,11 +22186,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 300378330003278,
+															"sid": 646471192320106,
 															"parameters": {
 																"first-value": "loopindex",
 																"comparison": 0,
-																"second-value": "Card_Numb.Count - 1"
+																"second-value": "Card_Numb.Count - Table_Player.Cards_Hidden"
 															}
 														},
 														{
@@ -25108,134 +25164,18 @@
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [
+					"functionParameters": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "Bkg_Main_Level",
-							"sid": 534331792154700,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"callFunction": "Reset Number Deck",
-							"sid": 159463806283234
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Table_CPU",
-							"sid": 705502710175795,
-							"parameters": {
-								"instance-variable": "Cards",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Table_Player",
-							"sid": 796098832969374,
-							"parameters": {
-								"instance-variable": "Cards",
-								"value": "0"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 155326269918816,
-							"parameters": {
-								"seconds": "0.1",
-								"use-timescale": true
-							}
-						},
-						{
-							"callFunction": "Reset Power Deck",
-							"sid": 504727712907893
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Hand_CPU",
-							"sid": 919737015717698,
-							"parameters": {
-								"instance-variable": "PowersAvailable",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-layer-scale",
-							"objectClass": "System",
-							"sid": 392948299402811,
-							"parameters": {
-								"layer": "\"Bkg\"",
-								"scale": "1.0"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 921750487693792,
-							"parameters": {
-								"seconds": "0.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 236887059288301,
-							"parameters": {
-								"variable": "LayoutZoom",
-								"value": "5.5"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 500665641387537,
-							"parameters": {
-								"variable": "Transition_State",
-								"value": "\"ZoomIn\""
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Camera",
-							"sid": 511541725508941,
-							"behaviorType": "ScrollTo",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 750152903412037,
-							"parameters": {
-								"variable": "Transition_State",
-								"value": "\"ZoomIn\""
-							}
-						},
-						{
-							"id": "wait-for-signal",
-							"objectClass": "System",
-							"sid": 236796810721684,
-							"parameters": {
-								"tag": "\"Transition_End\""
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Bkg_Main_Level",
-							"sid": 217058154332687,
-							"parameters": {
-								"animation": "\"Level_\"&Match",
-								"from": "beginning"
-							}
+							"name": "Start",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "true = primeira partida / false = segunda partida em diante",
+							"sid": 654641089050691
 						}
 					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
 					"sid": 956180605493331,
 					"children": [
 						{
@@ -25396,12 +25336,21 @@
 						},
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 896847324100129,
+									"parameters": {
+										"variable": "Start"
+									}
+								}
+							],
 							"actions": [
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 216612676120374,
+									"sid": 555928399484813,
 									"parameters": {
 										"seconds": "1",
 										"use-timescale": true
@@ -25410,7 +25359,7 @@
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Enemy",
-									"sid": 764190812753875,
+									"sid": 354353901831252,
 									"behaviorType": "Fade",
 									"parameters": {
 										"fade-in-time": "1"
@@ -25419,7 +25368,7 @@
 								{
 									"id": "set-fade-out-time",
 									"objectClass": "Enemy",
-									"sid": 740401945560384,
+									"sid": 208926266078677,
 									"behaviorType": "Fade",
 									"parameters": {
 										"fade-out-time": "0"
@@ -25428,11 +25377,11 @@
 								{
 									"id": "restart-fade",
 									"objectClass": "Enemy",
-									"sid": 601199367347975,
+									"sid": 797705284362523,
 									"behaviorType": "Fade"
 								}
 							],
-							"sid": 753615841576459,
+							"sid": 514962857109783,
 							"children": [
 								{
 									"eventType": "comment",
@@ -25444,7 +25393,7 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 821348424557078,
+											"sid": 305114117802776,
 											"parameters": {
 												"variable": "Match",
 												"comparison": 0,
@@ -25456,7 +25405,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 192096359223578,
+											"sid": 244004359114972,
 											"parameters": {
 												"variable": "EnemyName",
 												"value": "\"Mad Hatter\""
@@ -25465,7 +25414,7 @@
 										{
 											"id": "set-animation",
 											"objectClass": "Enemy",
-											"sid": 315634517268335,
+											"sid": 724620448921581,
 											"parameters": {
 												"animation": "EnemyName",
 												"from": "beginning"
@@ -25474,7 +25423,7 @@
 										{
 											"id": "set-period",
 											"objectClass": "Enemy",
-											"sid": 669343095615616,
+											"sid": 903845943469506,
 											"behaviorType": "Sine",
 											"parameters": {
 												"period": "6"
@@ -25483,7 +25432,7 @@
 										{
 											"id": "set-magnitude",
 											"objectClass": "Enemy",
-											"sid": 291583023896779,
+											"sid": 650545434836917,
 											"behaviorType": "Sine",
 											"parameters": {
 												"magnitude": "10"
@@ -25492,7 +25441,7 @@
 										{
 											"id": "set-position",
 											"objectClass": "Enemy",
-											"sid": 658127219628155,
+											"sid": 446611370477325,
 											"parameters": {
 												"x": "969",
 												"y": "717"
@@ -25501,7 +25450,7 @@
 										{
 											"id": "set-cycle-position",
 											"objectClass": "Enemy",
-											"sid": 868642205567314,
+											"sid": 486079084963823,
 											"behaviorType": "Sine",
 											"parameters": {
 												"cycle-position": "0"
@@ -25510,7 +25459,7 @@
 										{
 											"id": "set-size",
 											"objectClass": "Enemy",
-											"sid": 204373623004453,
+											"sid": 950554147214447,
 											"parameters": {
 												"width": "445",
 												"height": "635"
@@ -25519,7 +25468,7 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 341896931228156,
+											"sid": 175120075433593,
 											"parameters": {
 												"variable": "EnemyAI_Style",
 												"value": "\"fearless\""
@@ -25528,220 +25477,553 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 307064854273523,
+											"sid": 346840098996657,
 											"parameters": {
 												"variable": "EnemyAI_Chaos",
 												"value": "15"
 											}
 										}
 									],
-									"sid": 681463638383404
+									"sid": 854516216986162
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 907271182277126,
+									"parameters": {
+										"variable": "Start"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Bkg_Main_Level",
+									"sid": 143119698326830,
+									"parameters": {
+										"frame-number": "1"
+									}
 								},
 								{
-									"eventType": "comment",
-									"text": "Cheshire Cat"
+									"callFunction": "Reset Number Deck",
+									"sid": 307750012708444
 								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Table_CPU",
+									"sid": 117310189980509,
+									"parameters": {
+										"instance-variable": "Cards",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Table_Player",
+									"sid": 173687786829762,
+									"parameters": {
+										"instance-variable": "Cards",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Table_CPU",
+									"sid": 754517728320147,
+									"parameters": {
+										"instance-variable": "Next_Hidden",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Table_Player",
+									"sid": 494098947761464,
+									"parameters": {
+										"instance-variable": "Next_Hidden",
+										"value": "false"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Icon_Hidden_Card",
+									"sid": 410214441347893
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 529382958613796,
+									"parameters": {
+										"seconds": "0.1",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "Reset Power Deck",
+									"sid": 440495217084075
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Hand_CPU",
+									"sid": 972164166163131,
+									"parameters": {
+										"instance-variable": "PowersAvailable",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Hand_CPU",
+									"sid": 589337603248392,
+									"parameters": {
+										"instance-variable": "Protect_Turns",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Hand_Player",
+									"sid": 914307786605788,
+									"parameters": {
+										"instance-variable": "Protect_Turns",
+										"value": "0"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Icon_Protect",
+									"sid": 401676907624864
+								},
+								{
+									"id": "set-layer-scale",
+									"objectClass": "System",
+									"sid": 884905091398433,
+									"parameters": {
+										"layer": "\"Bkg\"",
+										"scale": "1.0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 853996534929599,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 484757223250489,
+									"parameters": {
+										"variable": "LayoutZoom",
+										"value": "5.5"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 815901781550908,
+									"parameters": {
+										"variable": "Transition_State",
+										"value": "\"ZoomIn\""
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Camera",
+									"sid": 677086370795682,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 192788795541297,
+									"parameters": {
+										"variable": "Transition_State",
+										"value": "\"ZoomIn\""
+									}
+								},
+								{
+									"id": "wait-for-signal",
+									"objectClass": "System",
+									"sid": 430344019617902,
+									"parameters": {
+										"tag": "\"Transition_End\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Bkg_Main_Level",
+									"sid": 604015928509036,
+									"parameters": {
+										"animation": "\"Level_\"&Match",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 530374455169839,
+							"children": [
 								{
 									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 329407678360642,
-											"parameters": {
-												"variable": "Match",
-												"comparison": 0,
-												"value": "2"
-											}
-										}
-									],
+									"conditions": [],
 									"actions": [
 										{
-											"id": "set-eventvar-value",
+											"id": "wait",
 											"objectClass": "System",
-											"sid": 528893919241831,
+											"sid": 541230690528421,
 											"parameters": {
-												"variable": "EnemyName",
-												"value": "\"Cheshire Cat\""
+												"seconds": "1",
+												"use-timescale": true
 											}
 										},
 										{
-											"id": "set-animation",
+											"id": "set-fade-in-time",
 											"objectClass": "Enemy",
-											"sid": 957677865713271,
+											"sid": 370329546358568,
+											"behaviorType": "Fade",
 											"parameters": {
-												"animation": "EnemyName",
-												"from": "beginning"
+												"fade-in-time": "1"
 											}
 										},
 										{
-											"id": "set-period",
+											"id": "set-fade-out-time",
 											"objectClass": "Enemy",
-											"sid": 384371254747712,
-											"behaviorType": "Sine",
+											"sid": 747313614412109,
+											"behaviorType": "Fade",
 											"parameters": {
-												"period": "4.8"
+												"fade-out-time": "0"
 											}
 										},
 										{
-											"id": "set-magnitude",
+											"id": "restart-fade",
 											"objectClass": "Enemy",
-											"sid": 211634413000448,
-											"behaviorType": "Sine",
-											"parameters": {
-												"magnitude": "15"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Enemy",
-											"sid": 483862545656504,
-											"parameters": {
-												"x": "961",
-												"y": "654"
-											}
-										},
-										{
-											"id": "set-cycle-position",
-											"objectClass": "Enemy",
-											"sid": 210457327423491,
-											"behaviorType": "Sine",
-											"parameters": {
-												"cycle-position": "0"
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "Enemy",
-											"sid": 111197983314177,
-											"parameters": {
-												"width": "648",
-												"height": "537"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 381052360472339,
-											"parameters": {
-												"variable": "EnemyAI_Style",
-												"value": "\"fearless\""
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 406109235489157,
-											"parameters": {
-												"variable": "EnemyAI_Chaos",
-												"value": "0"
-											}
+											"sid": 788543400555732,
+											"behaviorType": "Fade"
 										}
 									],
-									"sid": 346937918117421
-								},
-								{
-									"eventType": "comment",
-									"text": "Red Queen"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+									"sid": 667294134901428,
+									"children": [
 										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 761764912338410,
-											"parameters": {
-												"variable": "Match",
-												"comparison": 0,
-												"value": "3"
-											}
+											"eventType": "comment",
+											"text": "Mad Hatter"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 639207375261271,
+													"parameters": {
+														"variable": "Match",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 752207556260615,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Mad Hatter\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 273806240716366,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-period",
+													"objectClass": "Enemy",
+													"sid": 676698207000926,
+													"behaviorType": "Sine",
+													"parameters": {
+														"period": "6"
+													}
+												},
+												{
+													"id": "set-magnitude",
+													"objectClass": "Enemy",
+													"sid": 852339785331419,
+													"behaviorType": "Sine",
+													"parameters": {
+														"magnitude": "10"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 668170225436513,
+													"parameters": {
+														"x": "969",
+														"y": "717"
+													}
+												},
+												{
+													"id": "set-cycle-position",
+													"objectClass": "Enemy",
+													"sid": 240722695108956,
+													"behaviorType": "Sine",
+													"parameters": {
+														"cycle-position": "0"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 650058585083701,
+													"parameters": {
+														"width": "445",
+														"height": "635"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 150263664346229,
+													"parameters": {
+														"variable": "EnemyAI_Style",
+														"value": "\"fearless\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 856785706927750,
+													"parameters": {
+														"variable": "EnemyAI_Chaos",
+														"value": "15"
+													}
+												}
+											],
+											"sid": 479564724420414
+										},
+										{
+											"eventType": "comment",
+											"text": "Cheshire Cat"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 245666534418555,
+													"parameters": {
+														"variable": "Match",
+														"comparison": 0,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 525706852243405,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Cheshire Cat\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 248113125012276,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-period",
+													"objectClass": "Enemy",
+													"sid": 268859711202721,
+													"behaviorType": "Sine",
+													"parameters": {
+														"period": "4.8"
+													}
+												},
+												{
+													"id": "set-magnitude",
+													"objectClass": "Enemy",
+													"sid": 789720866906077,
+													"behaviorType": "Sine",
+													"parameters": {
+														"magnitude": "15"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 879783783553990,
+													"parameters": {
+														"x": "961",
+														"y": "654"
+													}
+												},
+												{
+													"id": "set-cycle-position",
+													"objectClass": "Enemy",
+													"sid": 312502038788399,
+													"behaviorType": "Sine",
+													"parameters": {
+														"cycle-position": "0"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 113414888495678,
+													"parameters": {
+														"width": "648",
+														"height": "537"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 858304574019983,
+													"parameters": {
+														"variable": "EnemyAI_Style",
+														"value": "\"fearless\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 781734298401607,
+													"parameters": {
+														"variable": "EnemyAI_Chaos",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 390868221975323
+										},
+										{
+											"eventType": "comment",
+											"text": "Red Queen"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 420095503188922,
+													"parameters": {
+														"variable": "Match",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 902469855323620,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Red Queen\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 543115047451927,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-period",
+													"objectClass": "Enemy",
+													"sid": 281319353693128,
+													"behaviorType": "Sine",
+													"parameters": {
+														"period": "6"
+													}
+												},
+												{
+													"id": "set-magnitude",
+													"objectClass": "Enemy",
+													"sid": 105583217564154,
+													"behaviorType": "Sine",
+													"parameters": {
+														"magnitude": "10"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 865073713831258,
+													"parameters": {
+														"x": "958",
+														"y": "506"
+													}
+												},
+												{
+													"id": "set-cycle-position",
+													"objectClass": "Enemy",
+													"sid": 649319212328642,
+													"behaviorType": "Sine",
+													"parameters": {
+														"cycle-position": "0"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 103099246929074,
+													"parameters": {
+														"width": "552",
+														"height": "792"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 369134543704972,
+													"parameters": {
+														"variable": "EnemyAI_Style",
+														"value": "\"cautious\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 108693444930247,
+													"parameters": {
+														"variable": "EnemyAI_Chaos",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 845560490284303
 										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 153922802839961,
-											"parameters": {
-												"variable": "EnemyName",
-												"value": "\"Red Queen\""
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Enemy",
-											"sid": 931646963464834,
-											"parameters": {
-												"animation": "EnemyName",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "set-period",
-											"objectClass": "Enemy",
-											"sid": 392150568991040,
-											"behaviorType": "Sine",
-											"parameters": {
-												"period": "6"
-											}
-										},
-										{
-											"id": "set-magnitude",
-											"objectClass": "Enemy",
-											"sid": 466003339093742,
-											"behaviorType": "Sine",
-											"parameters": {
-												"magnitude": "10"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Enemy",
-											"sid": 797657039786110,
-											"parameters": {
-												"x": "958",
-												"y": "506"
-											}
-										},
-										{
-											"id": "set-cycle-position",
-											"objectClass": "Enemy",
-											"sid": 894075559496569,
-											"behaviorType": "Sine",
-											"parameters": {
-												"cycle-position": "0"
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "Enemy",
-											"sid": 105877522717763,
-											"parameters": {
-												"width": "552",
-												"height": "792"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 975540749009072,
-											"parameters": {
-												"variable": "EnemyAI_Style",
-												"value": "\"cautious\""
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 998943848513450,
-											"parameters": {
-												"variable": "EnemyAI_Chaos",
-												"value": "0"
-											}
-										}
-									],
-									"sid": 996174284275926
+									]
 								}
 							]
 						},
@@ -27319,7 +27601,10 @@
 								},
 								{
 									"callFunction": "Transition",
-									"sid": 217437980550714
+									"sid": 217437980550714,
+									"parameters": [
+										false
+									]
 								},
 								{
 									"id": "wait",
@@ -28331,6 +28616,316 @@
 				}
 			],
 			"sid": 817672841300944
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Config",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 838273308122465,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "configuracoes"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 811829978110758,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 848937397219373,
+							"parameters": {
+								"audio-file": {
+									"path": "button_select_sfx"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 287302029074010,
+							"parameters": {
+								"layer": "\"Pause\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 282510296073310,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 481303704495291,
+							"parameters": {
+								"group-name": "\"Player's Turn / Actions\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 404006139512200
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 325573351348958,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Btn_Pause"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 278656965481426,
+							"parameters": {
+								"layer": "\"Pause\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 377884213456229,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Btn_Pause",
+									"sid": 167269417781930,
+									"parameters": {
+										"animation": "\"Resume\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 242145666778390,
+									"parameters": {
+										"audio-file": {
+											"path": "button_2_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 364703832038481,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 558204354128658,
+									"parameters": {
+										"group-name": "\"Player's Turn / Actions\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 661191298231589,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 248071512338135,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 171468225381443
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Btn_Pause",
+									"sid": 539898468341045,
+									"parameters": {
+										"animation": "\"Menu\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 441655730612296,
+									"parameters": {
+										"audio-file": {
+											"path": "button_select_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 215982235271073,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 507719565345911
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 736535466120660,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Toggle_Numbers"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 253399922119881,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 977710811992163,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 299319871569343,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 373228908198266,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "txt_debug",
+									"sid": 138851678359657,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 703870268516955
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 636195747242596,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 855054699228379,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 996680753415166,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "txt_debug",
+									"sid": 853558636226946,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 134195421071133
+						}
+					]
+				}
+			],
+			"sid": 551110451978455
 		},
 		{
 			"eventType": "group",
