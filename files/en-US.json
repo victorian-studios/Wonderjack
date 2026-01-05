@@ -1,6 +1,9 @@
 {
 	"locale": "en-US",
 	"strings": {
+        "tutorial": {
+            "": ""
+        },
         "common": {
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",
             "power": "[u]The Power Deck[/u]: \n\nDraw 1 card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",

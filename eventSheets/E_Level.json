@@ -28809,6 +28809,14 @@
 									}
 								},
 								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 118094950870908,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
 									"id": "go-to-layout",
 									"objectClass": "System",
 									"sid": 215982235271073,

@@ -209,7 +209,9 @@
 			"Text_Options_1",
 			"Camera",
 			"Icon_power_arrow",
-			"Particles"
+			"Particles",
+			"Sprite",
+			"Text_Tut"
 		],
 		"subfolders": []
 	},

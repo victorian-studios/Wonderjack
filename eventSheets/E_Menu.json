@@ -16,6 +16,14 @@
 			],
 			"actions": [
 				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 694202107305331,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
 					"id": "set-y",
 					"objectClass": "tutorial",
 					"sid": 235233602932283,
