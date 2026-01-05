@@ -940,7 +940,7 @@
 				{
 					"type": "Candle_Flame",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Player",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -952,7 +952,23 @@
 					"instanceVariables": {
 						"my_ID": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 687417610087719,
 						"expanded": true
@@ -961,11 +977,11 @@
 					"locked": false,
 					"world": {
 						"x": 256,
-						"y": 58,
+						"y": 84,
 						"width": 72,
 						"height": 72,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -979,7 +995,7 @@
 				{
 					"type": "Candle_Flame",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Player",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -991,7 +1007,23 @@
 					"instanceVariables": {
 						"my_ID": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 277725608236881,
 						"expanded": true
@@ -1000,11 +1032,11 @@
 					"locked": false,
 					"world": {
 						"x": 334,
-						"y": 56,
+						"y": 82,
 						"width": 72,
 						"height": 72,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -1018,7 +1050,7 @@
 				{
 					"type": "Candle_Flame",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Player",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1030,7 +1062,23 @@
 					"instanceVariables": {
 						"my_ID": 3
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 942895885598128,
 						"expanded": true
@@ -1039,11 +1087,11 @@
 					"locked": false,
 					"world": {
 						"x": 414,
-						"y": 60,
+						"y": 86,
 						"width": 72,
 						"height": 72,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -2789,7 +2837,7 @@
 			],
 			"instances": [
 				{
-					"type": "txt_debug",
+					"type": "Txt_debug",
 					"properties": {
 						"text": "1 2 3 4 5 6 7",
 						"enable-bbcode": true,

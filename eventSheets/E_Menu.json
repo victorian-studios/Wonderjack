@@ -25,7 +25,7 @@
 				},
 				{
 					"id": "set-y",
-					"objectClass": "tutorial",
+					"objectClass": "Tutorial_Img",
 					"sid": 235233602932283,
 					"parameters": {
 						"y": "-600"
@@ -326,6 +326,22 @@
 							}
 						},
 						{
+							"id": "set-animation-frame",
+							"objectClass": "Tutorial_Img",
+							"sid": 701296454020693,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Tut",
+							"sid": 182511108458052,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"tutorial.page_\" & Tutorial_Img.AnimationFrame)"
+							}
+						},
+						{
 							"id": "set-fade-in-time",
 							"objectClass": "Bkg_Power_Txt",
 							"sid": 998535153109590,
@@ -348,52 +364,114 @@
 							"objectClass": "Bkg_Power_Txt",
 							"sid": 628995593935033,
 							"behaviorType": "Fade"
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 581363036709701,
-							"parameters": {
-								"seconds": "0.25",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "tutorial",
-							"sid": 196586448720865,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"down\"",
-								"property": "offsetY",
-								"end-value": "531",
-								"time": "0.4",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "tween-one-property",
-							"objectClass": "Btn_Back",
-							"sid": 526624582992384,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "offsetX",
-								"end-value": "190",
-								"time": "0.4",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
 						}
 					],
-					"sid": 572956527465628
+					"sid": 572956527465628,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 839791805292408,
+									"parameters": {
+										"object": "Tutorial_Num"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tutorial_Num",
+									"sid": 460651813559273,
+									"parameters": {
+										"animation": "\"Default\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 818232640785671
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 521948134090238,
+									"parameters": {
+										"object": "Tutorial_Num",
+										"expression": "Tutorial_Num.AnimationFrame",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tutorial_Num",
+									"sid": 924263135818447,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 350240630803596
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 443297062070519,
+									"parameters": {
+										"seconds": "0.25",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Tutorial_Img",
+									"sid": 367270112661239,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"down\"",
+										"property": "offsetY",
+										"end-value": "531",
+										"time": "0.4",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Btn_Back",
+									"sid": 870422145566678,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "190",
+										"time": "0.4",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 213146592582630
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -477,7 +555,7 @@
 				},
 				{
 					"id": "tween-one-property",
-					"objectClass": "tutorial",
+					"objectClass": "Tutorial_Img",
 					"sid": 485608285069341,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -546,6 +624,83 @@
 			],
 			"actions": [],
 			"sid": 888725700082478
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 758943239351267,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Tutorial_Num"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Tutorial_Img",
+					"sid": 528920422828293,
+					"parameters": {
+						"frame-number": "Tutorial_Num.AnimationFrame + 1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text_Tut",
+					"sid": 523773042913618,
+					"parameters": {
+						"text": "Internationalization.Lookup(\"tutorial.page_\" & Tutorial_Img.AnimationFrame)"
+					}
+				}
+			],
+			"sid": 873552783593786,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 597418211611852,
+							"parameters": {
+								"object": "Tutorial_Num"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Tutorial_Num",
+							"sid": 546253042364349,
+							"parameters": {
+								"animation": "\"Default\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 677545671449302
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Tutorial_Num",
+							"sid": 247699384212565,
+							"parameters": {
+								"animation": "\"Selected\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 465453599245278
+				}
+			]
 		}
 	],
 	"sid": 468746933081532

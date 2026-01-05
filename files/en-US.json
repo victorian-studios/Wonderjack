@@ -2,7 +2,11 @@
 	"locale": "en-US",
 	"strings": {
         "tutorial": {
-            "": ""
+            "page_1": "Chapter 1\n\nThe Goal\n\nThe goal of the game is to win two rounds by reaching 21 with numeric cards or get as close as possible.",
+            "page_2": "Chapter 2\n\nThe Turn\n\nOn your turn, you can draw a numeric card or draw/play a Power Card, which grants you abilities during matches.",
+            "page_3": "Chapter 3\n\nThe Relics\n\nAfter finishing a match, you choose a relic that will passively help you for the rest of the game.",
+            "page_4": "Chapter 4\n\nThe Loser\n\nYou lose the round if the total value of your cards exceeds 21, or if your opponent obtains a higher sum than yours.",
+            "page_5": "Chapter 5\n\nThe Tie\n\nWhen there's a tie or both players exceed 21, no point is awarded no point is awarded, and a new round starts."
         },
         "common": {
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",

@@ -13,7 +13,18 @@
 			"sid": 181161678360599
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 684991537594078
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 379101464026500
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -23,7 +34,7 @@
 						"width": 200,
 						"height": 200,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -92,7 +103,7 @@
 						"width": 200,
 						"height": 200,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,

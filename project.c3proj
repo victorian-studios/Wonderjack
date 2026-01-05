@@ -180,7 +180,7 @@
 			"menu_poste",
 			"placa_",
 			"logo",
-			"tutorial",
+			"Tutorial_Img",
 			"Bkg_Black_Common",
 			"carta_opt_bg",
 			"Btn_Sound",
@@ -202,7 +202,7 @@
 			"Icon_Hidden_Card",
 			"A_NumbersEnemy",
 			"A_NumbersPlayer",
-			"txt_debug",
+			"Txt_debug",
 			"Text_Relic_Info",
 			"Bkg_Relic_Info_Txt",
 			"Toggle_Numbers",
@@ -210,7 +210,7 @@
 			"Camera",
 			"Icon_power_arrow",
 			"Particles",
-			"Sprite",
+			"Tutorial_Num",
 			"Text_Tut"
 		],
 		"subfolders": []

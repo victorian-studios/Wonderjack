@@ -641,7 +641,7 @@
 					}
 				},
 				{
-					"type": "tutorial",
+					"type": "Tutorial_Img",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "New",
@@ -727,7 +727,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Tutorial_Num",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Selected",
@@ -764,7 +764,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Tutorial_Num",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -801,7 +801,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Tutorial_Num",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -838,7 +838,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Tutorial_Num",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -875,7 +875,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Tutorial_Num",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -927,7 +927,7 @@
 							0,
 							1
 						],
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
 						"text-direction": "ltr",
@@ -949,9 +949,9 @@
 					"locked": false,
 					"world": {
 						"x": 608,
-						"y": 624,
+						"y": 608,
 						"width": 640,
-						"height": 256,
+						"height": 272,
 						"originX": 0,
 						"originY": 0,
 						"color": [

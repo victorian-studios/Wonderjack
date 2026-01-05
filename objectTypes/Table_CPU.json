@@ -22,7 +22,7 @@
 		{
 			"name": "Visible_Count",
 			"type": "number",
-			"desc": "",
+			"desc": "a soma das cartas visíveis nessa área",
 			"show": true,
 			"sid": 418283303197333
 		}
