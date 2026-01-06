@@ -599,14 +599,6 @@
 				{
 					"items": [
 						{
-							"name": "18 - Phantom's Requiem (Loop).wav",
-							"type": "audio/wav",
-							"sid": 809992150960748,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
 							"name": "18 - Phantom's Requiem (Loop).ogg",
 							"type": "audio/ogg; codecs=vorbis",
 							"sid": 553080097632606,
@@ -619,143 +611,8 @@
 					"name": "Credits"
 				},
 				{
-					"items": [
-						{
-							"name": "5 - The Haunting Eclipse (Loop).wav",
-							"type": "audio/wav",
-							"sid": 661830265897026,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "14 - Abyssal Echoes (Loop).wav",
-							"type": "audio/wav",
-							"sid": 841781475911234,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "13 - The Unseen Legion (Loop).wav",
-							"type": "audio/wav",
-							"sid": 419575811228784,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "4 - Nocturnal Sorcery (Loop).wav",
-							"type": "audio/wav",
-							"sid": 762461568321697,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "10 - Forgotten Realms of Doom (Loop).wav",
-							"type": "audio/wav",
-							"sid": 819696686050618,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "8 - Spectral Resonance (Loop).wav",
-							"type": "audio/wav",
-							"sid": 864173738717010,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "6 - Mystic Veil of Despair (Loop).wav",
-							"type": "audio/wav",
-							"sid": 646441166218351,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "10 - Forgotten Realms of Doom (Loop).ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 938858159807886,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "6 - Mystic Veil of Despair (Loop).ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 918817386372971,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "7 - Malevolent Melancholy (Loop).ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 975046637200910,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "9 - Chaos's Lullaby (Loop).ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 610807348111695,
-							"file-info": {
-								"purpose": "none"
-							}
-						}
-					],
+					"items": [],
 					"subfolders": [
-						{
-							"items": [
-								{
-									"name": "2 - Eternal Nightfall (Loop).wav",
-									"type": "audio/wav",
-									"sid": 161906428607271,
-									"file-info": {
-										"purpose": "none"
-									}
-								},
-								{
-									"name": "1 - Cursed Shadows (Loop).wav",
-									"type": "audio/wav",
-									"sid": 101508476345450,
-									"file-info": {
-										"purpose": "none"
-									}
-								},
-								{
-									"name": "12 - Soulbound Desolationt (Loop).wav",
-									"type": "audio/wav",
-									"sid": 346165934782159,
-									"file-info": {
-										"purpose": "none"
-									}
-								},
-								{
-									"name": "1 - Cursed Shadows (Loop).ogg",
-									"type": "audio/ogg; codecs=vorbis",
-									"sid": 155361762533973,
-									"file-info": {
-										"purpose": "none"
-									}
-								},
-								{
-									"name": "12 - Soulbound Desolationt (Loop).ogg",
-									"type": "audio/ogg; codecs=vorbis",
-									"sid": 862580271469252,
-									"file-info": {
-										"purpose": "none"
-									}
-								}
-							],
-							"subfolders": [],
-							"name": "Boss"
-						},
 						{
 							"items": [
 								{
@@ -776,7 +633,7 @@
 								}
 							],
 							"subfolders": [],
-							"name": "Boss 2"
+							"name": "Boss"
 						},
 						{
 							"items": [
@@ -840,52 +697,6 @@
 				{
 					"items": [
 						{
-							"name": "16 - Lament of the Damned (Loop).wav",
-							"type": "audio/wav",
-							"sid": 612781212302997,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "9 - Chaos's Lullaby (Loop).wav",
-							"type": "audio/wav",
-							"sid": 626757378945597,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "7 - Malevolent Melancholy (Loop).wav",
-							"type": "audio/wav",
-							"sid": 422135897760679,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "16 - Lament of the Damned (Loop).ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 359785931905238,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "16 - Lament of the Damned (Loop).webm",
-							"type": "audio/webm; codecs=opus",
-							"sid": 117711932332954,
-							"file-info": {
-								"purpose": "none"
-							}
-						}
-					],
-					"subfolders": [],
-					"name": "Menu"
-				},
-				{
-					"items": [
-						{
 							"name": "16 - Lament of the Damned (Loop).webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 200878755229466,
@@ -895,7 +706,7 @@
 						}
 					],
 					"subfolders": [],
-					"name": "Menu_2"
+					"name": "Menu"
 				}
 			]
 		},
