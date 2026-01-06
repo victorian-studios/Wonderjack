@@ -359,6 +359,14 @@
 				},
 				{
 					"id": "set-visible",
+					"objectClass": "Candle_Flame",
+					"sid": 980408480241830,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
 					"objectClass": "Text_Turn",
 					"sid": 944116341319315,
 					"parameters": {
@@ -16156,6 +16164,14 @@
 							],
 							"actions": [
 								{
+									"id": "set-visible",
+									"objectClass": "Candle_Flame",
+									"sid": 656106148003735,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
 									"sid": 840169193571660,
@@ -16277,6 +16293,14 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Candle_Flame",
+									"sid": 804061108254914,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
 								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
@@ -16552,6 +16576,14 @@
 							],
 							"actions": [
 								{
+									"id": "set-visible",
+									"objectClass": "Candle_Flame",
+									"sid": 390559752093686,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
 									"sid": 144491929838185,
@@ -16673,6 +16705,14 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Candle_Flame",
+									"sid": 325130302849792,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
 								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
