@@ -28,6 +28,7 @@
         "common": {
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",
             "power": "[u]The Power Deck[/u]: \n\nDraw 1 card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
+            "power_hand_limit": "[u]The Power Deck[/u]: \n\nDraw 1 card and place it on your hand. You [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
             "number" : "[u]The Number Deck[/u] \n\nDraw 1 card and place it on the board.",
             "numbers": "Alice: {0} / {1}: {2}. {3} won this round!",
             "points": "Alice: {0} / {1}: {2}",

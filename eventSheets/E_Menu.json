@@ -144,9 +144,9 @@
 						{
 							"id": "is-tag-playing",
 							"objectClass": "Audio",
-							"sid": 722095562880814,
+							"sid": 707423580259332,
 							"parameters": {
-								"tag": "\"main\""
+								"tag": "\"menu\""
 							},
 							"isInverted": true
 						}
@@ -155,13 +155,13 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 165394380569143,
+							"sid": 688286649257771,
 							"parameters": {
 								"audio-file": {
-									"path": "Menu_2/16 - Lament of the Damned (Loop)"
+									"path": "Menu/16 - Lament of the Damned (Loop)"
 								},
-								"loop": "not-looping",
-								"volume": "-10",
+								"loop": "looping",
+								"volume": "-8",
 								"stereo-pan": "0",
 								"tag-optional": "\"menu\""
 							}
@@ -284,6 +284,27 @@
 						}
 					],
 					"sid": 716171889978039
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 569254479617367
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Mouse",
+							"sid": 226839419241901,
+							"parameters": {
+								"cursor-style": "pointer"
+							}
+						}
+					],
+					"sid": 114831323642314
 				}
 			]
 		},
@@ -318,6 +339,14 @@
 						"loop": "no",
 						"ping-pong": "no",
 						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 830409012532831,
+					"parameters": {
+						"cursor-style": "normal"
 					}
 				}
 			],
@@ -1159,6 +1188,14 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
+						},
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Mouse",
+							"sid": 378314774212807,
+							"parameters": {
+								"cursor-style": "pointer"
+							}
 						}
 					],
 					"sid": 228919597509700
@@ -1212,6 +1249,14 @@
 								"loop": "no",
 								"ping-pong": "no",
 								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Mouse",
+							"sid": 373110959642400,
+							"parameters": {
+								"cursor-style": "normal"
 							}
 						}
 					],

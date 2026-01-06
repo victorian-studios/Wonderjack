@@ -585,16 +585,7 @@
 			]
 		},
 		"music": {
-			"items": [
-				{
-					"name": "enchanted-fantasy-356791.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 141033192323767,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": [
 				{
 					"items": [

@@ -10,7 +10,88 @@
 					"sid": 393174370392185
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 709595316801863,
+					"parameters": {
+						"audio-file": {
+							"path": "Menu/16 - Lament of the Damned (Loop)"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 720845425120450,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Level 1/9 - Chaos's Lullaby (Loop)"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 643261750553852,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Level 2/7 - Malevolent Melancholy (Loop)"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 290047319098079,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Level 3/6 - Mystic Veil of Despair (Loop)"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 517337576860756,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Level Secret/10 - Forgotten Realms of Doom (Loop)"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 947508137423368,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Boss/1 - Cursed Shadows (Loop)"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 345470139666985,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Boss/12 - Soulbound Desolationt (Loop)"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
+					"sid": 504461615184525,
+					"parameters": {
+						"audio-file": {
+							"path": "Credits/18 - Phantom's Requiem (Loop)"
+						}
+					}
+				}
+			],
 			"sid": 204975896251312
 		},
 		{

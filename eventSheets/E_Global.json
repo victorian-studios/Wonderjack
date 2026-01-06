@@ -656,6 +656,14 @@
 								"click-type": "clicked",
 								"object-clicked": "Toggle_Numbers"
 							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 975480903327532,
+							"parameters": {
+								"layer": "\"Pause\""
+							}
 						}
 					],
 					"actions": [],
