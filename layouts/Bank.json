@@ -653,8 +653,21 @@
 					"uid": 83,
 					"sid": 395524983202749,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"extra_fade": 0
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 74,
 						"uid": 83,
@@ -1037,8 +1050,21 @@
 					"uid": 84,
 					"sid": 841180108762888,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"extra_fade": 1
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 74,
 						"uid": 84,

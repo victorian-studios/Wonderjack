@@ -1,0 +1,18 @@
+{
+	"name": "Text_Static_Generic",
+	"plugin-id": "Text",
+	"sid": 375193880961299,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "my_id",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 496585240299587
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

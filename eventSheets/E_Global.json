@@ -431,6 +431,358 @@
 				}
 			],
 			"sid": 460365901085646
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Config",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 838273308122465,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "configuracoes"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 811829978110758,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 848937397219373,
+							"parameters": {
+								"audio-file": {
+									"path": "button_select_sfx"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 287302029074010,
+							"parameters": {
+								"layer": "\"Pause\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 282510296073310,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 481303704495291,
+							"parameters": {
+								"group-name": "\"Player's Turn / Actions\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 404006139512200
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 325573351348958,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Btn_Pause"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 278656965481426,
+							"parameters": {
+								"layer": "\"Pause\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 377884213456229,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Btn_Pause",
+									"sid": 167269417781930,
+									"parameters": {
+										"animation": "\"Resume\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 242145666778390,
+									"parameters": {
+										"audio-file": {
+											"path": "button_2_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 364703832038481,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 558204354128658,
+									"parameters": {
+										"group-name": "\"Player's Turn / Actions\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 661191298231589,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 248071512338135,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 171468225381443
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Btn_Pause",
+									"sid": 539898468341045,
+									"parameters": {
+										"animation": "\"Menu\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 441655730612296,
+									"parameters": {
+										"audio-file": {
+											"path": "button_select_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 118094950870908,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 215982235271073,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 507719565345911
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 736535466120660,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Toggle_Numbers"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 253399922119881,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 977710811992163,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 299319871569343,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 373228908198266,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Txt_debug",
+									"sid": 138851678359657,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 703870268516955
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 636195747242596,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 855054699228379,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Toggle_Numbers",
+									"sid": 996680753415166,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Txt_debug",
+									"sid": 853558636226946,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 134195421071133
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 771271940840034,
+							"parameters": {
+								"object": "Text_Static_Generic"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Text_Static_Generic",
+							"sid": 977003359934850,
+							"parameters": {
+								"instance-variable": "my_id",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 259848289191033,
+							"parameters": {
+								"text": "Internationalization.Lookup( Self.my_id )"
+							}
+						}
+					],
+					"sid": 498058772290983
+				}
+			],
+			"sid": 551110451978455
 		}
 	],
 	"sid": 466221253102104

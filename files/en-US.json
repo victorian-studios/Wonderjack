@@ -1,12 +1,29 @@
 {
 	"locale": "en-US",
 	"strings": {
+        "menu": {
+            "btn_play": "Play",
+            "btn_tutorial": "Tutorial",
+            "btn_credits": "Credits",
+            "back": "Back"
+        },
+        "credits": {
+            "name_1": "Ana Barata\nArtist",
+            "name_2": "Vitor Cirilo\nProgrammer",
+            "name_3": "Ana Luiza\nArtist",
+            "bye": "Thanks for playing our game!"
+        },
         "tutorial": {
-            "page_1": "Chapter 1\n\nThe Goal\n\nThe goal of the game is to win two rounds by reaching 21 with numeric cards or get as close as possible.",
-            "page_2": "Chapter 2\n\nThe Turn\n\nOn your turn, you can draw a numeric card or draw/play a Power Card, which grants you abilities during matches.",
-            "page_3": "Chapter 3\n\nThe Relics\n\nAfter finishing a match, you choose a relic that will passively help you for the rest of the game.",
-            "page_4": "Chapter 4\n\nThe Loser\n\nYou lose the round if the total value of your cards exceeds 21, or if your opponent obtains a higher sum than yours.",
-            "page_5": "Chapter 5\n\nThe Tie\n\nWhen there's a tie or both players exceed 21, no point is awarded no point is awarded, and a new round starts."
+            "page_1": "[u][b]Chapter 1[/b][/u]\n\n[b]The Goal[/b]\n\nThe goal of the game is to win two rounds by reaching 21 with numeric cards or get as close as possible.",
+            "page_2": "[u][b]Chapter 2[/b][/u]\n\n[b]The Turn[/b]\n\nOn your turn, you can draw a numeric card or draw/play a Power Card, which grants you abilities during matches.",
+            "page_3": "[u][b]Chapter 3[/b][/u]\n\n[b]The Relics[/b]\n\nAfter finishing a match, you choose a relic that will passively help you for the rest of the game.",
+            "page_4": "[u][b]Chapter 4[/b][/u]\n\n[b]The Loser[/b]\n\nYou lose the round if the total value of your cards exceeds 21, or if your opponent obtains a higher sum than yours.",
+            "page_5": "[u][b]Chapter 5[/b][/u]\n\n[b]The Tie[/b]\n\nWhen there's a tie or both players exceed 21, no point is awarded no point is awarded, and a new round starts."
+        },
+        "options": {
+            "resume": "Resume",
+            "menu": "Menu",
+            "opt_1": "Auto math numbers"
         },
         "common": {
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",
@@ -19,7 +36,7 @@
             "tie": "Nobody won this round.",
             "looser": "You lost this match... that's unfortunate.",
             "winner": "You won this match. Keep going!",
-            "end": "You've won all the 3 opponents! Congratulations!",
+            "end": "You've won all the 4 opponents! Congratulations!",
             "revive": "You got a second chance! But your relic was destroyed."
         },
 		"relics": {

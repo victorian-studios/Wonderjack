@@ -4,8 +4,22 @@
 	"sid": 146489371505584,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "extra_fade",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 135047804479408
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 274916774653772
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

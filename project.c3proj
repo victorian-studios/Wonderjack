@@ -177,8 +177,8 @@
 			"Victorian_Studio",
 			"Btn_Back",
 			"menu_bg",
-			"menu_poste",
-			"placa_",
+			"Menu_Poste",
+			"Menu_Placa",
 			"logo",
 			"Tutorial_Img",
 			"Bkg_Black_Common",
@@ -211,7 +211,9 @@
 			"Icon_power_arrow",
 			"Particles",
 			"Tutorial_Num",
-			"Text_Tut"
+			"Text_Tut",
+			"Text_Loading",
+			"Text_Static_Generic"
 		],
 		"subfolders": []
 	},
@@ -229,7 +231,8 @@
 			"Level",
 			"Bank",
 			"Credits",
-			"Menu"
+			"Menu",
+			"Intro"
 		],
 		"subfolders": []
 	},
@@ -239,7 +242,8 @@
 			"E_Global",
 			"E_Menu",
 			"E_Credits",
-			"Test"
+			"Test",
+			"E Intro"
 		],
 		"subfolders": []
 	},
@@ -355,7 +359,230 @@
 					}
 				}
 			],
-			"subfolders": []
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "EQUIPMENT Pack Ruffle 04.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 741035487194040,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "BONG Bell Timer Hit Short 04.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 659040212110909,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "EQUIPMENT Pack Ruffle 12.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 273197877783555,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "FOOTSTEPS (A) Walking Loop 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 821150034206211,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "FOOTSTEPS (B) Walking Loop 02.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 986048167191420,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Descending Bong 02.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 928657806410747,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SHUFFLE Cards 02.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 186476920341322,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SHUFFLE Cards 03.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 760850200251819,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "RETRO Bump Hit Beep 14.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 565779850237263,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SQUEAK Creaking 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 193343349827728,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS BEEPS Single Tone Short 02.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 217388699948422,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS BEEPS Thin Short 10.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 944587250526461,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Bells Sparkle Tune 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 596201221555668,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Bells Sparkle Tune Completion 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 440070343732891,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Bells Sparkle Tune Short 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 599628432953611,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Bells Sparkle Tune Completion 06.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 659757431967985,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Bells Sparkle Tune Short 05.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 257034325234502,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Bells Sparkle Tune Completion 07.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 535774116126558,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Collect Beep Short 02.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 995653284414204,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Mystery Magic Spell Sparkle 11.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 759118283318681,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Collect Beep Short 03.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 759627830561029,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Collect Chime 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 113197029828124,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SQUEAK Creaking 01.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 208441941705413,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Collect Beep Short 03.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 478116163640236,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "FOOTSTEPS (A) Walking Loop 01.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 494325027030690,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS CHIME Bells Sparkle Tune 01.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 214449938400256,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Descending Bong 02.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 665410073381746,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Novos"
+				}
+			]
 		},
 		"music": {
 			"items": [
@@ -375,6 +602,14 @@
 							"name": "18 - Phantom's Requiem (Loop).wav",
 							"type": "audio/wav",
 							"sid": 809992150960748,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "18 - Phantom's Requiem (Loop).ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 553080097632606,
 							"file-info": {
 								"purpose": "none"
 							}
@@ -440,6 +675,38 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "10 - Forgotten Realms of Doom (Loop).ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 938858159807886,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "6 - Mystic Veil of Despair (Loop).ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 918817386372971,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "7 - Malevolent Melancholy (Loop).ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 975046637200910,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "9 - Chaos's Lullaby (Loop).ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 610807348111695,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [
@@ -468,10 +735,104 @@
 									"file-info": {
 										"purpose": "none"
 									}
+								},
+								{
+									"name": "1 - Cursed Shadows (Loop).ogg",
+									"type": "audio/ogg; codecs=vorbis",
+									"sid": 155361762533973,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "12 - Soulbound Desolationt (Loop).ogg",
+									"type": "audio/ogg; codecs=vorbis",
+									"sid": 862580271469252,
+									"file-info": {
+										"purpose": "none"
+									}
 								}
 							],
 							"subfolders": [],
 							"name": "Boss"
+						},
+						{
+							"items": [
+								{
+									"name": "1 - Cursed Shadows (Loop).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 526545796338398,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "12 - Soulbound Desolationt (Loop).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 789570898645334,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Boss 2"
+						},
+						{
+							"items": [
+								{
+									"name": "9 - Chaos's Lullaby (Loop).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 873489385318481,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Level 1"
+						},
+						{
+							"items": [
+								{
+									"name": "7 - Malevolent Melancholy (Loop).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 168524528009172,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Level 2"
+						},
+						{
+							"items": [
+								{
+									"name": "6 - Mystic Veil of Despair (Loop).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 485756143225983,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Level 3"
+						},
+						{
+							"items": [
+								{
+									"name": "10 - Forgotten Realms of Doom (Loop).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 591558054164737,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Level Secret"
 						}
 					],
 					"name": "In Game"
@@ -501,10 +862,40 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "16 - Lament of the Damned (Loop).ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 359785931905238,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "16 - Lament of the Damned (Loop).webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 117711932332954,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
 					"name": "Menu"
+				},
+				{
+					"items": [
+						{
+							"name": "16 - Lament of the Damned (Loop).webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 200878755229466,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Menu_2"
 				}
 			]
 		},
@@ -534,6 +925,30 @@
 					"name": "Berry Rotunda.ttf",
 					"type": "application/font-sfnt",
 					"sid": 994368647564377,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "AliceInWonderland.woff",
+					"type": "application/font-woff",
+					"sid": 129338547895106,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Alice-Regular.woff",
+					"type": "application/font-woff",
+					"sid": 548410081661960,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Alice-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 640940633025513,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -713,5 +1128,5 @@
 	},
 	"viewportWidth": 1920,
 	"viewportHeight": 1080,
-	"firstLayout": "Menu"
+	"firstLayout": "Intro"
 }

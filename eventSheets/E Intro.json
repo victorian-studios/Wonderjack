@@ -1,0 +1,60 @@
+{
+	"name": "E Intro",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 393174370392185
+				}
+			],
+			"actions": [],
+			"sid": 204975896251312
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 778447012920246
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 856489820104398,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 278899729238267
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "preloads-complete",
+					"objectClass": "Audio",
+					"sid": 631522298935783
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text_Loading",
+					"sid": 718352808438843,
+					"parameters": {
+						"text": "\"Click anywhere to start!\""
+					}
+				}
+			],
+			"sid": 398989371854165
+		}
+	],
+	"sid": 364052280707711
+}

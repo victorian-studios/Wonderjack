@@ -660,7 +660,7 @@
 					"locked": false,
 					"world": {
 						"x": 1642,
-						"y": 314,
+						"y": 306,
 						"width": 142,
 						"height": 110,
 						"originX": 0.5,
@@ -698,7 +698,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1642,
+						"x": 1560,
 						"y": 506,
 						"width": 142,
 						"height": 110,
@@ -1101,6 +1101,45 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Relic_Slot",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 93,
+					"sid": 551514135222910,
+					"tags": "",
+					"instanceVariables": {
+						"HasRelic": false
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 551514135222910,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1726,
+						"y": 506,
+						"width": 142,
+						"height": 110,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 427009402370981,
@@ -1194,8 +1233,8 @@
 							"properties": {
 								"text": "Nobody won this round. No poins award for both players.",
 								"enable-bbcode": true,
-								"font": "OfenbacherSchwabCAT",
-								"size": 56,
+								"font": "Alice-Regular",
+								"size": 52,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -1248,6 +1287,54 @@
 									1,
 									1,
 									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Camera",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 94,
+							"sid": 244858591178360,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"ScrollTo": {
+									"properties": {
+										"enabled": false
+									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 244858591178360,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 960,
+								"y": 362,
+								"width": 250,
+								"height": 250,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									0.5
 								],
 								"angle": 0,
 								"zElevation": 0
@@ -1341,8 +1428,8 @@
 							"properties": {
 								"text": "[u]Card 7[/u]\n\n\nGet the card 7 if it's in the deck.",
 								"enable-bbcode": true,
-								"font": "OfenbacherSchwabCAT",
-								"size": 39,
+								"font": "Alice-Regular",
+								"size": 37,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -1488,8 +1575,8 @@
 							"properties": {
 								"text": "[u]Hurricane[/u]\n\nBoth players discard all their not hidden number cards to the end of the deck. Cannot be used in the last turn!",
 								"enable-bbcode": true,
-								"font": "Berry Rotunda",
-								"size": 30,
+								"font": "Alice-Regular",
+								"size": 38,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -1640,7 +1727,7 @@
 							"properties": {
 								"text": "[u]Card 7[/u]\n\n\nGet the card 7 if it's in the deck.",
 								"enable-bbcode": true,
-								"font": "OfenbacherSchwabCAT",
+								"font": "Alice-Regular",
 								"size": 39,
 								"line-height": 0,
 								"bold": false,
@@ -1792,7 +1879,7 @@
 							"properties": {
 								"text": "[u]Choose a card to draw:[/u]",
 								"enable-bbcode": true,
-								"font": "OfenbacherSchwabCAT",
+								"font": "Alice-Regular",
 								"size": 39,
 								"line-height": 0,
 								"bold": false,
@@ -2362,8 +2449,8 @@
 							"properties": {
 								"text": "Right-click this relic to return the last number card you drew to the bottom of the deck (once per match). However, your hand limit for power cards is reduced by 1.",
 								"enable-bbcode": true,
-								"font": "OfenbacherSchwabCAT",
-								"size": 39,
+								"font": "Alice-Regular",
+								"size": 35,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -2611,7 +2698,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Menu",
-								"initial-frame": 0,
+								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -2648,7 +2735,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Resume",
-								"initial-frame": 0,
+								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -2718,14 +2805,180 @@
 							}
 						},
 						{
-							"type": "Text_Options_1",
+							"type": "Text_Static_Generic",
 							"properties": {
-								"text": "Auto math numbers",
+								"text": "a",
 								"enable-bbcode": true,
-								"font": "OfenbacherSchwabCAT",
-								"size": 33,
+								"font": "Alice-Regular",
+								"size": 55,
 								"line-height": 0,
-								"bold": false,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 116,
+							"sid": 920946357139562,
+							"tags": "",
+							"instanceVariables": {
+								"my_id": "options.resume"
+							},
+							"behaviors": {},
+							"sceneGraphData": {
+								"parent-uid": null,
+								"uid": 116,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 920946357139562,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 812,
+								"y": 434,
+								"width": 292,
+								"height": 94,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Text_Static_Generic",
+							"properties": {
+								"text": "b",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 55,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 117,
+							"sid": 637226106413386,
+							"tags": "",
+							"instanceVariables": {
+								"my_id": "options.menu"
+							},
+							"behaviors": {},
+							"sceneGraphData": {
+								"parent-uid": null,
+								"uid": 117,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 637226106413386,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 834,
+								"y": 556,
+								"width": 250,
+								"height": 94,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Text_Static_Generic",
+							"properties": {
+								"text": "c",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 38,
+								"line-height": 0,
+								"bold": true,
 								"italic": false,
 								"color": [
 									1,
@@ -2742,22 +2995,52 @@
 								"origin": "top-left",
 								"read-aloud": false
 							},
-							"uid": 93,
-							"sid": 939332828470066,
+							"uid": 118,
+							"sid": 149855395698231,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"my_id": "options.opt_1"
+							},
 							"behaviors": {},
+							"sceneGraphData": {
+								"parent-uid": null,
+								"uid": 118,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
 							"instanceFolderItem": {
-								"sid": 939332828470066,
+								"sid": 149855395698231,
 								"expanded": true
 							},
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1276,
-								"y": 242,
-								"width": 418,
-								"height": 68.24875350044385,
+								"x": 1272,
+								"y": 236,
+								"width": 578,
+								"height": 94,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -2839,11 +3122,11 @@
 				{
 					"type": "Txt_debug",
 					"properties": {
-						"text": "1 2 3 4 5 6 7",
+						"text": "? + 99\n-----\n99",
 						"enable-bbcode": true,
-						"font": "Berry Rotunda",
-						"size": 34,
-						"line-height": 0,
+						"font": "AliceInWonderland",
+						"size": 45,
+						"line-height": -20,
 						"bold": false,
 						"italic": false,
 						"color": [
@@ -2879,54 +3162,6 @@
 						"height": 164,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Camera",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 94,
-					"sid": 244858591178360,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 244858591178360,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 960,
-						"y": 362,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,

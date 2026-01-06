@@ -24,9 +24,42 @@
 					}
 				},
 				{
+					"id": "set-position",
+					"objectClass": "Text_Tut",
+					"sid": 615933661354482,
+					"parameters": {
+						"x": "608",
+						"y": "608"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Text_Tut",
+					"sid": 706953737105959,
+					"parameters": {
+						"width": "640",
+						"height": "272"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Text_Tut",
+					"sid": 363509949047146,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Tutorial_Img",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
 					"id": "set-y",
 					"objectClass": "Tutorial_Img",
-					"sid": 235233602932283,
+					"sid": 265080152890503,
 					"parameters": {
 						"y": "-600"
 					}
@@ -34,7 +67,7 @@
 				{
 					"id": "set-x",
 					"objectClass": "Btn_Back",
-					"sid": 145960894371548,
+					"sid": 727253322747390,
 					"parameters": {
 						"x": "-200"
 					}
@@ -69,7 +102,7 @@
 						},
 						{
 							"id": "tween-one-property",
-							"objectClass": "menu_poste",
+							"objectClass": "Menu_Poste",
 							"sid": 636524498311930,
 							"behaviorType": "Tween",
 							"parameters": {
@@ -122,19 +155,73 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 252559608030213,
+							"sid": 165394380569143,
 							"parameters": {
 								"audio-file": {
-									"path": "enchanted-fantasy-356791"
+									"path": "Menu_2/16 - Lament of the Damned (Loop)"
 								},
-								"loop": "looping",
-								"volume": "-15",
+								"loop": "not-looping",
+								"volume": "-10",
 								"stereo-pan": "0",
-								"tag-optional": "\"main\""
+								"tag-optional": "\"menu\""
 							}
 						}
 					],
 					"sid": 172243147882523
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 312242410523605,
+							"parameters": {
+								"tag": "\"main\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 717862840564249,
+							"parameters": {
+								"tag": "\"main\"",
+								"db": "-100",
+								"duration": "0.5",
+								"ending": "stop"
+							}
+						}
+					],
+					"sid": 339759150262036
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 718789754697135,
+							"parameters": {
+								"tag": "\"credits\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 764050694597229,
+							"parameters": {
+								"tag": "\"credits\"",
+								"db": "-100",
+								"duration": "0.5",
+								"ending": "stop"
+							}
+						}
+					],
+					"sid": 633767092481574
 				}
 			]
 		},
@@ -146,7 +233,7 @@
 					"objectClass": "Mouse",
 					"sid": 774074465596806,
 					"parameters": {
-						"object": "placa_"
+						"object": "Menu_Placa"
 					}
 				}
 			],
@@ -158,7 +245,7 @@
 					"conditions": [
 						{
 							"id": "is-playing",
-							"objectClass": "placa_",
+							"objectClass": "Menu_Placa",
 							"sid": 722215092490907,
 							"behaviorType": "Tween",
 							"parameters": {
@@ -179,7 +266,7 @@
 					"actions": [
 						{
 							"id": "tween-two-properties",
-							"objectClass": "placa_",
+							"objectClass": "Menu_Placa",
 							"sid": 745710030696788,
 							"behaviorType": "Tween",
 							"parameters": {
@@ -217,7 +304,7 @@
 			"actions": [
 				{
 					"id": "tween-two-properties",
-					"objectClass": "placa_",
+					"objectClass": "Menu_Placa",
 					"sid": 355131477669471,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -246,7 +333,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "placa_"
+						"object-clicked": "Menu_Placa"
 					}
 				},
 				{
@@ -282,7 +369,7 @@
 					"conditions": [
 						{
 							"id": "compare-animation-frame",
-							"objectClass": "placa_",
+							"objectClass": "Menu_Placa",
 							"sid": 457251139656219,
 							"parameters": {
 								"comparison": 0,
@@ -307,7 +394,7 @@
 					"conditions": [
 						{
 							"id": "compare-animation-frame",
-							"objectClass": "placa_",
+							"objectClass": "Menu_Placa",
 							"sid": 233568626771760,
 							"parameters": {
 								"comparison": 0,
@@ -426,6 +513,45 @@
 							"conditions": [],
 							"actions": [
 								{
+									"id": "unpin",
+									"objectClass": "Text_Tut",
+									"sid": 869654034600827,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Text_Tut",
+									"sid": 631262204677736,
+									"parameters": {
+										"x": "608",
+										"y": "-523"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Text_Tut",
+									"sid": 381004076643630,
+									"parameters": {
+										"width": "640",
+										"height": "272"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "Text_Tut",
+									"sid": 622926133851790,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Tutorial_Img",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 443297062070519,
@@ -478,7 +604,7 @@
 					"conditions": [
 						{
 							"id": "compare-animation-frame",
-							"objectClass": "placa_",
+							"objectClass": "Menu_Placa",
 							"sid": 952541992493834,
 							"parameters": {
 								"comparison": 0,
@@ -699,6 +825,397 @@
 						}
 					],
 					"sid": 465453599245278
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Tutorial_Num",
+							"sid": 200968888358553,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "unpin",
+							"objectClass": "Text_Tut",
+							"sid": 326235641831768,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Text_Tut",
+							"sid": 401045553294252,
+							"parameters": {
+								"x": "608",
+								"y": "608"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Text_Tut",
+							"sid": 610247213163382,
+							"parameters": {
+								"width": "640",
+								"height": "272"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Text_Tut",
+							"sid": 457936477968053,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Tutorial_Img",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 795638929604255
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Tutorial_Num",
+							"sid": 889083609040230,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "unpin",
+							"objectClass": "Text_Tut",
+							"sid": 581493632082515,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Text_Tut",
+							"sid": 409274177686692,
+							"parameters": {
+								"x": "976",
+								"y": "384"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Text_Tut",
+							"sid": 940080601043206,
+							"parameters": {
+								"width": "320",
+								"height": "496"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Text_Tut",
+							"sid": 911796991549926,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Tutorial_Img",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 135944913086230
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Tutorial_Num",
+							"sid": 824848567120563,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "unpin",
+							"objectClass": "Text_Tut",
+							"sid": 156374296901583,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Text_Tut",
+							"sid": 552615067435120,
+							"parameters": {
+								"x": "576",
+								"y": "240"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Text_Tut",
+							"sid": 805916492374778,
+							"parameters": {
+								"width": "720",
+								"height": "272"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Text_Tut",
+							"sid": 742175642212524,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Tutorial_Img",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 267350020494691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Tutorial_Num",
+							"sid": 375474271699156,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "unpin",
+							"objectClass": "Text_Tut",
+							"sid": 673233859881917,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Text_Tut",
+							"sid": 220027074590020,
+							"parameters": {
+								"x": "576",
+								"y": "240"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Text_Tut",
+							"sid": 826802328016121,
+							"parameters": {
+								"width": "720",
+								"height": "272"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Text_Tut",
+							"sid": 342634523007828,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Tutorial_Img",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 241810542326769
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Tutorial_Num",
+							"sid": 174769401314318,
+							"parameters": {
+								"comparison": 0,
+								"number": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "unpin",
+							"objectClass": "Text_Tut",
+							"sid": 263036553807958,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Text_Tut",
+							"sid": 658653684419059,
+							"parameters": {
+								"x": "576",
+								"y": "608"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Text_Tut",
+							"sid": 815231167485667,
+							"parameters": {
+								"width": "720",
+								"height": "272"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Text_Tut",
+							"sid": 626183614241484,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Tutorial_Img",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 679956768434659
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 743211337979897,
+					"parameters": {
+						"object": "Tutorial_Num"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 393333125054413,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-height",
+							"objectClass": "Tutorial_Num",
+							"sid": 729062751459298,
+							"parameters": {
+								"comparison": 1,
+								"height": "79.2"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 206196838746978
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Tutorial_Num",
+							"sid": 495021282025624,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"grow\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.25",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 228919597509700
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 260163101142736
+				}
+			],
+			"actions": [],
+			"sid": 996450688737810,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-height",
+							"objectClass": "Tutorial_Num",
+							"sid": 352305625564878,
+							"parameters": {
+								"comparison": 1,
+								"height": "66"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 113383852706184
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Tutorial_Num",
+							"sid": 958462668400669,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\"",
+								"property": "scale",
+								"end-x": "1",
+								"end-y": "1",
+								"time": "0.15",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 786421747441494
 				}
 			]
 		}

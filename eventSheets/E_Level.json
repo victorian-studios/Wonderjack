@@ -454,36 +454,95 @@
 					"objectClass": "Bkg_Turn_Txt",
 					"sid": 134058018202212,
 					"behaviorType": "Fade"
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 610866293963441,
-					"parameters": {
-						"seconds": "3",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 865369435777912,
-					"parameters": {
-						"layer": "\"Turn\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 870529228818866,
-					"parameters": {
-						"variable": "MatchReady",
-						"value": "true"
-					}
 				}
 			],
-			"sid": 807443279101097
+			"sid": 807443279101097,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 424234611386707,
+							"parameters": {
+								"tag": "\"menu\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 846671652401910,
+							"parameters": {
+								"tag": "\"menu\"",
+								"db": "-100",
+								"duration": "0.5",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 561369431337170,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 388818886753402,
+							"parameters": {
+								"audio-file": {
+									"path": "In Game/Level 1/9 - Chaos's Lullaby (Loop)"
+								},
+								"loop": "looping",
+								"volume": "-12",
+								"stereo-pan": "0",
+								"tag-optional": "\"main\""
+							}
+						}
+					],
+					"sid": 973790937706988
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 793193179286603,
+							"parameters": {
+								"seconds": "3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 879872248564441,
+							"parameters": {
+								"layer": "\"Turn\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 886486045522905,
+							"parameters": {
+								"variable": "MatchReady",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 342777614414634
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -498,9 +557,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "Txt_debug",
-					"sid": 328109819827946,
+					"sid": 233571379470217,
 					"parameters": {
-						"text": "\"? + \"&Table_CPU.Visible_Count&newline&newline&PlayerNumbers"
+						"text": "\"? + \"&Table_CPU.Visible_Count&newline&\"-----\"&newline&PlayerNumbers"
 					}
 				}
 			],
@@ -12992,15 +13051,6 @@
 									}
 								},
 								{
-									"id": "is-animation-playing",
-									"objectClass": "Icon_Card_Numb",
-									"sid": 493701623533746,
-									"disabled": true,
-									"parameters": {
-										"animation": "\"Front\""
-									}
-								},
-								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
 									"sid": 480297071838877,
@@ -13010,16 +13060,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 548610045580514,
-									"disabled": true,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
 								{
 									"id": "set-animation",
 									"objectClass": "Icon_Card_Numb",
@@ -13042,16 +13082,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 656100228423640,
-									"disabled": true,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
 								{
 									"id": "set-animation",
 									"objectClass": "Icon_Card_Numb",
@@ -14354,6 +14384,20 @@
 										"type": "log",
 										"message": "\"+1 inimigo\""
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 206494359596739,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/NEGATIVE Failure Descending Bong 02"
+										},
+										"loop": "not-looping",
+										"volume": "MuteAll = 0 ? -15 : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 270919059095691
@@ -14412,6 +14456,20 @@
 									"parameters": {
 										"type": "log",
 										"message": "\"+1 inimigo\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 121434685889526,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/NEGATIVE Failure Descending Bong 02"
+										},
+										"loop": "not-looping",
+										"volume": "MuteAll = 0 ? -15 : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -14472,6 +14530,20 @@
 										"type": "log",
 										"message": "\"+1 jogador\""
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 906133703423493,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/SUCCESS CHIME Bells Sparkle Tune 01"
+										},
+										"loop": "not-looping",
+										"volume": "MuteAll = 0 ? -15 : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 494777542754174
@@ -14530,6 +14602,20 @@
 									"parameters": {
 										"type": "log",
 										"message": "\"+1 jogador\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 578095293298970,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/SUCCESS CHIME Bells Sparkle Tune 01"
+										},
+										"loop": "not-looping",
+										"volume": "MuteAll = 0 ? -15 : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -14808,11 +14894,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 954233583259213,
+											"sid": 232386676970588,
 											"parameters": {
 												"variable": "Match",
 												"comparison": 0,
-												"value": "3"
+												"value": "4"
 											}
 										}
 									],
@@ -14914,6 +15000,30 @@
 											"id": "restart-fade",
 											"objectClass": "Enemy",
 											"sid": 636004699213419,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Enemy_Extra_Anim",
+											"sid": 229163361598870,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "1"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Enemy_Extra_Anim",
+											"sid": 950288442238810,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "Self.extra_fade"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Enemy_Extra_Anim",
+											"sid": 301109316494089,
 											"behaviorType": "Fade"
 										},
 										{
@@ -17890,7 +18000,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Feedback de highlight"
+							"text": "Feedback de highlight das cartas de poder"
 						},
 						{
 							"eventType": "block",
@@ -26257,6 +26367,13 @@
 									}
 								},
 								{
+									"callFunction": "Audio Sequence",
+									"sid": 718744934257102,
+									"parameters": [
+										"1"
+									]
+								},
+								{
 									"callFunction": "Reset Number Deck",
 									"sid": 307750012708444
 								},
@@ -26570,7 +26687,8 @@
 													}
 												}
 											],
-											"sid": 479564724420414
+											"sid": 479564724420414,
+											"disabled": true
 										},
 										{
 											"eventType": "comment",
@@ -26592,6 +26710,17 @@
 											],
 											"actions": [
 												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 613484759469946,
+													"parameters": {
+														"tag": "\"main\"",
+														"db": "-12",
+														"duration": "0.5",
+														"ending": "keep-playing"
+													}
+												},
+												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
 													"sid": 525706852243405,
@@ -26607,6 +26736,118 @@
 													"parameters": {
 														"animation": "EnemyName",
 														"from": "beginning"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Enemy",
+													"sid": 224870292153352,
+													"parameters": {
+														"object": "Enemy_Extra_Anim",
+														"layer": "0",
+														"image-point": "1",
+														"create-hierarchy": true,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "Enemy",
+													"sid": 283863130963821,
+													"parameters": {
+														"child": "Enemy_Extra_Anim",
+														"transform-x": true,
+														"transform-y": true,
+														"transform-w": true,
+														"transform-h": true,
+														"transform-a": true,
+														"transform-o": false,
+														"transform-z-elevation": true,
+														"transform-visibility": false,
+														"destroy-with-parent": false
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 820412300777390,
+													"parameters": {
+														"animation": "\"Tail\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 943505200389433,
+													"parameters": {
+														"width": "190",
+														"height": "180"
+													}
+												},
+												{
+													"id": "move-to-object",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 830610254432499,
+													"parameters": {
+														"where": "behind",
+														"object": "Enemy"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Enemy",
+													"sid": 194814616141512,
+													"parameters": {
+														"object": "Enemy_Extra_Anim",
+														"layer": "0",
+														"image-point": "2",
+														"create-hierarchy": true,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "Enemy",
+													"sid": 159763212222035,
+													"parameters": {
+														"child": "Enemy_Extra_Anim",
+														"transform-x": true,
+														"transform-y": true,
+														"transform-w": true,
+														"transform-h": true,
+														"transform-a": true,
+														"transform-o": false,
+														"transform-z-elevation": true,
+														"transform-visibility": false,
+														"destroy-with-parent": false
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 570400056170157,
+													"parameters": {
+														"animation": "\"Cat_Eyes\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 658070697040696,
+													"parameters": {
+														"width": "126",
+														"height": "29"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 851028760106614,
+													"parameters": {
+														"instance-variable": "extra_fade",
+														"value": "2"
 													}
 												},
 												{
@@ -26673,7 +26914,207 @@
 													}
 												}
 											],
-											"sid": 390868221975323
+											"sid": 390868221975323,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "fade-volume",
+															"objectClass": "Audio",
+															"sid": 133399414606389,
+															"parameters": {
+																"tag": "\"main\"",
+																"db": "-100",
+																"duration": "0.5",
+																"ending": "stop"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 211497932950657,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 497678812877938,
+															"parameters": {
+																"audio-file": {
+																	"path": "In Game/Level 2/7 - Malevolent Melancholy (Loop)"
+																},
+																"loop": "looping",
+																"volume": "-12",
+																"stereo-pan": "0",
+																"tag-optional": "\"main\""
+															}
+														}
+													],
+													"sid": 797670205834312
+												}
+											]
+										},
+										{
+											"eventType": "comment",
+											"text": "Humpty Dumpty"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 466621201409039,
+													"parameters": {
+														"variable": "Match",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 463651033187300,
+													"parameters": {
+														"tag": "\"main\"",
+														"db": "-12",
+														"duration": "0.5",
+														"ending": "keep-playing"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 838739817218870,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Humpty Dumpty\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 772998091003409,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-period",
+													"objectClass": "Enemy",
+													"sid": 334071991823420,
+													"behaviorType": "Sine",
+													"parameters": {
+														"period": "4.8"
+													}
+												},
+												{
+													"id": "set-magnitude",
+													"objectClass": "Enemy",
+													"sid": 247118091184945,
+													"behaviorType": "Sine",
+													"parameters": {
+														"magnitude": "15"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 973780653036805,
+													"parameters": {
+														"x": "961",
+														"y": "654"
+													}
+												},
+												{
+													"id": "set-cycle-position",
+													"objectClass": "Enemy",
+													"sid": 548018920858108,
+													"behaviorType": "Sine",
+													"parameters": {
+														"cycle-position": "0"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 619466178611959,
+													"parameters": {
+														"width": "648",
+														"height": "537"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 939334033474743,
+													"parameters": {
+														"variable": "EnemyAI_Style",
+														"value": "\"cautious\""
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 338310617424235,
+													"parameters": {
+														"variable": "EnemyAI_Chaos",
+														"value": "-15"
+													}
+												}
+											],
+											"sid": 228872691360640,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "fade-volume",
+															"objectClass": "Audio",
+															"sid": 471623973900233,
+															"parameters": {
+																"tag": "\"main\"",
+																"db": "-100",
+																"duration": "0.5",
+																"ending": "stop"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 168803513469405,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 982281071754108,
+															"parameters": {
+																"audio-file": {
+																	"path": "In Game/Level 3/6 - Mystic Veil of Despair (Loop)"
+																},
+																"loop": "looping",
+																"volume": "-12",
+																"stereo-pan": "0",
+																"tag-optional": "\"main\""
+															}
+														}
+													],
+													"sid": 287032154976809
+												}
+											]
 										},
 										{
 											"eventType": "comment",
@@ -26685,11 +27126,11 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 420095503188922,
+													"sid": 829489769617849,
 													"parameters": {
 														"variable": "Match",
 														"comparison": 0,
-														"value": "3"
+														"value": "4"
 													}
 												}
 											],
@@ -26776,7 +27217,50 @@
 													}
 												}
 											],
-											"sid": 845560490284303
+											"sid": 845560490284303,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "fade-volume",
+															"objectClass": "Audio",
+															"sid": 552874657256029,
+															"parameters": {
+																"tag": "\"main\"",
+																"db": "-100",
+																"duration": "0.5",
+																"ending": "stop"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 573239804412544,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 446198369494391,
+															"parameters": {
+																"audio-file": {
+																	"path": "In Game/Boss 2/1 - Cursed Shadows (Loop)"
+																},
+																"loop": "looping",
+																"volume": "-12",
+																"stereo-pan": "0",
+																"tag-optional": "\"main\""
+															}
+														}
+													],
+													"sid": 701514301627366
+												}
+											]
 										}
 									]
 								}
@@ -28131,6 +28615,20 @@
 							"behaviorType": "Fade"
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 544994105858381,
+							"parameters": {
+								"audio-file": {
+									"path": "Novos/SUCCESS PICKUP Collect Beep Short 03"
+								},
+								"loop": "not-looping",
+								"volume": "MuteAll = 0 ? -10 : -100",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"callFunction": "Apply Relic Effect",
 							"sid": 917879475883160,
 							"parameters": [
@@ -28144,12 +28642,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-nth-instance",
+									"id": "pick-by-comparison",
 									"objectClass": "System",
-									"sid": 163994524915924,
+									"sid": 429266366192485,
 									"parameters": {
 										"object": "Relic_Slot",
-										"instance": "0"
+										"expression": "Relic_Slot.IID",
+										"comparison": 0,
+										"value": "Match - 2"
 									}
 								}
 							],
@@ -29375,324 +29875,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Config",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 838273308122465,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "configuracoes"
-							}
-						},
-						{
-							"id": "layer-is-visible",
-							"objectClass": "System",
-							"sid": 811829978110758,
-							"parameters": {
-								"layer": "\"Pause\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 848937397219373,
-							"parameters": {
-								"audio-file": {
-									"path": "button_select_sfx"
-								},
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 287302029074010,
-							"parameters": {
-								"layer": "\"Pause\"",
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 282510296073310,
-							"parameters": {
-								"time-scale": "0"
-							}
-						},
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 481303704495291,
-							"parameters": {
-								"group-name": "\"Player's Turn / Actions\"",
-								"state": "deactivated"
-							}
-						}
-					],
-					"sid": 404006139512200
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 325573351348958,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "Btn_Pause"
-							}
-						},
-						{
-							"id": "layer-is-visible",
-							"objectClass": "System",
-							"sid": 278656965481426,
-							"parameters": {
-								"layer": "\"Pause\""
-							}
-						}
-					],
-					"actions": [],
-					"sid": 377884213456229,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-animation-playing",
-									"objectClass": "Btn_Pause",
-									"sid": 167269417781930,
-									"parameters": {
-										"animation": "\"Resume\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 242145666778390,
-									"parameters": {
-										"audio-file": {
-											"path": "button_2_sfx"
-										},
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "set-time-scale",
-									"objectClass": "System",
-									"sid": 364703832038481,
-									"parameters": {
-										"time-scale": "1.0"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 558204354128658,
-									"parameters": {
-										"group-name": "\"Player's Turn / Actions\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 661191298231589,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 248071512338135,
-									"parameters": {
-										"layer": "\"Pause\"",
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 171468225381443
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-animation-playing",
-									"objectClass": "Btn_Pause",
-									"sid": 539898468341045,
-									"parameters": {
-										"animation": "\"Menu\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 441655730612296,
-									"parameters": {
-										"audio-file": {
-											"path": "button_select_sfx"
-										},
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "set-time-scale",
-									"objectClass": "System",
-									"sid": 118094950870908,
-									"parameters": {
-										"time-scale": "1.0"
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 215982235271073,
-									"parameters": {
-										"layout": "Menu"
-									}
-								}
-							],
-							"sid": 507719565345911
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 736535466120660,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "Toggle_Numbers"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 253399922119881,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 977710811992163,
-									"parameters": {
-										"comparison": 0,
-										"number": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 299319871569343,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 373228908198266,
-									"parameters": {
-										"frame-number": "1"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Txt_debug",
-									"sid": 138851678359657,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 703870268516955
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 636195747242596,
-									"parameters": {
-										"comparison": 0,
-										"number": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 855054699228379,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 996680753415166,
-									"parameters": {
-										"frame-number": "0"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Txt_debug",
-									"sid": 853558636226946,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 134195421071133
-						}
-					]
-				}
-			],
-			"sid": 551110451978455
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "Anti Bug",
 			"description": "",
 			"isActiveOnStart": true,
@@ -29724,6 +29906,94 @@
 				}
 			],
 			"sid": 357112366278544
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "Audio Sequence",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "id",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 647965274338632
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 920609247487683,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 659417003236041,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 678785828551010,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/SQUEAK Creaking 01"
+										},
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 126227102571066,
+									"parameters": {
+										"seconds": "0.6",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 310803667762726,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/FOOTSTEPS (A) Walking Loop 01"
+										},
+										"loop": "not-looping",
+										"volume": "-8",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 141816318017819
+						}
+					]
+				}
+			],
+			"sid": 295676338618360
 		}
 	],
 	"sid": 881580611012132

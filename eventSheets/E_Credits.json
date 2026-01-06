@@ -9,6 +9,82 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 337013480897768
+				}
+			],
+			"actions": [],
+			"sid": 177739911542931,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 417200470014012,
+							"parameters": {
+								"variable": "MuteAll"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 517333233790019,
+							"parameters": {
+								"tag": "\"menu\"",
+								"db": "-100",
+								"duration": "0.5",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 868912146305056,
+							"parameters": {
+								"tag": "\"main\"",
+								"db": "-100",
+								"duration": "0.5",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 898847104496840,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 271764500179335,
+							"parameters": {
+								"audio-file": {
+									"path": "Credits/18 - Phantom's Requiem (Loop)"
+								},
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"credits\""
+							}
+						}
+					],
+					"sid": 143308923281287
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
 					"sid": 337688675100564,
