@@ -324,9 +324,9 @@
 						"x": 960,
 						"y": 540,
 						"width": 1922,
-						"height": 482,
+						"height": 480,
 						"originX": 0.5,
-						"originY": -0.12240663900414937,
+						"originY": -0.12708333333333333,
 						"color": [
 							1,
 							1,
@@ -770,8 +770,9 @@
 					"tags": "",
 					"instanceVariables": {
 						"Cards": 0,
-						"Next_Hidden": false,
-						"Visible_Count": 0
+						"Cards_Hidden": 0,
+						"Visible_Count": 0,
+						"Next_Hidden": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -810,7 +811,7 @@
 					"sid": 522251730563473,
 					"tags": "",
 					"instanceVariables": {
-						"PowerMaxLimit": 2,
+						"PowerHandLimit": 2,
 						"PowerLimit_Rounds": 0,
 						"Protect_Turns": 0
 					},
@@ -851,7 +852,7 @@
 					"sid": 345541289253979,
 					"tags": "",
 					"instanceVariables": {
-						"PowerMaxLimit": 2,
+						"PowerHandLimit": 2,
 						"PowerLimit_Rounds": 0,
 						"PowersAvailable": 0,
 						"Protect_Turns": 0,

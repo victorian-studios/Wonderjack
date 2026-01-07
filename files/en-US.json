@@ -27,18 +27,18 @@
         },
         "common": {
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",
-            "power": "[u]The Power Deck[/u]: \n\nDraw 1 card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
-            "power_hand_limit": "[u]The Power Deck[/u]: \n\nDraw 1 card and place it on your hand. You [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
-            "number" : "[u]The Number Deck[/u] \n\nDraw 1 card and place it on the board.",
-            "numbers": "Alice: {0} / {1}: {2}. {3} won this round!",
-            "points": "Alice: {0} / {1}: {2}",
-            "new_round": "Round {0} starting now!",
-            "new_match": "New opponent appears: {0}",
+            "power": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
+            "power_hand_limit": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
+            "number" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
+            "numbers": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]. {3} [color=#f5fe05]won[/color] this round!",
+            "points": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]",
+            "new_round": "Round [color=#f5fe05]{0}[/color] starting now!",
+            "new_match": "New opponent appears: [color=#f5fe05]{0}[/color]",
             "tie": "Nobody won this round.",
-            "looser": "You lost this match... that's unfortunate.",
-            "winner": "You won this match. Keep going!",
-            "end": "You've won all the 4 opponents! Congratulations!",
-            "revive": "You got a second chance! But your relic was destroyed."
+            "looser": "You [color=#fa1c03]lost[/color] this match... that's unfortunate.",
+            "winner": "You [color=#f5fe05]won[/color] this match. Keep going!",
+            "end": "You've [color=#f5fe05]won[/color] all the 4 opponents! Congratulations!",
+            "revive": "You got a [color=#f5fe05]second chance[/color]! But your relic was destroyed."
         },
 		"relics": {
             "card_13": "Permanently adds card 13 to the number deck.",
@@ -49,27 +49,27 @@
             "spear" : "Reduces your opponents’ hand limit for power cards by 1.",
             "tea" : "Allows you to draw 1 number card after playing a power card on the same turn (once per match).",
             "drink_me" : "Increases the match goal to 24. Reduces your limit for drawing power cards per round by 1.",
-            "hat" : "When drawing a card that would exceed the match goal, the card is returned and a new one is drawn immediately."
+            "hat" : "When drawing a card that would exceed the match goal, the card is returned and a new one is drawn immediately (onde per match)."
         },
 		"powers": {
-			"card": "[u]Card {0}[/u]\n\n\nGet the card {0} if it's in the deck.",
+			"card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
             "card_tip": "This card is not in the main deck...",
-            "protect": "[u]Protect[/u]\n\n\nProtect you from loosing any number card for 3 turns.",
-            "impulse": "[u]Impulse[/u]\n\n\nGet the highest card number from the deck",
-            "gift": "[u]Gift[/u]\n\n\nGive the highest card number to your opponent.",
-            "return": "[u]Return[/u]\n\n\nDiscard the last number card to the end of the deck.",
-            "compel": "[u]Compel[/u]\n\n\nForces your opponent to discard the last number card to the end of the deck.",
-            "exchange": "[u]Exchange[/u]\n\n\nChoose a not hidden card to switch with your opponement.",
+            "protect": "[u]Protect[/u]\n\n\nProtect you from loosing any number card for [color=#f5fe05]3[/color] turns.",
+            "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck",
+            "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number to your opponent.",
+            "return": "[u]Return[/u]\n\n\nDiscard your [color=#f5fe05]last[/color] number card to the end of the deck.",
+            "compel": "[u]Compel[/u]\n\n\nForces your opponent to discard their [color=#f5fe05]last[/color] number card to the end of the deck.",
+            "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#fa1c03]not hidden[/color] card to switch with your opponement.",
             "exchange_tip_1": "[u]Select an opponent card:[/u]",
             "exchange_tip_2": "[u]Select your card to switch:[/u]",
-            "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch the first hidden card with each other.",
-            "menu": "[u]Menu[/u]\n\nSee the next 3 cards from the number deck and choose 1 to draw. Then, the number deck is shuffled.",
+            "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch their first hidden card with each other.",
+            "menu": "[u]Menu[/u]\n\nSee the next [color=#f5fe05]3[/color] cards from the number deck and choose [color=#f5fe05]1[/color] to draw. Then, the number deck is [color=#fa1c03]shuffled[/color].",
             "menu_tip": "[u]Select a card to draw:[/u]",
-            "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their not hidden number cards to the end of the deck. Cannot be used in the last turn!",
-            "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be hidden to the opponent.",
-            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the next 2 cards from of the number deck.",
-            "clairvoyance_player": "The next numbers are: {0} and then {1}",
-            "clairvoyance_cpu": "{0} had a nice view of the next 2 cards..."
+            "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their [color=#fa1c03]not hidden[/color] number cards to the end of the deck. Cannot be used in the last turn!",
+            "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent.",
+            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]2[/color] cards from of the number deck.",
+            "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color] and then [color=#f5fe05]{1}[/color]",
+            "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]2[/color] cards..."
             
         }
     }

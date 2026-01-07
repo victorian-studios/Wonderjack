@@ -13,11 +13,11 @@
 			"sid": 955676885130746
 		},
 		{
-			"name": "Next_Hidden",
-			"type": "boolean",
-			"desc": "true - ativou o poder \"secret\" / false - a próxima carta de número será visível",
+			"name": "Cards_Hidden",
+			"type": "number",
+			"desc": "quantas cartas estão escondidas aqui",
 			"show": true,
-			"sid": 852224891866726
+			"sid": 147906011751738
 		},
 		{
 			"name": "Visible_Count",
@@ -25,6 +25,13 @@
 			"desc": "a soma das cartas visíveis nessa área",
 			"show": true,
 			"sid": 418283303197333
+		},
+		{
+			"name": "Next_Hidden",
+			"type": "boolean",
+			"desc": "true - ativou o poder \"secret\" / false - a próxima carta de número será visível",
+			"show": true,
+			"sid": 852224891866726
 		}
 	],
 	"behaviorTypes": [],

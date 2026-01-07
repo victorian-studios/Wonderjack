@@ -546,6 +546,9 @@
 								"enabled": true,
 								"live-preview": false
 							}
+						},
+						"Flash": {
+							"properties": {}
 						}
 					},
 					"instanceFolderItem": {
@@ -1211,7 +1214,7 @@
 					}
 				},
 				{
-					"type": "Particles",
+					"type": "Particle_Arrow",
 					"properties": {
 						"rate": 0.8,
 						"spray-cone": 0,

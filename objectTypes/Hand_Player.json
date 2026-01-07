@@ -6,7 +6,7 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "PowerMaxLimit",
+			"name": "PowerHandLimit",
 			"type": "number",
 			"desc": "Limite máximo de cartas de poder na mão",
 			"show": true,

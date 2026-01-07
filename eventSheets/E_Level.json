@@ -454,6 +454,60 @@
 					"objectClass": "Bkg_Turn_Txt",
 					"sid": 134058018202212,
 					"behaviorType": "Fade"
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_Player",
+					"sid": 162472034995330,
+					"parameters": {
+						"instance-variable": "Protect_Turns",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_Player",
+					"sid": 542082929404121,
+					"parameters": {
+						"instance-variable": "PowerHandLimit",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_Player",
+					"sid": 928908201783153,
+					"parameters": {
+						"instance-variable": "PowerLimit_Rounds",
+						"value": "PlayerPowerLimit_Rounds"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_CPU",
+					"sid": 255563164630592,
+					"parameters": {
+						"instance-variable": "Protect_Turns",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_CPU",
+					"sid": 761153777915526,
+					"parameters": {
+						"instance-variable": "PowerHandLimit",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_CPU",
+					"sid": 200847449511769,
+					"parameters": {
+						"instance-variable": "PowerLimit_Rounds",
+						"value": "EnemyPowerLimit_Rounds"
+					}
 				}
 			],
 			"sid": 807443279101097,
@@ -3655,9 +3709,9 @@
 						},
 						{
 							"callFunction": "Play_RNG_Audio",
-							"sid": 288509112218841,
+							"sid": 192943158978298,
 							"parameters": [
-								"\"suffle\""
+								"\"shuffle\""
 							]
 						},
 						{
@@ -3751,6 +3805,15 @@
 							"sid": 605745014267322,
 							"parameters": {
 								"instance-variable": "Visible_Count",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Table_CPU",
+							"sid": 499793801657788,
+							"parameters": {
+								"instance-variable": "Cards_Hidden",
 								"value": "0"
 							}
 						},
@@ -3915,7 +3978,16 @@
 												{
 													"id": "set-boolean-eventvar",
 													"objectClass": "System",
-													"sid": 928310044677480,
+													"sid": 401051836109387,
+													"parameters": {
+														"variable": "Relic_Hat",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 592509206300044,
 													"parameters": {
 														"variable": "Hat_Relic",
 														"value": "false"
@@ -3955,9 +4027,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 552734013575188,
+													"sid": 260183247812701,
 													"parameters": {
-														"seconds": "0.75",
+														"seconds": "1",
 														"use-timescale": true
 													}
 												},
@@ -4116,6 +4188,39 @@
 										}
 									],
 									"sid": 985240267727047
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Card_Numb",
+											"sid": 265824364613685,
+											"parameters": {
+												"object": "Table_CPU"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card_Numb",
+											"sid": 393984132596840,
+											"parameters": {
+												"instance-variable": "Enemy_Hidden"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Table_CPU",
+											"sid": 687247488072739,
+											"parameters": {
+												"instance-variable": "Cards_Hidden",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 581643623526344
 								}
 							]
 						}
@@ -10259,19 +10364,19 @@
 										{
 											"id": "set-fade-in-time",
 											"objectClass": "Text_Turn",
-											"sid": 596217978253127,
+											"sid": 466485503690171,
 											"behaviorType": "Fade",
 											"parameters": {
-												"fade-in-time": "1"
+												"fade-in-time": "0.5"
 											}
 										},
 										{
 											"id": "set-wait-time",
 											"objectClass": "Text_Turn",
-											"sid": 876072028898764,
+											"sid": 931246218260563,
 											"behaviorType": "Fade",
 											"parameters": {
-												"wait-time": "0.5"
+												"wait-time": "1"
 											}
 										},
 										{
@@ -10300,19 +10405,19 @@
 										{
 											"id": "set-fade-in-time",
 											"objectClass": "Bkg_Turn_Txt",
-											"sid": 932380042706299,
+											"sid": 959372053499460,
 											"behaviorType": "Fade",
 											"parameters": {
-												"fade-in-time": "1"
+												"fade-in-time": "0.5"
 											}
 										},
 										{
 											"id": "set-wait-time",
 											"objectClass": "Bkg_Turn_Txt",
-											"sid": 465795157089437,
+											"sid": 769628322450335,
 											"behaviorType": "Fade",
 											"parameters": {
-												"wait-time": "0.5"
+												"wait-time": "1"
 											}
 										},
 										{
@@ -10407,39 +10512,6 @@
 							"parameters": {
 								"variable": "Holding_Card",
 								"value": "true"
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 351657521215088,
-							"parameters": {
-								"object-to-create": "Particles",
-								"layer": "Card_Power.LayerName",
-								"x": "Card_Power.X",
-								"y": "Card_Power.Y - 25",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "move-to-bottom",
-							"objectClass": "Particles",
-							"sid": 467439437512681
-						},
-						{
-							"id": "pin-to-object-properties",
-							"objectClass": "Particles",
-							"sid": 227703651981053,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "Card_Power",
-								"x": true,
-								"y": true,
-								"angle": true,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
 							}
 						}
 					],
@@ -11291,11 +11363,6 @@
 					],
 					"actions": [
 						{
-							"id": "destroy",
-							"objectClass": "Particles",
-							"sid": 526227986515987
-						},
-						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Card_Power",
 							"sid": 706869317345015,
@@ -11358,7 +11425,39 @@
 							]
 						}
 					],
-					"sid": 554514981534479
+					"sid": 554514981534479,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-visible",
+									"objectClass": "Particle_Arrow",
+									"sid": 798586616450540
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 271374339887771,
+									"parameters": {
+										"seconds": "1.2",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-rate",
+									"objectClass": "Particle_Arrow",
+									"sid": 455899521337197,
+									"parameters": {
+										"rate": "0"
+									}
+								}
+							],
+							"sid": 208181659333119
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -18020,7 +18119,7 @@
 															"objectClass": "Hand_Player",
 															"sid": 210607696355760,
 															"parameters": {
-																"instance-variable": "PowerMaxLimit",
+																"instance-variable": "PowerHandLimit",
 																"comparison": 0,
 																"value": "Card_Power.Count"
 															}
@@ -18032,7 +18131,7 @@
 															"objectClass": "Text_Power",
 															"sid": 511023774976468,
 															"parameters": {
-																"text": "Internationalization.Lookup(\"common.power_hand_limit\", Hand_Player.PowerMaxLimit)"
+																"text": "Internationalization.Lookup(\"common.power_hand_limit\", Hand_Player.PowerHandLimit)"
 															}
 														}
 													],
@@ -18183,8 +18282,79 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 196993206760227,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Card_Power"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 120576859890744,
+									"parameters": {
+										"variable": "Turn",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 470592351519113,
+									"parameters": {
+										"first-value": "Particle_Arrow.Count",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 339362296086103,
+									"parameters": {
+										"object-to-create": "Particle_Arrow",
+										"layer": "Card_Power.LayerName",
+										"x": "Card_Power.X",
+										"y": "Card_Power.Y - 22",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-bottom",
+									"objectClass": "Particle_Arrow",
+									"sid": 467439437512681
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "Particle_Arrow",
+									"sid": 227703651981053,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Card_Power",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 672662575348518
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "compare-y",
-									"objectClass": "Particles",
+									"objectClass": "Particle_Arrow",
 									"sid": 251868870665371,
 									"parameters": {
 										"comparison": 2,
@@ -18195,7 +18365,7 @@
 							"actions": [
 								{
 									"id": "set-timeout",
-									"objectClass": "Particles",
+									"objectClass": "Particle_Arrow",
 									"sid": 539405351446062,
 									"parameters": {
 										"timeout": "0"
@@ -18216,7 +18386,7 @@
 							"actions": [
 								{
 									"id": "set-timeout",
-									"objectClass": "Particles",
+									"objectClass": "Particle_Arrow",
 									"sid": 556987279474971,
 									"parameters": {
 										"timeout": "1"
@@ -18224,6 +18394,39 @@
 								}
 							],
 							"sid": 441206188064665
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 728158742244639,
+									"parameters": {
+										"first-value": "Particle_Arrow.ParticleCount",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 706220274204201,
+									"parameters": {
+										"first-value": "Particle_Arrow.Rate",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Particle_Arrow",
+									"sid": 625960886152691
+								}
+							],
+							"sid": 413650151498494
 						},
 						{
 							"eventType": "comment",
@@ -18505,7 +18708,7 @@
 											"objectClass": "Hand_Player",
 											"sid": 421717271583820,
 											"parameters": {
-												"instance-variable": "PowerMaxLimit",
+												"instance-variable": "PowerHandLimit",
 												"comparison": 4,
 												"value": "Card_Power.Count"
 											}
@@ -18727,9 +18930,12 @@
 													],
 													"actions": [
 														{
-															"id": "destroy",
-															"objectClass": "Particles",
-															"sid": 381331519740682
+															"id": "set-rate",
+															"objectClass": "Particle_Arrow",
+															"sid": 674331086231260,
+															"parameters": {
+																"rate": "0"
+															}
 														},
 														{
 															"id": "play",
@@ -18862,9 +19068,12 @@
 															],
 															"actions": [
 																{
-																	"id": "destroy",
-																	"objectClass": "Particles",
-																	"sid": 689035572536937
+																	"id": "set-rate",
+																	"objectClass": "Particle_Arrow",
+																	"sid": 957827399620600,
+																	"parameters": {
+																		"rate": "0"
+																	}
 																},
 																{
 																	"id": "play",
@@ -18943,7 +19152,187 @@
 																	]
 																}
 															],
-															"sid": 399535016236842
+															"sid": 399535016236842,
+															"isOrBlock": true
+														}
+													]
+												},
+												{
+													"eventType": "comment",
+													"text": "Se o jogador não tiver cartas visíveis, impede de usar o poder"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 359393955079529
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Card_Power",
+															"sid": 923730685583362,
+															"parameters": {
+																"instance-variable": "myID",
+																"comparison": 0,
+																"value": "\"9-return\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 520152506315936,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Table_Player",
+																	"sid": 678055055171335,
+																	"parameters": {
+																		"instance-variable": "Visible_Count",
+																		"comparison": 3,
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Hand_Player",
+																	"sid": 523810817059154,
+																	"parameters": {
+																		"instance-variable": "Protect_Turns",
+																		"comparison": 4,
+																		"value": "0"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-rate",
+																	"objectClass": "Particle_Arrow",
+																	"sid": 737494343021081,
+																	"parameters": {
+																		"rate": "0"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 498719483679881,
+																	"parameters": {
+																		"audio-file": {
+																			"path": "494768__alderman2k__error"
+																		},
+																		"loop": "not-looping",
+																		"volume": "-5",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "Card_Power",
+																	"sid": 118980001488705,
+																	"parameters": {
+																		"instance-variable": "Selected",
+																		"value": "false"
+																	}
+																},
+																{
+																	"id": "set-animation",
+																	"objectClass": "Card_Power",
+																	"sid": 639721744521480,
+																	"parameters": {
+																		"animation": "\"Front\"",
+																		"from": "current-frame"
+																	}
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 778776641548347,
+																	"parameters": {
+																		"variable": "Holding_Card",
+																		"value": "false"
+																	}
+																},
+																{
+																	"id": "tween-two-properties",
+																	"objectClass": "Card_Power",
+																	"sid": 450591913748444,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"return\"",
+																		"property": "position",
+																		"end-x": "Self.my_pos_x",
+																		"end-y": "Self.my_pos_y",
+																		"time": "0.1",
+																		"ease": "default",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 385364928095762,
+																	"parameters": {
+																		"seconds": "0.1",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"callFunction": "Order_Hand",
+																	"sid": 575286573695602,
+																	"parameters": [
+																		true,
+																		false
+																	]
+																}
+															],
+															"sid": 991998655567867,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Hand_Player",
+																			"sid": 916827199382293,
+																			"parameters": {
+																				"instance-variable": "Protect_Turns",
+																				"comparison": 4,
+																				"value": "0"
+																			}
+																		},
+																		{
+																			"id": "is-flashing",
+																			"objectClass": "Icon_Protect",
+																			"sid": 787238711853619,
+																			"behaviorType": "Flash",
+																			"isInverted": true
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "flash",
+																			"objectClass": "Icon_Protect",
+																			"sid": 205719829900144,
+																			"behaviorType": "Flash",
+																			"parameters": {
+																				"on-time": "0.2",
+																				"off-time": "0.2",
+																				"duration": "0.8"
+																			}
+																		}
+																	],
+																	"sid": 533307821132648
+																}
+															],
+															"isOrBlock": true
 														}
 													]
 												},
@@ -18962,9 +19351,12 @@
 													],
 													"actions": [
 														{
-															"id": "destroy",
-															"objectClass": "Particles",
-															"sid": 831633181442754
+															"id": "set-rate",
+															"objectClass": "Particle_Arrow",
+															"sid": 739140201571482,
+															"parameters": {
+																"rate": "0"
+															}
 														},
 														{
 															"id": "set-boolean-eventvar",
@@ -20615,9 +21007,9 @@
 																				{
 																					"id": "compare-two-values",
 																					"objectClass": "System",
-																					"sid": 495845182235010,
+																					"sid": 368931850016469,
 																					"parameters": {
-																						"first-value": "loopindex + 1",
+																						"first-value": "loopindex + Table_Player.Cards_Hidden",
 																						"comparison": 0,
 																						"second-value": "Card_Numb.Count"
 																					}
@@ -21823,7 +22215,7 @@
 																	"parameters": {
 																		"instance-variable": "PowersAvailable",
 																		"comparison": 2,
-																		"value": "Self.PowerMaxLimit"
+																		"value": "Self.PowerHandLimit"
 																	}
 																}
 															],
@@ -21882,7 +22274,7 @@
 																	"parameters": {
 																		"instance-variable": "PowersAvailable",
 																		"comparison": 0,
-																		"value": "Self.PowerMaxLimit"
+																		"value": "Self.PowerHandLimit"
 																	}
 																}
 															],
@@ -23001,7 +23393,7 @@
 									"sid": 517662183844762,
 									"parameters": {
 										"type": "log",
-										"message": "\"A CPU tem \"&Hand_CPU.PowersAvailable& \" na mão (limite de \"&Hand_CPU.PowerMaxLimit& \" ) e pode comprar mais \"&Hand_CPU.PowerLimit_Rounds&\" poderes nesta rodada\""
+										"message": "\"A CPU tem \"&Hand_CPU.PowersAvailable& \" na mão (limite de \"&Hand_CPU.PowerHandLimit& \" ) e pode comprar mais \"&Hand_CPU.PowerLimit_Rounds&\" poderes nesta rodada\""
 									}
 								},
 								{
@@ -23071,7 +23463,7 @@
 													"parameters": {
 														"instance-variable": "PowersAvailable",
 														"comparison": 2,
-														"value": "Self.PowerMaxLimit"
+														"value": "Self.PowerHandLimit"
 													}
 												}
 											],
@@ -24199,10 +24591,10 @@
 									"children": [
 										{
 											"eventType": "comment",
-											"text": "Só usa se tiver estourado",
+											"text": "Droga, estou protegido, não posso descartar nada...",
 											"text-color": [
-												0,
 												1,
+												0,
 												0,
 												1
 											]
@@ -24211,33 +24603,33 @@
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 814688642889083,
+													"id": "compare-instance-variable",
+													"objectClass": "Hand_CPU",
+													"sid": 627379961655129,
 													"parameters": {
-														"variable": "EnemyNumbers",
+														"instance-variable": "Protect_Turns",
 														"comparison": 4,
-														"value": "TheNumber"
+														"value": "0"
 													}
 												}
 											],
 											"actions": [
 												{
-													"callFunction": "Enemy Use Power",
-													"sid": 445491269762101,
+													"callFunction": "Enemy Check Powers",
+													"sid": 374113668844334,
 													"parameters": [
-														"the_id"
+														"\"\""
 													]
 												}
 											],
-											"sid": 458588379867702
+											"sid": 250429162469195
 										},
 										{
 											"eventType": "comment",
-											"text": "Se não, ignora essa carta",
+											"text": "Não estou protegido",
 											"text-color": [
-												1,
 												0,
+												1,
 												0,
 												1
 											]
@@ -24248,19 +24640,78 @@
 												{
 													"id": "else",
 													"objectClass": "System",
-													"sid": 459478272631817
+													"sid": 694275909225642
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 215826965716461,
+											"children": [
 												{
-													"callFunction": "Enemy Check Powers",
-													"sid": 431584582332892,
-													"parameters": [
-														"\"\""
+													"eventType": "comment",
+													"text": "Só usa se tiver estourado",
+													"text-color": [
+														0,
+														1,
+														0,
+														1
 													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 146320509511891,
+															"parameters": {
+																"variable": "EnemyNumbers",
+																"comparison": 4,
+																"value": "TheNumber"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "Enemy Use Power",
+															"sid": 650261826479916,
+															"parameters": [
+																"the_id"
+															]
+														}
+													],
+													"sid": 730711415265085
+												},
+												{
+													"eventType": "comment",
+													"text": "Se não, ignora essa carta",
+													"text-color": [
+														1,
+														0,
+														0,
+														1
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 796366954698404
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "Enemy Check Powers",
+															"sid": 520718399928177,
+															"parameters": [
+																"\"\""
+															]
+														}
+													],
+													"sid": 121191486883839
 												}
-											],
-											"sid": 586946526909908
+											]
 										}
 									]
 								},
@@ -28065,6 +28516,84 @@
 					"sid": 880528600567598
 				},
 				{
+					"functionName": "Audio Sequence",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "id",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 647965274338632
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 509902011393239,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 137811457728136,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 949737192798983,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/SQUEAK Creaking 01"
+										},
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 321607911617420,
+									"parameters": {
+										"seconds": "0.6",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 382209406182497,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/FOOTSTEPS (A) Walking Loop 01"
+										},
+										"loop": "not-looping",
+										"volume": "-8",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 839764011600819
+						}
+					]
+				},
+				{
 					"functionName": "Play_RNG_Audio",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -28101,11 +28630,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 595137964039978,
+									"sid": 928045321217166,
 									"parameters": {
 										"variable": "Name",
 										"comparison": 0,
-										"value": "\"suffle\""
+										"value": "\"shuffle\""
 									}
 								}
 							],
@@ -28600,7 +29129,7 @@
 									"objectClass": "Hand_Player",
 									"sid": 264675257509896,
 									"parameters": {
-										"instance-variable": "PowerMaxLimit",
+										"instance-variable": "PowerHandLimit",
 										"value": "1"
 									}
 								}
@@ -28627,7 +29156,7 @@
 									"objectClass": "Hand_Player",
 									"sid": 611607738310939,
 									"parameters": {
-										"instance-variable": "PowerMaxLimit",
+										"instance-variable": "PowerHandLimit",
 										"value": "1"
 									}
 								}
@@ -28652,7 +29181,7 @@
 									"objectClass": "Hand_CPU",
 									"sid": 468640721981280,
 									"parameters": {
-										"instance-variable": "PowerMaxLimit",
+										"instance-variable": "PowerHandLimit",
 										"comparison": 4,
 										"value": "0"
 									}
@@ -28664,7 +29193,7 @@
 									"objectClass": "Hand_CPU",
 									"sid": 664750735145060,
 									"parameters": {
-										"instance-variable": "PowerMaxLimit",
+										"instance-variable": "PowerHandLimit",
 										"value": "1"
 									}
 								}
@@ -28691,7 +29220,7 @@
 									"objectClass": "Hand_CPU",
 									"sid": 999764361191651,
 									"parameters": {
-										"instance-variable": "PowerMaxLimit",
+										"instance-variable": "PowerHandLimit",
 										"value": "1"
 									}
 								}
@@ -30334,94 +30863,6 @@
 				}
 			],
 			"sid": 817672841300944
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Audio",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"functionName": "Audio Sequence",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "id",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"sid": 647965274338632
-						}
-					],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 113736891557748,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 691380760251166,
-									"parameters": {
-										"variable": "id",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 232614237294155,
-									"parameters": {
-										"audio-file": {
-											"path": "Novos/SQUEAK Creaking 01"
-										},
-										"loop": "not-looping",
-										"volume": "-10",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 800342130480636,
-									"parameters": {
-										"seconds": "0.6",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 646728737355208,
-									"parameters": {
-										"audio-file": {
-											"path": "Novos/FOOTSTEPS (A) Walking Loop 01"
-										},
-										"loop": "not-looping",
-										"volume": "-8",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 256964909507944
-						}
-					]
-				}
-			],
-			"sid": 399451587212781
 		},
 		{
 			"eventType": "group",
