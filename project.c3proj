@@ -205,7 +205,7 @@
 			"Txt_debug",
 			"Text_Relic_Info",
 			"Bkg_Relic_Info_Txt",
-			"Toggle_Numbers",
+			"Toggle_Options_Numbers",
 			"Text_Options_1",
 			"Camera",
 			"Icon_power_arrow",
@@ -213,7 +213,8 @@
 			"Tutorial_Num",
 			"Text_Tut",
 			"Text_Loading",
-			"Text_Static_Generic"
+			"Text_Static_Generic",
+			"Txt_debug2"
 		],
 		"subfolders": []
 	},

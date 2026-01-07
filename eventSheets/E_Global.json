@@ -507,7 +507,7 @@
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "Toggle_Numbers"
+								"object-clicked": "Toggle_Options_Numbers"
 							}
 						},
 						{
@@ -526,85 +526,207 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 977710811992163,
+									"id": "compare-instance-variable",
+									"objectClass": "Toggle_Options_Numbers",
+									"sid": 937130013222814,
 									"parameters": {
+										"instance-variable": "id",
 										"comparison": 0,
-										"number": "0"
+										"value": "1"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 438508664915752,
+							"children": [
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 299319871569343,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 592330256964577,
+											"parameters": {
+												"comparison": 0,
+												"number": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 962361882223999,
+											"parameters": {
+												"seconds": "0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 709617123007984,
+											"parameters": {
+												"frame-number": "1"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Txt_debug",
+											"sid": 872608500761031,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 781458258902020
 								},
 								{
-									"id": "set-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 373228908198266,
-									"parameters": {
-										"frame-number": "1"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Txt_debug",
-									"sid": 138851678359657,
-									"parameters": {
-										"visibility": "visible"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 640124956288170,
+											"parameters": {
+												"comparison": 0,
+												"number": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 577295595349206,
+											"parameters": {
+												"seconds": "0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 434791096914885,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Txt_debug",
+											"sid": 353860506155212,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 181688386956226
 								}
-							],
-							"sid": 703870268516955
+							]
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 636195747242596,
+									"id": "compare-instance-variable",
+									"objectClass": "Toggle_Options_Numbers",
+									"sid": 113062040329064,
 									"parameters": {
+										"instance-variable": "id",
 										"comparison": 0,
-										"number": "1"
+										"value": "2"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 899848495546447,
+							"children": [
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 855054699228379,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 636055067886458,
+											"parameters": {
+												"comparison": 0,
+												"number": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 934886789969355,
+											"parameters": {
+												"seconds": "0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 178207658953061,
+											"parameters": {
+												"frame-number": "1"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Txt_debug2",
+											"sid": 386968986081027,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 827525585114002
 								},
 								{
-									"id": "set-animation-frame",
-									"objectClass": "Toggle_Numbers",
-									"sid": 996680753415166,
-									"parameters": {
-										"frame-number": "0"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Txt_debug",
-									"sid": 853558636226946,
-									"parameters": {
-										"visibility": "invisible"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 164874980961572,
+											"parameters": {
+												"comparison": 0,
+												"number": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 134148668560881,
+											"parameters": {
+												"seconds": "0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 161071588132254,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Txt_debug2",
+											"sid": 338360959667854,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 614075641355492
 								}
-							],
-							"sid": 134195421071133
+							]
 						}
 					]
 				},

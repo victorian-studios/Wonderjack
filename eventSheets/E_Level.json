@@ -659,6 +659,14 @@
 					"parameters": {
 						"text": "\"? + \"&Table_CPU.Visible_Count&newline&\"-----\"&newline&PlayerNumbers"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Txt_debug2",
+					"sid": 816688845785981,
+					"parameters": {
+						"text": "\"fps: \" & fps & \" | cpu: \" & ( round(cpuutilisation * 100) / 100 ) & \" | gpu: \"& (round(gpuutilisation * 100) / 100 ) & \" | vram (images): \" & ImageMemoryUsage"
+					}
 				}
 			],
 			"sid": 403715614006273

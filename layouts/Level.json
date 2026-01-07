@@ -2769,7 +2769,7 @@
 							}
 						},
 						{
-							"type": "Toggle_Numbers",
+							"type": "Toggle_Options_Numbers",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Animation 1",
@@ -2780,7 +2780,9 @@
 							"uid": 92,
 							"sid": 908561157727602,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"id": 1
+							},
 							"behaviors": {},
 							"instanceFolderItem": {
 								"sid": 908561157727602,
@@ -3053,6 +3055,128 @@
 								"angle": 0,
 								"zElevation": 0
 							}
+						},
+						{
+							"type": "Toggle_Options_Numbers",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 119,
+							"sid": 160326355398744,
+							"tags": "",
+							"instanceVariables": {
+								"id": 2
+							},
+							"behaviors": {},
+							"instanceFolderItem": {
+								"sid": 160326355398744,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1236,
+								"y": 372,
+								"width": 62,
+								"height": 62,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Text_Static_Generic",
+							"properties": {
+								"text": "d",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 38,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"horizontal-alignment": "left",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 120,
+							"sid": 127321551726421,
+							"tags": "",
+							"instanceVariables": {
+								"my_id": "options.opt_2"
+							},
+							"behaviors": {},
+							"sceneGraphData": {
+								"parent-uid": null,
+								"uid": 120,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 127321551726421,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1272,
+								"y": 328,
+								"width": 578,
+								"height": 94,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
 						}
 					],
 					"sid": 335448672371208,
@@ -3161,6 +3285,59 @@
 						"y": 892,
 						"width": 184,
 						"height": 164,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Txt_debug2",
+					"properties": {
+						"text": "fps: 999",
+						"enable-bbcode": true,
+						"font": "AliceInWonderland",
+						"size": 45,
+						"line-height": -20,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 121,
+					"sid": 220868817907041,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 220868817907041,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 484,
+						"y": 4,
+						"width": 1434,
+						"height": 84,
 						"originX": 0,
 						"originY": 0,
 						"color": [

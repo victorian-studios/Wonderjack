@@ -23,7 +23,8 @@
         "options": {
             "resume": "Resume",
             "menu": "Menu",
-            "opt_1": "Auto math numbers"
+            "opt_1": "Auto math numbers",
+            "opt_2": "Performance text"
         },
         "common": {
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",
