@@ -34,6 +34,7 @@
             "points": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]",
             "new_round": "Round [color=#f5fe05]{0}[/color] starting now!",
             "new_match": "New opponent appears: [color=#f5fe05]{0}[/color]",
+            "new_boss": "New boss appears: [color=#fa1c03]{0}[/color]",
             "tie": "Nobody won this round.",
             "looser": "You [color=#fa1c03]lost[/color] this match... that's unfortunate.",
             "winner": "You [color=#f5fe05]won[/color] this match. Keep going!",

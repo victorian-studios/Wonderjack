@@ -195,6 +195,23 @@
 						"variable": "Relic_Card13",
 						"value": "false"
 					}
+				},
+				{
+					"callFunction": "Reset Number Deck",
+					"sid": 875175408743337
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 850969996522673,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "Reset Power Deck",
+					"sid": 101522997958439
 				}
 			],
 			"sid": 625864370784634
