@@ -51,7 +51,7 @@
             "spear" : "Reduces your opponents’ hand limit for power cards by 1.",
             "tea" : "Allows you to draw 1 number card after playing a power card on the same turn (once per match).",
             "drink_me" : "Increases the match goal to 24. Reduces your limit for drawing power cards per round by 1.",
-            "hat" : "When drawing a card that would exceed the match goal, the card is returned and a new one is drawn immediately (onde per match)."
+            "hat" : "When drawing a card that would exceed the match goal, the card is returned and a new one is drawn immediately (once per match)."
         },
 		"powers": {
 			"card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
@@ -59,7 +59,7 @@
             "protect": "[u]Protect[/u]\n\n\nProtect you from loosing any number card for [color=#f5fe05]3[/color] turns.",
             "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck",
             "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number to your opponent.",
-            "return": "[u]Return[/u]\n\n\nDiscard your [color=#f5fe05]last[/color] number card to the end of the deck.",
+            "return": "[u]Return[/u]\n\n\nDiscard your [color=#fa1c03]last not hidden[/color] number card to the end of the deck.",
             "compel": "[u]Compel[/u]\n\n\nForces your opponent to discard their [color=#f5fe05]last[/color] number card to the end of the deck.",
             "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#fa1c03]not hidden[/color] card to switch with your opponement.",
             "exchange_tip_1": "[u]Select an opponent card:[/u]",

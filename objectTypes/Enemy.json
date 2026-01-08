@@ -24,145 +24,286 @@
 	],
 	"effectTypes": [],
 	"animations": {
-		"items": [
+		"items": [],
+		"subfolders": [
 			{
-				"frames": [
+				"items": [
 					{
-						"width": 648,
-						"height": 573,
-						"originX": 0.5,
-						"originY": 1,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 2524856,
-						"useCollisionPoly": true,
-						"imagePoints": [
+						"frames": [
 							{
-								"name": "Image Point 1",
-								"x": 0.32253086419753085,
-								"y": 0.6108202443280978
-							},
-							{
-								"name": "Image Point 2",
-								"x": 0.5185185185185185,
-								"y": 0.44328097731239113
+								"width": 695,
+								"height": 991,
+								"originX": 0.5,
+								"originY": 1,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 5685176,
+								"collisionPoly": {
+									"points": [
+										0.376978417266187,
+										0.007063572149344097,
+										0.9251798561151079,
+										0.43491422805247226,
+										0.9971223021582734,
+										0.557013118062563,
+										0.8877697841726618,
+										0.7033299697275479,
+										0.33237410071942447,
+										0.9848637739656912,
+										0.15683453237410072,
+										0.9788092835519678,
+										0.0057553956834532375,
+										0.7588294651866802,
+										0.025899280575539568,
+										0.1584258324924319,
+										0.08776978417266187,
+										0.08476286579212916
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
 							}
 						],
-						"duration": 1,
-						"tag": ""
+						"sid": 437171370379806,
+						"name": "Mad Hatter",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 0
 					}
 				],
-				"sid": 348825122474876,
-				"name": "Cheshire Cat",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 0
+				"subfolders": [],
+				"name": "Fase 1"
 			},
 			{
-				"frames": [
+				"items": [
 					{
-						"width": 695,
-						"height": 991,
-						"originX": 0.5,
-						"originY": 1,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 5685176,
-						"collisionPoly": {
-							"points": [
-								0.376978417266187,
-								0.007063572149344097,
-								0.9251798561151079,
-								0.43491422805247226,
-								0.9971223021582734,
-								0.557013118062563,
-								0.8877697841726618,
-								0.7033299697275479,
-								0.33237410071942447,
-								0.9848637739656912,
-								0.15683453237410072,
-								0.9788092835519678,
-								0.0057553956834532375,
-								0.7588294651866802,
-								0.025899280575539568,
-								0.1584258324924319,
-								0.08776978417266187,
-								0.08476286579212916
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 647,
+								"height": 590,
+								"originX": 0.5,
+								"originY": 1,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 5055802,
+								"collisionPoly": {
+									"points": [
+										0.3805080352514256,
+										0.01023308698123934,
+										0.687402799377916,
+										0.039795338260375214,
+										0.9880767236910316,
+										0.8038658328595794,
+										0.9751166407465007,
+										0.9488345650938033,
+										0.6972524624157594,
+										0.9931779420125071,
+										0.03732503888024884,
+										0.9823763501989767,
+										0.008812856402280975,
+										0.8084138715179079,
+										0.18973561430793157,
+										0.3501989766913019
+									]
+								},
+								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "Image Point 1",
+										"x": 0.32253086419753085,
+										"y": 0.6108202443280978
+									},
+									{
+										"name": "Image Point 2",
+										"x": 0.5185185185185185,
+										"y": 0.44667080782086566
+									}
+								],
+								"duration": 1,
+								"tag": ""
+							},
+							{
+								"width": 648,
+								"height": 573,
+								"originX": 0.5,
+								"originY": 1,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2524856,
+								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "Image Point 1",
+										"x": 0.32253086419753085,
+										"y": 0.6108202443280978
+									},
+									{
+										"name": "Image Point 2",
+										"x": 0.5185185185185185,
+										"y": 0.44328097731239113
+									}
+								],
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 348825122474876,
+						"name": "Cheshire Cat",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 0
 					}
 				],
-				"sid": 437171370379806,
-				"name": "Mad Hatter",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 0
+				"subfolders": [],
+				"name": "Fase 2"
 			},
 			{
-				"frames": [
+				"items": [
 					{
-						"width": 673,
-						"height": 967,
-						"originX": 0.5022288261515602,
-						"originY": 0.5346432264736298,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 1328032,
-						"collisionPoly": {
-							"points": [
-								0.4947994056463596,
-								0.002068252326783868,
-								0.5809806835066865,
-								0.04446742502585315,
-								0.9851411589895989,
-								0.3960703205791106,
-								0.9970282317979198,
-								0.5853154084798345,
-								0.8023774145616642,
-								0.9358841778697001,
-								0.6389301634472511,
-								0.9948293691830404,
-								0.49925705794947994,
-								0.9979317476732161,
-								0.29569093610698366,
-								0.9720785935884177,
-								0.04011887072808321,
-								0.8583247156153051,
-								0.0014858841010401188,
-								0.7156153050672183,
-								0.01188707280832095,
-								0.42916235780765255,
-								0.3967310549777117,
-								0.045501551189245086
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
+						"frames": [
+							{
+								"width": 639,
+								"height": 993,
+								"originX": 0.5,
+								"originY": 1,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 2189851,
+								"collisionPoly": {
+									"points": [
+										0.7856025039123631,
+										0.06143001007049345,
+										0.9139280125195618,
+										0.7331319234642497,
+										0.593114241001565,
+										0.998992950654582,
+										0.19092331768388107,
+										0.9808660624370594,
+										0.003129890453834116,
+										0.6414904330312186,
+										0.47104851330203446,
+										0.03323262839879154
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 536857244687302,
+						"name": "Humpty Dumpty",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 0
 					}
 				],
-				"sid": 716160620818563,
-				"name": "Red Queen",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 0
+				"subfolders": [],
+				"name": "Fase 3"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Fase Secret"
+			},
+			{
+				"items": [
+					{
+						"frames": [
+							{
+								"width": 673,
+								"height": 967,
+								"originX": 0.5,
+								"originY": 1,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 1328032,
+								"collisionPoly": {
+									"points": [
+										0.4947994056463596,
+										0.002068252326783868,
+										0.5809806835066865,
+										0.04446742502585315,
+										0.9851411589895989,
+										0.3960703205791106,
+										0.9970282317979198,
+										0.5853154084798345,
+										0.8023774145616642,
+										0.9358841778697001,
+										0.6389301634472511,
+										0.9948293691830404,
+										0.49925705794947994,
+										0.9979317476732161,
+										0.29569093610698366,
+										0.9720785935884177,
+										0.04011887072808321,
+										0.8583247156153051,
+										0.0014858841010401188,
+										0.7156153050672183,
+										0.01188707280832095,
+										0.42916235780765255,
+										0.3967310549777117,
+										0.045501551189245086
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 716160620818563,
+						"name": "Red Queen",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 0
+					},
+					{
+						"frames": [
+							{
+								"width": 250,
+								"height": 250,
+								"originX": 0.5,
+								"originY": 0.5,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 5817550,
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 682708833404710,
+						"name": "Jaguadarte",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 0
+					}
+				],
+				"subfolders": [],
+				"name": "Boss"
 			}
-		],
-		"subfolders": []
+		]
 	}
 }

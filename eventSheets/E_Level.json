@@ -11681,6 +11681,15 @@
 									}
 								},
 								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 780246846820339,
+									"parameters": {
+										"layer": "\"Pause\""
+									},
+									"isInverted": true
+								},
+								{
 									"id": "cursor-is-over-object",
 									"objectClass": "Mouse",
 									"sid": 863255341232287,
@@ -11742,6 +11751,15 @@
 									"parameters": {
 										"layer": "\"Click_On_Table_Text\""
 									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 968055378918230,
+									"parameters": {
+										"layer": "\"Pause\""
+									},
+									"isInverted": true
 								},
 								{
 									"id": "cursor-is-over-object",
@@ -11889,185 +11907,262 @@
 									}
 								},
 								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 369614264242956,
+									"parameters": {
+										"layer": "\"Click_On_Table_Text\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 190149368002391,
+									"parameters": {
+										"layer": "\"Pause\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Card_Numb",
+									"sid": 788384214033393,
+									"parameters": {
+										"object": "Table_CPU"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Numb",
+									"sid": 218430145790501,
+									"parameters": {
+										"instance-variable": "Original_Hidden"
+									},
+									"isInverted": true
+								},
+								{
 									"id": "is-animation-playing",
 									"objectClass": "Icon_Hand_Point",
 									"sid": 754048708876149,
 									"parameters": {
 										"animation": "\"Alice\""
 									}
-								}
-							],
-							"actions": [],
-							"sid": 753730014107076,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Icon_Hand_Point",
-											"sid": 534913024417668,
-											"parameters": {
-												"instance-variable": "Step",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 548896883477625,
-											"parameters": {
-												"seconds": "0",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 603722926584841,
-											"parameters": {
-												"variable": "Card_1_X",
-												"value": "Card_Numb.X"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 537411611113772,
-											"parameters": {
-												"variable": "Card_1_Y",
-												"value": "Card_Numb.Y"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 962161257738113,
-											"parameters": {
-												"variable": "Card_1_Size",
-												"value": "Card_Numb.Width"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 169665776053294,
-											"parameters": {
-												"variable": "Card_1_ID",
-												"value": "Card_Numb.myID"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "Icon_Hand_Point",
-											"sid": 955880810486657,
-											"parameters": {
-												"instance-variable": "Step",
-												"value": "2"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Icon_Hand_Point",
-											"sid": 267656332933329,
-											"parameters": {
-												"x": "-200",
-												"y": "Table_Player.Y"
-											}
-										},
-										{
-											"id": "typewriter-text",
-											"objectClass": "Text_Power_Tip",
-											"sid": 961344953117142,
-											"parameters": {
-												"text": "Internationalization.Lookup(\"powers.exchange_tip_2\")",
-												"duration": "0.5"
-											}
-										}
-									],
-									"sid": 178532209682346
 								},
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Icon_Hand_Point",
-											"sid": 382556275396465,
-											"parameters": {
-												"instance-variable": "Step",
-												"comparison": 0,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 458856481886653,
-											"parameters": {
-												"seconds": "0",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 290244895351199,
-											"parameters": {
-												"variable": "Card_2_X",
-												"value": "Card_Numb.X"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 903872945770289,
-											"parameters": {
-												"variable": "Card_2_Y",
-												"value": "Card_Numb.Y"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 946994968700104,
-											"parameters": {
-												"variable": "Card_2_Size",
-												"value": "Card_Numb.Width"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 634768286103239,
-											"parameters": {
-												"variable": "Card_2_ID",
-												"value": "Card_Numb.myID"
-											}
-										},
-										{
-											"callFunction": "Switch_Numbers",
-											"sid": 850433621944853,
-											"parameters": [
-												"Card_1_ID",
-												"Card_1_X",
-												"Card_1_Y",
-												"Card_1_Size",
-												"Card_2_ID",
-												"Card_2_X",
-												"Card_2_Y",
-												"Card_2_Size"
-											]
-										}
-									],
-									"sid": 164913613460846
+									"id": "compare-instance-variable",
+									"objectClass": "Icon_Hand_Point",
+									"sid": 396559067572690,
+									"parameters": {
+										"instance-variable": "Step",
+										"comparison": 0,
+										"value": "1"
+									}
 								}
-							]
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 147654726456823,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 273852657780985,
+									"parameters": {
+										"variable": "Card_1_X",
+										"value": "Card_Numb.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 280419055664358,
+									"parameters": {
+										"variable": "Card_1_Y",
+										"value": "Card_Numb.Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 687280182406057,
+									"parameters": {
+										"variable": "Card_1_Size",
+										"value": "Card_Numb.Width"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 799850338838412,
+									"parameters": {
+										"variable": "Card_1_ID",
+										"value": "Card_Numb.myID"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Icon_Hand_Point",
+									"sid": 912296294169944,
+									"parameters": {
+										"instance-variable": "Step",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Icon_Hand_Point",
+									"sid": 173168952385134,
+									"parameters": {
+										"x": "-200",
+										"y": "Table_Player.Y"
+									}
+								},
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Power_Tip",
+									"sid": 611771146361338,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"powers.exchange_tip_2\")",
+										"duration": "0.5"
+									}
+								}
+							],
+							"sid": 753730014107076
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 293570010477724,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Card_Numb"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 766109947514377,
+									"parameters": {
+										"layer": "\"Click_On_Table_Text\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 219574230900922,
+									"parameters": {
+										"layer": "\"Pause\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Card_Numb",
+									"sid": 317981966199156,
+									"parameters": {
+										"object": "Table_Player"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Numb",
+									"sid": 128440805777677,
+									"parameters": {
+										"instance-variable": "Original_Hidden"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Icon_Hand_Point",
+									"sid": 519020252933248,
+									"parameters": {
+										"animation": "\"Alice\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Icon_Hand_Point",
+									"sid": 329863345594618,
+									"parameters": {
+										"instance-variable": "Step",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 244140266594453,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 598684417752487,
+									"parameters": {
+										"variable": "Card_2_X",
+										"value": "Card_Numb.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 371319939556530,
+									"parameters": {
+										"variable": "Card_2_Y",
+										"value": "Card_Numb.Y"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 846887691968601,
+									"parameters": {
+										"variable": "Card_2_Size",
+										"value": "Card_Numb.Width"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 514772987565605,
+									"parameters": {
+										"variable": "Card_2_ID",
+										"value": "Card_Numb.myID"
+									}
+								},
+								{
+									"callFunction": "Switch_Numbers",
+									"sid": 423718664195722,
+									"parameters": [
+										"Card_1_ID",
+										"Card_1_X",
+										"Card_1_Y",
+										"Card_1_Size",
+										"Card_2_ID",
+										"Card_2_X",
+										"Card_2_Y",
+										"Card_2_Size"
+									]
+								}
+							],
+							"sid": 200158904547900
 						}
 					],
 					"sid": 174810778165477
@@ -13298,6 +13393,15 @@
 									"parameters": {
 										"layer": "\"Click_On_Screen_Text\""
 									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 549237492374531,
+									"parameters": {
+										"layer": "\"Pause\""
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -13367,6 +13471,15 @@
 									"parameters": {
 										"layer": "\"Click_On_Screen_Text\""
 									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 213273417429164,
+									"parameters": {
+										"layer": "\"Pause\""
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-playing",
@@ -14110,6 +14223,13 @@
 									"objectClass": "Bkg_Turn_Txt",
 									"sid": 336976012249153,
 									"behaviorType": "Fade"
+								},
+								{
+									"callFunction": "Count_Numbers",
+									"sid": 827770237722091,
+									"parameters": [
+										false
+									]
 								},
 								{
 									"id": "wait",
@@ -28175,6 +28295,15 @@
 													}
 												},
 												{
+													"id": "set-cycle-position",
+													"objectClass": "Enemy",
+													"sid": 226566359468990,
+													"behaviorType": "Sine",
+													"parameters": {
+														"cycle-position": "0"
+													}
+												},
+												{
 													"id": "set-period",
 													"objectClass": "Enemy",
 													"sid": 268859711202721,
@@ -28195,25 +28324,16 @@
 												{
 													"id": "set-position",
 													"objectClass": "Enemy",
-													"sid": 879783783553990,
+													"sid": 496295002468502,
 													"parameters": {
 														"x": "961",
 														"y": "654"
 													}
 												},
 												{
-													"id": "set-cycle-position",
-													"objectClass": "Enemy",
-													"sid": 312502038788399,
-													"behaviorType": "Sine",
-													"parameters": {
-														"cycle-position": "0"
-													}
-												},
-												{
 													"id": "set-size",
 													"objectClass": "Enemy",
-													"sid": 113414888495678,
+													"sid": 622574558336335,
 													"parameters": {
 														"width": "648",
 														"height": "537"
@@ -28332,48 +28452,48 @@
 													}
 												},
 												{
-													"id": "set-period",
-													"objectClass": "Enemy",
-													"sid": 334071991823420,
-													"behaviorType": "Sine",
-													"parameters": {
-														"period": "4.8"
-													}
-												},
-												{
-													"id": "set-magnitude",
-													"objectClass": "Enemy",
-													"sid": 247118091184945,
-													"behaviorType": "Sine",
-													"parameters": {
-														"magnitude": "15"
-													}
-												},
-												{
-													"id": "set-position",
-													"objectClass": "Enemy",
-													"sid": 973780653036805,
-													"parameters": {
-														"x": "961",
-														"y": "654"
-													}
-												},
-												{
 													"id": "set-cycle-position",
 													"objectClass": "Enemy",
-													"sid": 548018920858108,
+													"sid": 419080481481144,
 													"behaviorType": "Sine",
 													"parameters": {
 														"cycle-position": "0"
 													}
 												},
 												{
+													"id": "set-period",
+													"objectClass": "Enemy",
+													"sid": 600579825390117,
+													"behaviorType": "Sine",
+													"parameters": {
+														"period": "6"
+													}
+												},
+												{
+													"id": "set-magnitude",
+													"objectClass": "Enemy",
+													"sid": 138545634507437,
+													"behaviorType": "Sine",
+													"parameters": {
+														"magnitude": "10"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 810723787900585,
+													"parameters": {
+														"x": "961",
+														"y": "830"
+													}
+												},
+												{
 													"id": "set-size",
 													"objectClass": "Enemy",
-													"sid": 619466178611959,
+													"sid": 384736017100271,
 													"parameters": {
-														"width": "648",
-														"height": "537"
+														"width": "514",
+														"height": "774"
 													}
 												},
 												{
@@ -28478,6 +28598,15 @@
 													}
 												},
 												{
+													"id": "set-cycle-position",
+													"objectClass": "Enemy",
+													"sid": 302598472778754,
+													"behaviorType": "Sine",
+													"parameters": {
+														"cycle-position": "0"
+													}
+												},
+												{
 													"id": "set-period",
 													"objectClass": "Enemy",
 													"sid": 281319353693128,
@@ -28498,19 +28627,10 @@
 												{
 													"id": "set-position",
 													"objectClass": "Enemy",
-													"sid": 865073713831258,
+													"sid": 325874444687460,
 													"parameters": {
-														"x": "958",
-														"y": "506"
-													}
-												},
-												{
-													"id": "set-cycle-position",
-													"objectClass": "Enemy",
-													"sid": 649319212328642,
-													"behaviorType": "Sine",
-													"parameters": {
-														"cycle-position": "0"
+														"x": "962",
+														"y": "836"
 													}
 												},
 												{
@@ -29939,9 +30059,20 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 736774468706733,
+									"sid": 396191516291467,
 									"parameters": {
 										"variable": "Flash"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 726687037953964,
+									"parameters": {
+										"object": "Relics",
+										"expression": "Relics.AnimationName",
+										"comparison": 0,
+										"value": "anim"
 									}
 								}
 							],

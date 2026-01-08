@@ -109,6 +109,15 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
+					"sid": 371831329915236,
+					"parameters": {
+						"variable": "TheNumber",
+						"value": "21"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
 					"sid": 250764183402098,
 					"parameters": {
 						"variable": "Turn",
@@ -212,6 +221,26 @@
 				{
 					"callFunction": "Reset Power Deck",
 					"sid": 101522997958439
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 244137490904624,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 828663350766105,
+					"parameters": {
+						"tag": "\"relics\"",
+						"file": {
+							"path": "Relics.json"
+						}
+					}
 				}
 			],
 			"sid": 625864370784634
@@ -284,6 +313,38 @@
 				}
 			],
 			"sid": 184305952900509
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 322913565699371,
+					"parameters": {
+						"tag": "\"relics\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_Relics",
+					"sid": 359161311911925,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "shuffle",
+					"objectClass": "A_Relics",
+					"sid": 896308425442963,
+					"parameters": {
+						"axis": "x"
+					}
+				}
+			],
+			"sid": 652131119396277
 		},
 		{
 			"eventType": "group",
