@@ -27,10 +27,11 @@
             "opt_2": "Performance text"
         },
         "common": {
-            "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can only play once before the round ends. When used in the last turn, just skip it.",
+            "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
             "power": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
             "power_hand_limit": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
             "number" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
+            "number_easy" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board. There're [color=#f5fe05]{0}[/color] cards left in this deck.",
             "numbers": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]. {3} [color=#f5fe05]won[/color] this round!",
             "points": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]",
             "new_round": "Round [color=#f5fe05]{0}[/color] starting now!",
@@ -43,15 +44,15 @@
             "revive": "You got a [color=#f5fe05]second chance[/color]! But your relic was destroyed."
         },
 		"relics": {
-            "card_13": "Permanently adds card 13 to the number deck.",
-            "cat_eye" : "On the 3° round, your opponent’s hidden card will be revealed on the 1° turn.",
-            "watch" : "Right-click this relic to return the last number card you drew to the bottom of the deck (once per match). However, your hand limit for power cards is reduced by 1.",
-            "eat_me" : "Increases your hand limit for power cards by 1.",
-            "crown" : "When you lose a match, this relic breaks and you can try again.",
-            "spear" : "Reduces your opponents’ hand limit for power cards by 1.",
-            "tea" : "Allows you to draw 1 number card after playing a power card on the same turn (once per match).",
-            "drink_me" : "Increases the match goal to 24. Reduces your limit for drawing power cards per round by 1.",
-            "hat" : "When drawing a card that would exceed the match goal, the card is returned and a new one is drawn immediately (once per match)."
+            "card_13": "Permanently adds card [color=#f5fe05]13[/color] to the number deck.",
+            "cat_eye" : "On the [color=#f5fe05]3° round[/color], your opponent’s hidden card will be revealed on the [color=#f5fe05]1° turn[/color].",
+            "watch" : "[color=#f5fe05]Right-click[/color] this relic to return the last number card you drew to the bottom of the deck (once per match). [color=#fa1c03]Reduce your power card hand limit by 1[/color].",
+            "eat_me" : "Increases your power card hand limit by [color=#f5fe05]1[/color].",
+            "crown" : "When you [color=#fa1c03]lose a match[/color], this relic breaks and you can [color=#f5fe05]try again[/color].",
+            "spear" : "Reduces your opponents’ power card hand limit by [color=#f5fe05]1[/color].",
+            "tea" : "Allows you to have a [color=#f5fe05]extra turn[/color] after playing a power card (once per match).",
+            "drink_me" : "Increases the match goal to [color=#f5fe05]24[/color]. [color=#fa1c03]Reduces your power cards per round draw limit by 1[/color].",
+            "hat" : "When drawing a card that would exceed the match goal, the card is [color=#f5fe05]returned[/color] and a new one is drawn immediately (once per match)."
         },
 		"powers": {
 			"card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",

@@ -52,6 +52,16 @@
 			"sid": 678918041377073
 		},
 		{
+			"eventType": "variable",
+			"name": "Opt_EasyMath",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 536590082985670
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -584,6 +594,10 @@
 					"sid": 253399922119881,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "Easy math"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -638,6 +652,15 @@
 											"parameters": {
 												"visibility": "visible"
 											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 534546210924388,
+											"parameters": {
+												"variable": "Opt_EasyMath",
+												"value": "true"
+											}
 										}
 									],
 									"sid": 781458258902020
@@ -680,11 +703,24 @@
 											"parameters": {
 												"visibility": "invisible"
 											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 229157536647485,
+											"parameters": {
+												"variable": "Opt_EasyMath",
+												"value": "false"
+											}
 										}
 									],
 									"sid": 181688386956226
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Performance"
 						},
 						{
 							"eventType": "block",
