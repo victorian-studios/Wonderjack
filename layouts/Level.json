@@ -3260,7 +3260,7 @@
 							1,
 							1
 						],
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
 						"text-direction": "ltr",
@@ -3281,8 +3281,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1638,
-						"y": 892,
+						"x": 20,
+						"y": 898,
 						"width": 184,
 						"height": 164,
 						"originX": 0,

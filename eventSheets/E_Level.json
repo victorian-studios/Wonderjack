@@ -6943,6 +6943,15 @@
 													}
 												},
 												{
+													"id": "delete",
+													"objectClass": "A_EnemyPowers",
+													"sid": 821660449502405,
+													"parameters": {
+														"index": "Self.IndexOf(Card_Id & \"/0\" )",
+														"axis": "x"
+													}
+												},
+												{
 													"id": "push",
 													"objectClass": "A_Deck_Power",
 													"sid": 679074552557189,
@@ -7045,6 +7054,15 @@
 													"sid": 513104763300986,
 													"parameters": {
 														"index": "Self.IndexOf(Card_Id & \"/1\" )",
+														"axis": "x"
+													}
+												},
+												{
+													"id": "delete",
+													"objectClass": "A_EnemyPowers",
+													"sid": 654133720575971,
+													"parameters": {
+														"index": "Self.IndexOf(Card_Id & \"/0\" )",
 														"axis": "x"
 													}
 												},
@@ -11117,11 +11135,11 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 639739415580510,
+											"sid": 493182583096734,
 											"parameters": {
 												"object-to-create": "Icon_Hidden_Card",
 												"layer": "\"Game\"",
-												"x": "244",
+												"x": "1748",
 												"y": "915",
 												"create-hierarchy": false,
 												"template-name": "\"\""
@@ -14845,6 +14863,15 @@
 									}
 								},
 								{
+									"id": "set-animation",
+									"objectClass": "Card_Numb",
+									"sid": 234619937318039,
+									"parameters": {
+										"animation": "\"Left\"",
+										"from": "current-frame"
+									}
+								},
+								{
 									"id": "set-animation-frame",
 									"objectClass": "Card_Numb",
 									"sid": 674809420122436,
@@ -15272,13 +15299,38 @@
 										{
 											"id": "set-animation-frame",
 											"objectClass": "Icon_Protect",
-											"sid": 315548987627390,
+											"sid": 224789505466055,
 											"parameters": {
-												"frame-number": "Hand_Player.Protect_Turns"
+												"frame-number": "Hand_Player.Protect_Turns - 1"
 											}
 										}
 									],
-									"sid": 337777139109650
+									"sid": 337777139109650,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Hand_Player",
+													"sid": 450816588541110,
+													"parameters": {
+														"instance-variable": "Protect_Turns",
+														"comparison": 3,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Icon_Protect",
+													"sid": 323413489002461
+												}
+											],
+											"sid": 880949527997649
+										}
+									]
 								}
 							]
 						},
@@ -15524,13 +15576,38 @@
 										{
 											"id": "set-animation-frame",
 											"objectClass": "Icon_Protect",
-											"sid": 743688127504666,
+											"sid": 252943931653654,
 											"parameters": {
-												"frame-number": "Hand_CPU.Protect_Turns"
+												"frame-number": "Hand_CPU.Protect_Turns - 1"
 											}
 										}
 									],
-									"sid": 837818148562900
+									"sid": 837818148562900,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Hand_CPU",
+													"sid": 765835839936153,
+													"parameters": {
+														"instance-variable": "Protect_Turns",
+														"comparison": 3,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Icon_Protect",
+													"sid": 178167482359152
+												}
+											],
+											"sid": 358862660022393
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -25859,11 +25936,13 @@
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-boolean-eventvar",
+													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 154993060865579,
+													"sid": 966887914885931,
 													"parameters": {
-														"variable": "FinishRound"
+														"variable": "LastTurnCount",
+														"comparison": 0,
+														"value": "-1"
 													},
 													"isInverted": true
 												},
@@ -28510,7 +28589,7 @@
 					"eventType": "variable",
 					"name": "ZoomAtual",
 					"type": "number",
-					"initialValue": "1",
+					"initialValue": "0",
 					"comment": "",
 					"isStatic": true,
 					"isConstant": false,
@@ -28530,13 +28609,106 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
+							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 280999324491220,
+							"sid": 778658145498857
+						}
+					],
+					"actions": [],
+					"sid": 516360729149535,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 871997670953924,
+									"parameters": {
+										"variable": "Transition_State",
+										"comparison": 0,
+										"value": "\"ZoomIn\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 626204412666247,
+									"parameters": {
+										"variable": "ZoomAtual",
+										"value": "clamp(ZoomAtual+100*dt, 0, 100)"
+									}
+								},
+								{
+									"id": "set-layout-scale",
+									"objectClass": "System",
+									"sid": 275994017475711,
+									"parameters": {
+										"scale": "lerp( 1, 5.5, ZoomAtual/100)"
+									}
+								}
+							],
+							"sid": 353879034195696
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 284701093303000,
+									"parameters": {
+										"variable": "Transition_State",
+										"comparison": 0,
+										"value": "\"ZoomOut\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 705895039945029,
+									"parameters": {
+										"variable": "ZoomAtual",
+										"value": "clamp(ZoomAtual-100*dt, 0, 100)"
+									}
+								},
+								{
+									"id": "set-layout-scale",
+									"objectClass": "System",
+									"sid": 250039784777664,
+									"parameters": {
+										"scale": "lerp( 1, 5.5, ZoomAtual/100)"
+									}
+								},
+								{
+									"id": "set-layout-scale",
+									"objectClass": "System",
+									"sid": 716180414376818,
+									"disabled": true,
+									"parameters": {
+										"scale": "lerp( 5.5, 1, ZoomAtual/100)"
+									}
+								}
+							],
+							"sid": 947658324525308
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 606036760981602,
 							"parameters": {
-								"variable": "ZoomAtual",
-								"comparison": 2,
-								"value": "LayoutZoom"
+								"first-value": "LayoutScale",
+								"comparison": 0,
+								"second-value": "5.5"
 							}
 						},
 						{
@@ -28548,6 +28720,11 @@
 								"comparison": 0,
 								"value": "\"ZoomIn\""
 							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 115859016207000
 						}
 					],
 					"actions": [
@@ -28555,6 +28732,7 @@
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 688962671435018,
+							"disabled": true,
 							"parameters": {
 								"variable": "ZoomAtual",
 								"value": "6 * dt"
@@ -28564,12 +28742,126 @@
 							"id": "set-layout-scale",
 							"objectClass": "System",
 							"sid": 724495417353649,
+							"disabled": true,
 							"parameters": {
 								"scale": "ZoomAtual"
+							}
+						},
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 471280721332178,
+							"parameters": {
+								"layer": "\"Transition\"",
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 855804960570508,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 427620674120982,
+							"parameters": {
+								"variable": "Transition_State",
+								"value": "\"ZoomOut\""
 							}
 						}
 					],
 					"sid": 639894883376247
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 612652604201842,
+							"parameters": {
+								"first-value": "LayoutScale",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 299119238236240,
+							"parameters": {
+								"variable": "Transition_State",
+								"comparison": 0,
+								"value": "\"ZoomOut\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 445222913273791
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 318962382473023,
+							"disabled": true,
+							"parameters": {
+								"variable": "ZoomAtual",
+								"value": "6 * dt"
+							}
+						},
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 628224970274537,
+							"disabled": true,
+							"parameters": {
+								"scale": "ZoomAtual"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 137816574311461,
+							"parameters": {
+								"variable": "Transition_State",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "tween-value",
+							"objectClass": "Camera",
+							"sid": 422750866058572,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"ZoomOut\"",
+								"start-value": "100",
+								"end-value": "0",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 142928941710329,
+							"parameters": {
+								"tag": "\"Transition_End\""
+							}
+						}
+					],
+					"sid": 599288729628618
 				},
 				{
 					"eventType": "block",
@@ -28600,6 +28892,7 @@
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
 							"sid": 566709186766920,
+							"disabled": true,
 							"parameters": {
 								"variable": "ZoomAtual",
 								"value": "6 * dt"
@@ -28609,6 +28902,7 @@
 							"id": "set-layout-scale",
 							"objectClass": "System",
 							"sid": 568602752470757,
+							"disabled": true,
 							"parameters": {
 								"scale": "ZoomAtual"
 							}
@@ -28647,24 +28941,6 @@
 					],
 					"actions": [
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 795808103681888,
-							"parameters": {
-								"seconds": "1.0",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-layer-opacity",
-							"objectClass": "System",
-							"sid": 846246952999370,
-							"parameters": {
-								"layer": "\"Transition\"",
-								"opacity": "100"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 936472058522221,
@@ -28683,7 +28959,8 @@
 							}
 						}
 					],
-					"sid": 416412041029268
+					"sid": 416412041029268,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -28776,7 +29053,8 @@
 							}
 						}
 					],
-					"sid": 390624880426199
+					"sid": 390624880426199,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -29241,6 +29519,7 @@
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 484757223250489,
+									"disabled": true,
 									"parameters": {
 										"variable": "LayoutZoom",
 										"value": "5.5"
@@ -29802,10 +30081,10 @@
 												{
 													"id": "set-size",
 													"objectClass": "Enemy",
-													"sid": 384736017100271,
+													"sid": 287952202171840,
 													"parameters": {
-														"width": "514",
-														"height": "774"
+														"width": "410",
+														"height": "636"
 													}
 												},
 												{
@@ -31712,9 +31991,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 129872867732654,
+									"sid": 309035776091966,
 									"parameters": {
-										"seconds": "2",
+										"seconds": "1",
 										"use-timescale": true
 									}
 								},
@@ -32794,6 +33073,31 @@
 					],
 					"sid": 943256429817918,
 					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 174372656093747,
+							"parameters": {
+								"key": 49
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 584915901894431,
+							"parameters": {
+								"variable": "PlayerPoints",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 817626238727882
 				}
 			],
 			"sid": 357112366278544
