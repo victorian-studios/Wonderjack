@@ -378,13 +378,6 @@
 					}
 				},
 				{
-					"callFunction": "Transition",
-					"sid": 625014113490734,
-					"parameters": [
-						true
-					]
-				},
-				{
 					"id": "set-visible",
 					"objectClass": "Candle_Flame",
 					"sid": 980408480241830,
@@ -393,94 +386,11 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "Text_Turn",
-					"sid": 944116341319315,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "Text_Turn",
-					"sid": 864629340480158,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "1"
-					}
-				},
-				{
-					"id": "set-wait-time",
-					"objectClass": "Text_Turn",
-					"sid": 592998874778772,
-					"behaviorType": "Fade",
-					"parameters": {
-						"wait-time": "0.5"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "Text_Turn",
-					"sid": 787661528859275,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "1"
-					}
-				},
-				{
-					"id": "restart-fade",
-					"objectClass": "Text_Turn",
-					"sid": 312273398328014,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "set-text",
-					"objectClass": "Text_Turn",
-					"sid": 392587532724596,
-					"parameters": {
-						"text": "Internationalization.Lookup(\"common.new_round\", GameRound)"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "Bkg_Turn_Txt",
-					"sid": 362508737477694,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-fade-in-time",
-					"objectClass": "Bkg_Turn_Txt",
-					"sid": 551566609508298,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-in-time": "1"
-					}
-				},
-				{
-					"id": "set-wait-time",
-					"objectClass": "Bkg_Turn_Txt",
-					"sid": 654854192270588,
-					"behaviorType": "Fade",
-					"parameters": {
-						"wait-time": "0.5"
-					}
-				},
-				{
-					"id": "set-fade-out-time",
-					"objectClass": "Bkg_Turn_Txt",
-					"sid": 227134286897371,
-					"behaviorType": "Fade",
-					"parameters": {
-						"fade-out-time": "1"
-					}
-				},
-				{
-					"id": "restart-fade",
-					"objectClass": "Bkg_Turn_Txt",
-					"sid": 134058018202212,
-					"behaviorType": "Fade"
+					"callFunction": "Transition",
+					"sid": 818076671718146,
+					"parameters": [
+						true
+					]
 				},
 				{
 					"id": "set-instvar-value",
@@ -613,9 +523,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 793193179286603,
+							"sid": 195416795668727,
 							"parameters": {
-								"seconds": "3",
+								"seconds": "5",
 								"use-timescale": true
 							}
 						},
@@ -15171,9 +15081,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Text_Turn",
-									"sid": 509262713115157,
+									"sid": 125723683710347,
 									"parameters": {
-										"text": "\"Alice's Turn\""
+										"text": "Internationalization.Lookup(\"common.player_turn\")"
 									}
 								},
 								{
@@ -15455,9 +15365,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Text_Turn",
-									"sid": 183015482544242,
+									"sid": 371887788092388,
 									"parameters": {
-										"text": "EnemyName & \"'s Turn\""
+										"text": "Internationalization.Lookup(\"common.enemy_turn\", EnemyName)"
 									}
 								},
 								{
@@ -16321,9 +16231,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Text_Turn",
-									"sid": 987312703805904,
+									"sid": 829095228641907,
 									"parameters": {
-										"text": "Internationalization.Lookup(\"common.numbers\", PlayerNumbers, EnemyName, EnemyNumbers, winner)"
+										"text": "Internationalization.Lookup(\"common.round_result\", PlayerNumbers, EnemyName, EnemyNumbers, winner)"
 									}
 								},
 								{
@@ -16624,6 +16534,16 @@
 												"instance-variable": "PowerLimit_Rounds",
 												"value": "PlayerPowerLimit_Rounds"
 											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Icon_Protect",
+											"sid": 101853038060015
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Icon_Hidden_Card",
+											"sid": 365327250978145
 										},
 										{
 											"id": "wait",
@@ -28683,15 +28603,6 @@
 									"parameters": {
 										"scale": "lerp( 1, 5.5, ZoomAtual/100)"
 									}
-								},
-								{
-									"id": "set-layout-scale",
-									"objectClass": "System",
-									"sid": 716180414376818,
-									"disabled": true,
-									"parameters": {
-										"scale": "lerp( 5.5, 1, ZoomAtual/100)"
-									}
 								}
 							],
 							"sid": 947658324525308
@@ -28728,25 +28639,6 @@
 						}
 					],
 					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 688962671435018,
-							"disabled": true,
-							"parameters": {
-								"variable": "ZoomAtual",
-								"value": "6 * dt"
-							}
-						},
-						{
-							"id": "set-layout-scale",
-							"objectClass": "System",
-							"sid": 724495417353649,
-							"disabled": true,
-							"parameters": {
-								"scale": "ZoomAtual"
-							}
-						},
 						{
 							"id": "set-layer-opacity",
 							"objectClass": "System",
@@ -28808,25 +28700,6 @@
 					],
 					"actions": [
 						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 318962382473023,
-							"disabled": true,
-							"parameters": {
-								"variable": "ZoomAtual",
-								"value": "6 * dt"
-							}
-						},
-						{
-							"id": "set-layout-scale",
-							"objectClass": "System",
-							"sid": 628224970274537,
-							"disabled": true,
-							"parameters": {
-								"scale": "ZoomAtual"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 137816574311461,
@@ -28862,199 +28735,6 @@
 						}
 					],
 					"sid": 599288729628618
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 521010318328311,
-							"parameters": {
-								"variable": "ZoomAtual",
-								"comparison": 4,
-								"value": "LayoutZoom"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 979111623371103,
-							"parameters": {
-								"variable": "Transition_State",
-								"comparison": 0,
-								"value": "\"ZoomOut\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 566709186766920,
-							"disabled": true,
-							"parameters": {
-								"variable": "ZoomAtual",
-								"value": "6 * dt"
-							}
-						},
-						{
-							"id": "set-layout-scale",
-							"objectClass": "System",
-							"sid": 568602752470757,
-							"disabled": true,
-							"parameters": {
-								"scale": "ZoomAtual"
-							}
-						}
-					],
-					"sid": 342792869856975
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 274032959867901,
-							"parameters": {
-								"variable": "ZoomAtual",
-								"comparison": 5,
-								"value": "LayoutZoom"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 668068466558338,
-							"parameters": {
-								"variable": "Transition_State",
-								"comparison": 0,
-								"value": "\"ZoomIn\""
-							}
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 248712149204809
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 936472058522221,
-							"parameters": {
-								"variable": "LayoutZoom",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 604270126792620,
-							"parameters": {
-								"variable": "Transition_State",
-								"value": "\"ZoomOut\""
-							}
-						}
-					],
-					"sid": 416412041029268,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 208298771575377,
-							"parameters": {
-								"variable": "ZoomAtual",
-								"comparison": 3,
-								"value": "LayoutZoom"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 636298887748465,
-							"parameters": {
-								"variable": "Transition_State",
-								"comparison": 0,
-								"value": "\"ZoomOut\""
-							}
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 193582960425527
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 351082912657916,
-							"parameters": {
-								"variable": "ZoomAtual",
-								"value": "LayoutZoom"
-							}
-						},
-						{
-							"id": "set-layout-scale",
-							"objectClass": "System",
-							"sid": 199952251392162,
-							"parameters": {
-								"scale": "ZoomAtual"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 776623603772346,
-							"parameters": {
-								"variable": "LayoutZoom",
-								"value": "1"
-							}
-						},
-						{
-							"id": "tween-value",
-							"objectClass": "Camera",
-							"sid": 744798864561984,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"ZoomOut\"",
-								"start-value": "100",
-								"end-value": "0",
-								"time": "1",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Camera",
-							"sid": 675948108698688,
-							"behaviorType": "ScrollTo",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "signal",
-							"objectClass": "System",
-							"sid": 631934451702528,
-							"parameters": {
-								"tag": "\"Transition_End\""
-							}
-						}
-					],
-					"sid": 390624880426199,
-					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -29217,6 +28897,47 @@
 							"sid": 657143777842333
 						},
 						{
+							"eventType": "comment",
+							"text": "Enemies RNG"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 122519324033945,
+									"parameters": {
+										"count": "4"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 541836793993517,
+									"parameters": {
+										"variable": "Start"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-x",
+									"objectClass": "A_TheRng",
+									"sid": 451348759896549,
+									"parameters": {
+										"x": "loopindex",
+										"value": "choose ( 1, 2 )"
+									}
+								}
+							],
+							"sid": 280542950544005
+						},
+						{
+							"eventType": "comment",
+							"text": "Level 1"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -29229,15 +28950,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 555928399484813,
-									"parameters": {
-										"seconds": "1",
-										"use-timescale": true
-									}
-								},
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Enemy",
@@ -29261,6 +28973,96 @@
 									"objectClass": "Enemy",
 									"sid": 797705284362523,
 									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text_Turn",
+									"sid": 574394742405379,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Text_Turn",
+									"sid": 551203147128688,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "0.5"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Text_Turn",
+									"sid": 120887312287297,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Text_Turn",
+									"sid": 817741282255486,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Text_Turn",
+									"sid": 505600244488895,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Turn",
+									"sid": 324921607198989,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 403395782903094,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 973222952572283,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "0.5"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 264799537681360,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 171603204304938,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 720371152411061,
+									"behaviorType": "Fade"
 								}
 							],
 							"sid": 514962857109783,
@@ -29281,6 +29083,16 @@
 												"comparison": 0,
 												"value": "1"
 											}
+										},
+										{
+											"id": "compare-at-x",
+											"objectClass": "A_TheRng",
+											"sid": 869367594186810,
+											"parameters": {
+												"x": "Match - 1",
+												"comparison": 0,
+												"value": "1"
+											}
 										}
 									],
 									"actions": [
@@ -29291,6 +29103,15 @@
 											"parameters": {
 												"variable": "EnemyName",
 												"value": "\"Mad Hatter\""
+											}
+										},
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text_Turn",
+											"sid": 546336797069927,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.new_match\", EnemyName)",
+												"duration": "1.5"
 											}
 										},
 										{
@@ -29311,6 +29132,15 @@
 											}
 										},
 										{
+											"id": "set-position",
+											"objectClass": "Enemy",
+											"sid": 491450272520450,
+											"parameters": {
+												"x": "969",
+												"y": "717"
+											}
+										},
+										{
 											"id": "set-period",
 											"objectClass": "Enemy",
 											"sid": 903845943469506,
@@ -29326,15 +29156,6 @@
 											"behaviorType": "Sine",
 											"parameters": {
 												"magnitude": "10"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Enemy",
-											"sid": 446611370477325,
-											"parameters": {
-												"x": "969",
-												"y": "717"
 											}
 										},
 										{
@@ -29375,8 +29196,242 @@
 										}
 									],
 									"sid": 854516216986162
+								},
+								{
+									"eventType": "comment",
+									"text": "March Hare"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 492257264715302,
+											"parameters": {
+												"variable": "Match",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-at-x",
+											"objectClass": "A_TheRng",
+											"sid": 972677170314854,
+											"parameters": {
+												"x": "Match - 1",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 253939104760023,
+											"parameters": {
+												"variable": "EnemyName",
+												"value": "\"March Hare\""
+											}
+										},
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text_Turn",
+											"sid": 252870399149505,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.new_match\", EnemyName)",
+												"duration": "1.5"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "mesa",
+											"sid": 475026229588410,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 261758061696832,
+											"parameters": {
+												"animation": "EnemyName",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Enemy",
+											"sid": 153338110374374,
+											"parameters": {
+												"x": "956",
+												"y": "665"
+											}
+										},
+										{
+											"id": "set-period",
+											"objectClass": "Enemy",
+											"sid": 398855018612500,
+											"behaviorType": "Sine",
+											"parameters": {
+												"period": "6"
+											}
+										},
+										{
+											"id": "set-magnitude",
+											"objectClass": "Enemy",
+											"sid": 336762490614481,
+											"behaviorType": "Sine",
+											"parameters": {
+												"magnitude": "10"
+											}
+										},
+										{
+											"id": "set-cycle-position",
+											"objectClass": "Enemy",
+											"sid": 201640103088467,
+											"behaviorType": "Sine",
+											"parameters": {
+												"cycle-position": "0"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Enemy",
+											"sid": 125197665726418,
+											"parameters": {
+												"width": "480",
+												"height": "600"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 654876659046814,
+											"parameters": {
+												"variable": "EnemyAI_Style",
+												"value": "\"fearless\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 430225644514449,
+											"parameters": {
+												"variable": "EnemyAI_Chaos",
+												"value": "25"
+											}
+										}
+									],
+									"sid": 134375652308054
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 308370832001107,
+											"parameters": {
+												"seconds": "2.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text_Turn",
+											"sid": 598787561310377,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
+												"duration": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 897500886850328,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Text_Turn",
+											"sid": 271875084723034,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Text_Turn",
+											"sid": 167405425040523,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0.5"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Text_Turn",
+											"sid": 414116180896383,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.5"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Text_Turn",
+											"sid": 381117205973086,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 198015071342866,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 724965350317154,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0.5"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 707546382225104,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.5"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 470020090017970,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 159342117206067
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Level 2, 3, ? e Boss"
 						},
 						{
 							"eventType": "block",
@@ -29622,114 +29677,6 @@
 									"sid": 667294134901428,
 									"children": [
 										{
-											"eventType": "comment",
-											"text": "Mad Hatter"
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 639207375261271,
-													"parameters": {
-														"variable": "Match",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 752207556260615,
-													"parameters": {
-														"variable": "EnemyName",
-														"value": "\"Mad Hatter\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Enemy",
-													"sid": 273806240716366,
-													"parameters": {
-														"animation": "EnemyName",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-period",
-													"objectClass": "Enemy",
-													"sid": 676698207000926,
-													"behaviorType": "Sine",
-													"parameters": {
-														"period": "6"
-													}
-												},
-												{
-													"id": "set-magnitude",
-													"objectClass": "Enemy",
-													"sid": 852339785331419,
-													"behaviorType": "Sine",
-													"parameters": {
-														"magnitude": "10"
-													}
-												},
-												{
-													"id": "set-position",
-													"objectClass": "Enemy",
-													"sid": 668170225436513,
-													"parameters": {
-														"x": "969",
-														"y": "717"
-													}
-												},
-												{
-													"id": "set-cycle-position",
-													"objectClass": "Enemy",
-													"sid": 240722695108956,
-													"behaviorType": "Sine",
-													"parameters": {
-														"cycle-position": "0"
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 650058585083701,
-													"parameters": {
-														"width": "445",
-														"height": "635"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 150263664346229,
-													"parameters": {
-														"variable": "EnemyAI_Style",
-														"value": "\"fearless\""
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 856785706927750,
-													"parameters": {
-														"variable": "EnemyAI_Chaos",
-														"value": "15"
-													}
-												}
-											],
-											"sid": 479564724420414,
-											"disabled": true
-										},
-										{
-											"eventType": "comment",
-											"text": "Cheshire Cat"
-										},
-										{
 											"eventType": "block",
 											"conditions": [
 												{
@@ -29743,214 +29690,267 @@
 													}
 												}
 											],
-											"actions": [
-												{
-													"id": "fade-volume",
-													"objectClass": "Audio",
-													"sid": 613484759469946,
-													"parameters": {
-														"tag": "\"main\"",
-														"db": "-12",
-														"duration": "0.5",
-														"ending": "keep-playing"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 525706852243405,
-													"parameters": {
-														"variable": "EnemyName",
-														"value": "\"Cheshire Cat\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Enemy",
-													"sid": 248113125012276,
-													"parameters": {
-														"animation": "EnemyName",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Enemy",
-													"sid": 224870292153352,
-													"parameters": {
-														"object": "Enemy_Extra_Anim",
-														"layer": "0",
-														"image-point": "1",
-														"create-hierarchy": true,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "add-child",
-													"objectClass": "Enemy",
-													"sid": 283863130963821,
-													"parameters": {
-														"child": "Enemy_Extra_Anim",
-														"transform-x": true,
-														"transform-y": true,
-														"transform-w": true,
-														"transform-h": true,
-														"transform-a": true,
-														"transform-o": false,
-														"transform-z-elevation": true,
-														"transform-visibility": false,
-														"destroy-with-parent": false
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Enemy_Extra_Anim",
-													"sid": 820412300777390,
-													"parameters": {
-														"animation": "\"Tail\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "Enemy_Extra_Anim",
-													"sid": 943505200389433,
-													"parameters": {
-														"width": "190",
-														"height": "180"
-													}
-												},
-												{
-													"id": "move-to-object",
-													"objectClass": "Enemy_Extra_Anim",
-													"sid": 830610254432499,
-													"parameters": {
-														"where": "behind",
-														"object": "Enemy"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Enemy",
-													"sid": 194814616141512,
-													"parameters": {
-														"object": "Enemy_Extra_Anim",
-														"layer": "0",
-														"image-point": "2",
-														"create-hierarchy": true,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "add-child",
-													"objectClass": "Enemy",
-													"sid": 159763212222035,
-													"parameters": {
-														"child": "Enemy_Extra_Anim",
-														"transform-x": true,
-														"transform-y": true,
-														"transform-w": true,
-														"transform-h": true,
-														"transform-a": true,
-														"transform-o": false,
-														"transform-z-elevation": true,
-														"transform-visibility": false,
-														"destroy-with-parent": false
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Enemy_Extra_Anim",
-													"sid": 570400056170157,
-													"parameters": {
-														"animation": "\"Cat_Eyes\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "Enemy_Extra_Anim",
-													"sid": 658070697040696,
-													"parameters": {
-														"width": "126",
-														"height": "29"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Enemy_Extra_Anim",
-													"sid": 851028760106614,
-													"parameters": {
-														"instance-variable": "extra_fade",
-														"value": "2"
-													}
-												},
-												{
-													"id": "set-cycle-position",
-													"objectClass": "Enemy",
-													"sid": 226566359468990,
-													"behaviorType": "Sine",
-													"parameters": {
-														"cycle-position": "0"
-													}
-												},
-												{
-													"id": "set-period",
-													"objectClass": "Enemy",
-													"sid": 268859711202721,
-													"behaviorType": "Sine",
-													"parameters": {
-														"period": "4.8"
-													}
-												},
-												{
-													"id": "set-magnitude",
-													"objectClass": "Enemy",
-													"sid": 789720866906077,
-													"behaviorType": "Sine",
-													"parameters": {
-														"magnitude": "15"
-													}
-												},
-												{
-													"id": "set-position",
-													"objectClass": "Enemy",
-													"sid": 496295002468502,
-													"parameters": {
-														"x": "961",
-														"y": "654"
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 622574558336335,
-													"parameters": {
-														"width": "648",
-														"height": "537"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 858304574019983,
-													"parameters": {
-														"variable": "EnemyAI_Style",
-														"value": "\"fearless\""
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 781734298401607,
-													"parameters": {
-														"variable": "EnemyAI_Chaos",
-														"value": "0"
-													}
-												}
-											],
+											"actions": [],
 											"sid": 390868221975323,
 											"children": [
+												{
+													"eventType": "comment",
+													"text": "Cheshire Cat"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 988594853325511,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "1"
+															}
+														},
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 242701652800732,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "fade-volume",
+															"objectClass": "Audio",
+															"sid": 172579172837512,
+															"parameters": {
+																"tag": "\"main\"",
+																"db": "-12",
+																"duration": "0.5",
+																"ending": "keep-playing"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 535171437551431,
+															"parameters": {
+																"variable": "EnemyName",
+																"value": "\"Cheshire Cat\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy",
+															"sid": 686631903055446,
+															"parameters": {
+																"animation": "EnemyName",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Enemy",
+															"sid": 264961920748985,
+															"parameters": {
+																"object": "Enemy_Extra_Anim",
+																"layer": "0",
+																"image-point": "1",
+																"create-hierarchy": true,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Enemy",
+															"sid": 974962420287317,
+															"parameters": {
+																"child": "Enemy_Extra_Anim",
+																"transform-x": true,
+																"transform-y": true,
+																"transform-w": true,
+																"transform-h": true,
+																"transform-a": true,
+																"transform-o": false,
+																"transform-z-elevation": true,
+																"transform-visibility": false,
+																"destroy-with-parent": false
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 675786957318398,
+															"parameters": {
+																"animation": "\"Tail\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 289140825426110,
+															"parameters": {
+																"width": "190",
+																"height": "180"
+															}
+														},
+														{
+															"id": "move-to-object",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 322428644237421,
+															"parameters": {
+																"where": "behind",
+																"object": "Enemy"
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Enemy",
+															"sid": 803261462965598,
+															"parameters": {
+																"object": "Enemy_Extra_Anim",
+																"layer": "0",
+																"image-point": "2",
+																"create-hierarchy": true,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Enemy",
+															"sid": 962458709156286,
+															"parameters": {
+																"child": "Enemy_Extra_Anim",
+																"transform-x": true,
+																"transform-y": true,
+																"transform-w": true,
+																"transform-h": true,
+																"transform-a": true,
+																"transform-o": false,
+																"transform-z-elevation": true,
+																"transform-visibility": false,
+																"destroy-with-parent": false
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 158669567623802,
+															"parameters": {
+																"animation": "\"Cat_Eyes\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 222192013495223,
+															"parameters": {
+																"width": "126",
+																"height": "29"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 182544143733475,
+															"parameters": {
+																"instance-variable": "extra_fade",
+																"value": "2"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy",
+															"sid": 362135494041246,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy",
+															"sid": 993744681087075,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "4.8"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy",
+															"sid": 207942207128269,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "15"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Enemy",
+															"sid": 637196064451604,
+															"parameters": {
+																"x": "961",
+																"y": "654"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy",
+															"sid": 488604384921053,
+															"parameters": {
+																"width": "648",
+																"height": "537"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 653723275397142,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"value": "\"fearless\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 448239210036826,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 615181919941741,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "comment",
+													"text": "Caterpillar"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 832090445121398,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 462903739764477
+												},
 												{
 													"eventType": "block",
 													"conditions": [],
@@ -29958,7 +29958,7 @@
 														{
 															"id": "fade-volume",
 															"objectClass": "Audio",
-															"sid": 133399414606389,
+															"sid": 930807025927037,
 															"parameters": {
 																"tag": "\"main\"",
 																"db": "-100",
@@ -29969,7 +29969,7 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 211497932950657,
+															"sid": 564814703906266,
 															"parameters": {
 																"seconds": "0.5",
 																"use-timescale": true
@@ -29978,7 +29978,7 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 497678812877938,
+															"sid": 597877464906086,
 															"parameters": {
 																"audio-file": {
 																	"path": "In Game/Level 2/7 - Malevolent Melancholy (Loop)"
@@ -29990,13 +29990,9 @@
 															}
 														}
 													],
-													"sid": 797670205834312
+													"sid": 656666789214497
 												}
 											]
-										},
-										{
-											"eventType": "comment",
-											"text": "Humpty Dumpty"
 										},
 										{
 											"eventType": "block",
@@ -30012,102 +30008,155 @@
 													}
 												}
 											],
-											"actions": [
-												{
-													"id": "fade-volume",
-													"objectClass": "Audio",
-													"sid": 463651033187300,
-													"parameters": {
-														"tag": "\"main\"",
-														"db": "-12",
-														"duration": "0.5",
-														"ending": "keep-playing"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 838739817218870,
-													"parameters": {
-														"variable": "EnemyName",
-														"value": "\"Humpty Dumpty\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Enemy",
-													"sid": 772998091003409,
-													"parameters": {
-														"animation": "EnemyName",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-cycle-position",
-													"objectClass": "Enemy",
-													"sid": 419080481481144,
-													"behaviorType": "Sine",
-													"parameters": {
-														"cycle-position": "0"
-													}
-												},
-												{
-													"id": "set-period",
-													"objectClass": "Enemy",
-													"sid": 600579825390117,
-													"behaviorType": "Sine",
-													"parameters": {
-														"period": "6"
-													}
-												},
-												{
-													"id": "set-magnitude",
-													"objectClass": "Enemy",
-													"sid": 138545634507437,
-													"behaviorType": "Sine",
-													"parameters": {
-														"magnitude": "10"
-													}
-												},
-												{
-													"id": "set-position",
-													"objectClass": "Enemy",
-													"sid": 810723787900585,
-													"parameters": {
-														"x": "961",
-														"y": "830"
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 287952202171840,
-													"parameters": {
-														"width": "410",
-														"height": "636"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 939334033474743,
-													"parameters": {
-														"variable": "EnemyAI_Style",
-														"value": "\"cautious\""
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 338310617424235,
-													"parameters": {
-														"variable": "EnemyAI_Chaos",
-														"value": "-15"
-													}
-												}
-											],
+											"actions": [],
 											"sid": 228872691360640,
 											"children": [
+												{
+													"eventType": "comment",
+													"text": "Humpty Dumpty"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 803497000187335,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "1"
+															}
+														},
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 289337274497025,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "fade-volume",
+															"objectClass": "Audio",
+															"sid": 478700478969113,
+															"parameters": {
+																"tag": "\"main\"",
+																"db": "-12",
+																"duration": "0.5",
+																"ending": "keep-playing"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 386034893449882,
+															"parameters": {
+																"variable": "EnemyName",
+																"value": "\"Humpty Dumpty\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy",
+															"sid": 671442135444379,
+															"parameters": {
+																"animation": "EnemyName",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy",
+															"sid": 918993475407291,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy",
+															"sid": 794078273065075,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "6"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy",
+															"sid": 821221062599495,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "10"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Enemy",
+															"sid": 963552561172930,
+															"parameters": {
+																"x": "961",
+																"y": "830"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy",
+															"sid": 493590018388835,
+															"parameters": {
+																"width": "410",
+																"height": "636"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 148744425805084,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"value": "\"cautious\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 380466192181661,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"value": "-15"
+															}
+														}
+													],
+													"sid": 280306624833519,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "comment",
+													"text": "Twins"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 110368054182513,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 113432254506347
+												},
 												{
 													"eventType": "block",
 													"conditions": [],
@@ -30115,7 +30164,7 @@
 														{
 															"id": "fade-volume",
 															"objectClass": "Audio",
-															"sid": 471623973900233,
+															"sid": 265921711837257,
 															"parameters": {
 																"tag": "\"main\"",
 																"db": "-100",
@@ -30126,7 +30175,7 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 168803513469405,
+															"sid": 677369582561704,
 															"parameters": {
 																"seconds": "0.5",
 																"use-timescale": true
@@ -30135,7 +30184,7 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 982281071754108,
+															"sid": 160067458942197,
 															"parameters": {
 																"audio-file": {
 																	"path": "In Game/Level 3/6 - Mystic Veil of Despair (Loop)"
@@ -30147,13 +30196,9 @@
 															}
 														}
 													],
-													"sid": 287032154976809
+													"sid": 319993246315722
 												}
 											]
-										},
-										{
-											"eventType": "comment",
-											"text": "Red Queen"
 										},
 										{
 											"eventType": "block",
@@ -30169,91 +30214,133 @@
 													}
 												}
 											],
-											"actions": [
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 902469855323620,
-													"parameters": {
-														"variable": "EnemyName",
-														"value": "\"Red Queen\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Enemy",
-													"sid": 543115047451927,
-													"parameters": {
-														"animation": "EnemyName",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-cycle-position",
-													"objectClass": "Enemy",
-													"sid": 302598472778754,
-													"behaviorType": "Sine",
-													"parameters": {
-														"cycle-position": "0"
-													}
-												},
-												{
-													"id": "set-period",
-													"objectClass": "Enemy",
-													"sid": 281319353693128,
-													"behaviorType": "Sine",
-													"parameters": {
-														"period": "6"
-													}
-												},
-												{
-													"id": "set-magnitude",
-													"objectClass": "Enemy",
-													"sid": 105583217564154,
-													"behaviorType": "Sine",
-													"parameters": {
-														"magnitude": "10"
-													}
-												},
-												{
-													"id": "set-position",
-													"objectClass": "Enemy",
-													"sid": 325874444687460,
-													"parameters": {
-														"x": "962",
-														"y": "836"
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 103099246929074,
-													"parameters": {
-														"width": "552",
-														"height": "792"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 369134543704972,
-													"parameters": {
-														"variable": "EnemyAI_Style",
-														"value": "\"cautious\""
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 108693444930247,
-													"parameters": {
-														"variable": "EnemyAI_Chaos",
-														"value": "0"
-													}
-												}
-											],
+											"actions": [],
 											"sid": 845560490284303,
 											"children": [
+												{
+													"eventType": "comment",
+													"text": "Red Queen"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 306022284434260,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "1"
+															}
+														},
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 325806130856816,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 894880330018769,
+															"parameters": {
+																"variable": "EnemyName",
+																"value": "\"Red Queen\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy",
+															"sid": 546112509210049,
+															"parameters": {
+																"animation": "EnemyName",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy",
+															"sid": 531862127003877,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy",
+															"sid": 285728341265805,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "6"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy",
+															"sid": 748007817521025,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "10"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Enemy",
+															"sid": 240862952130851,
+															"parameters": {
+																"x": "962",
+																"y": "836"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy",
+															"sid": 614148816718927,
+															"parameters": {
+																"width": "552",
+																"height": "792"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 776569782335835,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"value": "\"cautious\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 246293716772307,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 311609027870796,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "comment",
+													"text": "Jaguadarte"
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [],
+													"sid": 441661665608420
+												},
 												{
 													"eventType": "block",
 													"conditions": [],
@@ -32568,24 +32655,7 @@
 							}
 						}
 					],
-					"sid": 303332164016955,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-animation-playing",
-									"objectClass": "Relics",
-									"sid": 337677896184673,
-									"parameters": {
-										"animation": "\"drink_me\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 150189060498734
-						}
-					]
+					"sid": 303332164016955
 				},
 				{
 					"eventType": "block",
@@ -33097,7 +33167,8 @@
 							}
 						}
 					],
-					"sid": 817626238727882
+					"sid": 817626238727882,
+					"disabled": true
 				}
 			],
 			"sid": 357112366278544

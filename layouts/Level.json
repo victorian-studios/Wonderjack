@@ -3516,6 +3516,18 @@
 			"sid": 959015996618922,
 			"tags": "",
 			"instanceVariables": {}
+		},
+		{
+			"type": "A_TheRng",
+			"properties": {
+				"width": 4,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 126,
+			"sid": 594541292039493,
+			"tags": "",
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],
