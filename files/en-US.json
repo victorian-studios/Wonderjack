@@ -67,7 +67,7 @@
             "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#fa1c03]not hidden[/color] card to switch with your opponement.",
             "exchange_tip_1": "[u]Select an opponent card:[/u]",
             "exchange_tip_2": "[u]Select your card to switch:[/u]",
-            "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch their first hidden card with each other.",
+            "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch their [color=#f5fe05]first hidden[/color] card with each other.",
             "menu": "[u]Menu[/u]\n\nSee the next [color=#f5fe05]3[/color] cards from the number deck and choose [color=#f5fe05]1[/color] to draw. Then, the number deck is [color=#fa1c03]shuffled[/color].",
             "menu_tip": "[u]Select a card to draw:[/u]",
             "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their [color=#fa1c03]not hidden[/color] number cards to the end of the deck. Cannot be used in the last turn!",
