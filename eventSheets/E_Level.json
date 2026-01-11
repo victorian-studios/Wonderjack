@@ -30313,16 +30313,6 @@
 																"comparison": 0,
 																"value": "1"
 															}
-														},
-														{
-															"id": "compare-at-x",
-															"objectClass": "A_TheRng",
-															"sid": 289337274497025,
-															"parameters": {
-																"x": "Match - 1",
-																"comparison": 0,
-																"value": "2"
-															}
 														}
 													],
 													"actions": [
@@ -30478,19 +30468,19 @@
 														{
 															"id": "set-position",
 															"objectClass": "Enemy",
-															"sid": 380246541135848,
+															"sid": 292011661871229,
 															"parameters": {
-																"x": "961",
-																"y": "830"
+																"x": "960",
+																"y": "690"
 															}
 														},
 														{
 															"id": "set-size",
 															"objectClass": "Enemy",
-															"sid": 759425903902222,
+															"sid": 930365714922422,
 															"parameters": {
-																"width": "410",
-																"height": "636"
+																"width": "520",
+																"height": "672"
 															}
 														},
 														{
@@ -30505,15 +30495,14 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 198244823712316,
+															"sid": 695456184606375,
 															"parameters": {
 																"variable": "EnemyAI_Chaos",
-																"value": "-15"
+																"value": "10"
 															}
 														}
 													],
-													"sid": 113432254506347,
-													"disabled": true
+													"sid": 113432254506347
 												},
 												{
 													"eventType": "block",
@@ -30590,16 +30579,6 @@
 																"x": "Match - 1",
 																"comparison": 0,
 																"value": "1"
-															}
-														},
-														{
-															"id": "compare-at-x",
-															"objectClass": "A_TheRng",
-															"sid": 325806130856816,
-															"parameters": {
-																"x": "Match - 1",
-																"comparison": 0,
-																"value": "2"
 															}
 														}
 													],
@@ -30756,19 +30735,19 @@
 														{
 															"id": "set-position",
 															"objectClass": "Enemy",
-															"sid": 669365124520926,
+															"sid": 312870992245912,
 															"parameters": {
-																"x": "962",
-																"y": "836"
+																"x": "956",
+																"y": "688"
 															}
 														},
 														{
 															"id": "set-size",
 															"objectClass": "Enemy",
-															"sid": 431737666898575,
+															"sid": 288368579756863,
 															"parameters": {
-																"width": "552",
-																"height": "792"
+																"width": "652",
+																"height": "652"
 															}
 														},
 														{
@@ -30783,15 +30762,14 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 459486156608853,
+															"sid": 620857310312686,
 															"parameters": {
 																"variable": "EnemyAI_Chaos",
-																"value": "0"
+																"value": "10"
 															}
 														}
 													],
-													"sid": 441661665608420,
-													"disabled": true
+													"sid": 441661665608420
 												},
 												{
 													"eventType": "block",
