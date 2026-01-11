@@ -63,7 +63,7 @@
             "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck",
             "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number to your opponent.",
             "return": "[u]Return[/u]\n\n\nDiscard your [color=#fa1c03]last not hidden[/color] number card to the end of the deck.",
-            "compel": "[u]Compel[/u]\n\n\nForces your opponent to discard their [color=#f5fe05]last[/color] number card to the end of the deck.",
+            "compel": "[u]Compel[/u]\n\n\nForces [color=#f5fe05]your opponent[/color] to discard their [color=#f5fe05]last[/color] number card to the end of the deck.",
             "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#fa1c03]not hidden[/color] card to switch with your opponement.",
             "exchange_tip_1": "[u]Select an opponent card:[/u]",
             "exchange_tip_2": "[u]Select your card to switch:[/u]",

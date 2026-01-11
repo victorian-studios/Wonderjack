@@ -939,7 +939,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "New",
-						"initial-frame": 5,
+						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
 					},

@@ -5354,9 +5354,9 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Card_Numb",
-							"sid": 209573295163987,
+							"sid": 970190477626433,
 							"parameters": {
-								"instance-variable": "Original_Hidden"
+								"instance-variable": "Player_Hidden"
 							}
 						},
 						{
@@ -5402,6 +5402,16 @@
 										"tags": "\"move_hidden\""
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-playing",
+									"objectClass": "Card_Numb",
+									"sid": 330979412656024,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"switch\""
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -5438,9 +5448,9 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Card_Numb",
-							"sid": 702656547503072,
+							"sid": 827522234650448,
 							"parameters": {
-								"instance-variable": "Original_Hidden"
+								"instance-variable": "Player_Hidden"
 							}
 						},
 						{
@@ -14798,54 +14808,90 @@
 									"parameters": {
 										"object": "Card_Numb"
 									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Card_Numb",
-									"sid": 609348381401524,
-									"parameters": {
-										"instance-variable": "Original_Hidden"
-									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 273024582968576,
+							"children": [
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Card_Numb",
-									"sid": 133977949208868,
-									"parameters": {
-										"instance-variable": "Original_Hidden",
-										"value": "false"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 558495760362579,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Card_Numb",
-									"sid": 234619937318039,
-									"parameters": {
-										"animation": "\"Left\"",
-										"from": "current-frame"
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Card_Numb",
-									"sid": 674809420122436,
-									"parameters": {
-										"frame-number": "Self.myID"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card_Numb",
+											"sid": 608804991385845,
+											"parameters": {
+												"instance-variable": "Player_Hidden"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card_Numb",
+											"sid": 298714961366999,
+											"parameters": {
+												"instance-variable": "Enemy_Hidden"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Card_Numb",
+											"sid": 876380732026721,
+											"parameters": {
+												"instance-variable": "Original_Hidden",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Card_Numb",
+											"sid": 423136247447492,
+											"parameters": {
+												"instance-variable": "Enemy_Hidden",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Card_Numb",
+											"sid": 955114702566118,
+											"parameters": {
+												"instance-variable": "Player_Hidden",
+												"value": "false"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 885397404642991,
+											"parameters": {
+												"seconds": "0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Card_Numb",
+											"sid": 997460466800533,
+											"parameters": {
+												"animation": "\"Left\"",
+												"from": "current-frame"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Card_Numb",
+											"sid": 923280070215132,
+											"parameters": {
+												"frame-number": "Self.myID"
+											}
+										}
+									],
+									"sid": 867730765648408,
+									"isOrBlock": true
 								}
-							],
-							"sid": 273024582968576
+							]
 						}
 					]
 				},
@@ -14914,6 +14960,15 @@
 										"comparison": 0,
 										"value": "0"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 207607795929013,
+									"parameters": {
+										"variable": "FinishRound"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -27683,11 +27738,11 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 633302422775326,
+															"sid": 804422047817186,
 															"parameters": {
 																"variable": "EnemyAI_Chaos",
 																"comparison": 4,
-																"value": "10"
+																"value": "15"
 															}
 														},
 														{
@@ -29879,30 +29934,9 @@
 																"comparison": 0,
 																"value": "1"
 															}
-														},
-														{
-															"id": "compare-at-x",
-															"objectClass": "A_TheRng",
-															"sid": 242701652800732,
-															"parameters": {
-																"x": "Match - 1",
-																"comparison": 0,
-																"value": "2"
-															}
 														}
 													],
 													"actions": [
-														{
-															"id": "fade-volume",
-															"objectClass": "Audio",
-															"sid": 172579172837512,
-															"parameters": {
-																"tag": "\"main\"",
-																"db": "-12",
-																"duration": "0.5",
-																"ending": "keep-playing"
-															}
-														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
@@ -29919,118 +29953,6 @@
 															"parameters": {
 																"animation": "EnemyName",
 																"from": "beginning"
-															}
-														},
-														{
-															"id": "spawn-another-object",
-															"objectClass": "Enemy",
-															"sid": 264961920748985,
-															"parameters": {
-																"object": "Enemy_Extra_Anim",
-																"layer": "0",
-																"image-point": "1",
-																"create-hierarchy": true,
-																"template-name": "\"\""
-															}
-														},
-														{
-															"id": "add-child",
-															"objectClass": "Enemy",
-															"sid": 974962420287317,
-															"parameters": {
-																"child": "Enemy_Extra_Anim",
-																"transform-x": true,
-																"transform-y": true,
-																"transform-w": true,
-																"transform-h": true,
-																"transform-a": true,
-																"transform-o": false,
-																"transform-z-elevation": true,
-																"transform-visibility": false,
-																"destroy-with-parent": false
-															}
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 675786957318398,
-															"parameters": {
-																"animation": "\"Tail\"",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "set-size",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 289140825426110,
-															"parameters": {
-																"width": "190",
-																"height": "180"
-															}
-														},
-														{
-															"id": "move-to-object",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 322428644237421,
-															"parameters": {
-																"where": "behind",
-																"object": "Enemy"
-															}
-														},
-														{
-															"id": "spawn-another-object",
-															"objectClass": "Enemy",
-															"sid": 803261462965598,
-															"parameters": {
-																"object": "Enemy_Extra_Anim",
-																"layer": "0",
-																"image-point": "2",
-																"create-hierarchy": true,
-																"template-name": "\"\""
-															}
-														},
-														{
-															"id": "add-child",
-															"objectClass": "Enemy",
-															"sid": 962458709156286,
-															"parameters": {
-																"child": "Enemy_Extra_Anim",
-																"transform-x": true,
-																"transform-y": true,
-																"transform-w": true,
-																"transform-h": true,
-																"transform-a": true,
-																"transform-o": false,
-																"transform-z-elevation": true,
-																"transform-visibility": false,
-																"destroy-with-parent": false
-															}
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 158669567623802,
-															"parameters": {
-																"animation": "\"Cat_Eyes\"",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "set-size",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 443373749009347,
-															"parameters": {
-																"width": "130",
-																"height": "29"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 182544143733475,
-															"parameters": {
-																"instance-variable": "extra_fade",
-																"value": "2"
 															}
 														},
 														{
@@ -30079,6 +30001,118 @@
 															}
 														},
 														{
+															"id": "spawn-another-object",
+															"objectClass": "Enemy",
+															"sid": 716480651566369,
+															"parameters": {
+																"object": "Enemy_Extra_Anim",
+																"layer": "0",
+																"image-point": "1",
+																"create-hierarchy": true,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Enemy",
+															"sid": 454337029284438,
+															"parameters": {
+																"child": "Enemy_Extra_Anim",
+																"transform-x": true,
+																"transform-y": true,
+																"transform-w": true,
+																"transform-h": true,
+																"transform-a": true,
+																"transform-o": false,
+																"transform-z-elevation": true,
+																"transform-visibility": false,
+																"destroy-with-parent": false
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 392674139300498,
+															"parameters": {
+																"animation": "\"Tail\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 263873426504144,
+															"parameters": {
+																"width": "210",
+																"height": "199"
+															}
+														},
+														{
+															"id": "move-to-object",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 897845491262703,
+															"parameters": {
+																"where": "behind",
+																"object": "Enemy"
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Enemy",
+															"sid": 961200766551167,
+															"parameters": {
+																"object": "Enemy_Extra_Anim",
+																"layer": "0",
+																"image-point": "2",
+																"create-hierarchy": true,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Enemy",
+															"sid": 891145441427193,
+															"parameters": {
+																"child": "Enemy_Extra_Anim",
+																"transform-x": true,
+																"transform-y": true,
+																"transform-w": true,
+																"transform-h": true,
+																"transform-a": true,
+																"transform-o": false,
+																"transform-z-elevation": true,
+																"transform-visibility": false,
+																"destroy-with-parent": false
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 167765058920794,
+															"parameters": {
+																"animation": "\"Cat_Eyes\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 536671636988086,
+															"parameters": {
+																"width": "193",
+																"height": "44"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 393459239611828,
+															"parameters": {
+																"instance-variable": "extra_fade",
+																"value": "2"
+															}
+														},
+														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
 															"sid": 653723275397142,
@@ -30118,7 +30152,89 @@
 															}
 														}
 													],
-													"actions": [],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 397517374839958,
+															"parameters": {
+																"variable": "EnemyName",
+																"value": "\"Caterpillar\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy",
+															"sid": 329790700048873,
+															"parameters": {
+																"animation": "EnemyName",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy",
+															"sid": 405584117159984,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy",
+															"sid": 171441166352234,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "8"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy",
+															"sid": 574603874893917,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "10"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Enemy",
+															"sid": 533145397505396,
+															"parameters": {
+																"x": "958",
+																"y": "762"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy",
+															"sid": 707784177527962,
+															"parameters": {
+																"width": "668",
+																"height": "672"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 828624469264748,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"value": "\"fearless\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 224345755120761,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"value": "-15"
+															}
+														}
+													],
 													"sid": 462903739764477
 												},
 												{
@@ -30211,17 +30327,6 @@
 													],
 													"actions": [
 														{
-															"id": "fade-volume",
-															"objectClass": "Audio",
-															"sid": 478700478969113,
-															"parameters": {
-																"tag": "\"main\"",
-																"db": "-12",
-																"duration": "0.5",
-																"ending": "keep-playing"
-															}
-														},
-														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
 															"sid": 386034893449882,
@@ -30308,7 +30413,7 @@
 												},
 												{
 													"eventType": "comment",
-													"text": "Twins"
+													"text": "The Tweedles"
 												},
 												{
 													"eventType": "block",
@@ -30324,8 +30429,91 @@
 															}
 														}
 													],
-													"actions": [],
-													"sid": 113432254506347
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 176401353073435,
+															"parameters": {
+																"variable": "EnemyName",
+																"value": "\"The Tweedles\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy",
+															"sid": 805993284384305,
+															"parameters": {
+																"animation": "EnemyName",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy",
+															"sid": 683453119463364,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy",
+															"sid": 132512455699337,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "6"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy",
+															"sid": 358023485006045,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "10"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Enemy",
+															"sid": 380246541135848,
+															"parameters": {
+																"x": "961",
+																"y": "830"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy",
+															"sid": 759425903902222,
+															"parameters": {
+																"width": "410",
+																"height": "636"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 351155539057567,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"value": "\"cautious\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 198244823712316,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"value": "-15"
+															}
+														}
+													],
+													"sid": 113432254506347,
+													"disabled": true
 												},
 												{
 													"eventType": "block",
@@ -30503,13 +30691,107 @@
 												},
 												{
 													"eventType": "comment",
-													"text": "Jaguadarte"
+													"text": "Jabberwock"
 												},
 												{
 													"eventType": "block",
-													"conditions": [],
-													"actions": [],
-													"sid": 441661665608420
+													"conditions": [
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 591247118967535,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 639867293353533,
+															"parameters": {
+																"variable": "EnemyName",
+																"value": "\"Jabberwock\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy",
+															"sid": 584816015174084,
+															"parameters": {
+																"animation": "EnemyName",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy",
+															"sid": 721818066661369,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy",
+															"sid": 182651704425756,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "6"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy",
+															"sid": 177193691552252,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "10"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Enemy",
+															"sid": 669365124520926,
+															"parameters": {
+																"x": "962",
+																"y": "836"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy",
+															"sid": 431737666898575,
+															"parameters": {
+																"width": "552",
+																"height": "792"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 354971640373591,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"value": "\"cautious\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 459486156608853,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 441661665608420,
+													"disabled": true
 												},
 												{
 													"eventType": "block",
