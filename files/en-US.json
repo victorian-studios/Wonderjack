@@ -70,7 +70,7 @@
             "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch their [color=#f5fe05]first hidden[/color] card with each other.",
             "menu": "[u]Menu[/u]\n\nSee the next [color=#f5fe05]3[/color] cards from the number deck and choose [color=#f5fe05]1[/color] to draw. Then, the number deck is [color=#fa1c03]shuffled[/color].",
             "menu_tip": "[u]Select a card to draw:[/u]",
-            "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their [color=#fa1c03]not hidden[/color] number cards to the end of the deck. Cannot be used in the last turn!",
+            "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their number cards [color=#fa1c03]ignoring the first hidden card[/color]. Cannot be used in the last turn!",
             "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent.",
             "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]2[/color] cards from of the number deck.",
             "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color] and then [color=#f5fe05]{1}[/color]",

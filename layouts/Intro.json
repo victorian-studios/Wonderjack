@@ -60,19 +60,34 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left",
+						"origin": "center",
 						"read-aloud": false
 					},
 					"uid": 104,
 					"sid": 252679645813781,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "value-only",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 25,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 252679645813781,
 						"expanded": true
@@ -80,12 +95,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 128,
-						"y": 832,
-						"width": 1632,
-						"height": 129,
-						"originX": 0,
-						"originY": 0,
+						"x": 960,
+						"y": 895.5,
+						"width": 1696,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

@@ -373,41 +373,9 @@
 				{
 					"items": [
 						{
-							"name": "EQUIPMENT Pack Ruffle 04.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 741035487194040,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "BONG Bell Timer Hit Short 04.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 659040212110909,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "EQUIPMENT Pack Ruffle 12.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 273197877783555,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
 							"name": "FOOTSTEPS (A) Walking Loop 01.ogg",
 							"type": "audio/ogg; codecs=vorbis",
 							"sid": 821150034206211,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "FOOTSTEPS (B) Walking Loop 02.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 986048167191420,
 							"file-info": {
 								"purpose": "none"
 							}
@@ -421,49 +389,9 @@
 							}
 						},
 						{
-							"name": "SHUFFLE Cards 02.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 186476920341322,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SHUFFLE Cards 03.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 760850200251819,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "RETRO Bump Hit Beep 14.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 565779850237263,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
 							"name": "SQUEAK Creaking 01.ogg",
 							"type": "audio/ogg; codecs=vorbis",
 							"sid": 193343349827728,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS BEEPS Single Tone Short 02.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 217388699948422,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS BEEPS Thin Short 10.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 944587250526461,
 							"file-info": {
 								"purpose": "none"
 							}
@@ -477,73 +405,9 @@
 							}
 						},
 						{
-							"name": "SUCCESS CHIME Bells Sparkle Tune Completion 01.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 440070343732891,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS CHIME Bells Sparkle Tune Short 01.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 599628432953611,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS CHIME Bells Sparkle Tune Completion 06.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 659757431967985,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS CHIME Bells Sparkle Tune Short 05.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 257034325234502,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS CHIME Bells Sparkle Tune Completion 07.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 535774116126558,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS PICKUP Collect Beep Short 02.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 995653284414204,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS CHIME Mystery Magic Spell Sparkle 11.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 759118283318681,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
 							"name": "SUCCESS PICKUP Collect Beep Short 03.ogg",
 							"type": "audio/ogg; codecs=vorbis",
 							"sid": 759627830561029,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
-							"name": "SUCCESS PICKUP Collect Chime 01.ogg",
-							"type": "audio/ogg; codecs=vorbis",
-							"sid": 113197029828124,
 							"file-info": {
 								"purpose": "none"
 							}

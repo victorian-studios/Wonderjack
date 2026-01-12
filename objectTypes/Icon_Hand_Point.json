@@ -374,6 +374,145 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 134,
+						"height": 182,
+						"originX": 0.7164179104477614,
+						"originY": 1.0000000000000002,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5315373,
+						"collisionPoly": {
+							"points": [
+								0.5338846308995562,
+								0,
+								0.9776119402985075,
+								0.17331306010551295,
+								0.9392900363049616,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0.38180477803119317,
+								0,
+								0.1836800516045799,
+								0.23336022589753935,
+								0.05582048978275393
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 863923132835462,
+				"name": "The Tweedles",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 92,
+						"height": 174,
+						"originX": 0.576086956521739,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1965226,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0.1004753207803036,
+								1,
+								1,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.9782307903939438,
+								0,
+								0.8327647238666361
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 757653868415929,
+				"name": "Caterpillar",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 124,
+						"height": 196,
+						"originX": 0.709677419354839,
+						"originY": 1.020408163265306,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1375470,
+						"collisionPoly": {
+							"points": [
+								0.13766797041397205,
+								0,
+								0.29063238198505204,
+								0.0034934551437903675,
+								0.43778801843317966,
+								0.036647510989955556,
+								1,
+								0.36818806945160737,
+								0.9237888703868644,
+								0.8851457550529237,
+								0.8056771095534987,
+								0.966189002676883,
+								0.3971265925725128,
+								1,
+								0.1609030709057816,
+								1,
+								0,
+								0.9993430585230483,
+								0,
+								0.8654989071440851,
+								0,
+								0.48361330091603427
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 362678192840531,
+				"name": "Jabberwock",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
 			}
 		],
 		"subfolders": []

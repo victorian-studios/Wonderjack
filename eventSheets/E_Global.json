@@ -493,7 +493,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 558204354128658,
+									"sid": 349322837792845,
 									"parameters": {
 										"group-name": "\"Player's Turn / Actions\"",
 										"state": "activated"

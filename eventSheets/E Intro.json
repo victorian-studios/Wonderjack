@@ -2,6 +2,16 @@
 	"name": "E Intro",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Loaded",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 101950289459526
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -145,6 +155,14 @@
 					"id": "on-any-click",
 					"objectClass": "Mouse",
 					"sid": 778447012920246
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 706228601629968,
+					"parameters": {
+						"variable": "Loaded"
+					}
 				}
 			],
 			"actions": [
@@ -163,6 +181,35 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 940248898060547
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 999122413920138,
+					"parameters": {
+						"variable": "Loaded"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-font-size",
+					"objectClass": "Text_Loading",
+					"sid": 214178668560245,
+					"parameters": {
+						"size-pt": "Self.FaceSize + ( Self.Sine.Value / 100 )"
+					}
+				}
+			],
+			"sid": 979144549195417
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "preloads-complete",
 					"objectClass": "Audio",
 					"sid": 631522298935783
@@ -176,9 +223,203 @@
 					"parameters": {
 						"text": "\"Click anywhere to start!\""
 					}
+				},
+				{
+					"id": "set-active",
+					"objectClass": "Text_Loading",
+					"sid": 143341235236932,
+					"behaviorType": "Sine",
+					"parameters": {
+						"state": "active"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 647322225426771,
+					"parameters": {
+						"variable": "Loaded",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 398989371854165
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 385179755937137,
+					"parameters": {
+						"interval-seconds": "0.5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 465053676625644,
+					"parameters": {
+						"variable": "Loaded"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 257489301900745,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "text_dot",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 655077171889879
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 462859939072319,
+							"parameters": {
+								"variable": "text_dot",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Loading",
+							"sid": 944867092020175,
+							"parameters": {
+								"text": "\"Loading...\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 919238203281342,
+							"parameters": {
+								"variable": "text_dot",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 207885736724965
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 223019212973004,
+							"parameters": {
+								"variable": "text_dot",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Loading",
+							"sid": 801365695390071,
+							"parameters": {
+								"text": "\"Loading..\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 192077016186921,
+							"parameters": {
+								"variable": "text_dot",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 349537133530343
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 175527723567910,
+							"parameters": {
+								"variable": "text_dot",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Loading",
+							"sid": 759803273442113,
+							"parameters": {
+								"text": "\"Loading.\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 912929593706380,
+							"parameters": {
+								"variable": "text_dot",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 330887665877536
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 848441811888270,
+							"parameters": {
+								"variable": "text_dot",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Loading",
+							"sid": 605261838263646,
+							"parameters": {
+								"text": "\"Loading\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 313151689330708,
+							"parameters": {
+								"variable": "text_dot",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 130534340145048
+				}
+			]
 		},
 		{
 			"eventType": "block",
