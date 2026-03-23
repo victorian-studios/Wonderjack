@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 46602,
+	"savedWithRelease": 47602,
 	"name": "GameJamPlus (2025)",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -215,7 +215,14 @@
 			"Text_Loading",
 			"Text_Static_Generic",
 			"Txt_debug2",
-			"A_TheRng"
+			"A_TheRng",
+			"Bkg_Bkg",
+			"Sprite",
+			"Bkg_Main_Level2",
+			"book",
+			"Btn_Story_Yes",
+			"Btn_Story_No",
+			"Btn_Story_Next"
 		],
 		"subfolders": []
 	},
@@ -234,7 +241,8 @@
 			"Bank",
 			"Credits",
 			"Menu",
-			"Intro"
+			"Intro",
+			"Story"
 		],
 		"subfolders": []
 	},
@@ -245,7 +253,8 @@
 			"E_Menu",
 			"E_Credits",
 			"Test",
-			"E Intro"
+			"E Intro",
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},
@@ -748,6 +757,10 @@
 		],
 		"subfolders": []
 	},
+	"models3d": {
+		"items": [],
+		"subfolders": []
+	},
 	"properties": {
 		"description": "",
 		"version": "1.0.0.0",
@@ -787,6 +800,7 @@
 		"multitexturing": "auto",
 		"gpuPreference": "high-performance",
 		"framerateMode": "vsync",
+		"fixedFramerate": 30,
 		"sampling": "trilinear",
 		"downscaling": "medium",
 		"renderingMode": "auto",

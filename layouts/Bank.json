@@ -65,8 +65,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -133,8 +133,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -196,8 +196,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -262,8 +262,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -318,8 +318,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -389,8 +389,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -443,8 +443,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -508,8 +508,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -570,8 +570,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -640,8 +640,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -689,7 +689,7 @@
 						"preview": {
 							"transformX": 0,
 							"transformY": 0,
-							"transformZElevation": 0,
+							"transformZ": 0,
 							"transformW": 2.220446049250313e-16,
 							"transformH": 2.220446049250313e-16,
 							"transformA": 0,
@@ -718,8 +718,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1008,7 +1008,7 @@
 						"preview": {
 							"transformX": 0,
 							"transformY": 0,
-							"transformZElevation": 0,
+							"transformZ": 0,
 							"transformW": 0,
 							"transformH": 0,
 							"transformA": 0,
@@ -1037,8 +1037,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1086,7 +1086,7 @@
 						"preview": {
 							"transformX": 0,
 							"transformY": 0,
-							"transformZElevation": 0,
+							"transformZ": 0,
 							"transformW": 2.220446049250313e-16,
 							"transformH": 2.220446049250313e-16,
 							"transformA": 0,
@@ -1115,8 +1115,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1172,8 +1172,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1209,8 +1209,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1269,8 +1269,8 @@
 							1,
 							1
 						],
-						"angle": 4.71238898038469,
-						"zElevation": 0
+						"z": 0,
+						"angle": 4.71238898038469
 					}
 				},
 				{
@@ -1334,8 +1334,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1387,8 +1387,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 3386,
-						"y": 789,
+						"x": 3381,
+						"y": 658,
 						"width": 554.4606240713224,
 						"height": 804.2854188210962,
 						"originX": 0.5,
@@ -1399,8 +1399,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1464,8 +1464,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1529,8 +1529,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1594,8 +1594,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				},
 				{
@@ -1659,8 +1659,8 @@
 							1,
 							1
 						],
-						"angle": 0,
-						"zElevation": 0
+						"z": 0,
+						"angle": 0
 					}
 				}
 			],
@@ -1682,6 +1682,7 @@
 				1
 			],
 			"isTransparent": false,
+			"sampling": "auto",
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
@@ -1704,6 +1705,7 @@
 	"width": 3840,
 	"height": 2160,
 	"unboundedScrolling": false,
+	"sampling": "auto",
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",

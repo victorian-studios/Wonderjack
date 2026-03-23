@@ -53,11 +53,11 @@
 						"child": "Enemy_Extra_Anim",
 						"transform-x": true,
 						"transform-y": true,
+						"transform-z-elevation": true,
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
 						"transform-o": false,
-						"transform-z-elevation": true,
 						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
@@ -105,11 +105,11 @@
 						"child": "Enemy_Extra_Anim",
 						"transform-x": true,
 						"transform-y": true,
+						"transform-z-elevation": true,
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
 						"transform-o": false,
-						"transform-z-elevation": true,
 						"transform-visibility": false,
 						"destroy-with-parent": false
 					}

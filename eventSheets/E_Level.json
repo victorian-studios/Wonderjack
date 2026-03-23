@@ -8014,7 +8014,8 @@
 													"parameters": {
 														"which": "nearest",
 														"x": "Deck_Numb_Sprite.X",
-														"y": "Deck_Numb_Sprite.Y"
+														"y": "Deck_Numb_Sprite.Y",
+														"pick-all-tied": false
 													}
 												}
 											],
@@ -8089,7 +8090,8 @@
 													"parameters": {
 														"which": "nearest",
 														"x": "Deck_Numb_Sprite.X",
-														"y": "Deck_Numb_Sprite.Y"
+														"y": "Deck_Numb_Sprite.Y",
+														"pick-all-tied": false
 													}
 												}
 											],
@@ -8208,7 +8210,8 @@
 															"parameters": {
 																"which": "nearest",
 																"x": "Deck_Numb_Sprite.X",
-																"y": "Deck_Numb_Sprite.Y"
+																"y": "Deck_Numb_Sprite.Y",
+																"pick-all-tied": false
 															}
 														}
 													],
@@ -8393,7 +8396,8 @@
 															"parameters": {
 																"which": "nearest",
 																"x": "Deck_Numb_Sprite.X",
-																"y": "Deck_Numb_Sprite.Y"
+																"y": "Deck_Numb_Sprite.Y",
+																"pick-all-tied": false
 															}
 														}
 													],
@@ -11608,7 +11612,8 @@
 									"parameters": {
 										"which": "nearest",
 										"x": "Mouse.X",
-										"y": "Hand_Player.Y - 40"
+										"y": "Hand_Player.Y - 40",
+										"pick-all-tied": false
 									}
 								}
 							],
@@ -26543,7 +26548,18 @@
 																{
 																	"id": "compare-two-values",
 																	"objectClass": "System",
-																	"sid": 891440678712173,
+																	"sid": 833257600761138,
+																	"parameters": {
+																		"first-value": "TheNumber - Table_Player.Visible_Count",
+																		"comparison": 3,
+																		"second-value": "10"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 198265285409010,
+																	"disabled": true,
 																	"parameters": {
 																		"first-value": "Table_Player.Visible_Count + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1)",
 																		"comparison": 4,
@@ -26631,7 +26647,18 @@
 																{
 																	"id": "compare-two-values",
 																	"objectClass": "System",
-																	"sid": 928206104990656,
+																	"sid": 873281302229207,
+																	"parameters": {
+																		"first-value": "TheNumber - Table_Player.Visible_Count",
+																		"comparison": 3,
+																		"second-value": "5"
+																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 888486725518663,
+																	"disabled": true,
 																	"parameters": {
 																		"first-value": "Table_Player.Visible_Count + A_Enemy_Choices.At(A_Enemy_Choices.Width- 1)",
 																		"comparison": 4,
@@ -26864,6 +26891,12 @@
 									"sid": 370902017769677,
 									"children": [
 										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [],
+											"sid": 818898562928398
+										},
+										{
 											"eventType": "comment",
 											"text": "Se a CPU jogar essa carta quando o player já tiver visivelmente estourado a meta, significa que: ao jogar esse poder, provavelmente vai o ajudar o player a vencer a rodada atual! Portanto, é importante não jogar esse poder sem verificar essa condição de possível derrota do player.",
 											"text-color": [
@@ -26888,6 +26921,16 @@
 												},
 												{
 													"id": "compare-instance-variable",
+													"objectClass": "Table_Player",
+													"sid": 723063176909327,
+													"parameters": {
+														"instance-variable": "Visible_Count",
+														"comparison": 4,
+														"value": "0"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
 													"objectClass": "Hand_Player",
 													"sid": 443622424568069,
 													"parameters": {
@@ -26902,7 +26945,42 @@
 											"children": [
 												{
 													"eventType": "comment",
-													"text": "Se for destemido..."
+													"text": "Se a CPU for caótica, joga sem se importar com o resto"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 232364262252512,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"comparison": 5,
+																"value": "10"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "Enemy Use Power",
+															"sid": 761058393128725,
+															"parameters": [
+																"the_id"
+															]
+														}
+													],
+													"sid": 627773576467336
+												},
+												{
+													"eventType": "comment",
+													"text": "Se for destemido, joga o poder",
+													"text-color": [
+														0,
+														1,
+														0,
+														1
+													]
 												},
 												{
 													"eventType": "block",
@@ -26918,84 +26996,16 @@
 															}
 														}
 													],
-													"actions": [],
-													"sid": 700231544667640,
-													"children": [
+													"actions": [
 														{
-															"eventType": "comment",
-															"text": "Se o player tiver alguma carta visível, esse poder pode funcionar",
-															"text-color": [
-																0,
-																1,
-																0,
-																1
+															"callFunction": "Enemy Use Power",
+															"sid": 900988647034531,
+															"parameters": [
+																"the_id"
 															]
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Table_Player",
-																	"sid": 502670371924269,
-																	"parameters": {
-																		"instance-variable": "Visible_Count",
-																		"comparison": 4,
-																		"value": "0"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"callFunction": "Enemy Use Power",
-																	"sid": 181524845005849,
-																	"parameters": [
-																		"the_id"
-																	]
-																}
-															],
-															"sid": 985591363212711
-														},
-														{
-															"eventType": "comment",
-															"text": "Caso contrário, o player só tem cartas escondidas",
-															"text-color": [
-																1,
-																0,
-																0,
-																1
-															]
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "else",
-																	"objectClass": "System",
-																	"sid": 508316665676070
-																}
-															],
-															"actions": [
-																{
-																	"callFunction": "Enemy Check Powers",
-																	"sid": 511303940917284,
-																	"parameters": [
-																		"\"\""
-																	]
-																},
-																{
-																	"id": "log",
-																	"objectClass": "Browser",
-																	"sid": 629315034145093,
-																	"parameters": {
-																		"type": "log",
-																		"message": "\"A quantidade visível do jogador é menor ou igual a zero (\"&Table_Player.Visible_Count&\"), e por isso vou recusar este poder\""
-																	}
-																}
-															],
-															"sid": 728220834373905
 														}
-													]
+													],
+													"sid": 700231544667640
 												},
 												{
 													"eventType": "comment",
@@ -27020,7 +27030,7 @@
 													"children": [
 														{
 															"eventType": "comment",
-															"text": "Se for o último turno ou a CPU for caótica , joga essa carta que provavelmente vai destruir a soma final do player",
+															"text": "Se for o último turno , joga essa carta que provavelmente vai destruir a soma final do player",
 															"text-color": [
 																0,
 																1,
@@ -27040,16 +27050,6 @@
 																		"comparison": 0,
 																		"value": "1"
 																	}
-																},
-																{
-																	"id": "compare-eventvar",
-																	"objectClass": "System",
-																	"sid": 554800503204697,
-																	"parameters": {
-																		"variable": "EnemyAI_Chaos",
-																		"comparison": 5,
-																		"value": "10"
-																	}
 																}
 															],
 															"actions": [
@@ -27061,8 +27061,7 @@
 																	]
 																}
 															],
-															"sid": 691539878968172,
-															"isOrBlock": true
+															"sid": 691539878968172
 														},
 														{
 															"eventType": "comment",
@@ -27132,6 +27131,16 @@
 												},
 												{
 													"id": "compare-instance-variable",
+													"objectClass": "Table_Player",
+													"sid": 174918981503362,
+													"parameters": {
+														"instance-variable": "Visible_Count",
+														"comparison": 3,
+														"value": "0"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
 													"objectClass": "Hand_Player",
 													"sid": 577551122452900,
 													"parameters": {
@@ -27152,10 +27161,10 @@
 												{
 													"id": "log",
 													"objectClass": "Browser",
-													"sid": 732475265131700,
+													"sid": 390390486505160,
 													"parameters": {
 														"type": "log",
-														"message": "\"A quantidade visível é maior que a meta (\"&Table_Player.Visible_Count&\"/ meta \"&TheNumber&\") ou o jogador está protegido (\"&Hand_Player.Protect_Turns&\") e por isso eu vou recusar este poder\""
+														"message": "\"A quantidade visível é maior que a meta (\"&Table_Player.Visible_Count&\"/ meta \"&TheNumber&\"), ou igual a zero ou o jogador está protegido (\"&Hand_Player.Protect_Turns&\") e por isso eu vou recusar este poder\""
 													}
 												}
 											],
@@ -27388,6 +27397,16 @@
 																"comparison": 0,
 																"value": "\"fearless\""
 															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 596994805121701,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"comparison": 5,
+																"value": "10"
+															}
 														}
 													],
 													"actions": [
@@ -27408,7 +27427,8 @@
 															}
 														}
 													],
-													"sid": 668468265909635
+													"sid": 668468265909635,
+													"isOrBlock": true
 												},
 												{
 													"eventType": "comment",
@@ -27448,6 +27468,16 @@
 																		"comparison": 2,
 																		"value": "TheNumber"
 																	}
+																},
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 388889765043603,
+																	"parameters": {
+																		"first-value": "EnemyNumbers - Table_CPU.Visible_Count",
+																		"comparison": 0,
+																		"second-value": "12"
+																	}
 																}
 															],
 															"actions": [
@@ -27468,7 +27498,8 @@
 																	}
 																}
 															],
-															"sid": 840229332613647
+															"sid": 840229332613647,
+															"isOrBlock": true
 														},
 														{
 															"eventType": "comment",
@@ -27483,6 +27514,16 @@
 														{
 															"eventType": "block",
 															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 501508020204188,
+																	"parameters": {
+																		"first-value": "EnemyNumbers - Table_CPU.Visible_Count",
+																		"comparison": 1,
+																		"second-value": "12"
+																	}
+																},
 																{
 																	"id": "compare-eventvar",
 																	"objectClass": "System",
@@ -27717,11 +27758,11 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 138012707047189,
+															"sid": 996211589656043,
 															"parameters": {
 																"first-value": "TheNumber - EnemyNumbers",
 																"comparison": 4,
-																"second-value": "4"
+																"second-value": "5"
 															}
 														}
 													],
@@ -30110,11 +30151,11 @@
 																"child": "Enemy_Extra_Anim",
 																"transform-x": true,
 																"transform-y": true,
+																"transform-z-elevation": true,
 																"transform-w": true,
 																"transform-h": true,
 																"transform-a": true,
 																"transform-o": false,
-																"transform-z-elevation": true,
 																"transform-visibility": false,
 																"destroy-with-parent": false
 															}
@@ -30166,11 +30207,11 @@
 																"child": "Enemy_Extra_Anim",
 																"transform-x": true,
 																"transform-y": true,
+																"transform-z-elevation": true,
 																"transform-w": true,
 																"transform-h": true,
 																"transform-a": true,
 																"transform-o": false,
-																"transform-z-elevation": true,
 																"transform-visibility": false,
 																"destroy-with-parent": false
 															}

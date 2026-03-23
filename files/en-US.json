@@ -18,7 +18,7 @@
             "page_2": "[u][b]Chapter 2[/b][/u]\n\n[b]The Turn[/b]\n\nOn your turn, you can draw a numeric card or draw/play a Power Card, which grants you abilities during matches.",
             "page_3": "[u][b]Chapter 3[/b][/u]\n\n[b]The Relics[/b]\n\nAfter finishing a match, you choose a relic that will passively help you for the rest of the game.",
             "page_4": "[u][b]Chapter 4[/b][/u]\n\n[b]The Loser[/b]\n\nYou lose the round if the total value of your cards exceeds 21, or if your opponent obtains a higher sum than yours.",
-            "page_5": "[u][b]Chapter 5[/b][/u]\n\n[b]The Tie[/b]\n\nWhen there's a tie or both players exceed 21, no point is awarded no point is awarded, and a new round starts."
+            "page_5": "[u][b]Chapter 5[/b][/u]\n\n[b]The Tie[/b]\n\nWhen there's a tie or both players exceed 21, no point is awarded, and a new round starts."
         },
         "options": {
             "resume": "Resume",
