@@ -389,7 +389,8 @@
 					"callFunction": "Transition",
 					"sid": 818076671718146,
 					"parameters": [
-						true
+						true,
+						false
 					]
 				},
 				{
@@ -17916,10 +17917,10 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
-									"sid": 840169193571660,
+									"sid": 177549769593871,
 									"parameters": {
 										"animation": "\"Player\"",
-										"from": "beginning"
+										"from": "current-frame"
 									}
 								},
 								{
@@ -18010,10 +18011,10 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
-									"sid": 273595202125884,
+									"sid": 341314308595020,
 									"parameters": {
 										"animation": "\"Player\"",
-										"from": "beginning"
+										"from": "current-frame"
 									}
 								}
 							],
@@ -18422,10 +18423,10 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
-									"sid": 736467948854891,
+									"sid": 138342005966585,
 									"parameters": {
 										"animation": "\"Enemy\"",
-										"from": "beginning"
+										"from": "current-frame"
 									}
 								}
 							],
@@ -18458,10 +18459,10 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Candle_Flame",
-									"sid": 458085653937468,
+									"sid": 953600317292689,
 									"parameters": {
 										"animation": "\"Enemy\"",
-										"from": "beginning"
+										"from": "current-frame"
 									}
 								},
 								{
@@ -29132,6 +29133,13 @@
 							"initialValue": "false",
 							"comment": "true = primeira partida / false = segunda partida em diante",
 							"sid": 654641089050691
+						},
+						{
+							"name": "Tut",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "true - ativa o tutorial",
+							"sid": 472289730348543
 						}
 					],
 					"eventType": "function-block",
@@ -29291,7 +29299,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Level 1"
+							"text": "Level 0 - Tutorial"
 						},
 						{
 							"eventType": "block",
@@ -29303,9 +29311,26 @@
 									"parameters": {
 										"variable": "Start"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 566931530643416,
+									"parameters": {
+										"variable": "Tut"
+									}
 								}
 							],
 							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 856462790539097,
+									"parameters": {
+										"variable": "Match",
+										"value": "0"
+									}
+								},
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Enemy",
@@ -29425,7 +29450,7 @@
 							"children": [
 								{
 									"eventType": "comment",
-									"text": "Mad Hatter"
+									"text": "White Queen"
 								},
 								{
 									"eventType": "block",
@@ -29433,21 +29458,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 305114117802776,
+											"sid": 304695683107280,
 											"parameters": {
 												"variable": "Match",
 												"comparison": 0,
-												"value": "1"
-											}
-										},
-										{
-											"id": "compare-at-x",
-											"objectClass": "A_TheRng",
-											"sid": 869367594186810,
-											"parameters": {
-												"x": "Match - 1",
-												"comparison": 0,
-												"value": "1"
+												"value": "0"
 											}
 										}
 									],
@@ -29455,18 +29470,18 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 244004359114972,
+											"sid": 128461247111714,
 											"parameters": {
 												"variable": "EnemyName",
-												"value": "\"Mad Hatter\""
+												"value": "\"White Queen\""
 											}
 										},
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text_Turn",
-											"sid": 546336797069927,
+											"sid": 569085875470503,
 											"parameters": {
-												"text": "Internationalization.Lookup(\"common.new_match\", EnemyName)",
+												"text": "Internationalization.Lookup(\"common.tut_start\")",
 												"duration": "1.5"
 											}
 										},
@@ -29552,136 +29567,6 @@
 										}
 									],
 									"sid": 854516216986162
-								},
-								{
-									"eventType": "comment",
-									"text": "March Hare"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 492257264715302,
-											"parameters": {
-												"variable": "Match",
-												"comparison": 0,
-												"value": "1"
-											}
-										},
-										{
-											"id": "compare-at-x",
-											"objectClass": "A_TheRng",
-											"sid": 972677170314854,
-											"parameters": {
-												"x": "Match - 1",
-												"comparison": 0,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 253939104760023,
-											"parameters": {
-												"variable": "EnemyName",
-												"value": "\"March Hare\""
-											}
-										},
-										{
-											"id": "typewriter-text",
-											"objectClass": "Text_Turn",
-											"sid": 252870399149505,
-											"parameters": {
-												"text": "Internationalization.Lookup(\"common.new_match\", EnemyName)",
-												"duration": "1.5"
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "mesa",
-											"sid": 475026229588410,
-											"parameters": {
-												"frame-number": "0"
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Enemy",
-											"sid": 261758061696832,
-											"parameters": {
-												"animation": "EnemyName",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Enemy",
-											"sid": 153338110374374,
-											"parameters": {
-												"x": "956",
-												"y": "665"
-											}
-										},
-										{
-											"id": "set-period",
-											"objectClass": "Enemy",
-											"sid": 398855018612500,
-											"behaviorType": "Sine",
-											"parameters": {
-												"period": "6"
-											}
-										},
-										{
-											"id": "set-magnitude",
-											"objectClass": "Enemy",
-											"sid": 336762490614481,
-											"behaviorType": "Sine",
-											"parameters": {
-												"magnitude": "10"
-											}
-										},
-										{
-											"id": "set-cycle-position",
-											"objectClass": "Enemy",
-											"sid": 201640103088467,
-											"behaviorType": "Sine",
-											"parameters": {
-												"cycle-position": "0"
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "Enemy",
-											"sid": 125197665726418,
-											"parameters": {
-												"width": "480",
-												"height": "600"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 654876659046814,
-											"parameters": {
-												"variable": "EnemyAI_Style",
-												"value": "\"fearless\""
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 430225644514449,
-											"parameters": {
-												"variable": "EnemyAI_Chaos",
-												"value": "25"
-											}
-										}
-									],
-									"sid": 134375652308054
 								},
 								{
 									"eventType": "block",
@@ -29787,6 +29672,511 @@
 						},
 						{
 							"eventType": "comment",
+							"text": "Level 1"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 217019399841744,
+									"parameters": {
+										"variable": "Start"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 901555794903414,
+									"parameters": {
+										"variable": "Tut"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Enemy",
+									"sid": 926330114972406,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "1"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Enemy",
+									"sid": 217911415563005,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Enemy",
+									"sid": 651577429013520,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text_Turn",
+									"sid": 809633231613123,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Text_Turn",
+									"sid": 782327742913658,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "0.5"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Text_Turn",
+									"sid": 722639534295029,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Text_Turn",
+									"sid": 951479813736174,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Text_Turn",
+									"sid": 864198501680020,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Turn",
+									"sid": 650291690905370,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 611258382248050,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 146329220069783,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "0.5"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 940319300411959,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 217297926770059,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 765486251720961,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 407082144752008,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Mad Hatter"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 785297201955488,
+											"parameters": {
+												"variable": "Match",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-at-x",
+											"objectClass": "A_TheRng",
+											"sid": 181039716504093,
+											"parameters": {
+												"x": "Match - 1",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 476689391582955,
+											"parameters": {
+												"variable": "EnemyName",
+												"value": "\"Mad Hatter\""
+											}
+										},
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text_Turn",
+											"sid": 762814555045529,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.new_match\", EnemyName)",
+												"duration": "1.5"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "mesa",
+											"sid": 625926047425836,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 223585977115254,
+											"parameters": {
+												"animation": "EnemyName",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Enemy",
+											"sid": 307061984300543,
+											"parameters": {
+												"x": "969",
+												"y": "717"
+											}
+										},
+										{
+											"id": "set-period",
+											"objectClass": "Enemy",
+											"sid": 845030289496015,
+											"behaviorType": "Sine",
+											"parameters": {
+												"period": "6"
+											}
+										},
+										{
+											"id": "set-magnitude",
+											"objectClass": "Enemy",
+											"sid": 242031431280418,
+											"behaviorType": "Sine",
+											"parameters": {
+												"magnitude": "10"
+											}
+										},
+										{
+											"id": "set-cycle-position",
+											"objectClass": "Enemy",
+											"sid": 930232088192220,
+											"behaviorType": "Sine",
+											"parameters": {
+												"cycle-position": "0"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Enemy",
+											"sid": 434794154878235,
+											"parameters": {
+												"width": "445",
+												"height": "635"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 391744061170471,
+											"parameters": {
+												"variable": "EnemyAI_Style",
+												"value": "\"fearless\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 347788245144749,
+											"parameters": {
+												"variable": "EnemyAI_Chaos",
+												"value": "15"
+											}
+										}
+									],
+									"sid": 505679416549857
+								},
+								{
+									"eventType": "comment",
+									"text": "March Hare"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 820450421890454,
+											"parameters": {
+												"variable": "Match",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-at-x",
+											"objectClass": "A_TheRng",
+											"sid": 829952771735623,
+											"parameters": {
+												"x": "Match - 1",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 979270198631746,
+											"parameters": {
+												"variable": "EnemyName",
+												"value": "\"March Hare\""
+											}
+										},
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text_Turn",
+											"sid": 837752179391891,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.new_match\", EnemyName)",
+												"duration": "1.5"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "mesa",
+											"sid": 477075214031951,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 555634192425224,
+											"parameters": {
+												"animation": "EnemyName",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Enemy",
+											"sid": 780202959400650,
+											"parameters": {
+												"x": "956",
+												"y": "665"
+											}
+										},
+										{
+											"id": "set-period",
+											"objectClass": "Enemy",
+											"sid": 870666123860192,
+											"behaviorType": "Sine",
+											"parameters": {
+												"period": "6"
+											}
+										},
+										{
+											"id": "set-magnitude",
+											"objectClass": "Enemy",
+											"sid": 486364737095734,
+											"behaviorType": "Sine",
+											"parameters": {
+												"magnitude": "10"
+											}
+										},
+										{
+											"id": "set-cycle-position",
+											"objectClass": "Enemy",
+											"sid": 260821317401780,
+											"behaviorType": "Sine",
+											"parameters": {
+												"cycle-position": "0"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Enemy",
+											"sid": 679362022325754,
+											"parameters": {
+												"width": "480",
+												"height": "600"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 147188524104050,
+											"parameters": {
+												"variable": "EnemyAI_Style",
+												"value": "\"fearless\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 804762331890561,
+											"parameters": {
+												"variable": "EnemyAI_Chaos",
+												"value": "25"
+											}
+										}
+									],
+									"sid": 839603815409904
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 856706794471030,
+											"parameters": {
+												"seconds": "2.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text_Turn",
+											"sid": 188036650387666,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
+												"duration": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 268914860635052,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Text_Turn",
+											"sid": 646769816945678,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Text_Turn",
+											"sid": 863368089705431,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0.5"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Text_Turn",
+											"sid": 194859616946969,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.5"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Text_Turn",
+											"sid": 573008088864276,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 324993162232059,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 814019592522341,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0.5"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 710193957502250,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.5"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 467338705875564,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 849057214469855
+								}
+							]
+						},
+						{
+							"eventType": "comment",
 							"text": "Level 2, 3, ? e Boss"
 						},
 						{
@@ -29798,6 +30188,15 @@
 									"sid": 907271182277126,
 									"parameters": {
 										"variable": "Start"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 623528718353846,
+									"parameters": {
+										"variable": "Tut"
 									},
 									"isInverted": true
 								}
@@ -32743,6 +33142,7 @@
 									"callFunction": "Transition",
 									"sid": 217437980550714,
 									"parameters": [
+										false,
 										false
 									]
 								},
@@ -33768,6 +34168,184 @@
 				}
 			],
 			"sid": 817672841300944
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Talk System",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "Talk",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Name",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 658148083109728
+						},
+						{
+							"name": "Loc_Txt",
+							"type": "string",
+							"initialValue": "",
+							"comment": "escrever na formatação \"string.sei_lá.index\"",
+							"sid": 472197869452869
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 430519024862080,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-opacity",
+									"objectClass": "Bkg_Talk",
+									"sid": 678436117689109,
+									"parameters": {
+										"comparison": 0,
+										"opacity": "100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Bkg_Talk",
+									"sid": 173267419776910,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "0"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Bkg_Talk",
+									"sid": 382648881393730,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Bkg_Talk",
+									"sid": 899669148076390,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0.25"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Bkg_Talk",
+									"sid": 261231889501361,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Talk_Name",
+									"sid": 384887598337772,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Talk",
+									"sid": 546564268148360,
+									"parameters": {
+										"text": "\"\""
+									}
+								}
+							],
+							"sid": 449720035200982
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 995534090070258
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "Bkg_Talk",
+									"sid": 494398586638351,
+									"parameters": {
+										"comparison": 0,
+										"opacity": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Bkg_Talk",
+									"sid": 495509259665592,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "0.75"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Bkg_Talk",
+									"sid": 171028425677972,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Bkg_Talk",
+									"sid": 539177370278722,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Bkg_Talk",
+									"sid": 626445558029648,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Talk_Name",
+									"sid": 230250377576840,
+									"parameters": {
+										"text": "Internationalization.Lookup( \"common.enemies.\" & Name)"
+									}
+								},
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Talk",
+									"sid": 974704830307815,
+									"parameters": {
+										"text": "Internationalization.Lookup(Loc_Txt)",
+										"duration": "1.5"
+									}
+								}
+							],
+							"sid": 450241721363727
+						}
+					]
+				}
+			],
+			"sid": 559751586048688
 		},
 		{
 			"eventType": "group",

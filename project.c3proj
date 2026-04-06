@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 47602,
+	"savedWithRelease": 47603,
 	"name": "GameJamPlus (2025)",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -45,6 +45,13 @@
 			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -211,7 +218,7 @@
 			"Icon_power_arrow",
 			"Particle_Arrow",
 			"Tutorial_Num",
-			"Text_Tut",
+			"Text_Talk",
 			"Text_Loading",
 			"Text_Static_Generic",
 			"Txt_debug2",
@@ -222,7 +229,10 @@
 			"book",
 			"Btn_Story_Yes",
 			"Btn_Story_No",
-			"Btn_Story_Next"
+			"Btn_Story_Next",
+			"LocalStorage",
+			"Bkg_Talk",
+			"Text_Talk_Name"
 		],
 		"subfolders": []
 	},
@@ -242,7 +252,8 @@
 			"Credits",
 			"Menu",
 			"Intro",
-			"Story"
+			"Story",
+			"Level_Tut"
 		],
 		"subfolders": []
 	},
@@ -254,7 +265,7 @@
 			"E_Credits",
 			"Test",
 			"E Intro",
-			"Event sheet 1"
+			"E_Story"
 		],
 		"subfolders": []
 	},

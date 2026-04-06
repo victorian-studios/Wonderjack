@@ -27,11 +27,23 @@
             "opt_2": "Performance text"
         },
         "common": {
+            "enemies" : {
+                "White Queen": "White Queen",
+                "Mad Hatter": "Mad Hatter",
+                "March Hare": "March Hare",
+                "Cheshire Cat": "Cheshire Cat",
+                "Caterpillar": "Caterpillar",
+                "Humpty Dumpty": "Humpty Dumpty",
+                "Dodo": "Dodo",
+                "Red Queen": "Red Queen",
+                "Jabberwock": "Jabberwock"
+            },
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
             "power": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
             "power_hand_limit": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
             "number" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
             "number_easy" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board. There're [color=#f5fe05]{0}[/color] cards left in this deck.",
+            "tut_start": "Welcome to the White Queen's Castle",
             "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]. {3} [color=#f5fe05]won[/color] this round!",
             "player_turn": "Alice's Turn",
             "enemy_turn": "{0}'s Turn",

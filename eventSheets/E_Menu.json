@@ -25,7 +25,7 @@
 				},
 				{
 					"id": "set-position",
-					"objectClass": "Text_Tut",
+					"objectClass": "Text_Talk",
 					"sid": 615933661354482,
 					"parameters": {
 						"x": "608",
@@ -34,7 +34,7 @@
 				},
 				{
 					"id": "set-size",
-					"objectClass": "Text_Tut",
+					"objectClass": "Text_Talk",
 					"sid": 706953737105959,
 					"parameters": {
 						"width": "640",
@@ -43,7 +43,7 @@
 				},
 				{
 					"id": "pin-to-object-properties",
-					"objectClass": "Text_Tut",
+					"objectClass": "Text_Talk",
 					"sid": 363509949047146,
 					"behaviorType": "Pin",
 					"parameters": {
@@ -451,7 +451,7 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 182511108458052,
 							"parameters": {
 								"text": "Internationalization.Lookup(\"tutorial.page_\" & Tutorial_Img.AnimationFrame)"
@@ -543,13 +543,13 @@
 							"actions": [
 								{
 									"id": "unpin",
-									"objectClass": "Text_Tut",
+									"objectClass": "Text_Talk",
 									"sid": 869654034600827,
 									"behaviorType": "Pin"
 								},
 								{
 									"id": "set-position",
-									"objectClass": "Text_Tut",
+									"objectClass": "Text_Talk",
 									"sid": 631262204677736,
 									"parameters": {
 										"x": "608",
@@ -558,7 +558,7 @@
 								},
 								{
 									"id": "set-size",
-									"objectClass": "Text_Tut",
+									"objectClass": "Text_Talk",
 									"sid": 381004076643630,
 									"parameters": {
 										"width": "640",
@@ -567,7 +567,7 @@
 								},
 								{
 									"id": "pin-to-object-properties",
-									"objectClass": "Text_Tut",
+									"objectClass": "Text_Talk",
 									"sid": 622926133851790,
 									"behaviorType": "Pin",
 									"parameters": {
@@ -805,7 +805,7 @@
 				},
 				{
 					"id": "set-text",
-					"objectClass": "Text_Tut",
+					"objectClass": "Text_Talk",
 					"sid": 523773042913618,
 					"parameters": {
 						"text": "Internationalization.Lookup(\"tutorial.page_\" & Tutorial_Img.AnimationFrame)"
@@ -871,13 +871,13 @@
 					"actions": [
 						{
 							"id": "unpin",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 326235641831768,
 							"behaviorType": "Pin"
 						},
 						{
 							"id": "set-position",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 401045553294252,
 							"parameters": {
 								"x": "608",
@@ -886,7 +886,7 @@
 						},
 						{
 							"id": "set-size",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 610247213163382,
 							"parameters": {
 								"width": "640",
@@ -895,7 +895,7 @@
 						},
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 457936477968053,
 							"behaviorType": "Pin",
 							"parameters": {
@@ -927,13 +927,13 @@
 					"actions": [
 						{
 							"id": "unpin",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 581493632082515,
 							"behaviorType": "Pin"
 						},
 						{
 							"id": "set-position",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 409274177686692,
 							"parameters": {
 								"x": "976",
@@ -942,7 +942,7 @@
 						},
 						{
 							"id": "set-size",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 940080601043206,
 							"parameters": {
 								"width": "320",
@@ -951,7 +951,7 @@
 						},
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 911796991549926,
 							"behaviorType": "Pin",
 							"parameters": {
@@ -983,13 +983,13 @@
 					"actions": [
 						{
 							"id": "unpin",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 156374296901583,
 							"behaviorType": "Pin"
 						},
 						{
 							"id": "set-position",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 552615067435120,
 							"parameters": {
 								"x": "576",
@@ -998,7 +998,7 @@
 						},
 						{
 							"id": "set-size",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 805916492374778,
 							"parameters": {
 								"width": "720",
@@ -1007,7 +1007,7 @@
 						},
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 742175642212524,
 							"behaviorType": "Pin",
 							"parameters": {
@@ -1039,13 +1039,13 @@
 					"actions": [
 						{
 							"id": "unpin",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 673233859881917,
 							"behaviorType": "Pin"
 						},
 						{
 							"id": "set-position",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 220027074590020,
 							"parameters": {
 								"x": "576",
@@ -1054,7 +1054,7 @@
 						},
 						{
 							"id": "set-size",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 826802328016121,
 							"parameters": {
 								"width": "720",
@@ -1063,7 +1063,7 @@
 						},
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 342634523007828,
 							"behaviorType": "Pin",
 							"parameters": {
@@ -1095,13 +1095,13 @@
 					"actions": [
 						{
 							"id": "unpin",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 263036553807958,
 							"behaviorType": "Pin"
 						},
 						{
 							"id": "set-position",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 658653684419059,
 							"parameters": {
 								"x": "576",
@@ -1110,7 +1110,7 @@
 						},
 						{
 							"id": "set-size",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 815231167485667,
 							"parameters": {
 								"width": "720",
@@ -1119,7 +1119,7 @@
 						},
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "Text_Tut",
+							"objectClass": "Text_Talk",
 							"sid": 626183614241484,
 							"behaviorType": "Pin",
 							"parameters": {

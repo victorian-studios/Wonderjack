@@ -3,6 +3,16 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "First_Time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 342755867635349
+		},
+		{
+			"eventType": "variable",
 			"name": "Loaded",
 			"type": "boolean",
 			"initialValue": "false",
@@ -144,6 +154,14 @@
 							"path": "Credits/18 - Phantom's Requiem (Loop)"
 						}
 					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 665631830664724,
+					"parameters": {
+						"key": "\"first_time\""
+					}
 				}
 			],
 			"sid": 204975896251312
@@ -165,17 +183,59 @@
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 278899729238267,
+			"children": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 856489820104398,
-					"parameters": {
-						"layout": "Menu"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 191796271728517,
+							"parameters": {
+								"variable": "First_Time"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 136678488651357,
+							"parameters": {
+								"layout": "Story"
+							}
+						}
+					],
+					"sid": 291166135524767
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 291713693898636,
+							"parameters": {
+								"variable": "First_Time"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 875603546257876,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 512403521792386
 				}
-			],
-			"sid": 278899729238267
+			]
 		},
 		{
 			"eventType": "block",
@@ -540,6 +600,65 @@
 				}
 			],
 			"sid": 901239863312816
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 142806874204737,
+					"parameters": {
+						"key": "\"first_time\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 859853832201146,
+					"parameters": {
+						"variable": "First_Time",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 865818273005886
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 709295278838653,
+					"parameters": {
+						"key": "\"first_time\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 657761069134604,
+					"parameters": {
+						"key": "\"first_time\"",
+						"value": "\"1\""
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 680680006992487,
+					"parameters": {
+						"variable": "First_Time",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 901470634782858
 		}
 	],
 	"sid": 364052280707711

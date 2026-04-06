@@ -66,8 +66,8 @@
 					"world": {
 						"x": 353,
 						"y": 922,
-						"width": 250,
-						"height": 250,
+						"width": 172,
+						"height": 80,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -103,8 +103,8 @@
 					"world": {
 						"x": 658,
 						"y": 925,
-						"width": 250,
-						"height": 250,
+						"width": 172,
+						"height": 80,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -138,10 +138,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1649,
-						"y": 941,
-						"width": 250,
-						"height": 250,
+						"x": 1694,
+						"y": 910,
+						"width": 179,
+						"height": 198,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -200,5 +200,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "E_Story"
 }

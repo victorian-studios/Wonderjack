@@ -1,0 +1,16 @@
+{
+	"name": "Text_Talk_Name",
+	"plugin-id": "Text",
+	"sid": 944320034646632,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 105204543592528
+		}
+	],
+	"effectTypes": []
+}

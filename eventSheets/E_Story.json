@@ -1,0 +1,124 @@
+{
+	"name": "E_Story",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 723918610255096
+				}
+			],
+			"actions": [],
+			"sid": 949214017353941
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 680303986791408,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Story_Yes"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 153444943313409
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 588318658978077,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Story_No"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 928809303330769
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 358949897722406,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Story_Next"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "book",
+					"sid": 656249577270354,
+					"parameters": {
+						"animation": "\"\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 765197097270823
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 614870638743047,
+					"parameters": {
+						"object": "Buttons"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Buttons",
+					"sid": 371736588060605,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 449890381178914
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 740051927795589
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Buttons",
+					"sid": 711546988720930,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 738063011377441
+		}
+	],
+	"sid": 749957245286818
+}
