@@ -232,7 +232,8 @@
 			"Btn_Story_Next",
 			"LocalStorage",
 			"Bkg_Talk",
-			"Text_Talk_Name"
+			"Text_Talk_Name",
+			"Sprite2"
 		],
 		"subfolders": []
 	},
@@ -252,8 +253,7 @@
 			"Credits",
 			"Menu",
 			"Intro",
-			"Story",
-			"Level_Tut"
+			"Story"
 		],
 		"subfolders": []
 	},

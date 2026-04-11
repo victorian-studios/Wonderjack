@@ -10,6 +10,11 @@
 			"behaviorId": "Fade",
 			"name": "Fade",
 			"sid": 776194133581348
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 460220044097546
 		}
 	],
 	"effectTypes": [],

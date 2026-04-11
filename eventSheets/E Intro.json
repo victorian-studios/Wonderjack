@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "First_Time",
 			"type": "boolean",
-			"initialValue": "false",
+			"initialValue": "true",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -624,7 +624,8 @@
 					}
 				}
 			],
-			"sid": 865818273005886
+			"sid": 865818273005886,
+			"disabled": true
 		},
 		{
 			"eventType": "block",

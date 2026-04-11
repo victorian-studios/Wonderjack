@@ -1093,7 +1093,7 @@
 						"x": 256,
 						"y": 106,
 						"width": 48,
-						"height": 84,
+						"height": 83.99999999999999,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [
@@ -1165,7 +1165,7 @@
 					"type": "Candle_Flame",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Player",
+						"initial-animation": "Enemy",
 						"initial-frame": 2,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1202,8 +1202,8 @@
 					"world": {
 						"x": 414,
 						"y": 106,
-						"width": 48.26373626373626,
-						"height": 93.30379746835442,
+						"width": 48,
+						"height": 84,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [
@@ -3392,6 +3392,9 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Timer": {
+									"properties": {}
 								}
 							},
 							"instanceFolderItem": {
@@ -3538,7 +3541,7 @@
 					],
 					"sid": 369182428881463,
 					"effectTypes": [],
-					"isInitiallyVisible": true,
+					"isInitiallyVisible": false,
 					"isInitiallyInteractive": true,
 					"isHTMLElementsLayer": false,
 					"color": [

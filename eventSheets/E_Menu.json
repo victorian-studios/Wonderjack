@@ -16,6 +16,23 @@
 			],
 			"actions": [
 				{
+					"id": "tween-value",
+					"objectClass": "AliceMenu",
+					"sid": 847356100157411,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"reset\"",
+						"start-value": "0",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "set-time-scale",
 					"objectClass": "System",
 					"sid": 694202107305331,
@@ -229,6 +246,83 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "is-playing",
+					"objectClass": "AliceMenu",
+					"sid": 413241179475841,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"black\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 810994859307374,
+					"parameters": {
+						"layer": "\"Black\"",
+						"opacity": "AliceMenu.Tween.Value(\"black\")"
+					}
+				}
+			],
+			"sid": 415037697833950
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "AliceMenu",
+					"sid": 181867858985268,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"reset\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 502025842276078,
+					"parameters": {
+						"layer": "\"Black\"",
+						"opacity": "AliceMenu.Tween.Value(\"reset\")"
+					}
+				}
+			],
+			"sid": 552093049705432
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "AliceMenu",
+					"sid": 424959965162149,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"black\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 997846707402825,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 363066709791390
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
 					"sid": 774074465596806,
@@ -394,6 +488,10 @@
 			"sid": 958451120717711,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Inicia a fase após um efeito de fade in"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -408,11 +506,20 @@
 					],
 					"actions": [
 						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 819665893742362,
+							"id": "tween-value",
+							"objectClass": "AliceMenu",
+							"sid": 173230953610847,
+							"behaviorType": "Tween",
 							"parameters": {
-								"layout": "Level"
+								"tags": "\"black\"",
+								"start-value": "0",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
 							}
 						}
 					],

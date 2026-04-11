@@ -2,6 +2,26 @@
 	"name": "E_Story",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Tutorial_Enabled",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 858742884583784
+		},
+		{
+			"eventType": "variable",
+			"name": "Tut_Talk",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 340648262807220
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -10,7 +30,87 @@
 					"sid": 723918610255096
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 141209490588584,
+					"parameters": {
+						"seconds": "1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "Btn_Story_Next",
+					"sid": 479764269826327,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade_0\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 387770992852709,
+					"parameters": {
+						"seconds": "2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "Btn_Story_Next",
+					"sid": 521763998497860,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fade_1\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 419022458192963,
+					"parameters": {
+						"seconds": "3",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Btn_Story_Next",
+					"sid": 167031220504643,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "1714",
+						"end-y": "932",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
 			"sid": 949214017353941
 		},
 		{
@@ -27,7 +127,34 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 484382854073434,
+					"parameters": {
+						"variable": "Tutorial_Enabled",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 251354722791060,
+					"parameters": {
+						"variable": "Tut_Talk",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 787886667337096,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
 			"sid": 153444943313409
 		},
 		{
@@ -44,35 +171,17 @@
 					}
 				}
 			],
-			"actions": [],
-			"sid": 928809303330769
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 358949897722406,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Btn_Story_Next"
-					}
-				}
-			],
 			"actions": [
 				{
-					"id": "set-animation",
-					"objectClass": "book",
-					"sid": 656249577270354,
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 461835810841736,
 					"parameters": {
-						"animation": "\"\"",
-						"from": "beginning"
+						"layout": "Menu"
 					}
 				}
 			],
-			"sid": 765197097270823
+			"sid": 928809303330769
 		},
 		{
 			"eventType": "block",
@@ -93,6 +202,14 @@
 					"sid": 371736588060605,
 					"parameters": {
 						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 102101143300690,
+					"parameters": {
+						"cursor-style": "pointer"
 					}
 				}
 			],
@@ -115,9 +232,482 @@
 					"parameters": {
 						"frame-number": "0"
 					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 684715607986204,
+					"parameters": {
+						"cursor-style": "normal"
+					}
 				}
 			],
 			"sid": 738063011377441
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Page Transitions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 286664663444554,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Btn_Story_Next"
+							}
+						},
+						{
+							"id": "is-any-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 873895385446298,
+							"behaviorType": "Tween",
+							"isInverted": true
+						},
+						{
+							"id": "compare-opacity",
+							"objectClass": "Btn_Story_Next",
+							"sid": 692327025021184,
+							"parameters": {
+								"comparison": 0,
+								"opacity": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "book",
+							"sid": 233329592099737,
+							"parameters": {
+								"animation": "\"\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Btn_Story_Next",
+							"sid": 124864791662489,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 483100563338004,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Btn_Story_Next",
+							"sid": 820753461874130,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "set-cycle-position",
+							"objectClass": "Btn_Story_Next",
+							"sid": 669771684696748,
+							"behaviorType": "Sine",
+							"parameters": {
+								"cycle-position": "0"
+							}
+						}
+					],
+					"sid": 776888773082882,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-layer-opacity",
+									"objectClass": "System",
+									"sid": 640111285211000,
+									"parameters": {
+										"layer": "\"Pages_2\"",
+										"comparison": 0,
+										"opacity": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "Btn_Story_Next",
+									"sid": 410070652328535,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fade_2\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 819019053321665
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 914484947465721
+								},
+								{
+									"id": "compare-layer-opacity",
+									"objectClass": "System",
+									"sid": 931166156564470,
+									"parameters": {
+										"layer": "\"Pages_3\"",
+										"comparison": 0,
+										"opacity": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "Btn_Story_Next",
+									"sid": 974338345771567,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fade_3\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 795705336392928
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 363376557512478
+								},
+								{
+									"id": "compare-layer-opacity",
+									"objectClass": "System",
+									"sid": 661112268075183,
+									"parameters": {
+										"layer": "\"Pages_4\"",
+										"comparison": 0,
+										"opacity": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "Btn_Story_Next",
+									"sid": 740664513776086,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fade_4\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 813511007921115
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 225462561781623
+								},
+								{
+									"id": "compare-layer-opacity",
+									"objectClass": "System",
+									"sid": 810551808214363,
+									"parameters": {
+										"layer": "\"Pages_5\"",
+										"comparison": 0,
+										"opacity": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "Btn_Story_Next",
+									"sid": 131050141659544,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fade_5\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-value",
+									"objectClass": "Btn_Story_Next",
+									"sid": 383226679371411,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fade_btn\"",
+										"start-value": "100",
+										"end-value": "0",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 481940933397698
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 902631958699744,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_0\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "book",
+							"sid": 437162767116606,
+							"parameters": {
+								"opacity": "Btn_Story_Next.Tween.Value(\"fade_0\")"
+							}
+						}
+					],
+					"sid": 671920559388911
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 566473266402224,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 460648662105472,
+							"parameters": {
+								"layer": "\"Pages_1\"",
+								"opacity": "Btn_Story_Next.Tween.Value(\"fade_1\")"
+							}
+						}
+					],
+					"sid": 144235806552720
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 851963776471641,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 585625625904006,
+							"parameters": {
+								"layer": "\"Pages_2\"",
+								"opacity": "Btn_Story_Next.Tween.Value(\"fade_2\")"
+							}
+						}
+					],
+					"sid": 140887475685121
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 190931778211613,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 382526940432097,
+							"parameters": {
+								"layer": "\"Pages_3\"",
+								"opacity": "Btn_Story_Next.Tween.Value(\"fade_3\")"
+							}
+						}
+					],
+					"sid": 759487201323661
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 253050628998006,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_4\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 383792078911654,
+							"parameters": {
+								"layer": "\"Pages_4\"",
+								"opacity": "Btn_Story_Next.Tween.Value(\"fade_4\")"
+							}
+						}
+					],
+					"sid": 389712107809922
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 210104589933938,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_5\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 705471143808810,
+							"parameters": {
+								"layer": "\"Pages_5\"",
+								"opacity": "Btn_Story_Next.Tween.Value(\"fade_5\")"
+							}
+						}
+					],
+					"sid": 876997062574457
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "Btn_Story_Next",
+							"sid": 615427374430301,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade_btn\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Btn_Story_Next",
+							"sid": 630418612825130,
+							"parameters": {
+								"opacity": "Btn_Story_Next.Tween.Value(\"fade_btn\")"
+							}
+						}
+					],
+					"sid": 182304657945223
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-opacity",
+							"objectClass": "Btn_Story_Next",
+							"sid": 628497861119687,
+							"parameters": {
+								"comparison": 0,
+								"opacity": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Btn_Story_Next",
+							"sid": 179558204959307
+						}
+					],
+					"sid": 225298798130352
+				}
+			],
+			"sid": 102772176756450
 		}
 	],
 	"sid": 749957245286818

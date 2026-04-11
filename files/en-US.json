@@ -18,7 +18,50 @@
             "page_2": "[u][b]Chapter 2[/b][/u]\n\n[b]The Turn[/b]\n\nOn your turn, you can draw a numeric card or draw/play a Power Card, which grants you abilities during matches.",
             "page_3": "[u][b]Chapter 3[/b][/u]\n\n[b]The Relics[/b]\n\nAfter finishing a match, you choose a relic that will passively help you for the rest of the game.",
             "page_4": "[u][b]Chapter 4[/b][/u]\n\n[b]The Loser[/b]\n\nYou lose the round if the total value of your cards exceeds 21, or if your opponent obtains a higher sum than yours.",
-            "page_5": "[u][b]Chapter 5[/b][/u]\n\n[b]The Tie[/b]\n\nWhen there's a tie or both players exceed 21, no point is awarded, and a new round starts."
+            "page_5": "[u][b]Chapter 5[/b][/u]\n\n[b]The Tie[/b]\n\nWhen there's a tie or both players exceed 21, no point is awarded, and a new round starts.",
+            "white_queen": {
+                "1": "So Alice, this is different version from the classic ''21'' or blackjack card game.",
+                "2": "The goal is the same, try to reach [b]21[/b] by drawing numeric cards from that [color=#005eff]blue[/color] deck on your right.",
+                "3": "But don't worry too much if you can't get exactly [b]21[/b], it's hard, since you don't know the next number you're gonna draw from the deck.",
+                "4": "Just avoid exceeding [b]21[/b] with your cards, or you'll lose the round. The [color=#005eff]blue[/color] deck contain [b]12[/b] cards from [b]1 up to 12[/b].",
+                "5": "In wonderjack everyone starts a new round drawing the first hidden card. Only the owner can see it's number, and the opponement can only guess what is.",
+                "6": "To see your card, just hover the mouse on it.",
+                "7": "On your turn, you can do only one of 4 possible actions: [b]draw a number[/b], [b]stop[/b], [b]draw a power[/b] or [b]play a power[/b].",
+                "8": "To draw a number, click on the [color=#005eff]blue[/color] deck. That makes you draw the first number card from the deck.",
+                "9": "To stop, click on the bell. That makes you stop this round and the opponement can only do 1 more action before we count our numbers.",
+                "10": "When the round finishes, all hidden number cards are revealed and the numbers are counted to see who reached [b]21[/b] or closest to it. If both players pass 21, nobody wins the round.",
+                "11": "For this first round, let's ignore the power cards to make things simple.",
+                "12": "Now let's start playing it!",
+                "13": "Well, I'm not drawing anymore cards. So I'll stop!",
+                "14": "Fantastic! You won the first round Alice.",
+                "15": "When you win a round, a [color=#005eff]blue[/color] flame lights up on the candlestick.",
+                "16": "But when you opponement wins, a [color=#ff0000]red[/color] flame lights up.",
+                "17": "The first player to win 2 rounds is the winner of the match!",
+                "18": "Now lets use some power cards this time, shall we?",
+                "19": "On your turn, you can also either [b]draw[/b] or [b]play[/b] a power card that you already have in your hand.",
+                "20": "To draw one, just click on the [color=#ffff00]yellow[/color] deck on your left and to play a card, just hover your mouse and drag up on your screen.",
+                "21": "Every player can only draw 2 power card in each round by default.",
+                "22": "Not to mention that your hand can also hold only 2 power cards at the same time.",
+                "23": "These cards stay with you between rounds, so use them wisely!",
+                "24": "Just remember that I can also do the same. *wink*",
+                "25": "So, let's begin the 2° round.",
+                "26": "Don't get angry with me Alice, but I need to play this power...",
+                "27": "Well... I won this time!",
+                "28": "Don't worry Alice, sometimes the power cards can't help much, but keeping them to the next round might be the best strategy.",
+                "29": "Now, it's the final round of this match. Do your best!",
+                "30": "Oh! It seams that I've won again.",
+                "31": "Usually, when that happens, you lost the game and you should try again from the beginning.",
+                "32": "But since I'm just teaching you, I think you're ready to find the others and learn with them.",
+                "33": "Look at you, you've won this match!",
+                "34": "But don't get too confident, the others out there have different playstyles and much more chaotic.",
+                "35": "Anyway, I think you're ready to find more challenging players...",
+                "36": "Also, after each future match you win, there'll be a special reward for you to choose from. ",
+                "37": "I won't spoil the surprise. Try to find out!",
+                "38": "Good luck Alice, I'm keeping my fingers crossed for you.",
+                "block_stop": "Alice, draw more numbers cards before trying to stop this round.",
+                "tip_stop": "If you're close to [b]21[/b], it's better to stop and avoid risks. Press the bell to stop this round.",
+                "tip_stop2": "If your sum is 21 or more, it's better not draw number cards and stop the round."
+            }
         },
         "options": {
             "resume": "Resume",
@@ -28,15 +71,70 @@
         },
         "common": {
             "enemies" : {
-                "White Queen": "White Queen",
-                "Mad Hatter": "Mad Hatter",
-                "March Hare": "March Hare",
-                "Cheshire Cat": "Cheshire Cat",
-                "Caterpillar": "Caterpillar",
-                "Humpty Dumpty": "Humpty Dumpty",
-                "Dodo": "Dodo",
-                "Red Queen": "Red Queen",
-                "Jabberwock": "Jabberwock"
+                "White Queen": {
+                    "name": "White Queen",
+                    "talk_win": "",
+                    "talk_lose": "",
+                    "talk_thinking_1": "",
+                    "talk_thinking_2": ""
+                },
+                "Mad Hatter": {
+                    "name": "Mad Hatter",
+                    "talk_win": "Hum... Mad as a Hatter…",
+                    "talk_lose": "I tip my hat to you.",
+                    "talk_thinking_1": "I need to finish this game because it's almost tea time!",
+                    "talk_thinking_2": "I’d love to offer you a cup of tea, but my hands are full.",
+                    "talk_thinking_3": "Why is a raven like a writing-desk? — I haven’t the slightest idea."
+                },
+                "March Hare": {
+                    "name": "March Hare",
+                    "talk_win": "Are you leaving already? You haven't even had a cup of tea!",
+                    "talk_lose": "Well, I guess tea time is over!",
+                    "talk_thinking_1": "I’d offer you some wine if I had any…",
+                    "talk_thinking_2": ""
+                },
+                "Cheshire Cat": {
+                    "name": "Cheshire Cat",
+                    "talk_win": "That's too bad... Are you going somewhere?",
+                    "talk_lose": "It looks like you've found the direction you need to go...",
+                    "talk_thinking_1": "Remember... we’re all mad here. I’m mad. You’re mad.",
+                    "talk_thinking_2": ""
+                },
+                "Caterpillar": {
+                    "name": "Caterpillar",
+                    "talk_win": "It seems like you haven't changed a bit...",
+                    "talk_lose": "Who're you?",
+                    "talk_thinking_1": "“Keep your temper.",
+                    "talk_thinking_2": ""
+                },
+                "Humpty Dumpty": {
+                    "name": "Humpty Dumpty",
+                    "talk_win": "Alice... what a stupid name! It must mean “loser,” haha!",
+                    "talk_lose": "My shell... is broken!",
+                    "talk_thinking_1": "You think you're so great calling me an egg, huh? Just you wait!",
+                    "talk_thinking_2": ""
+                },
+                "Dodo": {
+                    "name": "Dodo",
+                    "talk_win": "Where is my prize?",
+                    "talk_lose": "I lost... You can keep the prize then...",
+                    "talk_thinking_1": "So many options...",
+                    "talk_thinking_2": ""
+                },
+                "Red Queen": {
+                    "name": "Red Queen",
+                    "talk_win": "Off with her head!",
+                    "talk_lose": "You may have won this battle... But you won’t win the war...",
+                    "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
+                    "talk_thinking_2": ""
+                },
+                "Jabberwock": {
+                    "name": "Jabberwock",
+                    "talk_win": "Finally, I’ll be able to sharpen my fangs a little!",
+                    "talk_lose": "Arghhh",
+                    "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
+                    "talk_thinking_2": ""
+                }
             },
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
             "power": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
