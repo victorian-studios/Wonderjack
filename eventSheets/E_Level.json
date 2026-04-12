@@ -18632,34 +18632,95 @@
 										"variable": "PowerDone",
 										"value": "false"
 									}
-								},
-								{
-									"id": "log",
-									"objectClass": "Browser",
-									"sid": 491482491823495,
-									"parameters": {
-										"type": "log",
-										"message": "\"Passando o turno após o poder\""
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 278131634325968,
-									"parameters": {
-										"seconds": "1.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"callFunction": "Change Turn",
-									"sid": 860223482286976,
-									"parameters": [
-										"0"
-									]
 								}
 							],
-							"sid": 994294021797742
+							"sid": 994294021797742,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-timer-running",
+											"objectClass": "Enemy",
+											"sid": 368584251620436,
+											"behaviorType": "Timer",
+											"parameters": {
+												"tag": "\"random_talk\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "stop-timer",
+											"objectClass": "Enemy",
+											"sid": 711003605390187,
+											"behaviorType": "Timer",
+											"parameters": {
+												"tag": "\"random_talk\""
+											}
+										}
+									],
+									"sid": 661557942854857
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-timer-running",
+											"objectClass": "Enemy",
+											"sid": 559009879314198,
+											"behaviorType": "Timer",
+											"parameters": {
+												"tag": "\"antibug\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "stop-timer",
+											"objectClass": "Enemy",
+											"sid": 787987652926258,
+											"behaviorType": "Timer",
+											"parameters": {
+												"tag": "\"antibug\""
+											}
+										}
+									],
+									"sid": 851451692757690
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 773462384178569,
+											"parameters": {
+												"type": "log",
+												"message": "\"Passando o turno após o poder\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 612218524626024,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "Change Turn",
+											"sid": 536791786649967,
+											"parameters": [
+												"0"
+											]
+										}
+									],
+									"sid": 850911376828825
+								}
+							]
 						}
 					]
 				},
@@ -21265,6 +21326,16 @@
 														"variable": "Tut_Talk",
 														"comparison": 0,
 														"value": "25"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 230134669437231,
+													"parameters": {
+														"variable": "Tut_Talk",
+														"comparison": 0,
+														"value": "29"
 													}
 												}
 											],
@@ -32233,8 +32304,17 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Bkg_Main_Level",
+									"objectClass": "Bkg_Bkg",
 									"sid": 604015928509036,
+									"parameters": {
+										"animation": "\"Level_\"&Match",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Bkg_Main_Level",
+									"sid": 280105592544328,
 									"parameters": {
 										"animation": "\"Level_\"&Match",
 										"from": "beginning"
@@ -32872,6 +32952,53 @@
 															"parameters": {
 																"width": "520",
 																"height": "672"
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Enemy",
+															"sid": 869415417938676,
+															"parameters": {
+																"object": "Enemy_Extra_Anim",
+																"layer": "0",
+																"image-point": "1",
+																"create-hierarchy": true,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Enemy",
+															"sid": 266473358496284,
+															"parameters": {
+																"child": "Enemy_Extra_Anim",
+																"transform-x": true,
+																"transform-y": true,
+																"transform-z-elevation": true,
+																"transform-w": true,
+																"transform-h": true,
+																"transform-a": true,
+																"transform-o": false,
+																"transform-visibility": false,
+																"destroy-with-parent": false
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 138173433421403,
+															"parameters": {
+																"animation": "\"Brother\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 975701100550790,
+															"parameters": {
+																"width": "330",
+																"height": "603"
 															}
 														},
 														{
@@ -35034,6 +35161,89 @@
 									}
 								},
 								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 755829722217855,
+									"parameters": {
+										"layer": "\"Turn\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Text_Turn",
+									"sid": 259982180285424,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "1"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Text_Turn",
+									"sid": 262224874441485,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Text_Turn",
+									"sid": 884907859252959,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Text_Turn",
+									"sid": 241555116418011,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 955050227459530,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-fade-in-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 289262519071908,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-in-time": "1"
+									}
+								},
+								{
+									"id": "set-wait-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 959176835373988,
+									"behaviorType": "Fade",
+									"parameters": {
+										"wait-time": "0"
+									}
+								},
+								{
+									"id": "set-fade-out-time",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 267625083183046,
+									"behaviorType": "Fade",
+									"parameters": {
+										"fade-out-time": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Bkg_Turn_Txt",
+									"sid": 520808716475840,
+									"behaviorType": "Fade"
+								},
+								{
 									"id": "typewriter-text",
 									"objectClass": "Text_Turn",
 									"sid": 318484082585877,
@@ -36983,6 +37193,20 @@
 									"id": "typewriter-finish",
 									"objectClass": "Text_Talk",
 									"sid": 861761147434752
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 646322009426333,
+									"parameters": {
+										"audio-file": {
+											"path": "button_select_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 405114451472511
@@ -36996,7 +37220,22 @@
 									"sid": 272998763732945
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "stop-flashing",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 374800958795909,
+									"behaviorType": "Flash"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 402137546270671,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
 							"sid": 881675180165271,
 							"children": [
 								{
@@ -37030,6 +37269,20 @@
 											"parameters": {
 												"variable": "tut_lock",
 												"value": "true"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 922132822681542,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
 											}
 										},
 										{
@@ -37965,62 +38218,6 @@
 									"sid": 631375057933749
 								},
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 424661151742935,
-											"parameters": {
-												"variable": "Tut_Talk",
-												"comparison": 0,
-												"value": "30"
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 297333583129544,
-											"parameters": {
-												"variable": "Tut_Talk",
-												"comparison": 0,
-												"value": "33"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 697661179208891,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 166821466098881,
-													"parameters": {
-														"variable": "tut_lock"
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 120863820197447,
-													"parameters": {
-														"variable": "tut_lock",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 456780786043885
-										}
-									],
-									"isOrBlock": true
-								},
-								{
 									"eventType": "comment",
 									"text": "Ganhando ou perdendo o tutorial leva para o fim dele e início do jogo"
 								},
@@ -38167,6 +38364,33 @@
 											"parameters": {
 												"variable": "Tutorial_Enabled",
 												"value": "false"
+											}
+										},
+										{
+											"id": "delete",
+											"objectClass": "A_EnemyPowers",
+											"sid": 281042000585660,
+											"parameters": {
+												"index": "0",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "delete",
+											"objectClass": "A_EnemyPowers",
+											"sid": 682179458795977,
+											"parameters": {
+												"index": "1",
+												"axis": "x"
+											}
+										},
+										{
+											"id": "delete",
+											"objectClass": "A_EnemyPowers",
+											"sid": 499576317525116,
+											"parameters": {
+												"index": "2",
+												"axis": "x"
 											}
 										},
 										{
@@ -38320,6 +38544,20 @@
 												"variable": "tut_lock",
 												"value": "false"
 											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 286007523885853,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
 										}
 									],
 									"sid": 829181911073811
@@ -38379,6 +38617,20 @@
 														true,
 														"0"
 													]
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 806440877375102,
+													"parameters": {
+														"audio-file": {
+															"path": "button_select_sfx"
+														},
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
 												}
 											],
 											"sid": 279084715340825,
@@ -38389,6 +38641,56 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-typewriter-text-finished",
+							"objectClass": "Text_Talk",
+							"sid": 483343311726468
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "Bkg_Talk",
+							"sid": 679670896021604,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"fadeout\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 793592806287326,
+							"parameters": {
+								"variable": "Tutorial_Enabled"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Icon_Arrow_Talk",
+							"sid": 926800865476905,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Icon_Arrow_Talk",
+							"sid": 727777284837844,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.3",
+								"off-time": "0.3",
+								"duration": "Infinity"
+							}
+						}
+					],
+					"sid": 342437615131061
 				}
 			],
 			"sid": 483327313377993

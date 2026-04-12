@@ -69,13 +69,13 @@
 				{
 					"id": "tween-value",
 					"objectClass": "Btn_Story_Next",
-					"sid": 521763998497860,
+					"sid": 855166522321613,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"fade_1\"",
 						"start-value": "0",
 						"end-value": "100",
-						"time": "2",
+						"time": "1.5",
 						"ease": "default",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -86,9 +86,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 419022458192963,
+					"sid": 698055678244245,
 					"parameters": {
-						"seconds": "3",
+						"seconds": "2.5",
 						"use-timescale": true
 					}
 				},
@@ -128,6 +128,20 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 454434738819446,
+					"parameters": {
+						"audio-file": {
+							"path": "button_select_sfx"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
@@ -172,6 +186,20 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 725871293220602,
+					"parameters": {
+						"audio-file": {
+							"path": "button_select_sfx"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
@@ -281,55 +309,75 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "book",
-							"sid": 233329592099737,
-							"parameters": {
-								"animation": "\"\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "Btn_Story_Next",
-							"sid": 124864791662489,
-							"behaviorType": "Sine",
-							"parameters": {
-								"state": "active"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 483100563338004,
-							"parameters": {
-								"seconds": "0.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-active",
-							"objectClass": "Btn_Story_Next",
-							"sid": 820753461874130,
-							"behaviorType": "Sine",
-							"parameters": {
-								"state": "inactive"
-							}
-						},
-						{
-							"id": "set-cycle-position",
-							"objectClass": "Btn_Story_Next",
-							"sid": 669771684696748,
-							"behaviorType": "Sine",
-							"parameters": {
-								"cycle-position": "0"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 776888773082882,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 105262003730235,
+									"parameters": {
+										"audio-file": {
+											"path": "button_2_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "book",
+									"sid": 535647765456649,
+									"parameters": {
+										"animation": "\"\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "Btn_Story_Next",
+									"sid": 942615354883782,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 370195446719639,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "Btn_Story_Next",
+									"sid": 204219447183307,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "set-cycle-position",
+									"objectClass": "Btn_Story_Next",
+									"sid": 511248605955169,
+									"behaviorType": "Sine",
+									"parameters": {
+										"cycle-position": "0"
+									}
+								}
+							],
+							"sid": 984516848960870
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -348,13 +396,13 @@
 								{
 									"id": "tween-value",
 									"objectClass": "Btn_Story_Next",
-									"sid": 410070652328535,
+									"sid": 901139966538897,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"fade_2\"",
 										"start-value": "0",
 										"end-value": "100",
-										"time": "2",
+										"time": "1.5",
 										"ease": "default",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -388,13 +436,13 @@
 								{
 									"id": "tween-value",
 									"objectClass": "Btn_Story_Next",
-									"sid": 974338345771567,
+									"sid": 341186761397428,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"fade_3\"",
 										"start-value": "0",
 										"end-value": "100",
-										"time": "2",
+										"time": "1.5",
 										"ease": "default",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -428,13 +476,13 @@
 								{
 									"id": "tween-value",
 									"objectClass": "Btn_Story_Next",
-									"sid": 740664513776086,
+									"sid": 360501366233268,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"fade_4\"",
 										"start-value": "0",
 										"end-value": "100",
-										"time": "2",
+										"time": "1.5",
 										"ease": "default",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -468,13 +516,13 @@
 								{
 									"id": "tween-value",
 									"objectClass": "Btn_Story_Next",
-									"sid": 131050141659544,
+									"sid": 345139608146171,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"fade_5\"",
 										"start-value": "0",
 										"end-value": "100",
-										"time": "2",
+										"time": "1.5",
 										"ease": "default",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -485,13 +533,13 @@
 								{
 									"id": "tween-value",
 									"objectClass": "Btn_Story_Next",
-									"sid": 383226679371411,
+									"sid": 885116786048944,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"fade_btn\"",
 										"start-value": "100",
 										"end-value": "0",
-										"time": "2",
+										"time": "1.5",
 										"ease": "default",
 										"destroy-on-complete": "no",
 										"loop": "no",

@@ -1322,8 +1322,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2811,
-						"y": 724,
+						"x": 2865,
+						"y": 705,
 						"width": 409.14388489208636,
 						"height": 636.2815338042382,
 						"originX": 0.5,
@@ -1584,9 +1584,9 @@
 					"world": {
 						"x": 3207,
 						"y": 1420,
-						"width": 571.6668811146701,
-						"height": 737.538255896653,
-						"originX": 0.5,
+						"width": 490.5519858213723,
+						"height": 739.0844576909856,
+						"originX": 0.3818897637795275,
 						"originY": 1,
 						"color": [
 							1,
@@ -1717,6 +1717,84 @@
 						"width": 500.0686753591891,
 						"height": 636.277376828295,
 						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Enemy_Extra_Anim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Brother",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 138,
+					"sid": 759562311171040,
+					"tags": "",
+					"instanceVariables": {
+						"extra_fade": 1
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 138,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZ": 0,
+							"transformW": 2.220446049250313e-16,
+							"transformH": 2.220446049250313e-16,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 759562311171040,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 3203,
+						"y": 1420,
+						"width": 329.50557525986517,
+						"height": 603.2596370015983,
+						"originX": 0.7595419847328242,
 						"originY": 1,
 						"color": [
 							1,

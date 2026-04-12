@@ -225,7 +225,6 @@
 			"A_TheRng",
 			"Bkg_Bkg",
 			"Sprite",
-			"Bkg_Main_Level2",
 			"book",
 			"Btn_Story_Yes",
 			"Btn_Story_No",
@@ -233,7 +232,8 @@
 			"LocalStorage",
 			"Bkg_Talk",
 			"Text_Talk_Name",
-			"Sprite2"
+			"Sprite2",
+			"Icon_Arrow_Talk"
 		],
 		"subfolders": []
 	},
@@ -592,6 +592,11 @@
 					],
 					"subfolders": [],
 					"name": "Menu"
+				},
+				{
+					"items": [],
+					"subfolders": [],
+					"name": "Story"
 				}
 			]
 		},

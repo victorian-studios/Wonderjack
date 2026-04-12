@@ -12,6 +12,31 @@
 			{
 				"frames": [
 					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 917979,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 973198980382353,
+				"name": "Level_0",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
 						"width": 1920,
 						"height": 1080,
 						"originX": 0.5,
@@ -248,6 +273,80 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
+						"imageSpriteId": 4213906,
+						"collisionPoly": {
+							"points": [
+								0.42291666666666666,
+								0.05185185185185185,
+								0.609375,
+								0.05555555555555555,
+								0.984375,
+								0.16018518518518518,
+								0.9833333333333333,
+								0.5370370370370371,
+								0.9213541666666667,
+								0.5731481481481482,
+								0.46145833333333336,
+								0.5861111111111111,
+								0.3359375,
+								0.5712962962962963,
+								0.020833333333333332,
+								0.33796296296296297,
+								0.13229166666666667,
+								0.09722222222222222
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 198812,
+						"collisionPoly": {
+							"points": [
+								0.42291666666666666,
+								0.05185185185185185,
+								0.609375,
+								0.05555555555555555,
+								0.984375,
+								0.16018518518518518,
+								0.9833333333333333,
+								0.5370370370370371,
+								0.9213541666666667,
+								0.5731481481481482,
+								0.4828125,
+								0.5981481481481481,
+								0.42916666666666664,
+								0.5972222222222222,
+								0.34322916666666664,
+								0.575925925925926,
+								0.020833333333333332,
+								0.33796296296296297,
+								0.13229166666666667,
+								0.09722222222222222
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
 						"imageSpriteId": 7382054,
 						"useCollisionPoly": true,
 						"duration": 1,
@@ -278,6 +377,76 @@
 			},
 			{
 				"frames": [
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6276621,
+						"collisionPoly": {
+							"points": [
+								0.37447916666666664,
+								0.06018518518518518,
+								0.6255208333333333,
+								0.06018518518518518,
+								0.9802083333333333,
+								0.11574074074074074,
+								0.9744791666666667,
+								0.5935185185185186,
+								0.36875,
+								0.562962962962963,
+								0.0375,
+								0.4388888888888889,
+								0.015625,
+								0.3435185185185185,
+								0.13229166666666667,
+								0.09722222222222222
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9348206,
+						"collisionPoly": {
+							"points": [
+								0.4479166666666667,
+								0.05925925925925926,
+								0.6255208333333333,
+								0.06018518518518518,
+								0.9802083333333333,
+								0.11574074074074074,
+								0.9744791666666667,
+								0.5935185185185186,
+								0.36875,
+								0.562962962962963,
+								0.0375,
+								0.4388888888888889,
+								0.015625,
+								0.3435185185185185,
+								0.13229166666666667,
+								0.09722222222222222,
+								0.37447916666666664,
+								0.06018518518518518
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
 					{
 						"width": 1920,
 						"height": 1080,
