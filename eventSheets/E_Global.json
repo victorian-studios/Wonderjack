@@ -377,11 +377,25 @@
 							}
 						},
 						{
+							"id": "is-visible",
+							"objectClass": "configuracoes",
+							"sid": 375920097606980
+						},
+						{
 							"id": "layer-is-visible",
 							"objectClass": "System",
 							"sid": 811829978110758,
 							"parameters": {
 								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 477948015128848,
+							"parameters": {
+								"layer": "\"Talking\""
 							},
 							"isInverted": true
 						}
@@ -440,7 +454,7 @@
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "Btn_Pause"
+								"object-clicked": "Btn_ResumeMenu"
 							}
 						},
 						{
@@ -460,7 +474,7 @@
 							"conditions": [
 								{
 									"id": "is-animation-playing",
-									"objectClass": "Btn_Pause",
+									"objectClass": "Btn_ResumeMenu",
 									"sid": 167269417781930,
 									"parameters": {
 										"animation": "\"Resume\""
@@ -525,7 +539,7 @@
 							"conditions": [
 								{
 									"id": "is-animation-playing",
-									"objectClass": "Btn_Pause",
+									"objectClass": "Btn_ResumeMenu",
 									"sid": 539898468341045,
 									"parameters": {
 										"animation": "\"Menu\""

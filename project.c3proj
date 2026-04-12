@@ -191,7 +191,7 @@
 			"Bkg_Black_Common",
 			"carta_opt_bg",
 			"Btn_Sound",
-			"Btn_Pause",
+			"Btn_ResumeMenu",
 			"Audio",
 			"A_Relics",
 			"Relic_Slot",
@@ -224,7 +224,7 @@
 			"Txt_debug2",
 			"A_TheRng",
 			"Bkg_Bkg",
-			"Sprite",
+			"Frg_Gray",
 			"book",
 			"Btn_Story_Yes",
 			"Btn_Story_No",
@@ -232,7 +232,7 @@
 			"LocalStorage",
 			"Bkg_Talk",
 			"Text_Talk_Name",
-			"Sprite2",
+			"Book_Pages",
 			"Icon_Arrow_Talk"
 		],
 		"subfolders": []
@@ -475,6 +475,20 @@
 					],
 					"subfolders": [],
 					"name": "Novos"
+				},
+				{
+					"items": [
+						{
+							"name": "Retro_Single_v6_wav.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 328203984144626,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Talking"
 				}
 			]
 		},
@@ -575,6 +589,20 @@
 							],
 							"subfolders": [],
 							"name": "Level Secret"
+						},
+						{
+							"items": [
+								{
+									"name": "11 - Cryptic Enchantment.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 589749814267497,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Story Tutorial"
 						}
 					],
 					"name": "In Game"
@@ -592,11 +620,6 @@
 					],
 					"subfolders": [],
 					"name": "Menu"
-				},
-				{
-					"items": [],
-					"subfolders": [],
-					"name": "Story"
 				}
 			]
 		},

@@ -44,7 +44,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Frg_Gray",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -349,9 +349,9 @@
 					"world": {
 						"x": 969,
 						"y": 717,
-						"width": 449.48201438848923,
-						"height": 636.9223007063572,
-						"originX": 0.5,
+						"width": 446.28057553956836,
+						"height": 635,
+						"originX": 1,
 						"originY": 1,
 						"color": [
 							1,
@@ -2778,7 +2778,7 @@
 							}
 						},
 						{
-							"type": "Btn_Pause",
+							"type": "Btn_ResumeMenu",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Menu",
@@ -2815,7 +2815,7 @@
 							}
 						},
 						{
-							"type": "Btn_Pause",
+							"type": "Btn_ResumeMenu",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Resume",
@@ -3358,6 +3358,11 @@
 								},
 								"Timer": {
 									"properties": {}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
 								}
 							},
 							"instanceFolderItem": {
@@ -3377,7 +3382,7 @@
 									1,
 									1,
 									1,
-									0.85
+									1
 								],
 								"z": 0,
 								"angle": 0
@@ -3427,9 +3432,9 @@
 							"locked": false,
 							"world": {
 								"x": 222,
-								"y": 798,
+								"y": 790,
 								"width": 1512,
-								"height": 184,
+								"height": 192,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -3445,7 +3450,7 @@
 						{
 							"type": "Text_Talk_Name",
 							"properties": {
-								"text": "[u]Sr. Vilão[/u]",
+								"text": "[u]Humpty Dumpty[/u]",
 								"enable-bbcode": true,
 								"font": "Alice-Regular",
 								"size": 40,
@@ -3453,12 +3458,12 @@
 								"bold": false,
 								"italic": false,
 								"color": [
-									1,
-									1,
-									1,
+									0,
+									0,
+									0,
 									1
 								],
-								"horizontal-alignment": "left",
+								"horizontal-alignment": "center",
 								"vertical-alignment": "top",
 								"wrapping": "word",
 								"text-direction": "ltr",
@@ -3485,10 +3490,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 224,
-								"y": 726,
-								"width": 418,
-								"height": 68,
+								"x": 202,
+								"y": 710,
+								"width": 484,
+								"height": 84,
 								"originX": 0,
 								"originY": 0,
 								"color": [
@@ -3526,10 +3531,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1732,
-								"y": 956,
-								"width": 32,
-								"height": 64,
+								"x": 1728.7450980392157,
+								"y": 954.1188118811881,
+								"width": 28.000000000000004,
+								"height": 56.00000000000001,
 								"originX": 0.8137254901960784,
 								"originY": 0.48514851485148514,
 								"color": [

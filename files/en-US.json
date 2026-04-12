@@ -22,20 +22,20 @@
             "white_queen": {
                 "1": "So Alice, this is different version from the classic ''21'' or blackjack card game.",
                 "2": "The goal is the same, try to reach [b]21[/b] by drawing numeric cards from that [color=#005eff]blue[/color] deck on your right.",
-                "3": "But don't worry too much if you can't get exactly [b]21[/b], it's hard, since you don't know the next number you're gonna draw from the deck.",
+                "3": "But don't worry too much if you can't get exactly [b]21[/b]. It's hard, since you don't know the next number you're gonna draw from the deck.",
                 "4": "Just avoid exceeding [b]21[/b] with your cards, or you'll lose the round. The [color=#005eff]blue[/color] deck contain [b]12[/b] cards from [b]1 up to 12[/b].",
-                "5": "In wonderjack everyone starts a new round drawing the first hidden card. Only the owner can see it's number, and the opponement can only guess what is.",
+                "5": "In wonderjack everyone starts a new round drawing the [b]1[/b] hidden card. Only the owner can see it's number, and the opponent can only guess what is.",
                 "6": "To see your card, just hover the mouse on it.",
                 "7": "On your turn, you can do only one of 4 possible actions: [b]draw a number[/b], [b]stop[/b], [b]draw a power[/b] or [b]play a power[/b].",
                 "8": "To draw a number, click on the [color=#005eff]blue[/color] deck. That makes you draw the first number card from the deck.",
-                "9": "To stop, click on the bell. That makes you stop this round and the opponement can only do 1 more action before we count our numbers.",
+                "9": "To stop, click on the bell. That makes you finish this round and the opponent can only do 1 more action before we count our numbers.",
                 "10": "When the round finishes, all hidden number cards are revealed and the numbers are counted to see who reached [b]21[/b] or closest to it. If both players pass 21, nobody wins the round.",
                 "11": "For this first round, let's ignore the power cards to make things simple.",
                 "12": "Now let's start playing it!",
                 "13": "Well, I'm not drawing anymore cards. So I'll stop!",
                 "14": "Fantastic! You won the first round Alice.",
                 "15": "When you win a round, a [color=#005eff]blue[/color] flame lights up on the candlestick.",
-                "16": "But when you opponement wins, a [color=#ff0000]red[/color] flame lights up.",
+                "16": "But when you opponent wins, a [color=#ff0000]red[/color] flame lights up.",
                 "17": "The first player to win 2 rounds is the winner of the match!",
                 "18": "Now lets use some power cards this time, shall we?",
                 "19": "On your turn, you can also either [b]draw[/b] or [b]play[/b] a power card that you already have in your hand.",
@@ -55,12 +55,13 @@
                 "33": "Look at you, you've won this match!",
                 "34": "But don't get too confident, the others out there have different playstyles and are much more chaotic.",
                 "35": "Anyway, I think you're ready to find more challenging players...",
-                "36": "Also, after each future match you win, there'll be a special reward for you to choose from. ",
+                "36": "Also, after each future match you win, there'll be special rewards for you to choose from. ",
                 "37": "I won't spoil the surprise. Try to find out!",
                 "38": "Good luck Alice, I'm keeping my fingers crossed for you.",
                 "block_stop": "Alice, draw more numbers cards before trying to stop this round.",
                 "tip_stop": "If you're close to [b]21[/b], it's better to stop and avoid risks. Press the bell to stop this round.",
-                "tip_stop2": "If your sum is 21 or more, it's better not draw number cards and stop the round."
+                "tip_stop2": "If your sum is 21 or more, it's better not draw number cards and stop the round.",
+                "tip_power": "Think again Alice, playing this power wouldn't be smart."
             }
         },
         "options": {
@@ -103,15 +104,22 @@
                 "Caterpillar": {
                     "name": "Caterpillar",
                     "talk_win": "It seems like you haven't changed a bit...",
-                    "talk_lose": "Who're you?",
-                    "talk_thinking_1": "“Keep your temper.",
+                    "talk_lose": "Who... are... you?",
+                    "talk_thinking_1": "Keep your temper.",
                     "talk_thinking_2": ""
                 },
                 "Humpty Dumpty": {
                     "name": "Humpty Dumpty",
                     "talk_win": "Alice... what a stupid name! It must mean “loser,” haha!",
-                    "talk_lose": "My shell... is broken!",
+                    "talk_lose": "My shell... is broken.",
                     "talk_thinking_1": "You think you're so great calling me an egg, huh? Just you wait!",
+                    "talk_thinking_2": ""
+                },
+                "The Tweedles": {
+                    "name": "The Tweedles",
+                    "talk_win": "We, the TWEEDLE brothers, have won again!",
+                    "talk_lose": "You win. We’ve no objection. Contrariwise.",
+                    "talk_thinking_1": "Hey brother, this card is mine!",
                     "talk_thinking_2": ""
                 },
                 "Dodo": {
@@ -174,7 +182,7 @@
             "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number to your opponent.",
             "return": "[u]Return[/u]\n\n\nDiscard your [color=#fa1c03]last not hidden[/color] number card to the end of the deck.",
             "compel": "[u]Compel[/u]\n\n\nForces [color=#f5fe05]your opponent[/color] to discard their [color=#f5fe05]last[/color] number card to the end of the deck.",
-            "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#fa1c03]not hidden[/color] card to switch with your opponement.",
+            "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#fa1c03]not hidden[/color] card to switch with your opponent.",
             "exchange_tip_1": "[u]Select an opponent card:[/u]",
             "exchange_tip_2": "[u]Select your card to switch:[/u]",
             "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch their [color=#f5fe05]first hidden[/color] card with each other.",

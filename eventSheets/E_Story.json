@@ -32,6 +32,20 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 457834218138554,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Story Tutorial/11 - Cryptic Enchantment"
+						},
+						"loop": "looping",
+						"volume": "-11",
+						"stereo-pan": "0",
+						"tag-optional": "\"story\""
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 141209490588584,
@@ -125,6 +139,16 @@
 						"click-type": "clicked",
 						"object-clicked": "Btn_Story_Yes"
 					}
+				},
+				{
+					"id": "compare-layer-opacity",
+					"objectClass": "System",
+					"sid": 313040087862902,
+					"parameters": {
+						"layer": "\"Pages_5\"",
+						"comparison": 0,
+						"opacity": "100"
+					}
 				}
 			],
 			"actions": [
@@ -183,6 +207,16 @@
 						"click-type": "clicked",
 						"object-clicked": "Btn_Story_No"
 					}
+				},
+				{
+					"id": "compare-layer-opacity",
+					"objectClass": "System",
+					"sid": 680384295167885,
+					"parameters": {
+						"layer": "\"Pages_5\"",
+						"comparison": 0,
+						"opacity": "100"
+					}
 				}
 			],
 			"actions": [
@@ -220,6 +254,16 @@
 					"sid": 614870638743047,
 					"parameters": {
 						"object": "Buttons"
+					}
+				},
+				{
+					"id": "compare-layer-opacity",
+					"objectClass": "System",
+					"sid": 500703363572352,
+					"parameters": {
+						"layer": "Buttons.LayerName",
+						"comparison": 0,
+						"opacity": "100"
 					}
 				}
 			],
@@ -756,6 +800,49 @@
 				}
 			],
 			"sid": 102772176756450
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 885366791863655,
+					"parameters": {
+						"key": 76
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 724734313908799,
+					"parameters": {
+						"variable": "Tutorial_Enabled",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 279517438525482,
+					"parameters": {
+						"variable": "Tut_Talk",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 542025888770968,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 364931370732142,
+			"disabled": true
 		}
 	],
 	"sid": 749957245286818

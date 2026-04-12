@@ -88,6 +88,16 @@
 				{
 					"id": "preload",
 					"objectClass": "Audio",
+					"sid": 539619231814668,
+					"parameters": {
+						"audio-file": {
+							"path": "In Game/Story Tutorial/11 - Cryptic Enchantment"
+						}
+					}
+				},
+				{
+					"id": "preload",
+					"objectClass": "Audio",
 					"sid": 720845425120450,
 					"parameters": {
 						"audio-file": {
@@ -624,8 +634,7 @@
 					}
 				}
 			],
-			"sid": 865818273005886,
-			"disabled": true
+			"sid": 865818273005886
 		},
 		{
 			"eventType": "block",

@@ -80,7 +80,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -117,7 +117,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -190,7 +190,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -227,7 +227,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -300,7 +300,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -337,7 +337,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -410,7 +410,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -447,7 +447,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -520,7 +520,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -557,7 +557,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "Book_Pages",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

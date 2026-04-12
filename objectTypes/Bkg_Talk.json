@@ -15,6 +15,11 @@
 			"behaviorId": "Timer",
 			"name": "Timer",
 			"sid": 460220044097546
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 330205056510097
 		}
 	],
 	"effectTypes": [],
@@ -23,8 +28,8 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1550,
+						"height": 300,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -32,6 +37,18 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 8089901,
+						"collisionPoly": {
+							"points": [
+								0.014838709677419355,
+								0,
+								0.9980645161290322,
+								0.0033333333333333335,
+								0.9703225806451613,
+								0.9933333333333333,
+								0.0006451612903225806,
+								0.96
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

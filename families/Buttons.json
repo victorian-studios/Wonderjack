@@ -9,9 +9,10 @@
 		"configuracoes",
 		"Relics",
 		"Btn_Back",
-		"Btn_Pause",
+		"Btn_ResumeMenu",
 		"Btn_Story_Next",
 		"Btn_Story_No",
-		"Btn_Story_Yes"
+		"Btn_Story_Yes",
+		"Btn_Sound"
 	]
 }

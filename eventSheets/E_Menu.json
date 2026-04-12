@@ -219,6 +219,33 @@
 						{
 							"id": "is-tag-playing",
 							"objectClass": "Audio",
+							"sid": 302874269404064,
+							"parameters": {
+								"tag": "\"story\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 239204174536106,
+							"parameters": {
+								"tag": "\"story\"",
+								"db": "-100",
+								"duration": "0.5",
+								"ending": "stop"
+							}
+						}
+					],
+					"sid": 371513628365662
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
 							"sid": 718789754697135,
 							"parameters": {
 								"tag": "\"credits\""
@@ -1370,6 +1397,41 @@
 					"sid": 786421747441494
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 598679117415179,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "clear-storage",
+					"objectClass": "LocalStorage",
+					"sid": 375068317384316
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 962539075146536
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 114544749265811,
+					"parameters": {
+						"layout": "Intro"
+					}
+				}
+			],
+			"sid": 333924076113041,
+			"disabled": true
 		}
 	],
 	"sid": 468746933081532
