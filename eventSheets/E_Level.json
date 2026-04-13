@@ -15465,6 +15465,11 @@
 							],
 							"actions": [
 								{
+									"id": "destroy",
+									"objectClass": "Icon_Hand_Point",
+									"sid": 631329406332418
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 102451309367398,
@@ -16062,10 +16067,10 @@
 										{
 											"id": "start-timer",
 											"objectClass": "Enemy",
-											"sid": 236892023124863,
+											"sid": 797648981970127,
 											"behaviorType": "Timer",
 											"parameters": {
-												"duration": "10",
+												"duration": "12",
 												"type": "once",
 												"tag": "\"antibug\""
 											}
@@ -17007,6 +17012,91 @@
 											"sid": 276027905541281,
 											"parameters": {
 												"seconds": "3",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Text_Turn",
+											"sid": 512598257963810,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Text_Turn",
+											"sid": 409384055559243,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Text_Turn",
+											"sid": 621858418324651,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.5"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Text_Turn",
+											"sid": 510720294097124,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 279560023886347,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 348870769853519,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 688451308820072,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.5"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Bkg_Turn_Txt",
+											"sid": 825749443607835,
+											"behaviorType": "Fade"
+										},
+										{
+											"callFunction": "Talk",
+											"sid": 230078587971518,
+											"parameters": [
+												"Enemy.AnimationName",
+												"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
+												false,
+												"0"
+											]
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 392392270554860,
+											"parameters": {
+												"seconds": "3.5",
 												"use-timescale": true
 											}
 										},
@@ -22434,7 +22524,7 @@
 												},
 												{
 													"eventType": "comment",
-													"text": "Se a carta for o Furacão no último turno, não deixe jogar!"
+													"text": "Impede de jogar a carta impulso durante o tutoral, vai que o jogador é BURRO"
 												},
 												{
 													"eventType": "block",
@@ -23041,149 +23131,329 @@
 															"eventType": "block",
 															"conditions": [
 																{
-																	"id": "else",
-																	"objectClass": "System",
-																	"sid": 974329372920967
+																	"id": "is-overlapping-another-object",
+																	"objectClass": "Card_Numb",
+																	"sid": 560392991601983,
+																	"parameters": {
+																		"object": "Table_Player"
+																	}
 																}
 															],
-															"actions": [
+															"actions": [],
+															"sid": 554177940776862,
+															"children": [
 																{
-																	"id": "set-rate",
-																	"objectClass": "Particle_Arrow",
-																	"sid": 925036289770271,
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-nearestfurthest",
+																			"objectClass": "Card_Numb",
+																			"sid": 163775106758062,
+																			"parameters": {
+																				"which": "nearest",
+																				"x": "Deck_Numb_Sprite.X",
+																				"y": "Deck_Numb_Sprite.Y",
+																				"pick-all-tied": false
+																			}
+																		},
+																		{
+																			"id": "is-boolean-instance-variable-set",
+																			"objectClass": "Card_Numb",
+																			"sid": 950501735230597,
+																			"parameters": {
+																				"instance-variable": "Player_Hidden"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-rate",
+																			"objectClass": "Particle_Arrow",
+																			"sid": 634479966829609,
+																			"parameters": {
+																				"rate": "0"
+																			}
+																		},
+																		{
+																			"id": "play",
+																			"objectClass": "Audio",
+																			"sid": 458179873227410,
+																			"parameters": {
+																				"audio-file": {
+																					"path": "494768__alderman2k__error"
+																				},
+																				"loop": "not-looping",
+																				"volume": "-5",
+																				"stereo-pan": "0",
+																				"tag-optional": "\"\""
+																			}
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Card_Power",
+																			"sid": 464229048097246,
+																			"parameters": {
+																				"instance-variable": "Selected",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Card_Power",
+																			"sid": 418063068540595,
+																			"parameters": {
+																				"animation": "\"Front\"",
+																				"from": "current-frame"
+																			}
+																		},
+																		{
+																			"id": "set-boolean-eventvar",
+																			"objectClass": "System",
+																			"sid": 503680844407724,
+																			"parameters": {
+																				"variable": "Holding_Card",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "tween-two-properties",
+																			"objectClass": "Card_Power",
+																			"sid": 774729176205786,
+																			"behaviorType": "Tween",
+																			"parameters": {
+																				"tags": "\"return\"",
+																				"property": "position",
+																				"end-x": "Self.my_pos_x",
+																				"end-y": "Self.my_pos_y",
+																				"time": "0.1",
+																				"ease": "default",
+																				"destroy-on-complete": "no",
+																				"loop": "no",
+																				"ping-pong": "no",
+																				"repeat-count": "1"
+																			}
+																		},
+																		{
+																			"id": "wait",
+																			"objectClass": "System",
+																			"sid": 747810604728675,
+																			"parameters": {
+																				"seconds": "0.1",
+																				"use-timescale": true
+																			}
+																		},
+																		{
+																			"callFunction": "Order_Hand",
+																			"sid": 479546105015566,
+																			"parameters": [
+																				true,
+																				false
+																			]
+																		}
+																	],
+																	"sid": 654911564699706
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Table_Player",
+																	"sid": 125082877941752,
 																	"parameters": {
-																		"rate": "0"
+																		"instance-variable": "Visible_Count",
+																		"comparison": 4,
+																		"value": "0"
 																	}
 																},
 																{
-																	"id": "set-boolean-eventvar",
-																	"objectClass": "System",
-																	"sid": 147888342752543,
+																	"id": "compare-instance-variable",
+																	"objectClass": "Hand_Player",
+																	"sid": 768959973820348,
 																	"parameters": {
-																		"variable": "Stop_Turn",
-																		"value": "true"
+																		"instance-variable": "Protect_Turns",
+																		"comparison": 3,
+																		"value": "0"
 																	}
 																},
 																{
-																	"id": "set-boolean-instvar",
-																	"objectClass": "Card_Power",
-																	"sid": 446950246321047,
+																	"id": "is-overlapping-another-object",
+																	"objectClass": "Card_Numb",
+																	"sid": 826937876967689,
 																	"parameters": {
-																		"instance-variable": "Selected",
-																		"value": "false"
+																		"object": "Table_Player"
 																	}
-																},
-																{
-																	"id": "set-boolean-eventvar",
-																	"objectClass": "System",
-																	"sid": 378061088794543,
-																	"parameters": {
-																		"variable": "Holding_Card",
-																		"value": "false"
-																	}
-																},
-																{
-																	"id": "set-boolean-instvar",
-																	"objectClass": "Card_Power",
-																	"sid": 939549058106258,
-																	"parameters": {
-																		"instance-variable": "ToUse",
-																		"value": "true"
-																	}
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Power",
-																	"sid": 857175607211537,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-wait-time",
-																	"objectClass": "Text_Power",
-																	"sid": 875537456377194,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"wait-time": "0"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Power",
-																	"sid": 727350370922111,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "0.1"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Text_Power",
-																	"sid": 299155339307714,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Power_Txt",
-																	"sid": 785997070643103,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Power_Txt",
-																	"sid": 243154941186860,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"wait-time": "0"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Power_Txt",
-																	"sid": 593315214966563,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "0.1"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Bkg_Power_Txt",
-																	"sid": 700725863801162,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 202130495561982,
-																	"parameters": {
-																		"seconds": "0.2",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"callFunction": "Use_Power_Card",
-																	"sid": 269817306712995,
-																	"parameters": [
-																		"1",
-																		"Card_Power.myID"
-																	]
-																},
-																{
-																	"callFunction": "Order_Hand",
-																	"sid": 880169826509175,
-																	"parameters": [
-																		true,
-																		false
-																	]
 																}
 															],
-															"sid": 687687733915927
+															"actions": [],
+															"sid": 687687733915927,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-nearestfurthest",
+																			"objectClass": "Card_Numb",
+																			"sid": 316825547554126,
+																			"parameters": {
+																				"which": "nearest",
+																				"x": "Deck_Numb_Sprite.X",
+																				"y": "Deck_Numb_Sprite.Y",
+																				"pick-all-tied": false
+																			}
+																		},
+																		{
+																			"id": "is-boolean-instance-variable-set",
+																			"objectClass": "Card_Numb",
+																			"sid": 374160386457003,
+																			"parameters": {
+																				"instance-variable": "Player_Hidden"
+																			},
+																			"isInverted": true
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-rate",
+																			"objectClass": "Particle_Arrow",
+																			"sid": 791300233518232,
+																			"parameters": {
+																				"rate": "0"
+																			}
+																		},
+																		{
+																			"id": "set-boolean-eventvar",
+																			"objectClass": "System",
+																			"sid": 882823086106887,
+																			"parameters": {
+																				"variable": "Stop_Turn",
+																				"value": "true"
+																			}
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Card_Power",
+																			"sid": 205688115094912,
+																			"parameters": {
+																				"instance-variable": "Selected",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "set-boolean-eventvar",
+																			"objectClass": "System",
+																			"sid": 450581233739455,
+																			"parameters": {
+																				"variable": "Holding_Card",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Card_Power",
+																			"sid": 468551308549571,
+																			"parameters": {
+																				"instance-variable": "ToUse",
+																				"value": "true"
+																			}
+																		},
+																		{
+																			"id": "set-fade-in-time",
+																			"objectClass": "Text_Power",
+																			"sid": 867049105585892,
+																			"behaviorType": "Fade",
+																			"parameters": {
+																				"fade-in-time": "0"
+																			}
+																		},
+																		{
+																			"id": "set-wait-time",
+																			"objectClass": "Text_Power",
+																			"sid": 741227075152738,
+																			"behaviorType": "Fade",
+																			"parameters": {
+																				"wait-time": "0"
+																			}
+																		},
+																		{
+																			"id": "set-fade-out-time",
+																			"objectClass": "Text_Power",
+																			"sid": 899189191355929,
+																			"behaviorType": "Fade",
+																			"parameters": {
+																				"fade-out-time": "0.1"
+																			}
+																		},
+																		{
+																			"id": "restart-fade",
+																			"objectClass": "Text_Power",
+																			"sid": 388608918783407,
+																			"behaviorType": "Fade"
+																		},
+																		{
+																			"id": "set-fade-in-time",
+																			"objectClass": "Bkg_Power_Txt",
+																			"sid": 968391838024469,
+																			"behaviorType": "Fade",
+																			"parameters": {
+																				"fade-in-time": "0"
+																			}
+																		},
+																		{
+																			"id": "set-wait-time",
+																			"objectClass": "Bkg_Power_Txt",
+																			"sid": 522290414630607,
+																			"behaviorType": "Fade",
+																			"parameters": {
+																				"wait-time": "0"
+																			}
+																		},
+																		{
+																			"id": "set-fade-out-time",
+																			"objectClass": "Bkg_Power_Txt",
+																			"sid": 160056600613669,
+																			"behaviorType": "Fade",
+																			"parameters": {
+																				"fade-out-time": "0.1"
+																			}
+																		},
+																		{
+																			"id": "restart-fade",
+																			"objectClass": "Bkg_Power_Txt",
+																			"sid": 393410460946881,
+																			"behaviorType": "Fade"
+																		},
+																		{
+																			"id": "wait",
+																			"objectClass": "System",
+																			"sid": 509011403443223,
+																			"parameters": {
+																				"seconds": "0.2",
+																				"use-timescale": true
+																			}
+																		},
+																		{
+																			"callFunction": "Use_Power_Card",
+																			"sid": 963199041757738,
+																			"parameters": [
+																				"1",
+																				"Card_Power.myID"
+																			]
+																		},
+																		{
+																			"callFunction": "Order_Hand",
+																			"sid": 931477060720024,
+																			"parameters": [
+																				true,
+																				false
+																			]
+																		}
+																	],
+																	"sid": 380512570027444
+																}
+															]
 														}
 													]
 												},
@@ -31211,6 +31481,15 @@
 							],
 							"actions": [
 								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 635305371801663,
+									"parameters": {
+										"type": "log",
+										"message": "\"Anti bug ativado: STOP!\""
+									}
+								},
+								{
 									"callFunction": "Enemy Action",
 									"sid": 251774011882339,
 									"parameters": [
@@ -34801,6 +35080,15 @@
 										"variable": "PlayerPowerLimit_Rounds",
 										"value": "1"
 									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Hand_Player",
+									"sid": 196904521079839,
+									"parameters": {
+										"instance-variable": "PowerLimit_Rounds",
+										"value": "PlayerPowerLimit_Rounds"
+									}
 								}
 							],
 							"sid": 167473908740650
@@ -36101,12 +36389,22 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 631643582968233
+									"id": "compare-text",
+									"objectClass": "Text_Relic_Info",
+									"sid": 906218332739647,
+									"parameters": {
+										"text-to-compare": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName )",
+										"case-sensitivity": "ignore-case"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
+								{
+									"id": "typewriter-finish",
+									"objectClass": "Text_Relic_Info",
+									"sid": 164850433956087
+								},
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text_Relic_Info",
@@ -36372,12 +36670,22 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 578129071660208
+									"id": "compare-text",
+									"objectClass": "Text_Relic_Info",
+									"sid": 665933717060425,
+									"parameters": {
+										"text-to-compare": "Internationalization.Lookup(\"relics.\" & Relic_card.AnimationName )",
+										"case-sensitivity": "ignore-case"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
+								{
+									"id": "typewriter-finish",
+									"objectClass": "Text_Relic_Info",
+									"sid": 847747257564466
+								},
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text_Relic_Info",

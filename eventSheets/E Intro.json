@@ -13,13 +13,23 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Loaded",
+			"name": "Loaded_Music",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 101950289459526
+		},
+		{
+			"eventType": "variable",
+			"name": "Loaded_AJAX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 298583257270385
 		},
 		{
 			"eventType": "block",
@@ -31,6 +41,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 353055273829769,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "0"
+					}
+				},
 				{
 					"id": "request-project-file",
 					"objectClass": "AJAX",
@@ -189,7 +208,17 @@
 					"objectClass": "System",
 					"sid": 706228601629968,
 					"parameters": {
-						"variable": "Loaded"
+						"variable": "Loaded_Music"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 533387049594656,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"comparison": 5,
+						"value": "4"
 					}
 				}
 			],
@@ -209,6 +238,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 647184592168742,
+							"parameters": {
+								"seconds": "0.01",
+								"use-timescale": true
+							}
+						},
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
@@ -235,6 +273,15 @@
 					],
 					"actions": [
 						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 122431661776383,
+							"parameters": {
+								"seconds": "0.01",
+								"use-timescale": true
+							}
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
 							"sid": 875603546257876,
@@ -260,7 +307,17 @@
 					"objectClass": "System",
 					"sid": 999122413920138,
 					"parameters": {
-						"variable": "Loaded"
+						"variable": "Loaded_Music"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 566499498508575,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"comparison": 5,
+						"value": "4"
 					}
 				}
 			],
@@ -308,7 +365,7 @@
 					"objectClass": "System",
 					"sid": 647322225426771,
 					"parameters": {
-						"variable": "Loaded",
+						"variable": "Loaded_Music",
 						"value": "true"
 					}
 				}
@@ -331,7 +388,7 @@
 					"objectClass": "System",
 					"sid": 465053676625644,
 					"parameters": {
-						"variable": "Loaded"
+						"variable": "Loaded_Music"
 					},
 					"isInverted": true
 				}
@@ -511,6 +568,15 @@
 					"parameters": {
 						"json": "AJAX.LastData"
 					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 216119071533337,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 509042138941674
@@ -542,6 +608,15 @@
 					"sid": 764781462622552,
 					"parameters": {
 						"axis": "x"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 108556824809946,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
 					}
 				}
 			],
@@ -575,6 +650,15 @@
 					"parameters": {
 						"axis": "x"
 					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 798961616639824,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 534584866449232
@@ -606,6 +690,15 @@
 					"sid": 515967001259263,
 					"parameters": {
 						"locale": "\"en-US\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 194012246157819,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
 					}
 				}
 			],

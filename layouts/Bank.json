@@ -11,7 +11,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Front",
-						"initial-frame": 13,
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},

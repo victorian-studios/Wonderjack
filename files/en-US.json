@@ -25,9 +25,9 @@
                 "3": "But don't worry too much if you can't get exactly [b]21[/b]. It's hard, since you don't know the next number you're gonna draw from the deck.",
                 "4": "Just avoid exceeding [b]21[/b] with your cards, or you'll lose the round. The [color=#005eff]blue[/color] deck contain [b]12[/b] cards from [b]1 up to 12[/b].",
                 "5": "In wonderjack everyone starts a new round drawing the [b]1[/b] hidden card. Only the owner can see it's number, and the opponent can only guess what is.",
-                "6": "To see your card, just hover the mouse on it.",
+                "6": "For you see your hidden card, just hover the mouse on it.",
                 "7": "On your turn, you can do only one of 4 possible actions: [b]draw a number[/b], [b]stop[/b], [b]draw a power[/b] or [b]play a power[/b].",
-                "8": "To draw a number, click on the [color=#005eff]blue[/color] deck. That makes you draw the first number card from the deck.",
+                "8": "To draw a number, click on the [color=#005eff]blue[/color] deck. That makes you draw the top card from the deck.",
                 "9": "To stop, click on the bell. That makes you finish this round and the opponent can only do 1 more action before we count our numbers.",
                 "10": "When the round finishes, all hidden number cards are revealed and the numbers are counted to see who reached [b]21[/b] or closest to it. If both players pass 21, nobody wins the round.",
                 "11": "For this first round, let's ignore the power cards to make things simple.",
@@ -49,7 +49,7 @@
                 "27": "Well... I won this time!",
                 "28": "Don't worry Alice, sometimes the power cards can't help much, but keeping them to the next round might be the best strategy.",
                 "29": "Now, it's the final round of this match. Do your best!",
-                "30": "Oh! It seams that I've won again.",
+                "30": "Oh! It seems that I've won again.",
                 "31": "Usually, when that happens, you lost the game and you should try again from the beginning.",
                 "32": "But since I'm just teaching you, I think you're ready to find the others and learn with them.",
                 "33": "Look at you, you've won this match!",
@@ -139,7 +139,7 @@
                 "Jabberwock": {
                     "name": "Jabberwock",
                     "talk_win": "Finally, I’ll be able to sharpen my fangs a little!",
-                    "talk_lose": "Arghhh",
+                    "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
                     "talk_thinking_2": ""
                 }
@@ -180,7 +180,7 @@
             "protect": "[u]Protect[/u]\n\n\nProtect you from loosing any number card for [color=#f5fe05]3[/color] turns.",
             "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck",
             "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number to your opponent.",
-            "return": "[u]Return[/u]\n\n\nDiscard your [color=#fa1c03]last not hidden[/color] number card to the end of the deck.",
+            "return": "[u]Return[/u]\n\n\nDiscard your right-most number card if [color=#fa1c03]not hidden[/color] to the end of the deck.",
             "compel": "[u]Compel[/u]\n\n\nForces [color=#f5fe05]your opponent[/color] to discard their [color=#f5fe05]last[/color] number card to the end of the deck.",
             "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#fa1c03]not hidden[/color] card to switch with your opponent.",
             "exchange_tip_1": "[u]Select an opponent card:[/u]",
