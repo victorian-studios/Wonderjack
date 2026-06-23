@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 47603,
+	"savedWithRelease": 48703,
 	"name": "GameJamPlus (2025)",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -233,7 +233,13 @@
 			"Bkg_Talk",
 			"Text_Talk_Name",
 			"Book_Pages",
-			"Icon_Arrow_Talk"
+			"Icon_Arrow_Talk",
+			"Candelabro",
+			"Quadro_Turns",
+			"icon_discord",
+			"Card_Numb_Old",
+			"Quadro_Turns_Shadow",
+			"Text_Round_Numb"
 		],
 		"subfolders": []
 	},
@@ -809,7 +815,7 @@
 		"authorWebsite": "",
 		"appId": "",
 		"pixelRounding": false,
-		"zAxisScale": "normalized",
+		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",

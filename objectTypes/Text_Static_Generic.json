@@ -7,10 +7,17 @@
 	"instanceVariables": [
 		{
 			"name": "my_id",
-			"type": "string",
+			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 496585240299587
+		},
+		{
+			"name": "my_txt",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 425745843440748
 		}
 	],
 	"behaviorTypes": [],

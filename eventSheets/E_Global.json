@@ -530,6 +530,15 @@
 										"layer": "\"Pause\"",
 										"visibility": "invisible"
 									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 330577077414532,
+									"parameters": {
+										"layer": "\"Main\"",
+										"interactive": true
+									}
 								}
 							],
 							"sid": 171468225381443
@@ -855,9 +864,9 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "Text_Static_Generic",
-							"sid": 977003359934850,
+							"sid": 152864299460381,
 							"parameters": {
-								"instance-variable": "my_id",
+								"instance-variable": "my_txt",
 								"comparison": 1,
 								"value": "\"\""
 							}
@@ -867,9 +876,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text_Static_Generic",
-							"sid": 259848289191033,
+							"sid": 786217517824008,
 							"parameters": {
-								"text": "Internationalization.Lookup( Self.my_id )"
+								"text": "Internationalization.Lookup( Self.my_txt )"
 							}
 						}
 					],

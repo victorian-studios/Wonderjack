@@ -395,14 +395,6 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "Candle_Flame",
-					"sid": 980408480241830,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
 					"id": "set-instvar-value",
 					"objectClass": "Hand_Player",
 					"sid": 162472034995330,
@@ -454,6 +446,19 @@
 					"parameters": {
 						"instance-variable": "PowerLimit_Rounds",
 						"value": "EnemyPowerLimit_Rounds"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 492874688910744,
+					"parameters": {
+						"object-to-create": "Candelabro",
+						"layer": "\"Game\"",
+						"x": "268",
+						"y": "238",
+						"create-hierarchy": false,
+						"template-name": "\"\""
 					}
 				}
 			],
@@ -541,6 +546,54 @@
 						{
 							"id": "is-tag-playing",
 							"objectClass": "Audio",
+							"sid": 226088093946038,
+							"parameters": {
+								"tag": "\"story\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 996130379217179,
+							"parameters": {
+								"variable": "Tutorial_Enabled"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 768256794381084,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 681832344516956,
+							"parameters": {
+								"audio-file": {
+									"path": "In Game/Story Tutorial/11 - Cryptic Enchantment"
+								},
+								"loop": "looping",
+								"volume": "-11",
+								"stereo-pan": "0",
+								"tag-optional": "\"story\""
+							}
+						}
+					],
+					"sid": 802474593587111
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
 							"sid": 949301208420960,
 							"parameters": {
 								"tag": "\"story\""
@@ -570,6 +623,10 @@
 						}
 					],
 					"sid": 658520330281699
+				},
+				{
+					"eventType": "comment",
+					"text": "Se for o tutorial"
 				},
 				{
 					"eventType": "block",
@@ -609,6 +666,22 @@
 							"parameters": {
 								"animation": "\"Level_0\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Candelabro",
+							"sid": 385511572413686,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Quadro_Turns",
+							"sid": 616614008999942,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						},
 						{
@@ -677,6 +750,22 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Candelabro",
+							"sid": 953628795397141,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Quadro_Turns",
+							"sid": 446925977334632,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
 						{
 							"callFunction": "Transition",
 							"sid": 583810993476225,
@@ -754,6 +843,149 @@
 				}
 			],
 			"sid": 403715614006273
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Objects",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "Jabberwock_Candles",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Candelabro",
+							"sid": 970769957351513,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Candle_Flame",
+							"sid": 203907765129079
+						}
+					],
+					"sid": 491861665657220,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 261747725977339,
+									"parameters": {
+										"count": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Candelabro",
+									"sid": 655474259572592,
+									"parameters": {
+										"object": "Candle_Flame",
+										"layer": "0",
+										"image-point": "loopindex + 1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Candle_Flame",
+									"sid": 874630623139270,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Candle_Flame",
+									"sid": 268181618754399,
+									"parameters": {
+										"instance-variable": "my_ID",
+										"value": "loopindex + 1"
+									}
+								}
+							],
+							"sid": 750820902498154
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Candelabro",
+							"sid": 475469471415229
+						}
+					],
+					"actions": [],
+					"sid": 977410904159590,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 604574896387017,
+									"parameters": {
+										"count": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Candelabro",
+									"sid": 395372731715427,
+									"parameters": {
+										"object": "Candle_Flame",
+										"layer": "0",
+										"image-point": "loopindex + 1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Candle_Flame",
+									"sid": 357240227314635,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Candle_Flame",
+									"sid": 717908175659562,
+									"parameters": {
+										"instance-variable": "my_ID",
+										"value": "loopindex + 1"
+									}
+								}
+							],
+							"sid": 788770119867382
+						}
+					]
+				}
+			],
+			"sid": 164717476748588
 		},
 		{
 			"eventType": "group",
@@ -15576,11 +15808,66 @@
 									]
 								},
 								{
+									"id": "spawn-another-object",
+									"objectClass": "Quadro_Turns",
+									"sid": 667751859916951,
+									"parameters": {
+										"object": "Quadro_Turns_Shadow",
+										"layer": "Self.LayerName",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 215856467106024,
+									"parameters": {
+										"animation": "\"Alice\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 316225835230525,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 362517272139363,
+									"sid": 854899445056912,
 									"parameters": {
-										"seconds": "1.5",
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Quadro_Turns",
+									"sid": 991741076776680,
+									"parameters": {
+										"animation": "\"Alice\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Quadro_Turns",
+									"sid": 151963841939036,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 656299996647124,
+									"parameters": {
+										"seconds": "1",
 										"use-timescale": true
 									}
 								},
@@ -15855,6 +16142,68 @@
 							],
 							"sid": 372180278376709,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Quadro_Turns",
+											"sid": 403659616444979,
+											"parameters": {
+												"object": "Quadro_Turns_Shadow",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Quadro_Turns_Shadow",
+											"sid": 276095716264670,
+											"parameters": {
+												"animation": "\"Level_\" & Match",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Quadro_Turns_Shadow",
+											"sid": 980137290527539,
+											"parameters": {
+												"frame-number": "A_TheRng.At( Match - 1)"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 447013115116588,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Quadro_Turns",
+											"sid": 859634590207239,
+											"parameters": {
+												"animation": "\"Level_\" & Match",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Quadro_Turns",
+											"sid": 625796371186470,
+											"parameters": {
+												"frame-number": "A_TheRng.At( Match - 1)"
+											}
+										}
+									],
+									"sid": 344541989055093
+								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -16916,6 +17265,12 @@
 					"sid": 440851500825285,
 					"children": [
 						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 444495795104922
+						},
+						{
 							"eventType": "comment",
 							"text": "Se o jogador tiver 2 pontos, então ele ganhou a rodada e vai pra próxima"
 						},
@@ -17593,10 +17948,10 @@
 								{
 									"id": "log",
 									"objectClass": "Browser",
-									"sid": 745240529394971,
+									"sid": 665961620358820,
 									"parameters": {
 										"type": "log",
-										"message": "\"Jogador ainda não venceu a partida \"&Match"
+										"message": "\"Ninguém venceu a partida \"&Match&\" ainda\""
 									}
 								},
 								{
@@ -17618,11 +17973,70 @@
 									}
 								},
 								{
+									"id": "spawn-another-object",
+									"objectClass": "Quadro_Turns",
+									"sid": 716328846827694,
+									"parameters": {
+										"object": "Quadro_Turns_Shadow",
+										"layer": "Self.LayerName",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 592072999925887,
+									"parameters": {
+										"animation": "\"None\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Quadro_Turns",
+									"sid": 131907023394065,
+									"parameters": {
+										"object": "Text_Round_Numb",
+										"layer": "Self.LayerName",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Round_Numb",
+									"sid": 810429705619049,
+									"parameters": {
+										"text": "GameRound"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 126796322073730,
+									"sid": 991319518654493,
 									"parameters": {
-										"seconds": "2",
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Quadro_Turns",
+									"sid": 451379263088337,
+									"parameters": {
+										"animation": "\"None\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 865940405811908,
+									"parameters": {
+										"seconds": "1.5",
 										"use-timescale": true
 									}
 								}
@@ -32090,7 +32504,7 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 422072209143794,
+									"sid": 644043667329906,
 									"parameters": {
 										"seconds": "2",
 										"use-timescale": true
@@ -32469,10 +32883,84 @@
 									"objectClass": "Bkg_Turn_Txt",
 									"sid": 765486251720961,
 									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Quadro_Turns",
+									"sid": 674672813575028,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 407082144752008,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Quadro_Turns",
+											"sid": 855130354858723,
+											"parameters": {
+												"object": "Quadro_Turns_Shadow",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Quadro_Turns_Shadow",
+											"sid": 686835793021282,
+											"parameters": {
+												"animation": "\"None\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Quadro_Turns",
+											"sid": 690720315311057,
+											"parameters": {
+												"object": "Text_Round_Numb",
+												"layer": "Self.LayerName",
+												"image-point": "1",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Round_Numb",
+											"sid": 694092929858083,
+											"parameters": {
+												"text": "GameRound"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 777565282567544,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Quadro_Turns",
+											"sid": 742921675485678,
+											"parameters": {
+												"animation": "\"None\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 102605990180991
+								},
 								{
 									"eventType": "comment",
 									"text": "Mad Hatter"
@@ -33031,35 +33519,194 @@
 									}
 								},
 								{
-									"id": "set-animation",
-									"objectClass": "Bkg_Bkg",
-									"sid": 604015928509036,
-									"parameters": {
-										"animation": "\"Level_\"&Match",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Bkg_Main_Level",
-									"sid": 280105592544328,
-									"parameters": {
-										"animation": "\"Level_\"&Match",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "mesa",
-									"sid": 533161939826617,
-									"parameters": {
-										"animation": "\"Level_\"&Match",
-										"from": "beginning"
-									}
+									"id": "destroy",
+									"objectClass": "Icon_Hidden_Card",
+									"sid": 296020244974754
 								}
 							],
 							"sid": 530374455169839,
 							"children": [
+								{
+									"eventType": "comment",
+									"text": "Others"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 933477615376933,
+											"parameters": {
+												"variable": "Match",
+												"comparison": 1,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Bkg_Bkg",
+											"sid": 918286023481262,
+											"parameters": {
+												"animation": "\"Level_\"&Match",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Bkg_Main_Level",
+											"sid": 988279284996733,
+											"parameters": {
+												"animation": "\"Level_\"&Match",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "mesa",
+											"sid": 718334523527040,
+											"parameters": {
+												"animation": "\"Level_\"&Match",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 780186304063198
+								},
+								{
+									"eventType": "comment",
+									"text": "Jabberwock"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 914501644089400,
+											"parameters": {
+												"variable": "Match",
+												"comparison": 0,
+												"value": "4"
+											}
+										},
+										{
+											"id": "compare-at-x",
+											"objectClass": "A_TheRng",
+											"sid": 963918430062802,
+											"parameters": {
+												"x": "Match - 1",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Bkg_Bkg",
+											"sid": 354909691306317,
+											"parameters": {
+												"animation": "\"Level_\"&Match",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Bkg_Bkg",
+											"sid": 465738408230224,
+											"parameters": {
+												"frame-number": "2"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Bkg_Main_Level",
+											"sid": 669554188481251,
+											"parameters": {
+												"animation": "\"Level_\"&Match",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Bkg_Main_Level",
+											"sid": 470105108005125,
+											"parameters": {
+												"frame-number": "2"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "mesa",
+											"sid": 223285900714336,
+											"parameters": {
+												"animation": "\"Level_\"&Match",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "mesa",
+											"sid": 538716837219526,
+											"parameters": {
+												"frame-number": "2"
+											}
+										}
+									],
+									"sid": 781486405182163
+								},
+								{
+									"eventType": "comment",
+									"text": "Dodo"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 898262867294760,
+											"parameters": {
+												"variable": "Match",
+												"comparison": 0,
+												"value": "9"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Bkg_Bkg",
+											"sid": 573677483640792,
+											"parameters": {
+												"animation": "\"Level_Dodo\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Bkg_Main_Level",
+											"sid": 235603013571033,
+											"parameters": {
+												"animation": "\"Level_Dodo\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "mesa",
+											"sid": 308654112957640,
+											"parameters": {
+												"animation": "\"Level_Dodo\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 494133481509927
+								},
 								{
 									"eventType": "block",
 									"conditions": [],
@@ -33498,6 +34145,216 @@
 											"children": [
 												{
 													"eventType": "comment",
+													"text": "The Tweedles"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-x",
+															"objectClass": "A_TheRng",
+															"sid": 870458750141580,
+															"parameters": {
+																"x": "Match - 1",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 862188201102642,
+															"parameters": {
+																"variable": "EnemyName",
+																"value": "\"The Tweedles\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy",
+															"sid": 985931934555668,
+															"parameters": {
+																"animation": "EnemyName",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy",
+															"sid": 386778149692211,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy",
+															"sid": 667661765424339,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "10"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy",
+															"sid": 574367292713116,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "10"
+															}
+														},
+														{
+															"id": "set-position",
+															"objectClass": "Enemy",
+															"sid": 153967571593010,
+															"parameters": {
+																"x": "960",
+																"y": "690"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy",
+															"sid": 604461755464242,
+															"parameters": {
+																"width": "520",
+																"height": "672"
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Enemy",
+															"sid": 725241492220583,
+															"parameters": {
+																"object": "Enemy_Extra_Anim",
+																"layer": "0",
+																"image-point": "1",
+																"create-hierarchy": true,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Enemy",
+															"sid": 361594044858854,
+															"parameters": {
+																"child": "Enemy_Extra_Anim",
+																"transform-x": true,
+																"transform-y": false,
+																"transform-z-elevation": true,
+																"transform-w": true,
+																"transform-h": true,
+																"transform-a": true,
+																"transform-o": false,
+																"transform-visibility": false,
+																"destroy-with-parent": false
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 873600885106436,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "1"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 587770051104122,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 967089418998737,
+															"parameters": {
+																"animation": "\"Brother\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 473249585774210,
+															"parameters": {
+																"width": "268",
+																"height": "504"
+															}
+														},
+														{
+															"id": "set-cycle-position",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 412339368118038,
+															"behaviorType": "Sine",
+															"parameters": {
+																"cycle-position": "0"
+															}
+														},
+														{
+															"id": "set-period",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 413262941244573,
+															"behaviorType": "Sine",
+															"parameters": {
+																"period": "6"
+															}
+														},
+														{
+															"id": "set-magnitude",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 537465088268303,
+															"behaviorType": "Sine",
+															"parameters": {
+																"magnitude": "10"
+															}
+														},
+														{
+															"id": "set-active",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 956962824257027,
+															"behaviorType": "Sine",
+															"parameters": {
+																"state": "active"
+															}
+														},
+														{
+															"id": "move-to-object",
+															"objectClass": "mesa",
+															"sid": 183277573726655,
+															"parameters": {
+																"where": "in-front",
+																"object": "Enemy_Extra_Anim"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 614876216886467,
+															"parameters": {
+																"variable": "EnemyAI_Style",
+																"value": "\"cautious\""
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 608556437975535,
+															"parameters": {
+																"variable": "EnemyAI_Chaos",
+																"value": "10"
+															}
+														}
+													],
+													"sid": 334734023717518
+												},
+												{
+													"eventType": "comment",
 													"text": "Humpty Dumpty"
 												},
 												{
@@ -33506,11 +34363,11 @@
 														{
 															"id": "compare-at-x",
 															"objectClass": "A_TheRng",
-															"sid": 803497000187335,
+															"sid": 891938336072047,
 															"parameters": {
 																"x": "Match - 1",
 																"comparison": 0,
-																"value": "1"
+																"value": "2"
 															}
 														}
 													],
@@ -33599,216 +34456,6 @@
 													],
 													"sid": 280306624833519,
 													"isOrBlock": true
-												},
-												{
-													"eventType": "comment",
-													"text": "The Tweedles"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-at-x",
-															"objectClass": "A_TheRng",
-															"sid": 110368054182513,
-															"parameters": {
-																"x": "Match - 1",
-																"comparison": 0,
-																"value": "2"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 176401353073435,
-															"parameters": {
-																"variable": "EnemyName",
-																"value": "\"The Tweedles\""
-															}
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Enemy",
-															"sid": 805993284384305,
-															"parameters": {
-																"animation": "EnemyName",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "set-cycle-position",
-															"objectClass": "Enemy",
-															"sid": 683453119463364,
-															"behaviorType": "Sine",
-															"parameters": {
-																"cycle-position": "0"
-															}
-														},
-														{
-															"id": "set-period",
-															"objectClass": "Enemy",
-															"sid": 372521470176561,
-															"behaviorType": "Sine",
-															"parameters": {
-																"period": "10"
-															}
-														},
-														{
-															"id": "set-magnitude",
-															"objectClass": "Enemy",
-															"sid": 358023485006045,
-															"behaviorType": "Sine",
-															"parameters": {
-																"magnitude": "10"
-															}
-														},
-														{
-															"id": "set-position",
-															"objectClass": "Enemy",
-															"sid": 292011661871229,
-															"parameters": {
-																"x": "960",
-																"y": "690"
-															}
-														},
-														{
-															"id": "set-size",
-															"objectClass": "Enemy",
-															"sid": 930365714922422,
-															"parameters": {
-																"width": "520",
-																"height": "672"
-															}
-														},
-														{
-															"id": "spawn-another-object",
-															"objectClass": "Enemy",
-															"sid": 869415417938676,
-															"parameters": {
-																"object": "Enemy_Extra_Anim",
-																"layer": "0",
-																"image-point": "1",
-																"create-hierarchy": true,
-																"template-name": "\"\""
-															}
-														},
-														{
-															"id": "add-child",
-															"objectClass": "Enemy",
-															"sid": 779230022944816,
-															"parameters": {
-																"child": "Enemy_Extra_Anim",
-																"transform-x": true,
-																"transform-y": false,
-																"transform-z-elevation": true,
-																"transform-w": true,
-																"transform-h": true,
-																"transform-a": true,
-																"transform-o": false,
-																"transform-visibility": false,
-																"destroy-with-parent": false
-															}
-														},
-														{
-															"id": "set-fade-in-time",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 651696024043942,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-in-time": "1"
-															}
-														},
-														{
-															"id": "restart-fade",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 222338956686642,
-															"behaviorType": "Fade"
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 407366386099442,
-															"parameters": {
-																"animation": "\"Brother\"",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "set-size",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 970337397730142,
-															"parameters": {
-																"width": "268",
-																"height": "504"
-															}
-														},
-														{
-															"id": "set-cycle-position",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 715817154352752,
-															"behaviorType": "Sine",
-															"parameters": {
-																"cycle-position": "0"
-															}
-														},
-														{
-															"id": "set-period",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 720944990789228,
-															"behaviorType": "Sine",
-															"parameters": {
-																"period": "6"
-															}
-														},
-														{
-															"id": "set-magnitude",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 511223646796959,
-															"behaviorType": "Sine",
-															"parameters": {
-																"magnitude": "10"
-															}
-														},
-														{
-															"id": "set-active",
-															"objectClass": "Enemy_Extra_Anim",
-															"sid": 333724450522364,
-															"behaviorType": "Sine",
-															"parameters": {
-																"state": "active"
-															}
-														},
-														{
-															"id": "move-to-object",
-															"objectClass": "mesa",
-															"sid": 435528796346197,
-															"parameters": {
-																"where": "in-front",
-																"object": "Enemy_Extra_Anim"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 351155539057567,
-															"parameters": {
-																"variable": "EnemyAI_Style",
-																"value": "\"cautious\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 695456184606375,
-															"parameters": {
-																"variable": "EnemyAI_Chaos",
-																"value": "10"
-															}
-														}
-													],
-													"sid": 113432254506347
 												},
 												{
 													"eventType": "block",
@@ -39380,7 +40027,27 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 583123694552455,
+											"sid": 659074620582017,
+											"parameters": {
+												"variable": "Tut_Talk",
+												"comparison": 1,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 638873478888042,
+											"parameters": {
+												"variable": "Tut_Talk",
+												"comparison": 1,
+												"value": "4"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 261287284352612,
 											"parameters": {
 												"variable": "Tut_Talk",
 												"comparison": 1,
@@ -39527,42 +40194,36 @@
 									"sid": 961329159968794,
 									"children": [
 										{
+											"eventType": "comment",
+											"text": "Mostrar as cartas de número"
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 753521058160137,
+													"sid": 120502734754904,
 													"parameters": {
 														"variable": "Tut_Talk",
 														"comparison": 0,
-														"value": "32"
-													}
-												},
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 905506664432461,
-													"parameters": {
-														"variable": "Tut_Talk",
-														"comparison": 0,
-														"value": "35"
+														"value": "4"
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-eventvar-value",
+													"id": "add-to-eventvar",
 													"objectClass": "System",
-													"sid": 709057108919753,
+													"sid": 788570287114460,
 													"parameters": {
 														"variable": "Tut_Talk",
-														"value": "36"
+														"value": "1"
 													}
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 897501842455538,
+													"sid": 809530948164564,
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
@@ -39573,7 +40234,110 @@
 												{
 													"id": "play",
 													"objectClass": "Audio",
-													"sid": 806440877375102,
+													"sid": 944771593032569,
+													"parameters": {
+														"audio-file": {
+															"path": "button_select_sfx"
+														},
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 471833431663049,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 388979477601926,
+															"parameters": {
+																"object": "Card_Numb_Old"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 661101625004647,
+															"parameters": {
+																"seconds": "0.2 * loopindex",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Card_Numb_Old",
+															"sid": 783417148129748,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "0"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Card_Numb_Old",
+															"sid": 434183066742406,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "0.25"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Card_Numb_Old",
+															"sid": 435765023672261,
+															"behaviorType": "Fade"
+														}
+													],
+													"sid": 112469019131053
+												}
+											],
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 871062749217297,
+													"parameters": {
+														"variable": "Tut_Talk",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 202275252915720,
+													"parameters": {
+														"variable": "Tut_Talk",
+														"value": "1"
+													}
+												},
+												{
+													"callFunction": "Talk",
+													"sid": 327135156769832,
+													"parameters": [
+														"Enemy.AnimationName",
+														"\"tutorial.white_queen.\" & str(Tut_Talk)",
+														true,
+														"0"
+													]
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 221916982992487,
 													"parameters": {
 														"audio-file": {
 															"path": "button_select_sfx"
@@ -39586,6 +40350,109 @@
 												}
 											],
 											"sid": 279084715340825,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 601368039529801,
+															"parameters": {
+																"object": "Card_Numb_Old"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 320091858884485,
+															"parameters": {
+																"seconds": "0.2 * loopindex",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-visible",
+															"objectClass": "Card_Numb_Old",
+															"sid": 889637233731694,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "start-fade",
+															"objectClass": "Card_Numb_Old",
+															"sid": 337179058190780,
+															"behaviorType": "Fade"
+														}
+													],
+													"sid": 846867579263226
+												}
+											],
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 578990734105150,
+													"parameters": {
+														"variable": "Tut_Talk",
+														"comparison": 0,
+														"value": "32"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 696865409933363,
+													"parameters": {
+														"variable": "Tut_Talk",
+														"comparison": 0,
+														"value": "35"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 590748592111019,
+													"parameters": {
+														"variable": "Tut_Talk",
+														"value": "36"
+													}
+												},
+												{
+													"callFunction": "Talk",
+													"sid": 694990391424452,
+													"parameters": [
+														"Enemy.AnimationName",
+														"\"tutorial.white_queen.\" & str(Tut_Talk)",
+														true,
+														"0"
+													]
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 100167196583908,
+													"parameters": {
+														"audio-file": {
+															"path": "button_select_sfx"
+														},
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 905653108775152,
 											"isOrBlock": true
 										}
 									]
@@ -39687,15 +40554,7 @@
 							}
 						}
 					],
-					"sid": 870381241968377,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 116171604790954
-						}
-					]
+					"sid": 870381241968377
 				},
 				{
 					"eventType": "block",
@@ -39772,15 +40631,7 @@
 							}
 						}
 					],
-					"sid": 198533948673786,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 437310147031684
-						}
-					]
+					"sid": 198533948673786
 				},
 				{
 					"eventType": "block",
@@ -39918,17 +40769,19 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 584915901894431,
+							"id": "spawn-another-object",
+							"objectClass": "Quadro_Turns",
+							"sid": 251074070225112,
 							"parameters": {
-								"variable": "PlayerPoints",
-								"value": "1"
+								"object": "Text_Round_Numb",
+								"layer": "Self.LayerName",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						}
 					],
-					"sid": 817626238727882,
-					"disabled": true
+					"sid": 817626238727882
 				}
 			],
 			"sid": 357112366278544

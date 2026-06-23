@@ -377,6 +377,84 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 1922,
+						"height": 593,
+						"originX": 0.5,
+						"originY": 0.08768971332209106,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 448246,
+						"collisionPoly": {
+							"points": [
+								0.060353798126951096,
+								0.003372681281618887,
+								0.9719042663891779,
+								0.0893760539629005,
+								0.9994797086368367,
+								0.2799325463743676,
+								0.9994797086368367,
+								0.9983136593591906,
+								0.0005202913631633715,
+								0.9983136593591906,
+								0.0005202913631633715,
+								0.28161888701517707
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 285683233998379,
+				"name": "Level_5",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 1922,
+						"height": 497,
+						"originX": 0.5,
+						"originY": -0.08853118712273642,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1032698,
+						"collisionPoly": {
+							"points": [
+								0.03694068678459938,
+								0.004024144869215292,
+								0.9994797086368367,
+								0.01609657947686117,
+								0.9994797086368367,
+								0.9979879275653923,
+								0.0005202913631633715,
+								0.9979879275653923
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 939773010790590,
+				"name": "Level_Dodo",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
 			}
 		],
 		"subfolders": []

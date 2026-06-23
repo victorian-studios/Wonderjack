@@ -88,6 +88,33 @@
 					"parameters": {
 						"x": "-200"
 					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 366971299601975,
+					"parameters": {
+						"layer": "\"Menu\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 122223373858710,
+					"parameters": {
+						"layer": "\"Play\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 492183508141991,
+					"parameters": {
+						"layer": "\"Extras\"",
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 156210455576702,
@@ -103,12 +130,12 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "logo",
-							"sid": 640304741259995,
+							"sid": 323730791760961,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
-								"property": "offsetX",
-								"end-value": "1500",
+								"property": "offsetY",
+								"end-value": "107",
 								"time": "0.5",
 								"ease": "default",
 								"destroy-on-complete": "no",
@@ -120,31 +147,13 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "Menu_Poste",
-							"sid": 636524498311930,
+							"sid": 691976891208510,
 							"behaviorType": "Tween",
 							"parameters": {
-								"tags": "\"\"",
+								"tags": "\"mover\"",
 								"property": "offsetY",
-								"end-value": "682",
+								"end-value": "675",
 								"time": "0.5",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "AliceMenu",
-							"sid": 599510157604962,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "position",
-								"end-x": "0",
-								"end-y": "0",
-								"time": "1",
 								"ease": "default",
 								"destroy-on-complete": "no",
 								"loop": "no",
@@ -301,6 +310,32 @@
 				{
 					"id": "is-playing",
 					"objectClass": "AliceMenu",
+					"sid": 126135696631334,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"black1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 793607729143159,
+					"parameters": {
+						"layer": "\"Black\"",
+						"opacity": "AliceMenu.Tween.Value(\"black1\")"
+					}
+				}
+			],
+			"sid": 734221113884497
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "AliceMenu",
 					"sid": 181867858985268,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -350,15 +385,165 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-tweens-finished",
+					"objectClass": "AliceMenu",
+					"sid": 868212688413315,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"black1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 715088508713895,
+					"parameters": {
+						"variable": "Tutorial_Enabled",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 285010163766398,
+					"parameters": {
+						"variable": "Tut_Talk",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 219061264421231,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 655446470891410
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "Menu_Poste",
+					"sid": 563273321769834,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadeout\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Text_Static_Generic",
+					"sid": 430572569129757,
+					"parameters": {
+						"opacity": "Menu_Poste.Tween.Value(\"fadeout\")"
+					}
+				}
+			],
+			"sid": 474344100520940
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "Menu_Poste",
+					"sid": 967223743675647,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadein\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Text_Static_Generic",
+					"sid": 179292525467548,
+					"parameters": {
+						"opacity": "Menu_Poste.Tween.Value(\"fadein\")"
+					}
+				}
+			],
+			"sid": 379651843683868
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "Menu_Poste",
+					"sid": 787523032514433,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadeout\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "Menu_Poste",
+					"sid": 130647621954676,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadein\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "0.25",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 692395612211459
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
 					"sid": 774074465596806,
 					"parameters": {
 						"object": "Menu_Placa"
 					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Menu_Placa",
+					"sid": 539538506575806
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Menu_Placa",
+					"sid": 355165637668505,
+					"parameters": {
+						"animation": "\"Selected\"",
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 400668052630164,
+					"parameters": {
+						"cursor-style": "pointer"
+					}
+				}
+			],
 			"sid": 559339036084278,
 			"children": [
 				{
@@ -415,16 +600,7 @@
 							"sid": 569254479617367
 						}
 					],
-					"actions": [
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 226839419241901,
-							"parameters": {
-								"cursor-style": "pointer"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 114831323642314
 				}
 			]
@@ -463,6 +639,15 @@
 					}
 				},
 				{
+					"id": "set-animation",
+					"objectClass": "Menu_Placa",
+					"sid": 533893024382565,
+					"parameters": {
+						"animation": "\"Default\"",
+						"from": "current-frame"
+					}
+				},
+				{
 					"id": "set-cursor-style2",
 					"objectClass": "Mouse",
 					"sid": 830409012532831,
@@ -472,6 +657,10 @@
 				}
 			],
 			"sid": 915803860415737
+		},
+		{
+			"eventType": "comment",
+			"text": "Sequência de botões"
 		},
 		{
 			"eventType": "block",
@@ -487,11 +676,18 @@
 					}
 				},
 				{
+					"id": "is-any-playing",
+					"objectClass": "Menu_Poste",
+					"sid": 523842920136485,
+					"behaviorType": "Tween",
+					"isInverted": true
+				},
+				{
 					"id": "layer-is-visible",
 					"objectClass": "System",
-					"sid": 919144028828144,
+					"sid": 456087077814877,
 					"parameters": {
-						"layer": "\"Tutorial\""
+						"layer": "\"Pause\""
 					},
 					"isInverted": true
 				}
@@ -522,234 +718,73 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-animation-frame",
+							"id": "compare-instance-variable",
 							"objectClass": "Menu_Placa",
-							"sid": 457251139656219,
+							"sid": 905073232211372,
 							"parameters": {
+								"instance-variable": "My_ID",
 								"comparison": 0,
-								"number": "0"
+								"value": "1"
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "tween-value",
-							"objectClass": "AliceMenu",
-							"sid": 173230953610847,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"black\"",
-								"start-value": "0",
-								"end-value": "100",
-								"time": "0.5",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						}
-					],
-					"sid": 191887291043306
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "Menu_Placa",
-							"sid": 233568626771760,
-							"parameters": {
-								"comparison": 0,
-								"number": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 629472617206527,
-							"parameters": {
-								"layer": "\"Tutorial\"",
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Tutorial_Img",
-							"sid": 701296454020693,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "Text_Talk",
-							"sid": 182511108458052,
-							"parameters": {
-								"text": "Internationalization.Lookup(\"tutorial.page_\" & Tutorial_Img.AnimationFrame)"
-							}
-						},
-						{
-							"id": "set-fade-in-time",
-							"objectClass": "Bkg_Power_Txt",
-							"sid": 998535153109590,
-							"behaviorType": "Fade",
-							"parameters": {
-								"fade-in-time": "0.5"
-							}
-						},
-						{
-							"id": "set-fade-out-time",
-							"objectClass": "Bkg_Power_Txt",
-							"sid": 150184603284067,
-							"behaviorType": "Fade",
-							"parameters": {
-								"fade-out-time": "0"
-							}
-						},
-						{
-							"id": "restart-fade",
-							"objectClass": "Bkg_Power_Txt",
-							"sid": 628995593935033,
-							"behaviorType": "Fade"
-						}
-					],
-					"sid": 572956527465628,
+					"actions": [],
+					"sid": 191887291043306,
 					"children": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-all",
-									"objectClass": "System",
-									"sid": 839791805292408,
-									"parameters": {
-										"object": "Tutorial_Num"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Tutorial_Num",
-									"sid": 460651813559273,
-									"parameters": {
-										"animation": "\"Default\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 818232640785671
+							"eventType": "comment",
+							"text": "Play"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-by-comparison",
+									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 521948134090238,
+									"sid": 904658861161921,
 									"parameters": {
-										"object": "Tutorial_Num",
-										"expression": "Tutorial_Num.AnimationFrame",
-										"comparison": 0,
-										"value": "0"
+										"layer": "\"Menu\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-animation",
-									"objectClass": "Tutorial_Num",
-									"sid": 924263135818447,
-									"parameters": {
-										"animation": "\"Selected\"",
-										"from": "current-frame"
-									}
+									"callFunction": "Change_Buttons_Text",
+									"sid": 275395817106875,
+									"parameters": [
+										"\"Play\""
+									]
 								}
 							],
-							"sid": 350240630803596
+							"sid": 358953033198684
+						},
+						{
+							"eventType": "comment",
+							"text": "Match"
 						},
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 684521546366624,
+									"parameters": {
+										"layer": "\"Play\""
+									}
+								}
+							],
 							"actions": [
 								{
-									"id": "unpin",
-									"objectClass": "Text_Talk",
-									"sid": 869654034600827,
-									"behaviorType": "Pin"
-								},
-								{
-									"id": "set-position",
-									"objectClass": "Text_Talk",
-									"sid": 631262204677736,
-									"parameters": {
-										"x": "608",
-										"y": "-523"
-									}
-								},
-								{
-									"id": "set-size",
-									"objectClass": "Text_Talk",
-									"sid": 381004076643630,
-									"parameters": {
-										"width": "640",
-										"height": "272"
-									}
-								},
-								{
-									"id": "pin-to-object-properties",
-									"objectClass": "Text_Talk",
-									"sid": 622926133851790,
-									"behaviorType": "Pin",
-									"parameters": {
-										"pin-to": "Tutorial_Img",
-										"x": true,
-										"y": true,
-										"angle": true,
-										"width-type": "no",
-										"height-type": "no",
-										"z": false
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 443297062070519,
-									"parameters": {
-										"seconds": "0.25",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "Tutorial_Img",
-									"sid": 367270112661239,
+									"id": "tween-value",
+									"objectClass": "AliceMenu",
+									"sid": 385866441620142,
 									"behaviorType": "Tween",
 									"parameters": {
-										"tags": "\"down\"",
-										"property": "offsetY",
-										"end-value": "531",
-										"time": "0.4",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "Btn_Back",
-									"sid": 870422145566678,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetX",
-										"end-value": "190",
-										"time": "0.4",
+										"tags": "\"black\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "0.5",
 										"ease": "default",
 										"destroy-on-complete": "no",
 										"loop": "no",
@@ -758,7 +793,36 @@
 									}
 								}
 							],
-							"sid": 213146592582630
+							"sid": 550723608920048
+						},
+						{
+							"eventType": "comment",
+							"text": "Codex"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 972572847153299,
+									"parameters": {
+										"layer": "\"Extras\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 251030182110293,
+									"parameters": {
+										"layer": "\"Codex\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 357395338748935
 						}
 					]
 				},
@@ -766,26 +830,996 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-animation-frame",
+							"id": "compare-instance-variable",
 							"objectClass": "Menu_Placa",
-							"sid": 952541992493834,
+							"sid": 416136994199969,
 							"parameters": {
+								"instance-variable": "My_ID",
 								"comparison": 0,
-								"number": "2"
+								"value": "2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 572956527465628,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Options"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 530657697072164,
+									"parameters": {
+										"layer": "\"Menu\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 641733457720429,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 146611300702868,
+									"parameters": {
+										"layer": "\"Main\"",
+										"interactive": false
+									}
+								}
+							],
+							"sid": 560957623784396
+						},
+						{
+							"eventType": "comment",
+							"text": "Tutorial"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 821928275062742,
+									"parameters": {
+										"layer": "\"Play\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "AliceMenu",
+									"sid": 609970883327538,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"black1\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "0.5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 425667549730324
+						},
+						{
+							"eventType": "comment",
+							"text": "Credits"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 948526714212726,
+									"parameters": {
+										"layer": "\"Extras\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 331347560070728,
+									"parameters": {
+										"layout": "Credits"
+									}
+								}
+							],
+							"sid": 755286754399092
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Menu_Placa",
+							"sid": 418836864436001,
+							"parameters": {
+								"instance-variable": "My_ID",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 785060712113452,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Extras"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 918541883280703,
+									"parameters": {
+										"layer": "\"Menu\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Change_Buttons_Text",
+									"sid": 674388545267635,
+									"parameters": [
+										"\"Extras\""
+									]
+								}
+							],
+							"sid": 674726471911033
+						},
+						{
+							"eventType": "comment",
+							"text": "Custom"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 149943083890860,
+									"parameters": {
+										"layer": "\"Play\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 851308655552904
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Menu_Placa",
+							"sid": 467498071617147,
+							"parameters": {
+								"instance-variable": "My_ID",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 832481909603629,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Exit"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 496204022886704,
+									"parameters": {
+										"layer": "\"Menu\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "close",
+									"objectClass": "Browser",
+									"sid": 395473853594428
+								}
+							],
+							"sid": 134151397732057
+						},
+						{
+							"eventType": "comment",
+							"text": "Back"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 124223021590179,
+									"parameters": {
+										"layer": "\"Play\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 157570972047639,
+									"parameters": {
+										"layer": "\"Extras\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Change_Buttons_Text",
+									"sid": 160943945178393,
+									"parameters": [
+										"\"Menu\""
+									]
+								}
+							],
+							"sid": 933431871765322,
+							"isOrBlock": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "Change_Buttons_Text",
+			"functionDescription": "",
+			"functionCategory": "Menu",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Layer",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 971702966042606
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "Menu_Poste",
+					"sid": 103515209493994,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fadeout\"",
+						"start-value": "100",
+						"end-value": "0",
+						"time": "0.25",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 899129769355730,
+					"parameters": {
+						"seconds": "0.25",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 702003812454678,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 285388773327084,
+							"parameters": {
+								"variable": "Layer",
+								"comparison": 0,
+								"value": "\"Menu\""
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "go-to-layout",
+							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 826326671820679,
+							"sid": 751014499880807,
 							"parameters": {
-								"layout": "Credits"
+								"layer": "\"Menu\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 738569208633800,
+							"parameters": {
+								"layer": "\"Play\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 330615256222558,
+							"parameters": {
+								"layer": "\"Extras\"",
+								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 785060712113452
+					"sid": 477511528878203,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 598895674725013,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 668101239776821,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_play\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 322967038286170,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 792710777430677
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 539288665603207,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 240131897274992,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_options\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 684346093378782,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 516121042057524
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 290456167097665,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 668616234513678,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_extras\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 842445447003364,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text_Static_Generic",
+									"sid": 492330671812612,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 828455939512255
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 743613735547556,
+									"parameters": {
+										"object": "Menu_Placa",
+										"expression": "Menu_Placa.My_ID",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Menu_Placa",
+									"sid": 588282354824660,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 652462858419990
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 141758034491667,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 281920236129246,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_exit\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 824767598991684,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 760653426752176
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 349253331708079,
+							"parameters": {
+								"variable": "Layer",
+								"comparison": 0,
+								"value": "\"Play\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 373776479858244,
+							"parameters": {
+								"layer": "\"Menu\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 348069059429139,
+							"parameters": {
+								"layer": "\"Play\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 820793698289076,
+							"parameters": {
+								"layer": "\"Extras\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 403865934229588,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 762902325459005,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 285223880667248,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_match\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 597089043885226,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 135517594223729
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 932051798198930,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 467645196025962,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_tutorial\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 527784268387780,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 397174346056419
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 689093499882795,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 374075740228845,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_custom\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 873520980587404,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text_Static_Generic",
+									"sid": 521166491952700,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 674251418629672
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 107432022360760,
+									"parameters": {
+										"object": "Menu_Placa",
+										"expression": "Menu_Placa.My_ID",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Menu_Placa",
+									"sid": 586009284756235,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 725636566529997
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 571311241845792,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 348897655140211,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_back\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 150702386755121,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 871869785269707
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 460368947001083,
+							"parameters": {
+								"variable": "Layer",
+								"comparison": 0,
+								"value": "\"Extras\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 156043218049774,
+							"parameters": {
+								"layer": "\"Menu\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 131446603942476,
+							"parameters": {
+								"layer": "\"Play\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 970121876477632,
+							"parameters": {
+								"layer": "\"Extras\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 662934891507794,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 719773965662608,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 603279466138795,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_codex\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 612898893321297,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 266481850774748
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 708994673728099,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 528994730002558,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_credits\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 243651619550067,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 405886167205753
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 253278873644884,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 957477940395680,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 103183149922863,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text_Static_Generic",
+									"sid": 874226148362459,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 851441711170835
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 546473922648863,
+									"parameters": {
+										"object": "Menu_Placa",
+										"expression": "Menu_Placa.My_ID",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Menu_Placa",
+									"sid": 340687658365577,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 541526433058452
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 921514095322750,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.my_id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 345982656733989,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.btn_back\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 398178217134209,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 952700590945746
+						}
+					]
 				}
 			]
 		},
@@ -1432,6 +2466,220 @@
 			],
 			"sid": 333924076113041,
 			"disabled": true
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tutorial_Old",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 612882259730073,
+							"parameters": {
+								"layer": "\"Tutorial\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Tutorial_Img",
+							"sid": 651092191847702,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Talk",
+							"sid": 261751488528062,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"tutorial.page_\" & Tutorial_Img.AnimationFrame)"
+							}
+						},
+						{
+							"id": "set-fade-in-time",
+							"objectClass": "Bkg_Power_Txt",
+							"sid": 200119880369830,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-in-time": "0.5"
+							}
+						},
+						{
+							"id": "set-fade-out-time",
+							"objectClass": "Bkg_Power_Txt",
+							"sid": 131177601917274,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-out-time": "0"
+							}
+						},
+						{
+							"id": "restart-fade",
+							"objectClass": "Bkg_Power_Txt",
+							"sid": 630921559891845,
+							"behaviorType": "Fade"
+						}
+					],
+					"sid": 446433281618006,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 453490334526749,
+									"parameters": {
+										"object": "Tutorial_Num"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tutorial_Num",
+									"sid": 865076170808260,
+									"parameters": {
+										"animation": "\"Default\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 222259284232508,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 388701518862026,
+									"parameters": {
+										"object": "Tutorial_Num",
+										"expression": "Tutorial_Num.AnimationFrame",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tutorial_Num",
+									"sid": 890655363129803,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 396003236932755,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "unpin",
+									"objectClass": "Text_Talk",
+									"sid": 199898930849920,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Text_Talk",
+									"sid": 240230310237062,
+									"parameters": {
+										"x": "608",
+										"y": "-523"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Text_Talk",
+									"sid": 468159997974448,
+									"parameters": {
+										"width": "640",
+										"height": "272"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "Text_Talk",
+									"sid": 319227049776363,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Tutorial_Img",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 503166917080930,
+									"parameters": {
+										"seconds": "0.25",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Tutorial_Img",
+									"sid": 110388018614602,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"down\"",
+										"property": "offsetY",
+										"end-value": "531",
+										"time": "0.4",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Btn_Back",
+									"sid": 955729651820260,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "190",
+										"time": "0.4",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 664257863744552,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 990942466813567
 		}
 	],
 	"sid": 468746933081532

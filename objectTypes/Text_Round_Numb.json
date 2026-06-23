@@ -1,0 +1,16 @@
+{
+	"name": "Text_Round_Numb",
+	"plugin-id": "Text",
+	"sid": 963488936069756,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 947467733664544
+		}
+	],
+	"effectTypes": []
+}
