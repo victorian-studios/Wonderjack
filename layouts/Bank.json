@@ -264,6 +264,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"Order": 0,
+						"Uses": 0,
 						"ChoosenOne": false
 					},
 					"behaviors": {
@@ -315,6 +316,7 @@
 					"sid": 420732331146587,
 					"tags": "",
 					"instanceVariables": {
+						"Uses": 0,
 						"Used": false
 					},
 					"behaviors": {

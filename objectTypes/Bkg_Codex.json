@@ -1,7 +1,7 @@
 {
-	"name": "icon_discord",
+	"name": "Bkg_Codex",
 	"plugin-id": "Sprite",
-	"sid": 317512029989292,
+	"sid": 341280729507147,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,22 +12,34 @@
 			{
 				"frames": [
 					{
-						"width": 512,
-						"height": 512,
+						"width": 1227,
+						"height": 748,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5893036,
+						"imageSpriteId": 7050172,
+						"collisionPoly": {
+							"points": [
+								0.023634881825590873,
+								0,
+								1,
+								0.013368983957219251,
+								0.9853300733496333,
+								1,
+								0.0016299918500407497,
+								0.983957219251337
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 428625275453886,
-				"name": "Default",
+				"sid": 252264738084388,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -84,6 +84,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "video",
+			"name": "Video",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
@@ -236,10 +243,16 @@
 			"Icon_Arrow_Talk",
 			"Candelabro",
 			"Quadro_Turns",
-			"icon_discord",
+			"Btn_discord",
 			"Card_Numb_Old",
 			"Quadro_Turns_Shadow",
-			"Text_Round_Numb"
+			"Text_Round_Numb",
+			"Video",
+			"Bkg_Codex",
+			"Btn_Codex",
+			"Btn_Back2",
+			"Btn_Options",
+			"card_enemy"
 		],
 		"subfolders": []
 	},
@@ -777,6 +790,14 @@
 					"name": "Relics.json",
 					"type": "application/json",
 					"sid": 275220845934895,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "New Dictionary.json",
+					"type": "application/json",
+					"sid": 786761624885319,
 					"file-info": {
 						"purpose": "none"
 					}

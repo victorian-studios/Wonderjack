@@ -6,6 +6,16 @@
 			"includeSheet": "E_Global"
 		},
 		{
+			"eventType": "variable",
+			"name": "Codex_Screen",
+			"type": "string",
+			"initialValue": "enemies",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 585819533767824
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -130,12 +140,12 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "logo",
-							"sid": 323730791760961,
+							"sid": 453942866050925,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
 								"property": "offsetY",
-								"end-value": "107",
+								"end-value": "225",
 								"time": "0.5",
 								"ease": "default",
 								"destroy-on-complete": "no",
@@ -1010,6 +1020,35 @@
 							],
 							"actions": [],
 							"sid": 851308655552904
+						},
+						{
+							"eventType": "comment",
+							"text": "Art Galery"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 871814443067957,
+									"parameters": {
+										"layer": "\"Extras\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 739760049783568,
+									"parameters": {
+										"layer": "\"Art Galery\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 291726973266988
 						}
 					]
 				},
@@ -2680,6 +2719,630 @@
 				}
 			],
 			"sid": 990942466813567
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Codex",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 247914344003873,
+							"parameters": {
+								"object": "Btn_Codex"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Btn_Codex",
+							"sid": 511434469121250,
+							"parameters": {
+								"animation": "\"Selected\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Btn_Codex",
+							"sid": 898843190402197,
+							"parameters": {
+								"animation": "\"Hover\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 871793609306951
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-movement",
+							"objectClass": "Mouse",
+							"sid": 582256858445616
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 606887048580052,
+							"parameters": {
+								"object": "Btn_Codex"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Btn_Codex",
+							"sid": 732366740692797,
+							"parameters": {
+								"animation": "\"Selected\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 176664228473760,
+							"parameters": {
+								"layer": "\"Codex\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Btn_Codex",
+							"sid": 664938737635485,
+							"parameters": {
+								"animation": "\"Default\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 906534346116934
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 300404824178579,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Btn_Codex"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Btn_Codex",
+							"sid": 769520272590090,
+							"parameters": {
+								"animation": "\"Selected\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 884759351428426,
+							"parameters": {
+								"layer": "\"Codex\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 598485946272371,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 868771118143318,
+									"parameters": {
+										"object": "Btn_Codex"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Btn_Codex",
+									"sid": 502072478075160,
+									"parameters": {
+										"animation": "\"Default\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 614689418829781
+						},
+						{
+							"eventType": "comment",
+							"text": "Enemies"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Btn_Codex",
+									"sid": 315976073945494,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Btn_Codex",
+									"sid": 847716081870339,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "current-frame"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 576207492853712,
+									"parameters": {
+										"variable": "Codex_Screen",
+										"value": "\"enemies\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 326042847578296,
+									"parameters": {
+										"layer": "\"enemies\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 976965362719263,
+									"parameters": {
+										"layer": "\"powers\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 283683644117611,
+									"parameters": {
+										"layer": "\"relics\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 320039835446784,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 885070455056817,
+											"parameters": {
+												"object": "Text_Static_Generic",
+												"expression": "Text_Static_Generic.UID",
+												"comparison": 0,
+												"value": "165"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Text_Static_Generic",
+											"sid": 876529275397529,
+											"parameters": {
+												"instance-variable": "my_txt",
+												"value": "\"menu.codex.enemies.title\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Static_Generic",
+											"sid": 870964134960519,
+											"parameters": {
+												"text": "Internationalization.Lookup(Self.my_txt)"
+											}
+										}
+									],
+									"sid": 753788621139817
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Powers"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Btn_Codex",
+									"sid": 784138052533019,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Btn_Codex",
+									"sid": 840454838222937,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "current-frame"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 783190288015272,
+									"parameters": {
+										"variable": "Codex_Screen",
+										"value": "\"powers\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 937258393462007,
+									"parameters": {
+										"layer": "\"enemies\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 676771271818710,
+									"parameters": {
+										"layer": "\"powers\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 788892570145065,
+									"parameters": {
+										"layer": "\"relics\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 630890441474786,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 343145432180250,
+											"parameters": {
+												"object": "Text_Static_Generic",
+												"expression": "Text_Static_Generic.UID",
+												"comparison": 0,
+												"value": "165"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Text_Static_Generic",
+											"sid": 617714166593299,
+											"parameters": {
+												"instance-variable": "my_txt",
+												"value": "\"menu.codex.powers.title\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Static_Generic",
+											"sid": 834776946631631,
+											"parameters": {
+												"text": "Internationalization.Lookup(Self.my_txt)"
+											}
+										}
+									],
+									"sid": 764491346694803
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Relics"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Btn_Codex",
+									"sid": 459351923679512,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Btn_Codex",
+									"sid": 740976578531544,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "current-frame"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 482958967595176,
+									"parameters": {
+										"variable": "Codex_Screen",
+										"value": "\"relics\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 820530491151920,
+									"parameters": {
+										"layer": "\"enemies\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 723889620673389,
+									"parameters": {
+										"layer": "\"powers\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 928772742380944,
+									"parameters": {
+										"layer": "\"relics\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 466060603677796,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 141758324286954,
+											"parameters": {
+												"object": "Text_Static_Generic",
+												"expression": "Text_Static_Generic.UID",
+												"comparison": 0,
+												"value": "165"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Text_Static_Generic",
+											"sid": 492725027629327,
+											"parameters": {
+												"instance-variable": "my_txt",
+												"value": "\"menu.codex.relics.title\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Static_Generic",
+											"sid": 633596962840754,
+											"parameters": {
+												"text": "Internationalization.Lookup(Self.my_txt)"
+											}
+										}
+									],
+									"sid": 197955180736345
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 127672060680175,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Btn_Back2"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 781713650174290,
+							"parameters": {
+								"layer": "\"Codex\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 706619017324310,
+							"parameters": {
+								"variable": "Codex_Screen",
+								"value": "\"enemies\""
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 197938569459280,
+							"parameters": {
+								"layer": "\"Codex\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 221308991669240,
+							"parameters": {
+								"layer": "\"enemies\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 384501655095943,
+							"parameters": {
+								"layer": "\"powers\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 922037967711380,
+							"parameters": {
+								"layer": "\"relics\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 499895105276171,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 279237218544322,
+									"parameters": {
+										"object": "Btn_Codex"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Btn_Codex",
+									"sid": 318080502547886,
+									"parameters": {
+										"animation": "\"Default\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 962980287362778
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Btn_Codex",
+									"sid": 578352688021174,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Btn_Codex",
+									"sid": 914515253419210,
+									"parameters": {
+										"animation": "\"Selected\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 559898338123225
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 996839715705676,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"expression": "Text_Static_Generic.UID",
+										"comparison": 0,
+										"value": "165"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Static_Generic",
+									"sid": 702394667723500,
+									"parameters": {
+										"instance-variable": "my_txt",
+										"value": "\"menu.codex.enemies.title\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 137299391082111,
+									"parameters": {
+										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								}
+							],
+							"sid": 681088622129989
+						}
+					]
+				}
+			],
+			"sid": 443576521096051
 		}
 	],
 	"sid": 468746933081532

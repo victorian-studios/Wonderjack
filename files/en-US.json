@@ -11,7 +11,90 @@
             "btn_custom": "Custom",
             "btn_codex": "Codex",
             "btn_credits": "Credits",
-            "btn_back": "Back"
+            "btn_back": "Back",
+            "codex": {
+                "name": "The Codex",
+                "info_lock": "???",
+                "enemies": {
+                    "title": "Opponents",
+                    "White Queen": {
+                        "name": "White Queen",
+                        "mind": "Cautious",
+                        "stage": "Tutorial",
+                        "special": "None",
+                        "desc": "..."
+                    },
+                    "Mad Hatter": {
+                        "name": "Mad Hatter",
+                        "mind": "Cautious",
+                        "stage": "Stage 1",
+                        "special": "Starts the match with a random number card.",
+                        "desc": "..."
+                    },
+                    "March Hare": {
+                        "name": "March Hare",
+                        "mind": "Cautious",
+                        "stage": "Stage 1",
+                        "special": "Starts the match with a random power card.",
+                        "desc": "..."
+                    },
+                    "Cheshire Cat": {
+                        "name": "Cheshire Cat",
+                        "mind": "Cautious",
+                        "stage": "Stage 2",
+                        "special": "Randomly desappears making all ther number cards hidden for 1 turn.",
+                        "desc": "..."
+                    },
+                    "Caterpillar": {
+                        "name": "White Queen",
+                        "mind": "Cautious",
+                        "stage": "Stage 2",
+                        "special": "Randomly creates a smoke cloud above the player's cards for 1 turn.",
+                        "desc": "..."
+                    },
+                    "The Tweedles": {
+                        "name": "The Tweedles",
+                        "mind": "Cautious",
+                        "stage": "Stage 3",
+                        "special": "Every 2 turns they switch places, changing the main strategy.",
+                        "desc": "..."
+                    },
+                    "Humpty Dumpty": {
+                        "name": "Humpty Dumpty",
+                        "mind": "Cautious",
+                        "stage": "Stage 3",
+                        "special": "Starts every round with protection for 3 turns.",
+                        "desc": "..."
+                    },
+                    "Dodo": {
+                        "name": "Dodo",
+                        "mind": "Cautious",
+                        "stage": "Secret",
+                        "special": "Randomly gives the first number card for the player.",
+                        "desc": "..."
+                    },
+                    "Red Queen": {
+                        "name": "Red Queen",
+                        "mind": "Cautious",
+                        "stage": "Stage 4",
+                        "special": "Randomly removes 1 number card from the player for the rest of the round.",
+                        "desc": "..."
+                    },
+                    "Jabberwock": {
+                        "name": "Jabberwock",
+                        "mind": "Cautious",
+                        "stage": "Stage 4",
+                        "special": "Starts the match with a special candlestick contaning 5 candles.",
+                        "desc": "..."
+                    }
+                },
+                "powers": {
+                    "title": "Power Cards"
+                },
+                "relics": {
+                    "title": "Relics"
+                }
+            }
         },
         "credits": {
             "name_1": "Ana Barata\nArtist",
@@ -71,10 +154,31 @@
             }
         },
         "options": {
-            "resume": "Resume",
-            "menu": "Menu",
-            "opt_1": "Auto math numbers",
-            "opt_2": "Performance text"
+            "title": "OPTIONS",
+            "back": "back",
+            "menu": "menu",
+            "translation": {
+                "title": "Translation"
+            },
+            "audio": {
+                "title": "Audio",
+                "music": "Music",
+                "audio": "Audio"
+            },
+            "video": {
+                "title": "Video",
+                "opt_1": "Performance text"
+            },
+            "gameplay": {
+                "title": "Gameplay",
+                "opt_1": "Auto math numbers",
+                "opt_2": "Fast Mode"
+                
+            },
+            "save": {
+                "title": "Erase Save"
+            }
+            
         },
         "common": {
             "enemies" : {
@@ -105,14 +209,16 @@
                     "talk_win": "That's too bad... Are you going somewhere?",
                     "talk_lose": "It looks like you've found the direction you need to go...",
                     "talk_thinking_1": "Remember... we’re all mad here. I’m mad. You’re mad.",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "Can't you see me?"
                 },
                 "Caterpillar": {
                     "name": "Caterpillar",
                     "talk_win": "It seems like you haven't changed a bit...",
                     "talk_lose": "Who... are... you?",
                     "talk_thinking_1": "Keep your temper.",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "Oh my, the smoke is everywhere..."
                 },
                 "Humpty Dumpty": {
                     "name": "Humpty Dumpty",
@@ -126,21 +232,24 @@
                     "talk_win": "We, the TWEEDLE brothers, have won again!",
                     "talk_lose": "You win. We’ve no objection. Contrariwise.",
                     "talk_thinking_1": "Hey brother, this card is mine!",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "My turn! Move it!"
                 },
                 "Dodo": {
                     "name": "Dodo",
                     "talk_win": "Where is my prize?",
                     "talk_lose": "I lost... You can keep the prize then...",
                     "talk_thinking_1": "So many options...",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "Do you want a prize?"
                 },
                 "Red Queen": {
                     "name": "Red Queen",
                     "talk_win": "Off with her head!",
                     "talk_lose": "You may have won this battle... But you won’t win the war...",
                     "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "I'm gonna slice this card!"
                 },
                 "Jabberwock": {
                     "name": "Jabberwock",
@@ -170,15 +279,87 @@
             "revive": "You got a [color=#f5fe05]second chance[/color]! But your relic was destroyed."
         },
 		"relics": {
-            "card_13": "Permanently adds card [color=#f5fe05]13[/color] to the number deck.",
-            "cat_eye" : "On the [color=#f5fe05]3° round[/color], your opponent’s hidden card will be revealed on the [color=#f5fe05]1° turn[/color].",
-            "watch" : "[color=#f5fe05]Right-click[/color] this relic to return the last number card you drew to the bottom of the deck (once per match). [color=#fa1c03]Reduce your power card hand limit by 1[/color].",
-            "eat_me" : "Increases your power card hand limit by [color=#f5fe05]1[/color].",
-            "crown" : "When you [color=#fa1c03]lose a match[/color], this relic breaks and you can [color=#f5fe05]try again[/color].",
-            "spear" : "Reduces your opponents’ power card hand limit by [color=#f5fe05]1[/color].",
-            "tea" : "Allows you to have a [color=#f5fe05]extra turn[/color] after playing a power card (once per match).",
-            "drink_me" : "Increases the match goal to [color=#f5fe05]24[/color]. [color=#fa1c03]Reduces your power cards per round draw limit by 1[/color].",
-            "hat" : "When drawing a card that would exceed the match goal, the card is [color=#f5fe05]returned[/color] and a new one is drawn immediately (once per match)."
+            "card_13": {
+                "title": "Card 13",
+                "flavor_txt": "My lucky number!",
+                "desc": "Permanently adds card [color=#f5fe05]13[/color] to the [color=#005eff]number[/color] deck."
+            },
+            "cat_eye": {
+                "title": "Cat's Eye",
+                "flavor_txt": "Smile!",
+                "desc": "On the [color=#f5fe05]3° round[/color], your opponent’s hidden card will be revealed on the [color=#f5fe05]1° turn[/color]."
+            },
+            "watch": {
+                "title": "Pocket Watch",
+                "flavor_txt": "Too Late!",
+                "desc":"[color=#f5fe05]Right-click[/color] this relic to return the last number card to the bottom of the deck (once per match). [color=#fa1c03]But reduce your power hand limit by 1[/color]."
+            },
+            "eat_me": {
+                "title": "Cake",
+                "flavor_txt": "Eat-me.",
+                "desc":"Increases your power hand limit by [color=#f5fe05]1[/color]."
+                
+            },
+            "crown": {
+                "title": "Queen's Crown",
+                "flavor_txt": "Decapitate!",
+                "desc":"When you [color=#fa1c03]lose a match[/color], this relic breaks and you can [color=#f5fe05]try again[/color]."
+            },
+            "spear": {
+                "title": "Heart Spear",
+                "flavor_txt": "Intruder!",
+                "desc":"Reduces your opponents’ power hand limit by [color=#f5fe05]1[/color]."
+            },
+            "tea": {
+                "title": "Tea Cup",
+                "flavor_txt": "Tea Time!",
+                "desc":"After playing a power card, get an [color=#f5fe05]extra turn[/color] (once per match). [color=#fa1c03]But reduce your power draw limit by 1[/color]."
+            },
+            "drink_me": {
+                "title": "Bottle",
+                "flavor_txt": "Drink-me",
+                "desc":"Increases the match goal to [color=#f5fe05]24[/color]."
+            },
+            "hat": {
+                "title": "Green Tophat",
+                "flavor_txt": "Am I mad?",
+                "desc":"If drawing a [color=#005eff]number[/color] card exceeds the match goal, the card is [color=#f5fe05]returned[/color] and another one is drawn immediately (once per match)."
+            },
+            "key_1": {
+                "title": "Metal Piece",
+                "flavor_txt": "???",
+                "desc":"Something is missing..."
+            },
+            "key_2": {
+                "title": "Metal Piece",
+                "flavor_txt": "???",
+                "desc":"It still seems incomplete..."
+            },
+            "key_3": {
+                "title": "Metal Piece",
+                "flavor_txt": "???",
+                "desc":"What if I put all the parts together?"
+            },
+            "key": {
+                "title": "Key",
+                "flavor_txt": "Open Sesame!",
+                "desc":"Unlocks access to a [color=#f5fe05]secret[/color] stage."
+            },
+            "picnic": {
+                "title": "Picnic Basket",
+                "flavor_txt": "Snack Time!",
+                "desc": "Increases both your power hand and power draw limit by [color=#f5fe05]1[/color]"
+            },
+            "mussel": {
+                "title": "Mussel",
+                "flavor_txt": "What's Inside",
+                "desc": "In the start of the match see [color=#f5fe05]4 powers[/color] and choose [color=#f5fe05]1[/color] to add to your hand."
+            },
+            "match": {
+                "title": "Match Box",
+                "flavor_txt": "Burn!",
+                "desc": "[color=#f5fe05]Right-click[/color] this relic to [color=#f5fe05]burn[/color] a random power from your opponent. {0} matches remaning."
+            }
         },
 		"powers": {
 			"card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",

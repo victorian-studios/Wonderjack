@@ -3952,10 +3952,10 @@
 							"sid": 750820597045898
 						},
 						{
-							"name": "Hat_Relic",
+							"name": "Relic",
 							"type": "boolean",
 							"initialValue": "false",
-							"comment": "",
+							"comment": "Green Tophat / Pocket Watch",
 							"sid": 359758903557099
 						}
 					],
@@ -4871,16 +4871,16 @@
 																	"objectClass": "System",
 																	"sid": 716084855600391,
 																	"parameters": {
-																		"variable": "Hat_Relic"
+																		"variable": "Relic"
 																	}
 																}
 															],
 															"actions": [
 																{
 																	"callFunction": "Relic Feedback",
-																	"sid": 192245602900348,
+																	"sid": 960586214553960,
 																	"parameters": [
-																		"\"watch\"",
+																		"\"relic discard\"",
 																		true,
 																		false,
 																		true
@@ -35582,7 +35582,38 @@
 									}
 								}
 							],
-							"sid": 283972691696562
+							"sid": 283972691696562,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Fósforo - Match (valor do texto)"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relic_card",
+											"sid": 956976113642614,
+											"parameters": {
+												"animation": "\"match\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Relic_card",
+											"sid": 900589398396991,
+											"parameters": {
+												"instance-variable": "Uses",
+												"value": "3"
+											}
+										}
+									],
+									"sid": 773416407087558
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -35718,24 +35749,6 @@
 										"variable": "TheNumber",
 										"value": "24"
 									}
-								},
-								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 285934215878744,
-									"parameters": {
-										"variable": "PlayerPowerLimit_Rounds",
-										"value": "1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Hand_Player",
-									"sid": 196904521079839,
-									"parameters": {
-										"instance-variable": "PowerLimit_Rounds",
-										"value": "PlayerPowerLimit_Rounds"
-									}
 								}
 							],
 							"sid": 167473908740650
@@ -35762,6 +35775,24 @@
 									"parameters": {
 										"variable": "Relic_Tea",
 										"value": "true"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 113953352340649,
+									"parameters": {
+										"variable": "PlayerPowerLimit_Rounds",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Hand_Player",
+									"sid": 366456713495338,
+									"parameters": {
+										"instance-variable": "PowerLimit_Rounds",
+										"value": "PlayerPowerLimit_Rounds"
 									}
 								}
 							],
@@ -37055,9 +37086,9 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text_Relic_Info",
-									"sid": 102216970678526,
+									"sid": 158765275805816,
 									"parameters": {
-										"text": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName )",
+										"text": "Internationalization.Lookup(\"relics.desc\" & Relics.AnimationName, Relics.Uses )",
 										"duration": "0.75"
 									}
 								}
@@ -37208,9 +37239,49 @@
 								"ping-pong": "yes",
 								"repeat-count": "3"
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 352808331353409,
+							"parameters": {
+								"seconds": "0.03",
+								"use-timescale": true
+							}
 						}
 					],
-					"sid": 303332164016955
+					"sid": 303332164016955,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Fósforo - Match (valor real)"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Relics",
+									"sid": 519608383796727,
+									"parameters": {
+										"animation": "\"match\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Relics",
+									"sid": 315149706388797,
+									"parameters": {
+										"instance-variable": "Uses",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 990734269638889
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -37336,9 +37407,9 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text_Relic_Info",
-									"sid": 402492570176620,
+									"sid": 636688461934286,
 									"parameters": {
-										"text": "Internationalization.Lookup(\"relics.\" & Relic_card.AnimationName )",
+										"text": "Internationalization.Lookup(\"relics.desc\" & Relic_card.AnimationName, Relic_card.Uses )",
 										"duration": "0.75"
 									}
 								}
