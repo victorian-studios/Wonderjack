@@ -368,18 +368,7 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
-					}
-				],
-				"sid": 848691780273533,
-				"name": "Level_4",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 0
-			},
-			{
-				"frames": [
+					},
 					{
 						"width": 1922,
 						"height": 593,
@@ -389,7 +378,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 448246,
+						"imageSpriteId": 9370491,
 						"collisionPoly": {
 							"points": [
 								0.060353798126951096,
@@ -411,8 +400,8 @@
 						"tag": ""
 					}
 				],
-				"sid": 285683233998379,
-				"name": "Level_5",
+				"sid": 848691780273533,
+				"name": "Level_4",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

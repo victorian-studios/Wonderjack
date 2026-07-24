@@ -1,0 +1,30 @@
+{
+	"name": "Clickable",
+	"plugin-id": "Sprite",
+	"sid": 134728548330310,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Btn_Back2",
+		"Btn_Codex",
+		"Btn_discord",
+		"Btn_Options",
+		"Btn_ResumeMenu",
+		"Btn_Sound",
+		"Btn_Stop",
+		"Btn_Back",
+		"Btn_Story_Next",
+		"Btn_Story_No",
+		"Btn_Story_Yes",
+		"Deck_Numb_Sprite",
+		"Deck_Power_Sprite",
+		"Menu_Placa",
+		"configuracoes",
+		"Relic_card",
+		"Relics",
+		"Victorian_Studio",
+		"Tutorial_Num",
+		"Toggle_Options_Numbers"
+	]
+}

@@ -102,6 +102,13 @@
             "name_3": "Ana Luiza\nArtist",
             "bye": "Thanks for playing our game!"
         },
+        "story": {
+            "page_1" : "Alice was leaning agains a tree, trying to play cards with her little kitten, Dinah.\n\n'Well,' Alice thought boredly, 'playing alone isn't nearly as fun anymore.'.\n\nShe watches the cat playing with the pile of cards using her little paws.\n\n'I wanted something new, different, and... Someone unpredictable' she says aloud.",
+            "page_2" : "The gentle breeze soon made Alice drowsy. Her eyelids grew heavier until, before she even realized it, she had drifted into a deep sleep.\n\n...\n\n'Alice? Alice?'\n\nA familiar voice echoed nearby. Slowly, Alice opened her eyes.\n\nShe looked around in confusion. Stone walls surrounded her, and a long tunnel stretched ahead.\n\n'...A rabbit hole?'",
+            "page_3" : "",
+            "page_4" : "",
+            "page_5" : ""
+        },
         "tutorial": {
             "page_1": "[u][b]Chapter 1[/b][/u]\n\n[b]The Goal[/b]\n\nThe goal of the game is to win two rounds by reaching 21 with numeric cards or get as close as possible.",
             "page_2": "[u][b]Chapter 2[/b][/u]\n\n[b]The Turn[/b]\n\nOn your turn, you can draw a numeric card or draw/play a Power Card, which grants you abilities during matches.",
@@ -195,14 +202,16 @@
                     "talk_lose": "I tip my hat to you.",
                     "talk_thinking_1": "I need to finish this game because it's almost tea time!",
                     "talk_thinking_2": "I’d love to offer you a cup of tea, but my hands are full.",
-                    "talk_thinking_3": "Why is a raven like a writing-desk? — I haven’t the slightest idea."
+                    "talk_thinking_3": "Why is a raven like a writing-desk? — I haven’t the slightest idea.",
+                    "special": "Hope you don't mind if I pick another one."
                 },
                 "March Hare": {
                     "name": "March Hare",
                     "talk_win": "Are you leaving already? You haven't even had a cup of tea!",
                     "talk_lose": "Well, I guess tea time is over!",
                     "talk_thinking_1": "I’d offer you some wine if I had any…",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "Why are you looking at me?"
                 },
                 "Cheshire Cat": {
                     "name": "Cheshire Cat",
@@ -225,7 +234,8 @@
                     "talk_win": "Alice... what a stupid name! It must mean “loser,” haha!",
                     "talk_lose": "My shell... is broken.",
                     "talk_thinking_1": "You think you're so great calling me an egg, huh? Just you wait!",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "Ignore the cracks, my shell still sturdy."
                 },
                 "The Tweedles": {
                     "name": "The Tweedles",
@@ -256,7 +266,8 @@
                     "talk_win": "Finally, I’ll be able to sharpen my fangs a little!",
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
-                    "talk_thinking_2": ""
+                    "talk_thinking_2": "",
+                    "special": "Alice! Best of five? What do you think?"
                 }
             },
             "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
@@ -292,7 +303,7 @@
             "watch": {
                 "title": "Pocket Watch",
                 "flavor_txt": "Too Late!",
-                "desc":"[color=#f5fe05]Right-click[/color] this relic to return the last number card to the bottom of the deck (once per match). [color=#fa1c03]But reduce your power hand limit by 1[/color]."
+                "desc":"[color=#f5fe05]Right-click[/color] this relic to return the last [color=#005eff]number[/color] card to the bottom of the deck (once per match). [color=#fa1c03]But reduce your power hand limit by 1[/color]."
             },
             "eat_me": {
                 "title": "Cake",
@@ -353,7 +364,7 @@
             "mussel": {
                 "title": "Mussel",
                 "flavor_txt": "What's Inside",
-                "desc": "In the start of the match see [color=#f5fe05]4 powers[/color] and choose [color=#f5fe05]1[/color] to add to your hand."
+                "desc": "At the start of a new round, see [color=#f5fe05]2[/color] [color=#005eff]number[/color] cards and choose [color=#f5fe05]1[/color] to draw."
             },
             "match": {
                 "title": "Match Box",

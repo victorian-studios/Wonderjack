@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 48703,
+	"savedWithRelease": 49500,
 	"name": "GameJamPlus (2025)",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -252,7 +252,11 @@
 			"Btn_Codex",
 			"Btn_Back2",
 			"Btn_Options",
-			"card_enemy"
+			"card_enemy",
+			"Cursor_default",
+			"Cursor_pointer",
+			"Cursor_hold",
+			"Text_Story"
 		],
 		"subfolders": []
 	},
@@ -261,7 +265,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Buttons"
+			"Buttons",
+			"Clickable"
 		],
 		"subfolders": []
 	},

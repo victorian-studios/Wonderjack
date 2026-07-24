@@ -544,14 +544,6 @@
 						"animation": "\"Selected\"",
 						"from": "current-frame"
 					}
-				},
-				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 400668052630164,
-					"parameters": {
-						"cursor-style": "pointer"
-					}
 				}
 			],
 			"sid": 559339036084278,
@@ -655,14 +647,6 @@
 					"parameters": {
 						"animation": "\"Default\"",
 						"from": "current-frame"
-					}
-				},
-				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 830409012532831,
-					"parameters": {
-						"cursor-style": "normal"
 					}
 				}
 			],
@@ -2395,14 +2379,6 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
-						},
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 378314774212807,
-							"parameters": {
-								"cursor-style": "pointer"
-							}
 						}
 					],
 					"sid": 228919597509700
@@ -2456,14 +2432,6 @@
 								"loop": "no",
 								"ping-pong": "no",
 								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 373110959642400,
-							"parameters": {
-								"cursor-style": "normal"
 							}
 						}
 					],
@@ -3343,6 +3311,89 @@
 				}
 			],
 			"sid": 443576521096051
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 963217149381764,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "logo"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 379142086982749,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "logo",
+							"sid": 593004332727210,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "logo",
+							"sid": 156743217238347,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "logo",
+							"sid": 399663010342422,
+							"parameters": {
+								"width": "592",
+								"height": "430"
+							}
+						}
+					],
+					"sid": 946742090155838
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 117350891540257
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "logo",
+							"sid": 719622241823327,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "logo",
+							"sid": 257711250979656,
+							"parameters": {
+								"width": "592",
+								"height": "430"
+							}
+						}
+					],
+					"sid": 991941567245201
+				}
+			]
 		}
 	],
 	"sid": 468746933081532

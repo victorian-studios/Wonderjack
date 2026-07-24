@@ -191,6 +191,14 @@
 					"parameters": {
 						"key": "\"first_time\""
 					}
+				},
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 754684468086171,
+					"parameters": {
+						"cursor-style": "none"
+					}
 				}
 			],
 			"sid": 204975896251312
@@ -762,6 +770,28 @@
 				}
 			],
 			"sid": 901470634782858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-movement",
+					"objectClass": "Mouse",
+					"sid": 413466132563619
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Cursor_default",
+					"sid": 840461514075086,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 100024645732027
 		}
 	],
 	"sid": 364052280707711

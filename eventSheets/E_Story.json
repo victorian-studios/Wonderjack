@@ -249,72 +249,107 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "cursor-is-over-object",
+					"id": "on-movement",
 					"objectClass": "Mouse",
-					"sid": 614870638743047,
-					"parameters": {
-						"object": "Buttons"
-					}
-				},
-				{
-					"id": "compare-layer-opacity",
-					"objectClass": "System",
-					"sid": 500703363572352,
-					"parameters": {
-						"layer": "Buttons.LayerName",
-						"comparison": 0,
-						"opacity": "100"
-					}
+					"sid": 190584267974033
 				}
 			],
 			"actions": [
 				{
-					"id": "set-animation-frame",
-					"objectClass": "Buttons",
-					"sid": 371736588060605,
+					"id": "set-position",
+					"objectClass": "Cursor_default",
+					"sid": 927829965691843,
 					"parameters": {
-						"frame-number": "1"
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
 					}
 				},
 				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 102101143300690,
+					"id": "set-position",
+					"objectClass": "Cursor_pointer",
+					"sid": 990802117891511,
 					"parameters": {
-						"cursor-style": "pointer"
+						"x": "-1000",
+						"y": "-1000"
 					}
 				}
 			],
-			"sid": 449890381178914
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"sid": 944543951067370,
+			"children": [
 				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 740051927795589
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "Buttons",
-					"sid": 711546988720930,
-					"parameters": {
-						"frame-number": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 225943701307722,
+							"parameters": {
+								"object": "Buttons"
+							}
+						},
+						{
+							"id": "compare-layer-opacity",
+							"objectClass": "System",
+							"sid": 175904065972295,
+							"parameters": {
+								"layer": "Buttons.LayerName",
+								"comparison": 0,
+								"opacity": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Buttons",
+							"sid": 261903042790158,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Cursor_default",
+							"sid": 816744596321115,
+							"parameters": {
+								"x": "-1000",
+								"y": "-1000"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Cursor_pointer",
+							"sid": 436584809934436,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						}
+					],
+					"sid": 174559259259900
 				},
 				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 684715607986204,
-					"parameters": {
-						"cursor-style": "normal"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 818354167979957
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Buttons",
+							"sid": 616744086030722,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 528806676500349
 				}
-			],
-			"sid": 738063011377441
+			]
 		},
 		{
 			"eventType": "group",
@@ -643,6 +678,15 @@
 								"layer": "\"Pages_1\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_1\")"
 							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "Text_Story",
+							"sid": 669891992323291,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"story.page_1\")",
+								"duration": "3"
+							}
 						}
 					],
 					"sid": 144235806552720
@@ -668,6 +712,15 @@
 							"parameters": {
 								"layer": "\"Pages_2\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_2\")"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "Text_Story",
+							"sid": 473131374371893,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"story.page_2\")",
+								"duration": "3"
 							}
 						}
 					],
@@ -695,6 +748,15 @@
 								"layer": "\"Pages_3\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_3\")"
 							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "Text_Story",
+							"sid": 825347529593803,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"story.page_3\")",
+								"duration": "3"
+							}
 						}
 					],
 					"sid": 759487201323661
@@ -721,6 +783,15 @@
 								"layer": "\"Pages_4\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_4\")"
 							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "Text_Story",
+							"sid": 827584793342473,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"story.page_4\")",
+								"duration": "3"
+							}
 						}
 					],
 					"sid": 389712107809922
@@ -746,6 +817,15 @@
 							"parameters": {
 								"layer": "\"Pages_5\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_5\")"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "Text_Story",
+							"sid": 339378662565786,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"story.page_5\")",
+								"duration": "3"
 							}
 						}
 					],

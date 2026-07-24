@@ -208,6 +208,7 @@
 							"properties": {
 								"speed": 20,
 								"acceleration": 0,
+								"rotation-type": "2d",
 								"enabled": true,
 								"live-preview": false
 							}
@@ -250,6 +251,7 @@
 							"properties": {
 								"speed": 2,
 								"acceleration": 0,
+								"rotation-type": "2d",
 								"enabled": true,
 								"live-preview": false
 							}
@@ -2230,10 +2232,10 @@
 											"z": true,
 											"w": true,
 											"h": true,
+											"d": true,
 											"a": true,
 											"o": false,
 											"v": true,
-											"d": true,
 											"sm": "normal"
 										}
 									}
@@ -2244,10 +2246,10 @@
 									"z": true,
 									"w": true,
 									"h": true,
+									"d": true,
 									"a": true,
 									"o": false,
 									"v": false,
-									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -2256,9 +2258,11 @@
 									"transformZ": 0,
 									"transformW": 0,
 									"transformH": 0,
+									"transformD": 0,
 									"transformA": 0,
 									"transformSX": 0,
 									"transformSY": 0,
+									"transformSZ": 0,
 									"transformO": 0,
 									"previewSceneGraph": false
 								}
@@ -2332,10 +2336,10 @@
 									"z": true,
 									"w": true,
 									"h": true,
+									"d": true,
 									"a": true,
 									"o": false,
 									"v": true,
-									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -2344,9 +2348,11 @@
 									"transformZ": 0,
 									"transformW": 0,
 									"transformH": 0,
+									"transformD": 0,
 									"transformA": 0,
 									"transformSX": 0,
 									"transformSY": 0,
+									"transformSZ": 0,
 									"transformO": 0,
 									"previewSceneGraph": false
 								}
@@ -3773,9 +3779,9 @@
 										"bold": true,
 										"italic": false,
 										"color": [
-											1,
-											1,
-											1,
+											0,
+											0,
+											0,
 											1
 										],
 										"horizontal-alignment": "left",
@@ -3804,10 +3810,10 @@
 											"z": true,
 											"w": true,
 											"h": true,
+											"d": true,
 											"a": true,
 											"o": false,
 											"v": false,
-											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -3816,9 +3822,11 @@
 											"transformZ": 0,
 											"transformW": 0,
 											"transformH": 0,
+											"transformD": 0,
 											"transformA": 0,
 											"transformSX": 0,
 											"transformSY": 0,
+											"transformSZ": 0,
 											"transformO": 0,
 											"previewSceneGraph": false
 										}
@@ -3888,9 +3896,9 @@
 										"bold": true,
 										"italic": false,
 										"color": [
-											1,
-											1,
-											1,
+											0,
+											0,
+											0,
 											1
 										],
 										"horizontal-alignment": "left",
@@ -3919,10 +3927,10 @@
 											"z": true,
 											"w": true,
 											"h": true,
+											"d": true,
 											"a": true,
 											"o": false,
 											"v": false,
-											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -3931,9 +3939,11 @@
 											"transformZ": 0,
 											"transformW": 0,
 											"transformH": 0,
+											"transformD": 0,
 											"transformA": 0,
 											"transformSX": 0,
 											"transformSY": 0,
+											"transformSZ": 0,
 											"transformO": 0,
 											"previewSceneGraph": false
 										}
@@ -4039,9 +4049,9 @@
 										"bold": true,
 										"italic": false,
 										"color": [
-											1,
-											1,
-											1,
+											0,
+											0,
+											0,
 											1
 										],
 										"horizontal-alignment": "left",
@@ -4058,7 +4068,7 @@
 									"tags": "",
 									"instanceVariables": {
 										"my_id": 0,
-										"my_txt": "options.gameplay.opt_2"
+										"my_txt": "options.video.opt_1"
 									},
 									"behaviors": {},
 									"sceneGraphData": {
@@ -4070,10 +4080,10 @@
 											"z": true,
 											"w": true,
 											"h": true,
+											"d": true,
 											"a": true,
 											"o": false,
 											"v": false,
-											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -4082,9 +4092,11 @@
 											"transformZ": 0,
 											"transformW": 0,
 											"transformH": 0,
+											"transformD": 0,
 											"transformA": 0,
 											"transformSX": 0,
 											"transformSY": 0,
+											"transformSZ": 0,
 											"transformO": 0,
 											"previewSceneGraph": false
 										}
@@ -4353,10 +4365,10 @@
 									"z": true,
 									"w": true,
 									"h": true,
+									"d": true,
 									"a": true,
 									"o": false,
 									"v": false,
-									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -4365,9 +4377,11 @@
 									"transformZ": 0,
 									"transformW": 0,
 									"transformH": 0,
+									"transformD": 0,
 									"transformA": 0,
 									"transformSX": 0,
 									"transformSY": 0,
+									"transformSZ": 0,
 									"transformO": 0,
 									"previewSceneGraph": false
 								}
@@ -4433,10 +4447,10 @@
 									"z": true,
 									"w": true,
 									"h": true,
+									"d": true,
 									"a": true,
 									"o": false,
 									"v": false,
-									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -4445,9 +4459,11 @@
 									"transformZ": 0,
 									"transformW": 0,
 									"transformH": 0,
+									"transformD": 0,
 									"transformA": 0,
 									"transformSX": 0,
 									"transformSY": 0,
+									"transformSZ": 0,
 									"transformO": 0,
 									"previewSceneGraph": false
 								}
@@ -4678,10 +4694,10 @@
 									"z": true,
 									"w": true,
 									"h": true,
+									"d": true,
 									"a": true,
 									"o": false,
 									"v": false,
-									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -4690,9 +4706,11 @@
 									"transformZ": 0,
 									"transformW": 0,
 									"transformH": 0,
+									"transformD": 0,
 									"transformA": 0,
 									"transformSX": 0,
 									"transformSY": 0,
+									"transformSZ": 0,
 									"transformO": 0,
 									"previewSceneGraph": false
 								}
@@ -4758,10 +4776,10 @@
 									"z": true,
 									"w": true,
 									"h": true,
+									"d": true,
 									"a": true,
 									"o": false,
 									"v": false,
-									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -4770,9 +4788,11 @@
 									"transformZ": 0,
 									"transformW": 0,
 									"transformH": 0,
+									"transformD": 0,
 									"transformA": 0,
 									"transformSX": 0,
 									"transformSY": 0,
+									"transformSZ": 0,
 									"transformO": 0,
 									"previewSceneGraph": false
 								}
@@ -4981,6 +5001,141 @@
 				1
 			],
 			"isTransparent": false,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Mouse",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Cursor_default",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 243,
+					"sid": 864324157412974,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 336,
+						"y": 1392,
+						"width": 64,
+						"height": 64,
+						"originX": 0.34375,
+						"originY": 0.328125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Cursor_pointer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 244,
+					"sid": 874410392594499,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 240,
+						"y": 1376,
+						"width": 64,
+						"height": 64,
+						"originX": 0.1445945945945946,
+						"originY": 0.10135135135135136,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Cursor_hold",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 245,
+					"sid": 863056417512177,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 400,
+						"y": 1392,
+						"width": 64,
+						"height": 64,
+						"originX": 0.42027027027027025,
+						"originY": 0.41486486486486485,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
+			"sid": 518966804963209,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
 			"sampling": "auto",
 			"parallaxX": 1,
 			"parallaxY": 1,

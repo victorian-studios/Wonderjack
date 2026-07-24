@@ -72,6 +72,16 @@
 			"sid": 560214963743739
 		},
 		{
+			"eventType": "variable",
+			"name": "Opt_FastMode_Secs",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "quantos segundos serao reduzidos das esperas do jogo?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 382073230836069
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -81,6 +91,14 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 893371437055331,
+					"parameters": {
+						"cursor-style": "none"
+					}
+				},
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
@@ -264,139 +282,6 @@
 				}
 			],
 			"sid": 625864370784634
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "cursor-is-over-object",
-					"objectClass": "Mouse",
-					"sid": 502996752325712,
-					"parameters": {
-						"object": "Buttons"
-					}
-				},
-				{
-					"id": "layer-is-visible",
-					"objectClass": "System",
-					"sid": 618305176515343,
-					"parameters": {
-						"layer": "Buttons.LayerName"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 213346950500442,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 259598430623414,
-							"parameters": {
-								"object": "configuracoes"
-							}
-						},
-						{
-							"id": "layer-is-visible",
-							"objectClass": "System",
-							"sid": 110444195321572,
-							"parameters": {
-								"layer": "\"Pause\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Buttons",
-							"sid": 108327286751947,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 803461970885360,
-							"parameters": {
-								"cursor-style": "pointer"
-							}
-						}
-					],
-					"sid": 376370635846316
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 858399586593659
-						},
-						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 706731958385378,
-							"parameters": {
-								"object": "configuracoes"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Buttons",
-							"sid": 137520490582260,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 588211010793677,
-							"parameters": {
-								"cursor-style": "pointer"
-							}
-						}
-					],
-					"sid": 642900530364881
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 500732860801932
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "Buttons",
-					"sid": 546253198355596,
-					"parameters": {
-						"frame-number": "0"
-					}
-				},
-				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 150028875682843,
-					"parameters": {
-						"cursor-style": "normal"
-					}
-				}
-			],
-			"sid": 184305952900509
 		},
 		{
 			"eventType": "block",
@@ -1956,6 +1841,15 @@
 														"variable": "Opt_FastMode",
 														"value": "true"
 													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 505975064567097,
+													"parameters": {
+														"variable": "Opt_FastMode_Secs",
+														"value": "1"
+													}
 												}
 											],
 											"sid": 508604318988304
@@ -1999,6 +1893,15 @@
 														"variable": "Opt_FastMode",
 														"value": "false"
 													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 231740430515180,
+													"parameters": {
+														"variable": "Opt_FastMode_Secs",
+														"value": "0"
+													}
 												}
 											],
 											"sid": 763154674759811
@@ -2011,6 +1914,399 @@
 				}
 			],
 			"sid": 551110451978455
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Cursor",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 747127579638961,
+							"parameters": {
+								"object": "Buttons"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 865673032585516,
+							"parameters": {
+								"layer": "Buttons.LayerName"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Buttons",
+							"sid": 841396672085700
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Buttons",
+							"sid": 306959507935868,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 990964059200194
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 831935730845668
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Buttons",
+							"sid": 346315838196648,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 237997662478944
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-movement",
+							"objectClass": "Mouse",
+							"sid": 885028139903829
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Mouse",
+							"sid": 582063749001550,
+							"parameters": {
+								"cursor-style": "none"
+							}
+						}
+					],
+					"sid": 368210905763106,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 642687398510306,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Menu\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 805388934505705,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Credits\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 292539680776136,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Story\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 307690613471808,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 542965069903911,
+											"parameters": {
+												"object": "Clickable"
+											}
+										},
+										{
+											"id": "is-visible",
+											"objectClass": "Clickable",
+											"sid": 441167466718435
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 633725379267498,
+											"parameters": {
+												"layer": "Clickable.LayerName"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_default",
+											"sid": 392592248890259,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_pointer",
+											"sid": 280998659117962,
+											"parameters": {
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										}
+									],
+									"sid": 234445479029400
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 827017860163010
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_default",
+											"sid": 584456441504031,
+											"parameters": {
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_pointer",
+											"sid": 474552424658669,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										}
+									],
+									"sid": 243478921506952
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 199489543967195,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Level\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 133049105023543,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "mouse-button-is-down",
+											"objectClass": "Mouse",
+											"sid": 755398785754802,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 719563752716944,
+											"parameters": {
+												"object": "Clickable"
+											}
+										},
+										{
+											"id": "is-visible",
+											"objectClass": "Clickable",
+											"sid": 149636614173863
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 295796661252699,
+											"parameters": {
+												"layer": "Clickable.LayerName"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_default",
+											"sid": 937468550587664,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_pointer",
+											"sid": 328156390304119,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_hold",
+											"sid": 335429644410944,
+											"parameters": {
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										}
+									],
+									"sid": 227537462176615
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 223674128824931
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 925685246964796,
+											"parameters": {
+												"object": "Clickable"
+											}
+										},
+										{
+											"id": "is-visible",
+											"objectClass": "Clickable",
+											"sid": 814708027423102
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 737487290333194,
+											"parameters": {
+												"layer": "Clickable.LayerName"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_default",
+											"sid": 377662595897774,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_pointer",
+											"sid": 222342864493468,
+											"parameters": {
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_hold",
+											"sid": 847579035799864,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										}
+									],
+									"sid": 166279856232086
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 772689027464944
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_default",
+											"sid": 402911099117129,
+											"parameters": {
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_pointer",
+											"sid": 666329566225614,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_hold",
+											"sid": 521952497740703,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										}
+									],
+									"sid": 665738340546335
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 751413511090382
 		}
 	],
 	"sid": 466221253102104
