@@ -1,0 +1,13 @@
+{
+	"name": "Holdable",
+	"plugin-id": "Sprite",
+	"sid": 515780967606628,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"volume_bar_Mus_drag",
+		"volume_bar_Vol_drag",
+		"Card_Power"
+	]
+}

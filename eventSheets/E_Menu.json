@@ -125,6 +125,17 @@
 						"layer": "\"Extras\"",
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Banner_fundo",
+					"sid": 278650799510255,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "6",
+						"type": "regular",
+						"tag": "\"change\""
+					}
 				}
 			],
 			"sid": 156210455576702,
@@ -1754,10 +1765,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Text_Static_Generic",
-									"sid": 957477940395680,
+									"sid": 235884836204806,
 									"parameters": {
 										"instance-variable": "my_txt",
-										"value": "\"\""
+										"value": "\"menu.btn_gallery\""
 									}
 								},
 								{
@@ -1767,44 +1778,9 @@
 									"parameters": {
 										"text": "Internationalization.Lookup(Self.my_txt)"
 									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Text_Static_Generic",
-									"sid": 874226148362459,
-									"parameters": {
-										"visibility": "invisible"
-									}
 								}
 							],
 							"sid": 851441711170835
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-comparison",
-									"objectClass": "System",
-									"sid": 546473922648863,
-									"parameters": {
-										"object": "Menu_Placa",
-										"expression": "Menu_Placa.My_ID",
-										"comparison": 0,
-										"value": "3"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Menu_Placa",
-									"sid": 340687658365577,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 541526433058452
 						},
 						{
 							"eventType": "block",
@@ -2777,6 +2753,10 @@
 					"sid": 906534346116934
 				},
 				{
+					"eventType": "comment",
+					"text": "Trocando entre as abas do codex"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -3150,6 +3130,10 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "Saindo do codex"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -3313,6 +3297,471 @@
 			"sid": 443576521096051
 		},
 		{
+			"eventType": "comment",
+			"text": "TESTAR SE ESTÁ FUNCIONANDO COM O STEAMWORKS ! ! !",
+			"text-color": [
+				1,
+				0,
+				0,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Ad Banner",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 869492464791780,
+							"parameters": {
+								"object": "Banner_bolinha"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 156497211426370,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 791727251446166,
+							"parameters": {
+								"layer": "\"Codex\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 998014931203898,
+							"parameters": {
+								"layer": "\"Art Galery\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Banner_bolinha",
+							"sid": 954615457561625,
+							"parameters": {
+								"animation": "\"Light\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 460420468789178
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 295068966905107
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Banner_bolinha",
+							"sid": 601175556665522,
+							"parameters": {
+								"animation": "\"Default\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 373088065371353
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 274740946726338,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Banner_bolinha"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Banner_fundo",
+							"sid": 355305519685248,
+							"parameters": {
+								"frame-number": "Banner_bolinha.ID"
+							}
+						},
+						{
+							"id": "restart-fade",
+							"objectClass": "Banner_fundo",
+							"sid": 784030591108774,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "stop-all-timers",
+							"objectClass": "Banner_fundo",
+							"sid": 691874893874948,
+							"behaviorType": "Timer"
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Banner_fundo",
+							"sid": 872954684144629,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "6",
+								"type": "regular",
+								"tag": "\"change\""
+							}
+						}
+					],
+					"sid": 648641437849881,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 163872266368824,
+									"parameters": {
+										"object": "Banner_bolinha"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 855253547232915,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Banner_bolinha",
+									"sid": 265599663512314,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 462258574474072,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 777745454912699,
+											"parameters": {
+												"object": "Banner_bolinha",
+												"expression": "Banner_bolinha.ID",
+												"comparison": 0,
+												"value": "Banner_fundo.AnimationFrame"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Banner_bolinha",
+											"sid": 530319358121520,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 584466813949924
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "TESTAR SE ESTÁ FUNCIONANDO COM O STEAMWORKS ! ! !",
+					"text-color": [
+						1,
+						0,
+						0,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 271844182332832,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Banner_fundo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 103252947435829,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Steam & Clicks"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Banner_fundo",
+									"sid": 614214731660268,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "show-overlay-url",
+									"objectClass": "Steamworks",
+									"sid": 172200020463959,
+									"parameters": {
+										"url": "\"https://store.steampowered.com/app/3805000/Steam__Clicks/\"",
+										"modal": false
+									}
+								}
+							],
+							"sid": 689760198647548
+						},
+						{
+							"eventType": "comment",
+							"text": "Última atualização"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Banner_fundo",
+									"sid": 949662743529106,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "show-overlay-url",
+									"objectClass": "Steamworks",
+									"sid": 725567286138293,
+									"disabled": true,
+									"parameters": {
+										"url": "\"\"",
+										"modal": false
+									}
+								}
+							],
+							"sid": 943531368284346
+						},
+						{
+							"eventType": "comment",
+							"text": "Survivor Story"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Banner_fundo",
+									"sid": 609901830878675,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "show-overlay-url",
+									"objectClass": "Steamworks",
+									"sid": 462522953881474,
+									"parameters": {
+										"url": "\"https://store.steampowered.com/app/3186200/Survivor_Story_The_Apocalypse/\"",
+										"modal": false
+									}
+								}
+							],
+							"sid": 297911066451525
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Banner_fundo",
+							"sid": 996948393141511,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"change\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 808932705093436,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Banner_fundo",
+									"sid": 421459291411798,
+									"parameters": {
+										"comparison": 0,
+										"number": "Self.AnimationFrameCount - 1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Banner_fundo",
+									"sid": 106303213260835,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Banner_fundo",
+									"sid": 734280345435851,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 964515736652251
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 577585706678030
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Banner_fundo",
+									"sid": 389150570185817,
+									"parameters": {
+										"frame-number": "Self.AnimationFrame + 1"
+									}
+								},
+								{
+									"id": "restart-fade",
+									"objectClass": "Banner_fundo",
+									"sid": 348194022474086,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 561598664890758
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 231525540307518,
+									"parameters": {
+										"object": "Banner_bolinha"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 629917929895601,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Banner_bolinha",
+									"sid": 484608798041099,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 534373594859436,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 583669670663994,
+											"parameters": {
+												"object": "Banner_bolinha",
+												"expression": "Banner_bolinha.ID",
+												"comparison": 0,
+												"value": "Banner_fundo.AnimationFrame"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Banner_bolinha",
+											"sid": 780934297752977,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 841187024507849
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 197596170587106
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -3394,6 +3843,27 @@
 					"sid": 991941567245201
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 318664151962300,
+					"parameters": {
+						"key": 81
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "clear-storage",
+					"objectClass": "LocalStorage",
+					"sid": 862527010062764
+				}
+			],
+			"sid": 951040769932321
 		}
 	],
 	"sid": 468746933081532

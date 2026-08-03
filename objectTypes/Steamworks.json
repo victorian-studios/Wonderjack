@@ -1,0 +1,16 @@
+{
+	"name": "Steamworks",
+	"plugin-id": "Steamworks_Ext",
+	"sid": 789240356756594,
+	"singleglobal-inst": {
+		"type": "Steamworks",
+		"properties": {
+			"app-id": "",
+			"development-mode": true,
+			"enable-overlay": true
+		},
+		"uid": 270,
+		"sid": 382242331871051,
+		"tags": ""
+	}
+}

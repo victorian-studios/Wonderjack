@@ -10,6 +10,7 @@
             "btn_tutorial": "Tutorial",
             "btn_custom": "Custom",
             "btn_codex": "Codex",
+            "btn_gallery": "Gallery",
             "btn_credits": "Credits",
             "btn_back": "Back",
             "codex": {
@@ -103,11 +104,13 @@
             "bye": "Thanks for playing our game!"
         },
         "story": {
-            "page_1" : "Alice was leaning agains a tree, trying to play cards with her little kitten, Dinah.\n\n'Well,' Alice thought boredly, 'playing alone isn't nearly as fun anymore.'.\n\nShe watches the cat playing with the pile of cards using her little paws.\n\n'I wanted something new, different, and... Someone unpredictable' she says aloud.",
+            "page_1" : "Alice was leaning against a tree, trying to play cards with her little kitten, Dinah.\n\n'Well,' Alice thought boredly, 'playing alone isn't nearly as fun anymore.'\n\nShe watched her cat playing with the pile of cards using her little paws.\n\n'I wanted something new, different, and... someone unpredictable' she says aloud.",
             "page_2" : "The gentle breeze soon made Alice drowsy. Her eyelids grew heavier until, before she even realized it, she had drifted into a deep sleep.\n\n...\n\n'Alice? Alice?'\n\nA familiar voice echoed nearby. Slowly, Alice opened her eyes.\n\nShe looked around in confusion. Stone walls surrounded her, and a long tunnel stretched ahead.\n\n'...A rabbit hole?'",
-            "page_3" : "",
-            "page_4" : "",
-            "page_5" : ""
+            "page_3" : "'How did I get here? Where's Dinah?' Alice asked.\n\nThe White Queen hurried toward her, almost tripping over her own dress.\n\n'Oh, I'm so relieved I found you!'\n\n'White Queen? What's going on?'\n\n'I've come with a very important invitation... from the Queen of Hearts'\n\nAlice froze.\n\n'The Queen of Hearts? Now THAT sounds unpredictable.'",
+            "page_4" : "The White Queen glanced nervously over her shoulder.\n\n'She insists that everyone in Wonderland participate in a card tournament.'\n\n'Wait, a card tournament?' Alice asked.\n\n'Yes! She's grown tired of cricket...' the Queen whispered.\n\nThe White Queen forced a smile.\n\n'If you refuse... she'll blame me for failing to deliver the invitation.'",
+            "page_5" : "Alice smiled while her eyes sparkled with excitement.\n\n'That's exactly what I was hoping for. Count me in!'\n\nThe White Queen sighed with relief.\n\n'Wonderful! Before you leave... the Queen has grown even more merciless lately.'\n\n[b]'Would you like to play with me so I can teach you?'[/b]",
+            "btn_yes": "YES",
+            "btn_no": "NO"
         },
         "tutorial": {
             "page_1": "[u][b]Chapter 1[/b][/u]\n\n[b]The Goal[/b]\n\nThe goal of the game is to win two rounds by reaching 21 with numeric cards or get as close as possible.",

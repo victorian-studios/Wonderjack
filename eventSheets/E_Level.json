@@ -20550,14 +20550,6 @@
 											"parameters": {
 												"frame-number": "1"
 											}
-										},
-										{
-											"id": "set-cursor-style2",
-											"objectClass": "Mouse",
-											"sid": 197885686907920,
-											"parameters": {
-												"cursor-style": "pointer"
-											}
 										}
 									],
 									"sid": 502025297638410,
@@ -20788,14 +20780,6 @@
 											],
 											"actions": [
 												{
-													"id": "set-cursor-style2",
-													"objectClass": "Mouse",
-													"sid": 784182472535336,
-													"parameters": {
-														"cursor-style": "normal"
-													}
-												},
-												{
 													"id": "set-fade-in-time",
 													"objectClass": "Text_Power",
 													"sid": 384731245767067,
@@ -20958,14 +20942,6 @@
 											"sid": 450833261423224,
 											"parameters": {
 												"frame-number": "1"
-											}
-										},
-										{
-											"id": "set-cursor-style2",
-											"objectClass": "Mouse",
-											"sid": 352678819506195,
-											"parameters": {
-												"cursor-style": "pointer"
 											}
 										}
 									],
@@ -21204,14 +21180,6 @@
 									],
 									"actions": [
 										{
-											"id": "set-cursor-style2",
-											"objectClass": "Mouse",
-											"sid": 309417650190888,
-											"parameters": {
-												"cursor-style": "normal"
-											}
-										},
-										{
 											"id": "set-fade-in-time",
 											"objectClass": "Text_Power",
 											"sid": 679385952217694,
@@ -21374,14 +21342,6 @@
 											"sid": 834882453534606,
 											"parameters": {
 												"frame-number": "1"
-											}
-										},
-										{
-											"id": "set-cursor-style2",
-											"objectClass": "Mouse",
-											"sid": 226940627506809,
-											"parameters": {
-												"cursor-style": "pointer"
 											}
 										}
 									],
@@ -21637,14 +21597,6 @@
 										}
 									],
 									"actions": [
-										{
-											"id": "set-cursor-style2",
-											"objectClass": "Mouse",
-											"sid": 690773146612640,
-											"parameters": {
-												"cursor-style": "normal"
-											}
-										},
 										{
 											"id": "set-fade-in-time",
 											"objectClass": "Text_Power",
@@ -35461,7 +35413,7 @@
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "Btn_Sound"
+								"object-clicked": "Btn_Music"
 							}
 						},
 						{
@@ -35481,7 +35433,7 @@
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "Btn_Sound",
+									"objectClass": "Btn_Music",
 									"sid": 308522486630887,
 									"parameters": {
 										"comparison": 0,
@@ -35518,7 +35470,7 @@
 								},
 								{
 									"id": "set-animation-frame",
-									"objectClass": "Btn_Sound",
+									"objectClass": "Btn_Music",
 									"sid": 878477026999651,
 									"parameters": {
 										"frame-number": "1"
@@ -35532,7 +35484,7 @@
 							"conditions": [
 								{
 									"id": "compare-animation-frame",
-									"objectClass": "Btn_Sound",
+									"objectClass": "Btn_Music",
 									"sid": 499004616870509,
 									"parameters": {
 										"comparison": 0,
@@ -35583,7 +35535,7 @@
 								},
 								{
 									"id": "set-animation-frame",
-									"objectClass": "Btn_Sound",
+									"objectClass": "Btn_Music",
 									"sid": 261530642592790,
 									"parameters": {
 										"frame-number": "0"
@@ -35602,7 +35554,7 @@
 							"objectClass": "Mouse",
 							"sid": 238706240988700,
 							"parameters": {
-								"object": "Btn_Sound"
+								"object": "Btn_Music"
 							}
 						}
 					],
@@ -37798,14 +37750,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 139759101362348,
-							"parameters": {
-								"cursor-style": "pointer"
-							}
-						},
-						{
 							"id": "set-visible",
 							"objectClass": "Bkg_Relic_Info_Txt",
 							"sid": 460791636309511,
@@ -37929,14 +37873,6 @@
 						}
 					],
 					"actions": [
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 692994309123957,
-							"parameters": {
-								"cursor-style": "normal"
-							}
-						},
 						{
 							"id": "set-visible",
 							"objectClass": "Bkg_Relic_Info_Txt",

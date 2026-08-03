@@ -78,6 +78,15 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Steamworks_Ext",
+			"name": "Steamworks",
+			"author": "Scirra",
+			"bundled": false,
+			"version": "1.6.0.0",
+			"sdkVersion": 2
+		},
+		{
+			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
@@ -85,8 +94,22 @@
 		},
 		{
 			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "video",
 			"name": "Video",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -197,7 +220,7 @@
 			"Tutorial_Img",
 			"Bkg_Black_Common",
 			"carta_opt_bg",
-			"Btn_Sound",
+			"Btn_Music",
 			"Btn_ResumeMenu",
 			"Audio",
 			"A_Relics",
@@ -256,7 +279,20 @@
 			"Cursor_default",
 			"Cursor_pointer",
 			"Cursor_hold",
-			"Text_Story"
+			"Text_Story",
+			"Bkg_volume_bar",
+			"volume_bar_border",
+			"volume_bar_Mus_drag",
+			"volume_bar_Mus_content",
+			"Btn_Sound",
+			"volume_bar_Vol_content",
+			"volume_bar_Vol_drag",
+			"Banner_fundo",
+			"Banner_borda",
+			"Banner_bolinha",
+			"Bkg_Banner",
+			"Steamworks",
+			"tela_galeria"
 		],
 		"subfolders": []
 	},
@@ -266,7 +302,8 @@
 	"families": {
 		"items": [
 			"Buttons",
-			"Clickable"
+			"Clickable",
+			"Holdable"
 		],
 		"subfolders": []
 	},

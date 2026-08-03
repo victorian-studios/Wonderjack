@@ -1,7 +1,7 @@
 {
 	"name": "Btn_Sound",
 	"plugin-id": "Sprite",
-	"sid": 819224778696120,
+	"sid": 721895918909137,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,7 +20,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8674960,
+						"imageSpriteId": 6259782,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -34,13 +34,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6054135,
+						"imageSpriteId": 1282937,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 410490396324274,
+				"sid": 706833865158576,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

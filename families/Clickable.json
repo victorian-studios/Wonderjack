@@ -11,7 +11,7 @@
 		"Btn_discord",
 		"Btn_Options",
 		"Btn_ResumeMenu",
-		"Btn_Sound",
+		"Btn_Music",
 		"Btn_Stop",
 		"Btn_Back",
 		"Btn_Story_Next",
@@ -25,6 +25,11 @@
 		"Relics",
 		"Victorian_Studio",
 		"Tutorial_Num",
-		"Toggle_Options_Numbers"
+		"Toggle_Options_Numbers",
+		"Btn_Sound",
+		"volume_bar_Mus_drag",
+		"volume_bar_Vol_drag",
+		"Banner_bolinha",
+		"Banner_fundo"
 	]
 }
