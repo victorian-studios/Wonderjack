@@ -95,6 +95,50 @@
                 "relics": {
                     "title": "Relics"
                 }
+            },
+            "art_gallery": {
+                "tittle_default": "Waiting...",
+                "desc_default": "Waiting...",
+                "art_0": {
+                    "title": "Bunny",
+                    "desc": "A possible bunny for Alice."
+                },
+                "art_1": {
+                    "title": "Alice Sketch",
+                    "desc": "The first sketch art from Alice."
+                },
+                "art_2": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_3": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_4": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_5": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_6": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_7": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_8": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_9": {
+                    "title": "Old Story Page 5",
+                    "desc": "The fifth page from the story."
+                }
             }
         },
         "credits": {

@@ -101,14 +101,6 @@
 					"parameters": {
 						"visibility": "visible"
 					}
-				},
-				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 514998483830038,
-					"parameters": {
-						"cursor-style": "pointer"
-					}
 				}
 			],
 			"sid": 491471775789843
@@ -129,14 +121,6 @@
 					"sid": 131458108755872,
 					"parameters": {
 						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 636159663958786,
-					"parameters": {
-						"cursor-style": "normal"
 					}
 				}
 			],

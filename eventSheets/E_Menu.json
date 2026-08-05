@@ -136,6 +136,21 @@
 						"type": "regular",
 						"tag": "\"change\""
 					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Gallery_Arts_Small",
+					"sid": 977831892390877,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Scroll_Bkg_Art",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
 				}
 			],
 			"sid": 156210455576702,
@@ -665,7 +680,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "Sequência de botões"
+			"text": "Sequência de botões do Menu"
 		},
 		{
 			"eventType": "block",
@@ -925,7 +940,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Credits"
+							"text": "Art Galery"
 						},
 						{
 							"eventType": "block",
@@ -933,7 +948,7 @@
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 948526714212726,
+									"sid": 162512040954654,
 									"parameters": {
 										"layer": "\"Extras\""
 									}
@@ -941,15 +956,84 @@
 							],
 							"actions": [
 								{
-									"id": "go-to-layout",
+									"id": "set-layer-visible",
 									"objectClass": "System",
-									"sid": 331347560070728,
+									"sid": 530670999865821,
 									"parameters": {
-										"layout": "Credits"
+										"layer": "\"Art Galery\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Gallery_Arts_Medium",
+									"sid": 401326409834907,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 404287483626662,
+									"parameters": {
+										"group-name": "\"Art Gallery\"",
+										"state": "activated"
 									}
 								}
 							],
-							"sid": 755286754399092
+							"sid": 811426441178852,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Text_Art_Comment",
+											"sid": 668796943141726,
+											"parameters": {
+												"instance-variable": "Title"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Text_Art_Comment",
+											"sid": 230620265377941,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"menu.art_gallery.title_default\")"
+											}
+										}
+									],
+									"sid": 969140313337909
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Text_Art_Comment",
+											"sid": 532406335179846,
+											"parameters": {
+												"instance-variable": "Title"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Text_Art_Comment",
+											"sid": 384591532905831,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"menu.art_gallery.desc_default\")"
+											}
+										}
+									],
+									"sid": 400569873307025
+								}
+							]
 						}
 					]
 				},
@@ -1018,7 +1102,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Art Galery"
+							"text": "Credits"
 						},
 						{
 							"eventType": "block",
@@ -1026,7 +1110,7 @@
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 871814443067957,
+									"sid": 136186243748634,
 									"parameters": {
 										"layer": "\"Extras\""
 									}
@@ -1034,16 +1118,15 @@
 							],
 							"actions": [
 								{
-									"id": "set-layer-visible",
+									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 739760049783568,
+									"sid": 724371301900191,
 									"parameters": {
-										"layer": "\"Art Galery\"",
-										"visibility": "visible"
+										"layout": "Credits"
 									}
 								}
 							],
-							"sid": 291726973266988
+							"sid": 381440495081512
 						}
 					]
 				},
@@ -1729,16 +1812,16 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Text_Static_Generic",
-									"sid": 528994730002558,
+									"sid": 303665703876246,
 									"parameters": {
 										"instance-variable": "my_txt",
-										"value": "\"menu.btn_credits\""
+										"value": "\"menu.btn_gallery\""
 									}
 								},
 								{
 									"id": "set-text",
 									"objectClass": "Text_Static_Generic",
-									"sid": 243651619550067,
+									"sid": 149424574657369,
 									"parameters": {
 										"text": "Internationalization.Lookup(Self.my_txt)"
 									}
@@ -1765,16 +1848,16 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Text_Static_Generic",
-									"sid": 235884836204806,
+									"sid": 994549456644229,
 									"parameters": {
 										"instance-variable": "my_txt",
-										"value": "\"menu.btn_gallery\""
+										"value": "\"menu.btn_credits\""
 									}
 								},
 								{
 									"id": "set-text",
 									"objectClass": "Text_Static_Generic",
-									"sid": 103183149922863,
+									"sid": 566119262799031,
 									"parameters": {
 										"text": "Internationalization.Lookup(Self.my_txt)"
 									}
@@ -3760,6 +3843,367 @@
 				}
 			],
 			"sid": 197596170587106
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Art Gallery",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Saindo do Art Gallery"
+				},
+				{
+					"eventType": "variable",
+					"name": "Progress",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 633575155888152
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 861213326207573,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Btn_Back2"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 266069179657044,
+							"parameters": {
+								"layer": "\"Art Galery\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 460147920182747,
+							"parameters": {
+								"layer": "\"Art Galery\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 831273136507071,
+							"parameters": {
+								"group-name": "\"Art Gallery\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 770880343711664
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 183435753914769,
+							"parameters": {
+								"object": "Gallery_Arts_Small"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Gallery_Arts_Small",
+							"sid": 574955885412145,
+							"parameters": {
+								"animation": "\"Hover\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 728820895036046
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 206592300414981
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Gallery_Arts_Small",
+							"sid": 192376039940274,
+							"parameters": {
+								"animation": "\"Default\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 395258303798509
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 353384169320151,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Gallery_Arts_Small"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Gallery_Arts_Small",
+							"sid": 348761776098495,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "188"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Gallery_Arts_Small",
+							"sid": 290463265895155,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "1005"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Gallery_Arts_Medium",
+							"sid": 238571080195939,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Gallery_Arts_Medium",
+							"sid": 194181011290144,
+							"parameters": {
+								"frame-number": "Gallery_Arts_Small.AnimationFrame"
+							}
+						}
+					],
+					"sid": 344158907896643,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Text_Art_Comment",
+									"sid": 376669173028518,
+									"parameters": {
+										"instance-variable": "Title"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text_Art_Comment",
+									"sid": 119451445685765,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"menu.art_gallery.art_\" & Gallery_Arts_Small.AnimationFrame & \".title\")"
+									}
+								}
+							],
+							"sid": 854120148385961
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Text_Art_Comment",
+									"sid": 298757267090150,
+									"parameters": {
+										"instance-variable": "Title"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text_Art_Comment",
+									"sid": 614764974475388,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"menu.art_gallery.art_\" & Gallery_Arts_Small.AnimationFrame & \".desc\")"
+									}
+								}
+							],
+							"sid": 365028373988717
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "Scroll_Art_Gallery",
+							"sid": 240271245836486,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Scroll_Art_Gallery",
+							"sid": 659925492195182,
+							"parameters": {
+								"y": "clamp(Self.Y, 294, 568)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 500637023280282,
+							"parameters": {
+								"variable": "Progress",
+								"value": "(Scroll_Art_Gallery.Y - 294) / (568 - 294)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Scroll_Bkg_Art",
+							"sid": 126821363432140,
+							"parameters": {
+								"y": "300 - Progress * (300 - (-1262))"
+							}
+						}
+					],
+					"sid": 913876211722381,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Scroll_Bkg_Art",
+							"sid": 968251993263541,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Scroll_Bkg_Art",
+							"sid": 361855271623859,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Scroll_Bkg_Art",
+							"sid": 175842774757394,
+							"parameters": {
+								"y": "clamp( Self.Y, -1262, 300)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 722136040686586,
+							"parameters": {
+								"variable": "Progress",
+								"value": "(300 - Scroll_Bkg_Art.Y) / 1562"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Scroll_Art_Gallery",
+							"sid": 530003801018613,
+							"parameters": {
+								"y": "294 + Progress * (568 - 294)"
+							}
+						}
+					],
+					"sid": 356405412812836,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Scroll_Bkg_Art",
+									"sid": 184132769135482,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "-1262"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Scroll_Bkg_Art",
+									"sid": 119245690134133,
+									"parameters": {
+										"y": "-1262"
+									}
+								}
+							],
+							"sid": 972176999153214
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 148281721912774
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Scroll_Bkg_Art",
+									"sid": 160447374198741,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "300"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Scroll_Bkg_Art",
+									"sid": 948540108677729,
+									"parameters": {
+										"y": "300"
+									}
+								}
+							],
+							"sid": 212809884241839
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 897826799915758
 		},
 		{
 			"eventType": "block",

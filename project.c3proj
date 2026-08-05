@@ -64,6 +64,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Particles",
 			"name": "Particles",
 			"author": "Scirra",
@@ -292,7 +299,13 @@
 			"Banner_bolinha",
 			"Bkg_Banner",
 			"Steamworks",
-			"tela_galeria"
+			"tela_galeria",
+			"Scroll_Bkg_Art",
+			"Gallery_Arts_Small",
+			"Scroll_Art_Gallery",
+			"Text_Art_Comment",
+			"Gallery_Arts_Medium",
+			"degrade"
 		],
 		"subfolders": []
 	},

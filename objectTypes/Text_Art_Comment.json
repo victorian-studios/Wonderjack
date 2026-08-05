@@ -1,0 +1,24 @@
+{
+	"name": "Text_Art_Comment",
+	"plugin-id": "Text",
+	"sid": 240427105192185,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Title",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 227533570420231
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 792283418971571
+		}
+	],
+	"effectTypes": []
+}

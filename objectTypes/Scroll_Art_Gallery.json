@@ -1,0 +1,29 @@
+{
+	"name": "Scroll_Art_Gallery",
+	"plugin-id": "NinePatch",
+	"sid": 962444178122967,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 640536557785698
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 46,
+		"height": 572,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 5962163,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

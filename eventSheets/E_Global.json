@@ -556,19 +556,11 @@
 						{
 							"id": "on-movement",
 							"objectClass": "Mouse",
-							"sid": 729591514183349
+							"sid": 729591514183349,
+							"disabled": true
 						}
 					],
-					"actions": [
-						{
-							"id": "set-cursor-style2",
-							"objectClass": "Mouse",
-							"sid": 556674301214275,
-							"parameters": {
-								"cursor-style": "none"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 834203072340530,
 					"children": [
 						{
@@ -615,7 +607,16 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 825969078694099,
+									"parameters": {
+										"cursor-style": "none"
+									}
+								}
+							],
 							"sid": 507595900650229,
 							"children": [
 								{
@@ -681,6 +682,79 @@
 										}
 									],
 									"sid": 520552518579362
+								},
+								{
+									"eventType": "comment",
+									"text": "Excessão por conta do Scroll_Art_Gallery se tratar de um 9Patch e não de um Sprite..."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 907544330045193
+										},
+										{
+											"id": "mouse-button-is-down",
+											"objectClass": "Mouse",
+											"sid": 332021695286488,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 404350318421170,
+											"parameters": {
+												"object": "Scroll_Art_Gallery"
+											}
+										},
+										{
+											"id": "is-visible",
+											"objectClass": "Clickable",
+											"sid": 642910071145102
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 896050810294125,
+											"parameters": {
+												"layer": "Clickable.LayerName"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_default",
+											"sid": 861995688705361,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_pointer",
+											"sid": 476173837523124,
+											"parameters": {
+												"x": "-1000",
+												"y": "-1000"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_hold",
+											"sid": 912531855426483,
+											"parameters": {
+												"x": "Mouse.X",
+												"y": "Mouse.Y"
+											}
+										}
+									],
+									"sid": 736146006347558
 								},
 								{
 									"eventType": "block",
@@ -2444,12 +2518,6 @@
 									"parameters": {
 										"width": "486"
 									}
-								},
-								{
-									"id": "drop",
-									"objectClass": "volume_bar_Mus_drag",
-									"sid": 155093751955025,
-									"behaviorType": "DragDrop"
 								}
 							],
 							"sid": 369142953178302
@@ -2497,12 +2565,6 @@
 									"parameters": {
 										"width": "32"
 									}
-								},
-								{
-									"id": "drop",
-									"objectClass": "volume_bar_Mus_drag",
-									"sid": 987455383095458,
-									"behaviorType": "DragDrop"
 								}
 							],
 							"sid": 826121766005982
@@ -2694,12 +2756,6 @@
 									"parameters": {
 										"width": "486"
 									}
-								},
-								{
-									"id": "drop",
-									"objectClass": "volume_bar_Vol_drag",
-									"sid": 319972636991666,
-									"behaviorType": "DragDrop"
 								}
 							],
 							"sid": 556108961187953
@@ -2747,12 +2803,6 @@
 									"parameters": {
 										"width": "32"
 									}
-								},
-								{
-									"id": "drop",
-									"objectClass": "volume_bar_Vol_drag",
-									"sid": 996087777370171,
-									"behaviorType": "DragDrop"
 								}
 							],
 							"sid": 501929868416827
