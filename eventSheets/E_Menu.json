@@ -151,6 +151,23 @@
 						"height-type": "no",
 						"z": false
 					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "TiledBackground",
+					"sid": 216038044296791,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loop\"",
+						"start-value": "-1085",
+						"end-value": "-5",
+						"time": "14",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "yes",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
 				}
 			],
 			"sid": 156210455576702,
@@ -206,9 +223,9 @@
 						{
 							"id": "is-tag-playing",
 							"objectClass": "Audio",
-							"sid": 707423580259332,
+							"sid": 196266186384683,
 							"parameters": {
-								"tag": "\"menu\""
+								"tag": "\"music\""
 							},
 							"isInverted": true
 						}
@@ -217,15 +234,15 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 688286649257771,
+							"sid": 374908410514568,
 							"parameters": {
 								"audio-file": {
 									"path": "Menu/16 - Lament of the Damned (Loop)"
 								},
 								"loop": "looping",
-								"volume": "-8",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 								"stereo-pan": "0",
-								"tag-optional": "\"menu\""
+								"tag-optional": "\"music\""
 							}
 						}
 					],
@@ -237,9 +254,9 @@
 						{
 							"id": "is-tag-playing",
 							"objectClass": "Audio",
-							"sid": 312242410523605,
+							"sid": 400261514404451,
 							"parameters": {
-								"tag": "\"main\""
+								"tag": "\"music\""
 							}
 						}
 					],
@@ -247,72 +264,62 @@
 						{
 							"id": "fade-volume",
 							"objectClass": "Audio",
-							"sid": 717862840564249,
+							"sid": 619312384126106,
 							"parameters": {
-								"tag": "\"main\"",
+								"tag": "\"music\"",
 								"db": "-100",
 								"duration": "0.5",
 								"ending": "stop"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 494643542169530,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 252951541499957,
+							"parameters": {
+								"audio-file": {
+									"path": "Menu/16 - Lament of the Damned (Loop)"
+								},
+								"loop": "looping",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
 							}
 						}
 					],
 					"sid": 339759150262036
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-tag-playing",
-							"objectClass": "Audio",
-							"sid": 302874269404064,
-							"parameters": {
-								"tag": "\"story\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "fade-volume",
-							"objectClass": "Audio",
-							"sid": 239204174536106,
-							"parameters": {
-								"tag": "\"story\"",
-								"db": "-100",
-								"duration": "0.5",
-								"ending": "stop"
-							}
-						}
-					],
-					"sid": 371513628365662
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-tag-playing",
-							"objectClass": "Audio",
-							"sid": 718789754697135,
-							"parameters": {
-								"tag": "\"credits\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "fade-volume",
-							"objectClass": "Audio",
-							"sid": 764050694597229,
-							"parameters": {
-								"tag": "\"credits\"",
-								"db": "-100",
-								"duration": "0.5",
-								"ending": "stop"
-							}
-						}
-					],
-					"sid": 633767092481574
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 533455647743500
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TiledBackground",
+					"sid": 747649013367457,
+					"parameters": {
+						"y": "Self.Tween.Value(\"loop\")"
+					}
+				}
+			],
+			"sid": 476022451573073
 		},
 		{
 			"eventType": "block",
@@ -716,13 +723,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 997698899752205,
+					"sid": 628915625316525,
 					"parameters": {
 						"audio-file": {
 							"path": "menu-select-button-182476-_mp3cut.net_"
 						},
 						"loop": "not-looping",
-						"volume": "-5",
+						"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -1000,9 +1007,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Text_Art_Comment",
-											"sid": 230620265377941,
+											"sid": 637349282259754,
 											"parameters": {
-												"text": "Internationalization.Lookup(\"menu.art_gallery.title_default\")"
+												"text": "Internationalization.Lookup(\"menu.art_gallery.tittle_default\")"
 											}
 										}
 									],
@@ -1923,13 +1930,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 152657439879012,
+					"sid": 784533731722687,
 					"parameters": {
 						"audio-file": {
 							"path": "button_2_sfx"
 						},
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -4201,6 +4208,22 @@
 						}
 					],
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "TiledBackground",
+							"sid": 803993989652640,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 567733218337583
 				}
 			],
 			"sid": 897826799915758
@@ -4221,6 +4244,7 @@
 			],
 			"actions": [],
 			"sid": 379142086982749,
+			"disabled": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -4254,7 +4278,8 @@
 							}
 						}
 					],
-					"sid": 946742090155838
+					"sid": 946742090155838,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -4284,7 +4309,8 @@
 							}
 						}
 					],
-					"sid": 991941567245201
+					"sid": 991941567245201,
+					"disabled": true
 				}
 			]
 		},
@@ -4294,7 +4320,7 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 318664151962300,
+					"sid": 691097315288572,
 					"parameters": {
 						"key": 81
 					}
@@ -4304,10 +4330,11 @@
 				{
 					"id": "clear-storage",
 					"objectClass": "LocalStorage",
-					"sid": 862527010062764
+					"sid": 504642138934384,
+					"disabled": true
 				}
 			],
-			"sid": 951040769932321
+			"sid": 187144709437271
 		}
 	],
 	"sid": 468746933081532

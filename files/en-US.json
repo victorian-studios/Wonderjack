@@ -250,7 +250,7 @@
                     "talk_thinking_1": "I need to finish this game because it's almost tea time!",
                     "talk_thinking_2": "I’d love to offer you a cup of tea, but my hands are full.",
                     "talk_thinking_3": "Why is a raven like a writing-desk? — I haven’t the slightest idea.",
-                    "special": "Hope you don't mind if I pick another one."
+                    "special": "What if my the next card is hidden?"
                 },
                 "March Hare": {
                     "name": "March Hare",
@@ -439,6 +439,7 @@
             "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color] and then [color=#f5fe05]{1}[/color]",
             "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]2[/color] cards..."
             
-        }
+        },
+        "demo_end": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, powers, and extras await you in the full game!\n\nIf you enjoyed the demo, don't forget to add the game to your wishlist by clicking the button below!"
     }
 }

@@ -34,20 +34,9 @@
 						{
 							"id": "fade-volume",
 							"objectClass": "Audio",
-							"sid": 517333233790019,
+							"sid": 850674857086547,
 							"parameters": {
-								"tag": "\"menu\"",
-								"db": "-100",
-								"duration": "0.5",
-								"ending": "stop"
-							}
-						},
-						{
-							"id": "fade-volume",
-							"objectClass": "Audio",
-							"sid": 868912146305056,
-							"parameters": {
-								"tag": "\"main\"",
+								"tag": "\"music\"",
 								"db": "-100",
 								"duration": "0.5",
 								"ending": "stop"
@@ -65,15 +54,15 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 271764500179335,
+							"sid": 573272554424732,
 							"parameters": {
 								"audio-file": {
 									"path": "Credits/18 - Phantom's Requiem (Loop)"
 								},
 								"loop": "not-looping",
-								"volume": "-5",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 								"stereo-pan": "0",
-								"tag-optional": "\"credits\""
+								"tag-optional": "\"music\""
 							}
 						}
 					],

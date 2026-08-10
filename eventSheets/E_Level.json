@@ -470,9 +470,9 @@
 						{
 							"id": "is-tag-playing",
 							"objectClass": "Audio",
-							"sid": 658251014060167,
+							"sid": 672773916067947,
 							"parameters": {
-								"tag": "\"menu\""
+								"tag": "\"music\""
 							}
 						}
 					],
@@ -480,149 +480,97 @@
 						{
 							"id": "fade-volume",
 							"objectClass": "Audio",
-							"sid": 625686290383254,
+							"sid": 160647645806131,
 							"parameters": {
-								"tag": "\"menu\"",
+								"tag": "\"music\"",
 								"db": "-100",
 								"duration": "0.5",
 								"ending": "stop"
 							}
 						}
 					],
-					"sid": 113393662286539
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+					"sid": 913539848596631,
+					"children": [
 						{
-							"id": "is-tag-playing",
-							"objectClass": "Audio",
-							"sid": 935609503569538,
-							"parameters": {
-								"tag": "\"main\""
-							},
-							"isInverted": true
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 299470589355672,
-							"parameters": {
-								"variable": "Tutorial_Enabled"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 506863703599303,
-							"parameters": {
-								"seconds": "0.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 162010478679879,
-							"parameters": {
-								"audio-file": {
-									"path": "In Game/Level 1/9 - Chaos's Lullaby (Loop)"
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 506565854922259,
+									"parameters": {
+										"variable": "Tutorial_Enabled"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 430211464609619,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
 								},
-								"loop": "looping",
-								"volume": "-12",
-								"stereo-pan": "0",
-								"tag-optional": "\"main\""
-							}
-						}
-					],
-					"sid": 913539848596631
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-tag-playing",
-							"objectClass": "Audio",
-							"sid": 226088093946038,
-							"parameters": {
-								"tag": "\"story\""
-							},
-							"isInverted": true
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 801490336926938,
+									"parameters": {
+										"audio-file": {
+											"path": "In Game/Level 1/9 - Chaos's Lullaby (Loop)"
+										},
+										"loop": "looping",
+										"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								}
+							],
+							"sid": 884119935536854
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 996130379217179,
-							"parameters": {
-								"variable": "Tutorial_Enabled"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 768256794381084,
-							"parameters": {
-								"seconds": "0.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 681832344516956,
-							"parameters": {
-								"audio-file": {
-									"path": "In Game/Story Tutorial/11 - Cryptic Enchantment"
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 166921195926488,
+									"parameters": {
+										"variable": "Tutorial_Enabled"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 564510278932589,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
 								},
-								"loop": "looping",
-								"volume": "-11",
-								"stereo-pan": "0",
-								"tag-optional": "\"story\""
-							}
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 131564671377465,
+									"parameters": {
+										"audio-file": {
+											"path": "In Game/Story Tutorial/11 - Cryptic Enchantment"
+										},
+										"loop": "looping",
+										"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								}
+							],
+							"sid": 408754101436150
 						}
-					],
-					"sid": 802474593587111
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-tag-playing",
-							"objectClass": "Audio",
-							"sid": 949301208420960,
-							"parameters": {
-								"tag": "\"story\""
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 380074555909154,
-							"parameters": {
-								"variable": "Tutorial_Enabled"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "fade-volume",
-							"objectClass": "Audio",
-							"sid": 349937696897318,
-							"parameters": {
-								"tag": "\"story\"",
-								"db": "-100",
-								"duration": "0.5",
-								"ending": "stop"
-							}
-						}
-					],
-					"sid": 658520330281699
+					]
 				},
 				{
 					"eventType": "comment",
@@ -1114,13 +1062,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 699062054747582,
+											"sid": 856057438760673,
 											"parameters": {
 												"audio-file": {
 													"path": "flipcard-91468"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -1464,13 +1412,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 860950849294037,
+											"sid": 601513081623112,
 											"parameters": {
 												"audio-file": {
 													"path": "flipcard-91468"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -1683,13 +1631,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 967320315891979,
+															"sid": 792187112526601,
 															"parameters": {
 																"audio-file": {
 																	"path": "flipcard-91468"
 																},
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -1862,13 +1810,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 289799689975505,
+															"sid": 980508253850295,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -1885,13 +1833,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 118213193638599,
+															"sid": 386589652830704,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -2091,13 +2039,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 233849167770240,
+															"sid": 593036202288204,
 															"parameters": {
 																"audio-file": {
 																	"path": "flipcard-91468"
 																},
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -2321,13 +2269,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 140197860926212,
+															"sid": 210795731453546,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -2344,13 +2292,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 697393658150276,
+															"sid": 326327682262180,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -2506,13 +2454,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 146493451306728,
+											"sid": 931865895433710,
 											"parameters": {
 												"audio-file": {
 													"path": "flipcard-91468"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -2680,13 +2628,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 462201988521256,
+											"sid": 558812081874257,
 											"parameters": {
 												"audio-file": {
 													"path": "flipcard-91468"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -2872,13 +2820,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 977248530413110,
+											"sid": 415746058200418,
 											"parameters": {
 												"audio-file": {
 													"path": "flipcard-91468"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -3076,13 +3024,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 223880816103269,
+															"sid": 837056178238478,
 															"parameters": {
 																"audio-file": {
 																	"path": "flipcard-91468"
 																},
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -3241,13 +3189,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 808375488418979,
+															"sid": 745774259957333,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -3264,13 +3212,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 179290660419791,
+															"sid": 562644080356119,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -3487,13 +3435,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 589234496747376,
+															"sid": 937833622237254,
 															"parameters": {
 																"audio-file": {
 																	"path": "flipcard-91468"
 																},
 																"loop": "not-looping",
-																"volume": "0",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -3704,13 +3652,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 788111407946300,
+															"sid": 312925670445964,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -3727,13 +3675,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 558634238179835,
+															"sid": 385777475248455,
 															"parameters": {
 																"audio-file": {
 																	"path": "494768__alderman2k__error"
 																},
 																"loop": "not-looping",
-																"volume": "-10",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -4217,13 +4165,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 252070525578988,
+											"sid": 592940986815054,
 											"parameters": {
 												"audio-file": {
 													"path": "494768__alderman2k__error"
 												},
 												"loop": "not-looping",
-												"volume": "-10",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -4240,13 +4188,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 523204239911332,
+											"sid": 903454954907608,
 											"parameters": {
 												"audio-file": {
 													"path": "494768__alderman2k__error"
 												},
 												"loop": "not-looping",
-												"volume": "-10",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -4545,13 +4493,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 470669399512504,
+											"sid": 160391069043330,
 											"parameters": {
 												"audio-file": {
 													"path": "494768__alderman2k__error"
 												},
 												"loop": "not-looping",
-												"volume": "-10",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -4568,13 +4516,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 147771867454463,
+											"sid": 247871441415292,
 											"parameters": {
 												"audio-file": {
 													"path": "494768__alderman2k__error"
 												},
 												"loop": "not-looping",
-												"volume": "-10",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -6200,13 +6148,13 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 679610307953948,
+							"sid": 844987558878677,
 							"parameters": {
 								"audio-file": {
 									"path": "flipcard-91468"
 								},
 								"loop": "not-looping",
-								"volume": "0",
+								"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -7757,13 +7705,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 162920651245669,
+											"sid": 564992152934881,
 											"parameters": {
 												"audio-file": {
 													"path": "shield_sfx"
 												},
 												"loop": "not-looping",
-												"volume": "MuteAll = 0 ?-9 : -100",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -7864,13 +7812,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 136497416788038,
+											"sid": 644601470622742,
 											"parameters": {
 												"audio-file": {
 													"path": "shield_sfx"
 												},
 												"loop": "not-looping",
-												"volume": "MuteAll = 0 ?-9 : -100",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -8235,13 +8183,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 148102149303717,
+															"sid": 352600400835394,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -8444,13 +8392,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 220595732138064,
+															"sid": 552726607352558,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -8831,13 +8779,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 302743860636190,
+															"sid": 110249852119415,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -9018,13 +8966,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 351367197596349,
+															"sid": 101118598858369,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -9262,13 +9210,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 700971836536976,
+															"sid": 269053111536695,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -9459,13 +9407,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 529841707145220,
+															"sid": 420687798145615,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -9800,13 +9748,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 819348563870100,
+															"sid": 162522165931845,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -10118,13 +10066,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 239688151243853,
+															"sid": 388366712607771,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -11235,13 +11183,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 340473420701039,
+															"sid": 692017126011294,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -11427,13 +11375,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 223800287386930,
+															"sid": 532530541461811,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -11545,13 +11493,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 209848154976770,
+															"sid": 630509642170179,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
 																},
 																"loop": "not-looping",
-																"volume": "-5",
+																"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -16540,13 +16488,13 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 942843383265577,
+							"sid": 682077639338598,
 							"parameters": {
 								"audio-file": {
 									"path": "bell"
 								},
 								"loop": "not-looping",
-								"volume": "-15",
+								"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.30 ) : - 100",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -16563,13 +16511,13 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 721791577432481,
+							"sid": 644004099415923,
 							"parameters": {
 								"audio-file": {
 									"path": "bell"
 								},
 								"loop": "not-looping",
-								"volume": "-15",
+								"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.30 ) : - 100",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -33426,22 +33374,43 @@
 													}
 												},
 												{
-													"callFunction": "Draw_Number",
-													"sid": 882426976796391,
-													"parameters": [
-														"2",
-														true,
-														"0",
-														false
-													]
+													"id": "set-boolean-instvar",
+													"objectClass": "Table_CPU",
+													"sid": 457422494784981,
+													"parameters": {
+														"instance-variable": "Next_Hidden",
+														"value": "true"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 459225449471997,
+													"parameters": {
+														"object-to-create": "Icon_Hidden_Card",
+														"layer": "\"Game\"",
+														"x": "1472",
+														"y": "707",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
 												},
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 568787145164335,
+													"sid": 374965479047438,
 													"parameters": {
 														"seconds": "1",
 														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-active",
+													"objectClass": "Icon_Hidden_Card",
+													"sid": 162416071829960,
+													"behaviorType": "Sine",
+													"parameters": {
+														"state": "inactive"
 													}
 												},
 												{
@@ -34357,9 +34326,9 @@
 														{
 															"id": "fade-volume",
 															"objectClass": "Audio",
-															"sid": 930807025927037,
+															"sid": 375938200328705,
 															"parameters": {
-																"tag": "\"main\"",
+																"tag": "\"music\"",
 																"db": "-100",
 																"duration": "0.5",
 																"ending": "stop"
@@ -34377,15 +34346,15 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 597877464906086,
+															"sid": 424095497878991,
 															"parameters": {
 																"audio-file": {
 																	"path": "In Game/Level 2/7 - Malevolent Melancholy (Loop)"
 																},
 																"loop": "looping",
-																"volume": "-12",
+																"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 																"stereo-pan": "0",
-																"tag-optional": "\"main\""
+																"tag-optional": "\"music\""
 															}
 														}
 													],
@@ -34732,9 +34701,9 @@
 														{
 															"id": "fade-volume",
 															"objectClass": "Audio",
-															"sid": 265921711837257,
+															"sid": 241696042950303,
 															"parameters": {
-																"tag": "\"main\"",
+																"tag": "\"music\"",
 																"db": "-100",
 																"duration": "0.5",
 																"ending": "stop"
@@ -34752,15 +34721,15 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 160067458942197,
+															"sid": 786376149022151,
 															"parameters": {
 																"audio-file": {
 																	"path": "In Game/Level 3/6 - Mystic Veil of Despair (Loop)"
 																},
 																"loop": "looping",
-																"volume": "-12",
+																"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 																"stereo-pan": "0",
-																"tag-optional": "\"main\""
+																"tag-optional": "\"music\""
 															}
 														}
 													],
@@ -34788,9 +34757,9 @@
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 391758322073324,
+																	"sid": 183605675001361,
 																	"parameters": {
-																		"seconds": "7",
+																		"seconds": "7 - Opt_FastMode",
 																		"use-timescale": true
 																	}
 																},
@@ -35007,6 +34976,17 @@
 															"conditions": [],
 															"actions": [
 																{
+																	"id": "fade-volume",
+																	"objectClass": "Audio",
+																	"sid": 655330957318410,
+																	"parameters": {
+																		"tag": "\"music\"",
+																		"db": "-100",
+																		"duration": "0.5",
+																		"ending": "stop"
+																	}
+																},
+																{
 																	"id": "wait",
 																	"objectClass": "System",
 																	"sid": 154782981060053,
@@ -35018,15 +34998,15 @@
 																{
 																	"id": "play",
 																	"objectClass": "Audio",
-																	"sid": 868440977780395,
+																	"sid": 762149014492328,
 																	"parameters": {
 																		"audio-file": {
 																			"path": "In Game/Boss/1 - Cursed Shadows (Loop)"
 																		},
 																		"loop": "looping",
-																		"volume": "-12",
+																		"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 																		"stereo-pan": "0",
-																		"tag-optional": "\"main\""
+																		"tag-optional": "\"music\""
 																	}
 																}
 															],
@@ -35143,6 +35123,17 @@
 															"conditions": [],
 															"actions": [
 																{
+																	"id": "fade-volume",
+																	"objectClass": "Audio",
+																	"sid": 544087220938142,
+																	"parameters": {
+																		"tag": "\"music\"",
+																		"db": "-100",
+																		"duration": "0.5",
+																		"ending": "stop"
+																	}
+																},
+																{
 																	"id": "wait",
 																	"objectClass": "System",
 																	"sid": 702178926021873,
@@ -35154,15 +35145,15 @@
 																{
 																	"id": "play",
 																	"objectClass": "Audio",
-																	"sid": 583777638937305,
+																	"sid": 769468334226105,
 																	"parameters": {
 																		"audio-file": {
 																			"path": "In Game/Boss/12 - Soulbound Desolationt (Loop)"
 																		},
 																		"loop": "looping",
-																		"volume": "-12",
+																		"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 																		"stereo-pan": "0",
-																		"tag-optional": "\"main\""
+																		"tag-optional": "\"music\""
 																	}
 																}
 															],
@@ -35210,24 +35201,6 @@
 															"sid": 276911652670616
 														}
 													]
-												},
-												{
-													"eventType": "block",
-													"conditions": [],
-													"actions": [
-														{
-															"id": "fade-volume",
-															"objectClass": "Audio",
-															"sid": 552874657256029,
-															"parameters": {
-																"tag": "\"main\"",
-																"db": "-100",
-																"duration": "0.5",
-																"ending": "stop"
-															}
-														}
-													],
-													"sid": 701514301627366
 												}
 											]
 										}

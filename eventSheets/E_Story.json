@@ -34,15 +34,15 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 457834218138554,
+					"sid": 531329179976351,
 					"parameters": {
 						"audio-file": {
 							"path": "In Game/Story Tutorial/11 - Cryptic Enchantment"
 						},
 						"loop": "looping",
-						"volume": "-11",
+						"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 						"stereo-pan": "0",
-						"tag-optional": "\"story\""
+						"tag-optional": "\"music\""
 					}
 				},
 				{

@@ -85,7 +85,7 @@
 			"eventType": "variable",
 			"name": "Vol_Mus",
 			"type": "number",
-			"initialValue": "60",
+			"initialValue": "75",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -95,7 +95,7 @@
 			"eventType": "variable",
 			"name": "Vol_Sfx",
 			"type": "number",
-			"initialValue": "60",
+			"initialValue": "75",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -261,6 +261,38 @@
 					"parameters": {
 						"variable": "Relic_Card13",
 						"value": "false"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "volume_bar_Mus_drag",
+					"sid": 388931245803327,
+					"parameters": {
+						"x": "853 + (Vol_Mus/ 100) * (1288 - 853)"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "volume_bar_Mus_content",
+					"sid": 400862900981432,
+					"parameters": {
+						"width": "distance(volume_bar_Mus_content.X, volume_bar_Mus_content.Y, volume_bar_Mus_drag.X, volume_bar_Mus_drag.Y) - 24"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "volume_bar_Vol_drag",
+					"sid": 327532223608922,
+					"parameters": {
+						"x": "853 + (Vol_Sfx/ 100) * (1288 - 853)"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "volume_bar_Vol_content",
+					"sid": 383946073381560,
+					"parameters": {
+						"width": "distance(volume_bar_Vol_content.X, volume_bar_Vol_content.Y, volume_bar_Vol_drag.X, volume_bar_Vol_drag.Y) - 24"
 					}
 				}
 			],
@@ -2598,6 +2630,31 @@
 								}
 							],
 							"sid": 358743898254715
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 761849257717667,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-volume",
+									"objectClass": "Audio",
+									"sid": 759037378173416,
+									"parameters": {
+										"tag": "\"music\"",
+										"db": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4) : -100"
+									}
+								}
+							],
+							"sid": 177208137652310
 						}
 					]
 				},
@@ -2702,6 +2759,31 @@
 								}
 							],
 							"sid": 660750455516269
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 815667837409049,
+									"parameters": {
+										"seconds": "0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-volume",
+									"objectClass": "Audio",
+									"sid": 115205546163364,
+									"parameters": {
+										"tag": "\"music\"",
+										"db": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4) : -100"
+									}
+								}
+							],
+							"sid": 304575645335667
 						}
 					]
 				},

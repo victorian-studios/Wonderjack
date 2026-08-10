@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 49500,
+	"savedWithRelease": 49502,
 	"name": "GameJamPlus (2025)",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -108,6 +108,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "shadowlight",
+			"name": "Shadow light",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "video",
 			"name": "Video",
 			"author": "Scirra",
@@ -173,6 +180,13 @@
 			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "replacecolor",
+			"name": "Replace color",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -305,7 +319,13 @@
 			"Scroll_Art_Gallery",
 			"Text_Art_Comment",
 			"Gallery_Arts_Medium",
-			"degrade"
+			"degrade",
+			"TiledBackground",
+			"Effect_Smoke",
+			"ShadowLight",
+			"Sprite",
+			"demo_end",
+			"back_button_outline_sem_texto"
 		],
 		"subfolders": []
 	},
@@ -327,7 +347,8 @@
 			"Credits",
 			"Menu",
 			"Intro",
-			"Story"
+			"Story",
+			"Demo_End"
 		],
 		"subfolders": []
 	},
@@ -339,7 +360,8 @@
 			"E_Credits",
 			"Test",
 			"E Intro",
-			"E_Story"
+			"E_Story",
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},

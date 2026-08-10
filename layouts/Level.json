@@ -3577,6 +3577,41 @@
 					"global": false
 				},
 				{
+					"name": "ESCURO",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [],
+					"sid": 115879022858701,
+					"effectTypes": [],
+					"isInitiallyVisible": false,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0,
+						0,
+						0,
+						1
+					],
+					"isTransparent": false,
+					"sampling": "auto",
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "screen",
+					"zElevation": 0,
+					"global": false
+				},
+				{
 					"name": "Pause",
 					"overriden": 0,
 					"subLayers": [
@@ -5181,52 +5216,36 @@
 			],
 			"instances": [
 				{
-					"type": "Txt_debug",
+					"type": "degrade",
 					"properties": {
-						"text": "? + 99\n-----\n99",
-						"enable-bbcode": true,
-						"font": "AliceInWonderland",
-						"size": 45,
-						"line-height": -20,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": false,
-						"origin": "top-left",
-						"read-aloud": false
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 89,
-					"sid": 944803006164074,
+					"uid": 301,
+					"sid": 241261181120858,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 20,
-						"y": 898,
-						"width": 184,
-						"height": 164,
-						"originX": 0,
-						"originY": 0,
+						"x": 960,
+						"y": 12,
+						"width": 1920,
+						"height": 120,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							1
+							0.5
 						],
 						"z": 0,
-						"angle": 0
+						"angle": 3.141592653589793
 					}
 				},
 				{
@@ -5266,6 +5285,88 @@
 						"y": -4,
 						"width": 1434,
 						"height": 82,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "degrade",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 300,
+					"sid": 580259012446529,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 960,
+						"y": 1075,
+						"width": 1920,
+						"height": 120,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Txt_debug",
+					"properties": {
+						"text": "? + 99\n-----\n99",
+						"enable-bbcode": true,
+						"font": "AliceInWonderland",
+						"size": 45,
+						"line-height": -20,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 89,
+					"sid": 944803006164074,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 20,
+						"y": 898,
+						"width": 184,
+						"height": 164,
 						"originX": 0,
 						"originY": 0,
 						"color": [
