@@ -1,0 +1,445 @@
+{
+	"locale": "pt-BR",
+	"strings": {
+        "menu": {
+            "btn_play": "Jogar",
+            "btn_options": "Opções",
+            "btn_extras": "Extras",
+            "btn_exit": "Sair",
+            "btn_match": "Partida",
+            "btn_tutorial": "Tutorial",
+            "btn_custom": "Customizada",
+            "btn_codex": "Codex",
+            "btn_gallery": "Galeria",
+            "btn_credits": "Créditos",
+            "btn_back": "Voltar",
+            "codex": {
+                "name": "O Codex",
+                "info_lock": "???",
+                "enemies": {
+                    "title": "Oponentes",
+                    "White Queen": {
+                        "name": "Rainha Branca",
+                        "mind": "Cautelosa",
+                        "stage": "Tutorial",
+                        "special": "Nenhum",
+                        "desc": "..."
+                    },
+                    "Mad Hatter": {
+                        "name": "Chapeleiro Maluco",
+                        "mind": "Cauteloso",
+                        "stage": "Nível 1",
+                        "special": "Começa a partida com uma carta de número aleatória.",
+                        "desc": "..."
+                    },
+                    "March Hare": {
+                        "name": "Lebre de Março",
+                        "mind": "Cautelosa",
+                        "stage": "Nível 1",
+                        "special": "Começa a partida com uma carta de poder aleatória.",
+                        "desc": "..."
+                    },
+                    "Cheshire Cat": {
+                        "name": "Gato de Cheshire",
+                        "mind": "Cauteloso",
+                        "stage": "Nível 2",
+                        "special": "Desaparece aleatoriamente, fazendo com que todas suas cartas de número fiquem ocultas por 1 turno.",
+                        "desc": "..."
+                    },
+                    "Caterpillar": {
+                        "name": "Lagarta",
+                        "mind": "Cautelosa",
+                        "stage": "Nível 2",
+                        "special": "Cria aletoriamente uma nuvem de fumaça sobre as cartas do jogador por um turno.",
+                        "desc": "..."
+                    },
+                    "The Tweedles": {
+                        "name": "Os Tweedles",
+                        "mind": "Cautelosos",
+                        "stage": "Stage 3",
+                        "special": "Every 2 turns they switch places, changing the main strategy.",
+                        "desc": "..."
+                    },
+                    "Humpty Dumpty": {
+                        "name": "Humpty Dumpty",
+                        "mind": "Cautious",
+                        "stage": "Stage 3",
+                        "special": "Starts every round with protection for 3 turns.",
+                        "desc": "..."
+                    },
+                    "Dodo": {
+                        "name": "Dodo",
+                        "mind": "Cautious",
+                        "stage": "Secret",
+                        "special": "Randomly gives the first number card for the player.",
+                        "desc": "..."
+                    },
+                    "Red Queen": {
+                        "name": "Red Queen",
+                        "mind": "Cautious",
+                        "stage": "Stage 4",
+                        "special": "Randomly removes 1 number card from the player for the rest of the round.",
+                        "desc": "..."
+                    },
+                    "Jabberwock": {
+                        "name": "Jabberwock",
+                        "mind": "Cautious",
+                        "stage": "Stage 4",
+                        "special": "Starts the match with a special candlestick contaning 5 candles.",
+                        "desc": "..."
+                    }
+                },
+                "powers": {
+                    "title": "Power Cards"
+                },
+                "relics": {
+                    "title": "Relics"
+                }
+            },
+            "art_gallery": {
+                "tittle_default": "Waiting...",
+                "desc_default": "Waiting...",
+                "art_0": {
+                    "title": "Bunny",
+                    "desc": "A possible bunny for Alice."
+                },
+                "art_1": {
+                    "title": "Alice Sketch",
+                    "desc": "The first sketch art from Alice."
+                },
+                "art_2": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_3": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_4": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_5": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_6": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_7": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_8": {
+                    "title": "",
+                    "desc": ""
+                },
+                "art_9": {
+                    "title": "Old Story Page 5",
+                    "desc": "The fifth page from the story."
+                }
+            }
+        },
+        "credits": {
+            "name_1": "Ana Barata\nArtista",
+            "name_2": "Vitor Cirilo\nProgramador",
+            "name_3": "Ana Luiza\nArtista",
+            "bye": "Obrigada por jogar nosso jogo!"
+        },
+        "story": {
+            "page_1" : "Alice estava deitada em uma árvore, tentando jogar cartas com sua gatinha Dinah.\n\n'Bem,' Alice pensou entediada, 'jogar sozinha não é mais tão divertido.'\n\nEla via a gata usando suas patinhas para brincar com o baralho de cartas.\n\n'Eu queria algo novo, diferente e... alguém imprevisível' ela disse em voz alta.",
+            "page_2" : "A brisa gentil logo fez Alice ficar sonolenta. Suas pálpebras ficaram pesadas até que, antes que percebesse, já estava caindo em um sono profundo.\n\n...\n\n'Alice? Alice?'\n\nUma voz familiar ecoou próxima. Devagar, Alice abriu seus olhos.\n\nEla olhou em volta confusa. Paredes de pedra a rodeavam e um longo túnel se estendia à frente.\n\n'...Uma toca de coelho?'",
+            "page_3" : "'Como eu cheguei até aqui? Onde está Dinah?' Alice perguntou.\n\nA Rainha Branca apressou-se em direção a ela, quase tropeçando em seu próprio vestido.\n\n'Oh, Estou tão aliviada que eu te encontrei!'\n\n'Rainha Branca? O que está acontecendo?'\n\n'Eu vim com um convite muito importante... da Rainha de Copas'\n\nAlice paralisou.\n\n'A Rainha de Copas? Agora ISSO sim parace imprevisível.'",
+            "page_4" : "A Rainha Branca olhou apreensiva para Alice.\n\n'Ela insiste que todo mundo do País das Maravilhas participe de um torneio de cartas.'\n\n'Espere, um torneio de cartas?' Alice perguntou.\n\n'Sim! Ela ficou cansada de jogar cricket...' A Rainha sussurrou.\n\nEla forçou um sorriso.\n\n'Se você recusar... ela vai me culpar por falhar em entregar o convite.'",
+            "page_5" : "Alice sorriu enquanto seus olhos citilavam com tanto entusiasmo.\n\n'Isso é exatamente o que eu estava esperando. Conta comigo!'\n\nA Rainha Branca suspirou de alívio.\n\n'Maravilha! E antes que você vá... a Rainha tem se tornado cada vez mais impiedosa ultimamente.'\n\n[b]'Você gostaria de jogar comigo para que eu possa te ensinar?'[/b]",
+            "btn_yes": "SIM",
+            "btn_no": "NÃO"
+        },
+        "tutorial": {
+            "page_1": "[u][b]Capítulo 1[/b][/u]\n\n[b]O Objetivo[/b]\n\nO objetivo do jogo é ganhar duas rodadas chegando a 21 ou o mais perto possível com as cartas numéricas somadas.",
+            "page_2": "[u][b]Capítulo 2[/b][/u]\n\n[b]O Turno[/b]\n\nNo seu turno, você pode comprar uma carta numérica ou comprar/jogar uma Carta de Poder, que te garante habilidades durante as partidas.",
+            "page_3": "[u][b]Capítulo 3[/b][/u]\n\n[b]As Relíquias[/b]\n\nQuando a pertida terminar, você escolhe uma relíquia que vai te ajudar passivamente no decorrer do jogo.",
+            "page_4": "[u][b]Capítulo 4[/b][/u]\n\n[b]O Perdedor[/b]\n\nVocê perde a rodada se o valor total das suas cartas somadas exceder em 21, ou se seu oponente obter uma soma maior que a sua.",
+            "page_5": "[u][b]Capítulo 5[/b][/u]\n\n[b]O Empate[/b]\n\nQuando tem um empate ou ambos os jogadores excedem 21, ninguém pontua e uma nova rodada começa.",
+            "white_queen": {
+                "1": "Então Alice, esse jogo é uma versão diferente do clássico ''21'' ou blackjack.",
+                "2": "O objetivo é o mesmo, tentar chegar a [b]21[/b] comprando cartas do baralho [color=#005eff]azul[/color] a sua direita.",
+                "3": "Mas não se preocupe tanto se não chegar exatamente a [b]21[/b]. É difícil, já que você não sabe o próximo número que vai comprar do baralho.",
+                "4": "Apenas evite de exceder [b]21[/b], ou você perderá a rodada. O baralho [color=#005eff]azul[/color] contém [b]12[/b] cartas de [b]1 até 12[/b].",
+                "5": "Em Wonderjack todos começam uma nova rodada comprando uma carta oculta [b]primeiro[/b]. Somente o dono dela consegue ver seu número enquanto o oponente só pode adivinhar.",
+                "6": "Para ver a sua carta oculta, passe o mouse em cima dela.",
+                "7": "No seu turno, você tem apenas 4 ações possíveis: [b]comprar um número[/b], [b]parar[/b], [b]comprar um poder[/b] ou [b]jogar um poder[/b].",
+                "8": "Para comprar um número, clique no baralho [color=#005eff]azul[/color]. Isso faz com que você compre a primeira carta do baralho.",
+                "9": "Para parar, clique no sino. Isso faz com que você finalize a rodada e o oponente pode fazer apenas uma ação antes dos números serem contabilizados.",
+                "10": "Quando uma rodada finaliza, todas as cartas de número ocultas são reveladas e os números são contabilizados para ver quem chegou a [b]21[/b] ou o mais próximo disso. Se todos os jogadores ultrapassarem 21, ninguém ganha a rodada.",
+                "11": "Para a primeira rodada, vamos ignorar o baralho da esquerda a fim de simplificarmos a explicação.",
+                "12": "Agora, vamos jogar!",
+                "13": "Bem, eu não vou comprar mais cartas. Então vou parar!",
+                "14": "Fantástico! Você ganhou sua primeira rodada Alice.",
+                "15": "Quando você ganha uma rodada, uma chama [color=#005eff]azul[/color] se acenderá no castiçal.",
+                "16": "Mas se o seu oponente ganhar, uma chama [color=#ff0000]vermelha[/color] se acenderá.",
+                "17": "O primeiro que ganhar duas rodadas será o vencedor da partida!",
+                "18": "Agora vamos focar no baralho especial a sua esquerda e usar algumas cartas de [color=#ffff00]poder[/color] desta vez.",
+                "19": "No seu turno, você também pode [b]comprar[/b] ou [b]jogar[/b] uma carta de poder que já está na sua mão.",
+                "20": "Para comprar uma, apenas clique no baralho [color=#ffff00]amarelo[/color] a sua esquerda. E para jogá-la, passe seu mouse sobre ela e arraste em direção a tela.",
+                "21": "Por padrão, cada jogar só pode comprar duas cartas de poder por rodada.",
+                "22": "Sem falar que você pode ter duas cartas de poder em sua mão ao mesmo tempo.",
+                "23": "Essas cartas permanecem com você entre as rodadas, enão use-as sabiamente!",
+                "24": "Apenas lembre-se que eu posso fazer o mesmo. *pisca*",
+                "25": "Então, vamos começar a segunda rodada.",
+                "26": "Não fique brava comigo Alice, mas eu preciso jogar este poder...",
+                "27": "Bem... Desta vez eu ganhei!",
+                "28": "Não se preocupe Alice, algumas vezes as cartas de poder não são de grande ajuda, mas mantê-las para a próxima rodada pode ser a melhor estratégia.",
+                "29": "Agora, esta é a última rodada desta partida. Faça o seu melhor!",
+                "30": "Oh! Parece que eu ganhei de novo.",
+                "31": "Normalmente quando isso acontece, você perde o jogo e teria que tentar de novo desde o começo.",
+                "32": "Mas já que eu estou te ensinando, acho que você está preparada para encontrar os outros e aprender com eles também.",
+                "33": "Olhe só, você ganhou esta partida!",
+                "34": "Mas não fique se achando, os outros lá fora tem diferentes estilos de jogo e são muito mais caóticos.",
+                "35": "De qualquer forma, eu acho que você está pronta para encontrar jogadores mais desafiadores...",
+                "36": "Além disso, depois de cada partida partida que você ganhar, terão recompensas especiais para você escolher.",
+                "37": "Eu não vou estragar a surpresa. Descubra por si mesma!",
+                "38": "Boa sorte Alice, Estou cruzando meus dedos por você.",
+                "block_stop": "Alice, compre mais cartas de número antes de tentar finalizar esta rodada.",
+                "tip_stop": "Se você está perto de chegar a [b]21[/b], é melhor você parar e evitar se arriscar. Pressione o sino para parar esta rodada.",
+                "tip_stop2": "Se a sua soma é 21 ou mais, é melhor não comprar mais cartas de número e parar esta rodada.",
+                "tip_power": "Pense de novo Alice, jogar este poder não seria muito inteligente."
+            }
+        },
+        "options": {
+            "title": "OPÇÕES",
+            "back": "voltar",
+            "menu": "menu",
+            "translation": {
+                "title": "Tradução"
+            },
+            "audio": {
+                "title": "Áudio",
+                "music": "Música",
+                "audio": "Áudio"
+            },
+            "video": {
+                "title": "Vídeo",
+                "opt_1": "Texto de Performance"
+            },
+            "gameplay": {
+                "title": "Jogabilidade",
+                "opt_1": "Soma automática dos números",
+                "opt_2": "Modo Rápido"
+                
+            },
+            "save": {
+                "title": "Apagar Salvamento"
+            }
+            
+        },
+        "common": {
+            "enemies" : {
+                "White Queen": {
+                    "name": "Rainha Branca",
+                    "talk_win": "",
+                    "talk_lose": "",
+                    "talk_thinking_1": "",
+                    "talk_thinking_2": ""
+                },
+                "Mad Hatter": {
+                    "name": "Chapeleiro Maluco",
+                    "talk_win": "Hum... louca que nem eu...",
+                    "talk_lose": "Eu tiro meu chapéu para você.",
+                    "talk_thinking_1": "Eu preciso terminar este jogo porque está quase na hora do chá!",
+                    "talk_thinking_2": "Eu adoraria lhe oferecer uma xícara de chá mas minhas mãos estão ocupadas.",
+                    "talk_thinking_3": "Qual a semelhança entre um corvo e uma escrivaninha? — Eu não tenho a menor ideia.",
+                    "special": "E se minha próxima carta estiver oculta?"
+                },
+                "March Hare": {
+                    "name": "Lebre de Março",
+                    "talk_win": "Já está de saída? Você nem tomou uma xícara de chá!",
+                    "talk_lose": "Bem, eu acho que a hora do chá acabou!",
+                    "talk_thinking_1": "Eu te ofereceria um pouco de vinho que eu tivesse...",
+                    "talk_thinking_2": "Tenho cartas interessantes... quer ver? haha!",
+                    "special": "Por que está olhando para mim?"
+                },
+                "Cheshire Cat": {
+                    "name": "Gato de Cheshire",
+                    "talk_win": "Que pena... Você está indo a algum lugar?",
+                    "talk_lose": "Parece que você encontrou a direção que precisava ir...",
+                    "talk_thinking_1": "Lembre-se... todos nós somos loucos aqui. Eu sou louco. Você é louca",
+                    "talk_thinking_2": "Se precisar sair... posso te indicar uma direção...",
+                    "special": "Não consegue me ver?"
+                },
+                "Caterpillar": {
+                    "name": "Lagarta",
+                    "talk_win": "Parece que você não mudou nada...",
+                    "talk_lose": "Quem... é... você?",
+                    "talk_thinking_1": "Mantenha a calma.",
+                    "talk_thinking_2": "Cof-cof, tenho boas opões, e você?",
+                    "special": "Nossa, a fumaça está por toda a parte..."
+                },
+                "Humpty Dumpty": {
+                    "name": "Humpty Dumpty",
+                    "talk_win": "Alice... que nomes estúpido! Deve significar “perdedora,” haha!",
+                    "talk_lose": "Minha casca... está quebrada.",
+                    "talk_thinking_1": "Você se acha o máximo me chamando de ovo, huh? Aguarde!",
+                    "talk_thinking_2": "",
+                    "special": "Ignore as rachaduras, minha casca ainda é resistente."
+                },
+                "The Tweedles": {
+                    "name": "Os Tweedles",
+                    "talk_win": "Nós, os irmãos TWEEDLE, ganhamos de novo!",
+                    "talk_lose": "Você ganhou. Não temos objeções. Pelo contrário.",
+                    "talk_thinking_1": "Hey irmão, essa carta é minha!",
+                    "talk_thinking_2": "",
+                    "special": "Meu turno! Sai fora!"
+                },
+                "Dodo": {
+                    "name": "Dodô",
+                    "talk_win": "Onde está meu prêmio?",
+                    "talk_lose": "I lost... You can keep the prize then...",
+                    "talk_thinking_1": "So many options...",
+                    "talk_thinking_2": "",
+                    "special": "Do you want a prize?"
+                },
+                "Red Queen": {
+                    "name": "Rainha de Copas",
+                    "talk_win": "Off with her head!",
+                    "talk_lose": "You may have won this battle... But you won’t win the war...",
+                    "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
+                    "talk_thinking_2": "",
+                    "special": "I'm gonna slice this card!"
+                },
+                "Jabberwock": {
+                    "name": "Jaguadarte",
+                    "talk_win": "Finally, I’ll be able to sharpen my fangs a little!",
+                    "talk_lose": "Arghhh!!! How dare you?!",
+                    "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
+                    "talk_thinking_2": "",
+                    "special": "Alice! Best of five? What do you think?"
+                }
+            },
+            "bell": "[u]O Sino[/u]: \n\nToque o sino para terminar seu turno. E então, seu oponente pode [color=#fa1c03]jogar apenas uma vez[/color] antes da rodada terminar. Nada acontece se for usado no último turno.",
+            "power": "[u]O Baralho de Poder[/u]: \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão. Você pode comprar [color=#f5fe05]{0}[/color] cartas nessa rodada.",
+            "power_hand_limit": "[u]O Baralho de Poder[/u]: \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão. Você [color=#fa1c03]não pode comprar cartas de poder[/color] por conta do limite da sua mão ([color=#f5fe05]{0}[/color] cartas).",
+            "number" : "[u]O Baralho de Número[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.",
+            "number_easy" : "[u]O Baralho de Número[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa. Tem [color=#f5fe05]{0}[/color] cartas restantes neste baralho.",
+            "tut_start": "Toca do Coelho",
+            "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]. {3} [color=#f5fe05]ganhou[/color] esta rodada!",
+            "player_turn": "Turno da Alice",
+            "enemy_turn": "Turno do(a) {0}",
+            "points": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]",
+            "new_round": "Rodada [color=#f5fe05]{0}[/color] começa agora!",
+            "new_match": "Um novo oponente aparece: [color=#f5fe05]{0}[/color]",
+            "new_boss": "Um novo chefão aparece: [color=#fa1c03]{0}[/color]",
+            "tie": "Ninguém ganhou esta rordada.",
+            "looser": "Você [color=#fa1c03]perdeu[/color] esta partida.. que pena.",
+            "winner": "Você [color=#f5fe05]ganhou[/color] esta partida. Continue assim!",
+            "end": "Você [color=#f5fe05]ganhou[/color] de todos os 4 oponentes! Parabéns!",
+            "revive": "Você conseguiu uma [color=#f5fe05]segunda chance[/color]! Mas sua relíquia foi destruída."
+        },
+		"relics": {
+            "card_13": {
+                "title": "Carta 13",
+                "flavor_txt": "Meu número da sorte!",
+                "desc": "Adiciona permanentemente a carta [color=#f5fe05]13[/color] ao baralho de [color=#005eff]número[/color]."
+            },
+            "cat_eye": {
+                "title": "Olho do Gato",
+                "flavor_txt": "Sorria!",
+                "desc": "Na [color=#f5fe05]terceira rodada[/color], a carta oculta do seu oponente será revelada no [color=#f5fe05]primeiro turno[/color]."
+            },
+            "watch": {
+                "title": "Relógio de Bolso",
+                "flavor_txt": "Tarde Demais!",
+                "desc":"[color=#f5fe05]Clique com o botão direito do mouse[/color] nesta relíquia para devolver a última carta de [color=#005eff]número[/color] para o fim do baralho (uma vez por partida). [color=#fa1c03]Mas reduza o limite da sua mão para cartas de poder em 1[/color]."
+            },
+            "eat_me": {
+                "title": "Bolo",
+                "flavor_txt": "Coma-me.",
+                "desc":"Aumente o limite da sua mão para cartas de poder em [color=#f5fe05]1[/color]."
+                
+            },
+            "crown": {
+                "title": "Coroa da Rainha",
+                "flavor_txt": "Cortem as cabeças!",
+                "desc":"Quando você [color=#fa1c03]perder uma partida[/color], essa relíquia se quebra e você pode [color=#f5fe05]tentar de novo[/color]."
+            },
+            "spear": {
+                "title": "Lança de Coração",
+                "flavor_txt": "Intruso!",
+                "desc":"Reduz o limite da mão para cartas de poder do seu oponente em [color=#f5fe05]1[/color]."
+            },
+            "tea": {
+                "title": "Xícara de Chá",
+                "flavor_txt": "Hora do Chá!",
+                "desc":"Depois de jogar uma carta de poder, ganhe um [color=#f5fe05]turno extra[/color] (uma vez por partida). [color=#fa1c03]Mas reduza o seu limite de compra para cartas de poder em 1[/color]."
+            },
+            "drink_me": {
+                "title": "Garrafa",
+                "flavor_txt": "Beba-me",
+                "desc":"Aumente a meta da partida para [color=#f5fe05]24[/color]."
+            },
+            "hat": {
+                "title": "Cartola Verde",
+                "flavor_txt": "Eu sou louco?",
+                "desc":"Se você comprar uma carta de [color=#005eff]número[/color] que exceda a meta, ela é [color=#f5fe05]devolvida[/color] e outra é comprada imediatamente (uma vez por partida)."
+            },
+            "key_1": {
+                "title": "Pedaço de Metal",
+                "flavor_txt": "???",
+                "desc":"Está faltando alguma coisa..."
+            },
+            "key_2": {
+                "title": "Pedaço de Metal",
+                "flavor_txt": "???",
+                "desc":"Ainda parece incompleto..."
+            },
+            "key_3": {
+                "title": "Pedaço de Metal",
+                "flavor_txt": "???",
+                "desc":"E se eu juntar todas as partes?"
+            },
+            "key": {
+                "title": "Key",
+                "flavor_txt": "Open Sesame!",
+                "desc":"Unlocks access to a [color=#f5fe05]secret[/color] stage."
+            },
+            "picnic": {
+                "title": "Picnic Basket",
+                "flavor_txt": "Snack Time!",
+                "desc": "Increases both your power hand and power draw limit by [color=#f5fe05]1[/color]"
+            },
+            "mussel": {
+                "title": "Mussel",
+                "flavor_txt": "What's Inside",
+                "desc": "At the start of a new round, see [color=#f5fe05]2[/color] [color=#005eff]number[/color] cards and choose [color=#f5fe05]1[/color] to draw."
+            },
+            "match": {
+                "title": "Match Box",
+                "flavor_txt": "Burn!",
+                "desc": "[color=#f5fe05]Right-click[/color] this relic to [color=#f5fe05]burn[/color] a random power from your opponent. {0} matches remaning."
+            }
+        },
+		"powers": {
+			"card": "[u]Carta {0}[/u]\n\n\nPegue a carta [color=#f5fe05]{0}[/color] caso tenha no baralho.",
+            "card_tip": "Esta carta não está no baralho...",
+            "protect": "[u]Proteção[/u]\n\n\nProteja-se de perder suas cartas de número por [color=#f5fe05]3[/color] turnos.",
+            "impulse": "[u]Impulso[/u]\n\n\nPegue a [color=#f5fe05]maior[/color] carta de número do baralho.",
+            "gift": "[u]Presente[/u]\n\n\nDê a [color=#f5fe05]maior[/color] carta de número para seu oponente.",
+            "return": "[u]Devolução[/u]\n\n\nDescarte a sua carta de número mais a direita se ela [color=#fa1c03]não estiver oculta[/color] para o fim do baralho.",
+            "compel": "[u]Obrigação[/u]\n\n\nObrigue o [color=#f5fe05]seu oponente[/color] a descartar a [color=#f5fe05]última[/color] carta de número para o fim do baralho.",
+            "exchange": "[u]Troca[/u]\n\n\nEscolha uma carta que [color=#fa1c03]não está oculta[/color] para trocar com o seu oponente.",
+            "exchange_tip_1": "[u]Selecione uma carta do oponente:[/u]",
+            "exchange_tip_2": "[u]Selecione uma carta para trocar:[/u]",
+            "secretexchange": "[u]Troca Secreta[/u]\n\n\nAmbos os jogadores trocam a sua carta [color=#f5fe05]mais a direita e oculta[/color] entre si.",
+            "menu": "[u]Menu[/u]\n\nVeja as próximas [color=#f5fe05]3[/color] cartas do baralho de número e escolha [color=#f5fe05]uma[/color] para comprar. E então, o baralho de número é [color=#fa1c03]embaralhado[/color].",
+            "menu_tip": "[u]Selecione uma carta para comprar:[/u]",
+            "hurricane": "[u]Furacão[/u]\n\nAmbos os jogadores descartam todas as suas cartas de número [color=#fa1c03]ignorando a primeira carta oculta[/color]. Não pode ser usada no último turno!",
+            "secret": "[u]Carta oculta[/u]\n\n\nA próxima carta de número que você comprar será [color=#f5fe05]oculta[/color] para o oponente.",
+            "clairvoyance" : "[u]Clarividência[/u]\n\n\nVeja as próximas [color=#f5fe05]duas[/color] cartas do baralho de número.",
+            "clairvoyance_player": "As próximas cartas de número são: [color=#f5fe05]{0}[/color] e [color=#f5fe05]{1}[/color]",
+            "clairvoyance_cpu": "{0} teve uma bela visão das próximas [color=#f5fe05]duas[/color] cartas..."
+            
+        },
+        "demo_end": "E aqui é o fim da demo!\n\nMas a aventura de Alice está longe de acabar...\n\nMais oponentes, nívels, relíquias, poderes e extras te esperam no jogo completo!"
+    }
+}
