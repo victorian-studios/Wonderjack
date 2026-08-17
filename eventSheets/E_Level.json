@@ -986,6 +986,13 @@
 							"initialValue": "false",
 							"comment": "avisar se a carta nao for encontrada",
 							"sid": 407305766545058
+						},
+						{
+							"name": "isPower",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "true - chamado pela carta de poder carta X",
+							"sid": 966304880944609
 						}
 					],
 					"eventType": "function-block",
@@ -2600,27 +2607,36 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "Carta oculta aleatória (secret)"
+									"text": "Carta oculta aleatória (buff do poder secret)"
 								},
 								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 106646188865938,
+											"parameters": {
+												"variable": "Specific",
+												"comparison": 0,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 960488734489872,
+											"parameters": {
+												"variable": "isPower"
+											},
+											"isInverted": true
+										},
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Table_CPU",
 											"sid": 882907980977219,
 											"parameters": {
 												"instance-variable": "Next_Hidden"
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 757711683346749,
-											"parameters": {
-												"variable": "Specific",
-												"comparison": 0,
-												"value": "0"
 											}
 										}
 									],
@@ -2938,7 +2954,7 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "Carta não oculta específica"
+									"text": "Carta não oculta específica (não importa se foi chamada por um poder)"
 								},
 								{
 									"eventType": "block",
@@ -2963,11 +2979,11 @@
 											"isInverted": true
 										},
 										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Table_CPU",
-											"sid": 470414800255185,
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 577203915341060,
 											"parameters": {
-												"instance-variable": "Next_Hidden"
+												"variable": "isPower"
 											},
 											"isInverted": true
 										}
@@ -3350,7 +3366,7 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "Carta oculta específica (secret + menu ou card x)"
+									"text": "Carta oculta específica (só permitido se não for chamada por um poder)"
 								},
 								{
 									"eventType": "block",
@@ -3371,6 +3387,15 @@
 											"sid": 876578983238145,
 											"parameters": {
 												"variable": "Hidden"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 103916378883618,
+											"parameters": {
+												"variable": "isPower"
 											},
 											"isInverted": true
 										},
@@ -5288,6 +5313,7 @@
 														"1",
 														false,
 														"0",
+														false,
 														false
 													]
 												},
@@ -7646,11 +7672,12 @@
 							"actions": [
 								{
 									"callFunction": "Draw_Number",
-									"sid": 900737088224478,
+									"sid": 701073240323430,
 									"parameters": [
 										"Who_Played",
 										false,
 										"int ( tokenat ( card_ID, 2, \"-\" ) )",
+										true,
 										true
 									]
 								}
@@ -7988,6 +8015,7 @@
 														"Who_Played",
 														false,
 														"high_value",
+														false,
 														false
 													]
 												},
@@ -8129,6 +8157,7 @@
 																		"2",
 																		false,
 																		"high_value",
+																		false,
 																		false
 																	]
 																},
@@ -8338,6 +8367,7 @@
 																		"1",
 																		false,
 																		"high_value",
+																		false,
 																		false
 																	]
 																},
@@ -10447,12 +10477,13 @@
 												},
 												{
 													"callFunction": "Draw_Number",
-													"sid": 737874204110827,
+													"sid": 738391281447666,
 													"parameters": [
 														"2",
 														false,
 														"Num1",
-														false
+														false,
+														true
 													]
 												},
 												{
@@ -10506,12 +10537,13 @@
 												},
 												{
 													"callFunction": "Draw_Number",
-													"sid": 143499131258323,
+													"sid": 582454989729639,
 													"parameters": [
 														"2",
 														false,
 														"Num2",
-														false
+														false,
+														true
 													]
 												},
 												{
@@ -10565,12 +10597,13 @@
 												},
 												{
 													"callFunction": "Draw_Number",
-													"sid": 450800402815163,
+													"sid": 306941326501414,
 													"parameters": [
 														"2",
 														false,
 														"Num3",
-														false
+														false,
+														true
 													]
 												},
 												{
@@ -10745,12 +10778,13 @@
 														},
 														{
 															"callFunction": "Draw_Number",
-															"sid": 958511970777686,
+															"sid": 164072777698097,
 															"parameters": [
 																"2",
 																false,
 																"min( A_Deck_Numb.At(0), A_Deck_Numb.At(1), A_Deck_Numb.At(2) )",
-																false
+																false,
+																true
 															]
 														},
 														{
@@ -10821,12 +10855,13 @@
 														},
 														{
 															"callFunction": "Draw_Number",
-															"sid": 510102949150892,
+															"sid": 393091571785831,
 															"parameters": [
 																"2",
 																false,
 																"max( Enemy_Menu.At(0), Enemy_Menu.At(1), Enemy_Menu.At(2) )",
-																false
+																false,
+																true
 															]
 														},
 														{
@@ -15006,12 +15041,13 @@
 								},
 								{
 									"callFunction": "Draw_Number",
-									"sid": 982682809787918,
+									"sid": 490999506739774,
 									"parameters": [
 										"1",
 										false,
 										"Icon_Card_Numb.myID",
-										false
+										false,
+										true
 									]
 								},
 								{
@@ -15414,6 +15450,10 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "TURN"
 				},
 				{
 					"functionName": "Change Turn",
@@ -16455,6 +16495,10 @@
 							"sid": 744225034434171
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "ROUND"
 				},
 				{
 					"functionName": "Finish Round",
@@ -18369,7 +18413,7 @@
 											"children": [
 												{
 													"eventType": "comment",
-													"text": "Special Power"
+													"text": "Special Power - Humpty Dumpty"
 												},
 												{
 													"eventType": "block",
@@ -19247,6 +19291,7 @@
 								"1",
 								true,
 								"0",
+								false,
 								false
 							]
 						},
@@ -19266,6 +19311,7 @@
 								"2",
 								true,
 								"0",
+								false,
 								false
 							]
 						},
@@ -22103,6 +22149,7 @@
 																"1",
 																false,
 																"0",
+																false,
 																false
 															]
 														},
@@ -22293,6 +22340,7 @@
 																"1",
 																false,
 																"0",
+																false,
 																false
 															]
 														},
@@ -22359,6 +22407,7 @@
 														"1",
 														false,
 														"0",
+														false,
 														false
 													]
 												}
@@ -25615,6 +25664,7 @@
 																						"2",
 																						false,
 																						"0",
+																						false,
 																						false
 																					]
 																				},
@@ -25990,6 +26040,7 @@
 																										"2",
 																										false,
 																										"0",
+																										false,
 																										false
 																									]
 																								},
@@ -26103,6 +26154,7 @@
 																												"2",
 																												false,
 																												"0",
+																												false,
 																												false
 																											]
 																										},
@@ -26177,6 +26229,7 @@
 																														"2",
 																														false,
 																														"0",
+																														false,
 																														false
 																													]
 																												},
@@ -26340,6 +26393,7 @@
 																														"2",
 																														false,
 																														"0",
+																														false,
 																														false
 																													]
 																												},
@@ -26445,6 +26499,7 @@
 																														"2",
 																														false,
 																														"0",
+																														false,
 																														false
 																													]
 																												},
@@ -26608,6 +26663,7 @@
 																														"2",
 																														false,
 																														"0",
+																														false,
 																														false
 																													]
 																												},
@@ -26713,6 +26769,7 @@
 																														"2",
 																														false,
 																														"0",
+																														false,
 																														false
 																													]
 																												},
@@ -26954,6 +27011,7 @@
 																														"2",
 																														false,
 																														"0",
+																														false,
 																														false
 																													]
 																												},
@@ -31783,6 +31841,7 @@
 										"2",
 										false,
 										"0",
+										false,
 										false
 									]
 								},
@@ -33347,7 +33406,7 @@
 									"children": [
 										{
 											"eventType": "comment",
-											"text": "Special Power"
+											"text": "Special Power - Mad Hatter"
 										},
 										{
 											"eventType": "block",
@@ -39459,6 +39518,7 @@
 														"1",
 														true,
 														"0",
+														false,
 														false
 													]
 												},
@@ -39478,6 +39538,7 @@
 														"2",
 														true,
 														"0",
+														false,
 														false
 													]
 												},
@@ -39893,6 +39954,7 @@
 														"1",
 														true,
 														"0",
+														false,
 														false
 													]
 												},
@@ -39912,6 +39974,7 @@
 														"2",
 														true,
 														"0",
+														false,
 														false
 													]
 												},
@@ -40188,6 +40251,7 @@
 														"1",
 														true,
 														"0",
+														false,
 														false
 													]
 												},
@@ -40207,6 +40271,7 @@
 														"2",
 														true,
 														"0",
+														false,
 														false
 													]
 												},

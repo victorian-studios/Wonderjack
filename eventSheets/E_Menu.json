@@ -183,12 +183,12 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "logo",
-							"sid": 453942866050925,
+							"sid": 663878867319446,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
 								"property": "offsetY",
-								"end-value": "225",
+								"end-value": "195",
 								"time": "0.5",
 								"ease": "default",
 								"destroy-on-complete": "no",
@@ -903,6 +903,15 @@
 									"parameters": {
 										"layer": "\"Main\"",
 										"interactive": false
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 506299588219388,
+									"parameters": {
+										"group-name": "\"Language\"",
+										"state": "activated"
 									}
 								}
 							],
@@ -4097,9 +4106,9 @@
 						{
 							"id": "set-y",
 							"objectClass": "Scroll_Bkg_Art",
-							"sid": 126821363432140,
+							"sid": 605071319764094,
 							"parameters": {
-								"y": "300 - Progress * (300 - (-1262))"
+								"y": "295 - Progress * (295 - (-1538))"
 							}
 						}
 					],
@@ -4126,18 +4135,18 @@
 						{
 							"id": "set-y",
 							"objectClass": "Scroll_Bkg_Art",
-							"sid": 175842774757394,
+							"sid": 842597995936977,
 							"parameters": {
-								"y": "clamp( Self.Y, -1262, 300)"
+								"y": "clamp( Self.Y, -1538, 295)"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 722136040686586,
+							"sid": 898576700668910,
 							"parameters": {
 								"variable": "Progress",
-								"value": "(300 - Scroll_Bkg_Art.Y) / 1562"
+								"value": "(295 - Scroll_Bkg_Art.Y) / 1833"
 							}
 						},
 						{
@@ -4157,10 +4166,10 @@
 								{
 									"id": "compare-y",
 									"objectClass": "Scroll_Bkg_Art",
-									"sid": 184132769135482,
+									"sid": 360130333124990,
 									"parameters": {
 										"comparison": 2,
-										"y-co-ordinate": "-1262"
+										"y-co-ordinate": "-1538"
 									}
 								}
 							],
@@ -4168,9 +4177,9 @@
 								{
 									"id": "set-y",
 									"objectClass": "Scroll_Bkg_Art",
-									"sid": 119245690134133,
+									"sid": 567955057547071,
 									"parameters": {
-										"y": "-1262"
+										"y": "-1538"
 									}
 								}
 							],

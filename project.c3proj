@@ -325,7 +325,8 @@
 			"ShadowLight",
 			"Sprite",
 			"demo_end",
-			"back_button_outline_sem_texto"
+			"back_button_outline_sem_texto",
+			"Options_Flag"
 		],
 		"subfolders": []
 	},
@@ -875,6 +876,14 @@
 					"name": "New Dictionary.json",
 					"type": "application/json",
 					"sid": 786761624885319,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "pt-BR.json",
+					"type": "application/json",
+					"sid": 842194742889057,
 					"file-info": {
 						"purpose": "none"
 					}

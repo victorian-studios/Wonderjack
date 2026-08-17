@@ -522,14 +522,14 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Btn_Story_No",
-							"sid": 338771719018557,
+							"sid": 948542225555273,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
 								"property": "scale",
 								"end-x": "1.25",
 								"end-y": "1.25",
-								"time": "0.5",
+								"time": "0.25",
 								"ease": "default",
 								"destroy-on-complete": "no",
 								"loop": "no",

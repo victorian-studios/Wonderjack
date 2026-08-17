@@ -1,6 +1,11 @@
 {
 	"locale": "pt-BR",
 	"strings": {
+        "intro": {
+            "select": "Selecione seu idioma:",
+            "confirm": "Confirmar",
+            "click": "Clique para começar!"
+        },
         "menu": {
             "btn_play": "Jogar",
             "btn_options": "Opções",
@@ -138,6 +143,10 @@
                 "art_9": {
                     "title": "Old Story Page 5",
                     "desc": "The fifth page from the story."
+                },
+                "art_10": {
+                    "title": "",
+                    "desc": ""
                 }
             }
         },
@@ -149,10 +158,10 @@
         },
         "story": {
             "page_1" : "Alice estava deitada em uma árvore, tentando jogar cartas com sua gatinha Dinah.\n\n'Bem,' Alice pensou entediada, 'jogar sozinha não é mais tão divertido.'\n\nEla via a gata usando suas patinhas para brincar com o baralho de cartas.\n\n'Eu queria algo novo, diferente e... alguém imprevisível' ela disse em voz alta.",
-            "page_2" : "A brisa gentil logo fez Alice ficar sonolenta. Suas pálpebras ficaram pesadas até que, antes que percebesse, já estava caindo em um sono profundo.\n\n...\n\n'Alice? Alice?'\n\nUma voz familiar ecoou próxima. Devagar, Alice abriu seus olhos.\n\nEla olhou em volta confusa. Paredes de pedra a rodeavam e um longo túnel se estendia à frente.\n\n'...Uma toca de coelho?'",
-            "page_3" : "'Como eu cheguei até aqui? Onde está Dinah?' Alice perguntou.\n\nA Rainha Branca apressou-se em direção a ela, quase tropeçando em seu próprio vestido.\n\n'Oh, Estou tão aliviada que eu te encontrei!'\n\n'Rainha Branca? O que está acontecendo?'\n\n'Eu vim com um convite muito importante... da Rainha de Copas'\n\nAlice paralisou.\n\n'A Rainha de Copas? Agora ISSO sim parace imprevisível.'",
+            "page_2" : "A brisa gentil logo fez Alice ficar sonolenta. Suas pálpebras ficaram pesadas até que, antes que percebesse, já estava caindo em um sono profundo.\n\n...\n\n'Alice? Alice?'\n\nUma voz familiar ecoou próxima. Devagar, Alice abriu seus olhos.\n\nEla olhou em volta confusa. Paredes de pedra a rodeavam e um longo túnel se estendia à frente.\n\n'Uma toca de coelho?'",
+            "page_3" : "'Como eu cheguei até aqui? Onde está Dinah?' Alice perguntou.\n\nA Rainha Branca apressou-se em direção a ela, quase tropeçando.\n\n'Oh, Estou tão aliviada que eu te encontrei!'\n\n'Rainha Branca? O que está acontecendo?'\n\n'Eu vim com um convite muito importante... da Rainha de Copas'\n\nAlice paralisou por um momento.\n\n'A Rainha de Copas? Agora ISSO sim parace imprevisível.'",
             "page_4" : "A Rainha Branca olhou apreensiva para Alice.\n\n'Ela insiste que todo mundo do País das Maravilhas participe de um torneio de cartas.'\n\n'Espere, um torneio de cartas?' Alice perguntou.\n\n'Sim! Ela ficou cansada de jogar cricket...' A Rainha sussurrou.\n\nEla forçou um sorriso.\n\n'Se você recusar... ela vai me culpar por falhar em entregar o convite.'",
-            "page_5" : "Alice sorriu enquanto seus olhos citilavam com tanto entusiasmo.\n\n'Isso é exatamente o que eu estava esperando. Conta comigo!'\n\nA Rainha Branca suspirou de alívio.\n\n'Maravilha! E antes que você vá... a Rainha tem se tornado cada vez mais impiedosa ultimamente.'\n\n[b]'Você gostaria de jogar comigo para que eu possa te ensinar?'[/b]",
+            "page_5" : "Alice sorriu enquanto seus olhos cintilavam com tanto entusiasmo.\n\n'Isso é exatamente o que eu estava esperando. Conta comigo!'\n\nA Rainha Branca suspirou de alívio.\n\n'Maravilha! E antes que você vá... a Rainha tem se tornado cada vez mais impiedosa ultimamente.'\n\n[b]'Você gostaria de jogar comigo para que eu possa te ensinar?'[/b]",
             "btn_yes": "SIM",
             "btn_no": "NÃO"
         },
@@ -434,7 +443,7 @@
             "menu": "[u]Menu[/u]\n\nVeja as próximas [color=#f5fe05]3[/color] cartas do baralho de número e escolha [color=#f5fe05]uma[/color] para comprar. E então, o baralho de número é [color=#fa1c03]embaralhado[/color].",
             "menu_tip": "[u]Selecione uma carta para comprar:[/u]",
             "hurricane": "[u]Furacão[/u]\n\nAmbos os jogadores descartam todas as suas cartas de número [color=#fa1c03]ignorando a primeira carta oculta[/color]. Não pode ser usada no último turno!",
-            "secret": "[u]Carta oculta[/u]\n\n\nA próxima carta de número que você comprar será [color=#f5fe05]oculta[/color] para o oponente.",
+            "secret": "[u]Carta oculta[/u]\n\n\nA próxima carta de número que você comprar será [color=#f5fe05]oculta[/color] para o oponente. Não funciona com cartas de poder.",
             "clairvoyance" : "[u]Clarividência[/u]\n\n\nVeja as próximas [color=#f5fe05]duas[/color] cartas do baralho de número.",
             "clairvoyance_player": "As próximas cartas de número são: [color=#f5fe05]{0}[/color] e [color=#f5fe05]{1}[/color]",
             "clairvoyance_cpu": "{0} teve uma bela visão das próximas [color=#f5fe05]duas[/color] cartas..."

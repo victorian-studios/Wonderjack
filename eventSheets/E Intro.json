@@ -2,14 +2,8 @@
 	"name": "E Intro",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "First_Time",
-			"type": "boolean",
-			"initialValue": "true",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 342755867635349
+			"eventType": "include",
+			"includeSheet": "E_Global"
 		},
 		{
 			"eventType": "variable",
@@ -80,17 +74,6 @@
 						"tag": "\"relics\"",
 						"file": {
 							"path": "Relics.json"
-						}
-					}
-				},
-				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
-					"sid": 440815894982082,
-					"parameters": {
-						"tag": "\"en-US\"",
-						"file": {
-							"path": "en-US.json"
 						}
 					}
 				},
@@ -185,19 +168,37 @@
 					}
 				},
 				{
-					"id": "check-item-exists",
-					"objectClass": "LocalStorage",
-					"sid": 665631830664724,
+					"id": "set-cursor-style2",
+					"objectClass": "Mouse",
+					"sid": 293418380931158,
 					"parameters": {
-						"key": "\"first_time\""
+						"cursor-style": "none"
 					}
 				},
 				{
-					"id": "set-cursor-style2",
-					"objectClass": "Mouse",
-					"sid": 754684468086171,
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 882908705611854,
 					"parameters": {
-						"cursor-style": "none"
+						"seconds": "0.01",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 859512638674405,
+					"parameters": {
+						"group-name": "\"Language\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 499718468977006,
+					"parameters": {
+						"key": "\"my_lang\""
 					}
 				}
 			],
@@ -210,6 +211,15 @@
 					"id": "on-any-click",
 					"objectClass": "Mouse",
 					"sid": 778447012920246
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 381208935490632,
+					"parameters": {
+						"layer": "\"lang\""
+					},
+					"isInverted": true
 				},
 				{
 					"id": "compare-boolean-eventvar",
@@ -237,11 +247,13 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-boolean-eventvar",
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 191796271728517,
+							"sid": 773834063614145,
 							"parameters": {
-								"variable": "First_Time"
+								"variable": "Language",
+								"comparison": 1,
+								"value": "\"\""
 							}
 						}
 					],
@@ -249,7 +261,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 647184592168742,
+							"sid": 635797911955345,
 							"parameters": {
 								"seconds": "0.01",
 								"use-timescale": true
@@ -258,41 +270,7 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 136678488651357,
-							"parameters": {
-								"layout": "Story"
-							}
-						}
-					],
-					"sid": 291166135524767
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 291713693898636,
-							"parameters": {
-								"variable": "First_Time"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 122431661776383,
-							"parameters": {
-								"seconds": "0.01",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 875603546257876,
+							"sid": 772641435193093,
 							"parameters": {
 								"layout": "Menu"
 							}
@@ -300,16 +278,155 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 322427131813006,
+							"sid": 463509227953783,
 							"disabled": true,
 							"parameters": {
 								"layout": "Story"
 							}
 						}
 					],
-					"sid": 512403521792386
+					"sid": 909629324094416
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 285223683068929
+						}
+					],
+					"actions": [],
+					"sid": 248402962530845,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 124335612488998,
+									"parameters": {
+										"layer": "\"lang\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 341046239283545,
+									"parameters": {
+										"layer": "\"lang\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 351711465352274,
+									"parameters": {
+										"layer": "\"lang\"",
+										"interactive": true
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 997664974940992,
+									"parameters": {
+										"layer": "\"Bkg_intro\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 835850784750082
+						}
+					]
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 896082357631376,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Back"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "Btn_Back",
+					"sid": 717398072745818
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 400777823925144,
+					"parameters": {
+						"layer": "\"lang\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 531737336355613,
+					"parameters": {
+						"layout": "Story"
+					}
+				}
+			],
+			"sid": 918180277258219
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 314914749592405,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Options_Flag"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 838853313263813,
+					"parameters": {
+						"layer": "\"lang\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Btn_Back",
+					"sid": 612023702168778,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text_Static_Generic",
+					"sid": 853731826653979,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 274337286886944
 		},
 		{
 			"eventType": "block",
@@ -360,14 +477,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "Text_Loading",
-					"sid": 718352808438843,
-					"parameters": {
-						"text": "\"Click anywhere to start!\""
-					}
-				},
 				{
 					"id": "set-active",
 					"objectClass": "Text_Loading",
@@ -684,42 +793,28 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 852075417830397,
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 618496707899439,
 					"parameters": {
-						"tag": "\"en-US\""
+						"key": "\"my_lang\""
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "load-from-json",
-					"objectClass": "Internationalization",
-					"sid": 114912892730128,
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 440815894982082,
 					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "set-locale",
-					"objectClass": "Internationalization",
-					"sid": 515967001259263,
-					"parameters": {
-						"locale": "\"en-US\""
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 194012246157819,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
+						"tag": "\"en-US\"",
+						"file": {
+							"path": "en-US.json"
+						}
 					}
 				}
 			],
-			"sid": 901239863312816
+			"sid": 525099539488098
 		},
 		{
 			"eventType": "block",
@@ -727,20 +822,19 @@
 				{
 					"id": "on-item-exists",
 					"objectClass": "LocalStorage",
-					"sid": 142806874204737,
+					"sid": 638651878523600,
 					"parameters": {
-						"key": "\"first_time\""
+						"key": "\"my_lang\""
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 859853832201146,
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 193695271625826,
 					"parameters": {
-						"variable": "First_Time",
-						"value": "false"
+						"key": "\"my_lang\""
 					}
 				}
 			],
@@ -750,57 +844,170 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-item-missing",
+					"id": "on-item-get",
 					"objectClass": "LocalStorage",
-					"sid": 709295278838653,
+					"sid": 328924601026284,
 					"parameters": {
-						"key": "\"first_time\""
+						"key": "\"my_lang\""
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 764930936001220,
+			"children": [
 				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 657761069134604,
-					"parameters": {
-						"key": "\"first_time\"",
-						"value": "\"1\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 172790494215941,
+							"parameters": {
+								"first-value": "LocalStorage.ItemValue",
+								"comparison": 0,
+								"second-value": "\"en-US\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 760730403391899,
+							"parameters": {
+								"tag": "\"en-US\"",
+								"file": {
+									"path": "en-US.json"
+								}
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 763928418840324,
+							"parameters": {
+								"variable": "Language",
+								"value": "\"en-US\""
+							}
+						}
+					],
+					"sid": 133336090997448
 				},
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 680680006992487,
-					"parameters": {
-						"variable": "First_Time",
-						"value": "true"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 271977152920657,
+							"parameters": {
+								"first-value": "LocalStorage.ItemValue",
+								"comparison": 0,
+								"second-value": "\"pt-BR\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 864504077834343,
+							"parameters": {
+								"tag": "\"pt-BR\"",
+								"file": {
+									"path": "pt-BR.json"
+								}
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 720058474309733,
+							"parameters": {
+								"variable": "Language",
+								"value": "\"pt-BR\""
+							}
+						}
+					],
+					"sid": 447584994912916
 				}
-			],
-			"sid": 901470634782858
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-movement",
-					"objectClass": "Mouse",
-					"sid": 413466132563619
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 817789843813145,
+					"parameters": {
+						"tag": "\"en-US\""
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-position",
-					"objectClass": "Cursor_default",
-					"sid": 840461514075086,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 527172502588215,
 					"parameters": {
-						"x": "Mouse.X",
-						"y": "Mouse.Y"
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text_Loading",
+					"sid": 215983871066700,
+					"parameters": {
+						"text": "Internationalization.Lookup(\"intro.click\")"
+					}
+				},
+				{
+					"callFunction": "Update_Texts",
+					"sid": 323042852006366
+				}
+			],
+			"sid": 927285058272896,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 720386970098251,
+					"parameters": {
+						"tag": "\"pt-BR\""
 					}
 				}
 			],
-			"sid": 100024645732027
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 399226671299982,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text_Loading",
+					"sid": 239175211598814,
+					"parameters": {
+						"text": "Internationalization.Lookup(\"intro.click\")"
+					}
+				},
+				{
+					"callFunction": "Update_Texts",
+					"sid": 951556458785604
+				}
+			],
+			"sid": 607581788428334,
+			"disabled": true
 		}
 	],
 	"sid": 364052280707711
