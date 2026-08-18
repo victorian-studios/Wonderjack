@@ -433,7 +433,9 @@
 					"uid": 73,
 					"sid": 352368981186127,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -461,6 +463,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -708,7 +715,9 @@
 					"uid": 74,
 					"sid": 194420869827263,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -736,6 +745,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"template": {
@@ -760,7 +774,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "SpecialPower",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -836,6 +855,15 @@
 									{
 										"key": "Timer",
 										"state": []
+									},
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
 									}
 								]
 							},
@@ -1277,7 +1305,9 @@
 					"uid": 122,
 					"sid": 613502879289735,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1305,6 +1335,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -1338,7 +1373,9 @@
 					"uid": 123,
 					"sid": 548368591611671,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1366,6 +1403,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -1399,7 +1441,9 @@
 					"uid": 124,
 					"sid": 332223679775282,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1427,6 +1471,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -1460,7 +1509,9 @@
 					"uid": 125,
 					"sid": 746048831676098,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1488,6 +1539,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -1521,7 +1577,9 @@
 					"uid": 127,
 					"sid": 806757893241845,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1549,6 +1607,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -1582,7 +1645,9 @@
 					"uid": 128,
 					"sid": 476475946857809,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1610,6 +1675,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -1643,7 +1713,9 @@
 					"uid": 136,
 					"sid": 136377473473837,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1671,6 +1743,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -2251,7 +2328,9 @@
 					"uid": 232,
 					"sid": 809706594383156,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -2279,6 +2358,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -2411,15 +2495,42 @@
 					"uid": 299,
 					"sid": 707565839413716,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"Turns_Timer": 4
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 1.5,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 6,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 15,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"showing": true,
 					"locked": false,
 					"world": {
 						"x": 168,
 						"y": 544,
-						"width": 680,
-						"height": 162,
+						"width": 315,
+						"height": 141,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

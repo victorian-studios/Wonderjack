@@ -32,6 +32,13 @@
 			"desc": "true - ativou o poder \"secret\" / false - a próxima carta de número será visível",
 			"show": true,
 			"sid": 852224891866726
+		},
+		{
+			"name": "Hide_Everything",
+			"type": "boolean",
+			"desc": "true - poder do gato está ativo / falso - atualiza a animação das cartas",
+			"show": true,
+			"sid": 104824527352404
 		}
 	],
 	"behaviorTypes": [],

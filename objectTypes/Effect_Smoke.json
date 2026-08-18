@@ -4,27 +4,32 @@
 	"sid": 921665669981912,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "Turns_Timer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 765338665386276
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 293228833483094
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 552897610523152
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
-					{
-						"width": 680,
-						"height": 162,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 9368875,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					},
 					{
 						"width": 315,
 						"height": 141,
@@ -35,6 +40,20 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 1798651,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 680,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9368875,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

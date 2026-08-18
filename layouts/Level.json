@@ -288,7 +288,9 @@
 					"uid": 22,
 					"sid": 926097711855883,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -316,6 +318,11 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -790,7 +797,8 @@
 						"Cards": 0,
 						"Cards_Hidden": 0,
 						"Visible_Count": 0,
-						"Next_Hidden": false
+						"Next_Hidden": false,
+						"Hide_Everything": false
 					},
 					"behaviors": {},
 					"showing": true,
@@ -993,7 +1001,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 468.5,
+						"x": 452.5,
 						"y": 294,
 						"width": 184,
 						"height": 146,
@@ -1039,6 +1047,55 @@
 							1,
 							1,
 							0.25
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Txt_debug",
+					"properties": {
+						"text": "? + 99\n-----\n99",
+						"enable-bbcode": true,
+						"font": "AliceInWonderland",
+						"size": 45,
+						"line-height": -20,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 89,
+					"sid": 944803006164074,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 20,
+						"y": 898,
+						"width": 184,
+						"height": 164,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0.15
 						],
 						"z": 0,
 						"angle": 0
@@ -5396,55 +5453,6 @@
 						"z": 0,
 						"angle": 0
 					}
-				},
-				{
-					"type": "Txt_debug",
-					"properties": {
-						"text": "? + 99\n-----\n99",
-						"enable-bbcode": true,
-						"font": "AliceInWonderland",
-						"size": 45,
-						"line-height": -20,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": false,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 89,
-					"sid": 944803006164074,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 20,
-						"y": 898,
-						"width": 184,
-						"height": 164,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
 				}
 			],
 			"sid": 173167528290621,
@@ -5600,7 +5608,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 400,
+						"x": 432,
 						"y": 1392,
 						"width": 64,
 						"height": 64,

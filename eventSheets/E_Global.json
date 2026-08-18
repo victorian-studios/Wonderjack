@@ -365,6 +365,61 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 518582061685776,
+							"parameters": {
+								"object": "Options_Flag"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "Options_Flag",
+							"sid": 627664524656496,
+							"parameters": {
+								"width": "270",
+								"height": "170"
+							}
+						}
+					],
+					"sid": 384053741993446,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 258363822798704,
+									"parameters": {
+										"object": "Options_Flag",
+										"expression": "Options_Flag.AnimationName",
+										"comparison": 0,
+										"value": "Language"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "Options_Flag",
+									"sid": 693777938973058,
+									"parameters": {
+										"width": "352",
+										"height": "224"
+									}
+								}
+							],
+							"sid": 120009810602340
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-two-values",
 							"objectClass": "System",
 							"sid": 485583250353491,
