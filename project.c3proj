@@ -326,13 +326,23 @@
 			"Sprite",
 			"demo_end",
 			"back_button_outline_sem_texto",
-			"Options_Flag"
+			"Options_Flag",
+			"Text_Relic_Name",
+			"Text_Relic_Flavor"
 		],
 		"subfolders": []
 	},
 	"functionsName": "Funções",
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"Relic_card",
+				"Text_Relic_Flavor",
+				"Text_Relic_Name"
+			]
+		}
+	],
 	"families": {
 		"items": [
 			"Buttons",

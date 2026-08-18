@@ -40455,6 +40455,38 @@
 										"index": "0",
 										"axis": "x"
 									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Relic_Name",
+									"sid": 802095884284919,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"relics.\" & Relic_card.AnimationName & \".title\")"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Relic_Name",
+									"sid": 767377816120585,
+									"parameters": {
+										"size-pt": "clamp(lerp(30, 20, (len(Self.Text) - 4) / (19 - 4)), 20, 30)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Relic_Flavor",
+									"sid": 196932879074397,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"relics.\" & Relic_card.AnimationName & \".flavor_txt\")"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Relic_Flavor",
+									"sid": 102201274986842,
+									"parameters": {
+										"size-pt": "clamp(lerp(26, 18, (len(Self.Text) - 7) / (20 - 7)), 18, 26)"
+									}
 								}
 							],
 							"sid": 283972691696562,
@@ -40487,6 +40519,12 @@
 										}
 									],
 									"sid": 773416407087558
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 603354258946932
 								}
 							]
 						},
@@ -41139,6 +41177,35 @@
 							"sid": 540022060387125
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Relic_card",
+							"sid": 450659154998130
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Text_Relic_Name",
+							"sid": 831430069105385,
+							"parameters": {
+								"y": "Self.Y - 100"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Text_Relic_Flavor",
+							"sid": 189265493633797,
+							"parameters": {
+								"y": "Self.Y + 138"
+							}
+						}
+					],
+					"sid": 518462348302677
 				},
 				{
 					"eventType": "comment",

@@ -408,22 +408,22 @@
                 "desc":"E se eu juntar todas as partes?"
             },
             "key": {
-                "title": "Key",
+                "title": "Chave",
                 "flavor_txt": "Open Sesame!",
                 "desc":"Unlocks access to a [color=#f5fe05]secret[/color] stage."
             },
             "picnic": {
-                "title": "Picnic Basket",
-                "flavor_txt": "Snack Time!",
+                "title": "Cesta de Pequinique",
+                "flavor_txt": "Hora do lanche!",
                 "desc": "Increases both your power hand and power draw limit by [color=#f5fe05]1[/color]"
             },
             "mussel": {
                 "title": "Mussel",
-                "flavor_txt": "What's Inside",
+                "flavor_txt": "O que tem dentro?",
                 "desc": "At the start of a new round, see [color=#f5fe05]2[/color] [color=#005eff]number[/color] cards and choose [color=#f5fe05]1[/color] to draw."
             },
             "match": {
-                "title": "Match Box",
+                "title": "Caixa de Fósforos",
                 "flavor_txt": "Burn!",
                 "desc": "[color=#f5fe05]Right-click[/color] this relic to [color=#f5fe05]burn[/color] a random power from your opponent. {0} matches remaning."
             }
