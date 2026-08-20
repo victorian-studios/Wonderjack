@@ -463,6 +463,16 @@
 									"properties": {
 										"enabled": true
 									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.1,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"showing": true,
@@ -519,6 +529,16 @@
 									"properties": {
 										"enabled": true
 									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.1,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"showing": true,
@@ -569,6 +589,16 @@
 										"enabled": false,
 										"live-preview": false
 									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.1,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"showing": true,
@@ -616,6 +646,16 @@
 										"period-offset-random": 0,
 										"magnitude": 5,
 										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
 										"enabled": false,
 										"live-preview": false
 									}
@@ -797,8 +837,7 @@
 						"Cards": 0,
 						"Cards_Hidden": 0,
 						"Visible_Count": 0,
-						"Next_Hidden": false,
-						"Hide_Everything": false
+						"Next_Hidden": false
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2418,9 +2457,9 @@
 							"locked": false,
 							"world": {
 								"x": 596,
-								"y": 30,
+								"y": 19.49894573568261,
 								"width": 728,
-								"height": 284,
+								"height": 304,
 								"originX": 0,
 								"originY": 0,
 								"color": [

@@ -820,7 +820,57 @@
 					}
 				}
 			],
-			"sid": 403715614006273
+			"sid": 403715614006273,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Relic_card",
+							"sid": 262778316785831,
+							"parameters": {
+								"object": "Text_Relic_Flavor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Text_Relic_Flavor",
+							"sid": 509757023597645,
+							"parameters": {
+								"opacity": "Relic_card.Opacity"
+							}
+						}
+					],
+					"sid": 651686447814255
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Relic_card",
+							"sid": 137484960634154,
+							"parameters": {
+								"object": "Text_Relic_Name"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Text_Relic_Name",
+							"sid": 299458166757936,
+							"parameters": {
+								"opacity": "Relic_card.Opacity"
+							}
+						}
+					],
+					"sid": 978226095505945
+				}
+			]
 		},
 		{
 			"eventType": "group",
@@ -5918,12 +5968,13 @@
 							"isInverted": true
 						},
 						{
-							"id": "is-overlapping-another-object",
+							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Card_Numb",
-							"sid": 640644550631618,
+							"sid": 316405556670716,
 							"parameters": {
-								"object": "Table_Player"
-							}
+								"instance-variable": "Player_Hidden"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -6015,137 +6066,6 @@
 								}
 							],
 							"sid": 845162807787859
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Card_Numb",
-							"sid": 224504055551356,
-							"parameters": {
-								"instance-variable": "Original_Hidden"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Card_Numb",
-							"sid": 419828639749472,
-							"parameters": {
-								"instance-variable": "Player_Hidden"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Card_Numb",
-							"sid": 982948513167535,
-							"parameters": {
-								"object": "Table_CPU"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Table_CPU",
-							"sid": 912152119507999,
-							"parameters": {
-								"instance-variable": "Hide_Everything"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [],
-					"sid": 955097801434597,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 949775065069296,
-									"parameters": {
-										"comparison": 3,
-										"x-co-ordinate": "969"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Card_Numb",
-									"sid": 887762862475823,
-									"parameters": {
-										"animation": "\"Left\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 814307876022645
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 931498172264030,
-									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "969"
-									}
-								},
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 875162396249229,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "1100"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Card_Numb",
-									"sid": 686976587982796,
-									"parameters": {
-										"animation": "\"Front\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 998794326552127
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 336968947809477,
-									"parameters": {
-										"comparison": 5,
-										"x-co-ordinate": "1100"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Card_Numb",
-									"sid": 583665919207891,
-									"parameters": {
-										"animation": "\"Right\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 932310050093203
 						}
 					]
 				}
@@ -17607,10 +17527,10 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 596153665361390,
+															"sid": 455275531902831,
 															"parameters": {
 																"variable": "EnemyAI_Special",
-																"value": "40"
+																"value": "25"
 															}
 														}
 													],
@@ -20057,6 +19977,129 @@
 											"sid": 358862660022393
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-opacity",
+											"objectClass": "Deck_Numb_Sprite",
+											"sid": 676879134212169,
+											"parameters": {
+												"comparison": 0,
+												"opacity": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Deck_Numb_Sprite",
+											"sid": 977724680766491,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0.5"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Deck_Numb_Sprite",
+											"sid": 861564378674284,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Deck_Numb_Sprite",
+											"sid": 698439617991977,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 105580381145463
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-opacity",
+											"objectClass": "Deck_Power_Sprite",
+											"sid": 202365495002291,
+											"parameters": {
+												"comparison": 0,
+												"opacity": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Deck_Power_Sprite",
+											"sid": 105843693909560,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0.5"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Deck_Power_Sprite",
+											"sid": 213751413483192,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Deck_Power_Sprite",
+											"sid": 443785775162719,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 803795385406221
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-opacity",
+											"objectClass": "Btn_Stop",
+											"sid": 114503337408617,
+											"parameters": {
+												"comparison": 0,
+												"opacity": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Btn_Stop",
+											"sid": 555719462004893,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0.5"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Btn_Stop",
+											"sid": 155468369087574,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Btn_Stop",
+											"sid": 111081393470648,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 826077288595354
 								},
 								{
 									"eventType": "comment",
@@ -27435,6 +27478,15 @@
 											}
 										},
 										{
+											"id": "compare-opacity",
+											"objectClass": "Btn_Stop",
+											"sid": 200228693538032,
+											"parameters": {
+												"comparison": 0,
+												"opacity": "100"
+											}
+										},
+										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
 											"sid": 184738261673457,
@@ -27838,6 +27890,15 @@
 											}
 										},
 										{
+											"id": "compare-opacity",
+											"objectClass": "Deck_Numb_Sprite",
+											"sid": 186639466289496,
+											"parameters": {
+												"comparison": 0,
+												"opacity": "100"
+											}
+										},
+										{
 											"id": "layer-is-visible",
 											"objectClass": "System",
 											"sid": 309758662185131,
@@ -28215,6 +28276,15 @@
 												"variable": "Turn",
 												"comparison": 0,
 												"value": "1"
+											}
+										},
+										{
+											"id": "compare-opacity",
+											"objectClass": "Deck_Power_Sprite",
+											"sid": 179522857732408,
+											"parameters": {
+												"comparison": 0,
+												"opacity": "100"
 											}
 										},
 										{
@@ -28892,6 +28962,15 @@
 									}
 								},
 								{
+									"id": "compare-opacity",
+									"objectClass": "Deck_Numb_Sprite",
+									"sid": 658485218157071,
+									"parameters": {
+										"comparison": 0,
+										"opacity": "100"
+									}
+								},
+								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
 									"sid": 699402911674947,
@@ -29474,6 +29553,15 @@
 										"mouse-button": "left",
 										"click-type": "clicked",
 										"object-clicked": "Deck_Power_Sprite"
+									}
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "Deck_Power_Sprite",
+									"sid": 870499348535086,
+									"parameters": {
+										"comparison": 0,
+										"opacity": "100"
 									}
 								},
 								{
@@ -31071,6 +31159,15 @@
 									}
 								},
 								{
+									"id": "compare-opacity",
+									"objectClass": "Btn_Stop",
+									"sid": 700796857230655,
+									"parameters": {
+										"comparison": 0,
+										"opacity": "100"
+									}
+								},
+								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 953766715512949,
@@ -31726,9 +31823,19 @@
 															}
 														},
 														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 553592707262780,
+															"parameters": {
+																"variable": "LastTurnCount",
+																"comparison": 0,
+																"value": "-1"
+															}
+														},
+														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 705912165739750,
+															"sid": 745097346579167,
 															"parameters": {
 																"variable": "EnemyAI_SpecialUsed"
 															},
@@ -39065,73 +39172,198 @@
 									],
 									"actions": [
 										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Table_CPU",
-											"sid": 958538340385913,
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 283812212449705,
 											"parameters": {
-												"instance-variable": "Hide_Everything",
-												"value": "true"
+												"variable": "Enemy_RNG",
+												"value": "choose( 1, 2, 3)"
 											}
 										},
 										{
-											"callFunction": "Talk",
-											"sid": 622462806823075,
-											"parameters": [
-												"EnemyName",
-												"\"common.enemies.\" & EnemyName & \".special\"",
-												false,
-												"1  - Opt_FastMode_Secs"
-											]
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 563581222923064,
+											"parameters": {
+												"variable": "EnemyAI_SpecialUsed",
+												"value": "false"
+											}
 										}
 									],
 									"sid": 381649276134920,
 									"children": [
 										{
+											"eventType": "comment",
+											"text": "Baralho de Poderes some"
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "for-each",
+													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 426853581135442,
+													"sid": 594269217587699,
 													"parameters": {
-														"object": "Card_Numb"
-													}
-												},
-												{
-													"id": "is-overlapping-another-object",
-													"objectClass": "Card_Numb",
-													"sid": 951212936459481,
-													"parameters": {
-														"object": "Table_CPU"
+														"variable": "Enemy_RNG",
+														"comparison": 0,
+														"value": "1"
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 110314139942137,
+													"id": "set-fade-in-time",
+													"objectClass": "Deck_Numb_Sprite",
+													"sid": 208309582043205,
+													"behaviorType": "Fade",
 													"parameters": {
-														"seconds": "loopindex * 0.1",
-														"use-timescale": true
+														"fade-in-time": "0"
 													}
 												},
 												{
-													"id": "set-animation",
-													"objectClass": "Card_Numb",
-													"sid": 326353466073978,
+													"id": "set-fade-out-time",
+													"objectClass": "Deck_Numb_Sprite",
+													"sid": 357826660316034,
+													"behaviorType": "Fade",
 													"parameters": {
-														"animation": "\"Back\"",
-														"from": "beginning"
+														"fade-out-time": "Opt_FastMode = 1? 0.5 : 1"
+													}
+												},
+												{
+													"id": "restart-fade",
+													"objectClass": "Deck_Numb_Sprite",
+													"sid": 244692407660624,
+													"behaviorType": "Fade"
+												}
+											],
+											"sid": 664191774761847
+										},
+										{
+											"eventType": "comment",
+											"text": "Baralho de Números some"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 731135329355373,
+													"parameters": {
+														"variable": "Enemy_RNG",
+														"comparison": 0,
+														"value": "2"
 													}
 												}
 											],
-											"sid": 411350563585113
+											"actions": [
+												{
+													"id": "set-fade-in-time",
+													"objectClass": "Deck_Power_Sprite",
+													"sid": 350592252039183,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-in-time": "0"
+													}
+												},
+												{
+													"id": "set-fade-out-time",
+													"objectClass": "Deck_Power_Sprite",
+													"sid": 725497960654558,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-out-time": "Opt_FastMode = 1? 0.5 : 1"
+													}
+												},
+												{
+													"id": "restart-fade",
+													"objectClass": "Deck_Power_Sprite",
+													"sid": 103835957715069,
+													"behaviorType": "Fade"
+												}
+											],
+											"sid": 496651221378268
+										},
+										{
+											"eventType": "comment",
+											"text": "Sino some"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 196326288536919,
+													"parameters": {
+														"variable": "Enemy_RNG",
+														"comparison": 0,
+														"value": "3"
+													}
+												},
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 433144292631148,
+													"parameters": {
+														"object": "Btn_Stop",
+														"expression": "Btn_Stop.Player",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-fade-in-time",
+													"objectClass": "Btn_Stop",
+													"sid": 761593310227687,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-in-time": "0"
+													}
+												},
+												{
+													"id": "set-fade-out-time",
+													"objectClass": "Btn_Stop",
+													"sid": 807295198719536,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-out-time": "Opt_FastMode = 1? 0.5 : 1"
+													}
+												},
+												{
+													"id": "restart-fade",
+													"objectClass": "Btn_Stop",
+													"sid": 993374559798822,
+													"behaviorType": "Fade"
+												}
+											],
+											"sid": 707554412836554
 										},
 										{
 											"eventType": "block",
 											"conditions": [],
 											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 682898080384863,
+													"parameters": {
+														"seconds": "1.5 - Opt_FastMode_Secs",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Talk",
+													"sid": 912834234921102,
+													"parameters": [
+														"EnemyName",
+														"\"common.enemies.\" & EnemyName & \".special\"",
+														false,
+														"1  - Opt_FastMode_Secs"
+													]
+												},
 												{
 													"id": "wait",
 													"objectClass": "System",
@@ -41191,17 +41423,17 @@
 						{
 							"id": "set-y",
 							"objectClass": "Text_Relic_Name",
-							"sid": 831430069105385,
+							"sid": 557435411498611,
 							"parameters": {
-								"y": "Self.Y - 100"
+								"y": "Self.Y - 102"
 							}
 						},
 						{
 							"id": "set-y",
 							"objectClass": "Text_Relic_Flavor",
-							"sid": 189265493633797,
+							"sid": 674953386768948,
 							"parameters": {
-								"y": "Self.Y + 138"
+								"y": "Self.Y + 132"
 							}
 						}
 					],

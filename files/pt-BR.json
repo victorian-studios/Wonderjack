@@ -275,7 +275,7 @@
                     "talk_lose": "Parece que você encontrou a direção que precisava ir...",
                     "talk_thinking_1": "Lembre-se... todos nós somos loucos aqui. Eu sou louco. Você é louca",
                     "talk_thinking_2": "Se precisar sair... posso te indicar uma direção...",
-                    "special": "Não consegue me ver?"
+                    "special": "O que foi? Não está enxergando direito?"
                 },
                 "Caterpillar": {
                     "name": "Lagarta",
@@ -323,7 +323,7 @@
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
                     "talk_thinking_2": "",
-                    "special": "Alice! Best of five? What do you think?"
+                    "special": "Alice! Melhor de três? O que você acha?"
                 }
             },
             "bell": "[u]O Sino[/u]: \n\nToque o sino para terminar seu turno. E então, seu oponente pode [color=#fa1c03]jogar apenas uma vez[/color] antes da rodada terminar. Nada acontece se for usado no último turno.",
@@ -348,7 +348,7 @@
 		"relics": {
             "card_13": {
                 "title": "Carta 13",
-                "flavor_txt": "Meu número da sorte!",
+                "flavor_txt": "Número da sorte!",
                 "desc": "Adiciona permanentemente a carta [color=#f5fe05]13[/color] ao baralho de [color=#005eff]número[/color]."
             },
             "cat_eye": {
@@ -359,12 +359,12 @@
             "watch": {
                 "title": "Relógio de Bolso",
                 "flavor_txt": "Tarde Demais!",
-                "desc":"[color=#f5fe05]Clique com o botão direito do mouse[/color] nesta relíquia para devolver a última carta de [color=#005eff]número[/color] para o fim do baralho (uma vez por partida). [color=#fa1c03]Mas reduza o limite da sua mão para cartas de poder em 1[/color]."
+                "desc":"[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para devolver a última carta de [color=#005eff]número[/color] para o fim do baralho (uma vez por partida). \n[color=#fa1c03]Mas reduz o limite de poderes na mão em 1[/color]."
             },
             "eat_me": {
                 "title": "Bolo",
                 "flavor_txt": "Coma-me.",
-                "desc":"Aumente o limite da sua mão para cartas de poder em [color=#f5fe05]1[/color]."
+                "desc":"Aumenta o limite de poderes na mão em [color=#f5fe05]1[/color]."
                 
             },
             "crown": {
@@ -375,12 +375,12 @@
             "spear": {
                 "title": "Lança de Coração",
                 "flavor_txt": "Intruso!",
-                "desc":"Reduz o limite da mão para cartas de poder do seu oponente em [color=#f5fe05]1[/color]."
+                "desc":"Reduz o limite de poderes na mão do seu oponente em [color=#f5fe05]1[/color]."
             },
             "tea": {
                 "title": "Xícara de Chá",
                 "flavor_txt": "Hora do Chá!",
-                "desc":"Depois de jogar uma carta de poder, ganhe um [color=#f5fe05]turno extra[/color] (uma vez por partida). [color=#fa1c03]Mas reduza o seu limite de compra para cartas de poder em 1[/color]."
+                "desc":"Depois de jogar uma carta de poder, ganhe um [color=#f5fe05]turno extra[/color] (uma vez por partida). \n[color=#fa1c03]Mas reduza o limite de compra de poderes em 1[/color]."
             },
             "drink_me": {
                 "title": "Garrafa",
@@ -415,17 +415,17 @@
             "picnic": {
                 "title": "Cesta de Pequinique",
                 "flavor_txt": "Hora do lanche!",
-                "desc": "Increases both your power hand and power draw limit by [color=#f5fe05]1[/color]"
+                "desc": "Aumenta o limite de compra de poderes e poderes na mão em [color=#f5fe05]1[/color]"
             },
             "mussel": {
-                "title": "Mussel",
+                "title": "Mexilhão",
                 "flavor_txt": "O que tem dentro?",
-                "desc": "At the start of a new round, see [color=#f5fe05]2[/color] [color=#005eff]number[/color] cards and choose [color=#f5fe05]1[/color] to draw."
+                "desc": "No começo de cada rodada, veja [color=#f5fe05]2[/color] cartas de [color=#005eff]número[/color] e escolha 1 [color=#f5fe05]1[/color] para comprar."
             },
             "match": {
                 "title": "Caixa de Fósforos",
-                "flavor_txt": "Burn!",
-                "desc": "[color=#f5fe05]Right-click[/color] this relic to [color=#f5fe05]burn[/color] a random power from your opponent. {0} matches remaning."
+                "flavor_txt": "Queime!",
+                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para [color=#f5fe05]queimar[/color] um poder aleatório do oponente. {0} fósforos restantes."
             }
         },
 		"powers": {
