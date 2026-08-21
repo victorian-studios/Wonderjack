@@ -1067,7 +1067,7 @@
 						"text": "Play",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
-						"size": 65,
+						"size": 60,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -3015,7 +3015,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "cat_eye",
-								"initial-frame": 2,
+								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
 							},

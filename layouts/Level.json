@@ -1176,6 +1176,895 @@
 			"overriden": 0,
 			"subLayers": [
 				{
+					"name": "ESCURO",
+					"overriden": 0,
+					"subLayers": [
+						{
+							"name": "Luz Inimigo",
+							"overriden": 0,
+							"subLayers": [],
+							"instances": [
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 331,
+									"sid": 396797379659667,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 954,
+										"y": 254,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 332,
+									"sid": 735453772684099,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 956,
+										"y": 432,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								}
+							],
+							"sid": 702717400761637,
+							"effectTypes": [],
+							"isInitiallyVisible": true,
+							"isInitiallyInteractive": true,
+							"isHTMLElementsLayer": false,
+							"color": [
+								1,
+								1,
+								1,
+								1
+							],
+							"backgroundColor": [
+								0.3686274509803922,
+								0.3686274509803922,
+								0.3686274509803922,
+								1
+							],
+							"isTransparent": true,
+							"sampling": "auto",
+							"parallaxX": 1,
+							"parallaxY": 1,
+							"scaleRate": 1,
+							"forceOwnTexture": false,
+							"renderingMode": "3d",
+							"drawOrder": "z-order",
+							"useRenderCells": false,
+							"blendMode": "normal",
+							"zElevation": 0,
+							"global": false
+						},
+						{
+							"name": "Luz Fase - Mesa",
+							"overriden": 0,
+							"subLayers": [],
+							"instances": [
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 321,
+									"sid": 448877482917642,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 264,
+										"y": 957,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 322,
+									"sid": 865855369681281,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 188,
+										"y": 761,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 323,
+									"sid": 872625673181743,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": false
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 451,
+										"y": 296,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 324,
+									"sid": 479228004002325,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1741,
+										"y": 780,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 325,
+									"sid": 365498473369671,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 581,
+										"y": 913,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 326,
+									"sid": 231880112046206,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 961,
+										"y": 919,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 327,
+									"sid": 977895197649059,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1329,
+										"y": 912,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 328,
+									"sid": 880549498215751,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 958,
+										"y": 707,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 329,
+									"sid": 702964723454311,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 657,
+										"y": 704,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								},
+								{
+									"type": "Effect_Light",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 330,
+									"sid": 703394489855996,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Sine": {
+											"properties": {
+												"movement": "size",
+												"wave": "sine",
+												"period": 6,
+												"period-random": 0,
+												"period-offset": 0,
+												"period-offset-random": 0,
+												"magnitude": 40,
+												"magnitude-random": 0,
+												"enabled": true,
+												"live-preview": false
+											}
+										},
+										"DragDrop": {
+											"properties": {
+												"axes": "both",
+												"enabled": true
+											}
+										},
+										"Pin": {
+											"properties": {
+												"destroy": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1258,
+										"y": 704,
+										"width": 500,
+										"height": 500,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0,
+										"blendMode": "destination-out"
+									}
+								}
+							],
+							"sid": 647487662456244,
+							"effectTypes": [],
+							"isInitiallyVisible": true,
+							"isInitiallyInteractive": true,
+							"isHTMLElementsLayer": false,
+							"color": [
+								1,
+								1,
+								1,
+								1
+							],
+							"backgroundColor": [
+								0.3686274509803922,
+								0.3686274509803922,
+								0.3686274509803922,
+								1
+							],
+							"isTransparent": true,
+							"sampling": "auto",
+							"parallaxX": 1,
+							"parallaxY": 1,
+							"scaleRate": 1,
+							"forceOwnTexture": false,
+							"renderingMode": "3d",
+							"drawOrder": "z-order",
+							"useRenderCells": false,
+							"blendMode": "normal",
+							"zElevation": 0,
+							"global": false
+						}
+					],
+					"instances": [
+						{
+							"type": "Effect_Light",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 319,
+							"sid": 303771855063224,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "size",
+										"wave": "sine",
+										"period": 6,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 40,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"DragDrop": {
+									"properties": {
+										"axes": "both",
+										"enabled": true
+									}
+								},
+								"Pin": {
+									"properties": {
+										"destroy": false
+									}
+								}
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1784,
+								"y": 124,
+								"width": 500,
+								"height": 500,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0,
+								"blendMode": "destination-out"
+							}
+						}
+					],
+					"sid": 115879022858701,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						0.4
+					],
+					"backgroundColor": [
+						0,
+						0,
+						0,
+						1
+					],
+					"isTransparent": false,
+					"sampling": "auto",
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
 					"name": "Turn",
 					"overriden": 0,
 					"subLayers": [],
@@ -2653,10 +3542,10 @@
 						{
 							"type": "Text_Talk_Name",
 							"properties": {
-								"text": "[u]Humpty Dumpty[/u]",
+								"text": "[u]Chapeleiro Maluco[/u]",
 								"enable-bbcode": true,
 								"font": "Alice-Regular",
-								"size": 40,
+								"size": 39,
 								"line-height": 0,
 								"bold": false,
 								"italic": false,
@@ -2689,7 +3578,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 202,
+								"x": 220,
 								"y": 710,
 								"width": 484,
 								"height": 84,
@@ -3669,41 +4558,6 @@
 					"drawOrder": "z-order",
 					"useRenderCells": false,
 					"blendMode": "normal",
-					"zElevation": 0,
-					"global": false
-				},
-				{
-					"name": "ESCURO",
-					"overriden": 0,
-					"subLayers": [],
-					"instances": [],
-					"sid": 115879022858701,
-					"effectTypes": [],
-					"isInitiallyVisible": false,
-					"isInitiallyInteractive": true,
-					"isHTMLElementsLayer": false,
-					"color": [
-						1,
-						1,
-						1,
-						1
-					],
-					"backgroundColor": [
-						0,
-						0,
-						0,
-						1
-					],
-					"isTransparent": false,
-					"sampling": "auto",
-					"parallaxX": 1,
-					"parallaxY": 1,
-					"scaleRate": 1,
-					"forceOwnTexture": false,
-					"renderingMode": "3d",
-					"drawOrder": "z-order",
-					"useRenderCells": false,
-					"blendMode": "screen",
 					"zElevation": 0,
 					"global": false
 				},

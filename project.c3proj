@@ -185,13 +185,6 @@
 		},
 		{
 			"type": "effect",
-			"id": "replacecolor",
-			"name": "Replace color",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "effect",
 			"id": "tint",
 			"name": "Tint",
 			"author": "Scirra",
@@ -323,12 +316,13 @@
 			"TiledBackground",
 			"Effect_Smoke",
 			"ShadowLight",
-			"Sprite",
+			"Effect_Light",
 			"demo_end",
 			"back_button_outline_sem_texto",
 			"Options_Flag",
 			"Text_Relic_Name",
-			"Text_Relic_Flavor"
+			"Text_Relic_Flavor",
+			"Cursor_effect"
 		],
 		"subfolders": []
 	},
@@ -347,7 +341,8 @@
 		"items": [
 			"Buttons",
 			"Clickable",
-			"Holdable"
+			"Holdable",
+			"Cursors"
 		],
 		"subfolders": []
 	},

@@ -1353,6 +1353,14 @@
 									"parameters": {
 										"text": "Internationalization.Lookup(Self.my_txt)"
 									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Static_Generic",
+									"sid": 137838882135930,
+									"parameters": {
+										"size-pt": "60"
+									}
 								}
 							],
 							"sid": 792710777430677
@@ -1424,6 +1432,14 @@
 									"sid": 842445447003364,
 									"parameters": {
 										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Static_Generic",
+									"sid": 681746593851946,
+									"parameters": {
+										"size-pt": "54"
 									}
 								},
 								{
@@ -1578,6 +1594,14 @@
 									"sid": 597089043885226,
 									"parameters": {
 										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Static_Generic",
+									"sid": 392394643460017,
+									"parameters": {
+										"size-pt": "50"
 									}
 								}
 							],
@@ -1876,6 +1900,14 @@
 									"sid": 566119262799031,
 									"parameters": {
 										"text": "Internationalization.Lookup(Self.my_txt)"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Static_Generic",
+									"sid": 509867589931070,
+									"parameters": {
+										"size-pt": "48"
 									}
 								}
 							],

@@ -1,0 +1,13 @@
+{
+	"name": "Cursors",
+	"plugin-id": "Sprite",
+	"sid": 305899834313657,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Cursor_default",
+		"Cursor_hold",
+		"Cursor_pointer"
+	]
+}

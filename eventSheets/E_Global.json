@@ -112,6 +112,16 @@
 			"sid": 247123034531860
 		},
 		{
+			"eventType": "variable",
+			"name": "Mouse_Type",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 566807654501733
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -662,7 +672,7 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 198079832437634,
+							"sid": 766384329497888,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
@@ -672,7 +682,7 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 687008672936452,
+							"sid": 396201048820754,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
@@ -682,7 +692,7 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 404675720538949,
+							"sid": 503311340762017,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
@@ -692,7 +702,7 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 823982151456077,
+							"sid": 291204375247730,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
@@ -702,7 +712,7 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 668919464624869,
+							"sid": 865826024165138,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
@@ -714,13 +724,13 @@
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
-							"sid": 564538642970828,
+							"sid": 486785926269581,
 							"parameters": {
 								"cursor-style": "none"
 							}
 						}
 					],
-					"sid": 141798738631467,
+					"sid": 409552556085867,
 					"children": [
 						{
 							"eventType": "block",
@@ -728,7 +738,7 @@
 								{
 									"id": "mouse-button-is-down",
 									"objectClass": "Mouse",
-									"sid": 802256549834191,
+									"sid": 159572495554718,
 									"parameters": {
 										"mouse-button": "left"
 									}
@@ -736,7 +746,7 @@
 								{
 									"id": "cursor-is-over-object",
 									"objectClass": "Mouse",
-									"sid": 633999394766154,
+									"sid": 948188462677663,
 									"parameters": {
 										"object": "Holdable"
 									}
@@ -744,12 +754,12 @@
 								{
 									"id": "is-visible",
 									"objectClass": "Clickable",
-									"sid": 689157887428190
+									"sid": 864847699713501
 								},
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 765551146328827,
+									"sid": 641385922233552,
 									"parameters": {
 										"layer": "Clickable.LayerName"
 									}
@@ -759,7 +769,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_default",
-									"sid": 177897292678501,
+									"sid": 269596676884232,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
@@ -768,7 +778,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_pointer",
-									"sid": 688252830421597,
+									"sid": 341458857738650,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
@@ -777,14 +787,23 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_hold",
-									"sid": 563002004658403,
+									"sid": 665385384367337,
 									"parameters": {
 										"x": "Mouse.X",
 										"y": "Mouse.Y"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 197567326626074,
+									"parameters": {
+										"variable": "Mouse_Type",
+										"value": "2"
+									}
 								}
 							],
-							"sid": 824983125718477
+							"sid": 735241776983048
 						},
 						{
 							"eventType": "comment",
@@ -796,12 +815,12 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 858123197266603
+									"sid": 585133494442260
 								},
 								{
 									"id": "mouse-button-is-down",
 									"objectClass": "Mouse",
-									"sid": 933089913909738,
+									"sid": 380728982510120,
 									"parameters": {
 										"mouse-button": "left"
 									}
@@ -809,7 +828,7 @@
 								{
 									"id": "cursor-is-over-object",
 									"objectClass": "Mouse",
-									"sid": 615736474559164,
+									"sid": 871777010004326,
 									"parameters": {
 										"object": "Scroll_Art_Gallery"
 									}
@@ -817,12 +836,12 @@
 								{
 									"id": "is-visible",
 									"objectClass": "Clickable",
-									"sid": 624845766566278
+									"sid": 557837677068185
 								},
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 369721461744719,
+									"sid": 766928699572747,
 									"parameters": {
 										"layer": "Clickable.LayerName"
 									}
@@ -832,7 +851,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_default",
-									"sid": 120404995570764,
+									"sid": 982078487741156,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
@@ -841,7 +860,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_pointer",
-									"sid": 541536499345391,
+									"sid": 598599607987699,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
@@ -850,14 +869,23 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_hold",
-									"sid": 377066111319322,
+									"sid": 740730932863171,
 									"parameters": {
 										"x": "Mouse.X",
 										"y": "Mouse.Y"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 731222765723029,
+									"parameters": {
+										"variable": "Mouse_Type",
+										"value": "2"
+									}
 								}
 							],
-							"sid": 259121719686241
+							"sid": 485687091624627
 						},
 						{
 							"eventType": "block",
@@ -865,12 +893,12 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 722122047409179
+									"sid": 664308945342080
 								},
 								{
 									"id": "cursor-is-over-object",
 									"objectClass": "Mouse",
-									"sid": 861633033748380,
+									"sid": 964191424785656,
 									"parameters": {
 										"object": "Clickable"
 									}
@@ -878,12 +906,12 @@
 								{
 									"id": "is-visible",
 									"objectClass": "Clickable",
-									"sid": 244145611870249
+									"sid": 805220506638924
 								},
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 117558277856273,
+									"sid": 504338398446009,
 									"parameters": {
 										"layer": "Clickable.LayerName"
 									}
@@ -893,7 +921,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_default",
-									"sid": 977981234885591,
+									"sid": 966414847923583,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
@@ -902,7 +930,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_pointer",
-									"sid": 469731932372073,
+									"sid": 556541074246652,
 									"parameters": {
 										"x": "Mouse.X",
 										"y": "Mouse.Y"
@@ -911,14 +939,23 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_hold",
-									"sid": 137685331895499,
+									"sid": 848838235977887,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 381229144683292,
+									"parameters": {
+										"variable": "Mouse_Type",
+										"value": "0"
+									}
 								}
 							],
-							"sid": 825223803647256
+							"sid": 510457955359634
 						},
 						{
 							"eventType": "block",
@@ -926,14 +963,14 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 478034055599027
+									"sid": 807602976015815
 								}
 							],
 							"actions": [
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_default",
-									"sid": 894927782378426,
+									"sid": 776000609495220,
 									"parameters": {
 										"x": "Mouse.X",
 										"y": "Mouse.Y"
@@ -942,7 +979,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_pointer",
-									"sid": 523904601453359,
+									"sid": 349681377870145,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
@@ -951,17 +988,86 @@
 								{
 									"id": "set-position",
 									"objectClass": "Cursor_hold",
-									"sid": 782858529250442,
+									"sid": 531559127458414,
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 102659955056022,
+									"parameters": {
+										"variable": "Mouse_Type",
+										"value": "1"
+									}
 								}
 							],
-							"sid": 723107953321769
+							"sid": 328008038430587
 						}
 					],
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 706568861290653,
+							"parameters": {
+								"interval-seconds": "0.05"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Cursor_effect",
+							"sid": 960663873951757,
+							"disabled": true,
+							"parameters": {
+								"frame-number": "Mouse_Type"
+							}
+						}
+					],
+					"sid": 314849845331037
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-movement",
+							"objectClass": "Mouse",
+							"sid": 568866528390037
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "Cursors",
+							"sid": 149016026066403
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Cursors",
+							"sid": 316077036377206,
+							"parameters": {
+								"object": "Cursor_effect",
+								"layer": "\"Mouse\"",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-bottom",
+							"objectClass": "Cursor_effect",
+							"sid": 107970207947433
+						}
+					],
+					"sid": 263413306430708
 				}
 			],
 			"sid": 680027662710333
@@ -1075,6 +1181,15 @@
 									"sid": 769289758872550,
 									"parameters": {
 										"object": "configuracoes",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 846959786166618,
+									"parameters": {
+										"object": "Cursor_effect",
 										"time-scale": "1.0"
 									}
 								},
