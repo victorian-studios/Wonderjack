@@ -147,6 +147,88 @@
 						"z": 0,
 						"angle": 0.36755297971040446
 					}
+				},
+				{
+					"type": "Text_Static_Generic",
+					"properties": {
+						"text": "Join now!",
+						"enable-bbcode": true,
+						"font": "Alice-Regular",
+						"size": 39,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 345,
+					"sid": 135406940788674,
+					"tags": "",
+					"instanceVariables": {
+						"my_id": 0,
+						"my_txt": "menu.discord_join"
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 345,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"d": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZ": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformD": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformSZ": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 181.18545532226562,
+						"y": 966,
+						"width": 312.2233055004368,
+						"height": 66.20929839391374,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
 				}
 			],
 			"sid": 838898855318149,
@@ -459,57 +541,7 @@
 					"name": "Extras",
 					"overriden": 0,
 					"subLayers": [],
-					"instances": [
-						{
-							"type": "Text_Ai_Da_Vida",
-							"properties": {
-								"text": "v. demo",
-								"enable-bbcode": true,
-								"font": "Arial",
-								"size": 31,
-								"line-height": 0,
-								"bold": false,
-								"italic": false,
-								"color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"horizontal-alignment": "left",
-								"vertical-alignment": "top",
-								"wrapping": "word",
-								"text-direction": "ltr",
-								"icon-set": -1,
-								"initially-visible": true,
-								"origin": "top-left",
-								"read-aloud": false
-							},
-							"uid": 65,
-							"sid": 831597221923102,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 1772.6446280991736,
-								"y": 1032,
-								"width": 160,
-								"height": 68.24875350044385,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"z": 0,
-								"angle": 0
-							}
-						}
-					],
+					"instances": [],
 					"sid": 364699067931175,
 					"effectTypes": [],
 					"isInitiallyVisible": false,
@@ -2626,7 +2658,7 @@
 			],
 			"instances": [
 				{
-					"type": "Btn_Back2",
+					"type": "Btn_Back_Flag",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -5729,7 +5761,7 @@
 					}
 				},
 				{
-					"type": "Btn_Back2",
+					"type": "Btn_Back_Flag",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -6025,6 +6057,207 @@
 				1,
 				1,
 				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Warning",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "demo_end",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 158,
+					"sid": 727427654912405,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 960,
+						"y": 540,
+						"width": 750,
+						"height": 312,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Text_Static_Generic",
+					"properties": {
+						"text": "...",
+						"enable-bbcode": true,
+						"font": "Alice-Regular",
+						"size": 39,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 343,
+					"sid": 206674004029468,
+					"tags": "",
+					"instanceVariables": {
+						"my_id": 0,
+						"my_txt": "demo.sorry"
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 343,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"d": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZ": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformD": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformSZ": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 643,
+						"y": 427,
+						"width": 630,
+						"height": 227.20929839391374,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Demo_Fade_Sprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 344,
+					"sid": 858520646102437,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 319,
+						"y": -211,
+						"width": 90,
+						"height": 99,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
+			"sid": 623429762693450,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				0
 			],
 			"backgroundColor": [
 				0.3686274509803922,
@@ -6975,42 +7208,7 @@
 			"name": "Black",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "Video",
-					"properties": {
-						"primary-source": "",
-						"primary-format": "mp4-h264",
-						"secondary-source": "",
-						"secondary-format": "webm-vp9",
-						"autoplay": "yes",
-						"play-in-background": false,
-						"initially-visible": true
-					},
-					"uid": 158,
-					"sid": 813247013373305,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -60,
-						"y": -358,
-						"width": 320,
-						"height": 240,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 458295053061416,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -7078,7 +7276,7 @@
 		},
 		{
 			"name": "Mouse",
-			"overriden": 0,
+			"overriden": 1,
 			"subLayers": [],
 			"instances": [
 				{

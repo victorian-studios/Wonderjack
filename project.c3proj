@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 49502,
-	"name": "GameJamPlus (2025)",
+	"name": "Wonderjack",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -89,7 +89,7 @@
 			"name": "Steamworks",
 			"author": "Scirra",
 			"bundled": false,
-			"version": "1.6.0.0",
+			"version": "1.7.0.0",
 			"sdkVersion": 2
 		},
 		{
@@ -110,13 +110,6 @@
 			"type": "plugin",
 			"id": "shadowlight",
 			"name": "Shadow light",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "video",
-			"name": "Video",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -284,10 +277,9 @@
 			"Card_Numb_Old",
 			"Quadro_Turns_Shadow",
 			"Text_Round_Numb",
-			"Video",
 			"Bkg_Codex",
 			"Btn_Codex",
-			"Btn_Back2",
+			"Btn_Back_Flag",
 			"Btn_Options",
 			"card_enemy",
 			"Cursor_default",
@@ -318,11 +310,16 @@
 			"ShadowLight",
 			"Effect_Light",
 			"demo_end",
-			"back_button_outline_sem_texto",
+			"Btn_Back_2",
 			"Options_Flag",
 			"Text_Relic_Name",
 			"Text_Relic_Flavor",
-			"Cursor_effect"
+			"Cursor_effect",
+			"Effect_Light_Candle_Color",
+			"Effect_Light_Candle_Mask",
+			"Demo_Fade_Sprite",
+			"Btn_Confirm",
+			"Btn_Deny"
 		],
 		"subfolders": []
 	},
@@ -367,7 +364,7 @@
 			"Test",
 			"E Intro",
 			"E_Story",
-			"Event sheet 1"
+			"E_Demo_End"
 		],
 		"subfolders": []
 	},
@@ -929,7 +926,7 @@
 		"pixelRounding": false,
 		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
-		"useLoaderLayout": false,
+		"useLoaderLayout": true,
 		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "high",
 		"viewportFit": "auto",
@@ -965,7 +962,7 @@
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "none",
 		"preloadSounds": true,
 		"uidAllocationMode": "increment",
 		"cordovaiOSScheme": "app",

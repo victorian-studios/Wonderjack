@@ -425,6 +425,15 @@
 					}
 				},
 				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 827569882421563,
+					"parameters": {
+						"layer": "\"ESCURO\"",
+						"opacity": "45"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Hand_Player",
 					"sid": 162472034995330,
@@ -684,6 +693,7 @@
 							"id": "set-visible",
 							"objectClass": "configuracoes",
 							"sid": 852238008809625,
+							"disabled": true,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -1121,6 +1131,15 @@
 							"behaviorType": "Sine",
 							"parameters": {
 								"state": "inactive"
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 131772682200120,
+							"parameters": {
+								"type": "log",
+								"message": "\"Card draw func. Who: \"&Who & \" | Hidden: \"& Hidden & \" | Specific: \"&Specific & \" | Warning: \"&Warning & \" | isPower: \" & isPower"
 							}
 						}
 					],
@@ -5267,6 +5286,10 @@
 									],
 									"sid": 650662179351543,
 									"children": [
+										{
+											"eventType": "comment",
+											"text": "Se tiver a relíquia e não estourar, passa o turno normalmente"
+										},
 										{
 											"eventType": "block",
 											"conditions": [
@@ -15517,6 +15540,15 @@
 								"layer": "\"Mouse\"",
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 527939032765616,
+							"parameters": {
+								"layer": "\"ESCURO\"",
+								"opacity": "45"
+							}
 						}
 					],
 					"sid": 711062982837318,
@@ -15644,7 +15676,7 @@
 								{
 									"id": "repeat",
 									"objectClass": "System",
-									"sid": 218292615539963,
+									"sid": 446930260011049,
 									"parameters": {
 										"count": "4"
 									}
@@ -15652,7 +15684,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 285346925278033,
+									"sid": 129208196234892,
 									"parameters": {
 										"variable": "Start"
 									}
@@ -15662,14 +15694,14 @@
 								{
 									"id": "set-at-x",
 									"objectClass": "A_TheRng",
-									"sid": 443405589069189,
+									"sid": 183998888607341,
 									"parameters": {
 										"x": "loopindex",
 										"value": "choose ( 1, 2 )"
 									}
 								}
 							],
-							"sid": 485589530248157
+							"sid": 466760687489981
 						},
 						{
 							"eventType": "comment",
@@ -16115,6 +16147,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 698487866644550,
+									"parameters": {
+										"layer": "\"ESCURO\"",
+										"opacity": "30"
+									}
+								},
 								{
 									"id": "set-fade-in-time",
 									"objectClass": "Enemy",
@@ -16782,9 +16823,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 673446491332858,
+													"sid": 693588253913324,
 													"parameters": {
-														"seconds": "1",
+														"seconds": "2 - Opt_FastMode_Secs",
 														"use-timescale": true
 													}
 												},
@@ -16812,7 +16853,7 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "Special Power"
+											"text": "Special Power - March Hare"
 										},
 										{
 											"eventType": "block",
@@ -16832,9 +16873,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 986151409114005,
+													"sid": 878667963432721,
 													"parameters": {
-														"seconds": "4 - Opt_FastMode_Secs",
+														"seconds": "5 - Opt_FastMode_Secs",
 														"use-timescale": true
 													}
 												},
@@ -16848,9 +16889,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 195776781581362,
+													"sid": 442978408048096,
 													"parameters": {
-														"seconds": "1",
+														"seconds": "2 - Opt_FastMode_Secs",
 														"use-timescale": true
 													}
 												},
@@ -18019,10 +18060,10 @@
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 561921132640766,
+															"sid": 361269793320776,
 															"parameters": {
 																"variable": "EnemyAI_Special",
-																"value": "100"
+																"value": "50"
 															}
 														}
 													],
@@ -18193,7 +18234,7 @@
 													"children": [
 														{
 															"eventType": "comment",
-															"text": "Special Power"
+															"text": "Special Power - Humpty Dumpty"
 														},
 														{
 															"eventType": "block",
@@ -19773,6 +19814,14 @@
 															"objectClass": "Effect_Smoke",
 															"sid": 817204905251484,
 															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-opacity",
+															"objectClass": "Txt_debug",
+															"sid": 350934398886975,
+															"parameters": {
+																"opacity": "100"
+															}
 														}
 													],
 													"sid": 801236938054677
@@ -19814,10 +19863,10 @@
 								{
 									"id": "log",
 									"objectClass": "Browser",
-									"sid": 856988417111010,
+									"sid": 105152626633551,
 									"parameters": {
 										"type": "log",
-										"message": "\"- - - - - - - - - - - TURNO INIMIGO - - - - - - - - - - -\""
+										"message": "\"- - - - - - TURNO INIMIGO \" & EnemyName & \"- - - - - -\""
 									}
 								},
 								{
@@ -22502,7 +22551,7 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "Se o inimigo tiver exatamente 2 pontos, então acabou o jogo"
+									"text": "Se o inimigo tiver exatamente 3 pontos, então acabou o jogo"
 								},
 								{
 									"eventType": "block",
@@ -22546,6 +22595,16 @@
 												}
 											],
 											"actions": [
+												{
+													"callFunction": "Relic Feedback",
+													"sid": 857141411691029,
+													"parameters": [
+														"\"crown\"",
+														true,
+														false,
+														false
+													]
+												},
 												{
 													"id": "wait",
 													"objectClass": "System",
@@ -23535,12 +23594,26 @@
 													"sid": 162523066226732
 												},
 												{
+													"eventType": "comment",
+													"text": "Para demais fases"
+												},
+												{
 													"eventType": "block",
 													"conditions": [
 														{
 															"id": "else",
 															"objectClass": "System",
 															"sid": 611179049958878
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 431499557319606,
+															"parameters": {
+																"variable": "Match",
+																"comparison": 1,
+																"value": "2"
+															}
 														}
 													],
 													"actions": [
@@ -23852,6 +23925,350 @@
 														}
 													],
 													"sid": 442384061671939
+												},
+												{
+													"eventType": "comment",
+													"text": "Se for a partida 2, não mostra reliquias e leva pro fim da demo"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 517969348109592
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 654032649506832,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-layer-visible",
+															"objectClass": "System",
+															"sid": 114599528721796,
+															"parameters": {
+																"layer": "\"Turn\"",
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-visible",
+															"objectClass": "Text_Turn",
+															"sid": 984703782866701,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Text_Turn",
+															"sid": 128395083591804,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "0"
+															}
+														},
+														{
+															"id": "set-wait-time",
+															"objectClass": "Text_Turn",
+															"sid": 476013472363413,
+															"behaviorType": "Fade",
+															"parameters": {
+																"wait-time": "0"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Text_Turn",
+															"sid": 328935405259054,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "1.5"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Text_Turn",
+															"sid": 718029187484614,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-visible",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 480144589239842,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 177431604845032,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "0"
+															}
+														},
+														{
+															"id": "set-wait-time",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 943350450444445,
+															"behaviorType": "Fade",
+															"parameters": {
+																"wait-time": "0"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 209307532383547,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "1.5"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 506502500284549,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 939866150076427,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"callFunction": "Talk",
+															"sid": 527459125227607,
+															"parameters": [
+																"Enemy.AnimationName",
+																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
+																false,
+																"0"
+															]
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 412460866201971,
+															"parameters": {
+																"seconds": "2",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Enemy",
+															"sid": 307762939408361,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "0"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Enemy",
+															"sid": 107283729293470,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "1"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Enemy",
+															"sid": 294460729794166,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 320917335738643,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "0"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 239572412036385,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "1"
+															}
+														},
+														{
+															"id": "set-wait-time",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 816429400612303,
+															"behaviorType": "Fade",
+															"parameters": {
+																"wait-time": "Self.extra_fade"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Enemy_Extra_Anim",
+															"sid": 897928325996794,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 705178579268816,
+															"parameters": {
+																"variable": "PlayerPoints",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 910380783004892,
+															"parameters": {
+																"variable": "EnemyPoints",
+																"value": "0"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 552588307440560,
+															"parameters": {
+																"seconds": "1",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-layer-visible",
+															"objectClass": "System",
+															"sid": 711776309280728,
+															"parameters": {
+																"layer": "\"Luz Inimigo\"",
+																"visibility": "invisible"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 291841620100325,
+															"parameters": {
+																"seconds": "1",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "add-to-eventvar",
+															"objectClass": "System",
+															"sid": 577348519316467,
+															"parameters": {
+																"variable": "Match",
+																"value": "1"
+															}
+														},
+														{
+															"id": "shuffle",
+															"objectClass": "A_Deck_Power",
+															"sid": 681582512357224,
+															"parameters": {
+																"axis": "x"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Hand_CPU",
+															"sid": 512974155177975,
+															"parameters": {
+																"instance-variable": "PowerLimit_Rounds",
+																"value": "EnemyPowerLimit_Rounds"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Hand_Player",
+															"sid": 973110508035425,
+															"parameters": {
+																"instance-variable": "PowerLimit_Rounds",
+																"value": "PlayerPowerLimit_Rounds"
+															}
+														},
+														{
+															"id": "destroy",
+															"objectClass": "Icon_Protect",
+															"sid": 363015560848190
+														},
+														{
+															"id": "destroy",
+															"objectClass": "Icon_Hidden_Card",
+															"sid": 981325981400103
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 559399347266337,
+															"parameters": {
+																"seconds": "0.01",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 218719146616875,
+															"parameters": {
+																"type": "log",
+																"message": "\"- - - - FIM DA DEMO - - - -\""
+															}
+														},
+														{
+															"id": "set-layer-visible",
+															"objectClass": "System",
+															"sid": 732693128727498,
+															"parameters": {
+																"layer": "\"Luz Fase - Mesa\"",
+																"visibility": "invisible"
+															}
+														},
+														{
+															"callFunction": "Transition",
+															"sid": 351225144748541,
+															"parameters": [
+																false,
+																false
+															]
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 569644781177804,
+															"parameters": {
+																"seconds": "3",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 375811293095237,
+															"parameters": {
+																"layout": "Demo_End"
+															}
+														}
+													],
+													"sid": 729768674390546
 												}
 											]
 										}
@@ -24016,6 +24433,15 @@
 													}
 												},
 												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 972395322671889,
+													"parameters": {
+														"variable": "PlayerNumbers",
+														"value": "0"
+													}
+												},
+												{
 													"id": "set-instvar-value",
 													"objectClass": "Table_CPU",
 													"sid": 443793200424875,
@@ -24035,6 +24461,15 @@
 												},
 												{
 													"id": "set-instvar-value",
+													"objectClass": "Table_CPU",
+													"sid": 737551745524694,
+													"parameters": {
+														"instance-variable": "Visible_Count",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-instvar-value",
 													"objectClass": "Table_Player",
 													"sid": 320230899846629,
 													"parameters": {
@@ -24049,6 +24484,15 @@
 													"parameters": {
 														"instance-variable": "Next_Hidden",
 														"value": "false"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Table_Player",
+													"sid": 853508254857238,
+													"parameters": {
+														"instance-variable": "Visible_Count",
+														"value": "0"
 													}
 												}
 											],
@@ -24535,6 +24979,16 @@
 													}
 												},
 												{
+													"callFunction": "Relic Feedback",
+													"sid": 393168203081144,
+													"parameters": [
+														"\"crown\"",
+														true,
+														false,
+														false
+													]
+												},
+												{
 													"id": "tween-two-properties",
 													"objectClass": "Relics",
 													"sid": 946224224278965,
@@ -24555,9 +25009,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 329102829560503,
+													"sid": 288879625753314,
 													"parameters": {
-														"seconds": "1.5",
+														"seconds": "2.5 - Opt_FastMode_Secs",
 														"use-timescale": true
 													}
 												},
@@ -24641,9 +25095,9 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 120214922270487,
+															"sid": 939966858167407,
 															"parameters": {
-																"seconds": "3",
+																"seconds": "3 - Opt_FastMode_Secs",
 																"use-timescale": true
 															}
 														},
@@ -25213,6 +25667,14 @@
 									"objectClass": "Effect_Smoke",
 									"sid": 341201143468777,
 									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Txt_debug",
+									"sid": 373910549854791,
+									"parameters": {
+										"opacity": "100"
+									}
 								}
 							],
 							"sid": 827608816270090
@@ -25728,7 +26190,7 @@
 													"objectClass": "Candle_Flame",
 													"sid": 837480966404854,
 													"parameters": {
-														"child": "Effect_Light",
+														"child": "Effect_Light_Candle_Mask",
 														"which": "own"
 													}
 												}
@@ -25736,7 +26198,7 @@
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 135686635752301
 												}
 											],
@@ -25827,7 +26289,7 @@
 													"objectClass": "Candle_Flame",
 													"sid": 948332802014117,
 													"parameters": {
-														"child": "Effect_Light",
+														"child": "Effect_Light_Candle_Mask",
 														"which": "own"
 													}
 												}
@@ -25835,7 +26297,7 @@
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 312808159580537
 												}
 											],
@@ -25912,7 +26374,7 @@
 													"objectClass": "Candle_Flame",
 													"sid": 954591217191327,
 													"parameters": {
-														"child": "Effect_Light",
+														"child": "Effect_Light_Candle_Mask",
 														"which": "own"
 													}
 												}
@@ -25920,7 +26382,7 @@
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 794924086005456
 												}
 											],
@@ -25997,7 +26459,7 @@
 													"objectClass": "Candle_Flame",
 													"sid": 438330166339968,
 													"parameters": {
-														"child": "Effect_Light",
+														"child": "Effect_Light_Candle_Mask",
 														"which": "own"
 													}
 												}
@@ -26005,7 +26467,7 @@
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 357618351067457
 												}
 											],
@@ -26115,42 +26577,12 @@
 									}
 								},
 								{
-									"id": "spawn-another-object",
-									"objectClass": "Candle_Flame",
-									"sid": 982448619087497,
-									"parameters": {
-										"object": "Effect_Light",
-										"layer": "\"ESCURO\"",
-										"image-point": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "add-child",
-									"objectClass": "Candle_Flame",
-									"sid": 801331321858513,
-									"parameters": {
-										"child": "Effect_Light",
-										"transform-x": true,
-										"transform-y": true,
-										"transform-z-elevation": false,
-										"transform-w": false,
-										"transform-h": false,
-										"transform-d": false,
-										"transform-a": false,
-										"transform-o": false,
-										"transform-visibility": false,
-										"destroy-with-parent": false
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Effect_Light",
-									"sid": 190436617870384,
-									"parameters": {
-										"frame-number": "1"
-									}
+									"callFunction": "Spawn_Candle_Light",
+									"sid": 696621446940754,
+									"parameters": [
+										"Candle_Flame.UID",
+										true
+									]
 								}
 							],
 							"sid": 440622419852296
@@ -26283,42 +26715,12 @@
 									}
 								},
 								{
-									"id": "spawn-another-object",
-									"objectClass": "Candle_Flame",
-									"sid": 660361703990434,
-									"parameters": {
-										"object": "Effect_Light",
-										"layer": "\"ESCURO\"",
-										"image-point": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "add-child",
-									"objectClass": "Candle_Flame",
-									"sid": 908773592897954,
-									"parameters": {
-										"child": "Effect_Light",
-										"transform-x": true,
-										"transform-y": true,
-										"transform-z-elevation": false,
-										"transform-w": false,
-										"transform-h": false,
-										"transform-d": false,
-										"transform-a": false,
-										"transform-o": false,
-										"transform-visibility": false,
-										"destroy-with-parent": false
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Effect_Light",
-									"sid": 176681446925518,
-									"parameters": {
-										"frame-number": "1"
-									}
+									"callFunction": "Spawn_Candle_Light",
+									"sid": 678648515235780,
+									"parameters": [
+										"Candle_Flame.UID",
+										true
+									]
 								}
 							],
 							"sid": 233348728269105
@@ -26479,42 +26881,12 @@
 									}
 								},
 								{
-									"id": "spawn-another-object",
-									"objectClass": "Candle_Flame",
-									"sid": 249233283426487,
-									"parameters": {
-										"object": "Effect_Light",
-										"layer": "\"ESCURO\"",
-										"image-point": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "add-child",
-									"objectClass": "Candle_Flame",
-									"sid": 257773095677751,
-									"parameters": {
-										"child": "Effect_Light",
-										"transform-x": true,
-										"transform-y": true,
-										"transform-z-elevation": false,
-										"transform-w": false,
-										"transform-h": false,
-										"transform-d": false,
-										"transform-a": false,
-										"transform-o": false,
-										"transform-visibility": false,
-										"destroy-with-parent": false
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Effect_Light",
-									"sid": 537267518949232,
-									"parameters": {
-										"frame-number": "1"
-									}
+									"callFunction": "Spawn_Candle_Light",
+									"sid": 126545538130756,
+									"parameters": [
+										"Candle_Flame.UID",
+										true
+									]
 								}
 							],
 							"sid": 574395461193870
@@ -26622,7 +26994,7 @@
 											"objectClass": "Candle_Flame",
 											"sid": 455081505237634,
 											"parameters": {
-												"child": "Effect_Light",
+												"child": "Effect_Light_Candle_Mask",
 												"which": "own"
 											}
 										}
@@ -26630,7 +27002,7 @@
 									"actions": [
 										{
 											"id": "destroy",
-											"objectClass": "Effect_Light",
+											"objectClass": "Effect_Light_Candle_Mask",
 											"sid": 397786579534007
 										}
 									],
@@ -26707,7 +27079,7 @@
 											"objectClass": "Candle_Flame",
 											"sid": 728314247569204,
 											"parameters": {
-												"child": "Effect_Light",
+												"child": "Effect_Light_Candle_Mask",
 												"which": "own"
 											}
 										}
@@ -26715,7 +27087,7 @@
 									"actions": [
 										{
 											"id": "destroy",
-											"objectClass": "Effect_Light",
+											"objectClass": "Effect_Light_Candle_Mask",
 											"sid": 632636192372525
 										}
 									],
@@ -26832,16 +27204,16 @@
 													"objectClass": "Candle_Flame",
 													"sid": 191532649804721,
 													"parameters": {
-														"object": "Effect_Light",
-														"offset-x": "Effect_Light.X",
-														"offset-y": "Effect_Light.Y"
+														"object": "Effect_Light_Candle_Mask",
+														"offset-x": "Effect_Light_Candle_Mask.X",
+														"offset-y": "Effect_Light_Candle_Mask.Y"
 													}
 												}
 											],
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 306494802101413
 												}
 											],
@@ -26932,7 +27304,7 @@
 													"objectClass": "Candle_Flame",
 													"sid": 629362026611675,
 													"parameters": {
-														"child": "Effect_Light",
+														"child": "Effect_Light_Candle_Mask",
 														"which": "own"
 													}
 												}
@@ -26940,7 +27312,7 @@
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 258545316123458
 												}
 											],
@@ -27017,7 +27389,7 @@
 													"objectClass": "Candle_Flame",
 													"sid": 110426078997753,
 													"parameters": {
-														"child": "Effect_Light",
+														"child": "Effect_Light_Candle_Mask",
 														"which": "own"
 													}
 												}
@@ -27025,7 +27397,7 @@
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 800224273796366
 												}
 											],
@@ -27102,7 +27474,7 @@
 													"objectClass": "Candle_Flame",
 													"sid": 594251616852646,
 													"parameters": {
-														"child": "Effect_Light",
+														"child": "Effect_Light_Candle_Mask",
 														"which": "own"
 													}
 												}
@@ -27110,7 +27482,7 @@
 											"actions": [
 												{
 													"id": "destroy",
-													"objectClass": "Effect_Light",
+													"objectClass": "Effect_Light_Candle_Mask",
 													"sid": 734386741072963
 												}
 											],
@@ -27236,42 +27608,12 @@
 											}
 										},
 										{
-											"id": "spawn-another-object",
-											"objectClass": "Candle_Flame",
-											"sid": 248968846456180,
-											"parameters": {
-												"object": "Effect_Light",
-												"layer": "\"ESCURO\"",
-												"image-point": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "add-child",
-											"objectClass": "Candle_Flame",
-											"sid": 129859065846824,
-											"parameters": {
-												"child": "Effect_Light",
-												"transform-x": true,
-												"transform-y": true,
-												"transform-z-elevation": false,
-												"transform-w": false,
-												"transform-h": false,
-												"transform-d": false,
-												"transform-a": false,
-												"transform-o": false,
-												"transform-visibility": false,
-												"destroy-with-parent": false
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "Effect_Light",
-											"sid": 927980997963968,
-											"parameters": {
-												"frame-number": "2"
-											}
+											"callFunction": "Spawn_Candle_Light",
+											"sid": 931572815250537,
+											"parameters": [
+												"Candle_Flame.UID",
+												false
+											]
 										}
 									],
 									"sid": 156171157279386
@@ -27364,6 +27706,14 @@
 												"ping-pong": "no",
 												"repeat-count": "1"
 											}
+										},
+										{
+											"callFunction": "Spawn_Candle_Light",
+											"sid": 703280019904074,
+											"parameters": [
+												"Candle_Flame.UID",
+												false
+											]
 										}
 									],
 									"sid": 388395153430968
@@ -27514,42 +27864,12 @@
 											}
 										},
 										{
-											"id": "spawn-another-object",
-											"objectClass": "Candle_Flame",
-											"sid": 775054797318080,
-											"parameters": {
-												"object": "Effect_Light",
-												"layer": "\"ESCURO\"",
-												"image-point": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "add-child",
-											"objectClass": "Candle_Flame",
-											"sid": 406165109123048,
-											"parameters": {
-												"child": "Effect_Light",
-												"transform-x": true,
-												"transform-y": true,
-												"transform-z-elevation": false,
-												"transform-w": false,
-												"transform-h": false,
-												"transform-d": false,
-												"transform-a": false,
-												"transform-o": false,
-												"transform-visibility": false,
-												"destroy-with-parent": false
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "Effect_Light",
-											"sid": 239675538804731,
-											"parameters": {
-												"frame-number": "2"
-											}
+											"callFunction": "Spawn_Candle_Light",
+											"sid": 358019479758192,
+											"parameters": [
+												"Candle_Flame.UID",
+												false
+											]
 										}
 									],
 									"sid": 317686487268087
@@ -27672,42 +27992,12 @@
 											}
 										},
 										{
-											"id": "spawn-another-object",
-											"objectClass": "Candle_Flame",
-											"sid": 843443236913207,
-											"parameters": {
-												"object": "Effect_Light",
-												"layer": "\"ESCURO\"",
-												"image-point": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "add-child",
-											"objectClass": "Candle_Flame",
-											"sid": 343629262561427,
-											"parameters": {
-												"child": "Effect_Light",
-												"transform-x": true,
-												"transform-y": true,
-												"transform-z-elevation": false,
-												"transform-w": false,
-												"transform-h": false,
-												"transform-d": false,
-												"transform-a": false,
-												"transform-o": false,
-												"transform-visibility": false,
-												"destroy-with-parent": false
-											}
-										},
-										{
-											"id": "set-animation-frame",
-											"objectClass": "Effect_Light",
-											"sid": 485734513849440,
-											"parameters": {
-												"frame-number": "2"
-											}
+											"callFunction": "Spawn_Candle_Light",
+											"sid": 258300180821966,
+											"parameters": [
+												"Candle_Flame.UID",
+												false
+											]
 										}
 									],
 									"sid": 650359278804117
@@ -27870,45 +28160,230 @@
 									}
 								},
 								{
-									"id": "spawn-another-object",
-									"objectClass": "Candle_Flame",
-									"sid": 388947283496760,
-									"parameters": {
-										"object": "Effect_Light",
-										"layer": "\"ESCURO\"",
-										"image-point": "0",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "add-child",
-									"objectClass": "Candle_Flame",
-									"sid": 321406910448942,
-									"parameters": {
-										"child": "Effect_Light",
-										"transform-x": true,
-										"transform-y": true,
-										"transform-z-elevation": false,
-										"transform-w": false,
-										"transform-h": false,
-										"transform-d": false,
-										"transform-a": false,
-										"transform-o": false,
-										"transform-visibility": false,
-										"destroy-with-parent": false
-									}
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Effect_Light",
-									"sid": 184061786624879,
-									"parameters": {
-										"frame-number": "2"
-									}
+									"callFunction": "Spawn_Candle_Light",
+									"sid": 857030883228897,
+									"parameters": [
+										"Candle_Flame.UID",
+										false
+									]
 								}
 							],
 							"sid": 972930690131643
+						}
+					]
+				},
+				{
+					"functionName": "Spawn_Candle_Light",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Candle_Flame_UID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 324036020686946
+						},
+						{
+							"name": "Blue",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "true - azul / false - vermelho",
+							"sid": 179446448294418
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 570574680172150,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 480584686927667,
+									"parameters": {
+										"object": "Candle_Flame",
+										"expression": "Candle_Flame.UID",
+										"comparison": 0,
+										"value": "Candle_Flame_UID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 245141159755120,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 571175398077038,
+											"parameters": {
+												"variable": "Blue"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Candle_Flame",
+											"sid": 242534480461848,
+											"parameters": {
+												"object": "Effect_Light_Candle_Mask",
+												"layer": "\"ESCURO\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Candle_Flame",
+											"sid": 146456649620699,
+											"parameters": {
+												"child": "Effect_Light_Candle_Mask",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": false
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 158196885561829,
+											"parameters": {
+												"object": "Effect_Light_Candle_Color",
+												"layer": "\"LUZ\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 430547982130228,
+											"parameters": {
+												"child": "Effect_Light_Candle_Color",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": true
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Effect_Light_Candle_Color",
+											"sid": 536882460684781,
+											"parameters": {
+												"frame-number": "2"
+											}
+										}
+									],
+									"sid": 766271938664784
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 236443439676191
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Candle_Flame",
+											"sid": 265190321234163,
+											"parameters": {
+												"object": "Effect_Light_Candle_Mask",
+												"layer": "\"ESCURO\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Candle_Flame",
+											"sid": 472984784039022,
+											"parameters": {
+												"child": "Effect_Light_Candle_Mask",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": false
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 730913477119467,
+											"parameters": {
+												"object": "Effect_Light_Candle_Color",
+												"layer": "\"LUZ\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 307407121128974,
+											"parameters": {
+												"child": "Effect_Light_Candle_Color",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": true
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Effect_Light_Candle_Color",
+											"sid": 573006711126022,
+											"parameters": {
+												"frame-number": "3"
+											}
+										}
+									],
+									"sid": 699523289455660
+								}
+							]
 						}
 					]
 				},
@@ -29966,6 +30441,16 @@
 													"objectClass": "A_Deck_Numb",
 													"sid": 871586549454799,
 													"isInverted": true
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Table_Player",
+													"sid": 540683605254508,
+													"parameters": {
+														"instance-variable": "Cards",
+														"comparison": 2,
+														"value": "7"
+													}
 												}
 											],
 											"actions": [
@@ -30062,6 +30547,16 @@
 													"id": "else",
 													"objectClass": "System",
 													"sid": 813380040130387
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Table_Player",
+													"sid": 282099879030892,
+													"parameters": {
+														"instance-variable": "Cards",
+														"comparison": 2,
+														"value": "7"
+													}
 												}
 											],
 											"actions": [
@@ -30078,9 +30573,56 @@
 														"stereo-pan": "0",
 														"tag-optional": "\"\""
 													}
+												},
+												{
+													"callFunction": "Talk",
+													"sid": 411005920703107,
+													"parameters": [
+														"\"Alice\"",
+														"\"tutorial.alice_self_warning.empty_deck\"",
+														false,
+														"0"
+													]
 												}
 											],
 											"sid": 511056415753364
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 654352111016134
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 287782446912872,
+													"parameters": {
+														"audio-file": {
+															"path": "494768__alderman2k__error"
+														},
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"callFunction": "Talk",
+													"sid": 839541411603378,
+													"parameters": [
+														"\"Alice\"",
+														"\"tutorial.alice_self_warning.full_card_table\"",
+														false,
+														"0"
+													]
+												}
+											],
+											"sid": 447214875912886
 										}
 									]
 								}
@@ -31747,6 +32289,15 @@
 									"parameters": {
 										"instance-variable": "Player"
 									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 278319430426943,
+									"parameters": {
+										"layer": "\"Talking\""
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
@@ -32355,7 +32906,7 @@
 											"children": [
 												{
 													"eventType": "comment",
-													"text": "Special Power",
+													"text": "Special Power - Action",
 													"text-color": [
 														0.11764705882352941,
 														1,
@@ -32637,7 +33188,7 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "Special Power",
+											"text": "Special Power - Action",
 											"text-color": [
 												0.11764705882352941,
 												1,
@@ -40194,6 +40745,10 @@
 									"sid": 712607707684795,
 									"children": [
 										{
+											"eventType": "comment",
+											"text": "Turno extra The Weedles"
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
@@ -41378,7 +41933,7 @@
 					]
 				},
 				{
-					"functionName": "Apply Relic Effect",
+					"functionName": "Apply Relic Power",
 					"functionDescription": "se possível, aplica um efeito após ser criada",
 					"functionCategory": "",
 					"functionReturnType": "none",
@@ -41657,7 +42212,7 @@
 							"name": "anim",
 							"type": "string",
 							"initialValue": "",
-							"comment": "",
+							"comment": "AnimationName da relíquia",
 							"sid": 141198817099942
 						},
 						{
@@ -42105,7 +42660,7 @@
 							}
 						},
 						{
-							"callFunction": "Apply Relic Effect",
+							"callFunction": "Apply Relic Power",
 							"sid": 917879475883160,
 							"parameters": [
 								"Relic_card.AnimationName"
@@ -42176,6 +42731,45 @@
 												"animation": "Relic_card.AnimationName",
 												"from": "beginning"
 											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Relics",
+											"sid": 293456181127146,
+											"parameters": {
+												"object": "Effect_Light",
+												"layer": "\"ESCURO\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Effect_Light",
+											"sid": 441429639696451,
+											"parameters": {
+												"width": "400",
+												"height": "400"
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Relics",
+											"sid": 217424290942258,
+											"parameters": {
+												"child": "Effect_Light",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": true
+											}
 										}
 									],
 									"sid": 339782181204709
@@ -42219,6 +42813,45 @@
 											"parameters": {
 												"animation": "Relic_card.AnimationName",
 												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Relics",
+											"sid": 606714122623332,
+											"parameters": {
+												"object": "Effect_Light",
+												"layer": "\"ESCURO\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Effect_Light",
+											"sid": 350154630067276,
+											"parameters": {
+												"width": "400",
+												"height": "400"
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Relics",
+											"sid": 580690849670495,
+											"parameters": {
+												"child": "Effect_Light",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": true
 											}
 										}
 									],
@@ -46638,6 +47271,7 @@
 							"id": "spawn-another-object",
 							"objectClass": "Quadro_Turns",
 							"sid": 251074070225112,
+							"disabled": true,
 							"parameters": {
 								"object": "Text_Round_Numb",
 								"layer": "Self.LayerName",
@@ -46645,6 +47279,13 @@
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
+						},
+						{
+							"callFunction": "Count_Numbers",
+							"sid": 560507585489171,
+							"parameters": [
+								false
+							]
 						}
 					],
 					"sid": 817626238727882
@@ -46725,6 +47366,36 @@
 								"y": "100",
 								"create-hierarchy": false,
 								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Effect_Light",
+							"sid": 588998243541988,
+							"parameters": {
+								"object": "Effect_Light_Candle_Color",
+								"layer": "\"LUZ\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Effect_Light",
+							"sid": 874791687856061,
+							"parameters": {
+								"child": "Effect_Light_Candle_Color",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-z-elevation": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-d": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-visibility": false,
+								"destroy-with-parent": false
 							}
 						}
 					],

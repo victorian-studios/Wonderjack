@@ -18,6 +18,7 @@
             "btn_gallery": "Galeria",
             "btn_credits": "Créditos",
             "btn_back": "Voltar",
+            "discord_join": "Entre agora!",
             "codex": {
                 "name": "O Codex",
                 "info_lock": "???",
@@ -181,7 +182,7 @@
                 "7": "No seu turno, você tem apenas 4 ações possíveis: [b]comprar um número[/b], [b]parar[/b], [b]comprar um poder[/b] ou [b]jogar um poder[/b].",
                 "8": "Para comprar um número, clique no baralho [color=#005eff]azul[/color]. Isso faz com que você compre a primeira carta do baralho.",
                 "9": "Para parar, clique no sino. Isso faz com que você finalize a rodada e o oponente pode fazer apenas uma ação antes dos números serem contabilizados.",
-                "10": "Quando a rodada acaba, todas os números ocultas são revelados e somados para ver quem chegou a [b]21[/b] ou o mais próximo dele. Haverá empate se todos os jogadores ultrapassarem 21.",
+                "10": "Quando a rodada acaba, todas os números são revelados e somados para ver quem chegou a [b]21[/b] ou o mais próximo dele. Haverá empate se todos os jogadores ultrapassarem 21.",
                 "11": "Para a primeira rodada, vamos ignorar o baralho da esquerda a fim de simplificarmos a explicação.",
                 "12": "Agora, vamos jogar!",
                 "13": "Bem, eu não vou comprar mais cartas. Então vou parar!",
@@ -214,6 +215,10 @@
                 "tip_stop": "Se você está perto de chegar a [b]21[/b], é melhor você parar e evitar se arriscar. Pressione o sino para parar esta rodada.",
                 "tip_stop2": "Se a sua soma é 21 ou mais, é melhor não comprar mais cartas de número e parar esta rodada.",
                 "tip_power": "Pense de novo Alice, jogar este poder não seria muito inteligente."
+            },
+            "alice_self_warning": {
+                "empty_deck": "Bem... não tem mais nenhum carta sobrando.",
+                "full_card_table": "Já tem cartas de mais nesta mesa."
             }
         },
         "options": {
@@ -239,7 +244,10 @@
                 
             },
             "save": {
-                "title": "Apagar Salvamento"
+                "title": "Apagar Save",
+                "erase": "Delete seus dados de salvamento clicando no botão abaixo.",
+                "warning": "Você tem certeza?\n[b]Essa ação NÃO pode ser desfeita![/b]",
+                "delete_btn": "DELETAR"
             }
             
         },
@@ -326,21 +334,21 @@
                     "special": "Alice! Melhor de três? O que você acha?"
                 }
             },
-            "bell": "[u]O Sino[/u]: \n\nToque o sino para terminar seu turno. E então, seu oponente pode [color=#fa1c03]jogar apenas uma vez[/color] antes da rodada terminar. Nada acontece se for usado no último turno.",
-            "power": "[u]O Baralho de Poder[/u]: \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão. Você pode comprar [color=#f5fe05]{0}[/color] cartas nessa rodada.",
-            "power_hand_limit": "[u]O Baralho de Poder[/u]: \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão. Você [color=#fa1c03]não pode comprar cartas de poder[/color] por conta do limite da sua mão ([color=#f5fe05]{0}[/color] cartas).",
+            "bell": "[u]O Sino[/u] \n\nToque o sino para terminar seu turno. E então, seu oponente pode [color=#fa1c03]jogar apenas uma vez[/color] antes da rodada terminar. Nada acontece se for usado no último turno.",
+            "power": "[u]O Baralho de Poder[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê pode comprar [color=#f5fe05]{0}[/color] cartas nessa rodada.",
+            "power_hand_limit": "[u]O Baralho de Poder[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê [color=#fa1c03]não pode comprar cartas de poder[/color] por conta do limite da sua mão ([color=#f5fe05]{0}[/color] cartas).",
             "number" : "[u]O Baralho de Número[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.",
-            "number_easy" : "[u]O Baralho de Número[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa. Tem [color=#f5fe05]{0}[/color] cartas restantes neste baralho.",
+            "number_easy" : "[u]O Baralho de Número[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.\nTem [color=#f5fe05]{0}[/color] cartas restantes neste baralho.",
             "tut_start": "Toca do Coelho",
-            "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]. {3} [color=#f5fe05]ganhou[/color] esta rodada!",
+            "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color].\n{3} [color=#f5fe05]ganhou[/color] esta rodada!",
             "player_turn": "Turno da Alice",
             "enemy_turn": "Turno de {0}",
             "points": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]",
             "new_round": "Rodada [color=#f5fe05]{0}[/color] começa agora!",
             "new_match": "Um novo oponente aparece: [color=#f5fe05]{0}[/color]",
             "new_boss": "Um novo chefão aparece: [color=#fa1c03]{0}[/color]",
-            "tie": "Ninguém ganhou esta rordada.",
-            "looser": "Você [color=#fa1c03]perdeu[/color] esta partida.. que pena.",
+            "tie": "Ninguém ganhou esta rodada.",
+            "looser": "Você [color=#fa1c03]perdeu[/color] esta partida... que pena.",
             "winner": "Você [color=#f5fe05]ganhou[/color] esta partida. Continue assim!",
             "end": "Você [color=#f5fe05]ganhou[/color] de todos os 4 oponentes! Parabéns!",
             "revive": "Você conseguiu uma [color=#f5fe05]segunda chance[/color]! Mas sua relíquia foi destruída."
@@ -449,6 +457,10 @@
             "clairvoyance_cpu": "{0} teve uma bela visão das próximas [color=#f5fe05]duas[/color] cartas..."
             
         },
-        "demo_end": "E aqui é o fim da demo!\n\nMas a aventura de Alice está longe de acabar...\n\nMais oponentes, nívels, relíquias, poderes e extras te esperam no jogo completo!"
+        "demo": {
+            "end": "E aqui é o fim da demo!\n\nMas a aventura de Alice está longe de acabar...\n\nMais oponentes, níveis, relíquias, cartas de poder e extras te esperam no jogo completo!",
+            "wishlist": "Adicione na lista!",
+            "sorry": "Esta opção não está disponível na demo."
+        }
     }
 }

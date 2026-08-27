@@ -1,0 +1,171 @@
+{
+	"name": "E_Demo_End",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "E_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 568426779555576
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "TiledBackground",
+					"sid": 976091793648593,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loop\"",
+						"start-value": "-1085",
+						"end-value": "-5",
+						"time": "14",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "yes",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 810202951047747,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-100",
+						"duration": "0.5",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 690037986828567,
+					"parameters": {
+						"seconds": "0.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 962008124828343,
+					"parameters": {
+						"audio-file": {
+							"path": "Credits/18 - Phantom's Requiem (Loop)"
+						},
+						"loop": "not-looping",
+						"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 561007070870651
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 691915373536801
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TiledBackground",
+					"sid": 968398573461029,
+					"parameters": {
+						"y": "Self.Tween.Value(\"loop\")"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 971320079849136,
+					"parameters": {
+						"layer": "\"Fade\"",
+						"opacity": "Demo_Fade_Sprite.Opacity"
+					}
+				}
+			],
+			"sid": 744094883420832
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 700219774477246,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Back_2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 711544242719074,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Btn_Back_2",
+							"sid": 693796781755673,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "show-overlay-url",
+							"objectClass": "Steamworks",
+							"sid": 808703056105750,
+							"parameters": {
+								"url": "\"https://store.steampowered.com/app/4922040/Wonderjack/\"",
+								"modal": false
+							}
+						}
+					],
+					"sid": 264634751649504
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 912362624529229
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 620808456710719,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 382936955799558
+				}
+			]
+		}
+	],
+	"sid": 271661542900715
+}

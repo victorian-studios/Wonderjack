@@ -588,6 +588,50 @@
 			]
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-movement",
+					"objectClass": "Mouse",
+					"sid": 524741210703440
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "Cursors",
+					"sid": 375650421366871
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 683438172511055,
+					"parameters": {
+						"layer": "\"Pause\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Cursors",
+					"sid": 908279080313897,
+					"parameters": {
+						"object": "Cursor_effect",
+						"layer": "\"Mouse\"",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "Cursor_effect",
+					"sid": 985395716613967
+				}
+			],
+			"sid": 293448837897858
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Page Transitions",

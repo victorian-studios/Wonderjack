@@ -1176,6 +1176,41 @@
 			"overriden": 0,
 			"subLayers": [
 				{
+					"name": "LUZ",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [],
+					"sid": 183378742462456,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"sampling": "auto",
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
 					"name": "ESCURO",
 					"overriden": 0,
 					"subLayers": [
@@ -1210,12 +1245,6 @@
 												"magnitude-random": 0,
 												"enabled": true,
 												"live-preview": false
-											}
-										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
 											}
 										},
 										"Pin": {
@@ -1270,12 +1299,6 @@
 												"magnitude-random": 0,
 												"enabled": true,
 												"live-preview": false
-											}
-										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
 											}
 										},
 										"Pin": {
@@ -1368,12 +1391,6 @@
 												"live-preview": false
 											}
 										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
-											}
-										},
 										"Pin": {
 											"properties": {
 												"destroy": false
@@ -1426,12 +1443,6 @@
 												"magnitude-random": 0,
 												"enabled": true,
 												"live-preview": false
-											}
-										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
 											}
 										},
 										"Pin": {
@@ -1488,12 +1499,6 @@
 												"live-preview": false
 											}
 										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": false
-											}
-										},
 										"Pin": {
 											"properties": {
 												"destroy": false
@@ -1546,12 +1551,6 @@
 												"magnitude-random": 0,
 												"enabled": true,
 												"live-preview": false
-											}
-										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
 											}
 										},
 										"Pin": {
@@ -1608,12 +1607,6 @@
 												"live-preview": false
 											}
 										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
-											}
-										},
 										"Pin": {
 											"properties": {
 												"destroy": false
@@ -1666,12 +1659,6 @@
 												"magnitude-random": 0,
 												"enabled": true,
 												"live-preview": false
-											}
-										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
 											}
 										},
 										"Pin": {
@@ -1728,12 +1715,6 @@
 												"live-preview": false
 											}
 										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
-											}
-										},
 										"Pin": {
 											"properties": {
 												"destroy": false
@@ -1786,12 +1767,6 @@
 												"magnitude-random": 0,
 												"enabled": true,
 												"live-preview": false
-											}
-										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
 											}
 										},
 										"Pin": {
@@ -1848,12 +1823,6 @@
 												"live-preview": false
 											}
 										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
-											}
-										},
 										"Pin": {
 											"properties": {
 												"destroy": false
@@ -1906,12 +1875,6 @@
 												"magnitude-random": 0,
 												"enabled": true,
 												"live-preview": false
-											}
-										},
-										"DragDrop": {
-											"properties": {
-												"axes": "both",
-												"enabled": true
 											}
 										},
 										"Pin": {
@@ -2001,12 +1964,6 @@
 										"live-preview": false
 									}
 								},
-								"DragDrop": {
-									"properties": {
-										"axes": "both",
-										"enabled": true
-									}
-								},
 								"Pin": {
 									"properties": {
 										"destroy": false
@@ -2043,7 +2000,7 @@
 						1,
 						1,
 						1,
-						0.4
+						0.3
 					],
 					"backgroundColor": [
 						0,
@@ -3487,7 +3444,7 @@
 						{
 							"type": "Text_Talk",
 							"properties": {
-								"text": "Olá Calangana!",
+								"text": "Quando a rodada acaba, todas os números são revelados e somados para ver quem chegou a [b]21[/b] ou o mais próximo dele. Haverá empate se todos os jogadores ultrapassarem 21.",
 								"enable-bbcode": true,
 								"font": "Alice-Regular",
 								"size": 40,
@@ -4681,8 +4638,396 @@
 						{
 							"name": "Save",
 							"overriden": 0,
-							"subLayers": [],
-							"instances": [],
+							"subLayers": [
+								{
+									"name": "Save_Warning",
+									"overriden": 0,
+									"subLayers": [],
+									"instances": [
+										{
+											"type": "Btn_Confirm",
+											"properties": {
+												"initially-visible": true,
+												"initial-animation": "Animation 1",
+												"initial-frame": 0,
+												"enable-collisions": true,
+												"live-preview": false
+											},
+											"uid": 347,
+											"sid": 275604003254027,
+											"tags": "",
+											"instanceVariables": {},
+											"behaviors": {},
+											"showing": true,
+											"locked": false,
+											"world": {
+												"x": 637,
+												"y": 782,
+												"width": 100,
+												"height": 100,
+												"originX": 0.5,
+												"originY": 0.5,
+												"color": [
+													1,
+													1,
+													1,
+													1
+												],
+												"z": 0,
+												"angle": 0
+											}
+										},
+										{
+											"type": "Btn_Deny",
+											"properties": {
+												"initially-visible": true,
+												"initial-animation": "Animation 1",
+												"initial-frame": 0,
+												"enable-collisions": true,
+												"live-preview": false
+											},
+											"uid": 348,
+											"sid": 506691856661475,
+											"tags": "",
+											"instanceVariables": {},
+											"behaviors": {},
+											"showing": true,
+											"locked": false,
+											"world": {
+												"x": 1271,
+												"y": 782,
+												"width": 100,
+												"height": 100,
+												"originX": 0.5,
+												"originY": 0.5,
+												"color": [
+													1,
+													1,
+													1,
+													1
+												],
+												"z": 0,
+												"angle": 0
+											}
+										}
+									],
+									"sid": 101804792767322,
+									"effectTypes": [],
+									"isInitiallyVisible": false,
+									"isInitiallyInteractive": true,
+									"isHTMLElementsLayer": false,
+									"color": [
+										1,
+										1,
+										1,
+										1
+									],
+									"backgroundColor": [
+										0.3686274509803922,
+										0.3686274509803922,
+										0.3686274509803922,
+										1
+									],
+									"isTransparent": true,
+									"sampling": "auto",
+									"parallaxX": 1,
+									"parallaxY": 1,
+									"scaleRate": 1,
+									"forceOwnTexture": false,
+									"renderingMode": "3d",
+									"drawOrder": "z-order",
+									"useRenderCells": false,
+									"blendMode": "normal",
+									"zElevation": 0,
+									"global": false
+								},
+								{
+									"name": "Save_Erase",
+									"overriden": 0,
+									"subLayers": [],
+									"instances": [
+										{
+											"type": "Btn_Back_2",
+											"properties": {
+												"initially-visible": true,
+												"initial-animation": "Default",
+												"initial-frame": 0,
+												"enable-collisions": true,
+												"live-preview": false
+											},
+											"uid": 341,
+											"sid": 350798087483963,
+											"tags": "",
+											"instanceVariables": {
+												"ID": 0
+											},
+											"behaviors": {},
+											"showing": true,
+											"locked": false,
+											"world": {
+												"x": 954,
+												"y": 782,
+												"width": 516.4145002746877,
+												"height": 135.94394269534615,
+												"originX": 0.5,
+												"originY": 0.5,
+												"color": [
+													1,
+													1,
+													1,
+													1
+												],
+												"z": 0,
+												"angle": 0
+											}
+										},
+										{
+											"type": "Text_Static_Generic",
+											"properties": {
+												"text": "apagar",
+												"enable-bbcode": false,
+												"font": "Alice-Regular",
+												"size": 42,
+												"line-height": 0,
+												"bold": true,
+												"italic": false,
+												"color": [
+													0,
+													0,
+													0,
+													1
+												],
+												"horizontal-alignment": "center",
+												"vertical-alignment": "center",
+												"wrapping": "word",
+												"text-direction": "ltr",
+												"icon-set": -1,
+												"initially-visible": true,
+												"origin": "top-left",
+												"read-aloud": false
+											},
+											"uid": 346,
+											"sid": 427793072242069,
+											"tags": "",
+											"instanceVariables": {
+												"my_id": 0,
+												"my_txt": "options.save.delete_btn"
+											},
+											"behaviors": {},
+											"sceneGraphData": {
+												"parent-uid": null,
+												"uid": 346,
+												"flags": {
+													"x": true,
+													"y": true,
+													"z": true,
+													"w": true,
+													"h": true,
+													"d": true,
+													"a": true,
+													"o": false,
+													"v": false,
+													"sm": "normal"
+												},
+												"preview": {
+													"transformX": 0,
+													"transformY": 0,
+													"transformZ": 0,
+													"transformW": 0,
+													"transformH": 0,
+													"transformD": 0,
+													"transformA": 0,
+													"transformSX": 0,
+													"transformSY": 0,
+													"transformSZ": 0,
+													"transformO": 0,
+													"previewSceneGraph": false
+												}
+											},
+											"showing": true,
+											"locked": false,
+											"world": {
+												"x": 741,
+												"y": 745,
+												"width": 429,
+												"height": 74.20929839391374,
+												"originX": 0,
+												"originY": 0,
+												"color": [
+													1,
+													1,
+													1,
+													1
+												],
+												"z": 0,
+												"angle": 0
+											}
+										}
+									],
+									"sid": 797537991353035,
+									"effectTypes": [],
+									"isInitiallyVisible": true,
+									"isInitiallyInteractive": true,
+									"isHTMLElementsLayer": false,
+									"color": [
+										1,
+										1,
+										1,
+										1
+									],
+									"backgroundColor": [
+										0.3686274509803922,
+										0.3686274509803922,
+										0.3686274509803922,
+										1
+									],
+									"isTransparent": true,
+									"sampling": "auto",
+									"parallaxX": 1,
+									"parallaxY": 1,
+									"scaleRate": 1,
+									"forceOwnTexture": false,
+									"renderingMode": "3d",
+									"drawOrder": "z-order",
+									"useRenderCells": false,
+									"blendMode": "normal",
+									"zElevation": 0,
+									"global": false
+								}
+							],
+							"instances": [
+								{
+									"type": "Text_Ai_Da_Vida",
+									"properties": {
+										"text": "v. demo",
+										"enable-bbcode": true,
+										"font": "Arial",
+										"size": 31,
+										"line-height": 0,
+										"bold": false,
+										"italic": false,
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"horizontal-alignment": "left",
+										"vertical-alignment": "top",
+										"wrapping": "word",
+										"text-direction": "ltr",
+										"icon-set": -1,
+										"initially-visible": true,
+										"origin": "top-left",
+										"read-aloud": false
+									},
+									"uid": 65,
+									"sid": 148332614613610,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1437,
+										"y": 856,
+										"width": 160,
+										"height": 68.24875350044385,
+										"originX": 0,
+										"originY": 0,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0
+									}
+								},
+								{
+									"type": "Text_Static_Generic",
+									"properties": {
+										"text": "textinho louco",
+										"enable-bbcode": true,
+										"font": "Alice-Regular",
+										"size": 39,
+										"line-height": 0,
+										"bold": false,
+										"italic": false,
+										"color": [
+											0,
+											0,
+											0,
+											1
+										],
+										"horizontal-alignment": "center",
+										"vertical-alignment": "center",
+										"wrapping": "word",
+										"text-direction": "ltr",
+										"icon-set": -1,
+										"initially-visible": true,
+										"origin": "top-left",
+										"read-aloud": false
+									},
+									"uid": 342,
+									"sid": 923876064525558,
+									"tags": "",
+									"instanceVariables": {
+										"my_id": 0,
+										"my_txt": "options.save.erase"
+									},
+									"behaviors": {},
+									"sceneGraphData": {
+										"parent-uid": null,
+										"uid": 342,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"d": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"sm": "normal"
+										},
+										"preview": {
+											"transformX": 0,
+											"transformY": 0,
+											"transformZ": 0,
+											"transformW": 0,
+											"transformH": 0,
+											"transformD": 0,
+											"transformA": 0,
+											"transformSX": 0,
+											"transformSY": 0,
+											"transformSZ": 0,
+											"transformO": 0,
+											"previewSceneGraph": false
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 356,
+										"y": 507,
+										"width": 1196,
+										"height": 126.20929839391374,
+										"originX": 0,
+										"originY": 0,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0
+									}
+								}
+							],
 							"sid": 203743801065538,
 							"effectTypes": [],
 							"isInitiallyVisible": false,
@@ -4731,7 +5076,7 @@
 									"sid": 908561157727602,
 									"tags": "",
 									"instanceVariables": {
-										"id": 1
+										"id": 2
 									},
 									"behaviors": {},
 									"showing": true,
@@ -4848,7 +5193,7 @@
 									"sid": 945664578069378,
 									"tags": "",
 									"instanceVariables": {
-										"id": 2
+										"id": 3
 									},
 									"behaviors": {},
 									"showing": true,
@@ -5390,39 +5735,6 @@
 									}
 								},
 								{
-									"type": "volume_bar_border",
-									"properties": {
-										"initially-visible": true,
-										"initial-animation": "Default",
-										"initial-frame": 0,
-										"enable-collisions": true,
-										"live-preview": false
-									},
-									"uid": 259,
-									"sid": 226195504600197,
-									"tags": "",
-									"instanceVariables": {},
-									"behaviors": {},
-									"showing": true,
-									"locked": false,
-									"world": {
-										"x": 1041,
-										"y": 762,
-										"width": 486,
-										"height": 58,
-										"originX": 0.5,
-										"originY": 0.5,
-										"color": [
-											1,
-											1,
-											1,
-											1
-										],
-										"z": 0,
-										"angle": 0
-									}
-								},
-								{
 									"type": "volume_bar_Vol_content",
 									"properties": {
 										"initially-visible": true,
@@ -5450,10 +5762,43 @@
 									"locked": false,
 									"world": {
 										"x": 799,
-										"y": 763,
+										"y": 761,
 										"width": 32,
-										"height": 58,
+										"height": 55,
 										"originX": 0,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0
+									}
+								},
+								{
+									"type": "volume_bar_border",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Default",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 259,
+									"sid": 226195504600197,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1041,
+										"y": 762,
+										"width": 486,
+										"height": 58,
+										"originX": 0.5,
 										"originY": 0.5,
 										"color": [
 											1,
@@ -6546,7 +6891,7 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": false
+			"global": true
 		}
 	],
 	"sid": 932921744102466,

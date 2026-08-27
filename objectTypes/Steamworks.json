@@ -5,9 +5,9 @@
 	"singleglobal-inst": {
 		"type": "Steamworks",
 		"properties": {
-			"app-id": "",
-			"development-mode": true,
-			"enable-overlay": true
+			"app-id": "4922040",
+			"development-mode": false,
+			"enable-overlay": false
 		},
 		"uid": 270,
 		"sid": 382242331871051,

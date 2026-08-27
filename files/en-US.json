@@ -18,6 +18,7 @@
             "btn_gallery": "Gallery",
             "btn_credits": "Credits",
             "btn_back": "Back",
+            "discord_join": "Join now!",
             "codex": {
                 "name": "The Codex",
                 "info_lock": "???",
@@ -214,6 +215,10 @@
                 "tip_stop": "If you're close to [b]21[/b], it's better to stop and avoid risks. Press the bell to stop this round.",
                 "tip_stop2": "If your sum is 21 or more, it's better not draw number cards and stop the round.",
                 "tip_power": "Think again Alice, playing this power wouldn't be smart."
+            },
+            "alice_self_warning": {
+                "empty_deck": "Well... there're no more cards left.",
+                "full_card_table": "There're too many cards in this table."
             }
         },
         "options": {
@@ -239,7 +244,10 @@
                 
             },
             "save": {
-                "title": "Erase Save"
+                "title": "Erase Save",
+                "erase": "Delete your actual save data by clicking in the button bellow.",
+                "warning": "Are you sure?\n[b]This action CAN'T be undone![/b]",
+                "delete_btn": "DELETE"
             }
             
         },
@@ -326,13 +334,13 @@
                     "special": "Alice! Best of three? What do you think?"
                 }
             },
-            "bell": "[u]The Bell[/u]: \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
-            "power": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You can draw [color=#f5fe05]{0}[/color] cards in this round.",
-            "power_hand_limit": "[u]The Power Deck[/u]: \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand. You [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
+            "bell": "[u]The Bell[/u] \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
+            "power": "[u]The Power Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round.",
+            "power_hand_limit": "[u]The Power Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
             "number" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
-            "number_easy" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board. There're [color=#f5fe05]{0}[/color] cards left in this deck.",
+            "number_easy" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",
             "tut_start": "Rabbit Hole",
-            "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]. {3} [color=#f5fe05]won[/color] this round!",
+            "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color].\n{3} [color=#f5fe05]won[/color] this round!",
             "player_turn": "Alice's Turn",
             "enemy_turn": "{0}'s Turn",
             "points": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]",
@@ -449,6 +457,10 @@
             "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]2[/color] cards..."
             
         },
-        "demo_end": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, powers, and extras await you in the full game!"
+        "demo": {
+            "end": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, power cards, and extras await you in the full game!",
+            "wishlist": "Wishlist now!",
+            "sorry": "This feature is unavailable in this demo."
+        }
     }
 }

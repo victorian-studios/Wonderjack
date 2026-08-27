@@ -6,7 +6,6 @@
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"configuracoes",
 		"Relics",
 		"Btn_Back",
 		"Btn_ResumeMenu",
@@ -14,9 +13,12 @@
 		"Btn_Story_No",
 		"Btn_Story_Yes",
 		"Btn_Music",
-		"Btn_Back2",
+		"Btn_Back_Flag",
 		"Btn_discord",
 		"Btn_Sound",
-		"Options_Flag"
+		"Options_Flag",
+		"Btn_Back_2",
+		"Btn_Confirm",
+		"Btn_Deny"
 	]
 }

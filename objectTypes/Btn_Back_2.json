@@ -1,64 +1,54 @@
 {
-	"name": "demo_end",
+	"name": "Btn_Back_2",
 	"plugin-id": "Sprite",
-	"sid": 217763876034064,
+	"sid": 354813489271501,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [
+	"instanceVariables": [
 		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 572898015018727
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 478152203220137
 		}
 	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 1280,
-						"height": 613,
+						"width": 270,
+						"height": 101,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5027765,
+						"imageSpriteId": 7250615,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					},
 					{
-						"width": 750,
-						"height": 312,
+						"width": 270,
+						"height": 101,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2390895,
-						"collisionPoly": {
-							"points": [
-								0.0013333333333333333,
-								0,
-								1,
-								0,
-								1,
-								0.9967948717948718,
-								0.0013333333333333333,
-								0.9967948717948718
-							]
-						},
+						"imageSpriteId": 7841081,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 275993304350307,
+				"sid": 996346425201573,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
