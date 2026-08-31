@@ -2447,105 +2447,6 @@
 					}
 				},
 				{
-					"type": "Cursor_default",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 234,
-					"sid": 880272343446952,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 469,
-						"y": 717,
-						"width": 64,
-						"height": 64,
-						"originX": 0.34375,
-						"originY": 0.328125,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cursor_pointer",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 235,
-					"sid": 475684096248735,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 381,
-						"y": 705,
-						"width": 64,
-						"height": 64,
-						"originX": 0.15625,
-						"originY": 0.140625,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cursor_hold",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 236,
-					"sid": 521011603515054,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 543,
-						"y": 722,
-						"width": 64,
-						"height": 64,
-						"originX": 0.42027027027027025,
-						"originY": 0.41486486486486485,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "Effect_Smoke",
 					"properties": {
 						"initially-visible": true,
@@ -2821,7 +2722,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
-						"initial-frame": 2,
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -2844,7 +2745,7 @@
 							"properties": {
 								"movement": "size",
 								"wave": "sine",
-								"period": 0.25,
+								"period": 0.3,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
@@ -2858,8 +2759,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 408.3613586425781,
-						"y": 785.6618041992188,
+						"x": 135,
+						"y": 1226,
 						"width": 18,
 						"height": 18,
 						"originX": 0.5,
@@ -2900,12 +2801,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
 							}
 						},
 						"Pin": {
@@ -2961,12 +2856,6 @@
 								"live-preview": false
 							}
 						},
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						},
 						"Pin": {
 							"properties": {
 								"destroy": false
@@ -3012,6 +2901,41 @@
 				1
 			],
 			"isTransparent": false,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Mouse",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 722976767448317,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
 			"sampling": "auto",
 			"parallaxX": 1,
 			"parallaxY": 1,

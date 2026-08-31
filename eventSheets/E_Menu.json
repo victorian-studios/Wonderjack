@@ -423,6 +423,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 122731482924116,
+					"parameters": {
+						"layer": "\"Mouse\"",
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 997846707402825,
@@ -447,6 +456,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 176756344577786,
+					"parameters": {
+						"layer": "\"Mouse\"",
+						"visibility": "invisible"
+					}
+				},
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
@@ -1298,42 +1316,61 @@
 									"parameters": [
 										"\"Menu\""
 									]
-								},
-								{
-									"id": "set-fade-in-time",
-									"objectClass": "Demo_Fade_Sprite",
-									"sid": 486011293175235,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-in-time": "0"
-									}
-								},
-								{
-									"id": "set-wait-time",
-									"objectClass": "Demo_Fade_Sprite",
-									"sid": 573540128732468,
-									"behaviorType": "Fade",
-									"parameters": {
-										"wait-time": "0"
-									}
-								},
-								{
-									"id": "set-fade-out-time",
-									"objectClass": "Demo_Fade_Sprite",
-									"sid": 189173913447077,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-out-time": "0.25"
-									}
-								},
-								{
-									"id": "restart-fade",
-									"objectClass": "Demo_Fade_Sprite",
-									"sid": 983664243589167,
-									"behaviorType": "Fade"
 								}
 							],
 							"sid": 933431871765322,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-opacity",
+											"objectClass": "Demo_Fade_Sprite",
+											"sid": 771846527881995,
+											"parameters": {
+												"comparison": 1,
+												"opacity": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Demo_Fade_Sprite",
+											"sid": 701630209976201,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Demo_Fade_Sprite",
+											"sid": 196249864327817,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Demo_Fade_Sprite",
+											"sid": 198323044704442,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.25"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Demo_Fade_Sprite",
+											"sid": 795571154052055,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 291828697187900
+								}
+							],
 							"isOrBlock": true
 						}
 					]

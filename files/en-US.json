@@ -214,7 +214,8 @@
                 "block_stop": "Alice, draw more numbers cards before trying to stop this round.",
                 "tip_stop": "If you're close to [b]21[/b], it's better to stop and avoid risks. Press the bell to stop this round.",
                 "tip_stop2": "If your sum is 21 or more, it's better not draw number cards and stop the round.",
-                "tip_power": "Think again Alice, playing this power wouldn't be smart."
+                "tip_power": "Think again Alice, playing this power wouldn't be smart.",
+                "tip_power2": "Why don't you try drawing a power card from the deck on your left?"
             },
             "alice_self_warning": {
                 "empty_deck": "Well... there're no more cards left.",
@@ -235,12 +236,13 @@
             },
             "video": {
                 "title": "Video",
-                "opt_1": "Performance text"
+                "opt_1": "Fullscreen",
+                "opt_2": "Performance text [size=28](Used for debug. Resume to work)[/size]"
             },
             "gameplay": {
                 "title": "Gameplay",
-                "opt_1": "Auto math numbers",
-                "opt_2": "Fast Mode"
+                "opt_1": "Auto math [size=28](Display the sum from number cards and more)[/size]",
+                "opt_2": "Fast Mode [size=28](Reduce the duration of animations and transitions)[/size]"
                 
             },
             "save": {
@@ -253,6 +255,9 @@
         },
         "common": {
             "enemies" : {
+                "Alice": {
+                    "name": "Alice"
+                },
                 "White Queen": {
                     "name": "White Queen",
                     "talk_win": "",
@@ -275,7 +280,7 @@
                     "talk_lose": "Well, I guess tea time is over!",
                     "talk_thinking_1": "I’d offer you some wine if I had any...",
                     "talk_thinking_2": "I've impressive cards... do you wanna see? Haha!",
-                    "special": "Why are you looking at me?"
+                    "special": "I’ll start with a card for myself. After all, it’s my unbirthday!"
                 },
                 "Cheshire Cat": {
                     "name": "Cheshire Cat",
@@ -347,7 +352,7 @@
             "new_round": "Round [color=#f5fe05]{0}[/color] starting now!",
             "new_match": "New opponent appears: [color=#f5fe05]{0}[/color]",
             "new_boss": "New boss appears: [color=#fa1c03]{0}[/color]",
-            "tie": "Nobody won this round.",
+            "tie": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color].\nNobody won this round.",
             "looser": "You [color=#fa1c03]lost[/color] this match... that's unfortunate.",
             "winner": "You [color=#f5fe05]won[/color] this match. Keep going!",
             "end": "You've [color=#f5fe05]won[/color] all the 4 opponents! Congratulations!",
@@ -451,7 +456,7 @@
             "menu": "[u]Menu[/u]\n\nSee the next [color=#f5fe05]3[/color] cards from the number deck and choose [color=#f5fe05]1[/color] to draw. Then, the number deck is [color=#fa1c03]shuffled[/color].",
             "menu_tip": "[u]Select a card to draw:[/u]",
             "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their number cards [color=#fa1c03]ignoring the first hidden card[/color]. Cannot be used in the last turn!",
-            "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent. Don't work with poder cards.",
+            "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent. Don't work with power cards.",
             "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]2[/color] cards from of the number deck.",
             "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color] and then [color=#f5fe05]{1}[/color]",
             "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]2[/color] cards..."

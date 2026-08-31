@@ -879,63 +879,11 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-two-values",
+							"id": "layer-is-visible",
 							"objectClass": "System",
-							"sid": 766384329497888,
+							"sid": 771429151771780,
 							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Intro\""
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 114524457189347,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Demo_End\""
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 396201048820754,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Menu\""
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 503311340762017,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Credits\""
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 291204375247730,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Story\""
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 865826024165138,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Level\""
+								"layer": "\"Mouse\""
 							}
 						}
 					],
@@ -1357,13 +1305,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 129465026363943,
+											"sid": 392453639828942,
 											"parameters": {
 												"audio-file": {
 													"path": "button_select_sfx"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -1493,13 +1441,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 860117811739206,
+											"sid": 987325697507387,
 											"parameters": {
 												"audio-file": {
 													"path": "button_select_sfx"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -1742,6 +1690,20 @@
 									"parameters": {
 										"group-name": "\"Erase Data\"",
 										"state": "deactivated"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 135934995853888,
+									"parameters": {
+										"audio-file": {
+											"path": "button_select_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -2698,13 +2660,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 590393481335837,
+											"sid": 513661422995591,
 											"parameters": {
 												"audio-file": {
 													"path": "button_select_sfx"
 												},
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -2750,7 +2712,40 @@
 							"functionParameters": [],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text_Relic_Name",
+									"sid": 335804592314349,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"relics.\" & Relic_card.AnimationName & \".title\")"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Relic_Name",
+									"sid": 960999008237434,
+									"parameters": {
+										"size-pt": "clamp(lerp(30, 20, (len(Self.Text) - 4) / (19 - 4)), 20, 30)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Relic_Flavor",
+									"sid": 530743548377919,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"relics.\" & Relic_card.AnimationName & \".flavor_txt\")"
+									}
+								},
+								{
+									"id": "set-font-size",
+									"objectClass": "Text_Relic_Flavor",
+									"sid": 908886583832167,
+									"parameters": {
+										"size-pt": "clamp(lerp(26, 18, (len(Self.Text) - 7) / (20 - 7)), 18, 26)"
+									}
+								}
+							],
 							"sid": 445288949197383,
 							"children": [
 								{
@@ -3525,6 +3520,36 @@
 										}
 									],
 									"sid": 682147264794360
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 439058923325401,
+											"parameters": {
+												"interval-seconds": "0.75"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 310798809469472,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 291584611127911
 								}
 							]
 						},
@@ -4231,7 +4256,7 @@
 							"children": [
 								{
 									"eventType": "comment",
-									"text": "Performance"
+									"text": "Fullscreen"
 								},
 								{
 									"eventType": "block",
@@ -4247,7 +4272,22 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 920051587686128,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
 									"sid": 617793524219307,
 									"children": [
 										{
@@ -4276,17 +4316,18 @@
 												{
 													"id": "set-animation-frame",
 													"objectClass": "Toggle_Options_Numbers",
-													"sid": 905607501707361,
+													"sid": 543667327767138,
 													"parameters": {
 														"frame-number": "1"
 													}
 												},
 												{
-													"id": "set-visible",
-													"objectClass": "Txt_debug2",
-													"sid": 529418522734873,
+													"id": "request-fullscreen",
+													"objectClass": "Browser",
+													"sid": 955128475847309,
 													"parameters": {
-														"visibility": "visible"
+														"mode": "stretch-letterbox-scale",
+														"navigation-ui": "auto"
 													}
 												}
 											],
@@ -4318,7 +4359,126 @@
 												{
 													"id": "set-animation-frame",
 													"objectClass": "Toggle_Options_Numbers",
-													"sid": 851809366887430,
+													"sid": 974739017086409,
+													"parameters": {
+														"frame-number": "0"
+													}
+												},
+												{
+													"id": "cancel-fullscreen",
+													"objectClass": "Browser",
+													"sid": 202384566767394
+												}
+											],
+											"sid": 287284117317255
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Performance Text"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 922457984548686,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 797726739162345,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 785830537957772,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 694834023757508,
+													"parameters": {
+														"comparison": 0,
+														"number": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 819339817069641,
+													"parameters": {
+														"seconds": "0",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 296766553517825,
+													"parameters": {
+														"frame-number": "1"
+													}
+												},
+												{
+													"id": "set-visible",
+													"objectClass": "Txt_debug2",
+													"sid": 326340604083796,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 839442345224379
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 541804431006970,
+													"parameters": {
+														"comparison": 0,
+														"number": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 429788965383065,
+													"parameters": {
+														"seconds": "0",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 401615150180491,
 													"parameters": {
 														"frame-number": "0"
 													}
@@ -4326,13 +4486,13 @@
 												{
 													"id": "set-visible",
 													"objectClass": "Txt_debug2",
-													"sid": 337618097195296,
+													"sid": 840034536414477,
 													"parameters": {
 														"visibility": "invisible"
 													}
 												}
 											],
-											"sid": 287284117317255
+											"sid": 367352268197190
 										}
 									]
 								}
@@ -4371,7 +4531,22 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 193715060394197,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
 									"sid": 497677087083874,
 									"children": [
 										{
@@ -4496,7 +4671,22 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 554742383182371,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
 									"sid": 976980702332620,
 									"children": [
 										{

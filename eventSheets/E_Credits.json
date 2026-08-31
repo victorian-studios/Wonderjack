@@ -256,13 +256,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 618938064373206,
+					"sid": 953710448875087,
 					"parameters": {
 						"audio-file": {
 							"path": "button_2_sfx"
 						},
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}

@@ -2,6 +2,10 @@
 	"name": "Test",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "E_Global"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

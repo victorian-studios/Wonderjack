@@ -165,13 +165,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 454434738819446,
+					"sid": 798051072018214,
 					"parameters": {
 						"audio-file": {
 							"path": "button_select_sfx"
 						},
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -233,13 +233,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 725871293220602,
+					"sid": 407470451596743,
 					"parameters": {
 						"audio-file": {
 							"path": "button_select_sfx"
 						},
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -678,13 +678,13 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 105262003730235,
+									"sid": 893261580012517,
 									"parameters": {
 										"audio-file": {
 											"path": "button_2_sfx"
 										},
 										"loop": "not-looping",
-										"volume": "0",
+										"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
 									}
