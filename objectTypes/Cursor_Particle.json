@@ -1,0 +1,29 @@
+{
+	"name": "Cursor_Particle",
+	"plugin-id": "Particles",
+	"sid": 864871073737770,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 379581391569358
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 500,
+		"height": 500,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 2883128,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -127,6 +127,15 @@
 					}
 				},
 				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 426152211557085,
+					"parameters": {
+						"layer": "\"Mouse\"",
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "start-timer",
 					"objectClass": "Banner_fundo",
 					"sid": 278650799510255,
@@ -593,6 +602,15 @@
 					"id": "is-visible",
 					"objectClass": "Menu_Placa",
 					"sid": 539538506575806
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 667992956958976,
+					"parameters": {
+						"layer": "\"Exit\""
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -744,6 +762,15 @@
 						"layer": "\"Pause\""
 					},
 					"isInverted": true
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 782115052988195,
+					"parameters": {
+						"layer": "\"Exit\""
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -874,6 +901,16 @@
 									"parameters": {
 										"layer": "\"Codex\"",
 										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 997404169059588,
+									"disabled": true,
+									"parameters": {
+										"layer": "\"Codex\"",
+										"interactive": true
 									}
 								},
 								{
@@ -1073,6 +1110,16 @@
 									"parameters": {
 										"layer": "\"Art Galery\"",
 										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 514904733908307,
+									"disabled": true,
+									"parameters": {
+										"layer": "\"Art Galery\"",
+										"interactive": true
 									}
 								},
 								{
@@ -1278,9 +1325,8 @@
 							],
 							"actions": [
 								{
-									"id": "close",
-									"objectClass": "Browser",
-									"sid": 395473853594428
+									"callFunction": "Confirm_Exit",
+									"sid": 831662708153917
 								}
 							],
 							"sid": 134151397732057
@@ -1374,6 +1420,26 @@
 							"isOrBlock": true
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 550866902229925,
+							"parameters": {
+								"layer": "\"Exit\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Confirm_Exit",
+							"sid": 659116607499256
+						}
+					],
+					"sid": 433968683724880
 				}
 			]
 		},
@@ -1483,6 +1549,14 @@
 										"comparison": 0,
 										"value": "1"
 									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 729990975017623,
+									"parameters": {
+										"layer": "\"Main\""
+									}
 								}
 							],
 							"actions": [
@@ -1527,6 +1601,14 @@
 										"comparison": 0,
 										"value": "2"
 									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 320511844655748,
+									"parameters": {
+										"layer": "\"Main\""
+									}
 								}
 							],
 							"actions": [
@@ -1562,6 +1644,14 @@
 										"expression": "Text_Static_Generic.my_id",
 										"comparison": 0,
 										"value": "3"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 973148923196403,
+									"parameters": {
+										"layer": "\"Main\""
 									}
 								}
 							],
@@ -1641,6 +1731,14 @@
 										"expression": "Text_Static_Generic.my_id",
 										"comparison": 0,
 										"value": "4"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 680128898205877,
+									"parameters": {
+										"layer": "\"Main\""
 									}
 								}
 							],
@@ -1725,6 +1823,14 @@
 										"comparison": 0,
 										"value": "1"
 									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 250508627565544,
+									"parameters": {
+										"layer": "\"Main\""
+									}
 								}
 							],
 							"actions": [
@@ -1769,6 +1875,14 @@
 										"comparison": 0,
 										"value": "2"
 									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 204395459836021,
+									"parameters": {
+										"layer": "\"Main\""
+									}
 								}
 							],
 							"actions": [
@@ -1804,6 +1918,14 @@
 										"expression": "Text_Static_Generic.my_id",
 										"comparison": 0,
 										"value": "3"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 307689523789897,
+									"parameters": {
+										"layer": "\"Main\""
 									}
 								}
 							],
@@ -1875,6 +1997,14 @@
 										"expression": "Text_Static_Generic.my_id",
 										"comparison": 0,
 										"value": "4"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 786647011949611,
+									"parameters": {
+										"layer": "\"Main\""
 									}
 								}
 							],
@@ -1959,6 +2089,14 @@
 										"comparison": 0,
 										"value": "1"
 									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 860314577122421,
+									"parameters": {
+										"layer": "\"Main\""
+									}
 								}
 							],
 							"actions": [
@@ -1995,6 +2133,14 @@
 										"comparison": 0,
 										"value": "2"
 									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 928008144363863,
+									"parameters": {
+										"layer": "\"Main\""
+									}
 								}
 							],
 							"actions": [
@@ -2030,6 +2176,14 @@
 										"expression": "Text_Static_Generic.my_id",
 										"comparison": 0,
 										"value": "3"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 375970667830577,
+									"parameters": {
+										"layer": "\"Main\""
 									}
 								}
 							],
@@ -2074,6 +2228,14 @@
 										"expression": "Text_Static_Generic.my_id",
 										"comparison": 0,
 										"value": "4"
+									}
+								},
+								{
+									"id": "is-on-layer",
+									"objectClass": "Text_Static_Generic",
+									"sid": 186344345519676,
+									"parameters": {
+										"layer": "\"Main\""
 									}
 								}
 							],
@@ -2742,6 +2904,15 @@
 						"click-type": "clicked",
 						"object-clicked": "Btn_discord"
 					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 804331228797572,
+					"parameters": {
+						"layer": "\"Exit\""
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -2792,6 +2963,15 @@
 					"sid": 268213072204150,
 					"parameters": {
 						"layer": "\"Art Galery\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 422605650422734,
+					"parameters": {
+						"layer": "\"Exit\""
 					},
 					"isInverted": true
 				}
@@ -2868,6 +3048,81 @@
 					"sid": 119758501383965
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 573225232853440,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Confirm"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 748207045630658,
+					"parameters": {
+						"layer": "\"Exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 395473853594428
+				}
+			],
+			"sid": 117262048043882
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 867140952949967,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Deny"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 561224398751767,
+					"parameters": {
+						"layer": "\"Exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Confirm_Exit",
+					"sid": 552507040413627
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 505225490821725,
+					"parameters": {
+						"audio-file": {
+							"path": "button_2_sfx"
+						},
+						"loop": "not-looping",
+						"volume": "Vol_Sfx > 0 ? -10 + (Vol_Sfx * 0.1) : -100",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 833294580989244
 		},
 		{
 			"eventType": "group",
@@ -3594,6 +3849,15 @@
 							}
 						},
 						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 663695338436024,
+							"parameters": {
+								"layer": "\"Codex\"",
+								"interactive": false
+							}
+						},
+						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 221308991669240,
@@ -3769,6 +4033,15 @@
 								"layer": "\"Art Galery\""
 							},
 							"isInverted": true
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 855196589229302,
+							"parameters": {
+								"layer": "\"Exit\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -3818,6 +4091,15 @@
 								"click-type": "clicked",
 								"object-clicked": "Banner_bolinha"
 							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 211944359763826,
+							"parameters": {
+								"layer": "\"Exit\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -3941,6 +4223,15 @@
 								"click-type": "clicked",
 								"object-clicked": "Banner_fundo"
 							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 241415695300715,
+							"parameters": {
+								"layer": "\"Exit\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -3997,10 +4288,9 @@
 								{
 									"id": "show-overlay-url",
 									"objectClass": "Steamworks",
-									"sid": 725567286138293,
-									"disabled": true,
+									"sid": 949326359498485,
 									"parameters": {
-										"url": "\"\"",
+										"url": "\"https://store.steampowered.com/app/4922040/Wonderjack/\"",
 										"modal": false
 									}
 								}
@@ -4231,6 +4521,15 @@
 							"parameters": {
 								"layer": "\"Art Galery\"",
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 981956218013492,
+							"parameters": {
+								"layer": "\"Art Galery\"",
+								"interactive": false
 							}
 						},
 						{
@@ -4558,57 +4857,146 @@
 			"sid": 897826799915758
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 963217149381764,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "logo"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 379142086982749,
-			"disabled": true,
+			"eventType": "group",
+			"disabled": false,
+			"title": "Debug",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-animation-frame",
-							"objectClass": "logo",
-							"sid": 593004332727210,
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 640138341902228,
 							"parameters": {
-								"comparison": 0,
-								"number": "1"
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "logo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 761619262341148,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "logo",
+									"sid": 240689271547893,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "logo",
+									"sid": 823618486927581,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "logo",
+									"sid": 721180965757722,
+									"parameters": {
+										"width": "592",
+										"height": "430"
+									}
+								}
+							],
+							"sid": 708937708210819,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 253625406797112
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "logo",
+									"sid": 900266268432685,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "logo",
+									"sid": 477826214422210,
+									"parameters": {
+										"width": "592",
+										"height": "430"
+									}
+								}
+							],
+							"sid": 754399222970770,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 569394438597905,
+							"parameters": {
+								"key": 81
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "logo",
-							"sid": 156743217238347,
-							"parameters": {
-								"frame-number": "0"
-							}
+							"id": "clear-storage",
+							"objectClass": "LocalStorage",
+							"sid": 489445036167818,
+							"disabled": true
+						}
+					],
+					"sid": 797509039956671
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-available",
+							"objectClass": "Steamworks",
+							"sid": 445278250481522
 						},
 						{
-							"id": "set-size",
-							"objectClass": "logo",
-							"sid": 399663010342422,
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 663172638060067
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 134700950470974,
 							"parameters": {
-								"width": "592",
-								"height": "430"
+								"type": "log",
+								"message": "\"Steamworks ativo\""
 							}
 						}
 					],
-					"sid": 946742090155838,
-					"disabled": true
+					"sid": 916587240983856
 				},
 				{
 					"eventType": "block",
@@ -4616,108 +5004,29 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 117350891540257
+							"sid": 819981578559196
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 309184258583082
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "logo",
-							"sid": 719622241823327,
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 640327387662281,
 							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-size",
-							"objectClass": "logo",
-							"sid": 257711250979656,
-							"parameters": {
-								"width": "592",
-								"height": "430"
+								"type": "log",
+								"message": "\"Steamworks deu erro\""
 							}
 						}
 					],
-					"sid": 991941567245201,
-					"disabled": true
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 691097315288572,
-					"parameters": {
-						"key": 81
-					}
+					"sid": 770899147555974
 				}
 			],
-			"actions": [
-				{
-					"id": "clear-storage",
-					"objectClass": "LocalStorage",
-					"sid": 504642138934384,
-					"disabled": true
-				}
-			],
-			"sid": 187144709437271
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-available",
-					"objectClass": "Steamworks",
-					"sid": 897860215098855
-				},
-				{
-					"id": "trigger-once-while-true",
-					"objectClass": "System",
-					"sid": 956732195063701
-				}
-			],
-			"actions": [
-				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 456404365071171,
-					"parameters": {
-						"type": "log",
-						"message": "\"Steamworks ativo\""
-					}
-				}
-			],
-			"sid": 899481961900888
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 374165011862301
-				},
-				{
-					"id": "trigger-once-while-true",
-					"objectClass": "System",
-					"sid": 265303124200991
-				}
-			],
-			"actions": [
-				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 433471451938495,
-					"parameters": {
-						"type": "log",
-						"message": "\"Steamworks deu erro\""
-					}
-				}
-			],
-			"sid": 156132974821625
+			"sid": 428121772240145
 		}
 	],
 	"sid": 468746933081532

@@ -32,6 +32,23 @@
 			],
 			"actions": [
 				{
+					"id": "tween-value",
+					"objectClass": "TiledBackground",
+					"sid": 159362608967773,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loop\"",
+						"start-value": "-1085",
+						"end-value": "-5",
+						"time": "14",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "yes",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 531329179976351,
@@ -126,6 +143,27 @@
 				}
 			],
 			"sid": 949214017353941
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 614380554217966
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TiledBackground",
+					"sid": 393204510358516,
+					"parameters": {
+						"y": "Self.Tween.Value(\"loop\")"
+					}
+				}
+			],
+			"sid": 566695204497044
 		},
 		{
 			"eventType": "block",
@@ -593,17 +631,17 @@
 				{
 					"id": "on-movement",
 					"objectClass": "Mouse",
-					"sid": 524741210703440
+					"sid": 170846243067368
 				},
 				{
 					"id": "is-on-screen",
 					"objectClass": "Cursors",
-					"sid": 375650421366871
+					"sid": 500182625726994
 				},
 				{
 					"id": "layer-is-visible",
 					"objectClass": "System",
-					"sid": 683438172511055,
+					"sid": 551687557580528,
 					"parameters": {
 						"layer": "\"Pause\""
 					},
@@ -612,24 +650,29 @@
 			],
 			"actions": [
 				{
-					"id": "spawn-another-object",
-					"objectClass": "Cursors",
-					"sid": 908279080313897,
+					"id": "set-position",
+					"objectClass": "Cursor_Particle",
+					"sid": 323367981259170,
 					"parameters": {
-						"object": "Cursor_effect",
-						"layer": "\"Mouse\"",
-						"image-point": "1",
-						"create-hierarchy": false,
-						"template-name": "\"\""
+						"x": "Cursors.ImagePointX(1)",
+						"y": "Cursors.ImagePointY(1)"
+					}
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "Cursor_Particle",
+					"sid": 733734890140375,
+					"parameters": {
+						"state": "spraying"
 					}
 				},
 				{
 					"id": "move-to-bottom",
-					"objectClass": "Cursor_effect",
-					"sid": 985395716613967
+					"objectClass": "Cursor_Particle",
+					"sid": 790325996094004
 				}
 			],
-			"sid": 293448837897858
+			"sid": 684887003096957
 		},
 		{
 			"eventType": "group",

@@ -37,7 +37,12 @@
 			"sid": 320758964743834
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "swirl",
+			"name": "Swirl"
+		}
+	],
 	"animations": {
 		"items": [
 			{

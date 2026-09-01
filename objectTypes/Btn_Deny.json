@@ -21,6 +21,26 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 3229394,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0,
+								0.85,
+								0,
+								1,
+								0.15,
+								1,
+								0.85,
+								0.85,
+								1,
+								0.15,
+								1,
+								0,
+								0.85,
+								0,
+								0.15
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -35,6 +55,26 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 4336435,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0,
+								0.85,
+								0,
+								1,
+								0.15,
+								1,
+								0.85,
+								0.85,
+								1,
+								0.15,
+								1,
+								0,
+								0.85,
+								0,
+								0.15
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

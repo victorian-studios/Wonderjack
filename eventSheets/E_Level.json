@@ -500,11 +500,11 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 443526011637410,
+					"sid": 466232904215356,
 					"parameters": {
 						"object-to-create": "Candelabro",
 						"layer": "\"Game\"",
-						"x": "248",
+						"x": "244",
 						"y": "238",
 						"create-hierarchy": false,
 						"template-name": "\"\""
@@ -801,48 +801,21 @@
 							}
 						},
 						{
-							"callFunction": "Transition",
-							"sid": 583810993476225,
-							"parameters": [
-								true,
-								false
-							]
-						},
-						{
 							"id": "set-group-active",
 							"objectClass": "System",
-							"sid": 378363445274853,
+							"sid": 826238217360919,
 							"parameters": {
 								"group-name": "\"Tutorial\"",
 								"state": "deactivated"
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 469455836320182,
-							"parameters": {
-								"seconds": "5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 247954528788211,
-							"parameters": {
-								"layer": "\"Turn\"",
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 804895150726348,
-							"parameters": {
-								"variable": "MatchReady",
-								"value": "true"
-							}
+							"callFunction": "Transition",
+							"sid": 583810993476225,
+							"parameters": [
+								true,
+								false
+							]
 						}
 					],
 					"sid": 523907190575740
@@ -873,6 +846,36 @@
 					"sid": 816688845785981,
 					"parameters": {
 						"text": "\"fps: \" & fps & \" | cpu: \" & ( round(cpuutilisation * 100) / 100 ) & \" | gpu: \"& (round(gpuutilisation * 100) / 100 ) & \" | vram (images): \" & ImageMemoryUsage"
+					}
+				},
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "Btn_Stop",
+					"sid": 885975158530892,
+					"parameters": {
+						"effect": "\"Swirl\"",
+						"parameter-index": "0",
+						"value": "Self.Tween.Value(\"rotate\")"
+					}
+				},
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "Deck_Numb_Sprite",
+					"sid": 755452571673738,
+					"parameters": {
+						"effect": "\"Swirl\"",
+						"parameter-index": "0",
+						"value": "Self.Tween.Value(\"rotate\")"
+					}
+				},
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "Deck_Power_Sprite",
+					"sid": 967612237006219,
+					"parameters": {
+						"effect": "\"Swirl\"",
+						"parameter-index": "0",
+						"value": "Self.Tween.Value(\"rotate\")"
 					}
 				}
 			],
@@ -1172,9 +1175,9 @@
 						{
 							"id": "set-position",
 							"objectClass": "Candelabro",
-							"sid": 642432491224538,
+							"sid": 918790095114044,
 							"parameters": {
-								"x": "Self.X - 25",
+								"x": "Self.X - 28",
 								"y": "Self.Y"
 							}
 						},
@@ -3404,7 +3407,7 @@
 				{
 					"functionName": "Reset Number Deck",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -3482,7 +3485,7 @@
 				{
 					"functionName": "Draw_Number",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -6421,7 +6424,7 @@
 				{
 					"functionName": "Discard_Number",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -7492,7 +7495,7 @@
 				{
 					"functionName": "Shuffle_Number",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -7548,7 +7551,7 @@
 				{
 					"functionName": "Count_Numbers",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -8035,7 +8038,7 @@
 				{
 					"functionName": "Switch_Numbers",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -8543,7 +8546,7 @@
 				{
 					"functionName": "Reset Power Deck",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -8589,7 +8592,7 @@
 				{
 					"functionName": "Draw_Power",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -8943,7 +8946,7 @@
 				{
 					"functionName": "Order_Hand",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -9183,7 +9186,7 @@
 				{
 					"functionName": "Reset_hand",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -9597,7 +9600,7 @@
 				{
 					"functionName": "Discard_Power",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -10055,7 +10058,7 @@
 				{
 					"functionName": "Use_Power_Card",
 					"functionDescription": "",
-					"functionCategory": "",
+					"functionCategory": "Match",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
@@ -10121,6 +10124,23 @@
 									"parameters": [
 										"Who_Played",
 										"card_ID",
+										false
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 895643727220895,
+									"parameters": {
+										"seconds": "0.31",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "Order_Hand",
+									"sid": 907876367984126,
+									"parameters": [
+										true,
 										false
 									]
 								}
@@ -14881,15 +14901,6 @@
 									"isInverted": true
 								},
 								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 340781608224498,
-									"parameters": {
-										"layer": "\"Turn\""
-									},
-									"isInverted": true
-								},
-								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
 									"sid": 968846765586473
@@ -15037,16 +15048,6 @@
 							"sid": 240718258851928,
 							"parameters": {
 								"instance-variable": "Highlight"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Card_Power",
-							"sid": 928923830011968,
-							"disabled": true,
-							"parameters": {
-								"instance-variable": "Selected"
 							},
 							"isInverted": true
 						},
@@ -17730,15 +17731,6 @@
 										"layer": "\"Turn\"",
 										"visibility": "visible"
 									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 828923620567160,
-									"parameters": {
-										"layer": "\"Power_Player\"",
-										"visibility": "invisible"
-									}
 								}
 							],
 							"sid": 392810647887606,
@@ -18036,10 +18028,10 @@
 												{
 													"id": "set-fade-in-time",
 													"objectClass": "Text_Turn",
-													"sid": 574330894978537,
+													"sid": 200959548210041,
 													"behaviorType": "Fade",
 													"parameters": {
-														"fade-in-time": "Opt_FastMode = 1 ? 0.5 : 1"
+														"fade-in-time": "Opt_FastMode = 1 ? 0.25 : 1"
 													}
 												},
 												{
@@ -18054,10 +18046,10 @@
 												{
 													"id": "set-fade-out-time",
 													"objectClass": "Text_Turn",
-													"sid": 162910097194354,
+													"sid": 288286643885476,
 													"behaviorType": "Fade",
 													"parameters": {
-														"fade-out-time": "Opt_FastMode = 1 ? 0.5 : 1"
+														"fade-out-time": "Opt_FastMode = 1 ? 0.25 : 0.5"
 													}
 												},
 												{
@@ -18085,10 +18077,10 @@
 												{
 													"id": "set-fade-in-time",
 													"objectClass": "Bkg_Turn_Txt",
-													"sid": 700486617975964,
+													"sid": 110374657361739,
 													"behaviorType": "Fade",
 													"parameters": {
-														"fade-in-time": "Opt_FastMode = 1 ? 0.5 : 1"
+														"fade-in-time": "Opt_FastMode = 1 ? 0.25 : 1"
 													}
 												},
 												{
@@ -18103,10 +18095,10 @@
 												{
 													"id": "set-fade-out-time",
 													"objectClass": "Bkg_Turn_Txt",
-													"sid": 491546714431184,
+													"sid": 692334397534402,
 													"behaviorType": "Fade",
 													"parameters": {
-														"fade-out-time": "Opt_FastMode = 1 ? 0.5 : 1"
+														"fade-out-time": "Opt_FastMode = 1 ? 0.25 : 0.5"
 													}
 												},
 												{
@@ -18121,110 +18113,124 @@
 													"parameters": [
 														false
 													]
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 395335790319173,
-													"parameters": {
-														"object": "Quadro_Turns_Shadow",
-														"layer": "Self.LayerName",
-														"image-point": "0",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns_Shadow",
-													"sid": 327628989452199,
-													"parameters": {
-														"animation": "\"Alice\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-animation-frame",
-													"objectClass": "Quadro_Turns_Shadow",
-													"sid": 516861800824517,
-													"parameters": {
-														"frame-number": "1"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 221396919822138,
-													"parameters": {
-														"seconds": "0.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns",
-													"sid": 849044401672724,
-													"parameters": {
-														"animation": "\"Alice\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-animation-frame",
-													"objectClass": "Quadro_Turns",
-													"sid": 511463264755322,
-													"parameters": {
-														"frame-number": "1"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 397101817502123,
-													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 1 : 3",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-layer-visible",
-													"objectClass": "System",
-													"sid": 133220804871601,
-													"parameters": {
-														"layer": "\"Turn\"",
-														"visibility": "invisible"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 234556611225506,
-													"parameters": {
-														"variable": "Turn",
-														"value": "1"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 389199425139452,
-													"parameters": {
-														"group-name": "\"Player's Turn / Actions\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 493297951117262,
-													"parameters": {
-														"variable": "Stop_Turn",
-														"value": "false"
-													}
 												}
 											],
 											"sid": 482832182888847,
 											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Quadro_Turns",
+															"sid": 659946073085902,
+															"parameters": {
+																"object": "Quadro_Turns_Shadow",
+																"layer": "Self.LayerName",
+																"image-point": "0",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Quadro_Turns_Shadow",
+															"sid": 600764960164680,
+															"parameters": {
+																"animation": "\"Alice\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-animation-frame",
+															"objectClass": "Quadro_Turns_Shadow",
+															"sid": 427536510674661,
+															"parameters": {
+																"frame-number": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 927729444868696,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Quadro_Turns",
+															"sid": 546973297842893,
+															"parameters": {
+																"animation": "\"Alice\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-animation-frame",
+															"objectClass": "Quadro_Turns",
+															"sid": 410177855634060,
+															"parameters": {
+																"frame-number": "1"
+															}
+														}
+													],
+													"sid": 528030724164030
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 859784702157146,
+															"parameters": {
+																"seconds": "Opt_FastMode = 1 ? 1 : 2.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-layer-visible",
+															"objectClass": "System",
+															"sid": 656097171640134,
+															"parameters": {
+																"layer": "\"Turn\"",
+																"visibility": "invisible"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 502384837690316,
+															"parameters": {
+																"variable": "Turn",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 798365734010784,
+															"parameters": {
+																"group-name": "\"Player's Turn / Actions\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 708459522600124,
+															"parameters": {
+																"variable": "Stop_Turn",
+																"value": "false"
+															}
+														}
+													],
+													"sid": 404823813787416
+												},
 												{
 													"eventType": "block",
 													"conditions": [
@@ -18451,10 +18457,10 @@
 										{
 											"id": "set-fade-in-time",
 											"objectClass": "Text_Turn",
-											"sid": 291490029091759,
+											"sid": 283893673834984,
 											"behaviorType": "Fade",
 											"parameters": {
-												"fade-in-time": "Opt_FastMode = 1 ? 0.5 : 1"
+												"fade-in-time": "Opt_FastMode = 1 ? 0.25 : 1"
 											}
 										},
 										{
@@ -18469,10 +18475,10 @@
 										{
 											"id": "set-fade-out-time",
 											"objectClass": "Text_Turn",
-											"sid": 531948707102783,
+											"sid": 333158590121941,
 											"behaviorType": "Fade",
 											"parameters": {
-												"fade-out-time": "Opt_FastMode = 1 ? 0.5 : 1"
+												"fade-out-time": "Opt_FastMode = 1 ? 0.25 : 0.5"
 											}
 										},
 										{
@@ -18500,10 +18506,10 @@
 										{
 											"id": "set-fade-in-time",
 											"objectClass": "Bkg_Turn_Txt",
-											"sid": 777314789887213,
+											"sid": 712891484526655,
 											"behaviorType": "Fade",
 											"parameters": {
-												"fade-in-time": "Opt_FastMode = 1 ? 0.5 : 1"
+												"fade-in-time": "Opt_FastMode = 1 ? 0.25 : 1"
 											}
 										},
 										{
@@ -18518,10 +18524,10 @@
 										{
 											"id": "set-fade-out-time",
 											"objectClass": "Bkg_Turn_Txt",
-											"sid": 294354416277596,
+											"sid": 827779686519313,
 											"behaviorType": "Fade",
 											"parameters": {
-												"fade-out-time": "Opt_FastMode = 1 ? 0.5 : 1"
+												"fade-out-time": "Opt_FastMode = 1 ? 0.25 : 0.5"
 											}
 										},
 										{
@@ -18692,6 +18698,15 @@
 													"objectClass": "Deck_Numb_Sprite",
 													"sid": 245979655126593,
 													"behaviorType": "Fade"
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "Deck_Numb_Sprite",
+													"sid": 873332101723086,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Swirl\""
+													}
 												}
 											],
 											"sid": 302643610746663
@@ -18733,6 +18748,15 @@
 													"objectClass": "Deck_Power_Sprite",
 													"sid": 295472585020689,
 													"behaviorType": "Fade"
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "Deck_Power_Sprite",
+													"sid": 403369310204440,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Swirl\""
+													}
 												}
 											],
 											"sid": 516775495968623
@@ -18774,6 +18798,15 @@
 													"objectClass": "Btn_Stop",
 													"sid": 778800262995148,
 													"behaviorType": "Fade"
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "Btn_Stop",
+													"sid": 505168227250996,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Swirl\""
+													}
 												}
 											],
 											"sid": 868305221547417
@@ -18852,9 +18885,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 833359890662727,
+													"sid": 178249983965084,
 													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 1 : 3",
+														"seconds": "Opt_FastMode = 1 ? 1 : 2.5",
 														"use-timescale": true
 													}
 												},
@@ -18896,9 +18929,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 449440620508551,
+													"sid": 511422649568695,
 													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 1 : 3",
+														"seconds": "Opt_FastMode = 1 ? 1 : 2.5",
 														"use-timescale": true
 													}
 												},
@@ -19311,9 +19344,99 @@
 							"text": "ROUND"
 						},
 						{
+							"functionName": "Update_Round_Counter",
+							"functionDescription": "Atualiza o quadro com o número da rodada atual. Dura de 1 seg. no modo rápido ou 2 no normal.",
+							"functionCategory": "Match",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 118187751969423,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text_Turn",
+											"sid": 924324184862845,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
+												"duration": "1.75 - Opt_FastMode_Secs"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Quadro_Turns",
+											"sid": 821849769354302,
+											"parameters": {
+												"object": "Quadro_Turns_Shadow",
+												"layer": "Self.LayerName",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Quadro_Turns_Shadow",
+											"sid": 993869745215030,
+											"parameters": {
+												"animation": "\"None\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Quadro_Turns",
+											"sid": 833643408603740,
+											"parameters": {
+												"object": "Text_Round_Numb",
+												"layer": "Self.LayerName",
+												"image-point": "1",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Round_Numb",
+											"sid": 715365738926631,
+											"parameters": {
+												"text": "GameRound"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 962388724495705,
+											"parameters": {
+												"seconds": "Opt_FastMode = 1 ? 0.25 : 0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Quadro_Turns",
+											"sid": 107222134242024,
+											"parameters": {
+												"animation": "\"None\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 949576956903359
+								}
+							]
+						},
+						{
 							"functionName": "Finish Round",
 							"functionDescription": "",
-							"functionCategory": "",
+							"functionCategory": "Match",
 							"functionReturnType": "none",
 							"functionCopyPicked": false,
 							"functionIsAsync": false,
@@ -20051,7 +20174,7 @@
 						{
 							"functionName": "Next_Round",
 							"functionDescription": "",
-							"functionCategory": "",
+							"functionCategory": "Match",
 							"functionReturnType": "none",
 							"functionCopyPicked": false,
 							"functionIsAsync": false,
@@ -20287,11 +20410,11 @@
 														},
 														{
 															"callFunction": "Talk",
-															"sid": 475482557099010,
+															"sid": 724149586700665,
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
-																false,
+																true,
 																"0"
 															]
 														},
@@ -20590,11 +20713,11 @@
 																},
 																{
 																	"callFunction": "Talk",
-																	"sid": 347078413841526,
+																	"sid": 432752746323793,
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
-																		false,
+																		true,
 																		"0"
 																	]
 																},
@@ -20813,72 +20936,8 @@
 													}
 												},
 												{
-													"id": "typewriter-text",
-													"objectClass": "Text_Turn",
-													"sid": 201379450897710,
-													"parameters": {
-														"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
-														"duration": "2 - Opt_FastMode_Secs"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 820770875862804,
-													"parameters": {
-														"object": "Quadro_Turns_Shadow",
-														"layer": "Self.LayerName",
-														"image-point": "0",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns_Shadow",
-													"sid": 190226531402924,
-													"parameters": {
-														"animation": "\"None\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 867948322841029,
-													"parameters": {
-														"object": "Text_Round_Numb",
-														"layer": "Self.LayerName",
-														"image-point": "1",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-text",
-													"objectClass": "Text_Round_Numb",
-													"sid": 778910812619106,
-													"parameters": {
-														"text": "GameRound"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 611222804764165,
-													"parameters": {
-														"seconds": "0.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns",
-													"sid": 622448481915718,
-													"parameters": {
-														"animation": "\"None\"",
-														"from": "beginning"
-													}
+													"callFunction": "Update_Round_Counter",
+													"sid": 770045097977034
 												},
 												{
 													"id": "wait",
@@ -21361,11 +21420,11 @@
 																		},
 																		{
 																			"callFunction": "Talk",
-																			"sid": 476260408576211,
+																			"sid": 862750090835595,
 																			"parameters": [
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
-																				false,
+																				true,
 																				"-0.5"
 																			]
 																		}
@@ -22000,11 +22059,11 @@
 																},
 																{
 																	"callFunction": "Talk",
-																	"sid": 580996558965760,
+																	"sid": 965851708429516,
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
-																		false,
+																		true,
 																		"1"
 																	]
 																},
@@ -22240,11 +22299,11 @@
 														},
 														{
 															"callFunction": "Talk",
-															"sid": 166713974935638,
+															"sid": 487806171938002,
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
-																false,
+																true,
 																"0"
 															]
 														},
@@ -22557,11 +22616,11 @@
 																},
 																{
 																	"callFunction": "Talk",
-																	"sid": 296947520403455,
+																	"sid": 322647615548115,
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
-																		false,
+																		true,
 																		"0"
 																	]
 																},
@@ -22880,11 +22939,11 @@
 																},
 																{
 																	"callFunction": "Talk",
-																	"sid": 252356139912136,
+																	"sid": 663698359048877,
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
-																		false,
+																		true,
 																		"0"
 																	]
 																},
@@ -23151,72 +23210,8 @@
 													}
 												},
 												{
-													"id": "typewriter-text",
-													"objectClass": "Text_Turn",
-													"sid": 811736073496810,
-													"parameters": {
-														"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
-														"duration": "2 - Opt_FastMode_Secs"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 107311337851779,
-													"parameters": {
-														"object": "Quadro_Turns_Shadow",
-														"layer": "Self.LayerName",
-														"image-point": "0",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns_Shadow",
-													"sid": 203850450284094,
-													"parameters": {
-														"animation": "\"None\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 353947959323009,
-													"parameters": {
-														"object": "Text_Round_Numb",
-														"layer": "Self.LayerName",
-														"image-point": "1",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-text",
-													"objectClass": "Text_Round_Numb",
-													"sid": 458852128346684,
-													"parameters": {
-														"text": "GameRound"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 554626522980595,
-													"parameters": {
-														"seconds": "0.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns",
-													"sid": 864603936064449,
-													"parameters": {
-														"animation": "\"None\"",
-														"from": "beginning"
-													}
+													"callFunction": "Update_Round_Counter",
+													"sid": 950536419764919
 												},
 												{
 													"id": "wait",
@@ -24365,11 +24360,11 @@
 																},
 																{
 																	"callFunction": "Talk",
-																	"sid": 816888960898324,
+																	"sid": 477635958836887,
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
-																		false,
+																		true,
 																		"1"
 																	]
 																},
@@ -24513,7 +24508,7 @@
 						{
 							"functionName": "Show All Hidden Cards",
 							"functionDescription": "",
-							"functionCategory": "",
+							"functionCategory": "Match",
 							"functionReturnType": "none",
 							"functionCopyPicked": false,
 							"functionIsAsync": false,
@@ -25217,7 +25212,6 @@
 											"id": "set-at-x",
 											"objectClass": "A_TheRng",
 											"sid": 110603919928594,
-											"disabled": true,
 											"parameters": {
 												"x": "loopindex",
 												"value": "choose ( 1, 2 )"
@@ -25226,10 +25220,11 @@
 										{
 											"id": "set-at-x",
 											"objectClass": "A_TheRng",
-											"sid": 152670056978159,
+											"sid": 200209697007363,
+											"disabled": true,
 											"parameters": {
 												"x": "loopindex",
-												"value": "2"
+												"value": "1"
 											}
 										}
 									],
@@ -25689,6 +25684,33 @@
 											}
 										},
 										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 184769012948284,
+											"parameters": {
+												"layer": "\"Mouse\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 860592037023366,
+											"parameters": {
+												"layer": "\"Luz Inimigo\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 638713548842955,
+											"parameters": {
+												"layer": "\"Luz Fase - Mesa\"",
+												"visibility": "visible"
+											}
+										},
+										{
 											"id": "set-fade-in-time",
 											"objectClass": "Enemy",
 											"sid": 225208829515224,
@@ -25814,99 +25836,6 @@
 									"sid": 616482977857300,
 									"children": [
 										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 928611343591533,
-													"parameters": {
-														"object": "Quadro_Turns_Shadow",
-														"layer": "Self.LayerName",
-														"image-point": "0",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns_Shadow",
-													"sid": 306165715895228,
-													"parameters": {
-														"animation": "\"None\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 455940944558063,
-													"parameters": {
-														"object": "Text_Round_Numb",
-														"layer": "Self.LayerName",
-														"image-point": "1",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-text",
-													"objectClass": "Text_Round_Numb",
-													"sid": 872461969982852,
-													"parameters": {
-														"text": "GameRound"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 160825186184427,
-													"parameters": {
-														"seconds": "0.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns",
-													"sid": 988960969662666,
-													"parameters": {
-														"animation": "\"None\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-layer-visible",
-													"objectClass": "System",
-													"sid": 165540480406661,
-													"parameters": {
-														"layer": "\"Mouse\"",
-														"visibility": "visible"
-													}
-												},
-												{
-													"id": "set-layer-visible",
-													"objectClass": "System",
-													"sid": 704889572347322,
-													"parameters": {
-														"layer": "\"Luz Inimigo\"",
-														"visibility": "visible"
-													}
-												},
-												{
-													"id": "set-layer-visible",
-													"objectClass": "System",
-													"sid": 777137426724963,
-													"parameters": {
-														"layer": "\"Luz Fase - Mesa\"",
-														"visibility": "visible"
-													}
-												}
-											],
-											"sid": 369180942780331
-										},
-										{
 											"eventType": "comment",
 											"text": "Mad Hatter"
 										},
@@ -25956,10 +25885,10 @@
 												{
 													"id": "typewriter-text",
 													"objectClass": "Text_Turn",
-													"sid": 177921547649240,
+													"sid": 505503303008620,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"common.new_match\", EnemyNameTurns)",
-														"duration": "1.5"
+														"duration": "2.5 - Opt_FastMode"
 													}
 												},
 												{
@@ -26104,10 +26033,10 @@
 												{
 													"id": "typewriter-text",
 													"objectClass": "Text_Turn",
-													"sid": 377282709105341,
+													"sid": 139484721087704,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"common.new_match\", EnemyNameTurns)",
-														"duration": "1.5"
+														"duration": "2.5 - Opt_FastMode"
 													}
 												},
 												{
@@ -26209,25 +26138,20 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 948290464180430,
+													"sid": 504678112211576,
 													"parameters": {
-														"seconds": "2.5",
+														"seconds": "4 - (Opt_FastMode * 2)",
 														"use-timescale": true
 													}
 												},
 												{
-													"id": "typewriter-text",
-													"objectClass": "Text_Turn",
-													"sid": 192352474414460,
-													"parameters": {
-														"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
-														"duration": "2 - Opt_FastMode_Secs"
-													}
+													"callFunction": "Update_Round_Counter",
+													"sid": 577657573448362
 												},
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 296109685572634,
+													"sid": 289503893418244,
 													"parameters": {
 														"seconds": "2 - Opt_FastMode_Secs",
 														"use-timescale": true
@@ -26298,6 +26222,33 @@
 													"objectClass": "Bkg_Turn_Txt",
 													"sid": 686092519460021,
 													"behaviorType": "Fade"
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 971601428997152,
+													"parameters": {
+														"seconds": "1",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 247954528788211,
+													"parameters": {
+														"layer": "\"Turn\"",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 804895150726348,
+													"parameters": {
+														"variable": "MatchReady",
+														"value": "true"
+													}
 												}
 											],
 											"sid": 523317535922607,
@@ -26372,11 +26323,11 @@
 														},
 														{
 															"callFunction": "Talk",
-															"sid": 690809989289184,
+															"sid": 225360377361723,
 															"parameters": [
 																"EnemyName",
 																"\"common.enemies.\" & EnemyName & \".special\"",
-																false,
+																true,
 																"1  - Opt_FastMode_Secs"
 															]
 														},
@@ -26447,11 +26398,11 @@
 														},
 														{
 															"callFunction": "Talk",
-															"sid": 809527053494336,
+															"sid": 908718315909396,
 															"parameters": [
 																"EnemyName",
 																"\"common.enemies.\" & EnemyName & \".special\"",
-																false,
+																true,
 																"1 - Opt_FastMode_Secs"
 															]
 														},
@@ -26628,16 +26579,6 @@
 											"parameters": {
 												"seconds": "0.5",
 												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 502451017818237,
-											"disabled": true,
-											"parameters": {
-												"variable": "LayoutZoom",
-												"value": "5.5"
 											}
 										},
 										{
@@ -26873,71 +26814,25 @@
 											"conditions": [],
 											"actions": [
 												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 409064160205017,
+													"id": "fade-volume",
+													"objectClass": "Audio",
+													"sid": 368716765523158,
 													"parameters": {
-														"object": "Quadro_Turns_Shadow",
-														"layer": "Self.LayerName",
-														"image-point": "0",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Quadro_Turns_Shadow",
-													"sid": 736933046341502,
-													"parameters": {
-														"animation": "\"None\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "Quadro_Turns",
-													"sid": 793086812042862,
-													"parameters": {
-														"object": "Text_Round_Numb",
-														"layer": "Self.LayerName",
-														"image-point": "1",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-text",
-													"objectClass": "Text_Round_Numb",
-													"sid": 390114726079493,
-													"parameters": {
-														"text": "GameRound"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 742594537297028,
-													"parameters": {
-														"seconds": "0.5",
-														"use-timescale": true
+														"tag": "\"music\"",
+														"db": "-100",
+														"duration": "1",
+														"ending": "stop"
 													}
 												},
 												{
 													"id": "set-animation",
 													"objectClass": "Quadro_Turns",
-													"sid": 768408071937551,
+													"sid": 524904117932812,
 													"parameters": {
 														"animation": "\"None\"",
 														"from": "beginning"
 													}
-												}
-											],
-											"sid": 105180084354723
-										},
-										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
+												},
 												{
 													"id": "wait",
 													"objectClass": "System",
@@ -26988,7 +26883,22 @@
 															}
 														}
 													],
-													"actions": [],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 141465814512583,
+															"parameters": {
+																"audio-file": {
+																	"path": "In Game/Level 2/7 - Malevolent Melancholy (Loop)"
+																},
+																"loop": "looping",
+																"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+																"stereo-pan": "0",
+																"tag-optional": "\"music\""
+															}
+														}
+													],
 													"sid": 559952401724151,
 													"children": [
 														{
@@ -27351,42 +27261,7 @@
 														{
 															"eventType": "block",
 															"conditions": [],
-															"actions": [
-																{
-																	"id": "fade-volume",
-																	"objectClass": "Audio",
-																	"sid": 742743147085195,
-																	"parameters": {
-																		"tag": "\"music\"",
-																		"db": "-100",
-																		"duration": "0.5",
-																		"ending": "stop"
-																	}
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 615474901449519,
-																	"parameters": {
-																		"seconds": "0.5",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "play",
-																	"objectClass": "Audio",
-																	"sid": 873121847496103,
-																	"parameters": {
-																		"audio-file": {
-																			"path": "In Game/Level 2/7 - Malevolent Melancholy (Loop)"
-																		},
-																		"loop": "looping",
-																		"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
-																		"stereo-pan": "0",
-																		"tag-optional": "\"music\""
-																	}
-																}
-															],
+															"actions": [],
 															"sid": 713980791376326
 														}
 													]
@@ -27405,7 +27280,22 @@
 															}
 														}
 													],
-													"actions": [],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 630285358586024,
+															"parameters": {
+																"audio-file": {
+																	"path": "In Game/Level 3/6 - Mystic Veil of Despair (Loop)"
+																},
+																"loop": "looping",
+																"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+																"stereo-pan": "0",
+																"tag-optional": "\"music\""
+															}
+														}
+													],
 													"sid": 262379557785057,
 													"children": [
 														{
@@ -27762,42 +27652,7 @@
 														{
 															"eventType": "block",
 															"conditions": [],
-															"actions": [
-																{
-																	"id": "fade-volume",
-																	"objectClass": "Audio",
-																	"sid": 692984759455706,
-																	"parameters": {
-																		"tag": "\"music\"",
-																		"db": "-100",
-																		"duration": "0.5",
-																		"ending": "stop"
-																	}
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 797438504833627,
-																	"parameters": {
-																		"seconds": "0.5",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "play",
-																	"objectClass": "Audio",
-																	"sid": 859244836869438,
-																	"parameters": {
-																		"audio-file": {
-																			"path": "In Game/Level 3/6 - Mystic Veil of Despair (Loop)"
-																		},
-																		"loop": "looping",
-																		"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
-																		"stereo-pan": "0",
-																		"tag-optional": "\"music\""
-																	}
-																}
-															],
+															"actions": [],
 															"sid": 937773495749476,
 															"children": [
 																{
@@ -27901,11 +27756,11 @@
 																		},
 																		{
 																			"callFunction": "Talk",
-																			"sid": 425673564457553,
+																			"sid": 340770230241402,
 																			"parameters": [
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
-																				false,
+																				true,
 																				"-0.5"
 																			]
 																		}
@@ -27952,6 +27807,20 @@
 																}
 															],
 															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 329083592032768,
+																	"parameters": {
+																		"audio-file": {
+																			"path": "In Game/Boss/1 - Cursed Shadows (Loop)"
+																		},
+																		"loop": "looping",
+																		"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"music\""
+																	}
+																},
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
@@ -28053,49 +27922,6 @@
 																}
 															],
 															"sid": 297846035206879,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [],
-																	"actions": [
-																		{
-																			"id": "fade-volume",
-																			"objectClass": "Audio",
-																			"sid": 840402290177515,
-																			"parameters": {
-																				"tag": "\"music\"",
-																				"db": "-100",
-																				"duration": "0.5",
-																				"ending": "stop"
-																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 349893371066093,
-																			"parameters": {
-																				"seconds": "0.5",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "play",
-																			"objectClass": "Audio",
-																			"sid": 993410167846347,
-																			"parameters": {
-																				"audio-file": {
-																					"path": "In Game/Boss/1 - Cursed Shadows (Loop)"
-																				},
-																				"loop": "looping",
-																				"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
-																				"stereo-pan": "0",
-																				"tag-optional": "\"music\""
-																			}
-																		}
-																	],
-																	"sid": 315458492597454
-																}
-															],
 															"isOrBlock": true
 														},
 														{
@@ -28117,6 +27943,20 @@
 																}
 															],
 															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 664190440577837,
+																	"parameters": {
+																		"audio-file": {
+																			"path": "In Game/Boss/12 - Soulbound Desolationt (Loop)"
+																		},
+																		"loop": "looping",
+																		"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"music\""
+																	}
+																},
 																{
 																	"id": "set-eventvar-value",
 																	"objectClass": "System",
@@ -28220,47 +28060,6 @@
 															"sid": 820444873965941,
 															"children": [
 																{
-																	"eventType": "block",
-																	"conditions": [],
-																	"actions": [
-																		{
-																			"id": "fade-volume",
-																			"objectClass": "Audio",
-																			"sid": 329267249595721,
-																			"parameters": {
-																				"tag": "\"music\"",
-																				"db": "-100",
-																				"duration": "0.5",
-																				"ending": "stop"
-																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 291090275428106,
-																			"parameters": {
-																				"seconds": "0.5",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "play",
-																			"objectClass": "Audio",
-																			"sid": 130101196892758,
-																			"parameters": {
-																				"audio-file": {
-																					"path": "In Game/Boss/12 - Soulbound Desolationt (Loop)"
-																				},
-																				"loop": "looping",
-																				"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
-																				"stereo-pan": "0",
-																				"tag-optional": "\"music\""
-																			}
-																		}
-																	],
-																	"sid": 597267664465226
-																},
-																{
 																	"eventType": "comment",
 																	"text": "Special Power (Já foi aplicado ali em cima)"
 																},
@@ -28290,11 +28089,11 @@
 																		},
 																		{
 																			"callFunction": "Talk",
-																			"sid": 798407693991183,
+																			"sid": 733011766024711,
 																			"parameters": [
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
-																				false,
+																				true,
 																				"0"
 																			]
 																		}
@@ -28312,10 +28111,151 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 734249583059622,
+															"sid": 287214606910696,
 															"parameters": {
 																"seconds": "1",
 																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-layer-visible",
+															"objectClass": "System",
+															"sid": 755829722217855,
+															"parameters": {
+																"layer": "\"Turn\"",
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Text_Turn",
+															"sid": 259982180285424,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "1"
+															}
+														},
+														{
+															"id": "set-wait-time",
+															"objectClass": "Text_Turn",
+															"sid": 262224874441485,
+															"behaviorType": "Fade",
+															"parameters": {
+																"wait-time": "0"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Text_Turn",
+															"sid": 884907859252959,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "0"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Text_Turn",
+															"sid": 241555116418011,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-visible",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 955050227459530,
+															"parameters": {
+																"visibility": "visible"
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 289262519071908,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "1"
+															}
+														},
+														{
+															"id": "set-wait-time",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 959176835373988,
+															"behaviorType": "Fade",
+															"parameters": {
+																"wait-time": "0"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 267625083183046,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "0"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Bkg_Turn_Txt",
+															"sid": 520808716475840,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "typewriter-text",
+															"objectClass": "Text_Turn",
+															"sid": 427276094090629,
+															"parameters": {
+																"text": "Match >= 4 ? Internationalization.Lookup(\"common.new_boss\", EnemyNameTurns) : Internationalization.Lookup(\"common.new_match\", EnemyNameTurns)",
+																"duration": "3 - Opt_FastMode_Secs"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 620039575443435,
+															"parameters": {
+																"seconds": "4 - Opt_FastMode_Secs",
+																"use-timescale": true
+															}
+														},
+														{
+															"callFunction": "Update_Round_Counter",
+															"sid": 220824636998628
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 820927338875224,
+															"parameters": {
+																"seconds": "2 - Opt_FastMode_Secs",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-active",
+															"objectClass": "Deck_Numb_Sprite",
+															"sid": 116590704198321,
+															"behaviorType": "Sine",
+															"parameters": {
+																"state": "active"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 931908569167354,
+															"parameters": {
+																"variable": "MatchReady",
+																"value": "true"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 929946377629352,
+															"parameters": {
+																"variable": "RelicPhase",
+																"value": "false"
 															}
 														}
 													],
@@ -29027,6 +28967,13 @@
 											}
 										},
 										{
+											"id": "is-active",
+											"objectClass": "Deck_Numb_Sprite",
+											"sid": 930581488500204,
+											"behaviorType": "Sine",
+											"isInverted": true
+										},
+										{
 											"id": "layer-is-visible",
 											"objectClass": "System",
 											"sid": 309758662185131,
@@ -29245,6 +29192,31 @@
 											]
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 570873856785727,
+											"parameters": {
+												"layer": "\"Turn\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 302365989130028,
+											"parameters": {
+												"layer": "\"Power_Player\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 339770751929741
 								}
 							]
 						},
@@ -29664,6 +29636,31 @@
 											]
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 259565696739577,
+											"parameters": {
+												"layer": "\"Turn\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 443630371822484,
+											"parameters": {
+												"layer": "\"Power_Player\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 375777389618094
 								}
 							]
 						},
@@ -30055,6 +30052,54 @@
 								}
 							],
 							"sid": 614404288842294
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Card_Power",
+									"sid": 799144008170218,
+									"parameters": {
+										"comparison": 5,
+										"y-co-ordinate": "700"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Power",
+									"sid": 247770734025011,
+									"parameters": {
+										"instance-variable": "Selected"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Power",
+									"sid": 737934596641589,
+									"parameters": {
+										"instance-variable": "Demo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 829006074897515
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Card_Power",
+									"sid": 982886681344735,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 526125988080544
 						}
 					],
 					"sid": 737840400443652
@@ -30572,6 +30617,15 @@
 														false,
 														false
 													]
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 863316246747948,
+													"parameters": {
+														"layer": "\"Power_Player\"",
+														"visibility": "invisible"
+													}
 												}
 											],
 											"sid": 288178257961620,
@@ -32314,6 +32368,15 @@
 															]
 														},
 														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 295949973481459,
+															"parameters": {
+																"seconds": "0.2",
+																"use-timescale": true
+															}
+														},
+														{
 															"callFunction": "Order_Hand",
 															"sid": 824854692573461,
 															"parameters": [
@@ -32719,6 +32782,15 @@
 															}
 														},
 														{
+															"id": "set-layer-visible",
+															"objectClass": "System",
+															"sid": 762656109769858,
+															"parameters": {
+																"layer": "\"Power_Player\"",
+																"visibility": "invisible"
+															}
+														},
+														{
 															"callFunction": "Change Turn",
 															"sid": 131100653066533,
 															"parameters": [
@@ -32759,6 +32831,15 @@
 																"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.2) : -100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
+															}
+														},
+														{
+															"id": "set-layer-visible",
+															"objectClass": "System",
+															"sid": 924472014155716,
+															"parameters": {
+																"layer": "\"Power_Player\"",
+																"visibility": "invisible"
 															}
 														},
 														{
@@ -32880,6 +32961,15 @@
 													}
 												},
 												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 981932601366864,
+													"parameters": {
+														"layer": "\"Power_Player\"",
+														"visibility": "invisible"
+													}
+												},
+												{
 													"callFunction": "Change Turn",
 													"sid": 140921719272830,
 													"parameters": [
@@ -32920,6 +33010,15 @@
 														"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.2) : -100",
 														"stereo-pan": "0",
 														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 438235820255106,
+													"parameters": {
+														"layer": "\"Power_Player\"",
+														"visibility": "invisible"
 													}
 												},
 												{
@@ -33205,7 +33304,8 @@
 																	"sid": 997483954513691,
 																	"parameters": {
 																		"variable": "EnemyManual"
-																	}
+																	},
+																	"isInverted": true
 																}
 															],
 															"actions": [
@@ -40658,6 +40758,32 @@
 											],
 											"actions": [
 												{
+													"id": "set-effect-enabled",
+													"objectClass": "Deck_Numb_Sprite",
+													"sid": 629420818592074,
+													"parameters": {
+														"mode": "enable",
+														"effect": "\"Swirl\""
+													}
+												},
+												{
+													"id": "tween-value",
+													"objectClass": "Deck_Numb_Sprite",
+													"sid": 935920630954677,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"rotate\"",
+														"start-value": "0",
+														"end-value": "200",
+														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
 													"id": "set-fade-in-time",
 													"objectClass": "Deck_Numb_Sprite",
 													"sid": 208309582043205,
@@ -40703,6 +40829,32 @@
 												}
 											],
 											"actions": [
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "Deck_Power_Sprite",
+													"sid": 345167823067263,
+													"parameters": {
+														"mode": "enable",
+														"effect": "\"Swirl\""
+													}
+												},
+												{
+													"id": "tween-value",
+													"objectClass": "Deck_Power_Sprite",
+													"sid": 477161823803460,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"rotate\"",
+														"start-value": "0",
+														"end-value": "200",
+														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
 												{
 													"id": "set-fade-in-time",
 													"objectClass": "Deck_Power_Sprite",
@@ -40761,6 +40913,32 @@
 											],
 											"actions": [
 												{
+													"id": "set-effect-enabled",
+													"objectClass": "Btn_Stop",
+													"sid": 868101746741431,
+													"parameters": {
+														"mode": "enable",
+														"effect": "\"Swirl\""
+													}
+												},
+												{
+													"id": "tween-value",
+													"objectClass": "Btn_Stop",
+													"sid": 214975030662030,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"rotate\"",
+														"start-value": "0",
+														"end-value": "200",
+														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
 													"id": "set-fade-in-time",
 													"objectClass": "Btn_Stop",
 													"sid": 761593310227687,
@@ -40792,21 +40970,35 @@
 											"conditions": [],
 											"actions": [
 												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 355249695289645,
+													"parameters": {
+														"audio-file": {
+															"path": "Characters/859301__cat-fox_alex__stupid-chime"
+														},
+														"loop": "not-looping",
+														"volume": "Vol_Sfx > 0 ? -20 + (Vol_Sfx * 0.2) : -100",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 682898080384863,
+													"sid": 367738083845177,
 													"parameters": {
-														"seconds": "1.5 - Opt_FastMode_Secs",
+														"seconds": "2 - Opt_FastMode_Secs",
 														"use-timescale": true
 													}
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 912834234921102,
+													"sid": 968842191469569,
 													"parameters": [
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
-														false,
+														true,
 														"1  - Opt_FastMode_Secs"
 													]
 												},
@@ -40861,11 +41053,11 @@
 									"actions": [
 										{
 											"callFunction": "Talk",
-											"sid": 381148317581536,
+											"sid": 893172766895660,
 											"parameters": [
 												"EnemyName",
 												"\"common.enemies.\" & EnemyName & \".special\"",
-												false,
+												true,
 												"1  - Opt_FastMode_Secs"
 											]
 										}
@@ -41154,11 +41346,11 @@
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 214637662969083,
+													"sid": 857713667804385,
 													"parameters": [
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
-														false,
+														true,
 														"1  - Opt_FastMode_Secs"
 													]
 												},
@@ -41497,11 +41689,11 @@
 							"actions": [
 								{
 									"callFunction": "Talk",
-									"sid": 735458411384280,
+									"sid": 893016914153398,
 									"parameters": [
 										"EnemyName",
 										"\"common.enemies.\" & EnemyName & \".talk_thinking_\" & str(choose(1,2))",
-										false,
+										true,
 										"1"
 									]
 								}
@@ -43284,10 +43476,10 @@
 								{
 									"id": "set-fade-out-time",
 									"objectClass": "Relic_card",
-									"sid": 429266035799443,
+									"sid": 574695404644374,
 									"behaviorType": "Fade",
 									"parameters": {
-										"fade-out-time": "1"
+										"fade-out-time": "Opt_FastMode = 1 ? 0.3 : 1"
 									}
 								},
 								{
@@ -43299,9 +43491,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 309035776091966,
+									"sid": 274445623447158,
 									"parameters": {
-										"seconds": "1",
+										"seconds": "Opt_FastMode = 1 ? 0.3 : 1",
 										"use-timescale": true
 									}
 								},
@@ -43363,152 +43555,6 @@
 										"loop": "no",
 										"ping-pong": "no",
 										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 755829722217855,
-									"parameters": {
-										"layer": "\"Turn\"",
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-fade-in-time",
-									"objectClass": "Text_Turn",
-									"sid": 259982180285424,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-in-time": "1"
-									}
-								},
-								{
-									"id": "set-wait-time",
-									"objectClass": "Text_Turn",
-									"sid": 262224874441485,
-									"behaviorType": "Fade",
-									"parameters": {
-										"wait-time": "0"
-									}
-								},
-								{
-									"id": "set-fade-out-time",
-									"objectClass": "Text_Turn",
-									"sid": 884907859252959,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-out-time": "0"
-									}
-								},
-								{
-									"id": "restart-fade",
-									"objectClass": "Text_Turn",
-									"sid": 241555116418011,
-									"behaviorType": "Fade"
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Bkg_Turn_Txt",
-									"sid": 955050227459530,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-fade-in-time",
-									"objectClass": "Bkg_Turn_Txt",
-									"sid": 289262519071908,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-in-time": "1"
-									}
-								},
-								{
-									"id": "set-wait-time",
-									"objectClass": "Bkg_Turn_Txt",
-									"sid": 959176835373988,
-									"behaviorType": "Fade",
-									"parameters": {
-										"wait-time": "0"
-									}
-								},
-								{
-									"id": "set-fade-out-time",
-									"objectClass": "Bkg_Turn_Txt",
-									"sid": 267625083183046,
-									"behaviorType": "Fade",
-									"parameters": {
-										"fade-out-time": "0"
-									}
-								},
-								{
-									"id": "restart-fade",
-									"objectClass": "Bkg_Turn_Txt",
-									"sid": 520808716475840,
-									"behaviorType": "Fade"
-								},
-								{
-									"id": "typewriter-text",
-									"objectClass": "Text_Turn",
-									"sid": 275490342396386,
-									"parameters": {
-										"text": "Match >= 4 ? Internationalization.Lookup(\"common.new_boss\", EnemyNameTurns) : Internationalization.Lookup(\"common.new_match\", EnemyNameTurns)",
-										"duration": "3 - Opt_FastMode_Secs"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 650888940496318,
-									"parameters": {
-										"seconds": "4 - Opt_FastMode_Secs",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "typewriter-text",
-									"objectClass": "Text_Turn",
-									"sid": 913710086473245,
-									"parameters": {
-										"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
-										"duration": "2 - Opt_FastMode_Secs"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 135004435575709,
-									"parameters": {
-										"seconds": "2 - Opt_FastMode_Secs",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-active",
-									"objectClass": "Deck_Numb_Sprite",
-									"sid": 749997584040742,
-									"behaviorType": "Sine",
-									"parameters": {
-										"state": "active"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 200961954434505,
-									"parameters": {
-										"variable": "MatchReady",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 109119365476654,
-									"parameters": {
-										"variable": "RelicPhase",
-										"value": "false"
 									}
 								}
 							],
@@ -44661,11 +44707,42 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 235824480795152,
+									"sid": 564504252165996,
 									"parameters": {
 										"variable": "Enable_Skip"
-									},
-									"isInverted": true
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 747112944040939,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 433125559639049,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.3",
+										"off-time": "0.3",
+										"duration": "Infinity"
+									}
+								}
+							],
+							"sid": 186572167002996
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 298461614564435
 								}
 							],
 							"actions": [
@@ -44919,6 +44996,101 @@
 						}
 					],
 					"sid": 117339562679359
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 326178103502394,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Bkg_Talk"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 377109535207277,
+							"parameters": {
+								"layer": "\"Talking\""
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 243818772907083,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 397723154617368,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-running-typewriter-text",
+									"objectClass": "Text_Talk",
+									"sid": 368198353042737
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-finish",
+									"objectClass": "Text_Talk",
+									"sid": 349789598867477
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 451098022800664,
+									"parameters": {
+										"audio-file": {
+											"path": "button_select_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 332365056411921
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 607680521681939
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-flashing",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 929656285459507,
+									"behaviorType": "Flash"
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 672144963424680,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 496571771138124
+						}
+					]
 				}
 			],
 			"sid": 927131809180524
@@ -45530,9 +45702,9 @@
 						{
 							"id": "layer-is-visible",
 							"objectClass": "System",
-							"sid": 260905745462688,
+							"sid": 991671250953052,
 							"parameters": {
-								"layer": "\"Turn\""
+								"layer": "\"Talking\""
 							}
 						},
 						{
@@ -47632,15 +47804,6 @@
 							"parameters": {
 								"x": "-1000",
 								"y": "-1000"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 744029700237022,
-							"parameters": {
-								"variable": "Mouse_Type",
-								"value": "0"
 							}
 						}
 					],

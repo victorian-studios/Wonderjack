@@ -178,8 +178,29 @@
 		},
 		{
 			"type": "effect",
+			"id": "pulse",
+			"name": "Pulse",
+			"author": "Danguafer/Silexars",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "swirl",
+			"name": "Swirl",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "tint",
 			"name": "Tint",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpobject",
+			"name": "Warp object",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -319,7 +340,8 @@
 			"Effect_Light_Candle_Mask",
 			"Demo_Fade_Sprite",
 			"Btn_Confirm",
-			"Btn_Deny"
+			"Btn_Deny",
+			"Cursor_Particle"
 		],
 		"subfolders": []
 	},
@@ -596,6 +618,20 @@
 					],
 					"subfolders": [],
 					"name": "Talking"
+				},
+				{
+					"items": [
+						{
+							"name": "859301__cat-fox_alex__stupid-chime.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 192147443723438,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Characters"
 				}
 			]
 		},

@@ -200,9 +200,47 @@
 					"parameters": {
 						"key": "\"my_lang\""
 					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "TiledBackground",
+					"sid": 330069632066365,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loop\"",
+						"start-value": "-1085",
+						"end-value": "-5",
+						"time": "14",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "yes",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
 				}
 			],
 			"sid": 204975896251312
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 188700569822784
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TiledBackground",
+					"sid": 571163343996444,
+					"parameters": {
+						"y": "Self.Tween.Value(\"loop\")"
+					}
+				}
+			],
+			"sid": 531634108420085
 		},
 		{
 			"eventType": "block",
@@ -316,6 +354,15 @@
 								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
+									"sid": 538615257061683,
+									"parameters": {
+										"layer": "\"Logo\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
 									"sid": 341046239283545,
 									"parameters": {
 										"layer": "\"lang\"",
@@ -329,15 +376,6 @@
 									"parameters": {
 										"layer": "\"lang\"",
 										"interactive": true
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 997664974940992,
-									"parameters": {
-										"layer": "\"Bkg_intro\"",
-										"visibility": "invisible"
 									}
 								}
 							],

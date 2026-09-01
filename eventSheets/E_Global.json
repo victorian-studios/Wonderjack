@@ -112,16 +112,6 @@
 			"sid": 247123034531860
 		},
 		{
-			"eventType": "variable",
-			"name": "Mouse_Type",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 566807654501733
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -134,7 +124,7 @@
 				{
 					"id": "set-cursor-style2",
 					"objectClass": "Mouse",
-					"sid": 893371437055331,
+					"sid": 467721600566142,
 					"parameters": {
 						"cursor-style": "none"
 					}
@@ -145,6 +135,15 @@
 					"sid": 973655848264500,
 					"parameters": {
 						"layer": "\"Pause\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 430624149200765,
+					"parameters": {
+						"layer": "\"Exit\"",
 						"visibility": "invisible"
 					}
 				},
@@ -742,6 +741,308 @@
 			"sid": 652131119396277
 		},
 		{
+			"functionName": "Confirm_Exit",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 847023287092381,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 711021318451588,
+							"parameters": {
+								"layer": "\"Exit\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "demo_end",
+							"sid": 285291838772888,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"up_1\"",
+								"property": "offsetY",
+								"end-value": "560",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 268983129442921,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 676661374400384,
+									"parameters": {
+										"layer": "\"Pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 794268088967001,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"interactive": true
+									}
+								}
+							],
+							"sid": 531805780229324
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 126099156380820
+						}
+					],
+					"actions": [],
+					"sid": 176829915104720,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 889337584774656,
+									"parameters": {
+										"layer": "\"Pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 933869818401833,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"interactive": false
+									}
+								}
+							],
+							"sid": 232698165676141
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 513923837524839,
+									"parameters": {
+										"object": "demo_end",
+										"expression": "demo_end.LayerName",
+										"comparison": 0,
+										"value": "\"Exit\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "demo_end",
+									"sid": 475824277358489,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"down_1\"",
+										"property": "offsetY",
+										"end-value": "560",
+										"time": "0.5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 774587349828418
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "demo_end",
+					"sid": 926007173101400,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"down_1\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "demo_end",
+					"sid": 203248174571825,
+					"parameters": {
+						"layer": "\"Exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "demo_end",
+					"sid": 610509922484344,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"down_2\"",
+						"property": "offsetY",
+						"end-value": "540",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 688679661085699
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "demo_end",
+					"sid": 881904277197373,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"up_1\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "demo_end",
+					"sid": 530207288687429,
+					"parameters": {
+						"layer": "\"Exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "demo_end",
+					"sid": 516659336669047,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"up_2\"",
+						"property": "offsetY",
+						"end-value": "-400",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 683789954371831
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "demo_end",
+					"sid": 775677550804700,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "0 - Self.Height/2"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "demo_end",
+					"sid": 554821769651259,
+					"parameters": {
+						"layer": "\"Exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 922530596439943,
+					"parameters": {
+						"layer": "\"Exit\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 784880495290679
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "demo_end",
+					"sid": 796500268661442,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "0 - Self.Height/2"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "demo_end",
+					"sid": 875915503237428,
+					"parameters": {
+						"layer": "\"Exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 790165721443360,
+					"parameters": {
+						"layer": "\"Exit\"",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 985281392629781
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Cursor",
@@ -791,7 +1092,44 @@
 									}
 								}
 							],
-							"sid": 475935445913737
+							"sid": 475935445913737,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 301806158530977,
+											"parameters": {
+												"first-value": "configuracoes.Angle",
+												"comparison": 0,
+												"second-value": "21"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "configuracoes",
+											"sid": 422730351988527,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"right\"",
+												"property": "offsetAngle",
+												"end-value": "55",
+												"time": "0.3",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 695985433217195
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -812,7 +1150,50 @@
 									}
 								}
 							],
-							"sid": 247763950909539
+							"sid": 247763950909539,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 683722373593279,
+											"parameters": {
+												"first-value": "configuracoes.Angle",
+												"comparison": 1,
+												"second-value": "21"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "stop-all-tweens",
+											"objectClass": "configuracoes",
+											"sid": 695537032368682,
+											"behaviorType": "Tween"
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "configuracoes",
+											"sid": 395155742245218,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"left\"",
+												"property": "offsetAngle",
+												"end-value": "21",
+												"time": "0.3",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 800813645304880
+								}
+							]
 						}
 					],
 					"sid": 727246147269931
@@ -861,6 +1242,11 @@
 							"id": "else",
 							"objectClass": "System",
 							"sid": 850471501613370
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 717587355078820
 						}
 					],
 					"actions": [
@@ -891,7 +1277,7 @@
 						{
 							"id": "set-cursor-style2",
 							"objectClass": "Mouse",
-							"sid": 486785926269581,
+							"sid": 253554900540857,
 							"parameters": {
 								"cursor-style": "none"
 							}
@@ -958,15 +1344,6 @@
 									"parameters": {
 										"x": "Mouse.X",
 										"y": "Mouse.Y"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 197567326626074,
-									"parameters": {
-										"variable": "Mouse_Type",
-										"value": "2"
 									}
 								}
 							],
@@ -1041,15 +1418,6 @@
 										"x": "Mouse.X",
 										"y": "Mouse.Y"
 									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 731222765723029,
-									"parameters": {
-										"variable": "Mouse_Type",
-										"value": "2"
-									}
 								}
 							],
 							"sid": 485687091624627
@@ -1111,15 +1479,6 @@
 										"x": "-1000",
 										"y": "-1000"
 									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 381229144683292,
-									"parameters": {
-										"variable": "Mouse_Type",
-										"value": "0"
-									}
 								}
 							],
 							"sid": 510457955359634
@@ -1160,15 +1519,6 @@
 										"x": "-1000",
 										"y": "-1000"
 									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 102659955056022,
-									"parameters": {
-										"variable": "Mouse_Type",
-										"value": "1"
-									}
 								}
 							],
 							"sid": 328008038430587
@@ -1182,17 +1532,17 @@
 						{
 							"id": "on-movement",
 							"objectClass": "Mouse",
-							"sid": 568866528390037
+							"sid": 948465479180132
 						},
 						{
 							"id": "is-on-screen",
 							"objectClass": "Cursors",
-							"sid": 149016026066403
+							"sid": 470252506157801
 						},
 						{
 							"id": "layer-is-visible",
 							"objectClass": "System",
-							"sid": 510738159348215,
+							"sid": 524958458846134,
 							"parameters": {
 								"layer": "\"Pause\""
 							},
@@ -1201,24 +1551,29 @@
 					],
 					"actions": [
 						{
-							"id": "spawn-another-object",
-							"objectClass": "Cursors",
-							"sid": 316077036377206,
+							"id": "set-position",
+							"objectClass": "Cursor_Particle",
+							"sid": 765690542842756,
 							"parameters": {
-								"object": "Cursor_effect",
-								"layer": "\"Mouse\"",
-								"image-point": "1",
-								"create-hierarchy": false,
-								"template-name": "\"\""
+								"x": "Cursors.ImagePointX(1)",
+								"y": "Cursors.ImagePointY(1)"
+							}
+						},
+						{
+							"id": "set-spraying",
+							"objectClass": "Cursor_Particle",
+							"sid": 979791606324127,
+							"parameters": {
+								"state": "spraying"
 							}
 						},
 						{
 							"id": "move-to-bottom",
-							"objectClass": "Cursor_effect",
-							"sid": 107970207947433
+							"objectClass": "Cursor_Particle",
+							"sid": 952789724041818
 						}
 					],
-					"sid": 263413306430708
+					"sid": 576405482574881
 				}
 			],
 			"sid": 680027662710333
@@ -1226,10 +1581,134 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Options",
+			"title": "Pause Screen",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 793373123854082,
+							"parameters": {
+								"layer": "\"Pause\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 337645568757037
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Cursor_Particle",
+							"sid": 168628467236555,
+							"parameters": {
+								"x": "-99",
+								"y": "-99"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 844475632933457,
+							"parameters": {
+								"layer": "\"Pause\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 732980500756762,
+							"parameters": {
+								"layer": "\"Translation\"",
+								"interactive": true
+							}
+						}
+					],
+					"sid": 186826727619280
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 705283116067420,
+							"parameters": {
+								"layer": "\"Pause\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 401004490042731
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 220789391801532,
+							"parameters": {
+								"layer": "\"Pause\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 603391938587642,
+							"parameters": {
+								"layer": "\"Translation\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 358426019692982,
+							"parameters": {
+								"layer": "\"Audio\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 570566244164546,
+							"parameters": {
+								"layer": "\"Video\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 846406627800718,
+							"parameters": {
+								"layer": "\"Gameplay\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 420767519819162,
+							"parameters": {
+								"layer": "\"Save\"",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 702955934368050
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -1353,11 +1832,56 @@
 											}
 										},
 										{
+											"id": "set-position",
+											"objectClass": "Cursor_Particle",
+											"sid": 997274561974789,
+											"parameters": {
+												"x": "-99",
+												"y": "-99"
+											}
+										},
+										{
 											"id": "set-time-scale",
 											"objectClass": "System",
 											"sid": 423082663245808,
 											"parameters": {
 												"time-scale": "0"
+											}
+										},
+										{
+											"id": "set-object-time-scale",
+											"objectClass": "System",
+											"sid": 691948700784127,
+											"parameters": {
+												"object": "Cursor_Particle",
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_Particle",
+											"sid": 375032101666878,
+											"parameters": {
+												"x": "-99",
+												"y": "-99"
+											}
+										},
+										{
+											"id": "set-object-time-scale",
+											"objectClass": "System",
+											"sid": 424013788893823,
+											"parameters": {
+												"object": "demo_end",
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-object-time-scale",
+											"objectClass": "System",
+											"sid": 553078872847507,
+											"parameters": {
+												"object": "Cursors",
+												"time-scale": "1.0"
 											}
 										},
 										{
@@ -1405,11 +1929,6 @@
 												"group-name": "\"Player's Turn / Actions\"",
 												"state": "deactivated"
 											}
-										},
-										{
-											"id": "destroy",
-											"objectClass": "Cursor_effect",
-											"sid": 123793926476689
 										}
 									],
 									"sid": 135572783524456
@@ -1489,11 +2008,56 @@
 											}
 										},
 										{
+											"id": "set-position",
+											"objectClass": "Cursor_Particle",
+											"sid": 745998296152148,
+											"parameters": {
+												"x": "-99",
+												"y": "-99"
+											}
+										},
+										{
 											"id": "set-time-scale",
 											"objectClass": "System",
 											"sid": 600720522012927,
 											"parameters": {
 												"time-scale": "0"
+											}
+										},
+										{
+											"id": "set-object-time-scale",
+											"objectClass": "System",
+											"sid": 695272645616401,
+											"parameters": {
+												"object": "Cursor_Particle",
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Cursor_Particle",
+											"sid": 925638966944681,
+											"parameters": {
+												"x": "-99",
+												"y": "-99"
+											}
+										},
+										{
+											"id": "set-object-time-scale",
+											"objectClass": "System",
+											"sid": 840749837777765,
+											"parameters": {
+												"object": "demo_end",
+												"time-scale": "1.0"
+											}
+										},
+										{
+											"id": "set-object-time-scale",
+											"objectClass": "System",
+											"sid": 577029008685561,
+											"parameters": {
+												"object": "Cursors",
+												"time-scale": "1.0"
 											}
 										},
 										{
@@ -1541,11 +2105,6 @@
 												"group-name": "\"Player's Turn / Actions\"",
 												"state": "deactivated"
 											}
-										},
-										{
-											"id": "destroy",
-											"objectClass": "Cursor_effect",
-											"sid": 600326703913919
 										}
 									],
 									"sid": 845957921945704
@@ -1632,6 +2191,10 @@
 								}
 							],
 							"sid": 212566765846553
+						},
+						{
+							"eventType": "comment",
+							"text": "Abas da tela de pause"
 						},
 						{
 							"eventType": "block",
@@ -1780,12 +2343,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 591049050363003,
+											"parameters": {
+												"layer": "\"Translation\"",
+												"interactive": true
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 972714170385965,
 											"parameters": {
 												"layer": "\"Audio\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 545445188669787,
+											"parameters": {
+												"layer": "\"Audio\"",
+												"interactive": false
 											}
 										},
 										{
@@ -1798,6 +2379,15 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 119206853710772,
+											"parameters": {
+												"layer": "\"Video\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 926985987188422,
@@ -1807,12 +2397,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 716259475177447,
+											"parameters": {
+												"layer": "\"Gameplay\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 244169267807310,
 											"parameters": {
 												"layer": "\"Save\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 237335764346832,
+											"parameters": {
+												"layer": "\"Save\"",
+												"interactive": false
 											}
 										}
 									],
@@ -1902,12 +2510,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 634795141855541,
+											"parameters": {
+												"layer": "\"Translation\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 320779818736550,
 											"parameters": {
 												"layer": "\"Audio\"",
 												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 211697449412063,
+											"parameters": {
+												"layer": "\"Audio\"",
+												"interactive": true
 											}
 										},
 										{
@@ -1920,6 +2546,15 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 916729755906290,
+											"parameters": {
+												"layer": "\"Video\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 288312792428628,
@@ -1929,12 +2564,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 452694735964836,
+											"parameters": {
+												"layer": "\"Gameplay\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 785574932070875,
 											"parameters": {
 												"layer": "\"Save\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 809325667496291,
+											"parameters": {
+												"layer": "\"Save\"",
+												"interactive": false
 											}
 										}
 									],
@@ -2015,12 +2668,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 993896575754057,
+											"parameters": {
+												"layer": "\"Translation\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 112660704009598,
 											"parameters": {
 												"layer": "\"Audio\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 678563931971889,
+											"parameters": {
+												"layer": "\"Audio\"",
+												"interactive": false
 											}
 										},
 										{
@@ -2033,6 +2704,15 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 759154827681492,
+											"parameters": {
+												"layer": "\"Video\"",
+												"interactive": true
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 548614746543955,
@@ -2042,12 +2722,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 113097530289649,
+											"parameters": {
+												"layer": "\"Gameplay\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 403052404756613,
 											"parameters": {
 												"layer": "\"Save\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 646777321681244,
+											"parameters": {
+												"layer": "\"Save\"",
+												"interactive": false
 											}
 										}
 									],
@@ -2128,12 +2826,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 339745102174111,
+											"parameters": {
+												"layer": "\"Translation\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 781756500424102,
 											"parameters": {
 												"layer": "\"Audio\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 352262124617052,
+											"parameters": {
+												"layer": "\"Audio\"",
+												"interactive": false
 											}
 										},
 										{
@@ -2146,6 +2862,15 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 765069051516626,
+											"parameters": {
+												"layer": "\"Video\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 445189963240802,
@@ -2155,12 +2880,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 144313813074430,
+											"parameters": {
+												"layer": "\"Gameplay\"",
+												"interactive": true
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 338633294431356,
 											"parameters": {
 												"layer": "\"Save\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 651541869155330,
+											"parameters": {
+												"layer": "\"Save\"",
+												"interactive": false
 											}
 										}
 									],
@@ -2250,12 +2993,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 395858298195906,
+											"parameters": {
+												"layer": "\"Translation\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 504091230547839,
 											"parameters": {
 												"layer": "\"Audio\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 749444701584629,
+											"parameters": {
+												"layer": "\"Audio\"",
+												"interactive": false
 											}
 										},
 										{
@@ -2268,12 +3029,30 @@
 											}
 										},
 										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 541023646972128,
+											"parameters": {
+												"layer": "\"Video\"",
+												"interactive": false
+											}
+										},
+										{
 											"id": "set-layer-visible",
 											"objectClass": "System",
 											"sid": 598455673244111,
 											"parameters": {
 												"layer": "\"Gameplay\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 416307085260261,
+											"parameters": {
+												"layer": "\"Gameplay\"",
+												"interactive": false
 											}
 										},
 										{
@@ -2292,6 +3071,15 @@
 											"parameters": {
 												"layer": "\"Save_Warning\"",
 												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 976727628425292,
+											"parameters": {
+												"layer": "\"Save\"",
+												"interactive": true
 											}
 										}
 									],
@@ -2336,6 +3124,10 @@
 									]
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Retornar para o jogo / sair"
 						},
 						{
 							"eventType": "block",
@@ -2658,39 +3450,147 @@
 									],
 									"actions": [
 										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 513661422995591,
-											"parameters": {
-												"audio-file": {
-													"path": "button_select_sfx"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "set-time-scale",
-											"objectClass": "System",
-											"sid": 810561086740262,
-											"parameters": {
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 326029231652501,
-											"parameters": {
-												"layout": "Menu"
-											}
+											"callFunction": "Confirm_Exit",
+											"sid": 500548191647120
 										}
 									],
 									"sid": 839777519292689
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 242114711477938,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Btn_Confirm"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 423605529822661,
+									"parameters": {
+										"layer": "\"Exit\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 457376603496459,
+									"parameters": {
+										"layer": "\"Pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 513661422995591,
+									"parameters": {
+										"audio-file": {
+											"path": "button_select_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 810561086740262,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 164261594930964,
+									"parameters": {
+										"variable": "Tutorial_Enabled",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 485569346422008,
+									"parameters": {
+										"layer": "\"Talking\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 326029231652501,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 303314914574035
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 207553968911762,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Btn_Deny"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 249746788916485,
+									"parameters": {
+										"layer": "\"Exit\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 915022156985724,
+									"parameters": {
+										"layer": "\"Pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Confirm_Exit",
+									"sid": 237585941323346
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 528612366069551,
+									"parameters": {
+										"audio-file": {
+											"path": "button_2_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -10 + (Vol_Sfx * 0.1) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 893137337773534
 						}
 					],
 					"sid": 535185920622766
@@ -4099,6 +4999,20 @@
 									"parameters": {
 										"layer": "\"Save_Warning\"",
 										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 844999089383752,
+									"parameters": {
+										"audio-file": {
+											"path": "button_2_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -10 + (Vol_Sfx * 0.1) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],

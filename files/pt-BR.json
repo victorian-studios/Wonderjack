@@ -19,6 +19,7 @@
             "btn_credits": "Créditos",
             "btn_back": "Voltar",
             "discord_join": "Entre agora!",
+            "exit_question": "Tem certeza?",
             "codex": {
                 "name": "O Codex",
                 "info_lock": "???",
@@ -339,9 +340,9 @@
                     "special": "Alice! Melhor de três? O que você acha?"
                 }
             },
-            "bell": "[u]O Sino[/u] \n\nToque o sino para terminar seu turno. E então, seu oponente pode [color=#fa1c03]jogar apenas uma vez[/color] antes da rodada terminar. Nada acontece se for usado no último turno.",
+            "bell": "[u]O Sino[/u] \n\nToque o sino para [color=#fa1c03]encerrar seu turno[/color]. Seu oponente terá [color=#fa1c03]só mais um turno[/color] antes do fim da rodada.\nNada acontece se for usado no último turno.",
             "power": "[u]O Baralho de Poder[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê pode comprar [color=#f5fe05]{0}[/color] cartas nessa rodada.",
-            "power_hand_limit": "[u]O Baralho de Poder[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê [color=#fa1c03]não pode comprar cartas de poder[/color] por conta do limite da sua mão ([color=#f5fe05]{0}[/color] cartas).",
+            "power_hand_limit": "[u]O Baralho de Poder[/u] \n\nVocê [color=#fa1c03]não pode comprar cartas de poder[/color] por conta do limite da sua mão ([color=#f5fe05]{0}[/color] cartas).",
             "number" : "[u]O Baralho de Número[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.",
             "number_easy" : "[u]O Baralho de Número[/u] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.\nTem [color=#f5fe05]{0}[/color] cartas restantes neste baralho.",
             "tut_start": "Toca do Coelho",
@@ -377,7 +378,7 @@
             "eat_me": {
                 "title": "Bolo",
                 "flavor_txt": "Coma-me.",
-                "desc":"Aumenta o limite de poderes na mão em [color=#f5fe05]1[/color]."
+                "desc":"Aumenta o limite de poderes na sua mão em [color=#f5fe05]1[/color]."
                 
             },
             "crown": {
@@ -459,7 +460,7 @@
             "secret": "[u]Carta oculta[/u]\n\n\nA próxima carta de número que você comprar será [color=#f5fe05]oculta[/color] para o oponente. Não funciona com cartas de poder.",
             "clairvoyance" : "[u]Clarividência[/u]\n\n\nVeja as próximas [color=#f5fe05]duas[/color] cartas do baralho de número.",
             "clairvoyance_player": "As próximas cartas de número são: [color=#f5fe05]{0}[/color] e [color=#f5fe05]{1}[/color]",
-            "clairvoyance_cpu": "{0} teve uma bela visão das próximas [color=#f5fe05]duas[/color] cartas..."
+            "clairvoyance_cpu": "{0} viu as próximas [color=#f5fe05]duas[/color] cartas..."
             
         },
         "demo": {

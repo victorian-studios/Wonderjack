@@ -32,6 +32,8 @@
 		"Banner_fundo",
 		"Gallery_Arts_Small",
 		"Gallery_Arts_Medium",
-		"Options_Flag"
+		"Options_Flag",
+		"Btn_Confirm",
+		"Btn_Deny"
 	]
 }

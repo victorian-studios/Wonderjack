@@ -23,9 +23,27 @@
 			"behaviorId": "Fade",
 			"name": "Fade",
 			"sid": 323842192484669
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 900977965723644
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "pulse",
+			"name": "Pulse"
+		},
+		{
+			"effectId": "swirl",
+			"name": "Swirl"
+		},
+		{
+			"effectId": "warpobject",
+			"name": "WarpObject"
+		}
+	],
 	"animations": {
 		"items": [
 			{

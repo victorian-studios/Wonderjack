@@ -121,6 +121,11 @@
 					"behaviors": {
 						"Timer": {
 							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -139,7 +144,7 @@
 							1
 						],
 						"z": 0,
-						"angle": 0.36755297971040446
+						"angle": 0.3665191429188092
 					}
 				},
 				{
@@ -475,11 +480,20 @@
 									}
 								}
 							},
+							"effects": {
+								"Swirl": {
+									"isEnabled": false,
+									"parameters": {
+										"radius": 0,
+										"angle": 1.7
+									}
+								}
+							},
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1744.9599929628555,
-								"y": 771.2114241788645,
+								"x": 1749,
+								"y": 760,
 								"width": 210,
 								"height": 150,
 								"originX": 0.5478547854785478,
@@ -491,7 +505,7 @@
 									1
 								],
 								"z": 0,
-								"angle": 6.169507587830494
+								"angle": 6.017497337153197
 							}
 						},
 						{
@@ -541,11 +555,20 @@
 									}
 								}
 							},
+							"effects": {
+								"Swirl": {
+									"isEnabled": false,
+									"parameters": {
+										"radius": 0,
+										"angle": 1.7
+									}
+								}
+							},
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 174,
-								"y": 746,
+								"x": 170,
+								"y": 760,
 								"width": 210,
 								"height": 150,
 								"originX": 0.4521452145214521,
@@ -557,7 +580,7 @@
 									1
 								],
 								"z": 0,
-								"angle": 0.16994001252198193
+								"angle": 0.2909639494716313
 							}
 						},
 						{
@@ -598,6 +621,42 @@
 										"destroy": false,
 										"enabled": true,
 										"live-preview": false
+									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"effects": {
+								"Pulse": {
+									"isEnabled": false,
+									"parameters": {
+										"intensity": 1,
+										"lighting": 0.5,
+										"speed": 10,
+										"frequency": 30,
+										"center-x": 0.5,
+										"center-y": 0.5
+									}
+								},
+								"Swirl": {
+									"isEnabled": false,
+									"parameters": {
+										"radius": 0.5,
+										"angle": 1
+									}
+								},
+								"WarpObject": {
+									"isEnabled": false,
+									"parameters": {
+										"x-frequency": 4,
+										"y-frequency": 4,
+										"x-amplitude": 10,
+										"y-amplitude": 10,
+										"x-speed": 1,
+										"y-speed": 1
 									}
 								}
 							},
@@ -659,12 +718,48 @@
 										"enabled": false,
 										"live-preview": false
 									}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"effects": {
+								"Pulse": {
+									"isEnabled": false,
+									"parameters": {
+										"intensity": 1,
+										"lighting": 0.5,
+										"speed": 10,
+										"frequency": 30,
+										"center-x": 0.5,
+										"center-y": 0.5
+									}
+								},
+								"Swirl": {
+									"isEnabled": false,
+									"parameters": {
+										"radius": 0.5,
+										"angle": 1
+									}
+								},
+								"WarpObject": {
+									"isEnabled": false,
+									"parameters": {
+										"x-frequency": 4,
+										"y-frequency": 4,
+										"x-amplitude": 10,
+										"y-amplitude": 10,
+										"x-speed": 1,
+										"y-speed": 1
+									}
 								}
 							},
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 440,
+								"x": 450,
 								"y": 634,
 								"width": 102,
 								"height": 109,
@@ -807,7 +902,7 @@
 					"world": {
 						"x": 466,
 						"y": 915,
-						"width": 985,
+						"width": 1086,
 						"height": 148,
 						"originX": 0,
 						"originY": 0.5,
@@ -845,7 +940,7 @@
 					"world": {
 						"x": 549,
 						"y": 707,
-						"width": 816,
+						"width": 911,
 						"height": 129,
 						"originX": 0,
 						"originY": 0.5,
@@ -881,9 +976,9 @@
 					"locked": false,
 					"world": {
 						"x": 960,
-						"y": 1082,
+						"y": 1070.5,
 						"width": 480,
-						"height": 250,
+						"height": 227,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1040,7 +1135,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 452.5,
+						"x": 449.5,
 						"y": 294,
 						"width": 184,
 						"height": 146,
@@ -2388,7 +2483,7 @@
 									1,
 									1,
 									1,
-									0.7
+									0.8
 								],
 								"z": 0,
 								"angle": 0
@@ -4661,7 +4756,7 @@
 											"showing": true,
 											"locked": false,
 											"world": {
-												"x": 637,
+												"x": 614,
 												"y": 782,
 												"width": 100,
 												"height": 100,
@@ -4694,7 +4789,7 @@
 											"showing": true,
 											"locked": false,
 											"world": {
-												"x": 1271,
+												"x": 1293,
 												"y": 782,
 												"width": 100,
 												"height": 100,
@@ -5031,7 +5126,7 @@
 							"sid": 203743801065538,
 							"effectTypes": [],
 							"isInitiallyVisible": false,
-							"isInitiallyInteractive": true,
+							"isInitiallyInteractive": false,
 							"isHTMLElementsLayer": false,
 							"color": [
 								1,
@@ -5301,7 +5396,7 @@
 							"sid": 556026219574550,
 							"effectTypes": [],
 							"isInitiallyVisible": false,
-							"isInitiallyInteractive": true,
+							"isInitiallyInteractive": false,
 							"isHTMLElementsLayer": false,
 							"color": [
 								1,
@@ -5397,7 +5492,7 @@
 									"sid": 127321551726421,
 									"tags": "",
 									"instanceVariables": {
-										"my_id": 1,
+										"my_id": 0,
 										"my_txt": "options.video.opt_1"
 									},
 									"behaviors": {},
@@ -5571,7 +5666,7 @@
 							"sid": 150201854201512,
 							"effectTypes": [],
 							"isInitiallyVisible": false,
-							"isInitiallyInteractive": true,
+							"isInitiallyInteractive": false,
 							"isHTMLElementsLayer": false,
 							"color": [
 								1,
@@ -5971,7 +6066,7 @@
 							"sid": 580210803716095,
 							"effectTypes": [],
 							"isInitiallyVisible": false,
-							"isInitiallyInteractive": true,
+							"isInitiallyInteractive": false,
 							"isHTMLElementsLayer": false,
 							"color": [
 								1,
@@ -6665,7 +6760,7 @@
 					"sid": 335448672371208,
 					"effectTypes": [],
 					"isInitiallyVisible": false,
-					"isInitiallyInteractive": true,
+					"isInitiallyInteractive": false,
 					"isHTMLElementsLayer": false,
 					"color": [
 						1,
@@ -6841,6 +6936,41 @@
 			"global": false
 		},
 		{
+			"name": "Exit",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 380071635759977,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Transition",
 			"overriden": 0,
 			"subLayers": [],
@@ -6978,6 +7108,62 @@
 						"z": 0,
 						"angle": 0
 					}
+				},
+				{
+					"type": "Cursor_Particle",
+					"properties": {
+						"rate": 400,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 0,
+						"size": 25,
+						"opacity": 80,
+						"grow-rate": -36,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 0.4
+					},
+					"uid": 359,
+					"sid": 684008010974004,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 239,
+						"y": 1201,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
 				}
 			],
 			"sid": 518966804963209,
@@ -7009,6 +7195,455 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": true
+		},
+		{
+			"name": "Testes_Loucos_Das_Cartas",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front Old",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 234,
+					"sid": 948203807388359,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Original_Hidden": false,
+						"Player_Hidden": false,
+						"Enemy_Hidden": false,
+						"PlayerSide": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 844,
+						"y": 919,
+						"width": 162.5572268745068,
+						"height": 151.02834553588931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front Old",
+						"initial-frame": 2,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 235,
+					"sid": 578680329106612,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Original_Hidden": false,
+						"Player_Hidden": false,
+						"Enemy_Hidden": false,
+						"PlayerSide": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1037,
+						"y": 916,
+						"width": 162.5572268745068,
+						"height": 151.02834553588931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front Old",
+						"initial-frame": 3,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 236,
+					"sid": 635587470424042,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Original_Hidden": false,
+						"Player_Hidden": false,
+						"Enemy_Hidden": false,
+						"PlayerSide": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1225,
+						"y": 917,
+						"width": 162.5572268745068,
+						"height": 151.02834553588931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front Old",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 351,
+					"sid": 452290540706589,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Original_Hidden": false,
+						"Player_Hidden": false,
+						"Enemy_Hidden": false,
+						"PlayerSide": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 653,
+						"y": 919,
+						"width": 162.5572268745068,
+						"height": 151.02834553588931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front Old",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 352,
+					"sid": 725849702013609,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Original_Hidden": false,
+						"Player_Hidden": false,
+						"Enemy_Hidden": false,
+						"PlayerSide": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 467,
+						"y": 917,
+						"width": 162.5572268745068,
+						"height": 151.02834553588931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front Old",
+						"initial-frame": 3,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 353,
+					"sid": 585061561124204,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Original_Hidden": false,
+						"Player_Hidden": false,
+						"Enemy_Hidden": false,
+						"PlayerSide": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1414,
+						"y": 913,
+						"width": 162.5572268745068,
+						"height": 151.02834553588931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Card_Numb",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Front Old",
+						"initial-frame": 3,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 354,
+					"sid": 612544868119795,
+					"tags": "",
+					"instanceVariables": {
+						"myID": 999,
+						"Original_Hidden": false,
+						"Player_Hidden": false,
+						"Enemy_Hidden": false,
+						"PlayerSide": false
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 3,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1599,
+						"y": 912,
+						"width": 162.5572268745068,
+						"height": 151.02834553588931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
+			"sid": 375553667938607,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
 	"sid": 932921744102466,

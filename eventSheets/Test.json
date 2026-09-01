@@ -255,6 +255,95 @@
 					"sid": 253174268836579
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 321468437345445,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "Btn_Stop",
+					"sid": 965089958793301,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"Swirl\""
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "Btn_Stop",
+					"sid": 606360007840714,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"rotate\"",
+						"start-value": "0",
+						"end-value": "200",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "Btn_Stop",
+					"sid": 808521426872558,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "Btn_Stop",
+					"sid": 497167906583286,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "1"
+					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "Btn_Stop",
+					"sid": 518889921909034,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 370059469102170
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 150066738346921
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "Btn_Stop",
+					"sid": 268721191605737,
+					"parameters": {
+						"effect": "\"Swirl\"",
+						"parameter-index": "0",
+						"value": "Self.Tween.Value(\"rotate\")"
+					}
+				}
+			],
+			"sid": 191600666302200
 		}
 	],
 	"sid": 666650112629329
