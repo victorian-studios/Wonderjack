@@ -767,8 +767,9 @@
 							"parameters": [
 								"Enemy.AnimationName",
 								"\"tutorial.white_queen.\" & str(Tut_Talk)",
+								"0",
 								true,
-								"0"
+								false
 							]
 						}
 					],
@@ -784,6 +785,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 554777350925123,
+							"parameters": {
+								"variable": "Tut_Talk",
+								"value": "0"
+							}
+						},
 						{
 							"id": "set-animation-frame",
 							"objectClass": "Candelabro",
@@ -838,14 +848,6 @@
 					"sid": 233571379470217,
 					"parameters": {
 						"text": "\"? + \"&Table_CPU.Visible_Count&newline&\"-----\"&newline&PlayerNumbers"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "Txt_debug2",
-					"sid": 816688845785981,
-					"parameters": {
-						"text": "\"fps: \" & fps & \" | cpu: \" & ( round(cpuutilisation * 100) / 100 ) & \" | gpu: \"& (round(gpuutilisation * 100) / 100 ) & \" | vram (images): \" & ImageMemoryUsage"
 					}
 				},
 				{
@@ -3899,12 +3901,12 @@
 												{
 													"id": "pick-by-comparison",
 													"objectClass": "System",
-													"sid": 348498234469523,
+													"sid": 688007743680876,
 													"parameters": {
 														"object": "Icon_Hidden_Card",
 														"expression": "Icon_Hidden_Card.Y",
 														"comparison": 0,
-														"value": "915"
+														"value": "940"
 													}
 												}
 											],
@@ -4731,12 +4733,12 @@
 																{
 																	"id": "pick-by-comparison",
 																	"objectClass": "System",
-																	"sid": 789357927717654,
+																	"sid": 354054674955467,
 																	"parameters": {
 																		"object": "Icon_Hidden_Card",
 																		"expression": "Icon_Hidden_Card.Y",
 																		"comparison": 0,
-																		"value": "915"
+																		"value": "940"
 																	}
 																}
 															],
@@ -5316,12 +5318,12 @@
 												{
 													"id": "pick-by-comparison",
 													"objectClass": "System",
-													"sid": 730936159358640,
+													"sid": 938441751716699,
 													"parameters": {
 														"object": "Icon_Hidden_Card",
 														"expression": "Icon_Hidden_Card.Y",
 														"comparison": 0,
-														"value": "707"
+														"value": "540"
 													}
 												}
 											],
@@ -6123,12 +6125,12 @@
 																{
 																	"id": "pick-by-comparison",
 																	"objectClass": "System",
-																	"sid": 637538297127637,
+																	"sid": 455877374080698,
 																	"parameters": {
 																		"object": "Icon_Hidden_Card",
 																		"expression": "Icon_Hidden_Card.Y",
 																		"comparison": 0,
-																		"value": "707"
+																		"value": "540"
 																	}
 																}
 															],
@@ -10076,6 +10078,13 @@
 							"initialValue": "",
 							"comment": "",
 							"sid": 809582383668737
+						},
+						{
+							"name": "Keep_Turn",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "(funciona com só alguns poderes) true - mantém o turno após o uso do poder",
+							"sid": 799539193654346
 						}
 					],
 					"bookmark": true,
@@ -10242,12 +10251,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 623675805337050,
+											"sid": 528405091903175,
 											"parameters": {
 												"object-to-create": "Icon_Protect",
 												"layer": "\"Game\"",
 												"x": "1586",
-												"y": "915",
+												"y": "940",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -10288,22 +10297,10 @@
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 767823419941977,
-											"parameters": {
-												"seconds": "1.0",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 582827490753068,
-											"parameters": {
-												"variable": "PowerDone",
-												"value": "true"
-											}
+											"id": "update-initial-state",
+											"objectClass": "Icon_Protect",
+											"sid": 571340603977245,
+											"behaviorType": "Sine"
 										}
 									],
 									"sid": 849389988608600
@@ -10349,12 +10346,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 612614000326373,
+											"sid": 471922165809027,
 											"parameters": {
 												"object-to-create": "Icon_Protect",
 												"layer": "\"Game\"",
-												"x": "Table_CPU.X - 120",
-												"y": "Table_CPU.Y",
+												"x": "630",
+												"y": "540",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -10379,9 +10376,9 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 861960085707989,
+											"sid": 110052119173099,
 											"parameters": {
-												"seconds": "1",
+												"seconds": "0.7",
 												"use-timescale": true
 											}
 										},
@@ -10395,25 +10392,48 @@
 											}
 										},
 										{
+											"id": "update-initial-state",
+											"objectClass": "Icon_Protect",
+											"sid": 526812940707150,
+											"behaviorType": "Sine"
+										}
+									],
+									"sid": 372398276495021
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 288350858869648,
+											"parameters": {
+												"variable": "Keep_Turn"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 905562550347505,
+											"sid": 425599257463360,
 											"parameters": {
-												"seconds": "1.0",
+												"seconds": "2",
 												"use-timescale": true
 											}
 										},
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 182348727620412,
+											"sid": 838833631569044,
 											"parameters": {
 												"variable": "PowerDone",
 												"value": "true"
 											}
 										}
 									],
-									"sid": 372398276495021
+									"sid": 272760062379263
 								}
 							]
 						},
@@ -13459,7 +13479,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_CPU",
-													"sid": 259131705471796,
+													"sid": 711270162824073,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 3,
@@ -13469,7 +13489,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_Player",
-													"sid": 177463009384148,
+													"sid": 600903599947954,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 3,
@@ -13477,8 +13497,18 @@
 													}
 												}
 											],
-											"actions": [],
-											"sid": 927334676030423,
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 636958252181440,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"use-timescale": true
+													}
+												}
+											],
+											"sid": 540490588584735,
 											"children": [
 												{
 													"eventType": "block",
@@ -13486,7 +13516,7 @@
 														{
 															"id": "for-each-ordered",
 															"objectClass": "System",
-															"sid": 660745274642538,
+															"sid": 186619664798688,
 															"parameters": {
 																"object": "Card_Numb",
 																"expression": "Card_Numb.UID",
@@ -13496,7 +13526,7 @@
 														{
 															"id": "is-boolean-instance-variable-set",
 															"objectClass": "Card_Numb",
-															"sid": 475266503108687,
+															"sid": 460225953124128,
 															"parameters": {
 																"instance-variable": "Original_Hidden"
 															},
@@ -13504,7 +13534,7 @@
 														}
 													],
 													"actions": [],
-													"sid": 432330421501636,
+													"sid": 296806099558059,
 													"children": [
 														{
 															"eventType": "block",
@@ -13512,7 +13542,7 @@
 																{
 																	"id": "is-overlapping-another-object",
 																	"objectClass": "Card_Numb",
-																	"sid": 698989177891253,
+																	"sid": 401144482874075,
 																	"parameters": {
 																		"object": "Table_Player"
 																	}
@@ -13521,7 +13551,7 @@
 															"actions": [
 																{
 																	"callFunction": "Discard_Number",
-																	"sid": 163379102318335,
+																	"sid": 577205986080503,
 																	"parameters": [
 																		"1",
 																		"Card_Numb.myID",
@@ -13532,7 +13562,7 @@
 																	]
 																}
 															],
-															"sid": 446795406956216
+															"sid": 564983746946739
 														},
 														{
 															"eventType": "block",
@@ -13540,7 +13570,7 @@
 																{
 																	"id": "is-overlapping-another-object",
 																	"objectClass": "Card_Numb",
-																	"sid": 464406068026981,
+																	"sid": 259229009428659,
 																	"parameters": {
 																		"object": "Table_CPU"
 																	}
@@ -13549,7 +13579,7 @@
 															"actions": [
 																{
 																	"callFunction": "Discard_Number",
-																	"sid": 217185496135000,
+																	"sid": 114072128481446,
 																	"parameters": [
 																		"2",
 																		"Card_Numb.myID",
@@ -13560,34 +13590,44 @@
 																	]
 																}
 															],
-															"sid": 294064815396019
+															"sid": 126117744518795
 														}
 													]
 												},
 												{
 													"eventType": "block",
-													"conditions": [],
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 509428154592335,
+															"parameters": {
+																"variable": "Keep_Turn"
+															},
+															"isInverted": true
+														}
+													],
 													"actions": [
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 982894964716592,
+															"sid": 576010022013977,
 															"parameters": {
-																"seconds": "2",
+																"seconds": "2 - Opt_FastMode_Secs",
 																"use-timescale": true
 															}
 														},
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 298051500549433,
+															"sid": 457874674886646,
 															"parameters": {
 																"variable": "PowerDone",
 																"value": "true"
 															}
 														}
 													],
-													"sid": 550842620112932
+													"sid": 734728302765513
 												}
 											]
 										},
@@ -13601,7 +13641,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_CPU",
-													"sid": 356422027034193,
+													"sid": 115080281475713,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 3,
@@ -13611,7 +13651,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_Player",
-													"sid": 824800346854047,
+													"sid": 619438793928286,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 4,
@@ -13619,8 +13659,18 @@
 													}
 												}
 											],
-											"actions": [],
-											"sid": 775997291351941,
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 111707110644952,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"use-timescale": true
+													}
+												}
+											],
+											"sid": 869506528551801,
 											"children": [
 												{
 													"eventType": "block",
@@ -13628,7 +13678,7 @@
 														{
 															"id": "for-each-ordered",
 															"objectClass": "System",
-															"sid": 619379232619505,
+															"sid": 292305246993875,
 															"parameters": {
 																"object": "Card_Numb",
 																"expression": "Card_Numb.UID",
@@ -13638,7 +13688,7 @@
 														{
 															"id": "is-boolean-instance-variable-set",
 															"objectClass": "Card_Numb",
-															"sid": 450767504775607,
+															"sid": 897503520591236,
 															"parameters": {
 																"instance-variable": "Original_Hidden"
 															},
@@ -13646,7 +13696,7 @@
 														}
 													],
 													"actions": [],
-													"sid": 330629953182486,
+													"sid": 731440871505147,
 													"children": [
 														{
 															"eventType": "block",
@@ -13654,7 +13704,7 @@
 																{
 																	"id": "is-overlapping-another-object",
 																	"objectClass": "Card_Numb",
-																	"sid": 342676179097027,
+																	"sid": 883392504393669,
 																	"parameters": {
 																		"object": "Table_CPU"
 																	}
@@ -13663,7 +13713,7 @@
 															"actions": [
 																{
 																	"callFunction": "Discard_Number",
-																	"sid": 462272405805993,
+																	"sid": 478218062270381,
 																	"parameters": [
 																		"2",
 																		"Card_Numb.myID",
@@ -13676,7 +13726,7 @@
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 669798910665344,
+																	"sid": 190913878500241,
 																	"parameters": {
 																		"seconds": "1",
 																		"use-timescale": true
@@ -13685,14 +13735,14 @@
 																{
 																	"id": "set-boolean-eventvar",
 																	"objectClass": "System",
-																	"sid": 348353847652000,
+																	"sid": 867772462368093,
 																	"parameters": {
 																		"variable": "PowerDone",
 																		"value": "true"
 																	}
 																}
 															],
-															"sid": 678123844609057
+															"sid": 604130233164859
 														}
 													]
 												},
@@ -13702,7 +13752,7 @@
 														{
 															"id": "pick-by-comparison",
 															"objectClass": "System",
-															"sid": 674850682243198,
+															"sid": 658703575418209,
 															"parameters": {
 																"object": "Icon_Protect",
 																"expression": "Icon_Protect.FromPlayer",
@@ -13715,7 +13765,7 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 692017126011294,
+															"sid": 894567666664441,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
@@ -13729,7 +13779,7 @@
 														{
 															"id": "set-active",
 															"objectClass": "Icon_Protect",
-															"sid": 527044921101300,
+															"sid": 676896260862255,
 															"behaviorType": "Sine",
 															"parameters": {
 																"state": "active"
@@ -13738,7 +13788,7 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 747328270150963,
+															"sid": 791751771225226,
 															"parameters": {
 																"seconds": "2",
 																"use-timescale": true
@@ -13747,39 +13797,49 @@
 														{
 															"id": "set-active",
 															"objectClass": "Icon_Protect",
-															"sid": 250064055245089,
+															"sid": 344856877681962,
 															"behaviorType": "Sine",
 															"parameters": {
 																"state": "inactive"
 															}
 														}
 													],
-													"sid": 262531212308206
+													"sid": 633853535187548
 												},
 												{
 													"eventType": "block",
-													"conditions": [],
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 629389666762346,
+															"parameters": {
+																"variable": "Keep_Turn"
+															},
+															"isInverted": true
+														}
+													],
 													"actions": [
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 455789084560760,
+															"sid": 659785454492280,
 															"parameters": {
-																"seconds": "2",
+																"seconds": "2 - Opt_FastMode_Secs",
 																"use-timescale": true
 															}
 														},
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 415521920241308,
+															"sid": 841806076696828,
 															"parameters": {
 																"variable": "PowerDone",
 																"value": "true"
 															}
 														}
 													],
-													"sid": 151823363544055
+													"sid": 557356358561415
 												}
 											]
 										},
@@ -13793,7 +13853,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_CPU",
-													"sid": 108159980443463,
+													"sid": 540720053120701,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 4,
@@ -13803,7 +13863,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_Player",
-													"sid": 104581115270926,
+													"sid": 518938263848999,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 3,
@@ -13811,8 +13871,18 @@
 													}
 												}
 											],
-											"actions": [],
-											"sid": 781749884814069,
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 591643361141713,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"use-timescale": true
+													}
+												}
+											],
+											"sid": 588735733043856,
 											"children": [
 												{
 													"eventType": "block",
@@ -13820,7 +13890,7 @@
 														{
 															"id": "for-each-ordered",
 															"objectClass": "System",
-															"sid": 953816965813354,
+															"sid": 619783708620714,
 															"parameters": {
 																"object": "Card_Numb",
 																"expression": "Card_Numb.UID",
@@ -13830,7 +13900,7 @@
 														{
 															"id": "is-boolean-instance-variable-set",
 															"objectClass": "Card_Numb",
-															"sid": 857333529321119,
+															"sid": 655617241013935,
 															"parameters": {
 																"instance-variable": "Original_Hidden"
 															},
@@ -13838,7 +13908,7 @@
 														}
 													],
 													"actions": [],
-													"sid": 920443960222374,
+													"sid": 790693507683242,
 													"children": [
 														{
 															"eventType": "block",
@@ -13846,7 +13916,7 @@
 																{
 																	"id": "is-overlapping-another-object",
 																	"objectClass": "Card_Numb",
-																	"sid": 770417257358738,
+																	"sid": 300638158186368,
 																	"parameters": {
 																		"object": "Table_Player"
 																	}
@@ -13855,7 +13925,7 @@
 															"actions": [
 																{
 																	"callFunction": "Discard_Number",
-																	"sid": 953477212384042,
+																	"sid": 700733501728764,
 																	"parameters": [
 																		"1",
 																		"Card_Numb.myID",
@@ -13868,7 +13938,7 @@
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 667767182223085,
+																	"sid": 332721161483807,
 																	"parameters": {
 																		"seconds": "1",
 																		"use-timescale": true
@@ -13877,14 +13947,14 @@
 																{
 																	"id": "set-boolean-eventvar",
 																	"objectClass": "System",
-																	"sid": 157796545010027,
+																	"sid": 601958855734150,
 																	"parameters": {
 																		"variable": "PowerDone",
 																		"value": "true"
 																	}
 																}
 															],
-															"sid": 798499152734774
+															"sid": 771989267134612
 														}
 													]
 												},
@@ -13894,7 +13964,7 @@
 														{
 															"id": "pick-by-comparison",
 															"objectClass": "System",
-															"sid": 405840251994354,
+															"sid": 810860964527903,
 															"parameters": {
 																"object": "Icon_Protect",
 																"expression": "Icon_Protect.FromPlayer",
@@ -13907,7 +13977,7 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 532530541461811,
+															"sid": 735786785515503,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
@@ -13921,7 +13991,7 @@
 														{
 															"id": "set-active",
 															"objectClass": "Icon_Protect",
-															"sid": 660736445541770,
+															"sid": 846060451653831,
 															"behaviorType": "Sine",
 															"parameters": {
 																"state": "active"
@@ -13930,7 +14000,7 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 196616351008566,
+															"sid": 546669371822417,
 															"parameters": {
 																"seconds": "2",
 																"use-timescale": true
@@ -13939,39 +14009,49 @@
 														{
 															"id": "set-active",
 															"objectClass": "Icon_Protect",
-															"sid": 620552308935847,
+															"sid": 167268061809879,
 															"behaviorType": "Sine",
 															"parameters": {
 																"state": "inactive"
 															}
 														}
 													],
-													"sid": 293767975618308
+													"sid": 778966746650561
 												},
 												{
 													"eventType": "block",
-													"conditions": [],
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 862326209710083,
+															"parameters": {
+																"variable": "Keep_Turn"
+															},
+															"isInverted": true
+														}
+													],
 													"actions": [
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 293850070117482,
+															"sid": 828795785383738,
 															"parameters": {
-																"seconds": "2",
+																"seconds": "2 - Opt_FastMode_Secs",
 																"use-timescale": true
 															}
 														},
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 988906300116732,
+															"sid": 614738228414143,
 															"parameters": {
 																"variable": "PowerDone",
 																"value": "true"
 															}
 														}
 													],
-													"sid": 480467828997413
+													"sid": 809259938815049
 												}
 											]
 										},
@@ -13985,7 +14065,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_CPU",
-													"sid": 225384867327648,
+													"sid": 646768059692050,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 4,
@@ -13995,7 +14075,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Hand_Player",
-													"sid": 967668166835976,
+													"sid": 867011825975440,
 													"parameters": {
 														"instance-variable": "Protect_Turns",
 														"comparison": 4,
@@ -14003,8 +14083,18 @@
 													}
 												}
 											],
-											"actions": [],
-											"sid": 513752437468273,
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 164429492058462,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"use-timescale": true
+													}
+												}
+											],
+											"sid": 372095939027017,
 											"children": [
 												{
 													"eventType": "block",
@@ -14012,7 +14102,7 @@
 														{
 															"id": "pick-by-comparison",
 															"objectClass": "System",
-															"sid": 139515899259748,
+															"sid": 388346376328746,
 															"parameters": {
 																"object": "Icon_Protect",
 																"expression": "Icon_Protect.FromPlayer",
@@ -14025,7 +14115,7 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 630509642170179,
+															"sid": 672973684090944,
 															"parameters": {
 																"audio-file": {
 																	"path": "shield_sfx"
@@ -14039,7 +14129,7 @@
 														{
 															"id": "set-active",
 															"objectClass": "Icon_Protect",
-															"sid": 463932508063105,
+															"sid": 216481064020445,
 															"behaviorType": "Sine",
 															"parameters": {
 																"state": "active"
@@ -14048,7 +14138,7 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 501521756691865,
+															"sid": 738859961309442,
 															"parameters": {
 																"seconds": "2",
 																"use-timescale": true
@@ -14057,41 +14147,65 @@
 														{
 															"id": "set-active",
 															"objectClass": "Icon_Protect",
-															"sid": 118672210025103,
+															"sid": 248948566667725,
 															"behaviorType": "Sine",
 															"parameters": {
 																"state": "inactive"
 															}
 														}
 													],
-													"sid": 753916414553706
+													"sid": 208678549000859
 												},
 												{
 													"eventType": "block",
-													"conditions": [],
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 402408451601430,
+															"parameters": {
+																"variable": "Keep_Turn"
+															},
+															"isInverted": true
+														}
+													],
 													"actions": [
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 511023523061353,
+															"sid": 103881912980603,
 															"parameters": {
-																"seconds": "2",
+																"seconds": "2 - Opt_FastMode_Secs",
 																"use-timescale": true
 															}
 														},
 														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 966384633083335,
+															"sid": 565563583069292,
 															"parameters": {
 																"variable": "PowerDone",
 																"value": "true"
 															}
 														}
 													],
-													"sid": 988430403737112
+													"sid": 810030011097633
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"callFunction": "Camera_Shake",
+													"sid": 913155146897303,
+													"parameters": [
+														"30"
+													]
+												}
+											],
+											"sid": 101219808136691
 										}
 									],
 									"isOrBlock": true
@@ -14144,14 +14258,28 @@
 											}
 										},
 										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 126604163493129,
+											"parameters": {
+												"audio-file": {
+													"path": "Characters/BONG Bell Timer Hit Deep 03"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.2 ) : -100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 493182583096734,
+											"sid": 153574843408252,
 											"parameters": {
 												"object-to-create": "Icon_Hidden_Card",
 												"layer": "\"Game\"",
 												"x": "1748",
-												"y": "915",
+												"y": "940",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -14202,24 +14330,47 @@
 											}
 										},
 										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 294236315785098,
+											"parameters": {
+												"audio-file": {
+													"path": "Characters/BONG Bell Timer Hit Deep 03"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.2 ) : -100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 256152102448531,
+											"sid": 861978391215080,
 											"parameters": {
 												"object-to-create": "Icon_Hidden_Card",
 												"layer": "\"Game\"",
-												"x": "1472",
-												"y": "707",
+												"x": "1250",
+												"y": "540",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
 										},
 										{
+											"id": "set-size",
+											"objectClass": "Icon_Hidden_Card",
+											"sid": 250301243405390,
+											"parameters": {
+												"width": "115",
+												"height": "115"
+											}
+										},
+										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 592390925973034,
+											"sid": 583531875449858,
 											"parameters": {
-												"seconds": "1",
+												"seconds": "0.7",
 												"use-timescale": true
 											}
 										},
@@ -14237,7 +14388,17 @@
 								},
 								{
 									"eventType": "block",
-									"conditions": [],
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 156236175315274,
+											"parameters": {
+												"variable": "Keep_Turn"
+											},
+											"isInverted": true
+										}
+									],
 									"actions": [
 										{
 											"id": "wait",
@@ -18254,14 +18415,6 @@
 																"instance-variable": "Protect_Turns",
 																"value": "1"
 															}
-														},
-														{
-															"id": "set-animation-frame",
-															"objectClass": "Icon_Protect",
-															"sid": 869043112376839,
-															"parameters": {
-																"frame-number": "Hand_Player.Protect_Turns - 1"
-															}
 														}
 													],
 													"sid": 173412021014846,
@@ -18270,24 +18423,64 @@
 															"eventType": "block",
 															"conditions": [
 																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Hand_Player",
-																	"sid": 956768651138410,
+																	"id": "pick-by-comparison",
+																	"objectClass": "System",
+																	"sid": 306012284792583,
 																	"parameters": {
-																		"instance-variable": "Protect_Turns",
-																		"comparison": 3,
-																		"value": "0"
+																		"object": "Icon_Protect",
+																		"expression": "Icon_Protect.FromPlayer",
+																		"comparison": 0,
+																		"value": "1"
 																	}
 																}
 															],
-															"actions": [
+															"actions": [],
+															"sid": 217545757628499,
+															"children": [
 																{
-																	"id": "destroy",
-																	"objectClass": "Icon_Protect",
-																	"sid": 854038786743915
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-animation-frame",
+																			"objectClass": "Icon_Protect",
+																			"sid": 749552388507894,
+																			"parameters": {
+																				"comparison": 0,
+																				"number": "0"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "destroy",
+																			"objectClass": "Icon_Protect",
+																			"sid": 471196172375374
+																		}
+																	],
+																	"sid": 921230564500677
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "else",
+																			"objectClass": "System",
+																			"sid": 409241752678790
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-animation-frame",
+																			"objectClass": "Icon_Protect",
+																			"sid": 220997663447619,
+																			"parameters": {
+																				"frame-number": "Hand_Player.Protect_Turns - 1"
+																			}
+																		}
+																	],
+																	"sid": 946266612613232
 																}
-															],
-															"sid": 427744309042354
+															]
 														}
 													]
 												},
@@ -18624,14 +18817,6 @@
 														"instance-variable": "Protect_Turns",
 														"value": "1"
 													}
-												},
-												{
-													"id": "set-animation-frame",
-													"objectClass": "Icon_Protect",
-													"sid": 603273479979175,
-													"parameters": {
-														"frame-number": "Hand_CPU.Protect_Turns - 1"
-													}
 												}
 											],
 											"sid": 355455501398212,
@@ -18640,24 +18825,64 @@
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "compare-instance-variable",
-															"objectClass": "Hand_CPU",
-															"sid": 642157011952435,
+															"id": "pick-by-comparison",
+															"objectClass": "System",
+															"sid": 878804329722029,
 															"parameters": {
-																"instance-variable": "Protect_Turns",
-																"comparison": 3,
+																"object": "Icon_Protect",
+																"expression": "Icon_Protect.FromPlayer",
+																"comparison": 0,
 																"value": "0"
 															}
 														}
 													],
-													"actions": [
+													"actions": [],
+													"sid": 733126149481964,
+													"children": [
 														{
-															"id": "destroy",
-															"objectClass": "Icon_Protect",
-															"sid": 209664077786491
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-animation-frame",
+																	"objectClass": "Icon_Protect",
+																	"sid": 304666652637328,
+																	"parameters": {
+																		"comparison": 0,
+																		"number": "0"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "destroy",
+																	"objectClass": "Icon_Protect",
+																	"sid": 169644844444817
+																}
+															],
+															"sid": 438549174592281
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 793474663269790
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-animation-frame",
+																	"objectClass": "Icon_Protect",
+																	"sid": 637920096158256,
+																	"parameters": {
+																		"frame-number": "Hand_CPU.Protect_Turns - 1"
+																	}
+																}
+															],
+															"sid": 713828198061930
 														}
-													],
-													"sid": 720007261611566
+													]
 												}
 											]
 										},
@@ -20414,8 +20639,9 @@
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
+																"0",
 																true,
-																"0"
+																false
 															]
 														},
 														{
@@ -20585,8 +20811,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																		"0",
 																		true,
-																		"0"
+																		false
 																	]
 																}
 															],
@@ -20717,8 +20944,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
+																		"0",
 																		true,
-																		"0"
+																		false
 																	]
 																},
 																{
@@ -21233,8 +21461,9 @@
 																			"parameters": [
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																				"1  - Opt_FastMode_Secs",
 																				true,
-																				"1  - Opt_FastMode_Secs"
+																				false
 																			]
 																		},
 																		{
@@ -21279,8 +21508,9 @@
 																			"parameters": [
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																				"1 - Opt_FastMode_Secs",
 																				true,
-																				"1 - Opt_FastMode_Secs"
+																				false
 																			]
 																		},
 																		{
@@ -21424,8 +21654,9 @@
 																			"parameters": [
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
+																				"-0.5",
 																				true,
-																				"-0.5"
+																				false
 																			]
 																		}
 																	],
@@ -21913,8 +22144,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																		"0",
 																		true,
-																		"0"
+																		false
 																	]
 																}
 															],
@@ -22063,8 +22295,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
+																		"1",
 																		true,
-																		"1"
+																		false
 																	]
 																},
 																{
@@ -22303,8 +22536,9 @@
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
+																"0",
 																true,
-																"0"
+																false
 															]
 														},
 														{
@@ -22474,8 +22708,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																		"0",
 																		true,
-																		"0"
+																		false
 																	]
 																}
 															],
@@ -22620,8 +22855,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
+																		"0",
 																		true,
-																		"0"
+																		false
 																	]
 																},
 																{
@@ -22943,8 +23179,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
+																		"0",
 																		true,
-																		"0"
+																		false
 																	]
 																},
 																{
@@ -23534,8 +23771,9 @@
 																			"parameters": [
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																				"1  - Opt_FastMode_Secs",
 																				true,
-																				"1  - Opt_FastMode_Secs"
+																				false
 																			]
 																		},
 																		{
@@ -23580,8 +23818,9 @@
 																			"parameters": [
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																				"1 - Opt_FastMode_Secs",
 																				true,
-																				"1 - Opt_FastMode_Secs"
+																				false
 																			]
 																		},
 																		{
@@ -23649,84 +23888,12 @@
 																			}
 																		},
 																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "Hand_CPU",
-																			"sid": 835386198525287,
-																			"parameters": {
-																				"instance-variable": "Protect_Turns",
-																				"value": "3"
-																			}
-																		},
-																		{
-																			"id": "play",
-																			"objectClass": "Audio",
-																			"sid": 335379819478040,
-																			"parameters": {
-																				"audio-file": {
-																					"path": "shield_sfx"
-																				},
-																				"loop": "not-looping",
-																				"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-																				"stereo-pan": "0",
-																				"tag-optional": "\"\""
-																			}
-																		},
-																		{
-																			"id": "create-object",
-																			"objectClass": "System",
-																			"sid": 931031893167294,
-																			"parameters": {
-																				"object-to-create": "Icon_Protect",
-																				"layer": "\"Game\"",
-																				"x": "Table_CPU.X - 120",
-																				"y": "Table_CPU.Y",
-																				"create-hierarchy": false,
-																				"template-name": "\"\""
-																			}
-																		},
-																		{
-																			"id": "set-animation-frame",
-																			"objectClass": "Icon_Protect",
-																			"sid": 861440796476974,
-																			"parameters": {
-																				"frame-number": "Hand_CPU.Protect_Turns"
-																			}
-																		},
-																		{
-																			"id": "set-boolean-instvar",
-																			"objectClass": "Icon_Protect",
-																			"sid": 998691140073651,
-																			"parameters": {
-																				"instance-variable": "FromPlayer",
-																				"value": "false"
-																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 222909407985355,
-																			"parameters": {
-																				"seconds": "1",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "set-active",
-																			"objectClass": "Icon_Protect",
-																			"sid": 254121173685807,
-																			"behaviorType": "Sine",
-																			"parameters": {
-																				"state": "inactive"
-																			}
-																		},
-																		{
-																			"callFunction": "Talk",
-																			"sid": 176525144010235,
+																			"callFunction": "Use_Power_Card",
+																			"sid": 113537516300054,
 																			"parameters": [
-																				"EnemyName",
-																				"\"common.enemies.\" & EnemyName & \".special\"",
-																				false,
-																				"-0.5"
+																				"2",
+																				"\"0-protect\"",
+																				true
 																			]
 																		}
 																	],
@@ -24214,8 +24381,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
+																		"0",
 																		true,
-																		"0"
+																		false
 																	]
 																}
 															],
@@ -24364,8 +24532,9 @@
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
+																		"1",
 																		true,
-																		"1"
+																		false
 																	]
 																},
 																{
@@ -24699,25 +24868,115 @@
 										"seconds": "0.5",
 										"use-timescale": true
 									}
-								},
-								{
-									"callFunction": "Change Turn",
-									"sid": 946128961857145,
-									"parameters": [
-										"1"
-									]
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 995418238343256,
-									"parameters": {
-										"variable": "MatchReady",
-										"value": "false"
-									}
 								}
 							],
-							"sid": 223662425468053
+							"sid": 223662425468053,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Para impedir ações do jogador enquanto os personagens iniciais não usaram seus poderes"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 356111891740314,
+											"parameters": {
+												"variable": "Match",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 941845590474919,
+											"parameters": {
+												"variable": "GameRound",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 403358668724577,
+											"parameters": {
+												"group-name": "\"Player's Feedback\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"callFunction": "Change Turn",
+											"sid": 172235593198482,
+											"parameters": [
+												"1"
+											]
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 360141948813372,
+											"parameters": {
+												"seconds": "Opt_FastMode = 1.01 ? 1 : 2.51",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 611804430602807,
+											"parameters": {
+												"group-name": "\"Player's Turn / Actions\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 144183899456958,
+											"parameters": {
+												"variable": "MatchReady",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 759829845625586
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 962405093136077
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Change Turn",
+											"sid": 382988212754368,
+											"parameters": [
+												"1"
+											]
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 925804476270754,
+											"parameters": {
+												"variable": "MatchReady",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 160053135597283
+								}
+							]
 						}
 					],
 					"sid": 278553203178920
@@ -24812,6 +25071,41 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
+											"sid": 892943293339051,
+											"parameters": {
+												"variable": "Transition_State",
+												"comparison": 0,
+												"value": "\"MiniZoomIn\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 603379553567000,
+											"parameters": {
+												"variable": "ZoomAtual",
+												"value": "Opt_FastMode = 1 ? clamp(ZoomAtual+5*(dt*3), 0, 5) : clamp(ZoomAtual+5*(dt*2), 0, 5)"
+											}
+										},
+										{
+											"id": "set-layout-scale",
+											"objectClass": "System",
+											"sid": 867225441368892,
+											"parameters": {
+												"scale": "lerp( 1, 5.5, ZoomAtual/100)"
+											}
+										}
+									],
+									"sid": 918571686941339
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
 											"sid": 514347762753247,
 											"parameters": {
 												"variable": "Transition_State",
@@ -24840,6 +25134,41 @@
 										}
 									],
 									"sid": 322859325902152
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 630474556284110,
+											"parameters": {
+												"variable": "Transition_State",
+												"comparison": 0,
+												"value": "\"MiniZoomOut\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 481858156971712,
+											"parameters": {
+												"variable": "ZoomAtual",
+												"value": "Opt_FastMode = 1 ? clamp(ZoomAtual-5*(dt*3), 0, 5) : clamp(ZoomAtual-5*(dt*2), 0, 5)"
+											}
+										},
+										{
+											"id": "set-layout-scale",
+											"objectClass": "System",
+											"sid": 864019113746408,
+											"parameters": {
+												"scale": "lerp( 1, 5.5, ZoomAtual/100)"
+											}
+										}
+									],
+									"sid": 799732494644342
 								}
 							]
 						},
@@ -25022,6 +25351,147 @@
 								}
 							],
 							"sid": 873223549729081
+						},
+						{
+							"functionName": "Camera_Shake",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "Shake",
+									"type": "number",
+									"initialValue": "30",
+									"comment": "",
+									"sid": 206074256557481
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 462556384217343,
+									"parameters": {
+										"group-name": "\"Player's Feedback\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Camera",
+									"sid": 504817984787130,
+									"parameters": {
+										"x": "960",
+										"y": "600"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 824943824067303,
+									"parameters": {
+										"seconds": "0.01",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 332346359357763,
+									"parameters": {
+										"variable": "Transition_State",
+										"value": "\"MiniZoomIn\""
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Camera",
+									"sid": 664000343310944,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 880000685348745,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "shake",
+									"objectClass": "Camera",
+									"sid": 939305188485813,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "Shake",
+										"duration": "2 - Opt_FastMode_Secs",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 197535618087551,
+									"parameters": {
+										"seconds": "2 - Opt_FastMode_Secs",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 185754725206528,
+									"parameters": {
+										"variable": "Transition_State",
+										"value": "\"MiniZoomOut\""
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Camera",
+									"sid": 857851366027098,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 154025442375120,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Camera",
+									"sid": 422824547746962,
+									"parameters": {
+										"x": "960",
+										"y": "326"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 559507961913340,
+									"parameters": {
+										"group-name": "\"Player's Feedback\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 821071833159448
 						},
 						{
 							"functionName": "Transition",
@@ -26282,43 +26752,21 @@
 															}
 														},
 														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Table_CPU",
-															"sid": 242151714672971,
-															"parameters": {
-																"instance-variable": "Next_Hidden",
-																"value": "true"
-															}
-														},
-														{
-															"id": "create-object",
-															"objectClass": "System",
-															"sid": 712108378264876,
-															"parameters": {
-																"object-to-create": "Icon_Hidden_Card",
-																"layer": "\"Game\"",
-																"x": "1472",
-																"y": "707",
-																"create-hierarchy": false,
-																"template-name": "\"\""
-															}
+															"callFunction": "Use_Power_Card",
+															"sid": 491813790804230,
+															"parameters": [
+																"2",
+																"\"0-secret\"",
+																true
+															]
 														},
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 832145758969730,
+															"sid": 925047913966578,
 															"parameters": {
 																"seconds": "2 - Opt_FastMode_Secs",
 																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-active",
-															"objectClass": "Icon_Hidden_Card",
-															"sid": 427861273211459,
-															"behaviorType": "Sine",
-															"parameters": {
-																"state": "inactive"
 															}
 														},
 														{
@@ -26327,8 +26775,9 @@
 															"parameters": [
 																"EnemyName",
 																"\"common.enemies.\" & EnemyName & \".special\"",
+																"1  - Opt_FastMode_Secs",
 																true,
-																"1  - Opt_FastMode_Secs"
+																false
 															]
 														},
 														{
@@ -26346,6 +26795,15 @@
 															"sid": 292237939643616,
 															"parameters": {
 																"group-name": "\"Player's Turn / Actions\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 989024395729915,
+															"parameters": {
+																"group-name": "\"Player's Feedback\"",
 																"state": "activated"
 															}
 														}
@@ -26381,6 +26839,20 @@
 															}
 														},
 														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 849472289083511,
+															"parameters": {
+																"audio-file": {
+																	"path": "Characters/SUCCESS BEEPS Single Tone Long 01"
+																},
+																"loop": "not-looping",
+																"volume": "Vol_Sfx > 0 ? -15 + (Vol_Sfx * 0.15) : -100",
+																"stereo-pan": "0",
+																"tag-optional": "\"\""
+															}
+														},
+														{
 															"callFunction": "Draw_Power",
 															"sid": 190032527139943,
 															"parameters": [
@@ -26390,7 +26862,7 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 440730284661507,
+															"sid": 739967208059457,
 															"parameters": {
 																"seconds": "2 - Opt_FastMode_Secs",
 																"use-timescale": true
@@ -26398,31 +26870,14 @@
 														},
 														{
 															"callFunction": "Talk",
-															"sid": 908718315909396,
+															"sid": 751456123069759,
 															"parameters": [
-																"EnemyName",
-																"\"common.enemies.\" & EnemyName & \".special\"",
+																"\"Alice\"",
+																"\"common.enemies.Alice.talk_march_hare\"",
+																"0 - Opt_FastMode_Secs",
 																true,
-																"1 - Opt_FastMode_Secs"
+																true
 															]
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 882287452015027,
-															"parameters": {
-																"seconds": "2 - Opt_FastMode_Secs",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 926127457103159,
-															"parameters": {
-																"group-name": "\"Player's Turn / Actions\"",
-																"state": "activated"
-															}
 														}
 													],
 													"sid": 762283722753127
@@ -27684,75 +28139,13 @@
 																			}
 																		},
 																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "Hand_CPU",
-																			"sid": 931449602187703,
-																			"parameters": {
-																				"instance-variable": "Protect_Turns",
-																				"value": "3"
-																			}
-																		},
-																		{
-																			"id": "play",
-																			"objectClass": "Audio",
-																			"sid": 208747480884656,
-																			"parameters": {
-																				"audio-file": {
-																					"path": "shield_sfx"
-																				},
-																				"loop": "not-looping",
-																				"volume": "MuteAll = 0 ?-9 : -100",
-																				"stereo-pan": "0",
-																				"tag-optional": "\"\""
-																			}
-																		},
-																		{
-																			"id": "create-object",
-																			"objectClass": "System",
-																			"sid": 226143451904227,
-																			"parameters": {
-																				"object-to-create": "Icon_Protect",
-																				"layer": "\"Game\"",
-																				"x": "Table_CPU.X - 120",
-																				"y": "Table_CPU.Y",
-																				"create-hierarchy": false,
-																				"template-name": "\"\""
-																			}
-																		},
-																		{
-																			"id": "set-animation-frame",
-																			"objectClass": "Icon_Protect",
-																			"sid": 737728295689138,
-																			"parameters": {
-																				"frame-number": "Hand_CPU.Protect_Turns"
-																			}
-																		},
-																		{
-																			"id": "set-boolean-instvar",
-																			"objectClass": "Icon_Protect",
-																			"sid": 792932019292889,
-																			"parameters": {
-																				"instance-variable": "FromPlayer",
-																				"value": "false"
-																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 517986239171927,
-																			"parameters": {
-																				"seconds": "1",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "set-active",
-																			"objectClass": "Icon_Protect",
-																			"sid": 922116352827769,
-																			"behaviorType": "Sine",
-																			"parameters": {
-																				"state": "inactive"
-																			}
+																			"callFunction": "Use_Power_Card",
+																			"sid": 108610860968959,
+																			"parameters": [
+																				"2",
+																				"\"0-protect\"",
+																				true
+																			]
 																		},
 																		{
 																			"callFunction": "Talk",
@@ -27760,8 +28153,9 @@
 																			"parameters": [
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
+																				"-0.5",
 																				true,
-																				"-0.5"
+																				false
 																			]
 																		}
 																	],
@@ -28093,8 +28487,9 @@
 																			"parameters": [
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
+																				"0",
 																				true,
-																				"0"
+																				false
 																			]
 																		}
 																	],
@@ -30229,8 +30624,9 @@
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_stop\"",
+																"1",
 																false,
-																"1"
+																false
 															]
 														},
 														{
@@ -30420,8 +30816,9 @@
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_stop2\"",
+																"1",
 																false,
-																"1"
+																false
 															]
 														},
 														{
@@ -30733,8 +31130,9 @@
 													"parameters": [
 														"\"Alice\"",
 														"\"tutorial.alice_self_warning.empty_deck\"",
+														"0",
 														false,
-														"0"
+														false
 													]
 												}
 											],
@@ -30770,8 +31168,9 @@
 													"parameters": [
 														"\"Alice\"",
 														"\"tutorial.alice_self_warning.full_card_table\"",
+														"0",
 														false,
-														"0"
+														false
 													]
 												}
 											],
@@ -31337,8 +31736,9 @@
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_power\"",
+																"0",
 																false,
-																"0"
+																false
 															]
 														},
 														{
@@ -31701,7 +32101,8 @@
 																	"sid": 175665468477279,
 																	"parameters": [
 																		"1",
-																		"Card_Power.myID"
+																		"Card_Power.myID",
+																		false
 																	]
 																},
 																{
@@ -32208,7 +32609,8 @@
 																			"sid": 963199041757738,
 																			"parameters": [
 																				"1",
-																				"Card_Power.myID"
+																				"Card_Power.myID",
+																				false
 																			]
 																		},
 																		{
@@ -32364,7 +32766,8 @@
 															"sid": 527277376594222,
 															"parameters": [
 																"1",
-																"Card_Power.myID"
+																"Card_Power.myID",
+																false
 															]
 														},
 														{
@@ -32513,8 +32916,9 @@
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.block_stop\"",
+														"0",
 														false,
-														"0"
+														false
 													]
 												},
 												{
@@ -32630,8 +33034,9 @@
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.tip_power2\"",
+														"0",
 														false,
-														"0"
+														false
 													]
 												},
 												{
@@ -40555,7 +40960,8 @@
 											"sid": 914076014213504,
 											"parameters": [
 												"2",
-												"power_id"
+												"power_id",
+												false
 											]
 										},
 										{
@@ -40998,8 +41404,9 @@
 													"parameters": [
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
+														"1  - Opt_FastMode_Secs",
 														true,
-														"1  - Opt_FastMode_Secs"
+														false
 													]
 												},
 												{
@@ -41057,8 +41464,9 @@
 											"parameters": [
 												"EnemyName",
 												"\"common.enemies.\" & EnemyName & \".special\"",
+												"1  - Opt_FastMode_Secs",
 												true,
-												"1  - Opt_FastMode_Secs"
+												false
 											]
 										}
 									],
@@ -41350,8 +41758,9 @@
 													"parameters": [
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
+														"1  - Opt_FastMode_Secs",
 														true,
-														"1  - Opt_FastMode_Secs"
+														false
 													]
 												},
 												{
@@ -41693,8 +42102,9 @@
 									"parameters": [
 										"EnemyName",
 										"\"common.enemies.\" & EnemyName & \".talk_thinking_\" & str(choose(1,2))",
+										"1",
 										true,
-										"1"
+										false
 									]
 								}
 							],
@@ -44595,6 +45005,13 @@
 							"sid": 472197869452869
 						},
 						{
+							"name": "Time_Var",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "somar ou subtrair de 3 segundos",
+							"sid": 845531457186272
+						},
+						{
 							"name": "Enable_Skip",
 							"type": "boolean",
 							"initialValue": "false",
@@ -44602,11 +45019,11 @@
 							"sid": 860843354660295
 						},
 						{
-							"name": "Time_Var",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "somar ou subtrair de 3 segundos",
-							"sid": 845531457186272
+							"name": "Keep_Talking",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "true - não some com a caixa de texto (usado para conversas)",
+							"sid": 591956580276840
 						}
 					],
 					"eventType": "function-block",
@@ -44627,6 +45044,15 @@
 							"parameters": {
 								"text": "Internationalization.Lookup(Loc_Txt)",
 								"duration": "1.5 + ( Time_Var / 4)"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Bkg_Talk",
+							"sid": 230031303386512,
+							"parameters": {
+								"instance-variable": "Conversation",
+								"value": "false"
 							}
 						}
 					],
@@ -44707,49 +45133,43 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 564504252165996,
+									"sid": 245603886202936,
 									"parameters": {
-										"variable": "Enable_Skip"
+										"variable": "Keep_Talking"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-visible",
-									"objectClass": "Icon_Arrow_Talk",
-									"sid": 747112944040939,
+									"id": "set-boolean-instvar",
+									"objectClass": "Bkg_Talk",
+									"sid": 653969005713397,
 									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "flash",
-									"objectClass": "Icon_Arrow_Talk",
-									"sid": 433125559639049,
-									"behaviorType": "Flash",
-									"parameters": {
-										"on-time": "0.3",
-										"off-time": "0.3",
-										"duration": "Infinity"
+										"instance-variable": "Conversation",
+										"value": "true"
 									}
 								}
 							],
-							"sid": 186572167002996
+							"sid": 399340730449165
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "else",
+									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 298461614564435
+									"sid": 539061536885616,
+									"parameters": {
+										"variable": "Keep_Talking"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
 									"id": "start-timer",
 									"objectClass": "Bkg_Talk",
-									"sid": 609010674197870,
+									"sid": 942138011333304,
 									"behaviorType": "Timer",
 									"parameters": {
 										"duration": "4 + (Time_Var) - Opt_FastMode_Secs",
@@ -44758,7 +45178,7 @@
 									}
 								}
 							],
-							"sid": 804703111651968
+							"sid": 106219202326513
 						}
 					]
 				},
@@ -44802,6 +45222,48 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-typewriter-text-finished",
+							"objectClass": "Text_Talk",
+							"sid": 216223654270919
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "Bkg_Talk",
+							"sid": 203547267599420,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"fadeout\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Icon_Arrow_Talk",
+							"sid": 333911712667857,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Icon_Arrow_Talk",
+							"sid": 734849233563764,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.3",
+								"off-time": "0.3",
+								"duration": "Infinity"
+							}
+						}
+					],
+					"sid": 446570962491598
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-timer",
 							"objectClass": "Bkg_Talk",
 							"sid": 909729584263709,
@@ -44809,6 +45271,15 @@
 							"parameters": {
 								"tag": "\"fadeout\""
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Bkg_Talk",
+							"sid": 912464558464637,
+							"parameters": {
+								"instance-variable": "Conversation"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -44846,25 +45317,9 @@
 							"behaviorType": "Fade"
 						},
 						{
-							"id": "set-text",
-							"objectClass": "Text_Talk_Name",
-							"sid": 260136960395669,
-							"parameters": {
-								"text": "\"\""
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "Text_Talk",
-							"sid": 163590539737010,
-							"parameters": {
-								"text": "\"\""
-							}
-						},
-						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 475353534781070,
+							"sid": 567859595605435,
 							"parameters": {
 								"seconds": "0.5",
 								"use-timescale": true
@@ -44873,14 +45328,51 @@
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 681113047576253,
+							"sid": 112528330852193,
 							"parameters": {
 								"layer": "\"Talking\"",
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 137610561086279
+					"sid": 137610561086279,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-text",
+									"objectClass": "Text_Talk",
+									"sid": 191206728713345,
+									"parameters": {
+										"text-to-compare": "Internationalization.Lookup(\"common.enemies.March Hare.special\")",
+										"case-sensitivity": "ignore-case"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 207752841730603,
+									"parameters": {
+										"group-name": "\"Player's Turn / Actions\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 401610414772948,
+									"parameters": {
+										"group-name": "\"Player's Feedback\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 622508767999603
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -44888,127 +45380,7 @@
 						{
 							"id": "on-any-click",
 							"objectClass": "Mouse",
-							"sid": 943099858841365
-						},
-						{
-							"id": "compare-opacity",
-							"objectClass": "Bkg_Talk",
-							"sid": 627198518974245,
-							"parameters": {
-								"comparison": 0,
-								"opacity": "100"
-							}
-						},
-						{
-							"id": "is-timer-running",
-							"objectClass": "Bkg_Talk",
-							"sid": 411487740114400,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"fadeout\""
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-running-typewriter-text",
-							"objectClass": "Text_Talk",
-							"sid": 325403838178033,
-							"isInverted": true
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 643660131954184,
-							"parameters": {
-								"variable": "Tut_Talk",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-fade-in-time",
-							"objectClass": "Bkg_Talk",
-							"sid": 908152334367212,
-							"behaviorType": "Fade",
-							"parameters": {
-								"fade-in-time": "0"
-							}
-						},
-						{
-							"id": "set-wait-time",
-							"objectClass": "Bkg_Talk",
-							"sid": 200547648422277,
-							"behaviorType": "Fade",
-							"parameters": {
-								"wait-time": "0"
-							}
-						},
-						{
-							"id": "set-fade-out-time",
-							"objectClass": "Bkg_Talk",
-							"sid": 844512431718122,
-							"behaviorType": "Fade",
-							"parameters": {
-								"fade-out-time": "0.25"
-							}
-						},
-						{
-							"id": "restart-fade",
-							"objectClass": "Bkg_Talk",
-							"sid": 863161174853775,
-							"behaviorType": "Fade"
-						},
-						{
-							"id": "set-text",
-							"objectClass": "Text_Talk_Name",
-							"sid": 344091665151395,
-							"parameters": {
-								"text": "\"\""
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "Text_Talk",
-							"sid": 412352164744490,
-							"parameters": {
-								"text": "\"\""
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 551885225217446,
-							"parameters": {
-								"seconds": "0.25",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 573120168489042,
-							"parameters": {
-								"layer": "\"Talking\"",
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 117339562679359
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 326178103502394,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "Bkg_Talk"
-							}
+							"sid": 445816582864104
 						},
 						{
 							"id": "layer-is-visible",
@@ -45026,6 +45398,16 @@
 								"layer": "\"Pause\""
 							},
 							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 537083647147767,
+							"parameters": {
+								"variable": "Tut_Talk",
+								"comparison": 0,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [],
@@ -45059,6 +45441,25 @@
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 503317695776782,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 480469375590643,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.3",
+										"off-time": "0.3",
+										"duration": "Infinity"
+									}
 								}
 							],
 							"sid": 332365056411921
@@ -45088,7 +45489,239 @@
 									}
 								}
 							],
-							"sid": 496571771138124
+							"sid": 496571771138124,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Specific talks"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-text",
+											"objectClass": "Text_Talk",
+											"sid": 750242101310277,
+											"parameters": {
+												"text-to-compare": "Internationalization.Lookup(\"common.enemies.Alice.talk_march_hare\")",
+												"case-sensitivity": "ignore-case"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Talk",
+											"sid": 568419497473860,
+											"parameters": [
+												"EnemyName",
+												"\"common.enemies.\" & EnemyName & \".special\"",
+												"1 - Opt_FastMode_Secs",
+												true,
+												false
+											]
+										}
+									],
+									"sid": 829551937067796
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 142951667262418
+										},
+										{
+											"id": "compare-text",
+											"objectClass": "Text_Talk",
+											"sid": 407907322832256,
+											"parameters": {
+												"text-to-compare": "Internationalization.Lookup(\"common.enemies.March Hare.special\")",
+												"case-sensitivity": "ignore-case"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 753122518975686,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 617759374018832,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 204599784763573,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.25"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Bkg_Talk",
+											"sid": 583105264258803,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Talk_Name",
+											"sid": 411353052548963,
+											"parameters": {
+												"text": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Talk",
+											"sid": 408234708080473,
+											"parameters": {
+												"text": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 498643056987895,
+											"parameters": {
+												"seconds": "0.25",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 191611002457161,
+											"parameters": {
+												"layer": "\"Talking\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 380617494476869,
+											"parameters": {
+												"group-name": "\"Player's Turn / Actions\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 124156596378081,
+											"parameters": {
+												"group-name": "\"Player's Feedback\"",
+												"state": "activated"
+											}
+										}
+									],
+									"sid": 481393466938847
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 921204759161753
+										},
+										{
+											"id": "is-timer-running",
+											"objectClass": "Bkg_Talk",
+											"sid": 178421581912619,
+											"behaviorType": "Timer",
+											"parameters": {
+												"tag": "\"fadeout\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 318496790709554,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 575653438887961,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 337097508454904,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.25"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Bkg_Talk",
+											"sid": 551218448260086,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Talk_Name",
+											"sid": 217765482059810,
+											"parameters": {
+												"text": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Talk",
+											"sid": 240002886097174,
+											"parameters": {
+												"text": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 782023389124375,
+											"parameters": {
+												"seconds": "0.25",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 590902198928402,
+											"parameters": {
+												"layer": "\"Talking\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 423095971285017,
+									"disabled": true
+								}
+							]
 						}
 					]
 				}
@@ -45206,8 +45839,9 @@
 											"parameters": [
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
+												"0",
 												false,
-												"0"
+												false
 											]
 										},
 										{
@@ -45292,8 +45926,9 @@
 											"parameters": [
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
+												"0",
 												false,
-												"0"
+												false
 											]
 										},
 										{
@@ -45766,6 +46401,25 @@
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 732402067703369,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Icon_Arrow_Talk",
+									"sid": 474822186029198,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.3",
+										"off-time": "0.3",
+										"duration": "Infinity"
+									}
 								}
 							],
 							"sid": 405114451472511
@@ -46070,8 +46724,9 @@
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
+														"0",
 														true,
-														"0"
+														false
 													]
 												}
 											],
@@ -47171,8 +47826,9 @@
 											"parameters": [
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
+												"0",
 												true,
-												"0"
+												false
 											]
 										},
 										{
@@ -47247,8 +47903,9 @@
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
+														"0",
 														true,
-														"0"
+														false
 													]
 												},
 												{
@@ -47350,8 +48007,9 @@
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
+														"0",
 														true,
-														"0"
+														false
 													]
 												},
 												{
@@ -47453,8 +48111,9 @@
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
+														"0",
 														true,
-														"0"
+														false
 													]
 												},
 												{

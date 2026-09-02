@@ -628,6 +628,94 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "BONG Bell Timer Hit Deep 03.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 678020138145532,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "BONG Bell Timer Hit 07.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 227216261550658,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Beeps Oh No 08.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 110375367732695,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Beeps Oh No 09.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 505349277878656,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Descending Bell Run 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 419168510512626,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Tension Builder Chime 04.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 134083769852447,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS BEEPS Multiple Tone Long 06.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 467170610338228,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Tension Builder Chime 03.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 523052882315090,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS BEEPS Single Tone Long 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 602183386049009,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Collect Beep 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 700696594561641,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Retro Buildup 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 174986959485371,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],

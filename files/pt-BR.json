@@ -257,7 +257,8 @@
         "common": {
             "enemies" : {
                 "Alice": {
-                    "name": "Alice"
+                    "name": "Alice",
+                    "talk_march_hare": "Ei, esse é meu turno!"
                 },
                 "White Queen": {
                     "name": "Rainha Branca",
@@ -452,7 +453,7 @@
             "compel": "[u]Obrigar[/u]\n\n\nObrigue o [color=#f5fe05]seu oponente[/color] a descartar a [color=#f5fe05]última[/color] carta de número para o fim do baralho.",
             "exchange": "[u]Troca[/u]\n\n\nEscolha uma carta [color=#fa1c03]não oculta[/color] para trocar com o seu oponente.",
             "exchange_tip_1": "[u]Escolha uma carta do oponente:[/u]",
-            "exchange_tip_2": "[u]Escolha uma carta para trocar:[/u]",
+            "exchange_tip_2": "[u]Escolha sua carta para trocar:[/u]",
             "secretexchange": "[u]Troca Secreta[/u]\n\n\nAmbos os jogadores trocam a sua [color=#f5fe05]primeira carta oculta[/color] entre si.",
             "menu": "[u]Menu[/u]\n\nVeja as próximas [color=#f5fe05]3[/color] cartas do baralho de número e escolha [color=#f5fe05]uma[/color] para comprar. E então, o baralho de número é [color=#fa1c03]embaralhado[/color].",
             "menu_tip": "[u]Escolha uma carta para comprar:[/u]",

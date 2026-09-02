@@ -3496,7 +3496,9 @@
 							"uid": 195,
 							"sid": 825474668328339,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"Conversation": false
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6823,55 +6825,6 @@
 					}
 				},
 				{
-					"type": "Txt_debug2",
-					"properties": {
-						"text": "fps: 999",
-						"enable-bbcode": true,
-						"font": "AliceInWonderland",
-						"size": 45,
-						"line-height": -20,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": false,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 121,
-					"sid": 220868817907041,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 484,
-						"y": -4,
-						"width": 1434,
-						"height": 82,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "degrade",
 					"properties": {
 						"initially-visible": true,
@@ -7155,6 +7108,55 @@
 						"height": 100,
 						"originX": 0,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Txt_debug2",
+					"properties": {
+						"text": "fps: 999",
+						"enable-bbcode": true,
+						"font": "AliceInWonderland",
+						"size": 35,
+						"line-height": -20,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 366,
+					"sid": 697237614729197,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 536,
+						"y": 8,
+						"width": 1376,
+						"height": 82,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -7758,7 +7760,7 @@
 		}
 	],
 	"effectTypes": [],
-	"width": 1920,
+	"width": 1960,
 	"height": 1080,
 	"unboundedScrolling": false,
 	"sampling": "auto",

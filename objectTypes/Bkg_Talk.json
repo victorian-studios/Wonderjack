@@ -4,7 +4,15 @@
 	"sid": 330993669874295,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Conversation",
+			"type": "boolean",
+			"desc": "true - não some com a caixa de texto",
+			"show": true,
+			"sid": 727392500474223
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Fade",
