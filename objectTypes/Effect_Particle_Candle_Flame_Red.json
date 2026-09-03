@@ -1,0 +1,29 @@
+{
+	"name": "Effect_Particle_Candle_Flame_Red",
+	"plugin-id": "Particles",
+	"sid": 638222661184532,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 312793756536837
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 32,
+		"height": 32,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 8170784,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

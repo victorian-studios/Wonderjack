@@ -341,7 +341,9 @@
 			"Demo_Fade_Sprite",
 			"Btn_Confirm",
 			"Btn_Deny",
-			"Cursor_Particle"
+			"Cursor_Particle",
+			"Effect_Particle_Candle_Flame_Blue",
+			"Effect_Particle_Candle_Flame_Red"
 		],
 		"subfolders": []
 	},
@@ -513,6 +515,14 @@
 					"name": "817546__silverdubloons__pickupcard00.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 493523806797266,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HURRICANE.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 621377374637694,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -1027,9 +1037,7 @@
 		}
 	},
 	"timelines": {
-		"items": [
-			"Linha do tempo 1"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [],

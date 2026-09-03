@@ -763,13 +763,12 @@
 						},
 						{
 							"callFunction": "Talk",
-							"sid": 833023328046593,
+							"sid": 693809903276383,
 							"parameters": [
 								"Enemy.AnimationName",
 								"\"tutorial.white_queen.\" & str(Tut_Talk)",
 								"0",
-								true,
-								false
+								true
 							]
 						}
 					],
@@ -1066,6 +1065,52 @@
 											"parameters": {
 												"frame-number": "2"
 											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 170186134382642,
+											"parameters": {
+												"object": "Effect_Particle_Candle_Flame_Blue",
+												"layer": "\"Bkg\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 439687861726538,
+											"parameters": {
+												"child": "Effect_Particle_Candle_Flame_Blue",
+												"transform-x": true,
+												"transform-y": false,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": true
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Effect_Particle_Candle_Flame_Blue",
+											"sid": 126219469838798,
+											"parameters": {
+												"angle": "270"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "Effect_Particle_Candle_Flame_Blue",
+											"sid": 257558950448103,
+											"parameters": {
+												"y": "Self.Y - 15"
+											}
 										}
 									],
 									"sid": 229005511967546
@@ -1146,6 +1191,52 @@
 											"sid": 808341547385606,
 											"parameters": {
 												"frame-number": "3"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 869208007403740,
+											"parameters": {
+												"object": "Effect_Particle_Candle_Flame_Red",
+												"layer": "\"Bkg\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Effect_Light_Candle_Mask",
+											"sid": 320210417858246,
+											"parameters": {
+												"child": "Effect_Particle_Candle_Flame_Red",
+												"transform-x": true,
+												"transform-y": false,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": false,
+												"transform-visibility": false,
+												"destroy-with-parent": true
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Effect_Particle_Candle_Flame_Red",
+											"sid": 705843511836755,
+											"parameters": {
+												"angle": "270"
+											}
+										},
+										{
+											"id": "set-y",
+											"objectClass": "Effect_Particle_Candle_Flame_Red",
+											"sid": 493400549269017,
+											"parameters": {
+												"y": "Self.Y - 15"
 											}
 										}
 									],
@@ -7393,12 +7484,28 @@
 															"actions": [
 																{
 																	"callFunction": "Relic Feedback",
-																	"sid": 960586214553960,
+																	"sid": 248511761598635,
 																	"parameters": [
-																		"\"relic discard\"",
+																		"\"watch\"",
 																		true,
 																		false,
 																		true
+																	]
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 687163805420853,
+																	"parameters": {
+																		"seconds": "1.0",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"callFunction": "Count_Numbers",
+																	"sid": 110211059490333,
+																	"parameters": [
+																		false
 																	]
 																}
 															],
@@ -8545,6 +8652,10 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "comment",
+					"text": "FAZER O FURACÃO DEVOLVER TODAS AS CARTAS MENOS AS OCULTAS ! ! !\n\n\nFAZER O FURACÃO DEVOLVER TODAS AS CARTAS MENOS AS OCULTAS ! ! !\n"
+				},
 				{
 					"functionName": "Reset Power Deck",
 					"functionDescription": "",
@@ -13501,9 +13612,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 636958252181440,
+													"sid": 987671352140799,
 													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"seconds": "Opt_FastMode = 1 ? 0.3 : 0.6",
 														"use-timescale": true
 													}
 												}
@@ -13663,9 +13774,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 111707110644952,
+													"sid": 131238216642609,
 													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"seconds": "Opt_FastMode = 1 ? 0.3 : 0.6",
 														"use-timescale": true
 													}
 												}
@@ -13875,9 +13986,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 591643361141713,
+													"sid": 467268442253657,
 													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"seconds": "Opt_FastMode = 1 ? 0.3 : 0.6",
 														"use-timescale": true
 													}
 												}
@@ -14087,9 +14198,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 164429492058462,
+													"sid": 118748071749391,
 													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 0.5 : 0.8",
+														"seconds": "Opt_FastMode = 1 ? 0.3 : 0.6",
 														"use-timescale": true
 													}
 												}
@@ -14199,9 +14310,9 @@
 											"actions": [
 												{
 													"callFunction": "Camera_Shake",
-													"sid": 913155146897303,
+													"sid": 193436945235243,
 													"parameters": [
-														"30"
+														"20"
 													]
 												}
 											],
@@ -20314,81 +20425,30 @@
 											"sid": 987467193125054
 										}
 									],
-									"actions": [],
-									"sid": 739462290625412,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 482052264250790,
-													"parameters": {
-														"variable": "Tutorial_Enabled"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-text",
-													"objectClass": "Text_Turn",
-													"sid": 997862937092539,
-													"parameters": {
-														"text": "Internationalization.Lookup(\"common.round_result\", PlayerNumbers, EnemyNameTurns, EnemyNumbers, winner)"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 172608126158539,
-													"parameters": {
-														"seconds": "6",
-														"use-timescale": true
-													}
-												},
-												{
-													"callFunction": "Next_Round",
-													"sid": 493184208599542
-												}
-											],
-											"sid": 601481397281889
+											"id": "set-text",
+											"objectClass": "Text_Turn",
+											"sid": 606364707020239,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"common.round_result\", PlayerNumbers, EnemyNameTurns, EnemyNumbers, winner)"
+											}
 										},
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "else",
-													"objectClass": "System",
-													"sid": 267835017221215
-												}
-											],
-											"actions": [
-												{
-													"id": "set-text",
-													"objectClass": "Text_Turn",
-													"sid": 297317270766243,
-													"parameters": {
-														"text": "Internationalization.Lookup(\"common.round_result\", PlayerNumbers, EnemyNameTurns, EnemyNumbers, winner)"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 270786254981752,
-													"parameters": {
-														"seconds": "4",
-														"use-timescale": true
-													}
-												},
-												{
-													"callFunction": "Next_Round",
-													"sid": 446814159808603
-												}
-											],
-											"sid": 674889907240743
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 917629363398048,
+											"parameters": {
+												"seconds": "4 - Opt_FastMode_Secs",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "Next_Round",
+											"sid": 425575290779131
 										}
-									]
+									],
+									"sid": 739462290625412
 								}
 							]
 						},
@@ -20640,7 +20700,6 @@
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																"0",
-																true,
 																false
 															]
 														},
@@ -20812,7 +20871,6 @@
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
-																		true,
 																		false
 																	]
 																}
@@ -20945,7 +21003,6 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																		"0",
-																		true,
 																		false
 																	]
 																},
@@ -21412,259 +21469,18 @@
 															"parameters": {
 																"state": "inactive"
 															}
-														}
-													],
-													"sid": 474353246894510,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-boolean-eventvar",
-																	"objectClass": "System",
-																	"sid": 832647190467299,
-																	"parameters": {
-																		"variable": "Tutorial_Enabled"
-																	}
-																}
-															],
-															"actions": [],
-															"sid": 707862626794766,
-															"children": [
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-eventvar",
-																			"objectClass": "System",
-																			"sid": 308960438435652,
-																			"parameters": {
-																				"variable": "Tut_Talk",
-																				"comparison": 0,
-																				"value": "13"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 177770047564818,
-																			"parameters": {
-																				"variable": "Tut_Talk",
-																				"value": "14"
-																			}
-																		},
-																		{
-																			"callFunction": "Talk",
-																			"sid": 576026574573146,
-																			"parameters": [
-																				"Enemy.AnimationName",
-																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
-																				"1  - Opt_FastMode_Secs",
-																				true,
-																				false
-																			]
-																		},
-																		{
-																			"id": "set-layer-visible",
-																			"objectClass": "System",
-																			"sid": 355784387232515,
-																			"parameters": {
-																				"layer": "\"Turn\"",
-																				"visibility": "invisible"
-																			}
-																		}
-																	],
-																	"sid": 509924581656329
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-eventvar",
-																			"objectClass": "System",
-																			"sid": 692958515757434,
-																			"parameters": {
-																				"variable": "Tut_Talk",
-																				"comparison": 0,
-																				"value": "26"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "set-eventvar-value",
-																			"objectClass": "System",
-																			"sid": 817934515516364,
-																			"parameters": {
-																				"variable": "Tut_Talk",
-																				"value": "27"
-																			}
-																		},
-																		{
-																			"callFunction": "Talk",
-																			"sid": 588510606278945,
-																			"parameters": [
-																				"Enemy.AnimationName",
-																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
-																				"1 - Opt_FastMode_Secs",
-																				true,
-																				false
-																			]
-																		},
-																		{
-																			"id": "set-layer-visible",
-																			"objectClass": "System",
-																			"sid": 539906395387200,
-																			"parameters": {
-																				"layer": "\"Turn\"",
-																				"visibility": "invisible"
-																			}
-																		}
-																	],
-																	"sid": 549883236925992
-																}
-															]
 														},
 														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "else",
-																	"objectClass": "System",
-																	"sid": 316383649987447
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-boolean-eventvar",
-																	"objectClass": "System",
-																	"sid": 954120664342330,
-																	"parameters": {
-																		"variable": "MatchReady",
-																		"value": "true"
-																	}
-																}
-															],
-															"sid": 578174903097097,
-															"children": [
-																{
-																	"eventType": "comment",
-																	"text": "Special Power - Humpty Dumpty"
-																},
-																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "compare-eventvar",
-																			"objectClass": "System",
-																			"sid": 544518961457136,
-																			"parameters": {
-																				"variable": "EnemyName",
-																				"comparison": 0,
-																				"value": "\"Humpty Dumpty\""
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 730701362933305,
-																			"parameters": {
-																				"seconds": "2 - Opt_FastMode_Secs",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "set-instvar-value",
-																			"objectClass": "Hand_CPU",
-																			"sid": 917628486490284,
-																			"parameters": {
-																				"instance-variable": "Protect_Turns",
-																				"value": "3"
-																			}
-																		},
-																		{
-																			"id": "play",
-																			"objectClass": "Audio",
-																			"sid": 840023810798721,
-																			"parameters": {
-																				"audio-file": {
-																					"path": "shield_sfx"
-																				},
-																				"loop": "not-looping",
-																				"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-																				"stereo-pan": "0",
-																				"tag-optional": "\"\""
-																			}
-																		},
-																		{
-																			"id": "create-object",
-																			"objectClass": "System",
-																			"sid": 665787289257302,
-																			"parameters": {
-																				"object-to-create": "Icon_Protect",
-																				"layer": "\"Game\"",
-																				"x": "Table_CPU.X - 120",
-																				"y": "Table_CPU.Y",
-																				"create-hierarchy": false,
-																				"template-name": "\"\""
-																			}
-																		},
-																		{
-																			"id": "set-animation-frame",
-																			"objectClass": "Icon_Protect",
-																			"sid": 372340821118404,
-																			"parameters": {
-																				"frame-number": "Hand_CPU.Protect_Turns"
-																			}
-																		},
-																		{
-																			"id": "set-boolean-instvar",
-																			"objectClass": "Icon_Protect",
-																			"sid": 495695469843677,
-																			"parameters": {
-																				"instance-variable": "FromPlayer",
-																				"value": "false"
-																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 526899743517180,
-																			"parameters": {
-																				"seconds": "1",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "set-active",
-																			"objectClass": "Icon_Protect",
-																			"sid": 569207583783940,
-																			"behaviorType": "Sine",
-																			"parameters": {
-																				"state": "inactive"
-																			}
-																		},
-																		{
-																			"callFunction": "Talk",
-																			"sid": 862750090835595,
-																			"parameters": [
-																				"EnemyName",
-																				"\"common.enemies.\" & EnemyName & \".special\"",
-																				"-0.5",
-																				true,
-																				false
-																			]
-																		}
-																	],
-																	"sid": 331885993024871
-																}
-															]
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 496487569565745,
+															"parameters": {
+																"variable": "MatchReady",
+																"value": "true"
+															}
 														}
-													]
+													],
+													"sid": 474353246894510
 												}
 											]
 										},
@@ -22145,7 +21961,6 @@
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
-																		true,
 																		false
 																	]
 																}
@@ -22296,7 +22111,6 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
 																		"1",
-																		true,
 																		false
 																	]
 																},
@@ -22537,7 +22351,6 @@
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																"0",
-																true,
 																false
 															]
 														},
@@ -22704,13 +22517,12 @@
 																},
 																{
 																	"callFunction": "Talk",
-																	"sid": 814361833861635,
+																	"sid": 537420041460846,
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
-																		true,
-																		false
+																		true
 																	]
 																}
 															],
@@ -22856,7 +22668,6 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																		"0",
-																		true,
 																		false
 																	]
 																},
@@ -23180,7 +22991,6 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																		"0",
-																		true,
 																		false
 																	]
 																},
@@ -23767,13 +23577,12 @@
 																		},
 																		{
 																			"callFunction": "Talk",
-																			"sid": 915482256240054,
+																			"sid": 701430845934794,
 																			"parameters": [
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																				"1  - Opt_FastMode_Secs",
-																				true,
-																				false
+																				true
 																			]
 																		},
 																		{
@@ -23814,13 +23623,12 @@
 																		},
 																		{
 																			"callFunction": "Talk",
-																			"sid": 569290666401588,
+																			"sid": 553743015914115,
 																			"parameters": [
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																				"1 - Opt_FastMode_Secs",
-																				true,
-																				false
+																				true
 																			]
 																		},
 																		{
@@ -23834,6 +23642,37 @@
 																		}
 																	],
 																	"sid": 651699983247106
+																},
+																{
+																	"eventType": "comment",
+																	"text": "Para casos de empate (é raro, mas vai que...)"
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 614204178547144,
+																			"parameters": {
+																				"variable": "Tut_Talk",
+																				"comparison": 0,
+																				"value": "29"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-boolean-eventvar",
+																			"objectClass": "System",
+																			"sid": 469450398548018,
+																			"parameters": {
+																				"variable": "MatchReady",
+																				"value": "true"
+																			}
+																		}
+																	],
+																	"sid": 728388330019075
 																}
 															]
 														},
@@ -24377,13 +24216,12 @@
 																},
 																{
 																	"callFunction": "Talk",
-																	"sid": 729535214351779,
+																	"sid": 643324612485399,
 																	"parameters": [
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
-																		true,
-																		false
+																		true
 																	]
 																}
 															],
@@ -24533,7 +24371,6 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
 																		"1",
-																		true,
 																		false
 																	]
 																},
@@ -25019,6 +24856,10 @@
 							"sid": 311230492971147
 						},
 						{
+							"eventType": "comment",
+							"text": "Ativação de Zoom"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -25071,41 +24912,6 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 892943293339051,
-											"parameters": {
-												"variable": "Transition_State",
-												"comparison": 0,
-												"value": "\"MiniZoomIn\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 603379553567000,
-											"parameters": {
-												"variable": "ZoomAtual",
-												"value": "Opt_FastMode = 1 ? clamp(ZoomAtual+5*(dt*3), 0, 5) : clamp(ZoomAtual+5*(dt*2), 0, 5)"
-											}
-										},
-										{
-											"id": "set-layout-scale",
-											"objectClass": "System",
-											"sid": 867225441368892,
-											"parameters": {
-												"scale": "lerp( 1, 5.5, ZoomAtual/100)"
-											}
-										}
-									],
-									"sid": 918571686941339
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
 											"sid": 514347762753247,
 											"parameters": {
 												"variable": "Transition_State",
@@ -25134,41 +24940,6 @@
 										}
 									],
 									"sid": 322859325902152
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 630474556284110,
-											"parameters": {
-												"variable": "Transition_State",
-												"comparison": 0,
-												"value": "\"MiniZoomOut\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 481858156971712,
-											"parameters": {
-												"variable": "ZoomAtual",
-												"value": "Opt_FastMode = 1 ? clamp(ZoomAtual-5*(dt*3), 0, 5) : clamp(ZoomAtual-5*(dt*2), 0, 5)"
-											}
-										},
-										{
-											"id": "set-layout-scale",
-											"objectClass": "System",
-											"sid": 864019113746408,
-											"parameters": {
-												"scale": "lerp( 1, 5.5, ZoomAtual/100)"
-											}
-										}
-									],
-									"sid": 799732494644342
 								}
 							]
 						},
@@ -25390,24 +25161,6 @@
 									}
 								},
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 824943824067303,
-									"parameters": {
-										"seconds": "0.01",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 332346359357763,
-									"parameters": {
-										"variable": "Transition_State",
-										"value": "\"MiniZoomIn\""
-									}
-								},
-								{
 									"id": "set-enabled",
 									"objectClass": "Camera",
 									"sid": 664000343310944,
@@ -25419,21 +25172,35 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 880000685348745,
+									"sid": 696137863754001,
 									"parameters": {
-										"seconds": "0.5",
+										"seconds": "0.1",
 										"use-timescale": true
 									}
 								},
 								{
 									"id": "shake",
 									"objectClass": "Camera",
-									"sid": 939305188485813,
+									"sid": 528163212129794,
 									"behaviorType": "ScrollTo",
 									"parameters": {
 										"magnitude": "Shake",
 										"duration": "2 - Opt_FastMode_Secs",
 										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 928613378878916,
+									"parameters": {
+										"audio-file": {
+											"path": "HURRICANE"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								},
 								{
@@ -25443,15 +25210,6 @@
 									"parameters": {
 										"seconds": "2 - Opt_FastMode_Secs",
 										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 185754725206528,
-									"parameters": {
-										"variable": "Transition_State",
-										"value": "\"MiniZoomOut\""
 									}
 								},
 								{
@@ -25466,9 +25224,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 154025442375120,
+									"sid": 866538176672864,
 									"parameters": {
-										"seconds": "0.5",
+										"seconds": "0.1",
 										"use-timescale": true
 									}
 								},
@@ -26776,7 +26534,6 @@
 																"EnemyName",
 																"\"common.enemies.\" & EnemyName & \".special\"",
 																"1  - Opt_FastMode_Secs",
-																true,
 																false
 															]
 														},
@@ -26875,7 +26632,6 @@
 																"\"Alice\"",
 																"\"common.enemies.Alice.talk_march_hare\"",
 																"0 - Opt_FastMode_Secs",
-																true,
 																true
 															]
 														}
@@ -28154,7 +27910,6 @@
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
 																				"-0.5",
-																				true,
 																				false
 																			]
 																		}
@@ -28488,7 +28243,6 @@
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
 																				"0",
-																				true,
 																				false
 																			]
 																		}
@@ -29158,6 +28912,21 @@
 									"id": "else",
 									"objectClass": "System",
 									"sid": 623189287251296
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 188919669171007,
+									"parameters": {
+										"variable": "Turn",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 169375713994748
 								}
 							],
 							"actions": [],
@@ -29190,6 +28959,15 @@
 										{
 											"eventType": "block",
 											"conditions": [
+												{
+													"id": "compare-opacity",
+													"objectClass": "Bkg_Power_Txt",
+													"sid": 401144419252768,
+													"parameters": {
+														"comparison": 1,
+														"opacity": "0"
+													}
+												},
 												{
 													"id": "layer-is-visible",
 													"objectClass": "System",
@@ -29225,11 +29003,6 @@
 														"layer": "\"Turn\""
 													},
 													"isInverted": true
-												},
-												{
-													"id": "trigger-once-while-true",
-													"objectClass": "System",
-													"sid": 619860817887392
 												}
 											],
 											"actions": [
@@ -29632,6 +29405,11 @@
 										"comparison": 0,
 										"value": "1"
 									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 330976997391082
 								}
 							],
 							"actions": [
@@ -29650,6 +29428,15 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "compare-opacity",
+											"objectClass": "Bkg_Power_Txt",
+											"sid": 942141516012949,
+											"parameters": {
+												"comparison": 1,
+												"opacity": "0"
+											}
+										},
+										{
 											"id": "layer-is-visible",
 											"objectClass": "System",
 											"sid": 857599301797910,
@@ -29666,11 +29453,6 @@
 												"layer": "\"Talking\""
 											},
 											"isInverted": true
-										},
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 390919894113379
 										}
 									],
 									"actions": [
@@ -30066,6 +29848,21 @@
 									"id": "else",
 									"objectClass": "System",
 									"sid": 509377541090139
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 872596735016058,
+									"parameters": {
+										"variable": "Turn",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 966690375852394
 								}
 							],
 							"actions": [
@@ -30083,6 +29880,15 @@
 								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "compare-opacity",
+											"objectClass": "Bkg_Power_Txt",
+											"sid": 196234465300591,
+											"parameters": {
+												"comparison": 1,
+												"opacity": "0"
+											}
+										},
 										{
 											"id": "layer-is-visible",
 											"objectClass": "System",
@@ -30118,11 +29924,6 @@
 												"layer": "\"Turn\""
 											},
 											"isInverted": true
-										},
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 500589123316193
 										}
 									],
 									"actions": [
@@ -30620,12 +30421,11 @@
 													"actions": [
 														{
 															"callFunction": "Talk",
-															"sid": 602212476461723,
+															"sid": 538553656878550,
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_stop\"",
 																"1",
-																false,
 																false
 															]
 														},
@@ -30812,12 +30612,11 @@
 													"actions": [
 														{
 															"callFunction": "Talk",
-															"sid": 138230987065325,
+															"sid": 616307708851004,
 															"parameters": [
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_stop2\"",
 																"1",
-																false,
 																false
 															]
 														},
@@ -31131,7 +30930,6 @@
 														"\"Alice\"",
 														"\"tutorial.alice_self_warning.empty_deck\"",
 														"0",
-														false,
 														false
 													]
 												}
@@ -31169,7 +30967,6 @@
 														"\"Alice\"",
 														"\"tutorial.alice_self_warning.full_card_table\"",
 														"0",
-														false,
 														false
 													]
 												}
@@ -31713,11 +31510,11 @@
 														{
 															"id": "compare-eventvar",
 															"objectClass": "System",
-															"sid": 723188307699452,
+															"sid": 957189643823557,
 															"parameters": {
 																"variable": "PlayerNumbers",
 																"comparison": 5,
-																"value": "21"
+																"value": "18"
 															}
 														},
 														{
@@ -31737,7 +31534,6 @@
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_power\"",
 																"0",
-																false,
 																false
 															]
 														},
@@ -32917,7 +32713,6 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.block_stop\"",
 														"0",
-														false,
 														false
 													]
 												},
@@ -33035,7 +32830,6 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.tip_power2\"",
 														"0",
-														false,
 														false
 													]
 												},
@@ -40348,6 +40142,15 @@
 																"comparison": 4,
 																"second-value": "0"
 															}
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Table_CPU",
+															"sid": 217404942309888,
+															"parameters": {
+																"instance-variable": "Next_Hidden"
+															},
+															"isInverted": true
 														}
 													],
 													"actions": [
@@ -40448,6 +40251,15 @@
 																"comparison": 4,
 																"second-value": "5"
 															}
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Table_CPU",
+															"sid": 306176058410012,
+															"parameters": {
+																"instance-variable": "Next_Hidden"
+															},
+															"isInverted": true
 														}
 													],
 													"actions": [
@@ -41405,7 +41217,6 @@
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
 														"1  - Opt_FastMode_Secs",
-														true,
 														false
 													]
 												},
@@ -41465,7 +41276,6 @@
 												"EnemyName",
 												"\"common.enemies.\" & EnemyName & \".special\"",
 												"1  - Opt_FastMode_Secs",
-												true,
 												false
 											]
 										}
@@ -41759,7 +41569,6 @@
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
 														"1  - Opt_FastMode_Secs",
-														true,
 														false
 													]
 												},
@@ -41954,138 +41763,6 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 420550960827646,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "Draw_Number",
-									"sid": 195400502094687,
-									"parameters": [
-										"2",
-										false,
-										"0",
-										false,
-										false
-									]
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 597968644028602,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"callFunction": "Change Turn",
-									"sid": 697762898887492,
-									"parameters": [
-										"1"
-									]
-								}
-							],
-							"sid": 385250491027872,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 854028897646153,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "Draw_Power",
-									"sid": 941730228884297,
-									"parameters": [
-										"2"
-									]
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 771829378923941,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"callFunction": "Change Turn",
-									"sid": 923538455946446,
-									"parameters": [
-										"1"
-									]
-								}
-							],
-							"sid": 856671959501189,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 357117384605848,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "Enemy Action",
-									"sid": 537170270032867,
-									"parameters": [
-										"\"use_power\""
-									]
-								}
-							],
-							"sid": 211620981235555,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 117899378204695,
-									"parameters": {
-										"key": 70
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "Enemy Action",
-									"sid": 352717088215330,
-									"parameters": [
-										"\"stop\""
-									]
-								}
-							],
-							"sid": 770869735476646,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "on-timer",
 									"objectClass": "Enemy",
 									"sid": 229606902465226,
@@ -42103,7 +41780,6 @@
 										"EnemyName",
 										"\"common.enemies.\" & EnemyName & \".talk_thinking_\" & str(choose(1,2))",
 										"1",
-										true,
 										false
 									]
 								}
@@ -45012,13 +44688,6 @@
 							"sid": 845531457186272
 						},
 						{
-							"name": "Enable_Skip",
-							"type": "boolean",
-							"initialValue": "false",
-							"comment": "the player can skip or the text fade out after a few seconds",
-							"sid": 860843354660295
-						},
-						{
 							"name": "Keep_Talking",
 							"type": "boolean",
 							"initialValue": "false",
@@ -45225,16 +44894,6 @@
 							"id": "on-typewriter-text-finished",
 							"objectClass": "Text_Talk",
 							"sid": 216223654270919
-						},
-						{
-							"id": "is-timer-running",
-							"objectClass": "Bkg_Talk",
-							"sid": 203547267599420,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"fadeout\""
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
@@ -45280,6 +44939,23 @@
 								"instance-variable": "Conversation"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "compare-opacity",
+							"objectClass": "Bkg_Talk",
+							"sid": 351114001699846,
+							"parameters": {
+								"comparison": 0,
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 666647546131309,
+							"parameters": {
+								"layer": "\"Talking\""
+							}
 						}
 					],
 					"actions": [
@@ -45441,25 +45117,6 @@
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
 									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Icon_Arrow_Talk",
-									"sid": 503317695776782,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "flash",
-									"objectClass": "Icon_Arrow_Talk",
-									"sid": 480469375590643,
-									"behaviorType": "Flash",
-									"parameters": {
-										"on-time": "0.3",
-										"off-time": "0.3",
-										"duration": "Infinity"
-									}
 								}
 							],
 							"sid": 332365056411921
@@ -45516,7 +45173,6 @@
 												"EnemyName",
 												"\"common.enemies.\" & EnemyName & \".special\"",
 												"1 - Opt_FastMode_Secs",
-												true,
 												false
 											]
 										}
@@ -45637,16 +45293,6 @@
 											"id": "else",
 											"objectClass": "System",
 											"sid": 921204759161753
-										},
-										{
-											"id": "is-timer-running",
-											"objectClass": "Bkg_Talk",
-											"sid": 178421581912619,
-											"behaviorType": "Timer",
-											"parameters": {
-												"tag": "\"fadeout\""
-											},
-											"isInverted": true
 										}
 									],
 									"actions": [
@@ -45718,8 +45364,7 @@
 											}
 										}
 									],
-									"sid": 423095971285017,
-									"disabled": true
+									"sid": 423095971285017
 								}
 							]
 						}
@@ -45835,12 +45480,11 @@
 										},
 										{
 											"callFunction": "Talk",
-											"sid": 186047204018989,
+											"sid": 246660424633097,
 											"parameters": [
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
 												"0",
-												false,
 												false
 											]
 										},
@@ -45922,12 +45566,11 @@
 										},
 										{
 											"callFunction": "Talk",
-											"sid": 539774159409301,
+											"sid": 175888653019786,
 											"parameters": [
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
 												"0",
-												false,
 												false
 											]
 										},
@@ -46106,10 +45749,10 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 150762895154722,
+									"sid": 248284505257438,
 									"parameters": {
 										"variable": "GameRound",
-										"comparison": 0,
+										"comparison": 5,
 										"value": "3"
 									}
 								},
@@ -46307,14 +45950,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-object-clicked",
+							"id": "on-any-click",
 							"objectClass": "Mouse",
-							"sid": 396161888463451,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "Bkg_Talk"
-							}
+							"sid": 220181026093835
 						},
 						{
 							"id": "compare-boolean-eventvar",
@@ -46368,6 +46006,15 @@
 								"comparison": 0,
 								"opacity": "0"
 							}
+						},
+						{
+							"id": "compare-opacity",
+							"objectClass": "Bkg_Talk",
+							"sid": 802614843793013,
+							"parameters": {
+								"comparison": 0,
+								"opacity": "100"
+							}
 						}
 					],
 					"actions": [],
@@ -46400,25 +46047,6 @@
 										"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
 										"stereo-pan": "0",
 										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Icon_Arrow_Talk",
-									"sid": 732402067703369,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "flash",
-									"objectClass": "Icon_Arrow_Talk",
-									"sid": 474822186029198,
-									"behaviorType": "Flash",
-									"parameters": {
-										"on-time": "0.3",
-										"off-time": "0.3",
-										"duration": "Infinity"
 									}
 								}
 							],
@@ -46720,13 +46348,12 @@
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 489047782863724,
+													"sid": 424964446684725,
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true,
-														false
+														true
 													]
 												}
 											],
@@ -46863,6 +46490,15 @@
 													"parameters": {
 														"layer": "\"Talking\"",
 														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 344862377819946,
+													"parameters": {
+														"group-name": "\"Player's Feedback\"",
+														"state": "activated"
 													}
 												}
 											],
@@ -47822,13 +47458,12 @@
 										},
 										{
 											"callFunction": "Talk",
-											"sid": 180882328624338,
+											"sid": 950213167161371,
 											"parameters": [
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
 												"0",
-												true,
-												false
+												true
 											]
 										},
 										{
@@ -47899,13 +47534,12 @@
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 809530948164564,
+													"sid": 352228748767064,
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true,
-														false
+														true
 													]
 												},
 												{
@@ -48003,13 +47637,12 @@
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 327135156769832,
+													"sid": 818018967042464,
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true,
-														false
+														true
 													]
 												},
 												{
@@ -48068,8 +47701,7 @@
 													],
 													"sid": 846867579263226
 												}
-											],
-											"isOrBlock": true
+											]
 										},
 										{
 											"eventType": "block",
@@ -48107,13 +47739,12 @@
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 694990391424452,
+													"sid": 410237798017592,
 													"parameters": [
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true,
-														false
+														true
 													]
 												},
 												{
@@ -48132,6 +47763,145 @@
 												}
 											],
 											"sid": 905653108775152,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-text",
+													"objectClass": "Text_Talk",
+													"sid": 332020577366297,
+													"parameters": {
+														"text-to-compare": "Internationalization.Lookup(\"tutorial.white_queen.13\")",
+														"case-sensitivity": "ignore-case"
+													}
+												},
+												{
+													"id": "compare-text",
+													"objectClass": "Text_Talk",
+													"sid": 921550488594091,
+													"parameters": {
+														"text-to-compare": "Internationalization.Lookup(\"tutorial.white_queen.26\")",
+														"case-sensitivity": "ignore-case"
+													}
+												},
+												{
+													"id": "compare-text",
+													"objectClass": "Text_Talk",
+													"sid": 999176461726076,
+													"parameters": {
+														"text-to-compare": "Internationalization.Lookup(\"tutorial.white_queen.block_stop\")",
+														"case-sensitivity": "ignore-case"
+													}
+												},
+												{
+													"id": "compare-text",
+													"objectClass": "Text_Talk",
+													"sid": 138602645024155,
+													"parameters": {
+														"text-to-compare": "Internationalization.Lookup(\"tutorial.white_queen.tip_stop\")",
+														"case-sensitivity": "ignore-case"
+													}
+												},
+												{
+													"id": "compare-text",
+													"objectClass": "Text_Talk",
+													"sid": 444840504357330,
+													"parameters": {
+														"text-to-compare": "Internationalization.Lookup(\"tutorial.white_queen.tip_stop2\")",
+														"case-sensitivity": "ignore-case"
+													}
+												},
+												{
+													"id": "compare-text",
+													"objectClass": "Text_Talk",
+													"sid": 776195907173841,
+													"parameters": {
+														"text-to-compare": "Internationalization.Lookup(\"tutorial.white_queen.tip_power\")",
+														"case-sensitivity": "ignore-case"
+													}
+												},
+												{
+													"id": "compare-text",
+													"objectClass": "Text_Talk",
+													"sid": 959554362742305,
+													"parameters": {
+														"text-to-compare": "Internationalization.Lookup(\"tutorial.white_queen.tip_power2\")",
+														"case-sensitivity": "ignore-case"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Talk",
+													"sid": 416391930431683,
+													"parameters": {
+														"text": "\"\""
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "Text_Talk_Name",
+													"sid": 117876823143223,
+													"parameters": {
+														"text": "\"\""
+													}
+												},
+												{
+													"id": "set-fade-in-time",
+													"objectClass": "Bkg_Talk",
+													"sid": 584923267311999,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-in-time": "0"
+													}
+												},
+												{
+													"id": "set-wait-time",
+													"objectClass": "Bkg_Talk",
+													"sid": 120242180270756,
+													"behaviorType": "Fade",
+													"parameters": {
+														"wait-time": "0"
+													}
+												},
+												{
+													"id": "set-fade-out-time",
+													"objectClass": "Bkg_Talk",
+													"sid": 479114377878447,
+													"behaviorType": "Fade",
+													"parameters": {
+														"fade-out-time": "0.25"
+													}
+												},
+												{
+													"id": "restart-fade",
+													"objectClass": "Bkg_Talk",
+													"sid": 825707699253769,
+													"behaviorType": "Fade"
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 893950539155255,
+													"parameters": {
+														"seconds": "0.25",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 415893257012146,
+													"parameters": {
+														"layer": "\"Talking\"",
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 378517876406914,
 											"isOrBlock": true
 										}
 									]
@@ -48674,6 +48444,45 @@
 						}
 					],
 					"sid": 257902335323741
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 519769361974418,
+							"parameters": {
+								"key": 81
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 127359175551420,
+							"parameters": {
+								"object-to-create": "Effect_Particle_Candle_Flame_Blue",
+								"layer": "\"Bkg\"",
+								"x": "40",
+								"y": "40",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "Effect_Particle_Candle_Flame_Blue",
+							"sid": 344926392599516,
+							"disabled": true,
+							"parameters": {
+								"where": "behind",
+								"object": "Candle_Flame"
+							}
+						}
+					],
+					"sid": 608892035289769
 				}
 			],
 			"sid": 357112366278544

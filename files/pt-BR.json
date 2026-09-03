@@ -193,11 +193,11 @@
                 "17": "O primeiro que ganhar duas rodadas será o vencedor da partida!",
                 "18": "Agora vamos focar no baralho especial a sua esquerda e usar algumas cartas de [color=#ffff00]poder[/color] desta vez.",
                 "19": "No seu turno, você também pode [b]comprar[/b] ou [b]jogar[/b] uma carta de poder que já está na sua mão.",
-                "20": "Para comprar uma, apenas clique no baralho [color=#ffff00]amarelo[/color] a sua esquerda. E para jogá-la, passe seu mouse sobre ela e arraste em direção a tela.",
-                "21": "Por padrão, cada jogador só pode comprar duas cartas de poder por rodada.",
-                "22": "Sem falar que você pode ter duas cartas de poder em sua mão ao mesmo tempo.",
+                "20": "Para comprar uma, apenas clique no baralho de [color=#ffff00]poder[/color] à sua esquerda. E para jogá-la, segure com o mouse sobre ela então arraste para cima e solte.",
+                "21": "Normalmente, cada jogador só pode comprar duas cartas de poder por rodada.",
+                "22": "Sem falar que você pode ter só duas cartas de poder em sua mão ao mesmo tempo.",
                 "23": "Essas cartas permanecem com você entre as rodadas, então use-as sabiamente!",
-                "24": "Apenas lembre-se que eu posso fazer o mesmo. *pisca*",
+                "24": "Não se esqueça que eu posso fazer o mesmo. *piscada*",
                 "25": "Então, vamos começar a segunda rodada.",
                 "26": "Não fique brava comigo Alice, mas eu preciso jogar este poder...",
                 "27": "Bem... Desta vez eu ganhei!",
@@ -207,7 +207,7 @@
                 "31": "Normalmente quando isso acontece, você perde o jogo e teria que tentar de novo desde o começo.",
                 "32": "Mas já que eu estou te ensinando, acho que você está preparada para encontrar os outros e aprender com eles também.",
                 "33": "Olhe só, você ganhou esta partida!",
-                "34": "Mas não fique se achando, os outros lá fora tem diferentes estilos de jogo e são muito mais caóticos.",
+                "34": "Mas não fique se achando, os outros lá jogam sujo e são muito mais caóticos.",
                 "35": "De qualquer forma, eu acho que você está pronta para encontrar jogadores mais desafiadores...",
                 "36": "Além disso, depois de cada partida que você ganhar, terão recompensas especiais para você escolher.",
                 "37": "Eu não vou estragar a surpresa. Descubra por si mesma!",
@@ -216,7 +216,7 @@
                 "tip_stop": "Se você está perto de chegar a [b]21[/b], é melhor você parar e evitar se arriscar. Pressione o sino para parar esta rodada.",
                 "tip_stop2": "Se a sua soma é 21 ou mais, é melhor não comprar mais cartas de número e parar esta rodada.",
                 "tip_power": "Pense de novo Alice, jogar este [color=#ffff00]poder[/color] não seria muito inteligente.",
-                "tip_power2": "Por que não tenta comprar uma carta de [color=#ffff00]poder[/color] do baralho à sua esquerda?"
+                "tip_power2": "Acalme-se Alice, tente comprar uma carta de [color=#ffff00]poder[/color] do baralho à sua esquerda?"
             },
             "alice_self_warning": {
                 "empty_deck": "Bem... não tem mais nenhum carta sobrando.",
@@ -395,7 +395,7 @@
             "tea": {
                 "title": "Xícara de Chá",
                 "flavor_txt": "Hora do Chá!",
-                "desc":"Depois de jogar uma carta de poder, ganhe um [color=#f5fe05]turno extra[/color] (uma vez por partida). \n[color=#fa1c03]Mas reduza o limite de compra de poderes em 1[/color]."
+                "desc":"Depois de jogar uma carta de poder, ganhe um [color=#f5fe05]turno extra[/color] (uma vez por partida). \n[color=#fa1c03]Mas reduz o limite de compra de poderes em 1[/color]."
             },
             "drink_me": {
                 "title": "Garrafa",
