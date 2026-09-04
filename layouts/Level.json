@@ -6810,7 +6810,7 @@
 					"world": {
 						"x": 984,
 						"y": 11.999999999999996,
-						"width": 1968,
+						"width": 1967.9999999999998,
 						"height": 120,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -6843,7 +6843,7 @@
 					"world": {
 						"x": 984,
 						"y": 1075,
-						"width": 1968,
+						"width": 1967.9999999999998,
 						"height": 120,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -6874,7 +6874,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1920,
+						"x": 1952,
 						"y": 608,
 						"width": 1967.9999999999998,
 						"height": 120,
@@ -6907,7 +6907,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 0,
+						"x": -32,
 						"y": 544,
 						"width": 1967.9999999999998,
 						"height": 120,

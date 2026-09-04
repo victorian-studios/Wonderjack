@@ -6909,9 +6909,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Text_Turn",
-													"sid": 611188188713896,
+													"sid": 127452747607653,
 													"parameters": {
-														"text": "EnemyName & \" mistakely tried discard your hidden card.\""
+														"text": "Internationalization.Lookup(\"powers.compel_error2\", EnemyNameTurns)"
 													}
 												},
 												{
@@ -7005,9 +7005,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Text_Turn",
-													"sid": 914622230304468,
+													"sid": 189117940990861,
 													"parameters": {
-														"text": "\"You can't discard your hidden card.\""
+														"text": "Internationalization.Lookup(\"powers.compel_error2\")"
 													}
 												},
 												{
@@ -7237,9 +7237,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Text_Turn",
-													"sid": 809711074179563,
+													"sid": 312310338542739,
 													"parameters": {
-														"text": "\"You can't make \"&EnemyName&\" discard it's hidden card\""
+														"text": "Internationalization.Lookup(\"powers.compel_error3\", EnemyNameTurns)"
 													}
 												},
 												{
@@ -7333,9 +7333,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Text_Turn",
-													"sid": 192794199224447,
+													"sid": 696668725411749,
 													"parameters": {
-														"text": "EnemyName & \" mistakely tried to discard it's hidden card.\""
+														"text": "Internationalization.Lookup(\"powers.compel_error4\", EnemyNameTurns)"
 													}
 												},
 												{
@@ -42411,6 +42411,15 @@
 									}
 								},
 								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 621525625285210,
+									"parameters": {
+										"type": "log",
+										"message": "A_Relics.At(0)"
+									}
+								},
+								{
 									"id": "set-fade-in-time",
 									"objectClass": "Relic_card",
 									"sid": 462816811828206,
@@ -42506,12 +42515,6 @@
 										}
 									],
 									"sid": 773416407087558
-								},
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [],
-									"sid": 603354258946932
 								}
 							]
 						},
@@ -42632,11 +42635,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 962963349152007,
+									"sid": 962108646984550,
 									"parameters": {
 										"variable": "relic_id",
 										"comparison": 0,
-										"value": "\"drink_me\""
+										"value": "\"eat_me\""
 									}
 								}
 							],
@@ -42652,6 +42655,33 @@
 								}
 							],
 							"sid": 167473908740650
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 159244051890455,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"drink-me\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 961209734023187,
+									"parameters": {
+										"variable": "TheNumber",
+										"value": "18"
+									}
+								}
+							],
+							"sid": 282935712373452
 						},
 						{
 							"eventType": "block",
@@ -42731,11 +42761,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 812555312805564,
+									"sid": 690177732972034,
 									"parameters": {
 										"variable": "relic_id",
 										"comparison": 0,
-										"value": "\"eat_me\""
+										"value": "\"pocket\""
 									}
 								}
 							],

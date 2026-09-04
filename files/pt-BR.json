@@ -376,9 +376,9 @@
                 "flavor_txt": "Tarde Demais!",
                 "desc":"[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para devolver a última carta de [color=#005eff]número[/color] para o fim do baralho (uma vez por partida). \n[color=#fa1c03]Mas reduz o limite de poderes na mão em 1[/color]."
             },
-            "eat_me": {
-                "title": "Bolo",
-                "flavor_txt": "Coma-me.",
+            "pocket": {
+                "title": "Bolso",
+                "flavor_txt": "Mais Poder!",
                 "desc":"Aumenta o limite de poderes na sua mão em [color=#f5fe05]1[/color]."
                 
             },
@@ -397,9 +397,9 @@
                 "flavor_txt": "Hora do Chá!",
                 "desc":"Depois de jogar uma carta de poder, ganhe um [color=#f5fe05]turno extra[/color] (uma vez por partida). \n[color=#fa1c03]Mas reduz o limite de compra de poderes em 1[/color]."
             },
-            "drink_me": {
-                "title": "Garrafa",
-                "flavor_txt": "Beba-me",
+            "eat_me": {
+                "title": "Bolo",
+                "flavor_txt": "Coma-me",
                 "desc":"Aumente a meta da partida para [color=#f5fe05]24[/color]."
             },
             "hat": {
@@ -446,11 +446,15 @@
 		"powers": {
 			"card": "[u]Carta {0}[/u]\n\n\nPegue a carta [color=#f5fe05]{0}[/color] caso tenha no baralho.",
             "card_tip": "Esta carta não está no baralho...",
-            "protect": "[u]Proteção[/u]\n\n\nProteja-se de perder suas cartas de número por [color=#f5fe05]3[/color] turnos.",
+            "protect": "[u]Proteção[/u]\n\n\nProteja-se de cartas de poder que alterem seus números por[color=#f5fe05]3[/color] turnos.",
             "impulse": "[u]Impulso[/u]\n\n\nPegue a [color=#f5fe05]maior[/color] carta de número do baralho.",
             "gift": "[u]Presente[/u]\n\n\nDê a [color=#f5fe05]maior[/color] carta de número para seu oponente.",
-            "return": "[u]Devolução[/u]\n\n\nDescarte a sua carta de número à direita se ela [color=#fa1c03]não estiver oculta[/color] para o fim do baralho.",
-            "compel": "[u]Obrigar[/u]\n\n\nObrigue o [color=#f5fe05]seu oponente[/color] a descartar a [color=#f5fe05]última[/color] carta de número para o fim do baralho.",
+            "return": "[u]Devolução[/u]\n\n\nDescarte a sua [color=#f5fe05]última[/color] carta de número [color=#fa1c03]não oculta[/color] para o fim do baralho.",
+            "compel": "[u]Obrigar[/u]\n\n\nObrigue o [color=#f5fe05]seu oponente[/color] a descartar a [color=#f5fe05]última[/color] carta de número [color=#fa1c03]não oculta[/color] para o fim do baralho.",
+            "compel_error1": "{0} tentou descartar sua carta escondida sem querer.",
+            "compel_error2": "Você não pode descartar sua carta escondida.",
+            "compel_error3": "Você não pode obrigar {0} descartar sua própria carta escondida.",
+            "compel_error4": "{0} tentou descartar a própria carta escondida.",
             "exchange": "[u]Troca[/u]\n\n\nEscolha uma carta [color=#fa1c03]não oculta[/color] para trocar com o seu oponente.",
             "exchange_tip_1": "[u]Escolha uma carta do oponente:[/u]",
             "exchange_tip_2": "[u]Escolha sua carta para trocar:[/u]",

@@ -1190,6 +1190,69 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 1600,
+						"height": 1040,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7692498,
+						"collisionPoly": {
+							"points": [
+								0.9656250000000002,
+								0.06346153846153854,
+								0.9687499999999994,
+								0.9326923076923077,
+								0.025625000000000002,
+								0.9384615384615383,
+								0.03249999999999998,
+								0.0740384615384615
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1600,
+						"height": 1040,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1675293,
+						"collisionPoly": {
+							"points": [
+								0.9656250000000002,
+								0.06346153846153854,
+								0.9687499999999994,
+								0.9326923076923077,
+								0.025625000000000002,
+								0.9384615384615383,
+								0.03249999999999998,
+								0.0740384615384615
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 595462139137120,
+				"name": "pocket",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
 			}
 		],
 		"subfolders": []
