@@ -1,6 +1,6 @@
 {
-	"locale": "en-US",
-	"strings": {
+    "locale": "en-US",
+    "strings": {
         "intro": {
             "select": "Select your language:",
             "confirm": "Confirm",
@@ -159,11 +159,11 @@
             "bye": "Thanks for playing our game!"
         },
         "story": {
-            "page_1" : "Alice was leaning against a tree, trying to play cards with her little kitten, Dinah.\n\n'Well', Alice thought boredly, 'playing alone isn't nearly as fun anymore'.\n\nShe watched her cat playing with the pile of cards using her little paws.\n\n'I wanted something new, different, and... someone unpredictable' she says aloud.",
-            "page_2" : "The gentle breeze soon made Alice drowsy. Her eyelids grew heavier until, before she even realized it, she had drifted into a deep sleep.\n\n...\n\n'Alice? Alice?'\n\nA familiar voice echoed nearby. Slowly, Alice opened her eyes.\n\nShe looked around in confusion. Stone walls surrounded her, and a long tunnel stretched ahead.\n\n'A rabbit hole?'",
-            "page_3" : "'How did I get here? Where's Dinah?' Alice asked.\n\nThe White Queen hurried toward her, almost tripping over her own dress.\n\n'Oh, I'm so relieved I found you!'\n\n'White Queen? What's going on?'\n\n'I've come with a very important invitation... from the Queen of Hearts'\n\nAlice froze.\n\n'The Queen of Hearts? Now THAT sounds unpredictable.'",
-            "page_4" : "The White Queen glanced nervously over her shoulder.\n\n'She insists that everyone in Wonderland participate in a card tournament.'\n\n'Wait, a card tournament?' Alice asked.\n\n'Yes! She's grown tired of cricket...' the Queen whispered.\n\nThe White Queen forced a smile.\n\n'If you refuse... she'll blame me for failing to deliver the invitation.'",
-            "page_5" : "Alice smiled while her eyes sparkled with excitement.\n\n'That's exactly what I was hoping for. Count me in!'\n\nThe White Queen sighed with relief.\n\n'Wonderful! Before you leave... the Queen has grown even more merciless lately.'\n\n[b]'Would you like to play with me so I can teach you?'[/b]",
+            "page_1": "Alice was leaning against a tree, trying to play cards with her little kitten, Dinah.\n\n'Well', Alice thought boredly, 'playing alone isn't nearly as fun anymore'.\n\nShe watched her cat playing with the pile of cards using her little paws.\n\n'I wanted something new, different, and... someone unpredictable' she says aloud.",
+            "page_2": "The gentle breeze soon made Alice drowsy. Her eyelids grew heavier until, before she even realized it, she had drifted into a deep sleep.\n\n...\n\n'Alice? Alice?'\n\nA familiar voice echoed nearby. Slowly, Alice opened her eyes.\n\nShe looked around in confusion. Stone walls surrounded her, and a long tunnel stretched ahead.\n\n'A rabbit hole?'",
+            "page_3": "'How did I get here? Where's Dinah?' Alice asked.\n\nThe White Queen hurried toward her, almost tripping over her own dress.\n\n'Oh, I'm so relieved I found you!'\n\n'White Queen? What's going on?'\n\n'I've come with a very important invitation... from the Queen of Hearts'\n\nAlice froze.\n\n'The Queen of Hearts? Now THAT sounds unpredictable.'",
+            "page_4": "The White Queen glanced nervously over her shoulder.\n\n'She insists that everyone in Wonderland participate in a card tournament.'\n\n'Wait, a card tournament?' Alice asked.\n\n'Yes! She's grown tired of cricket...' the Queen whispered.\n\nThe White Queen forced a smile.\n\n'If you refuse... she'll blame me for failing to deliver the invitation.'",
+            "page_5": "Alice smiled while her eyes sparkled with excitement.\n\n'That's exactly what I was hoping for. Count me in!'\n\nThe White Queen sighed with relief.\n\n'Wonderful! Before you leave... the Queen has grown even more merciless lately.'\n\n[b]'Would you like to play with me so I can teach you?'[/b]",
             "btn_yes": "YES",
             "btn_no": "NO"
         },
@@ -193,7 +193,7 @@
                 "17": "The first player to win 2 rounds is the winner of the match!",
                 "18": "Now lets focus that special deck on your left to use some [color=#ffff00]power[/color] cards this time.",
                 "19": "On your turn, you can also either [b]draw[/b] or [b]play[/b] a power card that you already have in your hand.",
-                "20": "To draw one, just click on the [color=#ffff00]yellow[/color] deck on your left. And to play a power card, just hover your mouse and drag up and drop on your screen.",
+                "20": "To draw one, just click on the [color=#ffff00]power[/color] deck on your left. And to play a power card, just hold your mouse then drag up and drop in the center.",
                 "21": "Every player can only draw 2 power card in each round by default.",
                 "22": "Not to mention that you can hold only 2 power cards at the same time.",
                 "23": "These cards stay with you between rounds, so use them wisely!",
@@ -244,7 +244,6 @@
                 "title": "Gameplay",
                 "opt_1": "Auto math [size=28](Display the sum from number cards and more)[/size]",
                 "opt_2": "Fast Mode [size=28](Reduce the duration of animations and transitions)[/size]"
-                
             },
             "save": {
                 "title": "Erase Save",
@@ -252,12 +251,12 @@
                 "warning": "Are you sure?\n[b]This action CAN'T be undone![/b]",
                 "delete_btn": "DELETE"
             }
-            
         },
         "common": {
-            "enemies" : {
+            "enemies": {
                 "Alice": {
-                    "name": "Alice"
+                    "name": "Alice",
+                    "talk_march_hare": "Hey, it's my turn!"
                 },
                 "White Queen": {
                     "name": "White Queen",
@@ -343,8 +342,8 @@
             "bell": "[u]The Bell[/u] \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
             "power": "[u]The Power Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round.",
             "power_hand_limit": "[u]The Power Deck[/u] \n\nYou [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
-            "number" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
-            "number_easy" : "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",
+            "number": "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
+            "number_easy": "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",
             "tut_start": "Rabbit Hole",
             "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color].\n{3} [color=#f5fe05]won[/color] this round!",
             "player_turn": "Alice's Turn",
@@ -359,7 +358,7 @@
             "end": "You've [color=#f5fe05]won[/color] all the 4 opponents! Congratulations!",
             "revive": "You got a [color=#f5fe05]second chance[/color]! But your relic was destroyed."
         },
-		"relics": {
+        "relics": {
             "card_13": {
                 "title": "Card 13",
                 "flavor_txt": "My lucky number!",
@@ -373,58 +372,57 @@
             "watch": {
                 "title": "Pocket Watch",
                 "flavor_txt": "Too Late!",
-                "desc":"[color=#f5fe05]Right-click[/color] this relic to return the last [color=#005eff]number[/color] card to the bottom of the deck (once per match). [color=#fa1c03]But reduce your power hand limit by 1[/color]."
+                "desc": "[color=#f5fe05]Right-click[/color] this relic to return the last [color=#005eff]number[/color] card to the bottom of the deck (once per match). [color=#fa1c03]But reduce your power hand limit by 1[/color]."
             },
             "eat_me": {
                 "title": "Cake",
                 "flavor_txt": "Eat-me.",
-                "desc":"Increases your power hand limit by [color=#f5fe05]1[/color]."
-                
+                "desc": "Increases your power hand limit by [color=#f5fe05]1[/color]."
             },
             "crown": {
                 "title": "Queen's Crown",
                 "flavor_txt": "Decapitate!",
-                "desc":"When you [color=#fa1c03]lose a match[/color], this relic breaks and you can [color=#f5fe05]try again[/color]."
+                "desc": "When you [color=#fa1c03]lose a match[/color], this relic breaks and you can [color=#f5fe05]try again[/color]."
             },
             "spear": {
                 "title": "Heart Spear",
                 "flavor_txt": "Intruder!",
-                "desc":"Reduces your opponents’ power hand limit by [color=#f5fe05]1[/color]."
+                "desc": "Reduces your opponents’ power hand limit by [color=#f5fe05]1[/color]."
             },
             "tea": {
                 "title": "Tea Cup",
                 "flavor_txt": "Tea Time!",
-                "desc":"After playing a power card, get an [color=#f5fe05]extra turn[/color] (once per match). [color=#fa1c03]But reduce your power draw limit by 1[/color]."
+                "desc": "After playing a power card, get an [color=#f5fe05]extra turn[/color] (once per match). [color=#fa1c03]But reduce your power draw limit by 1[/color]."
             },
             "drink_me": {
                 "title": "Bottle",
                 "flavor_txt": "Drink-me",
-                "desc":"Increases the match goal to [color=#f5fe05]24[/color]."
+                "desc": "Increases the match goal to [color=#f5fe05]24[/color]."
             },
             "hat": {
                 "title": "Green Tophat",
                 "flavor_txt": "Am I mad?",
-                "desc":"If drawing a [color=#005eff]number[/color] card exceeds the match goal, the card is [color=#f5fe05]returned[/color] and another one is drawn immediately (once per match)."
+                "desc": "If drawing a [color=#005eff]number[/color] card exceeds the match goal, the card is [color=#f5fe05]returned[/color] and another one is drawn immediately (once per match)."
             },
             "key_1": {
                 "title": "Metal Piece",
                 "flavor_txt": "???",
-                "desc":"Something is missing..."
+                "desc": "Something is missing..."
             },
             "key_2": {
                 "title": "Metal Piece",
                 "flavor_txt": "???",
-                "desc":"It still seems incomplete..."
+                "desc": "It still seems incomplete..."
             },
             "key_3": {
                 "title": "Metal Piece",
                 "flavor_txt": "???",
-                "desc":"What if I put all the parts together?"
+                "desc": "What if I put all the parts together?"
             },
             "key": {
                 "title": "Key",
                 "flavor_txt": "Open Sesame!",
-                "desc":"Unlocks access to a [color=#f5fe05]secret[/color] stage."
+                "desc": "Unlocks access to a [color=#f5fe05]secret[/color] stage."
             },
             "picnic": {
                 "title": "Picnic Basket",
@@ -442,8 +440,8 @@
                 "desc": "[color=#f5fe05]Right-click[/color] this relic to [color=#f5fe05]burn[/color] a random power from your opponent. {0} matches remaning."
             }
         },
-		"powers": {
-			"card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
+        "powers": {
+            "card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
             "card_tip": "This card is not in the main deck...",
             "protect": "[u]Protect[/u]\n\n\nProtect you from loosing any number card for [color=#f5fe05]3[/color] turns.",
             "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck.",
@@ -458,10 +456,9 @@
             "menu_tip": "[u]Select a card to draw:[/u]",
             "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their number cards [color=#fa1c03]ignoring the first hidden card[/color]. Cannot be used in the last turn!",
             "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent. Don't work with power cards.",
-            "clairvoyance" : "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]2[/color] cards from of the number deck.",
+            "clairvoyance": "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]2[/color] cards from of the number deck.",
             "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color] and then [color=#f5fe05]{1}[/color]",
             "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]2[/color] cards..."
-            
         },
         "demo": {
             "end": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, power cards, and extras await you in the full game!",

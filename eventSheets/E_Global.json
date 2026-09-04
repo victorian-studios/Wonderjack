@@ -53,6 +53,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Opt_Debug",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 433484313423866
+		},
+		{
+			"eventType": "variable",
 			"name": "Opt_EasyMath",
 			"type": "boolean",
 			"initialValue": "false",
@@ -684,15 +694,6 @@
 									}
 								},
 								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 533362162569534,
-									"parameters": {
-										"variable": "Opt_FastMode",
-										"value": "true"
-									}
-								},
-								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 775878680068844,
@@ -705,8 +706,81 @@
 							"sid": 249492939993025
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 532096727865038,
+							"parameters": {
+								"variable": "Opt_Debug"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 456640683849431,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 677011130241687,
+									"parameters": {
+										"object": "Toggle_Options_Numbers",
+										"expression": "Toggle_Options_Numbers.id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Toggle_Options_Numbers",
+									"sid": 156068521803595,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Txt_debug2",
+									"sid": 847031284126107,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 664484802264134
+						}
+					]
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 157256726619158
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Txt_debug2",
+					"sid": 816688845785981,
+					"parameters": {
+						"text": "\"fps: \" & fps & \" | cpu: \" & ( round(cpuutilisation * 100) / 100 ) & \" | gpu: \"& (round(gpuutilisation * 100) / 100 ) & \" | vram (images): \" & ImageMemoryUsage"
+					}
+				}
+			],
+			"sid": 887126297207774
 		},
 		{
 			"eventType": "block",
@@ -5356,6 +5430,15 @@
 													}
 												},
 												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 201789118953052,
+													"parameters": {
+														"variable": "Opt_Debug",
+														"value": "true"
+													}
+												},
+												{
 													"id": "set-visible",
 													"objectClass": "Txt_debug2",
 													"sid": 326340604083796,
@@ -5395,6 +5478,15 @@
 													"sid": 401615150180491,
 													"parameters": {
 														"frame-number": "0"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 225895615484977,
+													"parameters": {
+														"variable": "Opt_Debug",
+														"value": "false"
 													}
 												},
 												{

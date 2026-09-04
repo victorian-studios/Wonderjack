@@ -341,7 +341,9 @@
 			"Demo_Fade_Sprite",
 			"Btn_Confirm",
 			"Btn_Deny",
-			"Cursor_Particle"
+			"Cursor_Particle",
+			"Effect_Particle_Candle_Flame_Blue",
+			"Effect_Particle_Candle_Flame_Red"
 		],
 		"subfolders": []
 	},
@@ -516,6 +518,14 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "HURRICANE.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 621377374637694,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": [
@@ -625,6 +635,94 @@
 							"name": "859301__cat-fox_alex__stupid-chime.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 192147443723438,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "BONG Bell Timer Hit Deep 03.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 678020138145532,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "BONG Bell Timer Hit 07.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 227216261550658,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Beeps Oh No 08.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 110375367732695,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Beeps Oh No 09.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 505349277878656,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Failure Descending Bell Run 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 419168510512626,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Tension Builder Chime 04.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 134083769852447,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS BEEPS Multiple Tone Long 06.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 467170610338228,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "NEGATIVE Tension Builder Chime 03.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 523052882315090,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS BEEPS Single Tone Long 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 602183386049009,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Collect Beep 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 700696594561641,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SUCCESS PICKUP Retro Buildup 01.ogg",
+							"type": "audio/ogg; codecs=vorbis",
+							"sid": 174986959485371,
 							"file-info": {
 								"purpose": "none"
 							}
@@ -939,9 +1037,7 @@
 		}
 	},
 	"timelines": {
-		"items": [
-			"Linha do tempo 1"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [],
