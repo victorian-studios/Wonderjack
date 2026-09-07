@@ -529,6 +529,23 @@
 					}
 				},
 				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 102957116646621,
+					"parameters": {
+						"layer": "\"Turn\"",
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text_Talk",
+					"sid": 844067012631047,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
 					"id": "set-group-active",
 					"objectClass": "System",
 					"sid": 401644508355271,
@@ -10362,11 +10379,11 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 528405091903175,
+											"sid": 668622884538332,
 											"parameters": {
 												"object-to-create": "Icon_Protect",
 												"layer": "\"Game\"",
-												"x": "1586",
+												"x": "1660",
 												"y": "940",
 												"create-hierarchy": false,
 												"template-name": "\"\""
@@ -11989,7 +12006,7 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 540543675516858,
+													"sid": 547956245682506,
 													"parameters": {
 														"object-to-create": "Icon_Hand_Point",
 														"layer": "\"HUD\"",
@@ -12016,6 +12033,11 @@
 														"animation": "EnemyName",
 														"from": "beginning"
 													}
+												},
+												{
+													"id": "move-to-bottom",
+													"objectClass": "Icon_Hand_Point",
+													"sid": 946322441655786
 												}
 											],
 											"sid": 641263747934190
@@ -14385,11 +14407,11 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 153574843408252,
+											"sid": 613612887920508,
 											"parameters": {
 												"object-to-create": "Icon_Hidden_Card",
 												"layer": "\"Game\"",
-												"x": "1748",
+												"x": "1820",
 												"y": "940",
 												"create-hierarchy": false,
 												"template-name": "\"\""
@@ -29071,24 +29093,6 @@
 													"objectClass": "Bkg_Power_Txt",
 													"sid": 371823189967394,
 													"behaviorType": "Fade"
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 429747057231568,
-													"parameters": {
-														"seconds": "0.1",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-layer-visible",
-													"objectClass": "System",
-													"sid": 120090193473329,
-													"parameters": {
-														"layer": "\"Power_Player\"",
-														"visibility": "invisible"
-													}
 												}
 											],
 											"sid": 891830231561851
@@ -29565,15 +29569,6 @@
 											}
 										},
 										{
-											"id": "layer-is-visible",
-											"objectClass": "System",
-											"sid": 191203713910310,
-											"parameters": {
-												"layer": "\"Talking\""
-											},
-											"isInverted": true
-										},
-										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
 											"sid": 608866119132766,
@@ -29592,6 +29587,15 @@
 												"comparison": 1,
 												"value": "13"
 											}
+										},
+										{
+											"id": "layer-is-visible",
+											"objectClass": "System",
+											"sid": 369507193457333,
+											"parameters": {
+												"layer": "\"Talking\""
+											},
+											"isInverted": true
 										},
 										{
 											"id": "layer-is-visible",

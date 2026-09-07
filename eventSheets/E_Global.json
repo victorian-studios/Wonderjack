@@ -1791,6 +1791,170 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"functionName": "Open_Pause_Screen",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "configuracoes",
+									"sid": 828471298208653,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "0.15",
+										"type": "once",
+										"tag": "\"Lock\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 236425946553623,
+									"parameters": {
+										"audio-file": {
+											"path": "button_select_sfx"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 479456970432968,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 697363650271462,
+									"parameters": {
+										"layer": "\"Translation\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 177318814889946,
+									"parameters": {
+										"layer": "\"Save\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 483374722482753,
+									"parameters": {
+										"layer": "\"Save_Warning\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_Particle",
+									"sid": 837260620862141,
+									"parameters": {
+										"x": "-99",
+										"y": "-99"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 728622947813044,
+									"parameters": {
+										"time-scale": "0"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 700523834326136,
+									"parameters": {
+										"object": "Cursor_Particle",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_Particle",
+									"sid": 197007636911447,
+									"parameters": {
+										"x": "-99",
+										"y": "-99"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 958555803952875,
+									"parameters": {
+										"object": "demo_end",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 878880048782559,
+									"parameters": {
+										"object": "Cursors",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 577127811783860,
+									"parameters": {
+										"object": "configuracoes",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-object-time-scale",
+									"objectClass": "System",
+									"sid": 165660924943964,
+									"parameters": {
+										"object": "Text_Static_Generic",
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 717979855423430,
+									"parameters": {
+										"group-name": "\"Language\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 438728141008348,
+									"parameters": {
+										"group-name": "\"Player's Turn / Actions\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 282989022919816
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -1845,164 +2009,8 @@
 									],
 									"actions": [
 										{
-											"id": "start-timer",
-											"objectClass": "configuracoes",
-											"sid": 941575848735546,
-											"behaviorType": "Timer",
-											"parameters": {
-												"duration": "0.15",
-												"type": "once",
-												"tag": "\"Lock\""
-											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 392453639828942,
-											"parameters": {
-												"audio-file": {
-													"path": "button_select_sfx"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 425222798737124,
-											"parameters": {
-												"layer": "\"Pause\"",
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 776368567035016,
-											"parameters": {
-												"layer": "\"Translation\"",
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 904250399188131,
-											"parameters": {
-												"layer": "\"Save\"",
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 301688405767230,
-											"parameters": {
-												"layer": "\"Save_Warning\"",
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Cursor_Particle",
-											"sid": 997274561974789,
-											"parameters": {
-												"x": "-99",
-												"y": "-99"
-											}
-										},
-										{
-											"id": "set-time-scale",
-											"objectClass": "System",
-											"sid": 423082663245808,
-											"parameters": {
-												"time-scale": "0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 691948700784127,
-											"parameters": {
-												"object": "Cursor_Particle",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Cursor_Particle",
-											"sid": 375032101666878,
-											"parameters": {
-												"x": "-99",
-												"y": "-99"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 424013788893823,
-											"parameters": {
-												"object": "demo_end",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 553078872847507,
-											"parameters": {
-												"object": "Cursors",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 367912518346458,
-											"parameters": {
-												"object": "configuracoes",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 601070888894702,
-											"disabled": true,
-											"parameters": {
-												"object": "Btn_Options",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 573038172751234,
-											"parameters": {
-												"object": "Text_Static_Generic",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 568610221580093,
-											"parameters": {
-												"group-name": "\"Language\"",
-												"state": "activated"
-											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 752422768114101,
-											"parameters": {
-												"group-name": "\"Player's Turn / Actions\"",
-												"state": "deactivated"
-											}
+											"callFunction": "Open_Pause_Screen",
+											"sid": 340764926775601
 										}
 									],
 									"sid": 135572783524456
@@ -2021,164 +2029,8 @@
 									],
 									"actions": [
 										{
-											"id": "start-timer",
-											"objectClass": "configuracoes",
-											"sid": 464179818866284,
-											"behaviorType": "Timer",
-											"parameters": {
-												"duration": "0.15",
-												"type": "once",
-												"tag": "\"Lock\""
-											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 987325697507387,
-											"parameters": {
-												"audio-file": {
-													"path": "button_select_sfx"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 254006225841952,
-											"parameters": {
-												"layer": "\"Pause\"",
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 118518423400082,
-											"parameters": {
-												"layer": "\"Translation\"",
-												"visibility": "visible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 832857862019457,
-											"parameters": {
-												"layer": "\"Save\"",
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 179985753613823,
-											"parameters": {
-												"layer": "\"Save_Warning\"",
-												"visibility": "invisible"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Cursor_Particle",
-											"sid": 745998296152148,
-											"parameters": {
-												"x": "-99",
-												"y": "-99"
-											}
-										},
-										{
-											"id": "set-time-scale",
-											"objectClass": "System",
-											"sid": 600720522012927,
-											"parameters": {
-												"time-scale": "0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 695272645616401,
-											"parameters": {
-												"object": "Cursor_Particle",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-position",
-											"objectClass": "Cursor_Particle",
-											"sid": 925638966944681,
-											"parameters": {
-												"x": "-99",
-												"y": "-99"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 840749837777765,
-											"parameters": {
-												"object": "demo_end",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 577029008685561,
-											"parameters": {
-												"object": "Cursors",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 628770392472461,
-											"parameters": {
-												"object": "configuracoes",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 457014895880767,
-											"disabled": true,
-											"parameters": {
-												"object": "Btn_Options",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-object-time-scale",
-											"objectClass": "System",
-											"sid": 163255704208061,
-											"parameters": {
-												"object": "Text_Static_Generic",
-												"time-scale": "1.0"
-											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 220278988633880,
-											"parameters": {
-												"group-name": "\"Language\"",
-												"state": "activated"
-											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 667656479423199,
-											"parameters": {
-												"group-name": "\"Player's Turn / Actions\"",
-												"state": "deactivated"
-											}
+											"callFunction": "Open_Pause_Screen",
+											"sid": 582509910285752
 										}
 									],
 									"sid": 845957921945704
@@ -5039,6 +4891,53 @@
 									"id": "clear-storage",
 									"objectClass": "LocalStorage",
 									"sid": 481132107147514
+								},
+								{
+									"id": "stop-all",
+									"objectClass": "Audio",
+									"sid": 212644132075454
+								},
+								{
+									"id": "reset-global-variables",
+									"objectClass": "System",
+									"sid": 214668078139876,
+									"parameters": {
+										"reset-static": true
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 523639358664932,
+									"parameters": {
+										"layer": "\"Save_Warning\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 221740096427857,
+									"parameters": {
+										"time-scale": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 979453943669633,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 428680076053385,
+									"parameters": {
+										"layout": "Intro"
+									}
 								}
 							],
 							"sid": 768367255298705
@@ -5121,49 +5020,6 @@
 									"sid": 222509668301136
 								}
 							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-storage-cleared",
-									"objectClass": "LocalStorage",
-									"sid": 734568842961889
-								}
-							],
-							"actions": [
-								{
-									"id": "reset-global-variables",
-									"objectClass": "System",
-									"sid": 549313483524357,
-									"parameters": {
-										"reset-static": true
-									}
-								},
-								{
-									"id": "stop-all",
-									"objectClass": "Audio",
-									"sid": 837251945148019
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 527855562634363,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 514543333678997,
-									"parameters": {
-										"layout": "Intro"
-									}
-								}
-							],
-							"sid": 259549091051303
 						}
 					],
 					"sid": 383220876513421

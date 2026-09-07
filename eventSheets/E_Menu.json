@@ -177,6 +177,41 @@
 						"ping-pong": "no",
 						"repeat-count": "1"
 					}
+				},
+				{
+					"id": "check-dlc-installed",
+					"objectClass": "Steamworks",
+					"sid": 199956421566873,
+					"parameters": {
+						"app-ids": "3186200"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 424360500468504,
+					"parameters": {
+						"layer": "\"Pause\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 429726271508821,
+					"parameters": {
+						"layer": "\"Main\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 333689755862930,
+					"parameters": {
+						"type": "log",
+						"message": "\" I I I I I I I  M E N U  I I I I I I I\""
+					}
 				}
 			],
 			"sid": 156210455576702,
@@ -986,31 +1021,17 @@
 							],
 							"actions": [
 								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 641733457720429,
-									"parameters": {
-										"layer": "\"Pause\"",
-										"visibility": "visible"
-									}
-								},
-								{
 									"id": "set-layer-interactive",
 									"objectClass": "System",
-									"sid": 146611300702868,
+									"sid": 915289017642961,
 									"parameters": {
 										"layer": "\"Main\"",
 										"interactive": false
 									}
 								},
 								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 506299588219388,
-									"parameters": {
-										"group-name": "\"Language\"",
-										"state": "activated"
-									}
+									"callFunction": "Open_Pause_Screen",
+									"sid": 419057947708548
 								}
 							],
 							"sid": 560957623784396
@@ -2919,9 +2940,9 @@
 				{
 					"id": "go-to-url",
 					"objectClass": "Browser",
-					"sid": 297507486997645,
+					"sid": 882706278359719,
 					"parameters": {
-						"url": "\"https://discord.gg/7EeMnayDCv\"",
+						"url": "\"https://discord.gg/Qvhqk7TmfE\"",
 						"target": "parent"
 					}
 				}
@@ -4972,6 +4993,152 @@
 					"sid": 797509039956671
 				},
 				{
+					"eventType": "comment",
+					"text": "Compatibilidade com outros jogos"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-dlc-installed-check-complete",
+							"objectClass": "Steamworks",
+							"sid": 400711296192128
+						}
+					],
+					"actions": [],
+					"sid": 601435633566194,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-dlc-installed",
+									"objectClass": "Steamworks",
+									"sid": 979154986431831,
+									"parameters": {
+										"app-id": "3186200"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 436078668998265,
+									"parameters": {
+										"type": "log",
+										"message": "\"Jogo Survivor Story identificado no usuário atual\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 878378676047714,
+									"parameters": {
+										"audio-file": {
+											"path": "bell"
+										},
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 755636099604361
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-dlc-installed",
+									"objectClass": "Steamworks",
+									"sid": 996713208351109,
+									"parameters": {
+										"app-id": "3805000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 583161758466718,
+									"parameters": {
+										"type": "log",
+										"message": "\"Jogo Steam & Clicks identificado no usuário atual\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 305359504969197,
+									"parameters": {
+										"audio-file": {
+											"path": "card-deck-shuffle-1"
+										},
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 338364964802404
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 128424383946340
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 219921760123275,
+									"parameters": {
+										"audio-file": {
+											"path": "494768__alderman2k__error"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 948092323953935,
+									"parameters": {
+										"seconds": "1.0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 374357425290293,
+									"parameters": {
+										"audio-file": {
+											"path": "494768__alderman2k__error"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 259136439207228
+						}
+					]
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -4997,33 +5164,6 @@
 						}
 					],
 					"sid": 916587240983856
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 819981578559196
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 309184258583082
-						}
-					],
-					"actions": [
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 640327387662281,
-							"parameters": {
-								"type": "log",
-								"message": "\"Steamworks deu erro\""
-							}
-						}
-					],
-					"sid": 770899147555974
 				}
 			],
 			"sid": 428121772240145

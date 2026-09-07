@@ -6,8 +6,8 @@
 		"type": "Steamworks",
 		"properties": {
 			"app-id": "4922040",
-			"development-mode": false,
-			"enable-overlay": false
+			"development-mode": true,
+			"enable-overlay": true
 		},
 		"uid": 270,
 		"sid": 382242331871051,

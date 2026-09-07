@@ -343,7 +343,10 @@
 			"Btn_Deny",
 			"Cursor_Particle",
 			"Effect_Particle_Candle_Flame_Blue",
-			"Effect_Particle_Candle_Flame_Red"
+			"Effect_Particle_Candle_Flame_Red",
+			"Bkg_placa",
+			"blim",
+			"Sprite"
 		],
 		"subfolders": []
 	},

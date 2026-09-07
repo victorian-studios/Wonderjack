@@ -667,6 +667,20 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 6,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
 						}
 					},
 					"showing": true,
@@ -6193,9 +6207,9 @@
 					"locked": false,
 					"world": {
 						"x": 643,
-						"y": 427,
+						"y": 438.20929839391374,
 						"width": 630,
-						"height": 227.20929839391374,
+						"height": 216,
 						"originX": 0,
 						"originY": 0,
 						"color": [
