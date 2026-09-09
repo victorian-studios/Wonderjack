@@ -346,7 +346,8 @@
 			"Effect_Particle_Candle_Flame_Red",
 			"Bkg_placa",
 			"blim",
-			"Sprite"
+			"Sprite",
+			"Card_Pos"
 		],
 		"subfolders": []
 	},
@@ -1031,6 +1032,14 @@
 					"name": "pt-BR.json",
 					"type": "application/json",
 					"sid": 842194742889057,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Card Positions.json",
+					"type": "application/json",
+					"sid": 680139864020080,
 					"file-info": {
 						"purpose": "none"
 					}

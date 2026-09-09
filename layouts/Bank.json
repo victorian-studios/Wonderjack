@@ -2998,7 +2998,7 @@
 							}
 						},
 						"Swirl": {
-							"isEnabled": false,
+							"isEnabled": true,
 							"parameters": {
 								"radius": 0,
 								"angle": 1.7

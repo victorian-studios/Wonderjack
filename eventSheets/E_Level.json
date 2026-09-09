@@ -3806,12 +3806,31 @@
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
 											"sid": 593202131133550,
+											"disabled": true,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
 												"end-y": "Table_Player.Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 550588192068351,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"move_hidden\"",
+												"property": "position",
+												"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
+												"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
 												"time": "0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
@@ -3959,12 +3978,31 @@
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
 											"sid": 678275489765180,
+											"disabled": true,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
 												"end-y": "Table_Player.Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 570331540085747,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"move_hidden\"",
+												"property": "position",
+												"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
+												"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
 												"time": "0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
@@ -4155,12 +4193,31 @@
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
 											"sid": 772442420779699,
+											"disabled": true,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move\"",
 												"property": "position",
 												"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
 												"end-y": "Table_Player.Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 873181209402060,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"move_hidden\"",
+												"property": "position",
+												"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
+												"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
 												"time": "0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
@@ -4383,12 +4440,31 @@
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
 															"sid": 594541651585759,
+															"disabled": true,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move\"",
 																"property": "position",
 																"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
 																"end-y": "Table_Player.Y",
+																"time": "0.5",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "Card_Numb",
+															"sid": 611540945280289,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"move_hidden\"",
+																"property": "position",
+																"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
+																"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -4800,12 +4876,31 @@
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
 															"sid": 464269641014629,
+															"disabled": true,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move\"",
 																"property": "position",
 																"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
 																"end-y": "Table_Player.Y",
+																"time": "0.5",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "Card_Numb",
+															"sid": 546965362387877,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"move_hidden\"",
+																"property": "position",
+																"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
+																"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -5193,12 +5288,31 @@
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
 											"sid": 308894933814417,
+											"disabled": true,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move\"",
 												"property": "position",
 												"end-x": "Table_CPU.X + ( 145* Table_CPU.Cards )",
 												"end-y": "Table_CPU.Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 656697387393611,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"move_hidden\"",
+												"property": "position",
+												"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
+												"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
 												"time": "0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
@@ -5376,12 +5490,31 @@
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
 											"sid": 689474459251502,
+											"disabled": true,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move\"",
 												"property": "position",
 												"end-x": "Table_CPU.X + ( 145* Table_CPU.Cards )",
 												"end-y": "Table_CPU.Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 726032965733296,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"move_hidden\"",
+												"property": "position",
+												"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
+												"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
 												"time": "0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
@@ -5567,12 +5700,31 @@
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
 											"sid": 317274942017703,
+											"disabled": true,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move\"",
 												"property": "position",
 												"end-x": "Table_CPU.X + ( 145* Table_CPU.Cards )",
 												"end-y": "Table_CPU.Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 540922801512089,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"move_hidden\"",
+												"property": "position",
+												"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
+												"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
 												"time": "0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
@@ -5762,12 +5914,31 @@
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
 															"sid": 725539949655768,
+															"disabled": true,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move\"",
 																"property": "position",
 																"end-x": "Table_CPU.X + ( 145 * Table_CPU.Cards )",
 																"end-y": "Table_CPU.Y",
+																"time": "0.5",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "Card_Numb",
+															"sid": 145324761772720,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"move_hidden\"",
+																"property": "position",
+																"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
+																"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -6192,12 +6363,31 @@
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
 															"sid": 130096022703455,
+															"disabled": true,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move\"",
 																"property": "position",
 																"end-x": "Table_CPU.X + ( 145 * Table_CPU.Cards )",
 																"end-y": "Table_CPU.Y",
+																"time": "0.5",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "Card_Numb",
+															"sid": 970877791249162,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"move_hidden\"",
+																"property": "position",
+																"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
+																"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -8576,10 +8766,10 @@
 								{
 									"id": "compare-x",
 									"objectClass": "Card_Numb",
-									"sid": 186969261231538,
+									"sid": 457561521918131,
 									"parameters": {
 										"comparison": 3,
-										"x-co-ordinate": "969"
+										"x-co-ordinate": "950"
 									}
 								}
 							],
@@ -8602,10 +8792,10 @@
 								{
 									"id": "compare-x",
 									"objectClass": "Card_Numb",
-									"sid": 267294143401446,
+									"sid": 580122056811890,
 									"parameters": {
 										"comparison": 4,
-										"x-co-ordinate": "969"
+										"x-co-ordinate": "950"
 									}
 								},
 								{
@@ -8669,10 +8859,6 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "comment",
-					"text": "FAZER O FURACÃO DEVOLVER TODAS AS CARTAS MENOS AS OCULTAS ! ! !\n\n\nFAZER O FURACÃO DEVOLVER TODAS AS CARTAS MENOS AS OCULTAS ! ! !\n"
-				},
 				{
 					"functionName": "Reset Power Deck",
 					"functionDescription": "",
@@ -13664,6 +13850,24 @@
 																"instance-variable": "Original_Hidden"
 															},
 															"isInverted": true
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Card_Numb",
+															"sid": 511524731026608,
+															"parameters": {
+																"instance-variable": "Enemy_Hidden"
+															},
+															"isInverted": true
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Card_Numb",
+															"sid": 307137945567652,
+															"parameters": {
+																"instance-variable": "Player_Hidden"
+															},
+															"isInverted": true
 														}
 													],
 													"actions": [],
@@ -13824,6 +14028,15 @@
 															"sid": 897503520591236,
 															"parameters": {
 																"instance-variable": "Original_Hidden"
+															},
+															"isInverted": true
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Card_Numb",
+															"sid": 369161734513549,
+															"parameters": {
+																"instance-variable": "Enemy_Hidden"
 															},
 															"isInverted": true
 														}
@@ -14036,6 +14249,15 @@
 															"sid": 655617241013935,
 															"parameters": {
 																"instance-variable": "Original_Hidden"
+															},
+															"isInverted": true
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Card_Numb",
+															"sid": 767514118118334,
+															"parameters": {
+																"instance-variable": "Player_Hidden"
 															},
 															"isInverted": true
 														}

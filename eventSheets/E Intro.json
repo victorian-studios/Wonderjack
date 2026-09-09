@@ -78,6 +78,17 @@
 					}
 				},
 				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 681475333327079,
+					"parameters": {
+						"tag": "\"card_pos\"",
+						"file": {
+							"path": "Card Positions.json"
+						}
+					}
+				},
+				{
 					"id": "preload",
 					"objectClass": "Audio",
 					"sid": 709595316801863,
@@ -485,7 +496,7 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 566499498508575,
+					"sid": 486365670098191,
 					"parameters": {
 						"variable": "Loaded_AJAX",
 						"comparison": 5,
@@ -826,6 +837,39 @@
 				}
 			],
 			"sid": 534584866449232
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 128320422426815,
+					"parameters": {
+						"tag": "\"card_pos\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "Card_Pos",
+					"sid": 339253443638848,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 944074409357410,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 149951770329315
 		},
 		{
 			"eventType": "block",

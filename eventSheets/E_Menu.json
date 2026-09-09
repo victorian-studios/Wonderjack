@@ -4001,16 +4001,6 @@
 			"sid": 443576521096051
 		},
 		{
-			"eventType": "comment",
-			"text": "TESTAR SE ESTÁ FUNCIONANDO COM O STEAMWORKS ! ! !",
-			"text-color": [
-				1,
-				0,
-				0,
-				1
-			]
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Ad Banner",
@@ -4994,7 +4984,19 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Compatibilidade com outros jogos"
+					"text": "Compatibilidade com outros jogos- APARENTEMENTE FUNCIONA MESMO ! ! !",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.0196078431372549,
+						1,
+						0.08627450980392157,
+						1
+					]
 				},
 				{
 					"eventType": "block",
@@ -5007,6 +5009,7 @@
 					],
 					"actions": [],
 					"sid": 601435633566194,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -5045,7 +5048,8 @@
 									}
 								}
 							],
-							"sid": 755636099604361
+							"sid": 755636099604361,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -5084,7 +5088,8 @@
 									}
 								}
 							],
-							"sid": 338364964802404
+							"sid": 338364964802404,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -5134,7 +5139,8 @@
 									}
 								}
 							],
-							"sid": 259136439207228
+							"sid": 259136439207228,
+							"disabled": true
 						}
 					]
 				},
