@@ -277,6 +277,158 @@
 				}
 			],
 			"sid": 849824271965112
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 530072594209939,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Next"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 533603106367212,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 534477955129081,
+							"parameters": {
+								"first-value": "Btn_Next.Angle",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "Btn_Next",
+							"sid": 280666687133562,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"left\"",
+								"property": "offsetX",
+								"end-value": "143",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Btn_Next",
+							"sid": 630962354043493,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"left\"",
+								"property": "offsetAngle",
+								"end-value": "180",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Camera",
+							"sid": 399079963587759,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "2880",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 974323187007600
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 797675406695219
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "Btn_Next",
+							"sid": 517958674120209,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"right\"",
+								"property": "offsetX",
+								"end-value": "1780",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Btn_Next",
+							"sid": 853793263247127,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"left\"",
+								"property": "offsetAngle",
+								"end-value": "0",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Camera",
+							"sid": 792547340691212,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "960",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 307375125614702
+				}
+			]
 		}
 	],
 	"sid": 530830677248360

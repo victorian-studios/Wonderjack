@@ -26,7 +26,7 @@
 						"tag": ""
 					},
 					{
-						"width": 1920,
+						"width": 3840,
 						"height": 1080,
 						"originX": 0,
 						"originY": 0,
@@ -34,7 +34,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9412800,
+						"imageSpriteId": 8375400,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

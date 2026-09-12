@@ -434,39 +434,6 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "Sprite",
-							"properties": {
-								"initially-visible": false,
-								"initial-animation": "Animation 1",
-								"initial-frame": 1,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 378,
-							"sid": 770277424810132,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 960,
-								"y": 832,
-								"width": 1258,
-								"height": 343,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"z": 0,
-								"angle": 0
-							}
-						},
-						{
 							"type": "Deck_Numb_Sprite",
 							"properties": {
 								"initially-visible": true,
@@ -933,9 +900,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 466,
+						"x": 410,
 						"y": 915,
-						"width": 1086,
+						"width": 1142,
 						"height": 148,
 						"originX": 0,
 						"originY": 0.5,
@@ -973,7 +940,7 @@
 					"world": {
 						"x": 549,
 						"y": 707,
-						"width": 911,
+						"width": 846,
 						"height": 129,
 						"originX": 0,
 						"originY": 0.5,
@@ -2924,8 +2891,8 @@
 							"world": {
 								"x": 704,
 								"y": 450,
-								"width": 249.375,
-								"height": 250.00000000000003,
+								"width": 160,
+								"height": 180,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2943,7 +2910,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 2,
+								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -2990,8 +2957,8 @@
 							"world": {
 								"x": 974,
 								"y": 450,
-								"width": 249.375,
-								"height": 250.00000000000003,
+								"width": 160,
+								"height": 180,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -3009,7 +2976,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 3,
+								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3056,8 +3023,8 @@
 							"world": {
 								"x": 1246,
 								"y": 450,
-								"width": 249.375,
-								"height": 250.00000000000003,
+								"width": 160,
+								"height": 180,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -7303,406 +7270,26 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Card_Numb",
+					"type": "Sprite",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front Old",
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
 						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 234,
-					"sid": 948203807388359,
+					"uid": 378,
+					"sid": 770277424810132,
 					"tags": "",
-					"instanceVariables": {
-						"myID": 999,
-						"Original_Hidden": false,
-						"Player_Hidden": false,
-						"Enemy_Hidden": false,
-						"PlayerSide": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
+					"instanceVariables": {},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 844,
-						"y": 919,
-						"width": 162.5572268745068,
-						"height": 151.02834553588931,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Card_Numb",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front Old",
-						"initial-frame": 2,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 235,
-					"sid": 578680329106612,
-					"tags": "",
-					"instanceVariables": {
-						"myID": 999,
-						"Original_Hidden": false,
-						"Player_Hidden": false,
-						"Enemy_Hidden": false,
-						"PlayerSide": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1037,
-						"y": 916,
-						"width": 162.5572268745068,
-						"height": 151.02834553588931,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Card_Numb",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front Old",
-						"initial-frame": 3,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 236,
-					"sid": 635587470424042,
-					"tags": "",
-					"instanceVariables": {
-						"myID": 999,
-						"Original_Hidden": false,
-						"Player_Hidden": false,
-						"Enemy_Hidden": false,
-						"PlayerSide": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1225,
-						"y": 917,
-						"width": 162.5572268745068,
-						"height": 151.02834553588931,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Card_Numb",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front Old",
-						"initial-frame": 1,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 351,
-					"sid": 452290540706589,
-					"tags": "",
-					"instanceVariables": {
-						"myID": 999,
-						"Original_Hidden": false,
-						"Player_Hidden": false,
-						"Enemy_Hidden": false,
-						"PlayerSide": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 653,
-						"y": 919,
-						"width": 162.5572268745068,
-						"height": 151.02834553588931,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Card_Numb",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front Old",
-						"initial-frame": 1,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 352,
-					"sid": 725849702013609,
-					"tags": "",
-					"instanceVariables": {
-						"myID": 999,
-						"Original_Hidden": false,
-						"Player_Hidden": false,
-						"Enemy_Hidden": false,
-						"PlayerSide": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 467,
-						"y": 917,
-						"width": 162.5572268745068,
-						"height": 151.02834553588931,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Card_Numb",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front Old",
-						"initial-frame": 3,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 353,
-					"sid": 585061561124204,
-					"tags": "",
-					"instanceVariables": {
-						"myID": 999,
-						"Original_Hidden": false,
-						"Player_Hidden": false,
-						"Enemy_Hidden": false,
-						"PlayerSide": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1414,
-						"y": 913,
-						"width": 162.5572268745068,
-						"height": 151.02834553588931,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Card_Numb",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front Old",
-						"initial-frame": 3,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 354,
-					"sid": 612544868119795,
-					"tags": "",
-					"instanceVariables": {
-						"myID": 999,
-						"Original_Hidden": false,
-						"Player_Hidden": false,
-						"Enemy_Hidden": false,
-						"PlayerSide": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1599,
-						"y": 912,
-						"width": 162.5572268745068,
-						"height": 151.02834553588931,
+						"x": 960,
+						"y": 832,
+						"width": 1258,
+						"height": 343,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

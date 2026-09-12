@@ -347,7 +347,8 @@
 			"Bkg_placa",
 			"blim",
 			"Sprite",
-			"Card_Pos"
+			"Card_Pos",
+			"Btn_Next"
 		],
 		"subfolders": []
 	},

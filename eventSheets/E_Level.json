@@ -3776,15 +3776,6 @@
 											"sid": 725883139140514
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 650328678433578,
-											"parameters": {
-												"seconds": "0.01",
-												"use-timescale": true
-											}
-										},
-										{
 											"id": "set-instvar-value",
 											"objectClass": "Card_Numb",
 											"sid": 553532838397176,
@@ -3794,31 +3785,20 @@
 											}
 										},
 										{
-											"id": "set-size",
+											"id": "set-scale",
 											"objectClass": "Card_Numb",
-											"sid": 679027149037349,
+											"sid": 376662580875440,
 											"parameters": {
-												"width": "250",
-												"height": "250"
+												"scale": "1"
 											}
 										},
 										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 593202131133550,
-											"disabled": true,
-											"behaviorType": "Tween",
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 410821519921742,
 											"parameters": {
-												"tags": "\"move_hidden\"",
-												"property": "position",
-												"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
-												"end-y": "Table_Player.Y",
-												"time": "0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
+												"seconds": "0.01",
+												"use-timescale": true
 											}
 										},
 										{
@@ -3925,6 +3905,14 @@
 											}
 										},
 										{
+											"id": "set-animation-frame",
+											"objectClass": "Card_Numb",
+											"sid": 592225118893456,
+											"parameters": {
+												"frame-number": "Table_Player.Cards + 1"
+											}
+										},
+										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Card_Numb",
 											"sid": 371601529267614,
@@ -3948,15 +3936,6 @@
 											"sid": 341380591403916
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 405586769806803,
-											"parameters": {
-												"seconds": "0.01",
-												"use-timescale": true
-											}
-										},
-										{
 											"id": "set-instvar-value",
 											"objectClass": "Card_Numb",
 											"sid": 857134972198704,
@@ -3966,31 +3945,20 @@
 											}
 										},
 										{
-											"id": "set-size",
+											"id": "set-scale",
 											"objectClass": "Card_Numb",
-											"sid": 143333272674376,
+											"sid": 489639204943430,
 											"parameters": {
-												"width": "250",
-												"height": "250"
+												"scale": "1"
 											}
 										},
 										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 678275489765180,
-											"disabled": true,
-											"behaviorType": "Tween",
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 418493505702989,
 											"parameters": {
-												"tags": "\"move_hidden\"",
-												"property": "position",
-												"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
-												"end-y": "Table_Player.Y",
-												"time": "0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
+												"seconds": "0.01",
+												"use-timescale": true
 											}
 										},
 										{
@@ -4132,18 +4100,18 @@
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 554148004696894,
+											"id": "set-animation",
+											"objectClass": "Card_Numb",
+											"sid": 539987847473404,
 											"parameters": {
-												"seconds": "0.01",
-												"use-timescale": true
+												"animation": "\"Front_\" & Table_Player.Cards + 1",
+												"from": "beginning"
 											}
 										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Card_Numb",
-											"sid": 121635792765210,
+											"sid": 948271287540084,
 											"parameters": {
 												"instance-variable": "myID",
 												"value": "A_Deck_Numb.At(0,0)"
@@ -4152,7 +4120,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Card_Numb",
-											"sid": 982437613252757,
+											"sid": 406042791911767,
 											"parameters": {
 												"instance-variable": "Original_Hidden",
 												"value": "false"
@@ -4161,24 +4129,14 @@
 										{
 											"id": "move-to-bottom",
 											"objectClass": "Card_Numb",
-											"sid": 221067028797211
+											"sid": 466638616336330
 										},
 										{
-											"id": "set-size",
+											"id": "set-scale",
 											"objectClass": "Card_Numb",
-											"sid": 481649448767861,
+											"sid": 611067196527233,
 											"parameters": {
-												"width": "250",
-												"height": "250"
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Card_Numb",
-											"sid": 230020995752512,
-											"parameters": {
-												"animation": "\"Front\"",
-												"from": "beginning"
+												"scale": "1"
 											}
 										},
 										{
@@ -4190,22 +4148,12 @@
 											}
 										},
 										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 772442420779699,
-											"disabled": true,
-											"behaviorType": "Tween",
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 993592141086805,
 											"parameters": {
-												"tags": "\"move\"",
-												"property": "position",
-												"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
-												"end-y": "Table_Player.Y",
-												"time": "0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
+												"seconds": "0.01",
+												"use-timescale": true
 											}
 										},
 										{
@@ -4379,12 +4327,21 @@
 															}
 														},
 														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 169195367999669,
+															"id": "set-animation",
+															"objectClass": "Card_Numb",
+															"sid": 503321804100377,
 															"parameters": {
-																"seconds": "0.01",
-																"use-timescale": true
+																"animation": "\"Front_\" & Table_Player.Cards + 1",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Card_Numb",
+															"sid": 609935424826625,
+															"parameters": {
+																"instance-variable": "Original_Hidden",
+																"value": "false"
 															}
 														},
 														{
@@ -4397,62 +4354,33 @@
 															}
 														},
 														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Card_Numb",
-															"sid": 242683583254561,
-															"parameters": {
-																"instance-variable": "Original_Hidden",
-																"value": "false"
-															}
-														},
-														{
-															"id": "move-to-bottom",
-															"objectClass": "Card_Numb",
-															"sid": 358746198922092
-														},
-														{
-															"id": "set-size",
-															"objectClass": "Card_Numb",
-															"sid": 642344038883248,
-															"parameters": {
-																"width": "250",
-																"height": "250"
-															}
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Card_Numb",
-															"sid": 324909874770524,
-															"parameters": {
-																"animation": "\"Front\"",
-																"from": "beginning"
-															}
-														},
-														{
 															"id": "set-animation-frame",
 															"objectClass": "Card_Numb",
-															"sid": 458190430530890,
+															"sid": 342142557332990,
 															"parameters": {
 																"frame-number": "Self.myID"
 															}
 														},
 														{
-															"id": "tween-two-properties",
+															"id": "move-to-bottom",
 															"objectClass": "Card_Numb",
-															"sid": 594541651585759,
-															"disabled": true,
-															"behaviorType": "Tween",
+															"sid": 719152650968444
+														},
+														{
+															"id": "set-scale",
+															"objectClass": "Card_Numb",
+															"sid": 200475598959352,
 															"parameters": {
-																"tags": "\"move\"",
-																"property": "position",
-																"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
-																"end-y": "Table_Player.Y",
-																"time": "0.5",
-																"ease": "default",
-																"destroy-on-complete": "no",
-																"loop": "no",
-																"ping-pong": "no",
-																"repeat-count": "1"
+																"scale": "1"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 957394769111770,
+															"parameters": {
+																"seconds": "0.01",
+																"use-timescale": true
 															}
 														},
 														{
@@ -4806,12 +4734,12 @@
 															}
 														},
 														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 828039307597181,
+															"id": "set-animation",
+															"objectClass": "Card_Numb",
+															"sid": 546248235645530,
 															"parameters": {
-																"seconds": "0.01",
-																"use-timescale": true
+																"animation": "\"Back\"",
+																"from": "beginning"
 															}
 														},
 														{
@@ -4824,18 +4752,9 @@
 															}
 														},
 														{
-															"id": "set-animation",
-															"objectClass": "Card_Numb",
-															"sid": 135809647589850,
-															"parameters": {
-																"animation": "\"Back\"",
-																"from": "beginning"
-															}
-														},
-														{
 															"id": "set-animation-frame",
 															"objectClass": "Card_Numb",
-															"sid": 395313217703895,
+															"sid": 183193563560906,
 															"parameters": {
 																"frame-number": "Self.myID"
 															}
@@ -4850,6 +4769,15 @@
 															}
 														},
 														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 182962635315438,
+															"parameters": {
+																"seconds": "0.01",
+																"use-timescale": true
+															}
+														},
+														{
 															"id": "set-boolean-instvar",
 															"objectClass": "Card_Numb",
 															"sid": 187965102400226,
@@ -4861,34 +4789,14 @@
 														{
 															"id": "move-to-bottom",
 															"objectClass": "Card_Numb",
-															"sid": 717178844207427
+															"sid": 518250625711511
 														},
 														{
-															"id": "set-size",
+															"id": "set-scale",
 															"objectClass": "Card_Numb",
-															"sid": 902595769128276,
+															"sid": 129367527728707,
 															"parameters": {
-																"width": "250",
-																"height": "250"
-															}
-														},
-														{
-															"id": "tween-two-properties",
-															"objectClass": "Card_Numb",
-															"sid": 464269641014629,
-															"disabled": true,
-															"behaviorType": "Tween",
-															"parameters": {
-																"tags": "\"move\"",
-																"property": "position",
-																"end-x": "Table_Player.X + ( 175 * Table_Player.Cards )",
-																"end-y": "Table_Player.Y",
-																"time": "0.5",
-																"ease": "default",
-																"destroy-on-complete": "no",
-																"loop": "no",
-																"ping-pong": "no",
-																"repeat-count": "1"
+																"scale": "1"
 															}
 														},
 														{
@@ -5240,6 +5148,23 @@
 											}
 										},
 										{
+											"id": "set-animation-frame",
+											"objectClass": "Card_Numb",
+											"sid": 251063882069853,
+											"parameters": {
+												"frame-number": "1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card_Numb",
+											"sid": 954532790816019,
+											"parameters": {
+												"instance-variable": "myID",
+												"value": "A_Deck_Numb.At(0,0)"
+											}
+										},
+										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Card_Numb",
 											"sid": 678588993605559,
@@ -5258,49 +5183,20 @@
 											}
 										},
 										{
+											"id": "set-scale",
+											"objectClass": "Card_Numb",
+											"sid": 742276209446726,
+											"parameters": {
+												"scale": "0.72"
+											}
+										},
+										{
 											"id": "wait",
 											"objectClass": "System",
 											"sid": 544353250813960,
 											"parameters": {
 												"seconds": "0.01",
 												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "Card_Numb",
-											"sid": 900112575269985,
-											"parameters": {
-												"instance-variable": "myID",
-												"value": "A_Deck_Numb.At(0,0)"
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "Card_Numb",
-											"sid": 831935765152584,
-											"parameters": {
-												"width": "166",
-												"height": "166"
-											}
-										},
-										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 308894933814417,
-											"disabled": true,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"move\"",
-												"property": "position",
-												"end-x": "Table_CPU.X + ( 145* Table_CPU.Cards )",
-												"end-y": "Table_CPU.Y",
-												"time": "0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
 											}
 										},
 										{
@@ -5442,6 +5338,23 @@
 											}
 										},
 										{
+											"id": "set-animation-frame",
+											"objectClass": "Card_Numb",
+											"sid": 700469967501619,
+											"parameters": {
+												"frame-number": "Table_CPU.Cards + 1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card_Numb",
+											"sid": 868135464087796,
+											"parameters": {
+												"instance-variable": "myID",
+												"value": "A_Deck_Numb.At(0,0)"
+											}
+										},
+										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Card_Numb",
 											"sid": 763374075424803,
@@ -5460,49 +5373,20 @@
 											}
 										},
 										{
+											"id": "set-scale",
+											"objectClass": "Card_Numb",
+											"sid": 110544237565328,
+											"parameters": {
+												"scale": "0.72"
+											}
+										},
+										{
 											"id": "wait",
 											"objectClass": "System",
 											"sid": 744166039632290,
 											"parameters": {
 												"seconds": "0.01",
 												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "Card_Numb",
-											"sid": 559910518509234,
-											"parameters": {
-												"instance-variable": "myID",
-												"value": "A_Deck_Numb.At(0,0)"
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "Card_Numb",
-											"sid": 715706326146599,
-											"parameters": {
-												"width": "166",
-												"height": "166"
-											}
-										},
-										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 689474459251502,
-											"disabled": true,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"move\"",
-												"property": "position",
-												"end-x": "Table_CPU.X + ( 145* Table_CPU.Cards )",
-												"end-y": "Table_CPU.Y",
-												"time": "0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
 											}
 										},
 										{
@@ -5644,75 +5528,55 @@
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 884687414352006,
+											"id": "set-animation",
+											"objectClass": "Card_Numb",
+											"sid": 287539721314893,
 											"parameters": {
-												"seconds": "0.01",
-												"use-timescale": true
+												"animation": "\"Front_\" & Table_CPU.Cards + 1",
+												"from": "beginning"
 											}
 										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Card_Numb",
-											"sid": 730847359505773,
+											"sid": 343810393603144,
 											"parameters": {
 												"instance-variable": "myID",
 												"value": "A_Deck_Numb.At(0,0)"
 											}
 										},
 										{
-											"id": "set-size",
+											"id": "set-animation-frame",
 											"objectClass": "Card_Numb",
-											"sid": 195331895944397,
+											"sid": 691432221382051,
 											"parameters": {
-												"width": "166",
-												"height": "166"
+												"frame-number": "Self.myID"
 											}
 										},
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Card_Numb",
-											"sid": 113610334256064,
+											"sid": 519110536586032,
 											"parameters": {
 												"instance-variable": "Original_Hidden",
 												"value": "false"
 											}
 										},
 										{
-											"id": "set-animation",
+											"id": "set-scale",
 											"objectClass": "Card_Numb",
-											"sid": 456574705361757,
+											"sid": 605034752738651,
 											"parameters": {
-												"animation": "\"Front\"",
-												"from": "beginning"
+												"scale": "0.72"
 											}
 										},
 										{
-											"id": "set-animation-frame",
-											"objectClass": "Card_Numb",
-											"sid": 930001866907166,
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 884687414352006,
 											"parameters": {
-												"frame-number": "Self.myID"
-											}
-										},
-										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 317274942017703,
-											"disabled": true,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"move\"",
-												"property": "position",
-												"end-x": "Table_CPU.X + ( 145* Table_CPU.Cards )",
-												"end-y": "Table_CPU.Y",
-												"time": "0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
+												"seconds": "0.01",
+												"use-timescale": true
 											}
 										},
 										{
@@ -5858,36 +5722,27 @@
 															}
 														},
 														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 211597609547064,
+															"id": "set-animation",
+															"objectClass": "Card_Numb",
+															"sid": 982318870779071,
 															"parameters": {
-																"seconds": "0.01",
-																"use-timescale": true
+																"animation": "\"Front_\" & Table_CPU.Cards + 1",
+																"from": "beginning"
 															}
 														},
 														{
 															"id": "set-instvar-value",
 															"objectClass": "Card_Numb",
-															"sid": 214457686587594,
+															"sid": 275446083394008,
 															"parameters": {
 																"instance-variable": "myID",
 																"value": "Specific"
 															}
 														},
 														{
-															"id": "set-animation",
-															"objectClass": "Card_Numb",
-															"sid": 502937067246274,
-															"parameters": {
-																"animation": "\"Front\"",
-																"from": "beginning"
-															}
-														},
-														{
 															"id": "set-animation-frame",
 															"objectClass": "Card_Numb",
-															"sid": 647841178935912,
+															"sid": 926753160558116,
 															"parameters": {
 																"frame-number": "Self.myID"
 															}
@@ -5895,38 +5750,27 @@
 														{
 															"id": "set-boolean-instvar",
 															"objectClass": "Card_Numb",
-															"sid": 479954169672013,
+															"sid": 501529484806222,
 															"parameters": {
 																"instance-variable": "Original_Hidden",
 																"value": "false"
 															}
 														},
 														{
-															"id": "set-size",
+															"id": "set-scale",
 															"objectClass": "Card_Numb",
-															"sid": 550239271052804,
+															"sid": 514792262068632,
 															"parameters": {
-																"width": "166",
-																"height": "166"
+																"scale": "0.72"
 															}
 														},
 														{
-															"id": "tween-two-properties",
-															"objectClass": "Card_Numb",
-															"sid": 725539949655768,
-															"disabled": true,
-															"behaviorType": "Tween",
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 211597609547064,
 															"parameters": {
-																"tags": "\"move\"",
-																"property": "position",
-																"end-x": "Table_CPU.X + ( 145 * Table_CPU.Cards )",
-																"end-y": "Table_CPU.Y",
-																"time": "0.5",
-																"ease": "default",
-																"destroy-on-complete": "no",
-																"loop": "no",
-																"ping-pong": "no",
-																"repeat-count": "1"
+																"seconds": "0.01",
+																"use-timescale": true
 															}
 														},
 														{
@@ -6306,18 +6150,9 @@
 															}
 														},
 														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 413597531284061,
-															"parameters": {
-																"seconds": "0.01",
-																"use-timescale": true
-															}
-														},
-														{
 															"id": "set-instvar-value",
 															"objectClass": "Card_Numb",
-															"sid": 960678926970223,
+															"sid": 443450371328867,
 															"parameters": {
 																"instance-variable": "myID",
 																"value": "Specific"
@@ -6326,19 +6161,27 @@
 														{
 															"id": "set-animation-frame",
 															"objectClass": "Card_Numb",
-															"sid": 654643361108410,
-															"disabled": true,
+															"sid": 258326757822065,
 															"parameters": {
-																"frame-number": "Self.myID"
+																"frame-number": "Table_CPU.Cards + 1"
 															}
 														},
 														{
 															"id": "set-boolean-instvar",
 															"objectClass": "Card_Numb",
-															"sid": 491447830412257,
+															"sid": 860738166934780,
 															"parameters": {
 																"instance-variable": "Original_Hidden",
 																"value": "false"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 413597531284061,
+															"parameters": {
+																"seconds": "0.01",
+																"use-timescale": true
 															}
 														},
 														{
@@ -6351,31 +6194,11 @@
 															}
 														},
 														{
-															"id": "set-size",
+															"id": "set-scale",
 															"objectClass": "Card_Numb",
-															"sid": 715975267719969,
+															"sid": 735706706593621,
 															"parameters": {
-																"width": "166",
-																"height": "166"
-															}
-														},
-														{
-															"id": "tween-two-properties",
-															"objectClass": "Card_Numb",
-															"sid": 130096022703455,
-															"disabled": true,
-															"behaviorType": "Tween",
-															"parameters": {
-																"tags": "\"move\"",
-																"property": "position",
-																"end-x": "Table_CPU.X + ( 145 * Table_CPU.Cards )",
-																"end-y": "Table_CPU.Y",
-																"time": "0.5",
-																"ease": "default",
-																"destroy-on-complete": "no",
-																"loop": "no",
-																"ping-pong": "no",
-																"repeat-count": "1"
+																"scale": "0.72"
 															}
 														},
 														{
@@ -8381,11 +8204,18 @@
 							"sid": 444290303758095
 						},
 						{
-							"name": "C1_Size",
+							"name": "C1_Width",
 							"type": "number",
 							"initialValue": "0",
 							"comment": "Width atual desta carta (para ajudar na perspectiva)",
 							"sid": 320542468025837
+						},
+						{
+							"name": "C1_Height",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "Height atual desta carta (para ajudar na perspectiva)",
+							"sid": 558487377437287
 						},
 						{
 							"name": "C2_ID",
@@ -8409,11 +8239,18 @@
 							"sid": 151110787704561
 						},
 						{
-							"name": "C2_Size",
+							"name": "C2_Width",
 							"type": "number",
 							"initialValue": "0",
 							"comment": "Width atual desta carta (para ajudar na perspectiva)",
 							"sid": 978229843759655
+						},
+						{
+							"name": "C2_Height",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "Height atual desta carta (para ajudar na perspectiva)",
+							"sid": 528938512790017
 						}
 					],
 					"eventType": "function-block",
@@ -8436,81 +8273,98 @@
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 734368761094431,
+							"children": [
 								{
-									"id": "tween-two-properties",
-									"objectClass": "Card_Numb",
-									"sid": 736755905620896,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"switch\"",
-										"property": "position",
-										"end-x": "C2_X",
-										"end-y": "C2_Y",
-										"time": "0.5",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "tween-two-properties",
-									"objectClass": "Card_Numb",
-									"sid": 969999620763524,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"switch\"",
-										"property": "size",
-										"end-x": "C2_Size",
-										"end-y": "C2_Size",
-										"time": "0.5",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 572537983425110,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 352040876973688,
-									"parameters": {
-										"layer": "\"Click_On_Table_Text\"",
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 765518046399069,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 601137309180145,
-									"parameters": {
-										"variable": "PowerDone",
-										"value": "true"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each-element",
+											"objectClass": "Card_Pos",
+											"sid": 715490638311242,
+											"parameters": {
+												"axes": "xy"
+											}
+										},
+										{
+											"id": "compare-current-value",
+											"objectClass": "Card_Pos",
+											"sid": 137242844690502,
+											"parameters": {
+												"comparison": 0,
+												"value": "C2_X & \"-\" & C2_Y"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Card_Numb",
+											"sid": 320747756444892,
+											"parameters": {
+												"animation": "\"Front_\" & Card_Pos.CurX",
+												"from": "current-frame"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 834433648017211,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"switch\"",
+												"property": "position",
+												"end-x": "C2_X",
+												"end-y": "C2_Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 748018593497233,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"switch\"",
+												"property": "size",
+												"end-x": "C2_Width",
+												"end-y": "C2_Height",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 250961815254661,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 747742086809802,
+											"parameters": {
+												"layer": "\"Click_On_Table_Text\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 256371530186827
 								}
-							],
-							"sid": 734368761094431
+							]
 						},
 						{
 							"eventType": "block",
@@ -8527,45 +8381,123 @@
 									}
 								}
 							],
+							"actions": [],
+							"sid": 618591456107068,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each-element",
+											"objectClass": "Card_Pos",
+											"sid": 789864852435311,
+											"parameters": {
+												"axes": "xy"
+											}
+										},
+										{
+											"id": "compare-current-value",
+											"objectClass": "Card_Pos",
+											"sid": 317022020779382,
+											"parameters": {
+												"comparison": 0,
+												"value": "C1_X & \"-\" & C1_Y"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Card_Numb",
+											"sid": 409474401898596,
+											"parameters": {
+												"animation": "\"Front_\" & Card_Pos.CurX",
+												"from": "current-frame"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 308891349147874,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"switch\"",
+												"property": "position",
+												"end-x": "C1_X",
+												"end-y": "C1_Y",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 449473486026771,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"switch\"",
+												"property": "size",
+												"end-x": "C1_Width",
+												"end-y": "C1_Height",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 588494006665233,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 442433986311086,
+											"parameters": {
+												"layer": "\"Click_On_Table_Text\"",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 686927729516009
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
 							"actions": [
 								{
-									"id": "tween-two-properties",
-									"objectClass": "Card_Numb",
-									"sid": 383064612326485,
-									"behaviorType": "Tween",
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 742671663279513,
 									"parameters": {
-										"tags": "\"switch\"",
-										"property": "position",
-										"end-x": "C1_X",
-										"end-y": "C1_Y",
-										"time": "0.5",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
+										"seconds": "1",
+										"use-timescale": true
 									}
 								},
 								{
-									"id": "tween-two-properties",
-									"objectClass": "Card_Numb",
-									"sid": 916996648870671,
-									"behaviorType": "Tween",
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 353358283535478,
 									"parameters": {
-										"tags": "\"switch\"",
-										"property": "size",
-										"end-x": "C1_Size",
-										"end-y": "C1_Size",
-										"time": "0.5",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
+										"variable": "PowerDone",
+										"value": "true"
 									}
 								}
 							],
-							"sid": 618591456107068
+							"sid": 575822474618470
 						}
 					]
 				},
@@ -8669,9 +8601,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Card_Numb",
-									"sid": 125123240289541,
+									"sid": 216255154108487,
 									"parameters": {
-										"animation": "\"Left\"",
+										"animation": "\"Front_\" & Card_Pos.IndexOf( str(Self.X & \"-\" & Self.Y) )",
 										"from": "current-frame"
 									}
 								},
@@ -8717,10 +8649,18 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Card_Numb",
-							"sid": 604525108212063,
+							"sid": 160556561715663,
 							"parameters": {
 								"animation": "\"Back\"",
-								"from": "current-frame"
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Card_Numb",
+							"sid": 761138098882897,
+							"parameters": {
+								"frame-number": "Card_Pos.IndexOf( str(Self.X & \"-\" & Self.Y) )"
 							}
 						}
 					],
@@ -8757,97 +8697,18 @@
 							"isInverted": true
 						}
 					],
-					"actions": [],
-					"sid": 377954483348787,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 457561521918131,
-									"parameters": {
-										"comparison": 3,
-										"x-co-ordinate": "950"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Card_Numb",
-									"sid": 970241084867988,
-									"parameters": {
-										"animation": "\"Left\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 628368343124330
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 580122056811890,
-									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "950"
-									}
-								},
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 906452178956776,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "1100"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Card_Numb",
-									"sid": 436232543319534,
-									"parameters": {
-										"animation": "\"Front\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 875827427924006
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Card_Numb",
-									"sid": 177652626916611,
-									"parameters": {
-										"comparison": 5,
-										"x-co-ordinate": "1100"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Card_Numb",
-									"sid": 883257495132781,
-									"parameters": {
-										"animation": "\"Right\"",
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 845162807787859
+							"id": "set-animation",
+							"objectClass": "Card_Numb",
+							"sid": 697852338083935,
+							"parameters": {
+								"animation": "\"Front_\" & Card_Pos.IndexOf( str(Self.X & \"-\" & Self.Y) )",
+								"from": "current-frame"
+							}
 						}
-					]
+					],
+					"sid": 377954483348787
 				}
 			],
 			"sid": 646435632967250
@@ -16181,13 +16042,23 @@
 						},
 						{
 							"eventType": "variable",
-							"name": "Card_1_Size",
+							"name": "Card_1_Width",
 							"type": "number",
 							"initialValue": "0",
 							"comment": "",
 							"isStatic": true,
 							"isConstant": false,
 							"sid": 989363125434441
+						},
+						{
+							"eventType": "variable",
+							"name": "Card_1_Height",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 328724575597176
 						},
 						{
 							"eventType": "variable",
@@ -16221,13 +16092,23 @@
 						},
 						{
 							"eventType": "variable",
-							"name": "Card_2_Size",
+							"name": "Card_2_Width",
 							"type": "number",
 							"initialValue": "0",
 							"comment": "",
 							"isStatic": true,
 							"isConstant": false,
 							"sid": 794691439254149
+						},
+						{
+							"eventType": "variable",
+							"name": "Card_2_Height",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 292443020289546
 						},
 						{
 							"eventType": "variable",
@@ -16285,6 +16166,15 @@
 									"sid": 728306657407832,
 									"parameters": {
 										"instance-variable": "Original_Hidden"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Numb",
+									"sid": 760185217412914,
+									"parameters": {
+										"instance-variable": "Enemy_Hidden"
 									},
 									"isInverted": true
 								},
@@ -16357,6 +16247,15 @@
 									"sid": 943510691649446,
 									"parameters": {
 										"instance-variable": "Original_Hidden"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Numb",
+									"sid": 511569779284441,
+									"parameters": {
+										"instance-variable": "Player_Hidden"
 									},
 									"isInverted": true
 								},
@@ -16435,6 +16334,15 @@
 									"isInverted": true
 								},
 								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Numb",
+									"sid": 660666342102624,
+									"parameters": {
+										"instance-variable": "Enemy_Hidden"
+									},
+									"isInverted": true
+								},
+								{
 									"id": "is-animation-playing",
 									"objectClass": "Icon_Hand_Point",
 									"sid": 754048708876149,
@@ -16477,8 +16385,17 @@
 									"objectClass": "System",
 									"sid": 687280182406057,
 									"parameters": {
-										"variable": "Card_1_Size",
+										"variable": "Card_1_Width",
 										"value": "Card_Numb.Width"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 924938688429868,
+									"parameters": {
+										"variable": "Card_1_Height",
+										"value": "Card_Numb.Height"
 									}
 								},
 								{
@@ -16572,6 +16489,15 @@
 									"isInverted": true
 								},
 								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Numb",
+									"sid": 242030468002874,
+									"parameters": {
+										"instance-variable": "Player_Hidden"
+									},
+									"isInverted": true
+								},
+								{
 									"id": "is-animation-playing",
 									"objectClass": "Icon_Hand_Point",
 									"sid": 519020252933248,
@@ -16612,9 +16538,18 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 846887691968601,
+									"sid": 429919149827353,
 									"parameters": {
-										"variable": "Card_2_Size",
+										"variable": "Card_2_Height",
+										"value": "Card_Numb.Height"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 571992675537634,
+									"parameters": {
+										"variable": "Card_2_Width",
 										"value": "Card_Numb.Width"
 									}
 								},
@@ -16638,16 +16573,18 @@
 								},
 								{
 									"callFunction": "Switch_Numbers",
-									"sid": 423718664195722,
+									"sid": 261044121124115,
 									"parameters": [
 										"Card_1_ID",
 										"Card_1_X",
 										"Card_1_Y",
-										"Card_1_Size",
+										"Card_1_Width",
+										"Card_1_Height",
 										"Card_2_ID",
 										"Card_2_X",
 										"Card_2_Y",
-										"Card_2_Size"
+										"Card_2_Width",
+										"Card_2_Height"
 									]
 								}
 							],
@@ -17679,6 +17616,26 @@
 								},
 								{
 									"eventType": "variable",
+									"name": "Card_Enemy_Width",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 735469598079288
+								},
+								{
+									"eventType": "variable",
+									"name": "Card_Enemy_Height",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 644452062530029
+								},
+								{
+									"eventType": "variable",
 									"name": "Card_Player_X",
 									"type": "number",
 									"initialValue": "0",
@@ -17696,6 +17653,26 @@
 									"isStatic": true,
 									"isConstant": false,
 									"sid": 121083123386942
+								},
+								{
+									"eventType": "variable",
+									"name": "Card_Player_Width",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 953675432456891
+								},
+								{
+									"eventType": "variable",
+									"name": "Card_Player_Height",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 928311406635935
 								},
 								{
 									"eventType": "block",
@@ -17738,6 +17715,24 @@
 											"parameters": {
 												"variable": "Card_Enemy_Y",
 												"value": "Card_Numb.Y"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 634243238920076,
+											"parameters": {
+												"variable": "Card_Enemy_Width",
+												"value": "Card_Numb.Width"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 796829924798639,
+											"parameters": {
+												"variable": "Card_Enemy_Height",
+												"value": "Card_Numb.Height"
 											}
 										},
 										{
@@ -17805,6 +17800,24 @@
 											}
 										},
 										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 374388936380956,
+											"parameters": {
+												"variable": "Card_Player_Width",
+												"value": "Card_Numb.Width"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 838392909566027,
+											"parameters": {
+												"variable": "Card_Player_Height",
+												"value": "Card_Numb.Height"
+											}
+										},
+										{
 											"id": "set-x",
 											"objectClass": "Icon_Hand_Point",
 											"sid": 914643116084826,
@@ -17838,16 +17851,18 @@
 												},
 												{
 													"callFunction": "Switch_Numbers",
-													"sid": 873857998415257,
+													"sid": 257322154698960,
 													"parameters": [
 														"Card_Enemy",
 														"Card_Enemy_X",
 														"Card_Enemy_Y",
-														"166",
+														"Card_Enemy_Width",
+														"Card_Enemy_Height",
 														"Card_Player",
 														"Card_Player_X",
 														"Card_Player_Y",
-														"250"
+														"Card_Player_Width",
+														"Card_Player_Height"
 													]
 												}
 											],
@@ -24772,9 +24787,9 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "pick-all",
+											"id": "for-each",
 											"objectClass": "System",
-											"sid": 460701843152108,
+											"sid": 752737116954740,
 											"parameters": {
 												"object": "Card_Numb"
 											}
@@ -24807,7 +24822,7 @@
 												{
 													"id": "set-boolean-instvar",
 													"objectClass": "Card_Numb",
-													"sid": 704308693496200,
+													"sid": 693748927404145,
 													"parameters": {
 														"instance-variable": "Original_Hidden",
 														"value": "false"
@@ -24816,49 +24831,67 @@
 												{
 													"id": "set-boolean-instvar",
 													"objectClass": "Card_Numb",
-													"sid": 985291878127029,
-													"parameters": {
-														"instance-variable": "Enemy_Hidden",
-														"value": "false"
-													}
-												},
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Card_Numb",
-													"sid": 349398369986364,
+													"sid": 621768525404576,
 													"parameters": {
 														"instance-variable": "Player_Hidden",
 														"value": "false"
 													}
 												},
 												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 143330619734221,
-													"parameters": {
-														"seconds": "0",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
+													"id": "set-boolean-instvar",
 													"objectClass": "Card_Numb",
-													"sid": 207608947702158,
+													"sid": 680723724521524,
 													"parameters": {
-														"animation": "\"Left\"",
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "set-animation-frame",
-													"objectClass": "Card_Numb",
-													"sid": 318060429582891,
-													"parameters": {
-														"frame-number": "Self.myID"
+														"instance-variable": "Enemy_Hidden",
+														"value": "false"
 													}
 												}
 											],
 											"sid": 443946015427962,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each-element",
+															"objectClass": "Card_Pos",
+															"sid": 148590496069664,
+															"parameters": {
+																"axes": "xy"
+															}
+														},
+														{
+															"id": "compare-current-value",
+															"objectClass": "Card_Pos",
+															"sid": 843714468833671,
+															"parameters": {
+																"comparison": 0,
+																"value": "Card_Numb.X & \"-\" & Card_Numb.Y"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Card_Numb",
+															"sid": 428797236921617,
+															"parameters": {
+																"animation": "\"Front_\" & Card_Pos.CurX",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "set-animation-frame",
+															"objectClass": "Card_Numb",
+															"sid": 236940819299762,
+															"parameters": {
+																"frame-number": "Self.myID"
+															}
+														}
+													],
+													"sid": 670799228461502
+												}
+											],
 											"isOrBlock": true
 										}
 									]
