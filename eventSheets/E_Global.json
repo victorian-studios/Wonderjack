@@ -626,7 +626,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "Txt_debug",
+									"objectClass": "Txt_auto_math",
 									"sid": 903078163944422,
 									"parameters": {
 										"visibility": "visible"
@@ -5444,7 +5444,7 @@
 												},
 												{
 													"id": "set-visible",
-													"objectClass": "Txt_debug",
+													"objectClass": "Txt_auto_math",
 													"sid": 745858778828141,
 													"parameters": {
 														"visibility": "visible"
@@ -5495,7 +5495,7 @@
 												},
 												{
 													"id": "set-visible",
-													"objectClass": "Txt_debug",
+													"objectClass": "Txt_auto_math",
 													"sid": 423369778391987,
 													"parameters": {
 														"visibility": "invisible"

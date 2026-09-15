@@ -404,7 +404,7 @@
 					"world": {
 						"x": 2499,
 						"y": 289,
-						"width": 911.1188177180844,
+						"width": 911.1188177180843,
 						"height": 465.2521622390218,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1008,7 +1008,7 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,
@@ -1090,7 +1090,7 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,

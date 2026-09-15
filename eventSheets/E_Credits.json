@@ -292,7 +292,22 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 878741585412418,
+					"parameters": {
+						"audio-file": {
+							"path": "button_2_sfx"
+						},
+						"loop": "not-looping",
+						"volume": "Vol_Sfx > 0 ? -10 + ( Vol_Sfx * 0.10 ) : - 100",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
 			"sid": 533603106367212,
 			"children": [
 				{

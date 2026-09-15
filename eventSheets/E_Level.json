@@ -336,6 +336,16 @@
 			"sid": 356608622196925
 		},
 		{
+			"eventType": "variable",
+			"name": "Cards_Visible",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true - final da rodada, quando as cartas são reveladas",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 798891432693223
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -444,6 +454,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 683884974931653,
+					"parameters": {
+						"variable": "Cards_Visible",
+						"value": "false"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Hand_Player",
 					"sid": 162472034995330,
@@ -535,6 +554,14 @@
 					"parameters": {
 						"layer": "\"Turn\"",
 						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Txt_auto_math",
+					"sid": 124939329700527,
+					"parameters": {
+						"text": "\"\""
 					}
 				},
 				{
@@ -859,14 +886,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-text",
-					"objectClass": "Txt_debug",
-					"sid": 233571379470217,
-					"parameters": {
-						"text": "\"? + \"&Table_CPU.Visible_Count&newline&\"-----\"&newline&PlayerNumbers"
-					}
-				},
-				{
 					"id": "set-effect-parameter",
 					"objectClass": "Btn_Stop",
 					"sid": 885975158530892,
@@ -946,6 +965,482 @@
 						}
 					],
 					"sid": 978226095505945
+				},
+				{
+					"eventType": "comment",
+					"text": "Auto math"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 196874319109447,
+							"parameters": {
+								"variable": "FinishRound"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 473694562144031,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Table_CPU",
+									"sid": 840922505237446,
+									"parameters": {
+										"instance-variable": "Visible_Count",
+										"comparison": 2,
+										"value": "TheNumber - 1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 769404557347792,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 2,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 520959377955132,
+									"parameters": {
+										"text": "\"? + \"&Table_CPU.Visible_Count & newline&\"-----\"&newline&PlayerNumbers"
+									}
+								}
+							],
+							"sid": 802955565015903
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Table_CPU",
+									"sid": 492881908505074,
+									"parameters": {
+										"instance-variable": "Visible_Count",
+										"comparison": 4,
+										"value": "TheNumber - 1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 801872223202272,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 2,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 294489027178869,
+									"parameters": {
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\"&newline&PlayerNumbers"
+									}
+								}
+							],
+							"sid": 345731666173912
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Table_CPU",
+									"sid": 848362445014291,
+									"parameters": {
+										"instance-variable": "Visible_Count",
+										"comparison": 2,
+										"value": "TheNumber - 1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 923076631123557,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 0,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 133613942613073,
+									"parameters": {
+										"text": "\"? + \"&Table_CPU.Visible_Count & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 252549590355650
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Table_CPU",
+									"sid": 393135345001395,
+									"parameters": {
+										"instance-variable": "Visible_Count",
+										"comparison": 4,
+										"value": "TheNumber - 1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 705482748506706,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 0,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 105693635074315,
+									"parameters": {
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 128105452456962
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Table_CPU",
+									"sid": 417098050900462,
+									"parameters": {
+										"instance-variable": "Visible_Count",
+										"comparison": 4,
+										"value": "TheNumber - 1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 609285925173744,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 4,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 221595766523850,
+									"parameters": {
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 164283878152010
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Table_CPU",
+									"sid": 829968358191107,
+									"parameters": {
+										"instance-variable": "Visible_Count",
+										"comparison": 2,
+										"value": "TheNumber - 1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 224459511569901,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 4,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 552038115876421,
+									"parameters": {
+										"text": "\"? + \"&Table_CPU.Visible_Count & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 919187008164332
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 328788533698522
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 847004681727966,
+							"parameters": {
+								"variable": "Cards_Visible"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 738874963179581,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 479354104859320,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"comparison": 2,
+										"value": "TheNumber"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 169118054488294,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 2,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 672882959392956,
+									"parameters": {
+										"text": "EnemyNumbers & newline&\"-----\"&newline&PlayerNumbers"
+									}
+								}
+							],
+							"sid": 900299819075106
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 771673138087035,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"comparison": 4,
+										"value": "TheNumber"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 968549662048683,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 2,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 928296194557634,
+									"parameters": {
+										"text": "\"[color=#ff0000]\"& EnemyNumbers & \"[/color]\" & newline&\"-----\"&newline&PlayerNumbers"
+									}
+								}
+							],
+							"sid": 543140070782580
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 359004429281781,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"comparison": 2,
+										"value": "TheNumber"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 704663701240016,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 0,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 367854907555032,
+									"parameters": {
+										"text": "EnemyNumbers & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 513467177924268
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 184988689340208,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"comparison": 4,
+										"value": "TheNumber"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 725057877665707,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 0,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 408029546356291,
+									"parameters": {
+										"text": "\"[color=#ff0000]\"& EnemyNumbers & \"[/color]\" & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 605335343185676
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 589150117173571,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"comparison": 4,
+										"value": "TheNumber"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 537315709567990,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 4,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 757497317419976,
+									"parameters": {
+										"text": "\"[color=#ff0000]\" & EnemyNumbers & \"[/color]\" & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 347051402037134
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 958786905009214,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"comparison": 2,
+										"value": "TheNumber"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 907072813521796,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 4,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 770678054367120,
+									"parameters": {
+										"text": "EnemyNumbers & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 287776358301159
+						}
+					]
 				}
 			]
 		},
@@ -3651,9 +4146,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 799345751189032,
+							"sid": 384022453684886,
 							"parameters": {
-								"seconds": "1",
+								"seconds": "Opt_FastMode = 1 ? 0.4 : 0.8",
 								"use-timescale": true
 							}
 						},
@@ -3804,14 +4299,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 550588192068351,
+											"sid": 663289327825033,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
 												"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -3964,14 +4459,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 570331540085747,
+											"sid": 238978880955231,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
 												"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -4159,14 +4654,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 873181209402060,
+											"sid": 409559664862675,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
 												"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -4386,14 +4881,14 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 611540945280289,
+															"sid": 171559157741787,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move_hidden\"",
 																"property": "position",
 																"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
 																"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
-																"time": "0.5",
+																"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
 																"loop": "no",
@@ -4650,6 +5145,7 @@
 									],
 									"actions": [],
 									"sid": 790989633834938,
+									"disabled": true,
 									"children": [
 										{
 											"eventType": "block",
@@ -4667,6 +5163,7 @@
 											],
 											"actions": [],
 											"sid": 617669839434778,
+											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -4802,14 +5299,14 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 546965362387877,
+															"sid": 274551700684578,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move_hidden\"",
 																"property": "position",
 																"end-x": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0), 0, \"-\" ))",
 																"end-y": "int(tokenat( Card_Pos.At( Table_Player.Cards + 1, 0 ), 1, \"-\" ))",
-																"time": "0.5",
+																"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
 																"loop": "no",
@@ -4837,6 +5334,7 @@
 														}
 													],
 													"sid": 700069262854911,
+													"disabled": true,
 													"children": [
 														{
 															"eventType": "block",
@@ -4860,7 +5358,8 @@
 																	"sid": 520624470856914
 																}
 															],
-															"sid": 881725275248479
+															"sid": 881725275248479,
+															"disabled": true
 														},
 														{
 															"eventType": "block",
@@ -4885,7 +5384,8 @@
 																	}
 																}
 															],
-															"sid": 322015688040524
+															"sid": 322015688040524,
+															"disabled": true
 														}
 													]
 												},
@@ -5065,7 +5565,8 @@
 															}
 														}
 													],
-													"sid": 153741859935214
+													"sid": 153741859935214,
+													"disabled": true
 												}
 											]
 										}
@@ -5202,14 +5703,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 656697387393611,
+											"sid": 907087796548575,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
 												"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -5392,14 +5893,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 726032965733296,
+											"sid": 441713165450749,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
 												"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -5582,14 +6083,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 540922801512089,
+											"sid": 760059219149481,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"move_hidden\"",
 												"property": "position",
 												"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
 												"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -5776,14 +6277,14 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 145324761772720,
+															"sid": 327053017221080,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move_hidden\"",
 																"property": "position",
 																"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
 																"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
-																"time": "0.5",
+																"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
 																"loop": "no",
@@ -6204,14 +6705,14 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 970877791249162,
+															"sid": 234554950606796,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"move_hidden\"",
 																"property": "position",
 																"end-x": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 0, \"-\" ))",
 																"end-y": "int(tokenat( Card_Pos.At( Table_CPU.Cards + 1, 1 ), 1, \"-\" ))",
-																"time": "0.5",
+																"time": "Opt_FastMode = 1 ? 0.2 : 0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
 																"loop": "no",
@@ -7669,9 +8170,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 317976126319956,
+							"sid": 455948741323584,
 							"parameters": {
-								"seconds": "1",
+								"seconds": "Opt_FastMode = 1 ? 0.6 : 1",
 								"use-timescale": true
 							}
 						},
@@ -8310,14 +8811,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 834433648017211,
+											"sid": 951223787745108,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"switch\"",
 												"property": "position",
 												"end-x": "C2_X",
 												"end-y": "C2_Y",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -8328,14 +8829,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 748018593497233,
+											"sid": 325687165927307,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"switch\"",
 												"property": "size",
 												"end-x": "C2_Width",
 												"end-y": "C2_Height",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -8346,9 +8847,9 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 250961815254661,
+											"sid": 421986732491859,
 											"parameters": {
-												"seconds": "0.5",
+												"seconds": "Opt_FastMode = 1 ? 0.25 : 0.5",
 												"use-timescale": true
 											}
 										},
@@ -8418,14 +8919,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 308891349147874,
+											"sid": 511817983016986,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"switch\"",
 												"property": "position",
 												"end-x": "C1_X",
 												"end-y": "C1_Y",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -8436,14 +8937,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Card_Numb",
-											"sid": 449473486026771,
+											"sid": 572988298158014,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"switch\"",
 												"property": "size",
 												"end-x": "C1_Width",
 												"end-y": "C1_Height",
-												"time": "0.5",
+												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
 												"ease": "default",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -8454,9 +8955,9 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 588494006665233,
+											"sid": 607167897605998,
 											"parameters": {
-												"seconds": "0.5",
+												"seconds": "Opt_FastMode = 1 ? 0.25 : 0.5",
 												"use-timescale": true
 											}
 										},
@@ -8481,9 +8982,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 742671663279513,
+									"sid": 665359792506307,
 									"parameters": {
-										"seconds": "1",
+										"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
 										"use-timescale": true
 									}
 								},
@@ -8797,9 +9298,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 451267728348113,
+							"sid": 278043566283646,
 							"parameters": {
-								"seconds": "1",
+								"seconds": "Opt_FastMode = 1 ? 0.4 : 0.8",
 								"use-timescale": true
 							}
 						},
@@ -9099,9 +9600,9 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 161682300238032,
+											"sid": 779070027933522,
 											"parameters": {
-												"seconds": "0.5",
+												"seconds": "0.3",
 												"use-timescale": true
 											}
 										},
@@ -12276,13 +12777,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 737068774653997,
+															"sid": 795253364127983,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"switch\"",
 																"property": "position",
-																"end-x": "Table_CPU.X",
-																"end-y": "Table_CPU.Y",
+																"end-x": "int(tokenat(Card_Pos.At(1,1), 0, \"-\"))",
+																"end-y": "int(tokenat(Card_Pos.At(1,1), 1, \"-\"))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -12294,13 +12795,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 431975086144059,
+															"sid": 275242061330705,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"\"",
 																"property": "size",
-																"end-x": "166",
-																"end-y": "166",
+																"end-x": "181.44",
+																"end-y": "123.83",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -12375,13 +12876,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 455538320155321,
+															"sid": 564668891415048,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"switch\"",
 																"property": "position",
-																"end-x": "Table_Player.X",
-																"end-y": "Table_Player.Y",
+																"end-x": "int(tokenat(Card_Pos.At(1,0), 0, \"-\"))",
+																"end-y": "int(tokenat(Card_Pos.At(1,0), 1, \"-\"))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -12393,13 +12894,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 502683932141867,
+															"sid": 208733789415719,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"\"",
 																"property": "size",
-																"end-x": "250",
-																"end-y": "250",
+																"end-x": "252",
+																"end-y": "172",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -12594,13 +13095,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 718331708460196,
+															"sid": 806483337075592,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"switch\"",
 																"property": "position",
-																"end-x": "Table_CPU.X",
-																"end-y": "Table_CPU.Y",
+																"end-x": "int(tokenat(Card_Pos.At(1,1), 0, \"-\"))",
+																"end-y": "int(tokenat(Card_Pos.At(1,1), 1, \"-\"))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -12612,13 +13113,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 706207818737655,
+															"sid": 683195016953647,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"\"",
 																"property": "size",
-																"end-x": "166",
-																"end-y": "166",
+																"end-x": "181.44",
+																"end-y": "123.83",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -12693,13 +13194,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 188535789199131,
+															"sid": 995731516045011,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"switch\"",
 																"property": "position",
-																"end-x": "Table_Player.X",
-																"end-y": "Table_Player.Y",
+																"end-x": "int(tokenat(Card_Pos.At(1,0), 0, \"-\"))",
+																"end-y": "int(tokenat(Card_Pos.At(1,0), 1, \"-\"))",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -12711,13 +13212,13 @@
 														{
 															"id": "tween-two-properties",
 															"objectClass": "Card_Numb",
-															"sid": 326884534223446,
+															"sid": 903803212578333,
 															"behaviorType": "Tween",
 															"parameters": {
 																"tags": "\"\"",
 																"property": "size",
-																"end-x": "250",
-																"end-y": "250",
+																"end-x": "252",
+																"end-y": "172",
 																"time": "0.5",
 																"ease": "default",
 																"destroy-on-complete": "no",
@@ -17766,9 +18267,9 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 269828186227930,
+											"sid": 724064638733286,
 											"parameters": {
-												"seconds": "2",
+												"seconds": "Opt_FastMode = 1 ? 1.2 : 2",
 												"use-timescale": true
 											}
 										},
@@ -17843,9 +18344,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 100574280390148,
+													"sid": 991053475062570,
 													"parameters": {
-														"seconds": "2",
+														"seconds": "2 - Opt_FastMode_Secs",
 														"use-timescale": true
 													}
 												},
@@ -18550,7 +19051,7 @@
 												},
 												{
 													"id": "set-visible",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Turn2",
 													"sid": 949921300240720,
 													"parameters": {
 														"visibility": "visible"
@@ -18558,7 +19059,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Turn2",
 													"sid": 200959548210041,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -18567,7 +19068,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Turn2",
 													"sid": 165754388229227,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -18576,7 +19077,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Turn2",
 													"sid": 288286643885476,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -18585,13 +19086,13 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Turn2",
 													"sid": 357094164046676,
 													"behaviorType": "Fade"
 												},
 												{
 													"id": "set-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Turn2",
 													"sid": 707787012794858,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"common.player_turn\")"
@@ -18599,7 +19100,7 @@
 												},
 												{
 													"id": "set-visible",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Turn_Txt2",
 													"sid": 905349727723605,
 													"parameters": {
 														"visibility": "visible"
@@ -18607,7 +19108,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Turn_Txt2",
 													"sid": 110374657361739,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -18616,7 +19117,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Turn_Txt2",
 													"sid": 512370249102598,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -18625,7 +19126,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Turn_Txt2",
 													"sid": 692334397534402,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -18634,7 +19135,7 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Turn_Txt2",
 													"sid": 138121466130385,
 													"behaviorType": "Fade"
 												},
@@ -18917,7 +19418,7 @@
 																},
 																{
 																	"id": "set-opacity",
-																	"objectClass": "Txt_debug",
+																	"objectClass": "Txt_auto_math",
 																	"sid": 903882394434004,
 																	"parameters": {
 																		"opacity": "100"
@@ -19011,7 +19512,7 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Turn2",
 											"sid": 872981699956435,
 											"parameters": {
 												"visibility": "visible"
@@ -19019,7 +19520,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Turn2",
 											"sid": 283893673834984,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -19028,7 +19529,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Turn2",
 											"sid": 570964605965777,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -19037,7 +19538,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Turn2",
 											"sid": 333158590121941,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -19046,13 +19547,13 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Turn2",
 											"sid": 247261004602197,
 											"behaviorType": "Fade"
 										},
 										{
 											"id": "set-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Turn2",
 											"sid": 623514982459180,
 											"parameters": {
 												"text": "Internationalization.Lookup(\"common.enemy_turn\", EnemyNameTurns)"
@@ -19060,7 +19561,7 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Turn_Txt2",
 											"sid": 106486858090548,
 											"parameters": {
 												"visibility": "visible"
@@ -19068,7 +19569,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Turn_Txt2",
 											"sid": 712891484526655,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -19077,7 +19578,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Turn_Txt2",
 											"sid": 690373095922245,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -19086,7 +19587,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Turn_Txt2",
 											"sid": 827779686519313,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -19095,7 +19596,7 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Turn_Txt2",
 											"sid": 894201669519706,
 											"behaviorType": "Fade"
 										}
@@ -20745,12 +21246,29 @@
 									}
 								},
 								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 868685546634743,
+									"parameters": {
+										"variable": "Cards_Visible",
+										"value": "false"
+									}
+								},
+								{
 									"id": "set-instvar-value",
 									"objectClass": "Enemy",
 									"sid": 839401598100473,
 									"parameters": {
 										"instance-variable": "SpecialPower",
 										"value": "0"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 924860801935570,
+									"parameters": {
+										"text": "\"\""
 									}
 								},
 								{
@@ -24759,7 +25277,7 @@
 										},
 										{
 											"id": "set-opacity",
-											"objectClass": "Txt_debug",
+											"objectClass": "Txt_auto_math",
 											"sid": 937735839048374,
 											"parameters": {
 												"opacity": "100"
@@ -24780,7 +25298,17 @@
 							"functionParameters": [],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 601944377348254,
+									"parameters": {
+										"variable": "Cards_Visible",
+										"value": "true"
+									}
+								}
+							],
 							"sid": 166729569628663,
 							"children": [
 								{
@@ -30808,9 +31336,9 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 492703716702063,
+															"sid": 166115003753194,
 															"parameters": {
-																"seconds": "1.5",
+																"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																"use-timescale": true
 															}
 														},
@@ -30999,9 +31527,9 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 699163089291524,
+															"sid": 552587657731855,
 															"parameters": {
-																"seconds": "1.5",
+																"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																"use-timescale": true
 															}
 														},
@@ -31101,9 +31629,9 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 501399737612291,
+															"sid": 633013050947205,
 															"parameters": {
-																"seconds": "1.5",
+																"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																"use-timescale": true
 															}
 														},
@@ -31130,9 +31658,9 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 809948061162699,
+															"sid": 222788234470547,
 															"parameters": {
-																"seconds": "1.5",
+																"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																"use-timescale": true
 															}
 														},
@@ -31367,9 +31895,9 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 345097339596777,
+															"sid": 733651511716230,
 															"parameters": {
-																"seconds": "1.5",
+																"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																"use-timescale": true
 															}
 														},
@@ -31470,9 +31998,9 @@
 												{
 													"id": "wait",
 													"objectClass": "System",
-													"sid": 793806259355525,
+													"sid": 417279067197878,
 													"parameters": {
-														"seconds": "1.5",
+														"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 														"use-timescale": true
 													}
 												},
@@ -34884,9 +35412,9 @@
 																				{
 																					"id": "wait",
 																					"objectClass": "System",
-																					"sid": 985153186788960,
+																					"sid": 428371048414767,
 																					"parameters": {
-																						"seconds": "1.5",
+																						"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																						"use-timescale": true
 																					}
 																				},
@@ -34941,21 +35469,21 @@
 																					],
 																					"actions": [
 																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 741814066746772,
+																							"parameters": {
+																								"type": "log",
+																								"message": "\"Enemy RNG clairvoyance: \" & Enemy_RNG"
+																							}
+																						},
+																						{
 																							"id": "set-eventvar-value",
 																							"objectClass": "System",
 																							"sid": 156552327223695,
 																							"parameters": {
 																								"variable": "Enemy_RNG",
 																								"value": "int ( random ( 0, 101 ) ) + EnemyAI_Chaos"
-																							}
-																						},
-																						{
-																							"id": "log",
-																							"objectClass": "Browser",
-																							"sid": 953375569612444,
-																							"parameters": {
-																								"type": "log",
-																								"message": "\"Enemy RNG clairvoyance: \" & Enemy_RNG"
 																							}
 																						}
 																					],
@@ -34981,20 +35509,20 @@
 																							],
 																							"actions": [
 																								{
+																									"id": "log",
+																									"objectClass": "Browser",
+																									"sid": 357756857622422,
+																									"parameters": {
+																										"type": "log",
+																										"message": "\"Como sou cauteloso, eu escolho parar logo\""
+																									}
+																								},
+																								{
 																									"callFunction": "Enemy Action",
 																									"sid": 609167003587461,
 																									"parameters": [
 																										"\"stop\""
 																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 565559028513055,
-																									"parameters": {
-																										"type": "log",
-																										"message": "\"Como sou cauteloso, eu escolho parar logo\""
-																									}
 																								}
 																							],
 																							"sid": 830794690873464
@@ -35014,20 +35542,20 @@
 																							],
 																							"actions": [
 																								{
+																									"id": "log",
+																									"objectClass": "Browser",
+																									"sid": 879667608316849,
+																									"parameters": {
+																										"type": "warn",
+																										"message": "\"Como sou cauteloso, eu escolho analisar as opções de poder\""
+																									}
+																								},
+																								{
 																									"callFunction": "Enemy Check Powers",
 																									"sid": 816563931243439,
 																									"parameters": [
 																										"\"\""
 																									]
-																								},
-																								{
-																									"id": "log",
-																									"objectClass": "Browser",
-																									"sid": 212129772141730,
-																									"parameters": {
-																										"type": "warn",
-																										"message": "\"Como sou cauteloso, eu escolho analisar as opções de poder\""
-																									}
 																								}
 																							],
 																							"sid": 962463650780390
@@ -35054,20 +35582,20 @@
 																					],
 																					"actions": [
 																						{
+																							"id": "log",
+																							"objectClass": "Browser",
+																							"sid": 819562473248713,
+																							"parameters": {
+																								"type": "warn",
+																								"message": "\"Como sou destemido, quero mais é ver meus poderes\""
+																							}
+																						},
+																						{
 																							"callFunction": "Enemy Check Powers",
 																							"sid": 730049264091476,
 																							"parameters": [
 																								"\"\""
 																							]
-																						},
-																						{
-																							"id": "log",
-																							"objectClass": "Browser",
-																							"sid": 896738496658432,
-																							"parameters": {
-																								"type": "warn",
-																								"message": "\"Como sou destemido, quero mais é ver meus poderes\""
-																							}
 																						}
 																					],
 																					"sid": 659297674625129
@@ -35251,9 +35779,9 @@
 																								{
 																									"id": "wait",
 																									"objectClass": "System",
-																									"sid": 949709716486329,
+																									"sid": 296726099097102,
 																									"parameters": {
-																										"seconds": "1.5",
+																										"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																										"use-timescale": true
 																									}
 																								},
@@ -35365,9 +35893,9 @@
 																										{
 																											"id": "wait",
 																											"objectClass": "System",
-																											"sid": 823762789578617,
+																											"sid": 189553062977656,
 																											"parameters": {
-																												"seconds": "1.5",
+																												"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																												"use-timescale": true
 																											}
 																										},
@@ -35440,9 +35968,9 @@
 																												{
 																													"id": "wait",
 																													"objectClass": "System",
-																													"sid": 341446435821555,
+																													"sid": 171661704512593,
 																													"parameters": {
-																														"seconds": "1.5",
+																														"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																														"use-timescale": true
 																													}
 																												},
@@ -35604,9 +36132,9 @@
 																												{
 																													"id": "wait",
 																													"objectClass": "System",
-																													"sid": 420314143812398,
+																													"sid": 237097662292067,
 																													"parameters": {
-																														"seconds": "1.5",
+																														"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																														"use-timescale": true
 																													}
 																												},
@@ -35710,9 +36238,9 @@
 																												{
 																													"id": "wait",
 																													"objectClass": "System",
-																													"sid": 258950573207549,
+																													"sid": 434584044380234,
 																													"parameters": {
-																														"seconds": "1.5",
+																														"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																														"use-timescale": true
 																													}
 																												},
@@ -35874,9 +36402,9 @@
 																												{
 																													"id": "wait",
 																													"objectClass": "System",
-																													"sid": 437780886331833,
+																													"sid": 445797892904797,
 																													"parameters": {
-																														"seconds": "1.5",
+																														"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																														"use-timescale": true
 																													}
 																												},
@@ -35980,9 +36508,9 @@
 																												{
 																													"id": "wait",
 																													"objectClass": "System",
-																													"sid": 942763628642644,
+																													"sid": 560741228504689,
 																													"parameters": {
-																														"seconds": "1.5",
+																														"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																														"use-timescale": true
 																													}
 																												},
@@ -36222,9 +36750,9 @@
 																												{
 																													"id": "wait",
 																													"objectClass": "System",
-																													"sid": 289711304962888,
+																													"sid": 563096830633834,
 																													"parameters": {
-																														"seconds": "1.5",
+																														"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																														"use-timescale": true
 																													}
 																												},
@@ -36457,9 +36985,9 @@
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 440815869617203,
+																	"sid": 483930421253631,
 																	"parameters": {
-																		"seconds": "1.5",
+																		"seconds": "Opt_FastMode = 1 ? 0.7 : 1.3",
 																		"use-timescale": true
 																	}
 																},
@@ -37663,6 +38191,15 @@
 													],
 													"actions": [
 														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 936298625580487,
+															"parameters": {
+																"type": "log",
+																"message": "\"Já que só tem 1 turno mesmo, aceito parar também\""
+															}
+														},
+														{
 															"id": "wait",
 															"objectClass": "System",
 															"sid": 524696857505743,
@@ -37677,15 +38214,6 @@
 															"parameters": [
 																"1"
 															]
-														},
-														{
-															"id": "log",
-															"objectClass": "Browser",
-															"sid": 176068899793333,
-															"parameters": {
-																"type": "log",
-																"message": "\"Já que só tem 1 turno mesmo, aceito parar também\""
-															}
 														}
 													],
 													"sid": 374276767401369
@@ -41595,7 +42123,7 @@
 														},
 														{
 															"id": "set-opacity",
-															"objectClass": "Txt_debug",
+															"objectClass": "Txt_auto_math",
 															"sid": 482380131968712,
 															"parameters": {
 																"opacity": "25"
@@ -42562,6 +43090,15 @@
 							}
 						},
 						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 177007239905153,
+							"parameters": {
+								"layer": "\"Choose_Txt\"",
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 199734143614440,
@@ -42577,6 +43114,14 @@
 							"parameters": {
 								"variable": "RelicPhase",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Txt_auto_math",
+							"sid": 911045633065167,
+							"parameters": {
+								"opacity": "0"
 							}
 						}
 					],
@@ -43605,6 +44150,10 @@
 					"sid": 189971686619307,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "Colocar a relíquia no Slot correto"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -43916,6 +44465,14 @@
 									}
 								},
 								{
+									"id": "set-opacity",
+									"objectClass": "Txt_auto_math",
+									"sid": 391719991905179,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
 									"id": "tween-value",
 									"objectClass": "Relic_card",
 									"sid": 705580489137251,
@@ -44209,6 +44766,15 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 307853203975226,
+							"parameters": {
+								"layer": "\"Choose_Txt\"",
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 160526803130944,
@@ -44292,7 +44858,34 @@
 							}
 						}
 					],
-					"sid": 547563104094780
+					"sid": 547563104094780,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 570850465574184,
+									"parameters": {
+										"layer": "\"Choose_Relics\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 611393037261916,
+									"parameters": {
+										"layer": "\"Choose_Txt\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 807417126442393
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -44513,6 +45106,15 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 938174597160718,
+							"parameters": {
+								"layer": "\"Choose_Txt\"",
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 523610672599650,
@@ -44637,6 +45239,15 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 927855320445471,
+							"parameters": {
+								"layer": "\"Choose_Txt\"",
+								"visibility": "visible"
+							}
 						}
 					],
 					"sid": 647756466975651,
@@ -44738,9 +45349,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Card_Numb",
-									"sid": 316440751685642,
+									"sid": 658429997677499,
 									"parameters": {
-										"animation": "\"Left\"",
+										"animation": "\"Front_1\"",
 										"from": "beginning"
 									}
 								},
@@ -44849,6 +45460,14 @@
 									"parameters": {
 										"animation": "\"Back\"",
 										"from": "current-frame"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Card_Numb",
+									"sid": 572663949299810,
+									"parameters": {
+										"frame-number": "1"
 									}
 								}
 							],
@@ -46242,6 +46861,15 @@
 							"id": "on-any-click",
 							"objectClass": "Mouse",
 							"sid": 220181026093835
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 352431243563448,
+							"parameters": {
+								"object": "configuracoes"
+							},
+							"isInverted": true
 						},
 						{
 							"id": "compare-boolean-eventvar",

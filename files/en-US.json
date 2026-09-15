@@ -156,7 +156,7 @@
             "name_1": "Ana Barata\nArtist",
             "name_2": "Vitor Cirilo\nProgrammer",
             "name_3": "Ana Luiza\nArtist",
-            "name_4": "Game Testers:\n\nMarcelo Campos\nThuan Martins\nVitoria Peres",
+            "name_4": "Game Testers:\nArthur Barroso\nMarcelo Campos\nThuan Martins\nVitoria Peres",
             "name_5": "Music and Sound:\n\nfreesound.org",
             "bye": "Thanks for playing our game!"
         },
@@ -182,11 +182,11 @@
                 "4": "Just avoid exceeding [b]21[/b], or you'll lose the round. The [color=#005eff]blue[/color] deck contain [b]12[/b] cards from [b]1 up to 12[/b].",
                 "5": "In Wonderjack everyone starts a new round drawing the [b]first[/b] hidden card. Only the owner can see it's number, and the opponent can only guess what is.",
                 "6": "For you see your hidden card, just hover the mouse on it.",
-                "7": "On your turn, you can do only one of 4 possible actions: [b]draw a number[/b], [b]stop[/b], [b]draw a power[/b] or [b]play a power[/b].",
-                "8": "To draw a number, click on the [color=#005eff]blue[/color] deck. That makes you draw the top card from the deck.",
+                "7": "On your turn, you can: [b]draw a number[/b] or [b]stop[/b].",
+                "8": "To draw a number, click on the [color=#005eff]blue[/color] deck. That makes you draw the top card from the stack. By the way, we both share the same deck.",
                 "9": "To stop, click on the bell. That makes you finish this round and the opponent can only do 1 more action before we check our numbers.",
-                "10": "When the round finishes, all hidden number cards are revealed and the numbers are counted to see who reached [b]21[/b] or closest to it. If both players pass 21, nobody wins the round.",
-                "11": "For the first round, let's ignore the deck on the left to make things simple.",
+                "10": "When the round finishes, all hidden number cards are revealed and the numbers are counted to see who reached [b]21[/b] or less. If both players pass 21, it's a tie.",
+                "11": "For the first round, let's ignore the other deck on the left to make things simple.",
                 "12": "Now let's start playing it!",
                 "13": "Well, I'm not drawing anymore cards. So I'll stop!",
                 "14": "Fantastic! You won the first round Alice.",
@@ -361,6 +361,7 @@
             "revive": "You got a [color=#f5fe05]second chance[/color]! But your relic was destroyed."
         },
         "relics": {
+            "choose": "Choose a relic:",
             "card_13": {
                 "title": "Card 13",
                 "flavor_txt": "My lucky number!",
@@ -447,7 +448,7 @@
             "card_tip": "This card is not in the main deck...",
             "protect": "[u]Protect[/u]\n\n\nProtect you from power cards that change your numbers for [color=#f5fe05]3[/color] turns.",
             "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck.",
-            "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number to your opponent.",
+            "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number from the deck to your opponent.",
             "return": "[u]Return[/u]\n\n\nDiscard your [color=#f5fe05]last face-up[/color] number card to the end of the deck.",
             "compel": "[u]Compel[/u]\n\n\nForces [color=#f5fe05]your opponent[/color] to discard their [color=#f5fe05]last face-up[/color] number card to the end of the deck.",
             "compel_error1": "{0} mistakely tried discard your hidden card.",

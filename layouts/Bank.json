@@ -1389,7 +1389,7 @@
 					"behaviors": {
 						"Pin": {
 							"properties": {
-								"destroy": false
+								"destroy": true
 							}
 						}
 					},
@@ -3255,9 +3255,9 @@
 				1
 			],
 			"backgroundColor": [
-				0,
-				0,
-				0,
+				0.47843137254901963,
+				0.47843137254901963,
+				0.47843137254901963,
 				1
 			],
 			"isTransparent": false,

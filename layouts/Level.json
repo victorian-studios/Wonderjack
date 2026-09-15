@@ -434,6 +434,39 @@
 					"subLayers": [],
 					"instances": [
 						{
+							"type": "Sprite2",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 1,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 354,
+							"sid": 570604283902659,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": -259,
+								"y": 1010,
+								"width": 144,
+								"height": 120,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									0.5
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
 							"type": "Deck_Numb_Sprite",
 							"properties": {
 								"initially-visible": true,
@@ -1187,7 +1220,7 @@
 					}
 				},
 				{
-					"type": "Txt_debug",
+					"type": "Txt_auto_math",
 					"properties": {
 						"text": "? + 99\n-----\n99",
 						"enable-bbcode": true,
@@ -2119,7 +2152,148 @@
 				{
 					"name": "Turn",
 					"overriden": 0,
-					"subLayers": [],
+					"subLayers": [
+						{
+							"name": "Change_Turn",
+							"overriden": 0,
+							"subLayers": [],
+							"instances": [
+								{
+									"type": "Bkg_Turn_Txt2",
+									"properties": {
+										"initially-visible": false,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 383,
+									"sid": 709513471877860,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Fade": {
+											"properties": {
+												"fade-in-time": 0,
+												"wait-time": 0,
+												"fade-out-time": 0,
+												"destroy": false,
+												"enabled": true,
+												"live-preview": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 959,
+										"y": 78.5,
+										"width": 799,
+										"height": 117,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											0.7
+										],
+										"z": 0,
+										"angle": 0
+									}
+								},
+								{
+									"type": "Text_Turn2",
+									"properties": {
+										"text": "Turno de Chapeleiro Maluco",
+										"enable-bbcode": true,
+										"font": "Alice-Regular",
+										"size": 46,
+										"line-height": 0,
+										"bold": false,
+										"italic": false,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"horizontal-alignment": "center",
+										"vertical-alignment": "center",
+										"wrapping": "word",
+										"text-direction": "ltr",
+										"icon-set": -1,
+										"initially-visible": false,
+										"origin": "top-left",
+										"read-aloud": false
+									},
+									"uid": 382,
+									"sid": 854107944391575,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Fade": {
+											"properties": {
+												"fade-in-time": 0,
+												"wait-time": 0,
+												"fade-out-time": 0,
+												"destroy": false,
+												"enabled": true,
+												"live-preview": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 573,
+										"y": 32,
+										"width": 774,
+										"height": 96,
+										"originX": 0,
+										"originY": 0,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0
+									}
+								}
+							],
+							"sid": 556925422591837,
+							"effectTypes": [],
+							"isInitiallyVisible": true,
+							"isInitiallyInteractive": true,
+							"isHTMLElementsLayer": false,
+							"color": [
+								1,
+								1,
+								1,
+								1
+							],
+							"backgroundColor": [
+								0.3686274509803922,
+								0.3686274509803922,
+								0.3686274509803922,
+								1
+							],
+							"isTransparent": true,
+							"sampling": "auto",
+							"parallaxX": 1,
+							"parallaxY": 1,
+							"scaleRate": 1,
+							"forceOwnTexture": false,
+							"renderingMode": "3d",
+							"drawOrder": "z-order",
+							"useRenderCells": false,
+							"blendMode": "normal",
+							"zElevation": 0,
+							"global": false
+						}
+					],
 					"instances": [
 						{
 							"type": "Bkg_Turn_Txt",
@@ -3071,7 +3245,170 @@
 				{
 					"name": "Choose_Relics",
 					"overriden": 0,
-					"subLayers": [],
+					"subLayers": [
+						{
+							"name": "Choose_Txt",
+							"overriden": 0,
+							"subLayers": [],
+							"instances": [
+								{
+									"type": "Bkg_Black_Common",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Animation 1",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 381,
+									"sid": 876956994845022,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {
+										"Fade": {
+											"properties": {
+												"fade-in-time": 0,
+												"wait-time": 0,
+												"fade-out-time": 0,
+												"destroy": false,
+												"enabled": false,
+												"live-preview": false
+											}
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 956,
+										"y": 123,
+										"width": 514.4788736027338,
+										"height": 159.52934713776062,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											0.7
+										],
+										"z": 0,
+										"angle": 0
+									}
+								},
+								{
+									"type": "Text_Static_Generic",
+									"properties": {
+										"text": "Escolha uma relíquia:",
+										"enable-bbcode": true,
+										"font": "Alice-Regular",
+										"size": 44,
+										"line-height": 0,
+										"bold": true,
+										"italic": false,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"horizontal-alignment": "center",
+										"vertical-alignment": "center",
+										"wrapping": "word",
+										"text-direction": "ltr",
+										"icon-set": -1,
+										"initially-visible": true,
+										"origin": "top-left",
+										"read-aloud": false
+									},
+									"uid": 379,
+									"sid": 265202187226503,
+									"tags": "",
+									"instanceVariables": {
+										"my_id": 0,
+										"my_txt": "relics.choose"
+									},
+									"behaviors": {},
+									"sceneGraphData": {
+										"parent-uid": null,
+										"uid": 379,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"d": true,
+											"a": true,
+											"o": false,
+											"v": false,
+											"sm": "normal"
+										},
+										"preview": {
+											"transformX": 0,
+											"transformY": 0,
+											"transformZ": 0,
+											"transformW": 0,
+											"transformH": 0,
+											"transformD": 0,
+											"transformA": 0,
+											"transformSX": 0,
+											"transformSY": 0,
+											"transformSZ": 0,
+											"transformO": 0,
+											"previewSceneGraph": false
+										}
+									},
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 711,
+										"y": 56,
+										"width": 487,
+										"height": 132.20929839391374,
+										"originX": 0,
+										"originY": 0,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0
+									}
+								}
+							],
+							"sid": 681071370582970,
+							"effectTypes": [],
+							"isInitiallyVisible": false,
+							"isInitiallyInteractive": true,
+							"isHTMLElementsLayer": false,
+							"color": [
+								1,
+								1,
+								1,
+								1
+							],
+							"backgroundColor": [
+								0.3686274509803922,
+								0.3686274509803922,
+								0.3686274509803922,
+								1
+							],
+							"isTransparent": true,
+							"sampling": "auto",
+							"parallaxX": 1,
+							"parallaxY": 1,
+							"scaleRate": 1,
+							"forceOwnTexture": false,
+							"renderingMode": "3d",
+							"drawOrder": "z-order",
+							"useRenderCells": false,
+							"blendMode": "normal",
+							"zElevation": 0,
+							"global": false
+						}
+					],
 					"instances": [
 						{
 							"type": "Relic_card",
@@ -3725,7 +4062,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
@@ -3776,10 +4113,10 @@
 							"world": {
 								"x": 624,
 								"y": 432,
-								"width": 116,
-								"height": 134,
-								"originX": 0.4918032786885246,
-								"originY": 0.4892086330935252,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -3794,7 +4131,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
@@ -3845,10 +4182,10 @@
 							"world": {
 								"x": 752,
 								"y": 432,
-								"width": 116,
-								"height": 134,
-								"originX": 0.4918032786885246,
-								"originY": 0.4892086330935252,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -3863,7 +4200,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 3,
 								"enable-collisions": true,
 								"live-preview": false
@@ -3914,10 +4251,10 @@
 							"world": {
 								"x": 880,
 								"y": 432,
-								"width": 116,
-								"height": 134,
-								"originX": 0.4918032786885246,
-								"originY": 0.4892086330935252,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -3932,7 +4269,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 4,
 								"enable-collisions": true,
 								"live-preview": false
@@ -3983,10 +4320,10 @@
 							"world": {
 								"x": 1008,
 								"y": 432,
-								"width": 116,
-								"height": 134,
-								"originX": 0.4918032786885246,
-								"originY": 0.4892086330935252,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4001,7 +4338,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 5,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4052,10 +4389,10 @@
 							"world": {
 								"x": 1136,
 								"y": 432,
-								"width": 116,
-								"height": 134,
-								"originX": 0.4918032786885246,
-								"originY": 0.4892086330935252,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4070,7 +4407,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 6,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4121,10 +4458,10 @@
 							"world": {
 								"x": 1264,
 								"y": 432,
-								"width": 116,
-								"height": 134,
-								"originX": 0.4918032786885246,
-								"originY": 0.4892086330935252,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4139,7 +4476,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 7,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4190,10 +4527,10 @@
 							"world": {
 								"x": 624,
 								"y": 576,
-								"width": 112,
-								"height": 132,
-								"originX": 0.4745762711864407,
-								"originY": 0.4927536231884058,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4208,7 +4545,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 8,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4259,10 +4596,10 @@
 							"world": {
 								"x": 752,
 								"y": 576,
-								"width": 112,
-								"height": 132,
-								"originX": 0.4745762711864407,
-								"originY": 0.4927536231884058,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4277,7 +4614,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 9,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4328,10 +4665,10 @@
 							"world": {
 								"x": 880,
 								"y": 576,
-								"width": 112,
-								"height": 132,
-								"originX": 0.4745762711864407,
-								"originY": 0.4927536231884058,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4346,7 +4683,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 10,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4397,10 +4734,10 @@
 							"world": {
 								"x": 1008,
 								"y": 576,
-								"width": 112,
-								"height": 132,
-								"originX": 0.4745762711864407,
-								"originY": 0.4927536231884058,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4415,7 +4752,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 11,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4466,10 +4803,10 @@
 							"world": {
 								"x": 1136,
 								"y": 576,
-								"width": 112,
-								"height": 132,
-								"originX": 0.4745762711864407,
-								"originY": 0.4927536231884058,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -4484,7 +4821,7 @@
 							"type": "Card_Numb_Old",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
+								"initial-animation": "Front2",
 								"initial-frame": 12,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4535,10 +4872,10 @@
 							"world": {
 								"x": 1264,
 								"y": 576,
-								"width": 112,
-								"height": 132,
-								"originX": 0.4745762711864407,
-								"originY": 0.4927536231884058,
+								"width": 113.6,
+								"height": 127.8,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,

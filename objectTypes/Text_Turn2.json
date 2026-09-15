@@ -1,0 +1,16 @@
+{
+	"name": "Text_Turn2",
+	"plugin-id": "Text",
+	"sid": 227735539399308,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 243650772804924
+		}
+	],
+	"effectTypes": []
+}

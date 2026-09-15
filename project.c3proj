@@ -107,13 +107,6 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "shadowlight",
-			"name": "Shadow light",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -267,7 +260,7 @@
 			"Icon_Hidden_Card",
 			"A_NumbersEnemy",
 			"A_NumbersPlayer",
-			"Txt_debug",
+			"Txt_auto_math",
 			"Text_Relic_Info",
 			"Bkg_Relic_Info_Txt",
 			"Toggle_Options_Numbers",
@@ -328,7 +321,6 @@
 			"degrade",
 			"TiledBackground",
 			"Effect_Smoke",
-			"ShadowLight",
 			"Effect_Light",
 			"demo_end",
 			"Btn_Back_2",
@@ -348,7 +340,10 @@
 			"blim",
 			"Sprite",
 			"Card_Pos",
-			"Btn_Next"
+			"Btn_Next",
+			"Sprite2",
+			"Text_Turn2",
+			"Bkg_Turn_Txt2"
 		],
 		"subfolders": []
 	},
