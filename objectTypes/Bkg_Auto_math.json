@@ -1,7 +1,7 @@
 {
-	"name": "Bkg_Turn_Txt",
+	"name": "Bkg_Auto_math",
 	"plugin-id": "Sprite",
-	"sid": 350103432036750,
+	"sid": 770538317649262,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,7 +9,12 @@
 		{
 			"behaviorId": "Fade",
 			"name": "Fade",
-			"sid": 941747946938398
+			"sid": 505926376292357
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 325730606511446
 		}
 	],
 	"effectTypes": [],
@@ -26,13 +31,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9836167,
+						"imageSpriteId": 6854540,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 803520181626645,
+				"sid": 907907621602773,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

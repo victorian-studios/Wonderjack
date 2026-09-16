@@ -625,32 +625,41 @@
 									}
 								},
 								{
-									"id": "set-visible",
+									"id": "tween-one-property",
 									"objectClass": "Txt_auto_math",
-									"sid": 903078163944422,
+									"sid": 891405093091016,
+									"behaviorType": "Tween",
 									"parameters": {
-										"visibility": "visible"
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "Opt_FastMode = 1 ? 0.5 : 1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Bkg_Auto_math",
+									"sid": 535624287534421,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "70",
+										"time": "Opt_FastMode = 1 ? 0.5 : 1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
 									}
 								}
 							],
 							"sid": 603726903495958
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 175498788541178,
-									"parameters": {
-										"first-value": "LayoutName",
-										"comparison": 0,
-										"second-value": "\"Level\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 791191968543344
 						}
 					]
 				},
@@ -5443,11 +5452,37 @@
 													}
 												},
 												{
-													"id": "set-visible",
+													"id": "tween-one-property",
 													"objectClass": "Txt_auto_math",
-													"sid": 745858778828141,
+													"sid": 839423835285887,
+													"behaviorType": "Tween",
 													"parameters": {
-														"visibility": "visible"
+														"tags": "\"\"",
+														"property": "offsetOpacity",
+														"end-value": "100",
+														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "Bkg_Auto_math",
+													"sid": 909240488176540,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "offsetOpacity",
+														"end-value": "70",
+														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
 													}
 												},
 												{
@@ -5494,11 +5529,37 @@
 													}
 												},
 												{
-													"id": "set-visible",
+													"id": "tween-one-property",
 													"objectClass": "Txt_auto_math",
-													"sid": 423369778391987,
+													"sid": 536942219280603,
+													"behaviorType": "Tween",
 													"parameters": {
-														"visibility": "invisible"
+														"tags": "\"\"",
+														"property": "offsetOpacity",
+														"end-value": "0",
+														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
+													"id": "tween-one-property",
+													"objectClass": "Bkg_Auto_math",
+													"sid": 803161892234659,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "offsetOpacity",
+														"end-value": "0",
+														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
 													}
 												},
 												{

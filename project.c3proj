@@ -221,8 +221,8 @@
 			"Browser",
 			"Relics",
 			"Enemy",
-			"Bkg_Turn_Txt",
-			"Text_Turn",
+			"Bkg_Round_Txt",
+			"Text_Round",
 			"Btn_Stop",
 			"Hand_CPU",
 			"A_EnemyPowers",
@@ -343,7 +343,8 @@
 			"Btn_Next",
 			"Sprite2",
 			"Text_Turn2",
-			"Bkg_Turn_Txt2"
+			"Bkg_Turn_Txt2",
+			"Bkg_Auto_math"
 		],
 		"subfolders": []
 	},

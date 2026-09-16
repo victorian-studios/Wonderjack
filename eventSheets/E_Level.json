@@ -559,9 +559,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "Txt_auto_math",
-					"sid": 124939329700527,
+					"sid": 645785599760027,
 					"parameters": {
-						"text": "\"\""
+						"text": "\"...\""
 					}
 				},
 				{
@@ -987,6 +987,10 @@
 					"sid": 473694562144031,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "Branco - Branco"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -1014,13 +1018,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 520959377955132,
+									"sid": 867845044934352,
 									"parameters": {
-										"text": "\"? + \"&Table_CPU.Visible_Count & newline&\"-----\"&newline&PlayerNumbers"
+										"text": "\"? + \" & Table_CPU.Visible_Count & newline & \"\" & \"-----\" & newline & \"\" & PlayerNumbers & \"\""
 									}
 								}
 							],
 							"sid": 802955565015903
+						},
+						{
+							"eventType": "comment",
+							"text": "Vermelho - Branco"
 						},
 						{
 							"eventType": "block",
@@ -1050,13 +1058,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 294489027178869,
+									"sid": 758194426966346,
 									"parameters": {
-										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\"&newline&PlayerNumbers"
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\" & newline & \"\" & PlayerNumbers & \"\""
 									}
 								}
 							],
 							"sid": 345731666173912
+						},
+						{
+							"eventType": "comment",
+							"text": "Branco - Verde"
 						},
 						{
 							"eventType": "block",
@@ -1086,13 +1098,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 133613942613073,
+									"sid": 314057566373698,
 									"parameters": {
-										"text": "\"? + \"&Table_CPU.Visible_Count & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"? + \"&Table_CPU.Visible_Count & \"\" & newline &\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
 							"sid": 252549590355650
+						},
+						{
+							"eventType": "comment",
+							"text": "Vermelho - Verde"
 						},
 						{
 							"eventType": "block",
@@ -1122,13 +1138,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 105693635074315,
+									"sid": 751590108602225,
 									"parameters": {
-										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline & \"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
 							"sid": 128105452456962
+						},
+						{
+							"eventType": "comment",
+							"text": "Vermelho - Vermelho"
 						},
 						{
 							"eventType": "block",
@@ -1158,13 +1178,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 221595766523850,
+									"sid": 454248520340240,
 									"parameters": {
 										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
 							"sid": 164283878152010
+						},
+						{
+							"eventType": "comment",
+							"text": "Branco - Vermelho"
 						},
 						{
 							"eventType": "block",
@@ -1194,9 +1218,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 552038115876421,
+									"sid": 351511324241366,
 									"parameters": {
-										"text": "\"? + \"&Table_CPU.Visible_Count & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"? + \"&Table_CPU.Visible_Count & \"[/outline]\" & newline &\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
@@ -1225,6 +1249,10 @@
 					"sid": 738874963179581,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "Branco - Branco"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -1252,13 +1280,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 672882959392956,
+									"sid": 311425573076716,
 									"parameters": {
-										"text": "EnemyNumbers & newline&\"-----\"&newline&PlayerNumbers"
+										"text": "\"\" & EnemyNumbers & newline & \"\" & \"-----\" & newline & \"\" & PlayerNumbers & \"\""
 									}
 								}
 							],
 							"sid": 900299819075106
+						},
+						{
+							"eventType": "comment",
+							"text": "Vermelho - Branco"
 						},
 						{
 							"eventType": "block",
@@ -1288,13 +1320,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 928296194557634,
+									"sid": 672150827145628,
 									"parameters": {
-										"text": "\"[color=#ff0000]\"& EnemyNumbers & \"[/color]\" & newline&\"-----\"&newline&PlayerNumbers"
+										"text": "\"[color=#ff0000]\" & EnemyNumbers & \"[/color]\" & newline&\"-----\" & newline & \"\" & PlayerNumbers & \"\""
 									}
 								}
 							],
 							"sid": 543140070782580
+						},
+						{
+							"eventType": "comment",
+							"text": "Branco - Verde"
 						},
 						{
 							"eventType": "block",
@@ -1324,13 +1360,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 367854907555032,
+									"sid": 677156318251968,
 									"parameters": {
-										"text": "EnemyNumbers & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"\"& EnemyNumbers & \"\" & newline &\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
 							"sid": 513467177924268
+						},
+						{
+							"eventType": "comment",
+							"text": "Vermelho - Verde"
 						},
 						{
 							"eventType": "block",
@@ -1360,13 +1400,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 408029546356291,
+									"sid": 116563411386815,
 									"parameters": {
-										"text": "\"[color=#ff0000]\"& EnemyNumbers & \"[/color]\" & newline&\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"[color=#ff0000]\" & EnemyNumbers & \"[/color]\" & newline & \"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
 							"sid": 605335343185676
+						},
+						{
+							"eventType": "comment",
+							"text": "Vermelho - Vermelho"
 						},
 						{
 							"eventType": "block",
@@ -1396,13 +1440,17 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 757497317419976,
+									"sid": 590458245235816,
 									"parameters": {
 										"text": "\"[color=#ff0000]\" & EnemyNumbers & \"[/color]\" & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
 							"sid": 347051402037134
+						},
+						{
+							"eventType": "comment",
+							"text": "Branco - Vermelho"
 						},
 						{
 							"eventType": "block",
@@ -1432,9 +1480,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 770678054367120,
+									"sid": 134319941846756,
 									"parameters": {
-										"text": "EnemyNumbers & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"\" & EnemyNumbers & \"\" & newline &\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
@@ -5011,7 +5059,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 443210870961915,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5020,7 +5068,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 611125856852325,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5029,7 +5077,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 303562002406791,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5038,13 +5086,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 317720324745633,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 418789161413917,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"powers.card_tip\")"
@@ -5052,7 +5100,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 279408605914074,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5061,7 +5109,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 375650957937137,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5070,7 +5118,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 343752663255609,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5079,7 +5127,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 417255207371460,
 															"behaviorType": "Fade"
 														},
@@ -5474,7 +5522,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 927314602655040,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5483,7 +5531,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 202928525355442,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5492,7 +5540,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 643360240051428,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5501,13 +5549,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 993075308980567,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 909092203848837,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"powers.card_tip\")"
@@ -5515,7 +5563,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 563975969494888,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5524,7 +5572,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 115291813090873,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5533,7 +5581,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 458448525423632,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -5542,7 +5590,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 443873481080896,
 															"behaviorType": "Fade"
 														},
@@ -6407,7 +6455,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 209953929392369,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6416,7 +6464,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 249817286994564,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6425,7 +6473,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 396867146063163,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6434,13 +6482,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 877793170649716,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 109502960327180,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"powers.card_tip\")"
@@ -6448,7 +6496,7 @@
 														},
 														{
 															"id": "set-visible",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 343005818407275,
 															"parameters": {
 																"visibility": "visible"
@@ -6456,7 +6504,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 858507656114587,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6465,7 +6513,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 607932286877238,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6474,7 +6522,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 374656893222800,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6483,7 +6531,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 274327506161789,
 															"behaviorType": "Fade"
 														},
@@ -6877,7 +6925,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 516033712170644,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6886,7 +6934,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 462525752514761,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6895,7 +6943,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 252775531150810,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6904,13 +6952,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 659473522719010,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 905583336472910,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"powers.card_tip\")"
@@ -6918,7 +6966,7 @@
 														},
 														{
 															"id": "set-visible",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 517531603511175,
 															"parameters": {
 																"visibility": "visible"
@@ -6926,7 +6974,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 259197550077653,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6935,7 +6983,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 374709378941162,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6944,7 +6992,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 362708379629363,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -6953,7 +7001,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 282730109167354,
 															"behaviorType": "Fade"
 														},
@@ -7406,7 +7454,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 326171898389634,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7415,7 +7463,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 766744752045539,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7424,7 +7472,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 985159117111300,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7433,13 +7481,13 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 157634909555505,
 													"behaviorType": "Fade"
 												},
 												{
 													"id": "set-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 127452747607653,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"powers.compel_error2\", EnemyNameTurns)"
@@ -7447,7 +7495,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 774631341965478,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7456,7 +7504,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 865070998668478,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7465,7 +7513,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 148972169802864,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7474,7 +7522,7 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 128669133777166,
 													"behaviorType": "Fade"
 												}
@@ -7502,7 +7550,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 844731429543008,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7511,7 +7559,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 805301402213381,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7520,7 +7568,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 888896292125664,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7529,13 +7577,13 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 619653567340388,
 													"behaviorType": "Fade"
 												},
 												{
 													"id": "set-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 189117940990861,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"powers.compel_error2\")"
@@ -7543,7 +7591,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 793937271359619,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7552,7 +7600,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 755053098011736,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7561,7 +7609,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 577680442156744,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7570,7 +7618,7 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 515635261290547,
 													"behaviorType": "Fade"
 												}
@@ -7734,7 +7782,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 790585675658598,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7743,7 +7791,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 508905062566467,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7752,7 +7800,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 438032411617066,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7761,13 +7809,13 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 132010524502431,
 													"behaviorType": "Fade"
 												},
 												{
 													"id": "set-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 312310338542739,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"powers.compel_error3\", EnemyNameTurns)"
@@ -7775,7 +7823,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 563475565789908,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7784,7 +7832,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 346631272354003,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7793,7 +7841,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 697998345745943,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7802,7 +7850,7 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 664446822014939,
 													"behaviorType": "Fade"
 												}
@@ -7830,7 +7878,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 436421225359693,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7839,7 +7887,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 533020684011212,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7848,7 +7896,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 850153174277044,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7857,13 +7905,13 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 857460485775415,
 													"behaviorType": "Fade"
 												},
 												{
 													"id": "set-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 696668725411749,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"powers.compel_error4\", EnemyNameTurns)"
@@ -7871,7 +7919,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 392585061870666,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7880,7 +7928,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 956322324888653,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7889,7 +7937,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 861162802899205,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -7898,7 +7946,7 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 816542420347089,
 													"behaviorType": "Fade"
 												}
@@ -15187,7 +15235,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 392920284912194,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15196,7 +15244,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 483816167085888,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15205,7 +15253,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 848867889823283,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15214,13 +15262,13 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 147809616817937,
 											"behaviorType": "Fade"
 										},
 										{
 											"id": "set-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 804444787844486,
 											"parameters": {
 												"text": "Internationalization.Lookup(\"powers.clairvoyance_player\", A_Deck_Numb.At(0), A_Deck_Numb.At(1) )"
@@ -15228,7 +15276,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 339719314636074,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15237,7 +15285,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 173659588457277,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15246,7 +15294,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 144376010269569,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15255,7 +15303,7 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 864404974527661,
 											"behaviorType": "Fade"
 										},
@@ -15315,7 +15363,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 466485503690171,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15324,7 +15372,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 931246218260563,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15333,7 +15381,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 927863598620352,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15342,13 +15390,13 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 746815880918568,
 											"behaviorType": "Fade"
 										},
 										{
 											"id": "set-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 931669904550066,
 											"parameters": {
 												"text": "Internationalization.Lookup(\"powers.clairvoyance_cpu\", EnemyNameTurns)"
@@ -15356,7 +15404,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 959372053499460,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15365,7 +15413,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 769628322450335,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15374,7 +15422,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 539001791741777,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -15383,7 +15431,7 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 136738224305284,
 											"behaviorType": "Fade"
 										},
@@ -15712,13 +15760,13 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Card_Power",
-							"sid": 413274130591458,
+							"sid": 536841133619817,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"rise\"",
 								"property": "position",
 								"end-x": "Self.X",
-								"end-y": "Hand_Player.Y - 175",
+								"end-y": "Hand_Player.Y - 140",
 								"time": "0.2",
 								"ease": "default",
 								"destroy-on-complete": "no",
@@ -19417,11 +19465,37 @@
 																	"behaviorType": "Fade"
 																},
 																{
-																	"id": "set-opacity",
+																	"id": "tween-one-property",
 																	"objectClass": "Txt_auto_math",
-																	"sid": 903882394434004,
+																	"sid": 978030204871970,
+																	"behaviorType": "Tween",
 																	"parameters": {
-																		"opacity": "100"
+																		"tags": "\"\"",
+																		"property": "offsetOpacity",
+																		"end-value": "100",
+																		"time": "1",
+																		"ease": "default",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
+																},
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "Bkg_Auto_math",
+																	"sid": 223011905848850,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"\"",
+																		"property": "offsetOpacity",
+																		"end-value": "70",
+																		"time": "1",
+																		"ease": "default",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
 																	}
 																}
 															],
@@ -20458,7 +20532,7 @@
 									"actions": [
 										{
 											"id": "typewriter-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 924324184862845,
 											"parameters": {
 												"text": "Internationalization.Lookup(\"common.new_round\", GameRound)",
@@ -20644,7 +20718,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "Text_Turn",
+									"objectClass": "Text_Round",
 									"sid": 898078972295296,
 									"parameters": {
 										"visibility": "visible"
@@ -20652,7 +20726,7 @@
 								},
 								{
 									"id": "set-fade-in-time",
-									"objectClass": "Text_Turn",
+									"objectClass": "Text_Round",
 									"sid": 264583210763451,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -20661,7 +20735,7 @@
 								},
 								{
 									"id": "set-wait-time",
-									"objectClass": "Text_Turn",
+									"objectClass": "Text_Round",
 									"sid": 769963642656945,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -20670,7 +20744,7 @@
 								},
 								{
 									"id": "set-fade-out-time",
-									"objectClass": "Text_Turn",
+									"objectClass": "Text_Round",
 									"sid": 534378105158232,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -20679,13 +20753,13 @@
 								},
 								{
 									"id": "restart-fade",
-									"objectClass": "Text_Turn",
+									"objectClass": "Text_Round",
 									"sid": 773084757810097,
 									"behaviorType": "Fade"
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "Bkg_Turn_Txt",
+									"objectClass": "Bkg_Round_Txt",
 									"sid": 326796366006713,
 									"parameters": {
 										"visibility": "visible"
@@ -20693,7 +20767,7 @@
 								},
 								{
 									"id": "set-fade-in-time",
-									"objectClass": "Bkg_Turn_Txt",
+									"objectClass": "Bkg_Round_Txt",
 									"sid": 616084746600465,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -20702,7 +20776,7 @@
 								},
 								{
 									"id": "set-wait-time",
-									"objectClass": "Bkg_Turn_Txt",
+									"objectClass": "Bkg_Round_Txt",
 									"sid": 723848100896870,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -20711,7 +20785,7 @@
 								},
 								{
 									"id": "set-fade-out-time",
-									"objectClass": "Bkg_Turn_Txt",
+									"objectClass": "Bkg_Round_Txt",
 									"sid": 261388535801599,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -20720,7 +20794,7 @@
 								},
 								{
 									"id": "restart-fade",
-									"objectClass": "Bkg_Turn_Txt",
+									"objectClass": "Bkg_Round_Txt",
 									"sid": 377720914773952,
 									"behaviorType": "Fade"
 								}
@@ -21154,7 +21228,7 @@
 									"actions": [
 										{
 											"id": "set-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 209742610371411,
 											"parameters": {
 												"text": "Internationalization.Lookup(\"common.tie\", PlayerNumbers, EnemyNameTurns, EnemyNumbers)"
@@ -21188,7 +21262,7 @@
 									"actions": [
 										{
 											"id": "set-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 606364707020239,
 											"parameters": {
 												"text": "Internationalization.Lookup(\"common.round_result\", PlayerNumbers, EnemyNameTurns, EnemyNumbers, winner)"
@@ -21266,14 +21340,14 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 924860801935570,
+									"sid": 125968015730081,
 									"parameters": {
-										"text": "\"\""
+										"text": "\"...\""
 									}
 								},
 								{
 									"id": "typewriter-text",
-									"objectClass": "Text_Turn",
+									"objectClass": "Text_Round",
 									"sid": 499841789302995,
 									"parameters": {
 										"text": "Internationalization.Lookup(\"common.points\", PlayerPoints, EnemyNameTurns, EnemyPoints)",
@@ -21370,7 +21444,7 @@
 													"actions": [
 														{
 															"id": "typewriter-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 699353575958560,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"common.winner\")",
@@ -21388,7 +21462,7 @@
 														},
 														{
 															"id": "typewriter-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 505692585255933,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"common.end\")",
@@ -21406,7 +21480,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 837181299736209,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -21415,7 +21489,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 954962579636821,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -21424,7 +21498,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 658240190004941,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -21433,13 +21507,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 336242354889653,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 973509999588547,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -21448,7 +21522,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 725134934546870,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -21457,7 +21531,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 963966338885865,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -21466,7 +21540,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 126025519277042,
 															"behaviorType": "Fade"
 														},
@@ -21550,7 +21624,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 551470372006947,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21559,7 +21633,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 513786989883847,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21568,7 +21642,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 823462348143754,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21577,13 +21651,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 581061500629690,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 590410060873930,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21592,7 +21666,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 393867480395651,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21601,7 +21675,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 481626092419753,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21610,7 +21684,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 148438189424821,
 																	"behaviorType": "Fade"
 																},
@@ -21684,7 +21758,7 @@
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 547657568910502,
 																	"parameters": {
 																		"visibility": "visible"
@@ -21692,7 +21766,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 375200238318773,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21701,7 +21775,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 466668634311002,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21710,7 +21784,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 609457186520105,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21719,13 +21793,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 360224923870945,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 695477060858779,
 																	"parameters": {
 																		"visibility": "visible"
@@ -21733,7 +21807,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 933497546707548,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21742,7 +21816,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 417732673861010,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21751,7 +21825,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 575175627669895,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -21760,7 +21834,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 480205463236821,
 																	"behaviorType": "Fade"
 																},
@@ -22148,7 +22222,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 429875254980441,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -22157,7 +22231,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 648757247906861,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -22166,7 +22240,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 238400510257424,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -22175,13 +22249,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 565238493414226,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-visible",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 459787910654506,
 															"parameters": {
 																"visibility": "visible"
@@ -22189,7 +22263,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 537799753655602,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -22198,7 +22272,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 404567000656860,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -22207,7 +22281,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 185999271430340,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -22216,7 +22290,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 856630208584284,
 															"behaviorType": "Fade"
 														},
@@ -22328,7 +22402,7 @@
 														},
 														{
 															"id": "typewriter-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 835987746609544,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"common.revive\")",
@@ -22486,7 +22560,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 632883334378739,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22495,7 +22569,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 323575482833358,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22504,7 +22578,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 921973134214683,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22513,13 +22587,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 702818871745808,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 106189436341334,
 																	"parameters": {
 																		"visibility": "visible"
@@ -22527,7 +22601,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 994314449540183,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22536,7 +22610,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 873535053687132,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22545,7 +22619,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 123154544523402,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22554,7 +22628,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 811059838624491,
 																	"behaviorType": "Fade"
 																},
@@ -22640,7 +22714,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 117854138963445,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22649,7 +22723,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 235249630106118,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22658,7 +22732,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 304076217123645,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22667,13 +22741,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 470154256158550,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 500351008572206,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22682,7 +22756,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 940578732479880,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22691,7 +22765,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 463906981789878,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22700,7 +22774,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 974536000987076,
 																	"behaviorType": "Fade"
 																},
@@ -22765,7 +22839,7 @@
 																},
 																{
 																	"id": "typewriter-text",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 259076304214700,
 																	"parameters": {
 																		"text": "Internationalization.Lookup(\"common.looser\")",
@@ -22792,7 +22866,7 @@
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 362612048028751,
 																	"parameters": {
 																		"visibility": "visible"
@@ -22800,7 +22874,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 319129755713872,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22809,7 +22883,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 600350944944209,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22818,7 +22892,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 916070879709965,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22827,13 +22901,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 154159916021292,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 625392690525937,
 																	"parameters": {
 																		"visibility": "visible"
@@ -22841,7 +22915,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 992646906110902,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22850,7 +22924,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 288174851121623,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22859,7 +22933,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 469298960223963,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -22868,7 +22942,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 520217052623127,
 																	"behaviorType": "Fade"
 																},
@@ -23021,7 +23095,7 @@
 													"actions": [
 														{
 															"id": "typewriter-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 718731730812929,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"common.winner\")",
@@ -23039,7 +23113,7 @@
 														},
 														{
 															"id": "typewriter-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 114613797429740,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"common.end\")",
@@ -23057,7 +23131,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 978546700464556,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -23066,7 +23140,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 922224639332241,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -23075,7 +23149,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 123457249756025,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -23084,13 +23158,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 358439654138627,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 665978189931823,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -23099,7 +23173,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 336233245806122,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -23108,7 +23182,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 347088265019401,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -23117,7 +23191,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 951171460132703,
 															"behaviorType": "Fade"
 														},
@@ -23201,7 +23275,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 275542686013787,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23210,7 +23284,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 879701295642854,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23219,7 +23293,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 255562577733141,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23228,13 +23302,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 618778215906296,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 591472009952135,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23243,7 +23317,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 299698901765287,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23252,7 +23326,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 257277724424193,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23261,7 +23335,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 280300227846593,
 																	"behaviorType": "Fade"
 																},
@@ -23349,7 +23423,7 @@
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 869532833094595,
 																	"parameters": {
 																		"visibility": "visible"
@@ -23357,7 +23431,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 786736453408297,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23366,7 +23440,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 153548244582928,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23375,7 +23449,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 189885084073082,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23384,13 +23458,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 917525530728520,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 367537522369036,
 																	"parameters": {
 																		"visibility": "visible"
@@ -23398,7 +23472,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 751996144579395,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23407,7 +23481,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 889137722410424,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23416,7 +23490,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 544239987909683,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23425,7 +23499,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 221214997142688,
 																	"behaviorType": "Fade"
 																},
@@ -23672,7 +23746,7 @@
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 445359129387524,
 																	"parameters": {
 																		"visibility": "visible"
@@ -23680,7 +23754,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 274690948758109,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23689,7 +23763,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 938406887536030,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23698,7 +23772,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 841616274480529,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23707,13 +23781,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 448484159905383,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 897498663343624,
 																	"parameters": {
 																		"visibility": "visible"
@@ -23721,7 +23795,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 660814435786832,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23730,7 +23804,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 807886283260878,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23739,7 +23813,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 373459563743852,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -23748,7 +23822,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 913932480523877,
 																	"behaviorType": "Fade"
 																},
@@ -24211,7 +24285,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 827025296531093,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -24220,7 +24294,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 549539817006859,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -24229,7 +24303,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 377151718085328,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -24238,13 +24312,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 549134616611479,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-visible",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 315868658176731,
 															"parameters": {
 																"visibility": "visible"
@@ -24252,7 +24326,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 467680576224960,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -24261,7 +24335,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 281760800559992,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -24270,7 +24344,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 842998972876852,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -24279,7 +24353,7 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 374661040987481,
 															"behaviorType": "Fade"
 														},
@@ -24578,7 +24652,7 @@
 														},
 														{
 															"id": "typewriter-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 415361067730511,
 															"parameters": {
 																"text": "Internationalization.Lookup(\"common.revive\")",
@@ -24746,7 +24820,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 818847550292980,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24755,7 +24829,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 664430428884995,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24764,7 +24838,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 463723695000621,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24773,13 +24847,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 848930100187291,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 480985549832235,
 																	"parameters": {
 																		"visibility": "visible"
@@ -24787,7 +24861,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 837759952003152,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24796,7 +24870,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 613457515496854,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24805,7 +24879,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 532659499561254,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24814,7 +24888,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 145697473762552,
 																	"behaviorType": "Fade"
 																},
@@ -24900,7 +24974,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 923682559857014,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24909,7 +24983,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 846714371312739,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24918,7 +24992,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 114327970332012,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24927,13 +25001,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 603307854286210,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 648163021313228,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24942,7 +25016,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 298488677810407,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24951,7 +25025,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 661070282283700,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -24960,7 +25034,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 799005083724055,
 																	"behaviorType": "Fade"
 																},
@@ -25025,7 +25099,7 @@
 																},
 																{
 																	"id": "typewriter-text",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 377369188795115,
 																	"parameters": {
 																		"text": "Internationalization.Lookup(\"common.looser\")",
@@ -25052,7 +25126,7 @@
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 848462119165241,
 																	"parameters": {
 																		"visibility": "visible"
@@ -25060,7 +25134,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 798560146223580,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -25069,7 +25143,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 682967000478434,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -25078,7 +25152,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 494781631216787,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -25087,13 +25161,13 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Text_Turn",
+																	"objectClass": "Text_Round",
 																	"sid": 110321064087359,
 																	"behaviorType": "Fade"
 																},
 																{
 																	"id": "set-visible",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 386471880937658,
 																	"parameters": {
 																		"visibility": "visible"
@@ -25101,7 +25175,7 @@
 																},
 																{
 																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 375941090983845,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -25110,7 +25184,7 @@
 																},
 																{
 																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 573194170194059,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -25119,7 +25193,7 @@
 																},
 																{
 																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 873067617491426,
 																	"behaviorType": "Fade",
 																	"parameters": {
@@ -25128,7 +25202,7 @@
 																},
 																{
 																	"id": "restart-fade",
-																	"objectClass": "Bkg_Turn_Txt",
+																	"objectClass": "Bkg_Round_Txt",
 																	"sid": 156416372755212,
 																	"behaviorType": "Fade"
 																},
@@ -25240,51 +25314,6 @@
 										}
 									],
 									"sid": 160109475311223
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-on-screen",
-											"objectClass": "Effect_Smoke",
-											"sid": 722138065209175
-										}
-									],
-									"actions": [
-										{
-											"id": "set-fade-in-time",
-											"objectClass": "Effect_Smoke",
-											"sid": 439984990893655,
-											"behaviorType": "Fade",
-											"parameters": {
-												"fade-in-time": "0"
-											}
-										},
-										{
-											"id": "set-fade-out-time",
-											"objectClass": "Effect_Smoke",
-											"sid": 503607387700300,
-											"behaviorType": "Fade",
-											"parameters": {
-												"fade-out-time": "Opt_FastMode = 1 ? 0.5 : 1"
-											}
-										},
-										{
-											"id": "restart-fade",
-											"objectClass": "Effect_Smoke",
-											"sid": 882702391075231,
-											"behaviorType": "Fade"
-										},
-										{
-											"id": "set-opacity",
-											"objectClass": "Txt_auto_math",
-											"sid": 937735839048374,
-											"parameters": {
-												"opacity": "100"
-											}
-										}
-									],
-									"sid": 414468162644846
 								}
 							]
 						},
@@ -25423,6 +25452,77 @@
 											"isOrBlock": true
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "Effect_Smoke",
+											"sid": 935030614113826
+										}
+									],
+									"actions": [
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Effect_Smoke",
+											"sid": 642605429876241,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Effect_Smoke",
+											"sid": 776034512247525,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "Opt_FastMode = 1 ? 0.5 : 1"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Effect_Smoke",
+											"sid": 201724415881812,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Txt_auto_math",
+											"sid": 958986265832418,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "100",
+												"time": "Opt_FastMode = 1 ? 0.5 : 1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Bkg_Auto_math",
+											"sid": 561299447141090,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "70",
+												"time": "Opt_FastMode = 1 ? 0.5 : 1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 632042478047184
 								}
 							]
 						},
@@ -26431,7 +26531,7 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 251033121801906,
 											"parameters": {
 												"visibility": "visible"
@@ -26439,7 +26539,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 227561019894995,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26448,7 +26548,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 723294626608161,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26457,7 +26557,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 256189275131158,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26466,13 +26566,13 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 313783722283412,
 											"behaviorType": "Fade"
 										},
 										{
 											"id": "set-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 960976838287114,
 											"parameters": {
 												"text": "\"\""
@@ -26480,7 +26580,7 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 949706698824114,
 											"parameters": {
 												"visibility": "visible"
@@ -26488,7 +26588,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 916176751956678,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26497,7 +26597,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 878840649818636,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26506,7 +26606,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 566122612093714,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26515,7 +26615,7 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 349924859343016,
 											"behaviorType": "Fade"
 										}
@@ -26543,7 +26643,7 @@
 											"actions": [
 												{
 													"id": "typewriter-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 293762235547770,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"common.tut_start\")",
@@ -26603,7 +26703,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 684740069565668,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -26612,7 +26712,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 567847241609108,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -26621,7 +26721,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 437089834934418,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -26630,13 +26730,13 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 317249404961103,
 													"behaviorType": "Fade"
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 788879166362200,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -26645,7 +26745,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 798636928321169,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -26654,7 +26754,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 128731265418892,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -26663,7 +26763,7 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 924071966879070,
 													"behaviorType": "Fade"
 												},
@@ -26769,7 +26869,7 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 591969717214099,
 											"parameters": {
 												"visibility": "visible"
@@ -26777,7 +26877,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 921525584237893,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26786,7 +26886,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 799151056983513,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26795,7 +26895,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 542490012887358,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26804,13 +26904,13 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 436118221918764,
 											"behaviorType": "Fade"
 										},
 										{
 											"id": "set-text",
-											"objectClass": "Text_Turn",
+											"objectClass": "Text_Round",
 											"sid": 631664947438556,
 											"parameters": {
 												"text": "\"\""
@@ -26818,7 +26918,7 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 634534158588206,
 											"parameters": {
 												"visibility": "visible"
@@ -26826,7 +26926,7 @@
 										},
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 835763952204479,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26835,7 +26935,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 465101543475273,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26844,7 +26944,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 309129383697987,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -26853,7 +26953,7 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Bkg_Turn_Txt",
+											"objectClass": "Bkg_Round_Txt",
 											"sid": 852791027511469,
 											"behaviorType": "Fade"
 										},
@@ -26917,7 +27017,7 @@
 												},
 												{
 													"id": "typewriter-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 505503303008620,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"common.new_match\", EnemyNameTurns)",
@@ -27065,7 +27165,7 @@
 												},
 												{
 													"id": "typewriter-text",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 139484721087704,
 													"parameters": {
 														"text": "Internationalization.Lookup(\"common.new_match\", EnemyNameTurns)",
@@ -27192,7 +27292,7 @@
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 879817964667877,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -27201,7 +27301,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 490213587780506,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -27210,7 +27310,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 608533104832484,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -27219,13 +27319,13 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Text_Turn",
+													"objectClass": "Text_Round",
 													"sid": 483009547815719,
 													"behaviorType": "Fade"
 												},
 												{
 													"id": "set-fade-in-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 127534699091035,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -27234,7 +27334,7 @@
 												},
 												{
 													"id": "set-wait-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 275988663759172,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -27243,7 +27343,7 @@
 												},
 												{
 													"id": "set-fade-out-time",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 387421074334767,
 													"behaviorType": "Fade",
 													"parameters": {
@@ -27252,7 +27352,7 @@
 												},
 												{
 													"id": "restart-fade",
-													"objectClass": "Bkg_Turn_Txt",
+													"objectClass": "Bkg_Round_Txt",
 													"sid": 686092519460021,
 													"behaviorType": "Fade"
 												},
@@ -29082,7 +29182,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 259982180285424,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -29091,7 +29191,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 262224874441485,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -29100,7 +29200,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 884907859252959,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -29109,13 +29209,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 241555116418011,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "set-visible",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 955050227459530,
 															"parameters": {
 																"visibility": "visible"
@@ -29123,7 +29223,7 @@
 														},
 														{
 															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 289262519071908,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -29132,7 +29232,7 @@
 														},
 														{
 															"id": "set-wait-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 959176835373988,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -29141,7 +29241,7 @@
 														},
 														{
 															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 267625083183046,
 															"behaviorType": "Fade",
 															"parameters": {
@@ -29150,13 +29250,13 @@
 														},
 														{
 															"id": "restart-fade",
-															"objectClass": "Bkg_Turn_Txt",
+															"objectClass": "Bkg_Round_Txt",
 															"sid": 520808716475840,
 															"behaviorType": "Fade"
 														},
 														{
 															"id": "typewriter-text",
-															"objectClass": "Text_Turn",
+															"objectClass": "Text_Round",
 															"sid": 427276094090629,
 															"parameters": {
 																"text": "Match >= 4 ? Internationalization.Lookup(\"common.new_boss\", EnemyNameTurns) : Internationalization.Lookup(\"common.new_match\", EnemyNameTurns)",
@@ -29211,6 +29311,81 @@
 																"variable": "RelicPhase",
 																"value": "false"
 															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 181205501111197,
+															"parameters": {
+																"seconds": "1",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Text_Round",
+															"sid": 711881774770327,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "0"
+															}
+														},
+														{
+															"id": "set-wait-time",
+															"objectClass": "Text_Round",
+															"sid": 998936080530796,
+															"behaviorType": "Fade",
+															"parameters": {
+																"wait-time": "0.5"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Text_Round",
+															"sid": 866646151750086,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "0.5"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Text_Round",
+															"sid": 306637466615482,
+															"behaviorType": "Fade"
+														},
+														{
+															"id": "set-fade-in-time",
+															"objectClass": "Bkg_Round_Txt",
+															"sid": 631475177079497,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-in-time": "0"
+															}
+														},
+														{
+															"id": "set-wait-time",
+															"objectClass": "Bkg_Round_Txt",
+															"sid": 722491183968856,
+															"behaviorType": "Fade",
+															"parameters": {
+																"wait-time": "0.5"
+															}
+														},
+														{
+															"id": "set-fade-out-time",
+															"objectClass": "Bkg_Round_Txt",
+															"sid": 370154816684850,
+															"behaviorType": "Fade",
+															"parameters": {
+																"fade-out-time": "0.5"
+															}
+														},
+														{
+															"id": "restart-fade",
+															"objectClass": "Bkg_Round_Txt",
+															"sid": 290976459416035,
+															"behaviorType": "Fade"
 														}
 													],
 													"sid": 630028147982357
@@ -42122,11 +42297,37 @@
 															}
 														},
 														{
-															"id": "set-opacity",
+															"id": "tween-one-property",
 															"objectClass": "Txt_auto_math",
-															"sid": 482380131968712,
+															"sid": 333304805084338,
+															"behaviorType": "Tween",
 															"parameters": {
-																"opacity": "25"
+																"tags": "\"\"",
+																"property": "offsetOpacity",
+																"end-value": "25",
+																"time": "1",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Bkg_Auto_math",
+															"sid": 330723709797519,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"\"",
+																"property": "offsetOpacity",
+																"end-value": "10",
+																"time": "1",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
 															}
 														}
 													],
@@ -43055,6 +43256,13 @@
 					"conditions": [],
 					"actions": [
 						{
+							"callFunction": "Count_Numbers",
+							"sid": 119569009141503,
+							"parameters": [
+								false
+							]
+						},
+						{
 							"id": "tween-value",
 							"objectClass": "Relic_card",
 							"sid": 852118959683229,
@@ -43117,11 +43325,37 @@
 							}
 						},
 						{
-							"id": "set-opacity",
+							"id": "tween-one-property",
 							"objectClass": "Txt_auto_math",
-							"sid": 911045633065167,
+							"sid": 437417835764786,
+							"behaviorType": "Tween",
 							"parameters": {
-								"opacity": "0"
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "Opt_FastMode = 1 ? 0.5 : 1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Bkg_Auto_math",
+							"sid": 224493117681083,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "Opt_FastMode = 1 ? 0.5 : 1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
 							}
 						}
 					],
@@ -44432,7 +44666,7 @@
 								},
 								{
 									"id": "set-text",
-									"objectClass": "Text_Turn",
+									"objectClass": "Text_Round",
 									"sid": 757870395014993,
 									"parameters": {
 										"text": "\"\""
@@ -44465,11 +44699,37 @@
 									}
 								},
 								{
-									"id": "set-opacity",
+									"id": "tween-one-property",
 									"objectClass": "Txt_auto_math",
-									"sid": 391719991905179,
+									"sid": 852438039390217,
+									"behaviorType": "Tween",
 									"parameters": {
-										"opacity": "100"
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "100",
+										"time": "Opt_FastMode = 1 ? 0.5 : 1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Bkg_Auto_math",
+									"sid": 348552832488104,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "70",
+										"time": "Opt_FastMode = 1 ? 0.5 : 1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
 									}
 								},
 								{
@@ -46917,7 +47177,7 @@
 						},
 						{
 							"id": "compare-opacity",
-							"objectClass": "Bkg_Turn_Txt",
+							"objectClass": "Bkg_Round_Txt",
 							"sid": 204815205184658,
 							"parameters": {
 								"comparison": 0,
@@ -48036,11 +48296,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 919523433993680,
+											"sid": 731911670400462,
 											"parameters": {
 												"variable": "Tut_Talk",
 												"comparison": 0,
-												"value": "38"
+												"value": "39"
 											}
 										}
 									],
@@ -48355,11 +48615,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 404617975789369,
+											"sid": 490023004459390,
 											"parameters": {
 												"variable": "Tut_Talk",
 												"comparison": 1,
-												"value": "38"
+												"value": "39"
 											}
 										}
 									],
@@ -49154,6 +49414,37 @@
 						}
 					],
 					"sid": 175449534738887
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-opacity",
+							"objectClass": "Bkg_Round_Txt",
+							"sid": 248413932599446,
+							"parameters": {
+								"comparison": 0,
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 280761121928327
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Round",
+							"sid": 835832059387893,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 191264731835373,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
