@@ -932,7 +932,6 @@
 									"id": "set-layer-visible",
 									"objectClass": "System",
 									"sid": 251030182110293,
-									"disabled": true,
 									"parameters": {
 										"layer": "\"Codex\"",
 										"visibility": "visible"
@@ -942,7 +941,6 @@
 									"id": "set-layer-interactive",
 									"objectClass": "System",
 									"sid": 997404169059588,
-									"disabled": true,
 									"parameters": {
 										"layer": "\"Codex\"",
 										"interactive": true
@@ -952,6 +950,7 @@
 									"id": "set-fade-in-time",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 512460305051307,
+									"disabled": true,
 									"behaviorType": "Fade",
 									"parameters": {
 										"fade-in-time": "0.5"
@@ -961,6 +960,7 @@
 									"id": "set-wait-time",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 453920768499385,
+									"disabled": true,
 									"behaviorType": "Fade",
 									"parameters": {
 										"wait-time": "2.5"
@@ -970,6 +970,7 @@
 									"id": "set-fade-out-time",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 162454805766495,
+									"disabled": true,
 									"behaviorType": "Fade",
 									"parameters": {
 										"fade-out-time": "0.5"
@@ -979,6 +980,7 @@
 									"id": "restart-fade",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 416381857965591,
+									"disabled": true,
 									"behaviorType": "Fade"
 								}
 							],
@@ -1094,6 +1096,7 @@
 									"id": "set-fade-in-time",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 665302374159834,
+									"disabled": true,
 									"behaviorType": "Fade",
 									"parameters": {
 										"fade-in-time": "0.5"
@@ -1103,6 +1106,7 @@
 									"id": "set-wait-time",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 197894795760458,
+									"disabled": true,
 									"behaviorType": "Fade",
 									"parameters": {
 										"wait-time": "2.5"
@@ -1112,6 +1116,7 @@
 									"id": "set-fade-out-time",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 386825631319087,
+									"disabled": true,
 									"behaviorType": "Fade",
 									"parameters": {
 										"fade-out-time": "0.5"
@@ -1121,13 +1126,13 @@
 									"id": "restart-fade",
 									"objectClass": "Demo_Fade_Sprite",
 									"sid": 767592895661409,
+									"disabled": true,
 									"behaviorType": "Fade"
 								},
 								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
 									"sid": 530670999865821,
-									"disabled": true,
 									"parameters": {
 										"layer": "\"Art Galery\"",
 										"visibility": "visible"
@@ -1137,7 +1142,6 @@
 									"id": "set-layer-interactive",
 									"objectClass": "System",
 									"sid": 514904733908307,
-									"disabled": true,
 									"parameters": {
 										"layer": "\"Art Galery\"",
 										"interactive": true
@@ -1147,7 +1151,6 @@
 									"id": "set-visible",
 									"objectClass": "Gallery_Arts_Medium",
 									"sid": 401326409834907,
-									"disabled": true,
 									"parameters": {
 										"visibility": "invisible"
 									}
@@ -1156,7 +1159,6 @@
 									"id": "set-group-active",
 									"objectClass": "System",
 									"sid": 404287483626662,
-									"disabled": true,
 									"parameters": {
 										"group-name": "\"Art Gallery\"",
 										"state": "activated"

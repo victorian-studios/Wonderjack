@@ -403,10 +403,15 @@
                 "flavor_txt": "Eat-me",
                 "desc": "Increases the match goal to [color=#f5fe05]24[/color]."
             },
+            "drink_me": {
+                "title": "Bottle",
+                "flavor_txt": "Drink-me",
+                "desc":"Lower the match goal to [color=#f5fe05]18[/color]."
+            },
             "hat": {
                 "title": "Green Tophat",
                 "flavor_txt": "Am I mad?",
-                "desc": "If drawing a [color=#005eff]number[/color] card exceeds the match goal, the card is [color=#f5fe05]returned[/color] and another one is drawn immediately (once per match)."
+                "desc": "When drawing a random [color=#005eff]number[/color] card from the deck, there's [color=#f5fe05]25%[/color] chance to be [color=#f5fe05]hidden[/color] for the opponent."
             },
             "key_1": {
                 "title": "Metal Piece",
@@ -439,10 +444,51 @@
                 "desc": "At the start of a new round, see [color=#f5fe05]2[/color] [color=#005eff]number[/color] cards and choose [color=#f5fe05]1[/color] to draw."
             },
             "match": {
-                "title": "Match Box",
+                "title": "Matchbox",
                 "flavor_txt": "Burn!",
-                "desc": "[color=#f5fe05]Right-click[/color] this relic to [color=#f5fe05]burn[/color] a random power from your opponent. {0} matches remaning."
+                "desc": "[color=#f5fe05]Right-click[/color] this relic to [color=#f5fe05]burn[/color] a random power from the opponent. {0} matches remaining."
+            },
+            "ticket": {
+                "title": "Coupon",
+                "flavor_txt": "Promo!",
+                "desc": "Increases your power draw limit by [color=#f5fe05]1[/color]"
+            },
+            "medal": {
+                "title": "Medal",
+                "flavor_txt": "I'm special!",
+                "desc": "Start each match with a random [color=#f5fe05]power[/color] card."
+            },
+            "egg": {
+                "title": "Cracked Egg",
+                "flavor_txt": "Sturdy!",
+                "desc": "[color=#f5fe05]Right-click[/color] this relic to gain [color=#f5fe05]protection[/color] for [color=#f5fe05]2[/color] turns (once per round). [color=#fa1c03]But the opponent always start a new round playing first[/color]."
+            },
+            "tornado": {
+                "title": "Bottled Tornado",
+                "flavor_txt": "What a mess!",
+                "desc": "[color=#f5fe05]Right-click[/color] this relic to steal a random [color=#f5fe05]power[/color] card from your opoonent (once per match)."
+            },
+            "box": {
+                "title": "Pandora's Box",
+                "flavor_txt": "Chaos!",
+                "desc": "[color=#f5fe05]Right-click[/color] this relic to fill your hand with [color=#f5fe05]power[/color] cards (once per match). [color=#fa1c03]But reduce your power draw limit by 1[/color]"
+            },
+            "trap": {
+                "title": "Rabbit Trap",
+                "flavor_txt": "Gotcha!",
+                "desc": "When you receive a number card and exceed the match goal, [color=#f5fe05]discard[/color] the card to the bottom of the deck (once per match)."
+            },
+            "lucky": {
+                "title": "Rabbit's Foot",
+                "flavor_txt": "Lucky!",
+                "desc": "When reaching 21 with your number cards, gain a [color=#f5fe05]power[/color] card (once per round)."
+            },
+            "armor": {
+                "title": "Vaporium Armor",
+                "flavor_txt": "by Rose.",
+                "desc": "On the [color=#f5fe05]3° round[/color] gain [color=#f5fe05]protection[/color] for [color=#f5fe05]5[/color] turns."
             }
+
         },
         "powers": {
             "card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",

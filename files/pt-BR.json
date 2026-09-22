@@ -373,7 +373,7 @@
             "cat_eye": {
                 "title": "Olho do Gato",
                 "flavor_txt": "Sorria!",
-                "desc": "Na [color=#f5fe05]terceira rodada[/color], a carta oculta do seu oponente será revelada no [color=#f5fe05]primeiro turno[/color]."
+                "desc": "Na [color=#f5fe05]3° rodada[/color], a carta oculta do seu oponente será revelada no [color=#f5fe05]1° turno[/color]."
             },
             "watch": {
                 "title": "Relógio de Bolso",
@@ -406,10 +406,15 @@
                 "flavor_txt": "Coma-me",
                 "desc":"Aumente a meta da partida para [color=#f5fe05]24[/color]."
             },
+            "drink_me": {
+                "title": "Garrafa",
+                "flavor_txt": "Beba-me",
+                "desc":"Diminua a meta da partida para [color=#f5fe05]18[/color]."
+            },
             "hat": {
                 "title": "Cartola Verde",
                 "flavor_txt": "Eu sou louco?",
-                "desc":"Se você comprar uma carta de [color=#005eff]número[/color] que exceda a meta, ela é [color=#f5fe05]devolvida[/color] e outra é comprada imediatamente (uma vez por partida)."
+                "desc":"Ao comprar uma carta de [color=#005eff]número[/color] do baralho, tem [color=#f5fe05]25%[/color] de chance de ser [color=#f5fe05]oculta[/color] para o oponente."
             },
             "key_1": {
                 "title": "Pedaço de Metal",
@@ -428,8 +433,8 @@
             },
             "key": {
                 "title": "Chave",
-                "flavor_txt": "Open Sesame!",
-                "desc":"Unlocks access to a [color=#f5fe05]secret[/color] stage."
+                "flavor_txt": "Abra-te Sésamo!",
+                "desc":"Libera acesso a um estágio [color=#f5fe05]secreto[/color]."
             },
             "picnic": {
                 "title": "Cesta de Pequinique",
@@ -445,6 +450,46 @@
                 "title": "Caixa de Fósforos",
                 "flavor_txt": "Queime!",
                 "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para [color=#f5fe05]queimar[/color] um poder aleatório do oponente. {0} fósforos restantes."
+            },
+            "ticket": {
+                "title": "Cupom",
+                "flavor_txt": "Promoção!",
+                "desc": "Aumenta o limite de compra de poderes em [color=#f5fe05]1[/color]."
+            },
+            "medal": {
+                "title": "Medalha",
+                "flavor_txt": "Sou especial!",
+                "desc": "Comece cada partida com uma carta de [color=#f5fe05]poder[/color] aleatória."
+            },
+            "egg": {
+                "title": "Ovo Rachado",
+                "flavor_txt": "Robusto!",
+                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para ganhar [color=#f5fe05]proteção[/color] por [color=#f5fe05]2[/color] turnos (1 vez por rodada). [color=#fa1c03]Mas o oponente sempre começa novas rodadas jogando primeiro[/color]."
+            },
+            "tornado": {
+                "title": "Tornado Engarrafado",
+                "flavor_txt": "Que bagunça!",
+                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para roubar uma carta de [color=#f5fe05]poder[/color] aleatória do seu oponente (1 vez por rodada)."
+            },
+            "box": {
+                "title": "Caixa de Pandora",
+                "flavor_txt": "Caos!",
+                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para encher sua mão com cartas de [color=#f5fe05]poder[/color] (uma vez por partida). [color=#fa1c03]Mas reduz o limite de compra de poderes em 1[/color]."
+            },
+            "trap": {
+                "title": "Armadilha de Coelho",
+                "flavor_txt": "Te peguei!",
+                "desc": "Quando receber uma carta de número e passar da meta, [color=#f5fe05]discarte[/color] a carta para o final do baralho (uma vez por partida)."
+            },
+            "lucky": {
+                "title": "Pé de Coelho",
+                "flavor_txt": "Sorte!",
+                "desc": "Ao alcançar 21 com suas cartas de número, ganhe uma carta de [color=#f5fe05]poder[/color] (uma vez por rodada)."
+            },
+            "armor": {
+                "title": "Armadura de Vaporium",
+                "flavor_txt": "por Rose.",
+                "desc": "Na [color=#f5fe05]3° rodada[/color], ganhe [color=#f5fe05]proteção[/color] por [color=#f5fe05]5[/color] turnos."
             }
         },
 		"powers": {
