@@ -464,12 +464,12 @@
             "egg": {
                 "title": "Ovo Rachado",
                 "flavor_txt": "Robusto!",
-                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para ganhar [color=#f5fe05]proteção[/color] por [color=#f5fe05]2[/color] turnos (1 vez por rodada). [color=#fa1c03]Mas o oponente sempre começa novas rodadas jogando primeiro[/color]."
+                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para ganhar [color=#f5fe05]proteção[/color] por [color=#f5fe05]2[/color] turnos (uma vez por rodada). [color=#fa1c03]Mas o oponente sempre começa novas rodadas jogando primeiro[/color]."
             },
             "tornado": {
                 "title": "Tornado Engarrafado",
                 "flavor_txt": "Que bagunça!",
-                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para roubar uma carta de [color=#f5fe05]poder[/color] aleatória do seu oponente (1 vez por rodada)."
+                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para roubar uma carta de [color=#f5fe05]poder[/color] aleatória do seu oponente\n(uma vez por rodada)."
             },
             "box": {
                 "title": "Caixa de Pandora",
@@ -484,7 +484,7 @@
             "lucky": {
                 "title": "Pé de Coelho",
                 "flavor_txt": "Sorte!",
-                "desc": "Ao alcançar 21 com suas cartas de número, ganhe uma carta de [color=#f5fe05]poder[/color] (uma vez por rodada)."
+                "desc": "Ao alcançar [color=#f5fe05]21[/color] com suas cartas de número, ganhe uma carta de [color=#f5fe05]poder[/color] (uma vez por rodada)."
             },
             "armor": {
                 "title": "Armadura de Vaporium",

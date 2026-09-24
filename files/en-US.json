@@ -481,7 +481,7 @@
             "lucky": {
                 "title": "Rabbit's Foot",
                 "flavor_txt": "Lucky!",
-                "desc": "When reaching 21 with your number cards, gain a [color=#f5fe05]power[/color] card (once per round)."
+                "desc": "When reaching [color=#f5fe05]21[/color] with your number cards, gain a [color=#f5fe05]power[/color] card (once per round)."
             },
             "armor": {
                 "title": "Vaporium Armor",
