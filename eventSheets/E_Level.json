@@ -924,6 +924,11 @@
 						"parameter-index": "0",
 						"value": "Self.Tween.Value(\"rotate\")"
 					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "Bkg_Extra",
+					"sid": 762768789530627
 				}
 			],
 			"sid": 403715614006273,
@@ -1838,16 +1843,34 @@
 						{
 							"id": "set-position",
 							"objectClass": "Candelabro",
-							"sid": 918790095114044,
+							"sid": 238945726768289,
 							"parameters": {
-								"x": "Self.X - 28",
-								"y": "Self.Y"
+								"x": "270",
+								"y": "246"
 							}
 						},
 						{
 							"id": "destroy",
 							"objectClass": "Candle_Flame",
 							"sid": 938294680476727
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Quadro_Turns",
+							"sid": 705851188898047,
+							"parameters": {
+								"x": "505",
+								"y": "294"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Bkg_Extra",
+							"sid": 243624389987434,
+							"parameters": {
+								"x": "611",
+								"y": "298"
+							}
 						}
 					],
 					"sid": 515778740733650,
@@ -31468,110 +31491,7 @@
 													]
 												}
 											],
-											"sid": 702063452483520,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-opacity",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 586155811398551,
-															"parameters": {
-																"comparison": 1,
-																"opacity": "0"
-															}
-														},
-														{
-															"id": "layer-is-visible",
-															"objectClass": "System",
-															"sid": 419204353746257,
-															"parameters": {
-																"layer": "\"Pause\""
-															},
-															"isInverted": true
-														},
-														{
-															"id": "layer-is-visible",
-															"objectClass": "System",
-															"sid": 340142463361322,
-															"parameters": {
-																"layer": "\"Talking\""
-															},
-															"isInverted": true
-														}
-													],
-													"actions": [
-														{
-															"id": "set-fade-in-time",
-															"objectClass": "Text_Power",
-															"sid": 119134717119423,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-in-time": "0"
-															}
-														},
-														{
-															"id": "set-wait-time",
-															"objectClass": "Text_Power",
-															"sid": 948713889298021,
-															"behaviorType": "Fade",
-															"parameters": {
-																"wait-time": "0"
-															}
-														},
-														{
-															"id": "set-fade-out-time",
-															"objectClass": "Text_Power",
-															"sid": 619900535372940,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-out-time": "0.1"
-															}
-														},
-														{
-															"id": "restart-fade",
-															"objectClass": "Text_Power",
-															"sid": 655611575352633,
-															"behaviorType": "Fade"
-														},
-														{
-															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 136552991554678,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-in-time": "0"
-															}
-														},
-														{
-															"id": "set-wait-time",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 989734430572801,
-															"behaviorType": "Fade",
-															"parameters": {
-																"wait-time": "0"
-															}
-														},
-														{
-															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 678483498674207,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-out-time": "0.1"
-															}
-														},
-														{
-															"id": "restart-fade",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 422305350275335,
-															"behaviorType": "Fade"
-														}
-													],
-													"sid": 732369692299572
-												}
-											]
+											"sid": 702063452483520
 										},
 										{
 											"eventType": "block",
@@ -31608,110 +31528,7 @@
 													]
 												}
 											],
-											"sid": 300022592048531,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-opacity",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 467346003001732,
-															"parameters": {
-																"comparison": 1,
-																"opacity": "0"
-															}
-														},
-														{
-															"id": "layer-is-visible",
-															"objectClass": "System",
-															"sid": 765233986644502,
-															"parameters": {
-																"layer": "\"Pause\""
-															},
-															"isInverted": true
-														},
-														{
-															"id": "layer-is-visible",
-															"objectClass": "System",
-															"sid": 280670258951437,
-															"parameters": {
-																"layer": "\"Talking\""
-															},
-															"isInverted": true
-														}
-													],
-													"actions": [
-														{
-															"id": "set-fade-in-time",
-															"objectClass": "Text_Power",
-															"sid": 445263775074253,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-in-time": "0"
-															}
-														},
-														{
-															"id": "set-wait-time",
-															"objectClass": "Text_Power",
-															"sid": 142923372446098,
-															"behaviorType": "Fade",
-															"parameters": {
-																"wait-time": "0"
-															}
-														},
-														{
-															"id": "set-fade-out-time",
-															"objectClass": "Text_Power",
-															"sid": 508127029205303,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-out-time": "0.1"
-															}
-														},
-														{
-															"id": "restart-fade",
-															"objectClass": "Text_Power",
-															"sid": 327727332851068,
-															"behaviorType": "Fade"
-														},
-														{
-															"id": "set-fade-in-time",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 423529816178998,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-in-time": "0"
-															}
-														},
-														{
-															"id": "set-wait-time",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 401368618635761,
-															"behaviorType": "Fade",
-															"parameters": {
-																"wait-time": "0"
-															}
-														},
-														{
-															"id": "set-fade-out-time",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 130828267779487,
-															"behaviorType": "Fade",
-															"parameters": {
-																"fade-out-time": "0.1"
-															}
-														},
-														{
-															"id": "restart-fade",
-															"objectClass": "Bkg_Power_Txt",
-															"sid": 435838871180473,
-															"behaviorType": "Fade"
-														}
-													],
-													"sid": 280213996085762
-												}
-											]
+											"sid": 300022592048531
 										}
 									]
 								}
@@ -45960,10 +45777,10 @@
 							"actions": [
 								{
 									"callFunction": "Relic Feedback",
-									"sid": 758239934253377,
+									"sid": 310890015810639,
 									"parameters": [
 										"Relics.AnimationName",
-										false,
+										true,
 										false,
 										true
 									]
