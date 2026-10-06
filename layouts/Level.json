@@ -566,39 +566,6 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "Sprite2",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 1,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 354,
-							"sid": 570604283902659,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": -259,
-								"y": 1010,
-								"width": 144,
-								"height": 120,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									0.5
-								],
-								"z": 0,
-								"angle": 0
-							}
-						},
-						{
 							"type": "Deck_Numb_Sprite",
 							"properties": {
 								"initially-visible": true,
@@ -1183,7 +1150,8 @@
 					"instanceVariables": {
 						"PowerHandLimit": 2,
 						"PowerLimit_Rounds": 0,
-						"Protect_Turns": 0
+						"Protect_Turns": 0,
+						"Silence_Turns": 0
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1222,6 +1190,7 @@
 						"PowerLimit_Rounds": 0,
 						"PowersAvailable": 0,
 						"Protect_Turns": 0,
+						"Silence_Turns": 0,
 						"Clairvoyance_Cards": 0
 					},
 					"behaviors": {},
@@ -7697,75 +7666,6 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": true
-		},
-		{
-			"name": "Testes_Loucos_Das_Cartas",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
-				{
-					"type": "Sprite",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 1,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 378,
-					"sid": 770277424810132,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 960,
-						"y": 832,
-						"width": 1258,
-						"height": 343,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				}
-			],
-			"sid": 375553667938607,
-			"effectTypes": [],
-			"isInitiallyVisible": false,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"sampling": "auto",
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
 		}
 	],
 	"sid": 932921744102466,

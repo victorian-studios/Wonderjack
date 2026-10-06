@@ -4526,7 +4526,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 1,
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4590,7 +4590,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 2,
+								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4654,7 +4654,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 3,
+								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4718,7 +4718,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 4,
+								"initial-frame": 3,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4782,7 +4782,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 4,
+								"initial-frame": 3,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4846,7 +4846,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 5,
+								"initial-frame": 4,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4910,7 +4910,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 6,
+								"initial-frame": 5,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4974,7 +4974,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 7,
+								"initial-frame": 6,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5038,7 +5038,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 8,
+								"initial-frame": 7,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5102,7 +5102,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 9,
+								"initial-frame": 8,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5166,7 +5166,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 10,
+								"initial-frame": 9,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5230,7 +5230,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 11,
+								"initial-frame": 10,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5294,7 +5294,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 12,
+								"initial-frame": 11,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5358,7 +5358,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 13,
+								"initial-frame": 12,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5422,7 +5422,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 14,
+								"initial-frame": 13,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5486,7 +5486,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 15,
+								"initial-frame": 14,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5550,7 +5550,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 16,
+								"initial-frame": 15,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5614,7 +5614,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 17,
+								"initial-frame": 16,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5678,7 +5678,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 18,
+								"initial-frame": 17,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5742,7 +5742,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 19,
+								"initial-frame": 18,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5806,7 +5806,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Front",
-								"initial-frame": 20,
+								"initial-frame": 19,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5931,8 +5931,8 @@
 							"world": {
 								"x": 745,
 								"y": 560,
-								"width": 144,
-								"height": 111.99999999999999,
+								"width": 97.56734693877551,
+								"height": 107.38144329896906,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -5975,8 +5975,8 @@
 							"world": {
 								"x": 905,
 								"y": 560,
-								"width": 144,
-								"height": 111.99999999999999,
+								"width": 98.15510204081633,
+								"height": 105.0721649484536,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6019,8 +6019,8 @@
 							"world": {
 								"x": 1065,
 								"y": 560,
-								"width": 144,
-								"height": 111.99999999999999,
+								"width": 94.04081632653062,
+								"height": 105.64948453608247,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [

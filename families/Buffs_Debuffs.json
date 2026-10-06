@@ -1,0 +1,13 @@
+{
+	"name": "Buffs_Debuffs",
+	"plugin-id": "Sprite",
+	"sid": 164930022834742,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Icon_Hidden_Card",
+		"Icon_Protect",
+		"Icon_Silence"
+	]
+}

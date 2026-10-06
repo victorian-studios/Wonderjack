@@ -4,7 +4,15 @@
 	"sid": 616522326485558,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "FromPlayer",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 898587718366487
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",
@@ -15,6 +23,11 @@
 			"behaviorId": "Sin",
 			"name": "Sine",
 			"sid": 997510661056469
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 523599186538886
 		}
 	],
 	"effectTypes": [],

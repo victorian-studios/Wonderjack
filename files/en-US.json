@@ -510,9 +510,15 @@
             "menu_tip": "[u]Select a card to draw:[/u]",
             "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their [color=#f5fe05]face-up[/color] number cards. [color=#fa1c03]Can't be used in the last turn![/color]",
             "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent.\n[color=#fa1c03]Doesn't work with power cards.[/color]",
-            "clairvoyance": "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]2[/color] cards from of the number deck.",
-            "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color] and then [color=#f5fe05]{1}[/color]",
-            "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]2[/color] cards..."
+            "clairvoyance": "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]3[/color] cards from of the number deck.",
+            "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color], [color=#f5fe05]{1}[/color] and then [color=#f5fe05]{2}[/color]",
+            "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]3[/color] cards...",
+            "baby": "[u]Baby[/u]\n\nGet the [color=#f5fe05]lowest[/color] card number from the deck.",
+            "lasso": "[u]Lasso[/u]\n\nChoose and [color=#f5fe05]steal[/color] a [color=#f5fe05]face-up[/color] card from the opponent.",
+            "cardA": "[u]Ace Card[/u]\n\nCreate a temporary [color=#f5fe05]Ace[/color] card worth [color=#f5fe05]1[/color] or [color=#f5fe05]11[/color].",
+            "duplicate": "[u]Duplicate[/u]\n\nCreate a temporary [color=#f5fe05]copy[/color] from one of your [color=#f5fe05]face-up[/color] cards.",
+            "silence": "[u]Silence[/u]\n\nSilence the opponent for [color=#f5fe05]2[/color] turns. They cannot play power cards.",
+            "investigate": "[u]Investigate[/u]\n\nChoose and [color=#f5fe05]reveal[/color] a [color=#f5fe05]hidden[/color] card from the opponent in [color=#f5fe05]this[/color] turn."
         },
         "demo": {
             "end": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, power cards, and extras await you in the full game!",

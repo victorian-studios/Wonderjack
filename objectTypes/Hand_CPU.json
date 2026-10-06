@@ -34,6 +34,13 @@
 			"sid": 347353118794928
 		},
 		{
+			"name": "Silence_Turns",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 697449515756650
+		},
+		{
 			"name": "Clairvoyance_Cards",
 			"type": "number",
 			"desc": "quantas cartas (que foram vistas) restam no baralho?",

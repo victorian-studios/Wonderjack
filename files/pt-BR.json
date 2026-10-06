@@ -469,7 +469,7 @@
             "tornado": {
                 "title": "Tornado Engarrafado",
                 "flavor_txt": "Que bagunça!",
-                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para roubar uma carta de [color=#f5fe05]poder[/color] aleatória do seu oponente\n(uma vez por rodada)."
+                "desc": "[color=#f5fe05]Clique com o botão direito[/color] nesta relíquia para roubar uma carta de [color=#f5fe05]poder[/color] aleatória do seu oponente\n(uma vez por partida)."
             },
             "box": {
                 "title": "Caixa de Pandora",
@@ -512,9 +512,15 @@
             "menu_tip": "[u]Escolha uma carta para comprar:[/u]",
             "hurricane": "[u]Furacão[/u]\n\nAmbos os jogadores descartam todas as suas cartas de número [color=#f5fe05]visíveis[/color]. [color=#fa1c03]Não pode ser usada no último turno![/color]",
             "secret": "[u]Carta oculta[/u]\n\n\nA próxima carta de número que você comprar será [color=#f5fe05]oculta[/color] para o oponente.\n[color=#fa1c03]Não funciona com cartas de poder.[/color]",
-            "clairvoyance" : "[u]Clarividência[/u]\n\n\nVeja as próximas [color=#f5fe05]duas[/color] cartas do baralho de número.",
-            "clairvoyance_player": "As próximas cartas de número são: [color=#f5fe05]{0}[/color] e [color=#f5fe05]{1}[/color]",
-            "clairvoyance_cpu": "{0} viu as próximas [color=#f5fe05]duas[/color] cartas..."
+            "clairvoyance" : "[u]Clarividência[/u]\n\n\nVeja as próximas [color=#f5fe05]3[/color] cartas do baralho de número.",
+            "clairvoyance_player": "As próximas cartas de número são: [color=#f5fe05]{0}[/color], [color=#f5fe05]{1}[/color] e [color=#f5fe05]{2}[/color]",
+            "clairvoyance_cpu": "{0} viu as próximas [color=#f5fe05]3[/color] cartas...",
+            "baby": "[u]Bebê[/u]\n\nPegue a [color=#f5fe05]menor[/color] carta de número do baralho.",
+            "lasso": "[u]Laçar[/u]\n\nEscolha e [color=#f5fe05]roube[/color] uma carta de número [color=#f5fe05]visível[/color] do oponente.",
+            "cardA": "[u]Carta Ás[/u]\n\nCrie uma carta [color=#f5fe05]curinga[/color] temporária que vale [color=#f5fe05]1[/color] ou [color=#f5fe05]11[/color].",
+            "duplicate": "[u]Duplicar[/u]\n\nCria uma [color=#f5fe05]cópia[/color] temporária de uma de suas cartas de número [color=#f5fe05]visíveis[/color].",
+            "silence": "[u]Silenciar[/u]\n\nSilencie o oponente por [color=#f5fe05]2[/color] turnos. Ele não poderá jogar cartas de poder.",
+            "investigate": "[u]Investigar[/u]\n\nEscolha e [color=#f5fe05]revele[/color] uma carta de número [color=#f5fe05]oculta[/color] do oponente [color=#f5fe05]neste[/color] turno."
             
         },
         "demo": {

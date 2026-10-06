@@ -25,6 +25,13 @@
 			"desc": "turnos restantes do poder de proteção de perder cartas",
 			"show": true,
 			"sid": 395966250846950
+		},
+		{
+			"name": "Silence_Turns",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 672549477014905
 		}
 	],
 	"behaviorTypes": [],

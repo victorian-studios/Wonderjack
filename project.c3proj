@@ -338,14 +338,14 @@
 			"Effect_Particle_Candle_Flame_Red",
 			"Bkg_placa",
 			"blim",
-			"Sprite",
+			"Grid",
 			"Card_Pos",
 			"Btn_Next",
-			"Sprite2",
 			"Text_Turn2",
 			"Bkg_Turn_Txt2",
 			"Bkg_Auto_math",
-			"Bkg_Extra"
+			"Bkg_Extra",
+			"Icon_Silence"
 		],
 		"subfolders": []
 	},
@@ -365,7 +365,8 @@
 			"Buttons",
 			"Clickable",
 			"Holdable",
-			"Cursors"
+			"Cursors",
+			"Buffs_Debuffs"
 		],
 		"subfolders": []
 	},
