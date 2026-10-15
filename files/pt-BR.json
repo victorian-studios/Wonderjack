@@ -46,11 +46,11 @@
                         "special": "Começa a partida com uma carta de poder aleatória.",
                         "desc": "..."
                     },
-                    "Cheshire Cat": {
-                        "name": "Gato de Cheshire",
-                        "mind": "Cauteloso",
-                        "stage": "Nível 2",
-                        "special": "Desaparece aleatoriamente, fazendo com que todas suas cartas de número fiquem ocultas por 1 turno.",
+                    "The Tweedles": {
+                        "name": "Os Tweedles",
+                        "mind": "Cautelosos",
+                        "stage": "Stage 2",
+                        "special": "Every 2 turns they switch places, changing the main strategy.",
                         "desc": "..."
                     },
                     "Caterpillar": {
@@ -60,15 +60,15 @@
                         "special": "Cria aletoriamente uma nuvem de fumaça sobre as cartas do jogador por um turno.",
                         "desc": "..."
                     },
-                    "The Tweedles": {
-                        "name": "Os Tweedles",
-                        "mind": "Cautelosos",
-                        "stage": "Stage 3",
-                        "special": "Every 2 turns they switch places, changing the main strategy.",
+                    "Cheshire Cat": {
+                        "name": "Gato de Cheshire",
+                        "mind": "Cauteloso",
+                        "stage": "Nível 3",
+                        "special": "Desaparece aleatoriamente, fazendo com que todas suas cartas de número fiquem ocultas por 1 turno.",
                         "desc": "..."
                     },
-                    "Humpty Dumpty": {
-                        "name": "Humpty Dumpty",
+                    "General of Cards": {
+                        "name": "General Carta",
                         "mind": "Cautious",
                         "stage": "Stage 3",
                         "special": "Starts every round with protection for 3 turns.",
@@ -287,13 +287,13 @@
                     "talk_thinking_2": "Tenho cartas interessantes... quer ver? haha!",
                     "special": "Vou começar com uma carta pra mim. Afinal é meu desaniversário!"
                 },
-                "Cheshire Cat": {
-                    "name": "Gato de Cheshire",
-                    "talk_win": "Que pena... Você está indo a algum lugar?",
-                    "talk_lose": "Parece que você encontrou a direção que precisava ir...",
-                    "talk_thinking_1": "Lembre-se... todos nós somos loucos aqui. Eu sou louco. Você é louca",
-                    "talk_thinking_2": "Se precisar sair... posso te indicar uma direção...",
-                    "special": "O que foi? Não está enxergando direito?"
+                "The Tweedles": {
+                    "name": "Os Tweedles",
+                    "talk_win": "Nós, os irmãos TWEEDLE, ganhamos de novo!",
+                    "talk_lose": "Você ganhou. Não temos objeções. Pelo contrário.",
+                    "talk_thinking_1": "Hey irmão, essa carta é minha!",
+                    "talk_thinking_2": "",
+                    "special": "Meu turno! Sai fora!"
                 },
                 "Caterpillar": {
                     "name": "Lagarta",
@@ -303,21 +303,21 @@
                     "talk_thinking_2": "Cof-cof, tenho boas opões, e você?",
                     "special": "Nossa, a fumaça está por toda a parte..."
                 },
-                "Humpty Dumpty": {
-                    "name": "Humpty Dumpty",
+                "Cheshire Cat": {
+                    "name": "Gato de Cheshire",
+                    "talk_win": "Que pena... Você está indo a algum lugar?",
+                    "talk_lose": "Parece que você encontrou a direção que precisava ir...",
+                    "talk_thinking_1": "Lembre-se... todos nós somos loucos aqui. Eu sou louco. Você é louca",
+                    "talk_thinking_2": "Se precisar sair... posso te indicar uma direção...",
+                    "special": "O que foi? Não está enxergando direito?"
+                },
+                "General of Cards": {
+                    "name": "General Carta",
                     "talk_win": "Alice... que nomes estúpido! Deve significar “perdedora,” haha!",
                     "talk_lose": "Minha casca... está quebrada.",
                     "talk_thinking_1": "Você se acha o máximo me chamando de ovo, huh? Aguarde!",
                     "talk_thinking_2": "",
                     "special": "Ignore as rachaduras, minha casca ainda é resistente."
-                },
-                "The Tweedles": {
-                    "name": "Os Tweedles",
-                    "talk_win": "Nós, os irmãos TWEEDLE, ganhamos de novo!",
-                    "talk_lose": "Você ganhou. Não temos objeções. Pelo contrário.",
-                    "talk_thinking_1": "Hey irmão, essa carta é minha!",
-                    "talk_thinking_2": "",
-                    "special": "Meu turno! Sai fora!"
                 },
                 "Dodo": {
                     "name": "Dodô",
@@ -519,6 +519,7 @@
             "lasso": "[u]Laçar[/u]\n\nEscolha e [color=#f5fe05]roube[/color] uma carta de número [color=#f5fe05]visível[/color] do oponente.",
             "cardA": "[u]Carta Ás[/u]\n\nCrie uma carta [color=#f5fe05]curinga[/color] temporária que vale [color=#f5fe05]1[/color] ou [color=#f5fe05]11[/color].",
             "duplicate": "[u]Duplicar[/u]\n\nCria uma [color=#f5fe05]cópia[/color] temporária de uma de suas cartas de número [color=#f5fe05]visíveis[/color].",
+            "duplicate_tip_1": "[u]Escolha sua carta para duplicar:[/u]",
             "silence": "[u]Silenciar[/u]\n\nSilencie o oponente por [color=#f5fe05]2[/color] turnos. Ele não poderá jogar cartas de poder.",
             "investigate": "[u]Investigar[/u]\n\nEscolha e [color=#f5fe05]revele[/color] uma carta de número [color=#f5fe05]oculta[/color] do oponente [color=#f5fe05]neste[/color] turno."
             

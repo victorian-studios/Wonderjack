@@ -39,6 +39,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 359672104778539
+		},
+		{
+			"name": "Ace",
+			"type": "boolean",
+			"desc": "é a carta de poder ás",
+			"show": true,
+			"sid": 663303595717712
 		}
 	],
 	"behaviorTypes": [
@@ -51,9 +58,24 @@
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 433968012259312
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 372500166659681
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 289977022245558
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "water",
+			"name": "Water"
+		}
+	],
 	"animations": {
 		"items": [
 			{

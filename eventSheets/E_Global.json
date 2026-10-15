@@ -3672,6 +3672,14 @@
 										"click-type": "clicked",
 										"object-clicked": "Options_Flag"
 									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 101983259869739,
+									"parameters": {
+										"layer": "\"Pause\""
+									}
 								}
 							],
 							"actions": [],
@@ -4508,6 +4516,7 @@
 							],
 							"actions": [],
 							"sid": 231732585075750,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -4550,7 +4559,8 @@
 											}
 										}
 									],
-									"sid": 551576903626651
+									"sid": 551576903626651,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -4589,7 +4599,8 @@
 											}
 										}
 									],
-									"sid": 371730932878953
+									"sid": 371730932878953,
+									"disabled": true
 								}
 							]
 						},
@@ -4609,6 +4620,7 @@
 							],
 							"actions": [],
 							"sid": 387344886952384,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -4642,7 +4654,8 @@
 											}
 										}
 									],
-									"sid": 569724218325145
+									"sid": 569724218325145,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -4672,7 +4685,8 @@
 											}
 										}
 									],
-									"sid": 176457932317655
+									"sid": 176457932317655,
+									"disabled": true
 								}
 							]
 						},

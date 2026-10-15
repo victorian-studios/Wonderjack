@@ -46,11 +46,11 @@
                         "special": "Starts the match with a random power card.",
                         "desc": "..."
                     },
-                    "Cheshire Cat": {
-                        "name": "Cheshire Cat",
+                    "The Tweedles": {
+                        "name": "The Tweedles",
                         "mind": "Cautious",
                         "stage": "Stage 2",
-                        "special": "Randomly desappears making all ther number cards hidden for 1 turn.",
+                        "special": "Every 2 turns they switch places, changing the main strategy.",
                         "desc": "..."
                     },
                     "Caterpillar": {
@@ -60,15 +60,15 @@
                         "special": "Randomly creates a smoke cloud above the player's cards for 1 turn.",
                         "desc": "..."
                     },
-                    "The Tweedles": {
-                        "name": "The Tweedles",
+                    "Cheshire Cat": {
+                        "name": "Cheshire Cat",
                         "mind": "Cautious",
                         "stage": "Stage 3",
-                        "special": "Every 2 turns they switch places, changing the main strategy.",
+                        "special": "Randomly desappears making all ther number cards hidden for 1 turn.",
                         "desc": "..."
                     },
-                    "Humpty Dumpty": {
-                        "name": "Humpty Dumpty",
+                    "General of Cards": {
+                        "name": "General of Cards",
                         "mind": "Cautious",
                         "stage": "Stage 3",
                         "special": "Starts every round with protection for 3 turns.",
@@ -301,8 +301,8 @@
                     "talk_thinking_2": "Cough cough. I've good options, what about you?",
                     "special": "Oh my, the smoke is everywhere..."
                 },
-                "Humpty Dumpty": {
-                    "name": "Humpty Dumpty",
+                "General of Cards": {
+                    "name": "General of Cards",
                     "talk_win": "Alice... what a stupid name! It must mean “loser,” haha!",
                     "talk_lose": "My shell... is broken.",
                     "talk_thinking_1": "You think you're so great calling me an egg, huh? Just you wait!",
@@ -517,6 +517,7 @@
             "lasso": "[u]Lasso[/u]\n\nChoose and [color=#f5fe05]steal[/color] a [color=#f5fe05]face-up[/color] card from the opponent.",
             "cardA": "[u]Ace Card[/u]\n\nCreate a temporary [color=#f5fe05]Ace[/color] card worth [color=#f5fe05]1[/color] or [color=#f5fe05]11[/color].",
             "duplicate": "[u]Duplicate[/u]\n\nCreate a temporary [color=#f5fe05]copy[/color] from one of your [color=#f5fe05]face-up[/color] cards.",
+            "duplicate_tip_1": "[u]Select your card to duplicate:[/u]",
             "silence": "[u]Silence[/u]\n\nSilence the opponent for [color=#f5fe05]2[/color] turns. They cannot play power cards.",
             "investigate": "[u]Investigate[/u]\n\nChoose and [color=#f5fe05]reveal[/color] a [color=#f5fe05]hidden[/color] card from the opponent in [color=#f5fe05]this[/color] turn."
         },

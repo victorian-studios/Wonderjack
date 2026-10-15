@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 49502,
+	"savedWithRelease": 50600,
 	"name": "Wonderjack",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -195,6 +195,13 @@
 			"id": "warpobject",
 			"name": "Warp object",
 			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "water",
+			"name": "Water",
+			"author": "Viktor Korsun",
 			"bundled": false
 		}
 	],
@@ -1074,8 +1081,8 @@
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
+		"saveLLMContextFile": true,
 		"pixelRounding": false,
-		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": true,
 		"fullscreenMode": "letterbox-scale",
@@ -1116,6 +1123,7 @@
 		"loaderStyle": "none",
 		"preloadSounds": true,
 		"uidAllocationMode": "increment",
+		"zAxisScale": "regular",
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"exportFileStructure": "folders",

@@ -20,6 +20,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -53,6 +54,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -86,6 +88,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -128,6 +131,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -176,6 +180,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -219,6 +224,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -262,6 +268,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -330,6 +337,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -374,6 +382,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -407,6 +416,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -440,6 +450,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -473,6 +484,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -506,6 +518,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -621,6 +634,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -696,6 +710,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -792,6 +807,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -888,6 +904,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -970,6 +987,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1005,6 +1023,7 @@
 						"HasRelic": false
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1040,6 +1059,7 @@
 						"HasRelic": false
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1078,6 +1098,7 @@
 						"Next_Hidden": false
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1116,6 +1137,7 @@
 						"Next_Hidden": false
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1154,6 +1176,7 @@
 						"Silence_Turns": 0
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1194,6 +1217,7 @@
 						"Clairvoyance_Cards": 0
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1247,6 +1271,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1282,6 +1307,7 @@
 						"HasRelic": false
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1315,6 +1341,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1350,6 +1377,7 @@
 						"HasRelic": false
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1415,6 +1443,7 @@
 							}
 						}
 					},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1448,6 +1477,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1580,6 +1610,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -1634,6 +1665,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -1724,6 +1756,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -1778,6 +1811,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -1832,6 +1866,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -1886,6 +1921,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -1940,6 +1976,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -1994,6 +2031,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -2048,6 +2086,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -2102,6 +2141,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -2156,6 +2196,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -2210,6 +2251,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -2297,6 +2339,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2382,6 +2425,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -2442,6 +2486,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -2519,6 +2564,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2579,6 +2625,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2623,6 +2670,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2703,6 +2751,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2763,6 +2812,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2843,6 +2893,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2903,6 +2954,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -2988,6 +3040,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3048,6 +3101,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3133,6 +3187,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3193,6 +3248,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3259,6 +3315,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3325,6 +3382,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3391,6 +3449,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3475,6 +3534,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -3527,6 +3587,7 @@
 										"my_txt": "relics.choose"
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"sceneGraphData": {
 										"parent-uid": null,
 										"uid": 379,
@@ -3536,10 +3597,11 @@
 											"z": true,
 											"w": true,
 											"h": true,
-											"d": true,
+											"de": true,
 											"a": true,
 											"o": false,
 											"v": false,
+											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -3643,6 +3705,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3696,6 +3759,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3749,6 +3813,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -3793,6 +3858,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"sceneGraphData": {
 								"parent-uid": null,
 								"uid": 90,
@@ -3805,10 +3871,11 @@
 											"z": true,
 											"w": true,
 											"h": true,
-											"d": true,
+											"de": true,
 											"a": true,
 											"o": false,
 											"v": true,
+											"d": true,
 											"sm": "normal"
 										}
 									}
@@ -3819,10 +3886,11 @@
 									"z": true,
 									"w": true,
 									"h": true,
-									"d": true,
+									"de": true,
 									"a": true,
 									"o": false,
 									"v": false,
+									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -3900,6 +3968,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"sceneGraphData": {
 								"parent-uid": 90,
 								"uid": 91,
@@ -3909,10 +3978,11 @@
 									"z": true,
 									"w": true,
 									"h": true,
-									"d": true,
+									"de": true,
 									"a": true,
 									"o": false,
 									"v": true,
+									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -4055,6 +4125,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4110,6 +4181,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4165,6 +4237,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4202,6 +4275,7 @@
 									"properties": {}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4307,6 +4381,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4376,6 +4451,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4445,6 +4521,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4514,6 +4591,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4583,6 +4661,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4652,6 +4731,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4721,6 +4801,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4790,6 +4871,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4859,6 +4941,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4928,6 +5011,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -4997,6 +5081,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -5066,6 +5151,7 @@
 									}
 								}
 							},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -5185,6 +5271,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -5218,6 +5305,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -5291,6 +5379,7 @@
 											"tags": "",
 											"instanceVariables": {},
 											"behaviors": {},
+											"materialSurfaceType": "smooth",
 											"showing": true,
 											"locked": false,
 											"world": {
@@ -5324,6 +5413,7 @@
 											"tags": "",
 											"instanceVariables": {},
 											"behaviors": {},
+											"materialSurfaceType": "smooth",
 											"showing": true,
 											"locked": false,
 											"world": {
@@ -5395,6 +5485,7 @@
 												"ID": 0
 											},
 											"behaviors": {},
+											"materialSurfaceType": "smooth",
 											"showing": true,
 											"locked": false,
 											"world": {
@@ -5447,6 +5538,7 @@
 												"my_txt": "options.save.delete_btn"
 											},
 											"behaviors": {},
+											"materialSurfaceType": "smooth",
 											"sceneGraphData": {
 												"parent-uid": null,
 												"uid": 346,
@@ -5456,10 +5548,11 @@
 													"z": true,
 													"w": true,
 													"h": true,
-													"d": true,
+													"de": true,
 													"a": true,
 													"o": false,
 													"v": false,
+													"d": true,
 													"sm": "normal"
 												},
 												"preview": {
@@ -5559,6 +5652,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -5611,6 +5705,7 @@
 										"my_txt": "options.save.erase"
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"sceneGraphData": {
 										"parent-uid": null,
 										"uid": 342,
@@ -5620,10 +5715,11 @@
 											"z": true,
 											"w": true,
 											"h": true,
-											"d": true,
+											"de": true,
 											"a": true,
 											"o": false,
 											"v": false,
+											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -5712,6 +5808,7 @@
 										"id": 2
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -5764,6 +5861,7 @@
 										"my_txt": "options.gameplay.opt_1"
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"sceneGraphData": {
 										"parent-uid": null,
 										"uid": 118,
@@ -5773,10 +5871,11 @@
 											"z": true,
 											"w": true,
 											"h": true,
-											"d": true,
+											"de": true,
 											"a": true,
 											"o": false,
 											"v": false,
+											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -5829,6 +5928,7 @@
 										"id": 3
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -5881,6 +5981,7 @@
 										"my_txt": "options.gameplay.opt_2"
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"sceneGraphData": {
 										"parent-uid": null,
 										"uid": 229,
@@ -5890,10 +5991,11 @@
 											"z": true,
 											"w": true,
 											"h": true,
-											"d": true,
+											"de": true,
 											"a": true,
 											"o": false,
 											"v": false,
+											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -5982,6 +6084,7 @@
 										"id": 1
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6034,6 +6137,7 @@
 										"my_txt": "options.video.opt_1"
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"sceneGraphData": {
 										"parent-uid": null,
 										"uid": 120,
@@ -6043,10 +6147,11 @@
 											"z": true,
 											"w": true,
 											"h": true,
-											"d": true,
+											"de": true,
 											"a": true,
 											"o": false,
 											"v": false,
+											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -6099,6 +6204,7 @@
 										"id": 4
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6151,6 +6257,7 @@
 										"my_txt": "options.video.opt_2"
 									},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"sceneGraphData": {
 										"parent-uid": null,
 										"uid": 350,
@@ -6160,10 +6267,11 @@
 											"z": true,
 											"w": true,
 											"h": true,
-											"d": true,
+											"de": true,
 											"a": true,
 											"o": false,
 											"v": false,
+											"d": true,
 											"sm": "normal"
 										},
 										"preview": {
@@ -6250,6 +6358,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6283,6 +6392,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6326,6 +6436,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6359,6 +6470,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6399,6 +6511,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6432,6 +6545,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6465,6 +6579,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6508,6 +6623,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6541,6 +6657,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6581,6 +6698,7 @@
 											}
 										}
 									},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6650,6 +6768,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6683,6 +6802,7 @@
 									"tags": "",
 									"instanceVariables": {},
 									"behaviors": {},
+									"materialSurfaceType": "smooth",
 									"showing": true,
 									"locked": false,
 									"world": {
@@ -6749,6 +6869,7 @@
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -6782,6 +6903,7 @@
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -6834,6 +6956,7 @@
 								"my_txt": "options.back"
 							},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"sceneGraphData": {
 								"parent-uid": null,
 								"uid": 116,
@@ -6843,10 +6966,11 @@
 									"z": true,
 									"w": true,
 									"h": true,
-									"d": true,
+									"de": true,
 									"a": true,
 									"o": false,
 									"v": false,
+									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -6916,6 +7040,7 @@
 								"my_txt": "options.menu"
 							},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"sceneGraphData": {
 								"parent-uid": null,
 								"uid": 117,
@@ -6925,10 +7050,11 @@
 									"z": true,
 									"w": true,
 									"h": true,
-									"d": true,
+									"de": true,
 									"a": true,
 									"o": false,
 									"v": false,
+									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -6979,6 +7105,7 @@
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -7012,6 +7139,7 @@
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -7045,6 +7173,7 @@
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -7078,6 +7207,7 @@
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -7111,6 +7241,7 @@
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"showing": true,
 							"locked": false,
 							"world": {
@@ -7163,6 +7294,7 @@
 								"my_txt": "options.translation.title"
 							},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"sceneGraphData": {
 								"parent-uid": null,
 								"uid": 226,
@@ -7172,10 +7304,11 @@
 									"z": true,
 									"w": true,
 									"h": true,
-									"d": true,
+									"de": true,
 									"a": true,
 									"o": false,
 									"v": false,
+									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -7245,6 +7378,7 @@
 								"my_txt": "options.title"
 							},
 							"behaviors": {},
+							"materialSurfaceType": "smooth",
 							"sceneGraphData": {
 								"parent-uid": null,
 								"uid": 230,
@@ -7254,10 +7388,11 @@
 									"z": true,
 									"w": true,
 									"h": true,
-									"d": true,
+									"de": true,
 									"a": true,
 									"o": false,
 									"v": false,
+									"d": true,
 									"sm": "normal"
 								},
 								"preview": {
@@ -7446,6 +7581,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -7479,6 +7615,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -7512,6 +7649,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -7617,6 +7755,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -7796,8 +7935,9 @@
 	"height": 1080,
 	"unboundedScrolling": false,
 	"sampling": "auto",
+	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
-	"projection": "perspective",
+	"projection": "orthographic",
 	"eventSheet": "E_Level"
 }
