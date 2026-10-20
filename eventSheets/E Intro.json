@@ -213,6 +213,14 @@
 					}
 				},
 				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 200780327086824,
+					"parameters": {
+						"key": "\"my_config\""
+					}
+				},
+				{
 					"id": "tween-value",
 					"objectClass": "TiledBackground",
 					"sid": 330069632066365,
@@ -319,14 +327,6 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 772641435193093,
-							"parameters": {
-								"layout": "Menu"
-							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
 							"sid": 463509227953783,
 							"disabled": true,
 							"parameters": {
@@ -334,7 +334,66 @@
 							}
 						}
 					],
-					"sid": 909629324094416
+					"sid": 909629324094416,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-xy",
+									"objectClass": "A_zOptions_Config",
+									"sid": 421721432357391,
+									"parameters": {
+										"x": "2",
+										"y": "1",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "request-fullscreen",
+									"objectClass": "Browser",
+									"sid": 613453594777824,
+									"parameters": {
+										"mode": "stretch-letterbox-scale",
+										"navigation-ui": "auto"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 736255941115302,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 102979384957305
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 379322825899262
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 513428495776121,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 827699274439092
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -475,7 +534,158 @@
 					}
 				}
 			],
-			"sid": 274337286886944
+			"sid": 274337286886944,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 508230731213614,
+							"parameters": {
+								"object": "Options_Flag"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "Options_Flag",
+							"sid": 382419024201175,
+							"parameters": {
+								"width": "270",
+								"height": "170"
+							}
+						}
+					],
+					"sid": 171099258146250
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "Options_Flag",
+							"sid": 109248535784413,
+							"parameters": {
+								"width": "352",
+								"height": "224"
+							}
+						}
+					],
+					"sid": 173908677347394,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Options_Flag",
+									"sid": 260226983307012,
+									"parameters": {
+										"animation": "\"pt-BR\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 531629612842963,
+									"parameters": {
+										"variable": "Language",
+										"value": "Options_Flag.AnimationName"
+									}
+								},
+								{
+									"id": "request-project-file",
+									"objectClass": "AJAX",
+									"sid": 904618953898761,
+									"parameters": {
+										"tag": "\"pt-BR\"",
+										"file": {
+											"path": "pt-BR.json"
+										}
+									}
+								},
+								{
+									"id": "set-locale",
+									"objectClass": "Internationalization",
+									"sid": 381695951500586,
+									"parameters": {
+										"locale": "Language"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 162658165145316,
+									"parameters": {
+										"key": "\"my_lang\"",
+										"value": "Language"
+									}
+								}
+							],
+							"sid": 688497947635143
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Options_Flag",
+									"sid": 128388914597272,
+									"parameters": {
+										"animation": "\"en-US\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 702261530659768,
+									"parameters": {
+										"variable": "Language",
+										"value": "Options_Flag.AnimationName"
+									}
+								},
+								{
+									"id": "request-project-file",
+									"objectClass": "AJAX",
+									"sid": 430495322690628,
+									"parameters": {
+										"tag": "\"en-US\"",
+										"file": {
+											"path": "en-US.json"
+										}
+									}
+								},
+								{
+									"id": "set-locale",
+									"objectClass": "Internationalization",
+									"sid": 492123943850467,
+									"parameters": {
+										"locale": "Language"
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 306535473873071,
+									"parameters": {
+										"key": "\"my_lang\"",
+										"value": "Language"
+									}
+								}
+							],
+							"sid": 881023792454712
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -496,11 +706,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 486365670098191,
+					"sid": 721627509511800,
 					"parameters": {
 						"variable": "Loaded_AJAX",
 						"comparison": 5,
-						"value": "4"
+						"value": "5"
 					}
 				}
 			],
@@ -853,7 +1063,7 @@
 			"actions": [
 				{
 					"id": "load",
-					"objectClass": "Card_Pos",
+					"objectClass": "A_zCard_Pos",
 					"sid": 339253443638848,
 					"parameters": {
 						"json": "AJAX.LastData"
@@ -870,6 +1080,71 @@
 				}
 			],
 			"sid": 149951770329315
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 150518810585231,
+					"parameters": {
+						"tag": "\"opt_conf\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_zOptions_Config",
+					"sid": 639082026363581,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 636737745758248,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 597629355529283
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 508792985886977,
+					"parameters": {
+						"variable": "Vol_Mus",
+						"value": "A_zOptions_Config.At(1,1)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 625213785536735,
+					"parameters": {
+						"variable": "Vol_Sfx",
+						"value": "A_zOptions_Config.At(1,2)"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 928243585023545,
+					"parameters": {
+						"key": "\"my_config\"",
+						"value": "A_zOptions_Config.AsJSON"
+					}
+				}
+			],
+			"sid": 330942892984093
 		},
 		{
 			"eventType": "block",
@@ -1019,6 +1294,113 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 310917853452067,
+					"parameters": {
+						"key": "\"my_config\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 968899568145563,
+					"parameters": {
+						"tag": "\"opt_conf\"",
+						"file": {
+							"path": "Options_Config.json"
+						}
+					}
+				}
+			],
+			"sid": 267478214186002
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 653810742074326,
+					"parameters": {
+						"key": "\"my_config\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 177911084576889,
+					"parameters": {
+						"key": "\"my_config\""
+					}
+				}
+			],
+			"sid": 760653655833936
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 533913231884899,
+					"parameters": {
+						"key": "\"my_config\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_zOptions_Config",
+					"sid": 269817457689172,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 865612724860715
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 885541061018544,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 974431029220648,
+					"parameters": {
+						"variable": "Vol_Mus",
+						"value": "A_zOptions_Config.At(1,1)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 637692179066995,
+					"parameters": {
+						"variable": "Vol_Sfx",
+						"value": "A_zOptions_Config.At(1,2)"
+					}
+				}
+			],
+			"sid": 659833566322479
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-completed",
 					"objectClass": "AJAX",
 					"sid": 817789843813145,
@@ -1090,6 +1472,74 @@
 			],
 			"sid": 607581788428334,
 			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 573341783989328,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "clear-storage",
+					"objectClass": "LocalStorage",
+					"sid": 479663171721535
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 140420933719596
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 992180992715876,
+					"parameters": {
+						"reset-static": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 222338283822257,
+					"parameters": {
+						"layer": "\"Save_Warning\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 630836257769131,
+					"parameters": {
+						"time-scale": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 504507607429866,
+					"parameters": {
+						"seconds": "0.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 693352068049163,
+					"parameters": {
+						"layout": "Intro"
+					}
+				}
+			],
+			"sid": 380228039518719
 		}
 	],
 	"sid": 364052280707711

@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 50600,
+	"savedWithRelease": 50603,
 	"name": "Wonderjack",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -263,7 +263,7 @@
 			"Icon_Protect",
 			"Icon_Card_Numb",
 			"Enemy_Extra_Anim",
-			"Enemy_Menu",
+			"A_zEnemy_Menu",
 			"Icon_Hidden_Card",
 			"A_NumbersEnemy",
 			"A_NumbersPlayer",
@@ -346,13 +346,14 @@
 			"Bkg_placa",
 			"blim",
 			"Grid",
-			"Card_Pos",
+			"A_zCard_Pos",
 			"Btn_Next",
 			"Text_Turn2",
 			"Bkg_Turn_Txt2",
 			"Bkg_Auto_math",
 			"Bkg_Extra",
-			"Icon_Silence"
+			"Icon_Silence",
+			"A_zOptions_Config"
 		],
 		"subfolders": []
 	},
@@ -533,6 +534,46 @@
 					"name": "HURRICANE.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 621377374637694,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Shhhh_sfx_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 692054112429897,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Shhhh_sfx_3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 711626122090515,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Shhhh_sfx_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 198178399634290,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "alexzavesa-christmas-whoosh-1-458065 (online-audio-converter.com).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 124141316132070,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "735618__geoff-bremner-audio__small-whip-9.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 637013152414578,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -1046,6 +1087,14 @@
 					"name": "Card Positions.json",
 					"type": "application/json",
 					"sid": 680139864020080,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Options_Config.json",
+					"type": "application/json",
+					"sid": 289551843438857,
 					"file-info": {
 						"purpose": "none"
 					}

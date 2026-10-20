@@ -520,7 +520,7 @@
             "cardA": "[u]Carta Ás[/u]\n\nCrie uma carta [color=#f5fe05]curinga[/color] temporária que vale [color=#f5fe05]1[/color] ou [color=#f5fe05]11[/color].",
             "duplicate": "[u]Duplicar[/u]\n\nCria uma [color=#f5fe05]cópia[/color] temporária de uma de suas cartas de número [color=#f5fe05]visíveis[/color].",
             "duplicate_tip_1": "[u]Escolha sua carta para duplicar:[/u]",
-            "silence": "[u]Silenciar[/u]\n\nSilencie o oponente por [color=#f5fe05]2[/color] turnos. Ele não poderá jogar cartas de poder.",
+            "silence": "[u]Silenciar[/u]\n\nSilencie o oponente por [color=#f5fe05]2[/color] turnos: ele não poderá jogar cartas de poder.",
             "investigate": "[u]Investigar[/u]\n\nEscolha e [color=#f5fe05]revele[/color] uma carta de número [color=#f5fe05]oculta[/color] do oponente [color=#f5fe05]neste[/color] turno."
             
         },

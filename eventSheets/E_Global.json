@@ -390,6 +390,37 @@
 					"sid": 106532783466379
 				},
 				{
+					"eventType": "comment",
+					"text": "Salvar as configurações no Local Storage"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 958099191225044,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 1,
+								"second-value": "\"Intro\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 393935051817014,
+							"parameters": {
+								"key": "\"my_config\"",
+								"value": "A_zOptions_Config.AsJSON"
+							}
+						}
+					],
+					"sid": 701933517946127
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -589,11 +620,116 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 573917542445225,
+							"id": "compare-at-xy",
+							"objectClass": "A_zOptions_Config",
+							"sid": 968812220542390,
 							"parameters": {
-								"variable": "Opt_EasyMath"
+								"x": "2",
+								"y": "1",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 479689590580357,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 190005257842433,
+									"parameters": {
+										"object": "Toggle_Options_Numbers",
+										"expression": "Toggle_Options_Numbers.id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Toggle_Options_Numbers",
+									"sid": 352740312569374,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 447837327671627
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-at-xy",
+							"objectClass": "A_zOptions_Config",
+							"sid": 377313905569950,
+							"parameters": {
+								"x": "2",
+								"y": "2",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 295846434713534,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 873999629266555,
+									"parameters": {
+										"object": "Toggle_Options_Numbers",
+										"expression": "Toggle_Options_Numbers.id",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Toggle_Options_Numbers",
+									"sid": 510017863288221,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Txt_debug2",
+									"sid": 835359641954609,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 936309866959058
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-at-xy",
+							"objectClass": "A_zOptions_Config",
+							"sid": 653344384574032,
+							"parameters": {
+								"x": "3",
+								"y": "1",
+								"comparison": 0,
+								"value": "1"
 							}
 						}
 					],
@@ -667,11 +803,14 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 810223263621164,
+							"id": "compare-at-xy",
+							"objectClass": "A_zOptions_Config",
+							"sid": 342691930595924,
 							"parameters": {
-								"variable": "Opt_FastMode"
+								"x": "3",
+								"y": "2",
+								"comparison": 0,
+								"value": "1"
 							}
 						}
 					],
@@ -715,58 +854,6 @@
 							"sid": 249492939993025
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 532096727865038,
-							"parameters": {
-								"variable": "Opt_Debug"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 456640683849431,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-comparison",
-									"objectClass": "System",
-									"sid": 677011130241687,
-									"parameters": {
-										"object": "Toggle_Options_Numbers",
-										"expression": "Toggle_Options_Numbers.id",
-										"comparison": 0,
-										"value": "4"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Toggle_Options_Numbers",
-									"sid": 156068521803595,
-									"parameters": {
-										"frame-number": "1"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Txt_debug2",
-									"sid": 847031284126107,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 664484802264134
-						}
-					]
 				}
 			]
 		},
@@ -786,6 +873,26 @@
 					"sid": 816688845785981,
 					"parameters": {
 						"text": "\"fps: \" & fps & \" | cpu: \" & ( round(cpuutilisation * 100) / 100 ) & \" | gpu: \"& (round(gpuutilisation * 100) / 100 ) & \" | vram (images): \" & ImageMemoryUsage"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "A_zOptions_Config",
+					"sid": 784361310973444,
+					"parameters": {
+						"x": "1",
+						"y": "1",
+						"value": "Vol_Mus"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "A_zOptions_Config",
+					"sid": 280955906965498,
+					"parameters": {
+						"x": "1",
+						"y": "2",
+						"value": "Vol_Sfx"
 					}
 				}
 			],
@@ -1561,6 +1668,15 @@
 									"parameters": {
 										"x": "-1000",
 										"y": "-1000"
+									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 802458652306721,
+									"parameters": {
+										"type": "log",
+										"message": "\"Tentando mudar pra click\""
 									}
 								}
 							],
@@ -4516,7 +4632,6 @@
 							],
 							"actions": [],
 							"sid": 231732585075750,
-							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -4559,8 +4674,7 @@
 											}
 										}
 									],
-									"sid": 551576903626651,
-									"disabled": true
+									"sid": 551576903626651
 								},
 								{
 									"eventType": "block",
@@ -4599,8 +4713,7 @@
 											}
 										}
 									],
-									"sid": 371730932878953,
-									"disabled": true
+									"sid": 371730932878953
 								}
 							]
 						},
@@ -4620,7 +4733,6 @@
 							],
 							"actions": [],
 							"sid": 387344886952384,
-							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -4654,8 +4766,7 @@
 											}
 										}
 									],
-									"sid": 569724218325145,
-									"disabled": true
+									"sid": 569724218325145
 								},
 								{
 									"eventType": "block",
@@ -4685,8 +4796,7 @@
 											}
 										}
 									],
-									"sid": 176457932317655,
-									"disabled": true
+									"sid": 176457932317655
 								}
 							]
 						},
@@ -5191,10 +5301,20 @@
 												{
 													"id": "request-fullscreen",
 													"objectClass": "Browser",
-													"sid": 955128475847309,
+													"sid": 963146728298265,
 													"parameters": {
 														"mode": "stretch-letterbox-scale",
 														"navigation-ui": "auto"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 306036233103760,
+													"parameters": {
+														"x": "2",
+														"y": "1",
+														"value": "1"
 													}
 												}
 											],
@@ -5234,7 +5354,17 @@
 												{
 													"id": "cancel-fullscreen",
 													"objectClass": "Browser",
-													"sid": 202384566767394
+													"sid": 158073309067167
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 875846738946327,
+													"parameters": {
+														"x": "2",
+														"y": "1",
+														"value": "0"
+													}
 												}
 											],
 											"sid": 287284117317255
@@ -5324,6 +5454,16 @@
 													"parameters": {
 														"visibility": "visible"
 													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 632791816797110,
+													"parameters": {
+														"x": "2",
+														"y": "2",
+														"value": "1"
+													}
 												}
 											],
 											"sid": 839442345224379
@@ -5374,6 +5514,16 @@
 													"sid": 840034536414477,
 													"parameters": {
 														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 633255211567021,
+													"parameters": {
+														"x": "2",
+														"y": "2",
+														"value": "0"
 													}
 												}
 											],
@@ -5507,6 +5657,16 @@
 														"variable": "Opt_EasyMath",
 														"value": "true"
 													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 521000997952977,
+													"parameters": {
+														"x": "3",
+														"y": "1",
+														"value": "1"
+													}
 												}
 											],
 											"sid": 418762133080064
@@ -5583,6 +5743,16 @@
 													"parameters": {
 														"variable": "Opt_EasyMath",
 														"value": "false"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 876921733984850,
+													"parameters": {
+														"x": "3",
+														"y": "1",
+														"value": "0"
 													}
 												}
 											],
@@ -5674,6 +5844,16 @@
 														"variable": "Opt_FastMode_Secs",
 														"value": "1"
 													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 753356537937534,
+													"parameters": {
+														"x": "3",
+														"y": "2",
+														"value": "0"
+													}
 												}
 											],
 											"sid": 508604318988304
@@ -5725,6 +5905,16 @@
 													"parameters": {
 														"variable": "Opt_FastMode_Secs",
 														"value": "0"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_zOptions_Config",
+													"sid": 719700555671858,
+													"parameters": {
+														"x": "3",
+														"y": "2",
+														"value": "1"
 													}
 												}
 											],

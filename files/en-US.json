@@ -518,7 +518,7 @@
             "cardA": "[u]Ace Card[/u]\n\nCreate a temporary [color=#f5fe05]Ace[/color] card worth [color=#f5fe05]1[/color] or [color=#f5fe05]11[/color].",
             "duplicate": "[u]Duplicate[/u]\n\nCreate a temporary [color=#f5fe05]copy[/color] from one of your [color=#f5fe05]face-up[/color] cards.",
             "duplicate_tip_1": "[u]Select your card to duplicate:[/u]",
-            "silence": "[u]Silence[/u]\n\nSilence the opponent for [color=#f5fe05]2[/color] turns. They cannot play power cards.",
+            "silence": "[u]Silence[/u]\n\nSilence the opponent for [color=#f5fe05]2[/color] turns: they cannot play power cards.",
             "investigate": "[u]Investigate[/u]\n\nChoose and [color=#f5fe05]reveal[/color] a [color=#f5fe05]hidden[/color] card from the opponent in [color=#f5fe05]this[/color] turn."
         },
         "demo": {
