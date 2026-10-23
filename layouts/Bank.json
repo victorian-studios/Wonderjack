@@ -1534,10 +1534,10 @@
 					"world": {
 						"x": 3388,
 						"y": 618,
-						"width": 829.2303120356612,
+						"width": 718.5022288261515,
 						"height": 792,
-						"originX": 0.4706629442991003,
-						"originY": 0.9304334273384204,
+						"originX": 0.386986301369863,
+						"originY": 0.9431230610134437,
 						"color": [
 							1,
 							1,
@@ -3680,6 +3680,75 @@
 						"height": 178,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Enemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "General of Cards",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 406,
+					"sid": 667991622894237,
+					"tags": "",
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 6,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 3998,
+						"y": 2076,
+						"width": 782.6739723895573,
+						"height": 733.1042860822004,
+						"originX": 0.3511205976520811,
+						"originY": 0.8494868871151653,
 						"color": [
 							1,
 							1,
