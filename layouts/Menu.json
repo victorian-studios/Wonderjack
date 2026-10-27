@@ -1785,7 +1785,7 @@
 								"x": 460,
 								"y": 295,
 								"width": 640,
-								"height": 2463,
+								"height": 4117,
 								"originX": 0.5,
 								"originY": 0,
 								"color": [
@@ -1810,7 +1810,9 @@
 							"uid": 280,
 							"sid": 568160937380662,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 0
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -1842,15 +1844,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 1,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 281,
 							"sid": 268365182226243,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 1
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -1864,8 +1868,8 @@
 							"world": {
 								"x": 610,
 								"y": 441,
-								"width": 174.52509596266623,
-								"height": 232.70012795022163,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -1890,7 +1894,9 @@
 							"uid": 282,
 							"sid": 629609164155908,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 2
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -1922,15 +1928,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 3,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 283,
 							"sid": 627807078068162,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 3
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -1944,8 +1952,8 @@
 							"world": {
 								"x": 465,
 								"y": 1259,
-								"width": 521.400520337062,
-								"height": 293.59361937644786,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -1962,15 +1970,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 4,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 284,
 							"sid": 149316196108587,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 4
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -1984,8 +1994,8 @@
 							"world": {
 								"x": 465,
 								"y": 1599,
-								"width": 521.9442122247962,
-								"height": 293.59361937644786,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2002,15 +2012,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 5,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 285,
 							"sid": 457658207770121,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 5
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -2024,8 +2036,8 @@
 							"world": {
 								"x": 317,
 								"y": 1920,
-								"width": 230.52536039928498,
-								"height": 280.54501407082796,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2042,15 +2054,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 6,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 286,
 							"sid": 474145682936810,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 6
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -2064,8 +2078,8 @@
 							"world": {
 								"x": 606,
 								"y": 1922,
-								"width": 230.52536039928498,
-								"height": 280.54501407082796,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2082,15 +2096,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 7,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 287,
 							"sid": 599495451181039,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 7
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -2104,8 +2120,8 @@
 							"world": {
 								"x": 319,
 								"y": 2233,
-								"width": 230.52536039928498,
-								"height": 280.54501407082796,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2122,15 +2138,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 8,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 288,
 							"sid": 105414618782998,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 8
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -2144,8 +2162,8 @@
 							"world": {
 								"x": 608,
 								"y": 2231,
-								"width": 230.52536039928498,
-								"height": 280.54501407082796,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2162,15 +2180,17 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 9,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 289,
 							"sid": 323340220302099,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 9
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -2184,8 +2204,8 @@
 							"world": {
 								"x": 465,
 								"y": 2552,
-								"width": 230.52536039928498,
-								"height": 280.54501407082796,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2232,7 +2252,7 @@
 								"x": 818,
 								"y": 300,
 								"width": 46,
-								"height": 326,
+								"height": 296,
 								"originX": 0.5,
 								"originY": 0,
 								"color": [
@@ -2423,7 +2443,9 @@
 							"uid": 309,
 							"sid": 444556994811243,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 10
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {
@@ -2439,6 +2461,258 @@
 								"y": 706,
 								"width": 440.1228855909694,
 								"height": 230.09028458954984,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Gallery_Arts_Small",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "lock",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 409,
+							"sid": 662460107270798,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 11
+							},
+							"behaviors": {
+								"Pin": {
+									"properties": {
+										"destroy": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 451,
+								"y": 2875,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Gallery_Arts_Small",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "lock",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 410,
+							"sid": 410107718262050,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 12
+							},
+							"behaviors": {
+								"Pin": {
+									"properties": {
+										"destroy": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 451,
+								"y": 3188,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Gallery_Arts_Small",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "lock",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 411,
+							"sid": 721856496466313,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 13
+							},
+							"behaviors": {
+								"Pin": {
+									"properties": {
+										"destroy": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 451,
+								"y": 3501,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Gallery_Arts_Small",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "lock",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 412,
+							"sid": 706753135387178,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 14
+							},
+							"behaviors": {
+								"Pin": {
+									"properties": {
+										"destroy": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 286,
+								"y": 3810,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Gallery_Arts_Small",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "lock",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 413,
+							"sid": 184967370244457,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 15
+							},
+							"behaviors": {
+								"Pin": {
+									"properties": {
+										"destroy": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 592,
+								"y": 3812,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Gallery_Arts_Small",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "lock",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 414,
+							"sid": 400662627490320,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 16
+							},
+							"behaviors": {
+								"Pin": {
+									"properties": {
+										"destroy": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 443,
+								"y": 4160,
+								"width": 250.40025479845906,
+								"height": 250.40025479845906,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -3068,7 +3342,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "card_13",
-								"initial-frame": 0,
+								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3076,6 +3350,7 @@
 							"sid": 314539257434982,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "card_13",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3136,8 +3411,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "cat_eye",
-								"initial-frame": 1,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3145,6 +3420,7 @@
 							"sid": 503758249103199,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "cat_eye",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3205,8 +3481,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "crown",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3214,6 +3490,7 @@
 							"sid": 699994767940529,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "crown",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3283,6 +3560,7 @@
 							"sid": 541743606712743,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "drink_me",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3344,7 +3622,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "eat_me",
-								"initial-frame": 2,
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3352,6 +3630,7 @@
 							"sid": 447300881233253,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "eat-me",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3397,7 +3676,7 @@
 								"width": 122,
 								"height": 122,
 								"originX": 0.5,
-								"originY": 0.5,
+								"originY": 0.45081967213114754,
 								"color": [
 									1,
 									1,
@@ -3412,8 +3691,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "hat",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3421,6 +3700,7 @@
 							"sid": 732219145101273,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "hat",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3490,6 +3770,7 @@
 							"sid": 914222108206143,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "spear",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3551,7 +3832,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "tea",
-								"initial-frame": 2,
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3559,6 +3840,7 @@
 							"sid": 714332369623973,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "tea",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3604,7 +3886,7 @@
 								"width": 122,
 								"height": 122,
 								"originX": 0.5,
-								"originY": 0.5,
+								"originY": 0.4672131147540984,
 								"color": [
 									1,
 									1,
@@ -3620,7 +3902,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "watch",
-								"initial-frame": 2,
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3628,6 +3910,7 @@
 							"sid": 924662031105043,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "watch",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3688,8 +3971,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "key",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3697,6 +3980,7 @@
 							"sid": 492596082550638,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "key",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3757,8 +4041,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "match",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3766,6 +4050,7 @@
 							"sid": 870152241609649,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "match",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3826,8 +4111,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "picnic",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3835,6 +4120,7 @@
 							"sid": 554571045687838,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "picnic",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3895,8 +4181,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "mussel",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3904,6 +4190,7 @@
 							"sid": 583697689250951,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "mussel",
 								"Uses": 0,
 								"Used": false
 							},
@@ -3973,6 +4260,7 @@
 							"sid": 860098534010043,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "pocket",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4042,6 +4330,7 @@
 							"sid": 393838941646307,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "ticket",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4111,6 +4400,7 @@
 							"sid": 168718678178392,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "tornado",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4171,8 +4461,8 @@
 							"type": "Relics",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "trap",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4180,6 +4470,7 @@
 							"sid": 216780277190601,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "trap",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4249,6 +4540,7 @@
 							"sid": 798472118593730,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "box",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4308,7 +4600,7 @@
 						{
 							"type": "Relics",
 							"properties": {
-								"initially-visible": true,
+								"initially-visible": false,
 								"initial-animation": "egg",
 								"initial-frame": 2,
 								"enable-collisions": true,
@@ -4318,6 +4610,7 @@
 							"sid": 307010110384136,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "egg",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4377,7 +4670,7 @@
 						{
 							"type": "Relics",
 							"properties": {
-								"initially-visible": true,
+								"initially-visible": false,
 								"initial-animation": "medal",
 								"initial-frame": 2,
 								"enable-collisions": true,
@@ -4387,6 +4680,7 @@
 							"sid": 261500256660082,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "medal",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4446,8 +4740,8 @@
 						{
 							"type": "Relics",
 							"properties": {
-								"initially-visible": true,
-								"initial-animation": "armor",
+								"initially-visible": false,
+								"initial-animation": "lucky",
 								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
@@ -4456,6 +4750,7 @@
 							"sid": 813222856511903,
 							"tags": "",
 							"instanceVariables": {
+								"ID": "lucky",
 								"Uses": 0,
 								"Used": false
 							},
@@ -4502,6 +4797,123 @@
 								"height": 122,
 								"originX": 0.5,
 								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Relics",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "armor",
+								"initial-frame": 2,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 407,
+							"sid": 635887492181391,
+							"tags": "",
+							"instanceVariables": {
+								"ID": "armor",
+								"Uses": 0,
+								"Used": false
+							},
+							"behaviors": {
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								},
+								"Flash": {
+									"properties": {}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 1,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"effects": {
+								"Tint": {
+									"isEnabled": false,
+									"parameters": {
+										"color": [
+											0.3137254901960784,
+											0.3137254901960784,
+											0.3137254901960784,
+											1
+										]
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1144,
+								"y": 904,
+								"width": 122,
+								"height": 122,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Scroll_Codex_Relics",
+							"properties": {
+								"left-margin": 0,
+								"right-margin": 0,
+								"top-margin": 18,
+								"bottom-margin": 18,
+								"edges": "stretch",
+								"fill": "stretch",
+								"image-scale-x": 1,
+								"image-scale-y": 1,
+								"initially-visible": true,
+								"origin": "top",
+								"seams": "overlap"
+							},
+							"uid": 415,
+							"sid": 642601495534398,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"DragDrop": {
+									"properties": {
+										"axes": "vertical-only",
+										"enabled": true
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1517.4935306692278,
+								"y": 336.1435241699219,
+								"width": 31.919190244705533,
+								"height": 400,
+								"originX": 0.5,
+								"originY": 0,
 								"color": [
 									1,
 									1,
@@ -4561,7 +4973,7 @@
 							"sid": 761256787647450,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "1-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -4626,7 +5038,7 @@
 							"sid": 131151862229622,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "2-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -4682,8 +5094,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 3,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4691,7 +5103,7 @@
 							"sid": 106141471260705,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "3-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -4747,8 +5159,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 4,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4756,7 +5168,7 @@
 							"sid": 613486182106885,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "4-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -4812,8 +5224,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 5,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4821,7 +5233,7 @@
 							"sid": 442534749664219,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "5-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -4877,8 +5289,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 6,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4886,7 +5298,7 @@
 							"sid": 601071387094059,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "6-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -4942,8 +5354,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 7,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4951,7 +5363,7 @@
 							"sid": 642967255767375,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "7-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5007,8 +5419,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 8,
+								"initial-animation": "Locked",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5016,7 +5428,7 @@
 							"sid": 689938085850465,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "8-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5072,8 +5484,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 9,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5081,7 +5493,7 @@
 							"sid": 461017932328086,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "9-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5146,7 +5558,7 @@
 							"sid": 872930542509117,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "10-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5211,7 +5623,7 @@
 							"sid": 832520792181395,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "11-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5267,8 +5679,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 12,
+								"initial-animation": "Locked",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5276,7 +5688,7 @@
 							"sid": 379526012234788,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "12-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5332,8 +5744,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 13,
+								"initial-animation": "Locked",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5341,7 +5753,7 @@
 							"sid": 256982233552730,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "13-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5397,8 +5809,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 14,
+								"initial-animation": "Locked",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5406,7 +5818,7 @@
 							"sid": 490900042984179,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "14-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5462,8 +5874,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 15,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5471,7 +5883,7 @@
 							"sid": 294521372713799,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "15-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5536,7 +5948,7 @@
 							"sid": 738179938096704,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "16-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5592,8 +6004,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 17,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5601,7 +6013,7 @@
 							"sid": 196419877770199,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "17-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5666,7 +6078,7 @@
 							"sid": 940468211916437,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "18-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5722,8 +6134,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 19,
+								"initial-animation": "Locked",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5731,7 +6143,7 @@
 							"sid": 639873205675543,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "19-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5787,8 +6199,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 20,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5796,7 +6208,7 @@
 							"sid": 660686509247954,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "20-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5852,8 +6264,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 21,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5861,7 +6273,7 @@
 							"sid": 592910322382763,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "21-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -5926,7 +6338,7 @@
 							"sid": 815330600782825,
 							"tags": "",
 							"instanceVariables": {
-								"myID": "",
+								"myID": "22-",
 								"my_pos_x": 0,
 								"my_pos_y": 0,
 								"hand_position": 0,
@@ -6018,15 +6430,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Tutorial",
-								"initial-frame": 1,
+								"initial-animation": "Codex",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 168,
 							"sid": 285892016879880,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 0
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6043,10 +6457,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 745,
-								"y": 560,
-								"width": 97.56734693877551,
-								"height": 107.38144329896906,
+								"x": 752,
+								"y": 544,
+								"width": 166,
+								"height": 186,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6063,15 +6477,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_1",
-								"initial-frame": 3,
+								"initial-animation": "Codex",
+								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 169,
 							"sid": 360961558964803,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 2
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6088,10 +6504,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 905,
-								"y": 560,
-								"width": 98.15510204081633,
-								"height": 105.0721649484536,
+								"x": 912,
+								"y": 544,
+								"width": 167,
+								"height": 182,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6108,7 +6524,7 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_1",
+								"initial-animation": "Codex_Lock",
 								"initial-frame": 4,
 								"enable-collisions": true,
 								"live-preview": false
@@ -6116,7 +6532,9 @@
 							"uid": 170,
 							"sid": 933787236549606,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 4
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6133,10 +6551,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1065,
-								"y": 560,
-								"width": 94.04081632653062,
-								"height": 105.64948453608247,
+								"x": 1080,
+								"y": 544,
+								"width": 160,
+								"height": 183,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6153,15 +6571,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_2",
-								"initial-frame": 2,
+								"initial-animation": "Codex",
+								"initial-frame": 6,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 171,
 							"sid": 683749862266596,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 6
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6178,10 +6598,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1225,
-								"y": 560,
-								"width": 144,
-								"height": 111.99999999999999,
+								"x": 1248,
+								"y": 544,
+								"width": 190,
+								"height": 179,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6198,15 +6618,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_Dodo",
-								"initial-frame": 2,
+								"initial-animation": "Codex",
+								"initial-frame": 10,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 172,
 							"sid": 309106314055190,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 10
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6223,10 +6645,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 745,
-								"y": 720,
-								"width": 144,
-								"height": 111.99999999999999,
+								"x": 744,
+								"y": 728,
+								"width": 158,
+								"height": 182,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6243,15 +6665,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_3",
-								"initial-frame": 2,
+								"initial-animation": "Codex_Lock",
+								"initial-frame": 12,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 173,
 							"sid": 575639612750213,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 12
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6268,10 +6692,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 905,
-								"y": 720,
-								"width": 144,
-								"height": 111.99999999999999,
+								"x": 895.6285714285714,
+								"y": 729.7319587628866,
+								"width": 168,
+								"height": 188,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6288,15 +6712,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_3",
-								"initial-frame": 3,
+								"initial-animation": "Codex_Lock",
+								"initial-frame": 14,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 174,
 							"sid": 898102105726571,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 14
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6313,10 +6739,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1065,
-								"y": 720,
-								"width": 144,
-								"height": 111.99999999999999,
+								"x": 1063.5142857142857,
+								"y": 727.1752577319587,
+								"width": 182,
+								"height": 183,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6333,15 +6759,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_4",
-								"initial-frame": 3,
+								"initial-animation": "Codex_Lock",
+								"initial-frame": 16,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 175,
 							"sid": 871611064975403,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 16
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6358,10 +6786,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1225,
-								"y": 720,
-								"width": 144,
-								"height": 111.99999999999999,
+								"x": 1240,
+								"y": 728,
+								"width": 168,
+								"height": 182,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6378,15 +6806,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_2",
-								"initial-frame": 3,
+								"initial-animation": "Codex_Lock",
+								"initial-frame": 8,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 176,
 							"sid": 336116337915519,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 8
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6403,10 +6833,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1384,
-								"y": 560,
-								"width": 144,
-								"height": 111.99999999999999,
+								"x": 1416,
+								"y": 544,
+								"width": 157,
+								"height": 183,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6423,15 +6853,17 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Level_4",
-								"initial-frame": 4,
+								"initial-animation": "Codex_Lock",
+								"initial-frame": 18,
 								"enable-collisions": true,
 								"live-preview": false
 							},
 							"uid": 177,
 							"sid": 515491921162478,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"ID": 18
+							},
 							"behaviors": {
 								"Fade": {
 									"properties": {
@@ -6448,10 +6880,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1384,
-								"y": 720,
-								"width": 144,
-								"height": 111.99999999999999,
+								"x": 1408,
+								"y": 728,
+								"width": 168,
+								"height": 181,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [

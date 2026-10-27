@@ -413,6 +413,7 @@
 					"sid": 420732331146587,
 					"tags": "",
 					"instanceVariables": {
+						"ID": "",
 						"Uses": 0,
 						"Used": false
 					},
@@ -2361,7 +2362,9 @@
 					"uid": 156,
 					"sid": 700775088734379,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"ID": 0
+					},
 					"behaviors": {
 						"Fade": {
 							"properties": {

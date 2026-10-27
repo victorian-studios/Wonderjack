@@ -1384,6 +1384,141 @@
 									"sid": 800813645304880
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 159448990679513,
+									"parameters": {
+										"object": "Relics"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Relics",
+									"sid": 854305546075652
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Relics",
+									"sid": 112594015677948,
+									"parameters": {
+										"comparison": 1,
+										"number": "2"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 122602173698841,
+									"parameters": {
+										"layer": "\"Pause\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Relics",
+									"sid": 698064596182909,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 389703931203049
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 747144486254803
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Relics",
+									"sid": 906859079579234,
+									"parameters": {
+										"comparison": 1,
+										"number": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Relics",
+									"sid": 724705006509599,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 974199474279312
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 453713179722144,
+									"parameters": {
+										"object": "Quadro_Turns_Shadow"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 764061661404451
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 566665074838884,
+									"parameters": {
+										"layer": "\"Codex\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 877675646303699,
+									"parameters": {
+										"frame-number": "Self.ID + 1"
+									}
+								}
+							],
+							"sid": 400631201568978
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 574832326928118
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 971557870536814,
+									"parameters": {
+										"frame-number": "Self.ID"
+									}
+								}
+							],
+							"sid": 510664423420674
 						}
 					],
 					"sid": 727246147269931
@@ -1450,6 +1585,10 @@
 						}
 					],
 					"sid": 406453476343933
+				},
+				{
+					"eventType": "comment",
+					"text": "Estilos do mouse"
 				},
 				{
 					"eventType": "block",
@@ -1682,6 +1821,151 @@
 								}
 							],
 							"sid": 510457955359634
+						},
+						{
+							"eventType": "comment",
+							"text": "Excessão por conta do Quadro_Turns_Shadow ser reutilizado durante as fases. Logo, o mouse só deve mudar durante a tela de Codex"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 624427743272591
+								},
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 349379776750766,
+									"parameters": {
+										"object": "Quadro_Turns_Shadow"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 611465416406902,
+									"parameters": {
+										"animation": "\"Codex\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 596509916062627,
+									"parameters": {
+										"layer": "\"Codex\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 902828159759324,
+									"parameters": {
+										"layer": "Clickable.LayerName"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_default",
+									"sid": 678886953965093,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_pointer",
+									"sid": 152031620897659,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_hold",
+									"sid": 380816834291351,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
+									}
+								}
+							],
+							"sid": 998948272314354
+						},
+						{
+							"eventType": "comment",
+							"text": "Excessão por conta do Relics poder estar bloqueado no frame 2"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 385797244725309
+								},
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 959863034172956,
+									"parameters": {
+										"object": "Relics"
+									}
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Relics",
+									"sid": 190047868179122,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 429426436637057,
+									"parameters": {
+										"layer": "Clickable.LayerName"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_default",
+									"sid": 391002560867826,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_pointer",
+									"sid": 378755099880140,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Cursor_hold",
+									"sid": 793188677956109,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
+									}
+								}
+							],
+							"sid": 227188764494531
 						},
 						{
 							"eventType": "block",
