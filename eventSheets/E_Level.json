@@ -18229,17 +18229,7 @@
 							"isInverted": true
 						}
 					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Card_Power",
-							"sid": 530190784846791,
-							"parameters": {
-								"instance-variable": "CloseToMouse",
-								"value": "false"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 794946129202324,
 					"children": [
 						{
@@ -18248,11 +18238,11 @@
 								{
 									"id": "pick-nearestfurthest",
 									"objectClass": "Card_Power",
-									"sid": 806585183690492,
+									"sid": 489114364888609,
 									"parameters": {
 										"which": "nearest",
 										"x": "Mouse.X",
-										"y": "Hand_Player.Y - 40",
+										"y": "Mouse.Y",
 										"z": "0",
 										"pick-all-tied": false
 									}
@@ -18270,6 +18260,35 @@
 								}
 							],
 							"sid": 105459421912075
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "Card_Power",
+									"sid": 434607805825660,
+									"parameters": {
+										"which": "furthest",
+										"x": "Mouse.X",
+										"y": "Mouse.Y",
+										"z": "0",
+										"pick-all-tied": false
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card_Power",
+									"sid": 229792491839358,
+									"parameters": {
+										"instance-variable": "CloseToMouse",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 586098541385355
 						}
 					]
 				},
@@ -18309,6 +18328,7 @@
 									"id": "set-boolean-instvar",
 									"objectClass": "Card_Power",
 									"sid": 601281578455954,
+									"disabled": true,
 									"parameters": {
 										"instance-variable": "Highlight",
 										"value": "false"
@@ -18490,20 +18510,20 @@
 								{
 									"id": "layer-is-visible",
 									"objectClass": "System",
-									"sid": 721590990154992,
-									"parameters": {
-										"layer": "\"Power_Player\""
-									},
-									"isInverted": true
-								},
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
 									"sid": 810171086169855,
 									"parameters": {
 										"layer": "\"Power_Enemy\""
 									},
 									"isInverted": true
+								},
+								{
+									"id": "compare-opacity",
+									"objectClass": "Bkg_Power_Txt",
+									"sid": 828438752500631,
+									"parameters": {
+										"comparison": 0,
+										"opacity": "0"
+									}
 								},
 								{
 									"id": "trigger-once-while-true",
