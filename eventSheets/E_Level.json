@@ -317,6 +317,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Relic_Lucky",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true - após ter 21, ganhe um poder",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 820634059490966
+		},
+		{
+			"eventType": "variable",
 			"name": "Relic_Card13",
 			"type": "boolean",
 			"initialValue": "false",
@@ -456,6 +466,15 @@
 					"parameters": {
 						"layer": "\"Turn\"",
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 785060028442367,
+					"parameters": {
+						"layer": "\"Talking\"",
+						"visibility": "invisible"
 					}
 				},
 				{
@@ -599,6 +618,19 @@
 					"id": "destroy",
 					"objectClass": "Card_Numb",
 					"sid": 885999524696413
+				},
+				{
+					"type": "comment",
+					"text": "Altera a conquista BLACKJACK como pronta, e apenas no final da partida é que será vista se permanece ativa para dar ao jogador"
+				},
+				{
+					"id": "set-key",
+					"objectClass": "D_Save",
+					"sid": 965132574711030,
+					"parameters": {
+						"key": "\"BLACKJACK\"",
+						"value": "\"1/1\""
+					}
 				}
 			],
 			"sid": 807443279101097,
@@ -7241,6 +7273,18 @@
 											"eventType": "block",
 											"conditions": [
 												{
+													"id": "pick-nearestfurthest",
+													"objectClass": "Card_Numb",
+													"sid": 389442708790477,
+													"parameters": {
+														"which": "nearest",
+														"x": "Deck_Numb_Sprite.X",
+														"y": "Deck_Numb_Sprite.Y",
+														"z": "0",
+														"pick-all-tied": false
+													}
+												},
+												{
 													"id": "is-effect-enabled",
 													"objectClass": "Card_Numb",
 													"sid": 619009019136346,
@@ -7303,6 +7347,26 @@
 													"id": "else",
 													"objectClass": "System",
 													"sid": 782670911530809
+												},
+												{
+													"id": "pick-nearestfurthest",
+													"objectClass": "Card_Numb",
+													"sid": 203397072970895,
+													"parameters": {
+														"which": "nearest",
+														"x": "Deck_Numb_Sprite.X",
+														"y": "Deck_Numb_Sprite.Y",
+														"z": "0",
+														"pick-all-tied": false
+													}
+												},
+												{
+													"id": "is-effect-enabled",
+													"objectClass": "Card_Numb",
+													"sid": 873509818822630,
+													"parameters": {
+														"effect": "\"Water\""
+													}
 												}
 											],
 											"actions": [
@@ -7543,7 +7607,7 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Card_Numb",
-											"sid": 881027333149421,
+											"sid": 440467456224284,
 											"parameters": {
 												"instance-variable": "Original_Hidden"
 											}
@@ -8213,6 +8277,13 @@
 																false,
 																false
 															]
+														},
+														{
+															"callFunction": "Count_Numbers",
+															"sid": 682671812745909,
+															"parameters": [
+																false
+															]
 														}
 													],
 													"sid": 203355877960278,
@@ -8257,7 +8328,8 @@
 																	]
 																}
 															],
-															"sid": 874788869185314
+															"sid": 874788869185314,
+															"disabled": true
 														}
 													]
 												}
@@ -9077,14 +9149,19 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-by-comparison",
+									"id": "for-each",
 									"objectClass": "System",
-									"sid": 468111336517534,
+									"sid": 140741839968111,
 									"parameters": {
-										"object": "Card_Numb",
-										"expression": "Card_Numb.Ace",
-										"comparison": 0,
-										"value": "1"
+										"object": "Card_Numb"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Numb",
+									"sid": 545702071761972,
+									"parameters": {
+										"instance-variable": "Ace"
 									}
 								}
 							],
@@ -9185,6 +9262,11 @@
 															}
 														},
 														{
+															"id": "stop-loop",
+															"objectClass": "System",
+															"sid": 645317116049253
+														},
+														{
 															"callFunction": "Count_Numbers",
 															"sid": 853413526804261,
 															"parameters": [
@@ -9274,6 +9356,11 @@
 															"parameters": {
 																"frame-number": "Self.myID"
 															}
+														},
+														{
+															"id": "stop-loop",
+															"objectClass": "System",
+															"sid": 323772904416930
 														},
 														{
 															"callFunction": "Count_Numbers",
@@ -9388,6 +9475,11 @@
 															}
 														},
 														{
+															"id": "stop-loop",
+															"objectClass": "System",
+															"sid": 145715909353801
+														},
+														{
 															"callFunction": "Count_Numbers",
 															"sid": 990873163305175,
 															"parameters": [
@@ -9486,6 +9578,11 @@
 															"parameters": {
 																"frame-number": "Self.myID"
 															}
+														},
+														{
+															"id": "stop-loop",
+															"objectClass": "System",
+															"sid": 836061814542791
 														},
 														{
 															"callFunction": "Count_Numbers",
@@ -9954,6 +10051,15 @@
 											"parameters": {
 												"variable": "Ace"
 											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 479345707293276,
+											"parameters": {
+												"variable": "Duplicate"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -9990,6 +10096,20 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 102239463925378
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 104953667307332,
+											"parameters": {
+												"variable": "Ace"
+											},
+											"isInverted": true
+										},
+										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
 											"sid": 227954013561215,
@@ -10020,15 +10140,62 @@
 									"sid": 729532462006193
 								},
 								{
+									"eventType": "comment",
+									"text": "Quando se tenta duplicar um Ás"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
 											"id": "else",
 											"objectClass": "System",
 											"sid": 717623844438440
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 345958110771543,
+											"parameters": {
+												"variable": "Ace"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 913515157300714,
+											"parameters": {
+												"variable": "Duplicate"
+											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Card_Numb",
+											"sid": 916021770690291,
+											"parameters": {
+												"frame-number": "Number"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card_Numb",
+											"sid": 886336651985173,
+											"parameters": {
+												"instance-variable": "myID",
+												"value": "Number"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Card_Numb",
+											"sid": 492503618411074,
+											"parameters": {
+												"instance-variable": "Ace",
+												"value": "true"
+											}
+										}
+									],
 									"sid": 198445333755265
 								}
 							]
@@ -10106,6 +10273,15 @@
 											"parameters": {
 												"variable": "Ace"
 											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 151364563116441,
+											"parameters": {
+												"variable": "Duplicate"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -10141,6 +10317,20 @@
 								{
 									"eventType": "block",
 									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 706122695769143
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 740002648819983,
+											"parameters": {
+												"variable": "Ace"
+											},
+											"isInverted": true
+										},
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
@@ -10178,9 +10368,52 @@
 											"id": "else",
 											"objectClass": "System",
 											"sid": 804397551422881
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 680396787680419,
+											"parameters": {
+												"variable": "Ace"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 280769758376923,
+											"parameters": {
+												"variable": "Duplicate"
+											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Card_Numb",
+											"sid": 705134719036243,
+											"parameters": {
+												"frame-number": "Number"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card_Numb",
+											"sid": 239622066265787,
+											"parameters": {
+												"instance-variable": "myID",
+												"value": "Number"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Card_Numb",
+											"sid": 196982311331539,
+											"parameters": {
+												"instance-variable": "Ace",
+												"value": "true"
+											}
+										}
+									],
 									"sid": 889255608522554
 								}
 							]
@@ -18236,15 +18469,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "Card_Power",
-									"sid": 489114364888609,
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 857887293009757,
 									"parameters": {
-										"which": "nearest",
-										"x": "Mouse.X",
-										"y": "Mouse.Y",
-										"z": "0",
-										"pick-all-tied": false
+										"first-value": "Card_Power.Count",
+										"comparison": 0,
+										"second-value": "1"
 									}
 								}
 							],
@@ -18252,43 +18483,96 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Card_Power",
-									"sid": 396920928970085,
+									"sid": 598717882336649,
 									"parameters": {
 										"instance-variable": "CloseToMouse",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 105459421912075
+							"sid": 645041237442125
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "Card_Power",
-									"sid": 434607805825660,
-									"parameters": {
-										"which": "furthest",
-										"x": "Mouse.X",
-										"y": "Mouse.Y",
-										"z": "0",
-										"pick-all-tied": false
-									}
-								}
-							],
-							"actions": [
+									"id": "else",
+									"objectClass": "System",
+									"sid": 915497996176015
+								},
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Card_Power",
-									"sid": 229792491839358,
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 783437572199194,
 									"parameters": {
-										"instance-variable": "CloseToMouse",
-										"value": "false"
+										"first-value": "Card_Power.Count",
+										"comparison": 4,
+										"second-value": "1"
 									}
 								}
 							],
-							"sid": 586098541385355
+							"actions": [],
+							"sid": 748937261778758,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "Card_Power",
+											"sid": 619346916177663,
+											"parameters": {
+												"which": "nearest",
+												"x": "Mouse.X",
+												"y": "Mouse.Y",
+												"z": "0",
+												"pick-all-tied": false
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Card_Power",
+											"sid": 130352287240130,
+											"parameters": {
+												"instance-variable": "CloseToMouse",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 619097052472481
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "Card_Power",
+											"sid": 650067115054482,
+											"parameters": {
+												"which": "furthest",
+												"x": "Mouse.X",
+												"y": "Mouse.Y",
+												"z": "0",
+												"pick-all-tied": false
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Card_Power",
+											"sid": 267994209595015,
+											"parameters": {
+												"instance-variable": "CloseToMouse",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 341202372764111
+								}
+							]
 						}
 					]
 				},
@@ -22196,104 +22480,129 @@
 											"parameters": {
 												"y": "Table_Player.Y"
 											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 487212790188063,
-											"parameters": {
-												"seconds": "Opt_FastMode = 1 ? 0.5 : 1.5",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Card_Numb",
-											"sid": 214434825768323,
-											"parameters": {
-												"animation": "\"Front_\" & Table_CPU.Cards + 1",
-												"from": "current-frame"
-											}
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 997460950452973,
-											"parameters": {
-												"audio-file": {
-													"path": "735618__geoff-bremner-audio__small-whip-9"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -18 + ( Vol_Sfx * 0.18) : -100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 886405010757826,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"switch\"",
-												"property": "position",
-												"end-x": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 0, \"-\"))",
-												"end-y": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 1, \"-\"))",
-												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "tween-two-properties",
-											"objectClass": "Card_Numb",
-											"sid": 627042894368750,
-											"behaviorType": "Tween",
-											"parameters": {
-												"tags": "\"switch\"",
-												"property": "scale",
-												"end-x": "0.72",
-												"end-y": "0.72",
-												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
-												"ease": "default",
-												"destroy-on-complete": "no",
-												"loop": "no",
-												"ping-pong": "no",
-												"repeat-count": "1"
-											}
-										},
-										{
-											"id": "subtract-from-instvar",
-											"objectClass": "Table_Player",
-											"sid": 603775910415872,
-											"parameters": {
-												"instance-variable": "Cards",
-												"value": "1"
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 204971651652985,
-											"parameters": {
-												"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 987247238822732,
-											"parameters": {
-												"variable": "PowerDone",
-												"value": "true"
-											}
 										}
 									],
-									"sid": 211977029675233
+									"sid": 211977029675233,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 532774907070054,
+													"parameters": {
+														"object": "Card_Numb",
+														"expression": "Card_Numb.X",
+														"comparison": 0,
+														"value": "Icon_Hand_Point.X"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 768834562758263,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 1.5",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Card_Numb",
+													"sid": 957019984365425,
+													"parameters": {
+														"animation": "\"Front_\" & Table_CPU.Cards + 1",
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 897445758714275,
+													"parameters": {
+														"audio-file": {
+															"path": "735618__geoff-bremner-audio__small-whip-9"
+														},
+														"loop": "not-looping",
+														"volume": "Vol_Sfx > 0 ? -18 + ( Vol_Sfx * 0.18) : -100",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "Card_Numb",
+													"sid": 554344848976645,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"switch\"",
+														"property": "position",
+														"end-x": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 0, \"-\"))",
+														"end-y": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 1, \"-\"))",
+														"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "Card_Numb",
+													"sid": 740296678302774,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"switch\"",
+														"property": "scale",
+														"end-x": "0.72",
+														"end-y": "0.72",
+														"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												},
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Table_Player",
+													"sid": 348692706535446,
+													"parameters": {
+														"instance-variable": "Cards",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 165034281045053,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Order_Numb_Cards",
+													"sid": 549572942955921
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 904176932582631,
+													"parameters": {
+														"variable": "PowerDone",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 279181690852983
+										}
+									]
 								}
 							]
 						}
@@ -22475,56 +22784,133 @@
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 613396756561108,
+							"children": [
 								{
-									"id": "set-instvar-value",
-									"objectClass": "Icon_Hand_Point",
-									"sid": 788065249879335,
-									"parameters": {
-										"instance-variable": "Step",
-										"value": "99"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Card_Numb",
+											"sid": 681984783434269,
+											"parameters": {
+												"instance-variable": "Ace"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Icon_Hand_Point",
+											"sid": 378171015067841,
+											"parameters": {
+												"instance-variable": "Step",
+												"value": "99"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 471546055005746,
+											"parameters": {
+												"layer": "\"Click_On_Table_Text\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"callFunction": "Create_Number",
+											"sid": 917921854162812,
+											"parameters": [
+												"Card_Numb.myID",
+												true,
+												true,
+												false,
+												"1"
+											]
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 148362882274305,
+											"parameters": {
+												"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 530227528611823,
+											"parameters": {
+												"variable": "PowerDone",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 843761736359121
 								},
 								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 879015212470205,
-									"parameters": {
-										"layer": "\"Click_On_Table_Text\"",
-										"visibility": "invisible"
-									}
-								},
-								{
-									"callFunction": "Create_Number",
-									"sid": 477794671243006,
-									"parameters": [
-										"Card_Numb.myID",
-										true,
-										false,
-										false,
-										"1"
-									]
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 466992198338099,
-									"parameters": {
-										"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 515315013772755,
-									"parameters": {
-										"variable": "PowerDone",
-										"value": "true"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 948895748181985
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Icon_Hand_Point",
+											"sid": 105971090285092,
+											"parameters": {
+												"instance-variable": "Step",
+												"value": "99"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 120501009253606,
+											"parameters": {
+												"layer": "\"Click_On_Table_Text\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"callFunction": "Create_Number",
+											"sid": 912857344840944,
+											"parameters": [
+												"Card_Numb.myID",
+												true,
+												false,
+												false,
+												"1"
+											]
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 555467194409564,
+											"parameters": {
+												"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 315579179337980,
+											"parameters": {
+												"variable": "PowerDone",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 117814260559998
 								}
-							],
-							"sid": 613396756561108
+							]
 						}
 					],
 					"sid": 905800084440219
@@ -23033,7 +23419,7 @@
 										{
 											"id": "log",
 											"objectClass": "Browser",
-											"sid": 713871013748987,
+											"sid": 121348671482698,
 											"parameters": {
 												"type": "log",
 												"message": "\"apontando pra carta\""
@@ -23042,7 +23428,7 @@
 										{
 											"id": "set-x",
 											"objectClass": "Icon_Hand_Point",
-											"sid": 551482838060445,
+											"sid": 105389069224125,
 											"parameters": {
 												"x": "Card_Numb.X"
 											}
@@ -23050,7 +23436,7 @@
 										{
 											"id": "set-y",
 											"objectClass": "Icon_Hand_Point",
-											"sid": 296339414277960,
+											"sid": 911909980835165,
 											"parameters": {
 												"y": "Table_CPU.Y"
 											}
@@ -23058,52 +23444,121 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 834854074267856,
+											"sid": 168680773018067,
 											"parameters": {
 												"seconds": "Opt_FastMode = 1 ? 0.5 : 1.5",
 												"use-timescale": true
 											}
-										},
-										{
-											"callFunction": "Create_Number",
-											"sid": 604481993617031,
-											"parameters": [
-												"Card_Enemy",
-												true,
-												false,
-												false,
-												"2"
-											]
-										},
-										{
-											"id": "add-to-instvar",
-											"objectClass": "Table_CPU",
-											"sid": 178013511174833,
-											"parameters": {
-												"instance-variable": "Cards",
-												"value": "1"
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 398234408356559,
-											"parameters": {
-												"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 817909051949119,
-											"parameters": {
-												"variable": "PowerDone",
-												"value": "true"
-											}
 										}
 									],
-									"sid": 586252054652728
+									"sid": 586252054652728,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Card_Numb",
+													"sid": 802515729844799,
+													"parameters": {
+														"instance-variable": "Ace"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Create_Number",
+													"sid": 320729304835859,
+													"parameters": [
+														"Card_Enemy",
+														true,
+														true,
+														false,
+														"2"
+													]
+												},
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Table_CPU",
+													"sid": 182591018668400,
+													"parameters": {
+														"instance-variable": "Cards",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 593960375004082,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 460992737216881,
+													"parameters": {
+														"variable": "PowerDone",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 470141299425287
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 854162761465638
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Create_Number",
+													"sid": 965623720356624,
+													"parameters": [
+														"Card_Enemy",
+														true,
+														false,
+														false,
+														"2"
+													]
+												},
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Table_CPU",
+													"sid": 412348726115154,
+													"parameters": {
+														"instance-variable": "Cards",
+														"value": "1"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 110919287532597,
+													"parameters": {
+														"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 194876410665596,
+													"parameters": {
+														"variable": "PowerDone",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 870077786334451
+										}
+									]
 								}
 							]
 						}
@@ -23167,6 +23622,15 @@
 										"layer": "\"Turn\"",
 										"visibility": "visible"
 									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 182670180357182,
+									"parameters": {
+										"type": "log",
+										"message": "\"passando o turno: \" & Who"
+									}
 								}
 							],
 							"sid": 392810647887606,
@@ -23202,27 +23666,241 @@
 										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 792090232895938,
+											"sid": 783322961958563,
 											"parameters": {
 												"variable": "FinishRound",
 												"value": "true"
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 642605323338228,
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 295361689752156,
 											"parameters": {
-												"seconds": "1.0",
-												"use-timescale": true
+												"type": "log",
+												"message": "\"finalizando\""
 											}
-										},
-										{
-											"callFunction": "Finish Round",
-											"sid": 107077000061660
 										}
 									],
-									"sid": 565371048154116
+									"sid": 565371048154116,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 290101523115407,
+													"parameters": {
+														"variable": "Relic_Trap"
+													}
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 758872526858798,
+													"parameters": {
+														"variable": "Relic_Lucky"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Count_Numbers",
+													"sid": 487455795253183,
+													"parameters": [
+														false
+													]
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 177586790847035,
+													"parameters": {
+														"seconds": "1.0",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Finish Round",
+													"sid": 877000989558427
+												}
+											],
+											"sid": 415723258598227,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 344742122235823,
+															"parameters": {
+																"variable": "Relic_Trap"
+															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 670728172626841,
+															"parameters": {
+																"variable": "PlayerNumbers",
+																"comparison": 4,
+																"value": "TheNumber"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 619160922206542,
+															"parameters": {
+																"seconds": "3",
+																"use-timescale": true
+															}
+														},
+														{
+															"callFunction": "Finish Round",
+															"sid": 526453686620651
+														}
+													],
+													"sid": 768306918404516,
+													"disabled": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 359386547290480
+														},
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 446448111653408,
+															"parameters": {
+																"variable": "Relic_Trap"
+															},
+															"isInverted": true
+														},
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 569953519383130,
+															"parameters": {
+																"variable": "Relic_Lucky"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Hand_Player",
+															"sid": 935497043832180,
+															"parameters": {
+																"instance-variable": "PowerHandLimit",
+																"comparison": 1,
+																"value": "Card_Power.Count"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 814329212632212,
+															"parameters": {
+																"seconds": "3",
+																"use-timescale": true
+															}
+														},
+														{
+															"callFunction": "Finish Round",
+															"sid": 198453280258562
+														}
+													],
+													"sid": 515515040734254,
+													"disabled": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 956513188014615
+														}
+													],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 980310831777898,
+															"parameters": {
+																"seconds": "1.0",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 454475617121454,
+															"parameters": {
+																"variable": "FinishRound",
+																"value": "true"
+															}
+														}
+													],
+													"sid": 661964185726061
+												}
+											],
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 687533895602218
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 846735937451076,
+													"parameters": {
+														"variable": "Relic_Trap"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 396094789660528,
+													"parameters": {
+														"variable": "Relic_Lucky"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 674940483499203,
+													"parameters": {
+														"seconds": "1.0",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Finish Round",
+													"sid": 237130191739727
+												}
+											],
+											"sid": 582878489706250
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -23282,7 +23960,17 @@
 											"isInverted": true
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 686347881614901,
+											"parameters": {
+												"type": "log",
+												"message": "\"vou ver de quem é a vez e passar o turno\""
+											}
+										}
+									],
 									"sid": 166849883764240,
 									"children": [
 										{
@@ -25337,7 +26025,7 @@
 									"children": [
 										{
 											"eventType": "comment",
-											"text": "Se o jogador tiver 2 pontos, então ele ganhou a rodada e vai pra próxima"
+											"text": "Se o jogador tiver 3 pontos, então ele ganhou a rodada e vai pra próxima"
 										},
 										{
 											"eventType": "block",
@@ -25512,465 +26200,91 @@
 															]
 														},
 														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 882153271032024,
-															"parameters": {
-																"seconds": "3.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 704843417163953,
-															"parameters": {
-																"layout": "Credits"
-															}
+															"callFunction": "Update_Achievement",
+															"sid": 475585679419060,
+															"parameters": [
+																"\"SLAYER\"",
+																"1"
+															]
 														}
 													],
-													"sid": 923017490778651
-												},
-												{
-													"eventType": "comment",
-													"text": "Se ainda não acabou, mostra algumas relíquias"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 762061803873017
-														}
-													],
-													"actions": [],
-													"sid": 445545904272230,
+													"sid": 923017490778651,
 													"children": [
+														{
+															"eventType": "comment",
+															"text": "CONQUISTAS DE VENCER O JAGUADARTE",
+															"text-color": [
+																0,
+																0,
+																0,
+																0
+															],
+															"background-color": [
+																0.984313725490196,
+																1,
+																0,
+																1
+															]
+														},
 														{
 															"eventType": "block",
 															"conditions": [
 																{
-																	"id": "compare-boolean-eventvar",
+																	"id": "compare-eventvar",
 																	"objectClass": "System",
-																	"sid": 653969504002090,
+																	"sid": 837881013730695,
 																	"parameters": {
-																		"variable": "Tutorial_Enabled"
+																		"variable": "PlayerPoints",
+																		"comparison": 5,
+																		"value": "3"
 																	}
 																},
 																{
 																	"id": "compare-eventvar",
 																	"objectClass": "System",
-																	"sid": 908772681312175,
+																	"sid": 884316729149313,
 																	"parameters": {
-																		"variable": "Tut_Talk",
+																		"variable": "EnemyPoints",
 																		"comparison": 0,
-																		"value": "29"
+																		"value": "0"
 																	}
 																}
 															],
 															"actions": [
 																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 577550493573827,
-																	"parameters": {
-																		"seconds": "2",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Round",
-																	"sid": 101879778027299,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-wait-time",
-																	"objectClass": "Text_Round",
-																	"sid": 806489872227435,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"wait-time": "0.5"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Round",
-																	"sid": 399229942626513,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "0.5"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Text_Round",
-																	"sid": 544988652279005,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 110802016480873,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 267777256698075,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"wait-time": "0.5"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 166129598550549,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "0.5"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 783807113083004,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 180972439553049,
-																	"parameters": {
-																		"seconds": "0.5",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "set-layer-visible",
-																	"objectClass": "System",
-																	"sid": 267381415998361,
-																	"parameters": {
-																		"layer": "\"Turn\"",
-																		"visibility": "invisible"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 733768922474483,
-																	"parameters": {
-																		"variable": "Tut_Talk",
-																		"value": "33"
-																	}
-																},
-																{
-																	"callFunction": "Talk",
-																	"sid": 750074979866488,
+																	"callFunction": "Update_Achievement",
+																	"sid": 555673591575958,
 																	"parameters": [
-																		"Enemy.AnimationName",
-																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
-																		"0",
-																		false
+																		"\"UNHARMED\"",
+																		"1"
 																	]
 																}
 															],
-															"sid": 452009763190006
+															"sid": 920312586127376
 														},
 														{
 															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "else",
-																	"objectClass": "System",
-																	"sid": 513383802018422
-																}
-															],
+															"conditions": [],
 															"actions": [
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 891253543749930,
+																	"sid": 967696680869203,
 																	"parameters": {
-																		"seconds": "0.5",
+																		"seconds": "3.5",
 																		"use-timescale": true
 																	}
 																},
 																{
-																	"id": "set-layer-visible",
+																	"id": "go-to-layout",
 																	"objectClass": "System",
-																	"sid": 708261181704407,
+																	"sid": 525567888020507,
 																	"parameters": {
-																		"layer": "\"Turn\"",
-																		"visibility": "visible"
+																		"layout": "Credits"
 																	}
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "Text_Round",
-																	"sid": 829910172977199,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Text_Round",
-																	"sid": 889438288466816,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-wait-time",
-																	"objectClass": "Text_Round",
-																	"sid": 352477418584659,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"wait-time": "0"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Text_Round",
-																	"sid": 340254639291157,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "1.5"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Text_Round",
-																	"sid": 498225376627265,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "set-visible",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 873128876094114,
-																	"parameters": {
-																		"visibility": "visible"
-																	}
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 958275954825748,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-wait-time",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 931999231267825,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"wait-time": "0"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 651038919187156,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "1.5"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Bkg_Round_Txt",
-																	"sid": 778433753310549,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 152707438715776,
-																	"parameters": {
-																		"seconds": "0.5",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"callFunction": "Talk",
-																	"sid": 582444527944576,
-																	"parameters": [
-																		"Enemy.AnimationName",
-																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
-																		"0",
-																		false
-																	]
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 819526421004700,
-																	"parameters": {
-																		"seconds": "2",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Enemy",
-																	"sid": 368214110009774,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Enemy",
-																	"sid": 910884615689659,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "1"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Enemy",
-																	"sid": 353576814271425,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "set-fade-in-time",
-																	"objectClass": "Enemy_Extra_Anim",
-																	"sid": 310131627490883,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-in-time": "0"
-																	}
-																},
-																{
-																	"id": "set-fade-out-time",
-																	"objectClass": "Enemy_Extra_Anim",
-																	"sid": 535893338575798,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"fade-out-time": "1"
-																	}
-																},
-																{
-																	"id": "set-wait-time",
-																	"objectClass": "Enemy_Extra_Anim",
-																	"sid": 819951499146409,
-																	"behaviorType": "Fade",
-																	"parameters": {
-																		"wait-time": "Self.extra_fade"
-																	}
-																},
-																{
-																	"id": "restart-fade",
-																	"objectClass": "Enemy_Extra_Anim",
-																	"sid": 416348241612789,
-																	"behaviorType": "Fade"
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 998754452758665,
-																	"parameters": {
-																		"variable": "PlayerPoints",
-																		"value": "0"
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 574033219137498,
-																	"parameters": {
-																		"variable": "EnemyPoints",
-																		"value": "0"
-																	}
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 390623609201796,
-																	"parameters": {
-																		"seconds": "2",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "add-to-eventvar",
-																	"objectClass": "System",
-																	"sid": 855544496189644,
-																	"parameters": {
-																		"variable": "Match",
-																		"value": "1"
-																	}
-																},
-																{
-																	"id": "shuffle",
-																	"objectClass": "A_Deck_Power",
-																	"sid": 217845907544143,
-																	"parameters": {
-																		"axis": "x"
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "Hand_CPU",
-																	"sid": 144216207857489,
-																	"parameters": {
-																		"instance-variable": "PowerLimit_Rounds",
-																		"value": "EnemyPowerLimit_Rounds"
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "Hand_Player",
-																	"sid": 302067107711617,
-																	"parameters": {
-																		"instance-variable": "PowerLimit_Rounds",
-																		"value": "PlayerPowerLimit_Rounds"
-																	}
-																},
-																{
-																	"id": "destroy",
-																	"objectClass": "Buffs_Debuffs",
-																	"sid": 278363673547454
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 424118093668826,
-																	"parameters": {
-																		"seconds": "0.01",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "log",
-																	"objectClass": "Browser",
-																	"sid": 247756163785082,
-																	"parameters": {
-																		"type": "log",
-																		"message": "\"- - - - ESCOLHENDO RELÍQUIAS - - - -\""
-																	}
-																},
-																{
-																	"callFunction": "Get Relics",
-																	"sid": 953508704010464
 																}
 															],
-															"sid": 509868251890790
+															"sid": 372774088370751
 														}
 													]
 												}
@@ -25978,7 +26292,7 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "Se o inimigo não tiver 2 pontos e nem o jogador, então continua"
+											"text": "Se o inimigo não tiver 3 pontos e nem o jogador, então continua"
 										},
 										{
 											"eventType": "block",
@@ -27055,6 +27369,16 @@
 																"comparison": 0,
 																"value": "4"
 															}
+														},
+														{
+															"id": "compare-eventvar",
+															"objectClass": "System",
+															"sid": 776896478657446,
+															"parameters": {
+																"variable": "EnemyName",
+																"comparison": 0,
+																"value": "\"Red Queen\""
+															}
 														}
 													],
 													"actions": [
@@ -27169,26 +27493,95 @@
 																"0",
 																false
 															]
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 193764088968299,
-															"parameters": {
-																"seconds": "3.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 461402345412151,
-															"parameters": {
-																"layout": "Credits"
-															}
 														}
 													],
-													"sid": 300638403233843
+													"sid": 300638403233843,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "CONQUISTAS DE VENCER A RAINHA",
+															"text-color": [
+																0,
+																0,
+																0,
+																0
+															],
+															"background-color": [
+																0.984313725490196,
+																1,
+																0,
+																1
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "pick-by-comparison",
+																	"objectClass": "System",
+																	"sid": 671628098242309,
+																	"parameters": {
+																		"object": "Relics",
+																		"expression": "Relics.AnimationName",
+																		"comparison": 0,
+																		"value": "\"crown\""
+																	}
+																},
+																{
+																	"id": "is-boolean-instance-variable-set",
+																	"objectClass": "Relics",
+																	"sid": 194165274005998,
+																	"parameters": {
+																		"instance-variable": "Used"
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Update_Achievement",
+																	"sid": 375768429901366,
+																	"parameters": [
+																		"\"NEWQUEEN\"",
+																		"1"
+																	]
+																}
+															],
+															"sid": 519851707646035
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"callFunction": "Update_Achievement",
+																	"sid": 258245641352406,
+																	"parameters": [
+																		"\"REIGN\"",
+																		"1"
+																	]
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 106753482505225,
+																	"parameters": {
+																		"seconds": "3.5",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "go-to-layout",
+																	"objectClass": "System",
+																	"sid": 445992701262013,
+																	"parameters": {
+																		"layout": "Credits"
+																	}
+																}
+															],
+															"sid": 282282741349089
+														}
+													]
 												},
 												{
 													"eventType": "comment",
@@ -27206,6 +27599,212 @@
 													"actions": [],
 													"sid": 218737471142651,
 													"children": [
+														{
+															"eventType": "comment",
+															"text": "CONQUISTAS DE VENCER OPONENTES",
+															"text-color": [
+																0,
+																0,
+																0,
+																0
+															],
+															"background-color": [
+																0.984313725490196,
+																1,
+																0,
+																1
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [],
+															"sid": 700500114164995,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 609237740093346,
+																			"parameters": {
+																				"variable": "EnemyName",
+																				"comparison": 0,
+																				"value": "\"Mad Hatter\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Update_Achievement",
+																			"sid": 568456252869396,
+																			"parameters": [
+																				"\"MAD\"",
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 738189563314298
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 511054256915771,
+																			"parameters": {
+																				"variable": "EnemyName",
+																				"comparison": 0,
+																				"value": "\"March Hare\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Update_Achievement",
+																			"sid": 351395286775702,
+																			"parameters": [
+																				"\"UNBIRTHDAY\"",
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 101487099053800
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 578586538878292,
+																			"parameters": {
+																				"variable": "EnemyName",
+																				"comparison": 0,
+																				"value": "\"The Tweedles\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Update_Achievement",
+																			"sid": 842133127696112,
+																			"parameters": [
+																				"\"RIVALRY\"",
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 455793878880764
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 366974298031713,
+																			"parameters": {
+																				"variable": "EnemyName",
+																				"comparison": 0,
+																				"value": "\"Caterpillar\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Update_Achievement",
+																			"sid": 877941048689483,
+																			"parameters": [
+																				"\"WHO\"",
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 115358422767114
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 410684892535005,
+																			"parameters": {
+																				"variable": "EnemyName",
+																				"comparison": 0,
+																				"value": "\"Cheshire Cat\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Update_Achievement",
+																			"sid": 467439598083553,
+																			"parameters": [
+																				"\"MISSING\"",
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 284188865507814
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 342713502693363,
+																			"parameters": {
+																				"variable": "EnemyName",
+																				"comparison": 0,
+																				"value": "\"General of Cards\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Update_Achievement",
+																			"sid": 503212429674577,
+																			"parameters": [
+																				"\"TORN\"",
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 887136918720330
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-eventvar",
+																			"objectClass": "System",
+																			"sid": 199168367965600,
+																			"parameters": {
+																				"variable": "EnemyName",
+																				"comparison": 0,
+																				"value": "\"Dodo\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Update_Achievement",
+																			"sid": 137081370250017,
+																			"parameters": [
+																				"\"PRIZEWINNER\"",
+																				"1"
+																			]
+																		}
+																	],
+																	"sid": 600381974213461
+																}
+															]
+														},
 														{
 															"eventType": "block",
 															"conditions": [
@@ -27339,6 +27938,14 @@
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
 																		true
+																	]
+																},
+																{
+																	"callFunction": "Update_Achievement",
+																	"sid": 946587594185061,
+																	"parameters": [
+																		"\"BEGINNER\"",
+																		"1"
 																	]
 																}
 															],
@@ -28738,6 +29345,14 @@
 																		"0",
 																		true
 																	]
+																},
+																{
+																	"callFunction": "Update_Achievement",
+																	"sid": 365561355423313,
+																	"parameters": [
+																		"\"CONSOLATION\"",
+																		"1"
+																	]
 																}
 															],
 															"sid": 397376614165510
@@ -29115,6 +29730,15 @@
 														true,
 														false
 													]
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 762788805173167,
+													"parameters": {
+														"variable": "Relic_Lucky",
+														"value": "true"
+													}
 												}
 											],
 											"sid": 391553055826053
@@ -33200,19 +33824,19 @@
 																{
 																	"id": "set-position",
 																	"objectClass": "Enemy",
-																	"sid": 823973494947797,
+																	"sid": 292948252344524,
 																	"parameters": {
 																		"x": "955",
-																		"y": "705"
+																		"y": "680"
 																	}
 																},
 																{
 																	"id": "set-size",
 																	"objectClass": "Enemy",
-																	"sid": 119338582447892,
+																	"sid": 752605104400282,
 																	"parameters": {
-																		"width": "600",
-																		"height": "562"
+																		"width": "727",
+																		"height": "681"
 																	}
 																},
 																{
@@ -37368,6 +37992,173 @@
 																}
 															],
 															"sid": 667342478802293
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 546620569663521
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-rate",
+																	"objectClass": "Particle_Arrow",
+																	"sid": 690842741714322,
+																	"parameters": {
+																		"rate": "0"
+																	}
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 331763216587543,
+																	"parameters": {
+																		"variable": "Stop_Turn",
+																		"value": "true"
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "Card_Power",
+																	"sid": 499465091645499,
+																	"parameters": {
+																		"instance-variable": "Selected",
+																		"value": "false"
+																	}
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 602512717182150,
+																	"parameters": {
+																		"variable": "Holding_Card",
+																		"value": "false"
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "Card_Power",
+																	"sid": 886784371061750,
+																	"parameters": {
+																		"instance-variable": "ToUse",
+																		"value": "true"
+																	}
+																},
+																{
+																	"id": "set-fade-in-time",
+																	"objectClass": "Text_Power",
+																	"sid": 880692171491135,
+																	"behaviorType": "Fade",
+																	"parameters": {
+																		"fade-in-time": "0"
+																	}
+																},
+																{
+																	"id": "set-wait-time",
+																	"objectClass": "Text_Power",
+																	"sid": 130716012893538,
+																	"behaviorType": "Fade",
+																	"parameters": {
+																		"wait-time": "0"
+																	}
+																},
+																{
+																	"id": "set-fade-out-time",
+																	"objectClass": "Text_Power",
+																	"sid": 974900953478989,
+																	"behaviorType": "Fade",
+																	"parameters": {
+																		"fade-out-time": "0.1"
+																	}
+																},
+																{
+																	"id": "restart-fade",
+																	"objectClass": "Text_Power",
+																	"sid": 231218661704180,
+																	"behaviorType": "Fade"
+																},
+																{
+																	"id": "set-fade-in-time",
+																	"objectClass": "Bkg_Power_Txt",
+																	"sid": 768575685503671,
+																	"behaviorType": "Fade",
+																	"parameters": {
+																		"fade-in-time": "0"
+																	}
+																},
+																{
+																	"id": "set-wait-time",
+																	"objectClass": "Bkg_Power_Txt",
+																	"sid": 342982133989821,
+																	"behaviorType": "Fade",
+																	"parameters": {
+																		"wait-time": "0"
+																	}
+																},
+																{
+																	"id": "set-fade-out-time",
+																	"objectClass": "Bkg_Power_Txt",
+																	"sid": 392883012855853,
+																	"behaviorType": "Fade",
+																	"parameters": {
+																		"fade-out-time": "0.1"
+																	}
+																},
+																{
+																	"id": "restart-fade",
+																	"objectClass": "Bkg_Power_Txt",
+																	"sid": 340101921000123,
+																	"behaviorType": "Fade"
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 825536171043755,
+																	"parameters": {
+																		"seconds": "0.2",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"callFunction": "Use_Power_Card",
+																	"sid": 172341536906039,
+																	"parameters": [
+																		"1",
+																		"Card_Power.myID",
+																		false
+																	]
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 693857814981304,
+																	"parameters": {
+																		"seconds": "0.2",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"callFunction": "Order_Hand_Powers",
+																	"sid": 564264665670447,
+																	"parameters": [
+																		true,
+																		false
+																	]
+																},
+																{
+																	"id": "set-key",
+																	"objectClass": "D_Save",
+																	"sid": 996580125555491,
+																	"parameters": {
+																		"key": "\"BLACKJACK\"",
+																		"value": "\"0/1\""
+																	}
+																}
+															],
+															"sid": 353369111410790
 														}
 													]
 												},
@@ -39143,6 +39934,15 @@
 																true,
 																false
 															]
+														},
+														{
+															"id": "set-key",
+															"objectClass": "D_Save",
+															"sid": 582782662696503,
+															"parameters": {
+																"key": "\"BLACKJACK\"",
+																"value": "\"0/1\""
+															}
 														}
 													],
 													"sid": 725068687602645
@@ -50507,11 +51307,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 159244051890455,
+									"sid": 727226373984793,
 									"parameters": {
 										"variable": "relic_id",
 										"comparison": 0,
-										"value": "\"drink-me\""
+										"value": "\"drink_me\""
 									}
 								}
 							],
@@ -50819,6 +51619,33 @@
 								}
 							],
 							"sid": 681617277808178
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 973768585590409,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"lucky\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 452661315594549,
+									"parameters": {
+										"variable": "Relic_Lucky",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 970441690569327
 						}
 					]
 				},
@@ -52739,6 +53566,16 @@
 							],
 							"actions": [
 								{
+									"callFunction": "Relic Feedback",
+									"sid": 990628451557571,
+									"parameters": [
+										"\"watch\"",
+										true,
+										false,
+										true
+									]
+								},
+								{
 									"callFunction": "Discard_Number",
 									"sid": 101982246464491,
 									"parameters": [
@@ -53318,6 +54155,14 @@
 									"isInverted": true
 								},
 								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 889883982280153,
+									"parameters": {
+										"variable": "Relic_Lucky"
+									}
+								},
+								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
 									"sid": 532933902368358,
@@ -53379,6 +54224,15 @@
 												false,
 												"\"\""
 											]
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 696510103664323,
+											"parameters": {
+												"variable": "Relic_Lucky",
+												"value": "false"
+											}
 										}
 									],
 									"sid": 539424329927833
@@ -56928,17 +57782,866 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"functionName": "Function1",
+					"eventType": "variable",
+					"name": "Ach_ID",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 620169384244366
+				},
+				{
+					"functionName": "Update_Achievement",
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
-					"functionParameters": [],
+					"functionParameters": [
+						{
+							"name": "ID",
+							"type": "string",
+							"initialValue": "",
+							"comment": "id exato relacionado a API de conquistas Steam",
+							"sid": 149535489464460
+						},
+						{
+							"name": "Value",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "normalmente o valor a ser settado ou somado é 1",
+							"sid": 797842843637096
+						}
+					],
 					"eventType": "function-block",
 					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 804606649092088,
+							"parameters": {
+								"variable": "Ach_ID",
+								"value": "ID"
+							}
+						}
+					],
+					"sid": 153139056509023,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "DEFEAT ENEMIES"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 793799271212498,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"BEGINNER\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 358948394047469,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 745577772468647,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 186831170286475
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 946845107628652,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"MAD\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 243046566449584,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 882084960189939,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 460614400586011
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 263610049406875,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"UNBIRTHDAY\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 122003022272554,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 753208466136109,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 352613970158390
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 630726402457841,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"MISSING\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 693229071663132,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 120119049811994,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 491986784055150
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 201166247433316,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"WHO\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 977049410449792,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 871667987061539,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 342944371521611
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 841441068960221,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"RIVALRY\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 233330188547852,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 779068174087344,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 664926558219395
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 320937776510766,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"TORN\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 512933006793570,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 413690028665081,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 994648307193883
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 590980763569789,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"REIGN\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 696281968957322,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 901459447929382,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 395912060485906
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 834376209818759,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"SLAYER\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 675523148427227,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 803110981614212,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 949876568243902
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 673319971170154,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"PRIZEWINNER\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 205018923786257,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 942899029622369,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 655340201306560
+						},
+						{
+							"eventType": "comment",
+							"text": "SPECIAL RUNS"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 845417290128825,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"GENIUS\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 676671526282418,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 587052337931736,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 767058408602948
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 181224908022416,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"LIGHTSOUT\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 289732964761642,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 754477609756481,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 707140556602119
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 315342263642505,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"BLACKJACK\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 247329460205737,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 450400712049421,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 302156601228058
+						},
+						{
+							"eventType": "comment",
+							"text": "PROGRESSION"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 571872775332168,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"LOVEART\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "A galeria tem varias artes pra desbloquear, então talvez se some"
+								},
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 723880338866073,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 840381543896021,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 137113698669269
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 312421612615469,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"RESEARCH\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "O codex tem varias informações pra revelar, então talvez se some"
+								},
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 760241978505476,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 768423503889851,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 737656821086964
+						},
+						{
+							"eventType": "comment",
+							"text": "SPECIFICS"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 280106511241588,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"CONSOLATION\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 161010111888778,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 493889393528071,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 838353095628996
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 112027538373901,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"UNHARMED\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 313539073814253,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 539236308532810,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 435797088725528
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 164172735753962,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"NEWQUEEN\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 367025526634018,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 843549132950404,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 438851821126301
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 710146886980927,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"SURPRISE\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 732848502153153,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 180107119437174,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 904987185299108
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 776809342181319,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"STRATEGY\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 480926214842915,
+									"parameters": {
+										"key": "ID",
+										"value": "str(Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 841219928280806,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 470466627220586
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 165662563895330,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"KEY\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "A chave tem 3 partes, portanto ela se soma"
+								},
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 270631759859471,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 944318727842440,
+									"parameters": {
+										"achievement": "ID"
+									}
+								}
+							],
+							"sid": 196019493467566
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-get-achievement-info-success",
+							"objectClass": "Steamworks",
+							"sid": 696692961302848,
+							"parameters": {
+								"achievement": "Ach_ID"
+							}
+						}
+					],
 					"actions": [],
-					"sid": 153139056509023
+					"sid": 918243544540481,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "D_Save",
+									"sid": 440920013078575,
+									"parameters": {
+										"key": "Ach_ID",
+										"comparison": 5,
+										"value": "int(tokenat(Self.Get(Ach_ID), 1, \"/\"))"
+									}
+								},
+								{
+									"id": "achievement-is-achieved",
+									"objectClass": "Steamworks",
+									"sid": 934199058391559,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "unlock-achievement",
+									"objectClass": "Steamworks",
+									"sid": 809971258064728,
+									"parameters": {
+										"achievement": "Ach_ID"
+									}
+								}
+							],
+							"sid": 975943238914335
+						}
+					]
 				}
 			],
 			"sid": 951123975079310

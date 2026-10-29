@@ -36,6 +36,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Internationalization",
 			"name": "Internationalization",
 			"author": "Scirra",
@@ -354,7 +361,8 @@
 			"Bkg_Extra",
 			"Icon_Silence",
 			"A_zOptions_Config",
-			"Scroll_Codex_Relics"
+			"Scroll_Codex_Relics",
+			"D_Save"
 		],
 		"subfolders": []
 	},
@@ -1069,7 +1077,7 @@
 					}
 				},
 				{
-					"name": "New Dictionary.json",
+					"name": "save_file.json",
 					"type": "application/json",
 					"sid": 786761624885319,
 					"file-info": {

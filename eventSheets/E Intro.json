@@ -221,6 +221,14 @@
 					}
 				},
 				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 423311047080582,
+					"parameters": {
+						"key": "\"my_save\""
+					}
+				},
+				{
 					"id": "tween-value",
 					"objectClass": "TiledBackground",
 					"sid": 330069632066365,
@@ -1150,6 +1158,57 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 379776454988439,
+					"parameters": {
+						"tag": "\"save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "D_Save",
+					"sid": 755744657498976,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 863911261694441
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 465329961690959,
+					"parameters": {
+						"key": "\"my_save\"",
+						"value": "D_Save.AsJSON"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 295213308229668,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 428056911066088
+		},
+		{
+			"eventType": "comment",
+			"text": "Local Storage Missing"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-item-missing",
 					"objectClass": "LocalStorage",
 					"sid": 618496707899439,
@@ -1291,6 +1350,10 @@
 			]
 		},
 		{
+			"eventType": "comment",
+			"text": "Se não tiver um save, pega o arquivo padrão"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -1321,6 +1384,37 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 436028613444517,
+					"parameters": {
+						"key": "\"my_save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 488676312008854,
+					"parameters": {
+						"tag": "\"save\"",
+						"file": {
+							"path": "save_file.json"
+						}
+					}
+				}
+			],
+			"sid": 448731409977580
+		},
+		{
+			"eventType": "comment",
+			"text": "Local Storage Exist"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-item-exists",
 					"objectClass": "LocalStorage",
 					"sid": 653810742074326,
@@ -1345,6 +1439,34 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 163851400708015,
+					"parameters": {
+						"key": "\"my_save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 435708042426365,
+					"parameters": {
+						"key": "\"my_save\""
+					}
+				}
+			],
+			"sid": 287715278759965
+		},
+		{
+			"eventType": "comment",
+			"text": "Local Storage Get"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-item-get",
 					"objectClass": "LocalStorage",
 					"sid": 533913231884899,
@@ -1357,7 +1479,7 @@
 				{
 					"id": "load",
 					"objectClass": "A_zOptions_Config",
-					"sid": 269817457689172,
+					"sid": 786440394594257,
 					"parameters": {
 						"json": "LocalStorage.ItemValue"
 					}
@@ -1396,6 +1518,44 @@
 				}
 			],
 			"sid": 659833566322479
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 143769325695648,
+					"parameters": {
+						"key": "\"my_save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "D_Save",
+					"sid": 133653590362944,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 517924006542116
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 761970033443801,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 377952480402390
 		},
 		{
 			"eventType": "block",
