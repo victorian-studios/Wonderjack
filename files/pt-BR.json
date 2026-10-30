@@ -107,72 +107,96 @@
                 "tittle_default": "Aguardando...",
                 "desc_default": "Nenhuma arte selecionada...",
                 "art_0": {
-                    "title": "Bunny",
-                    "desc": "A possible bunny for Alice."
+                    "title": "Esboço do Coelho de Pelúcia",
+                    "desc": "O coelhinho de pelúcia da Alice! Fofo né?"
                 },
                 "art_1": {
-                    "title": "Alice Sketch",
-                    "desc": "The first sketch art from Alice."
+                    "title": "Esboço da Alice",
+                    "desc": "Ela está tão magrinha no esboço haha!"
                 },
                 "art_2": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Esboço Alice e Rainha Branca",
+                    "desc": "Até que ficou uma bela composição!"
                 },
                 "art_3": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Menu antigo",
+                    "desc": "A primeira versão do menu feito para a GameJamPlus."
                 },
                 "art_4": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Fase da demo antiga",
+                    "desc": "Primeira versão da fase feita para a GameJamPlus."
                 },
                 "art_5": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Página antiga 1",
+                    "desc": "Deu um trabalho pra ajustar essa pose da Alice..e ainda ficou estranho..."
                 },
                 "art_6": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Página antiga 2",
+                    "desc": "Não achei essa pose tão natural...parece que ela quebrou o braço haha!"
                 },
                 "art_7": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Página antiga 3",
+                    "desc": "Foi complexo desenhar a Alice nesse ângulo..."
                 },
                 "art_8": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Página antiga 4",
+                    "desc": "Fiz um estudo de luz e sombra..ficou bacana até."
                 },
                 "art_9": {
-                    "title": "Old Story Page 5",
-                    "desc": "The fifth page from the story."
+                    "title": "Página antiga 5",
+                    "desc": "A mão da rainha Branca estava enorme!"
                 },
                 "art_10": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Esboço da Dinah",
+                    "desc": "Uma tentativa de desenhar um gato brincando..."
                 },
                 "art_11": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_12": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_13": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_14": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_15": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_16": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
+                },
+                "art_17": {
+                    "title": "Versão 1 do Coelho",
+                    "desc": "Essa cara dele sempre me faz querer rir haha."
+                },
+                "art_18": {
+                    "title": "Conquista 'Iniciante'",
+                    "desc": "Ela fica tão fofa quando ri..."
+                },
+                "art_19": {
+                    "title": "Conquista 'Louco como ele'",
+                    "desc": "Chapeleiro ficou acabado haha."
+                },
+                "art_20": {
+                    "title": "Conquista 'Nova rainha'",
+                    "desc": "Essa rainha Alice ficou badass!"
+                },
+                "art_21": {
+                    "title": "Conquista 'O conceito de estratégia'",
+                    "desc": "Skin de cientista haha!"
+                },
+                "art_22": {
+                    "title": "Conquista 'Prêmio de consolação'",
+                    "desc": "A Rainha Branca séria me dá arrepios!"
                 }
             }
         },
@@ -557,7 +581,7 @@
         "demo": {
             "end": "E aqui é o fim da demo!\n\nMas a aventura de Alice está longe de acabar...\n\nMais oponentes, níveis, relíquias, cartas de poder e extras te esperam no jogo completo!",
             "wishlist": "Adicione na lista!",
-            "sorry": "Esta opção não está disponível na demo."
+            "sorry": "Esta opção não está disponível na demo..."
         }
     }
 }

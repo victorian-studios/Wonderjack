@@ -107,72 +107,96 @@
                 "tittle_default": "Waiting...",
                 "desc_default": "No art selected...",
                 "art_0": {
-                    "title": "Bunny",
-                    "desc": "A possible bunny for Alice."
+                    "title": "Plush bunny's sketch",
+                    "desc": "Alice's little plush bunny! Cute, right?"
                 },
                 "art_1": {
-                    "title": "Alice Sketch",
-                    "desc": "The first sketch art from Alice."
+                    "title": "Alice's sketch",
+                    "desc": "She looks a little skinny in the sketch, haha!"
                 },
                 "art_2": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Alice and The White Queen's sketch",
+                    "desc": "It actually turned out to be a nice composition!"
                 },
                 "art_3": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Old Menu",
+                    "desc": "The first version of the menu made for GameJamPlus."
                 },
                 "art_4": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Old Demo level",
+                    "desc": "First version of the level made for GameJamPlus."
                 },
                 "art_5": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Old Page 1",
+                    "desc": "It took a lot of work to get Alice's pose right... and it still looks weird..."
                 },
                 "art_6": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Old Page 2",
+                    "desc": "I didn't think this pose looked very natural.. it looks like she broke her arm, haha!"
                 },
                 "art_7": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Old Page 3",
+                    "desc": "It was complex to draw Alice from this angle..."
                 },
                 "art_8": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Old Page 4",
+                    "desc": "I did a light-and-shadow study..it actually turned out pretty cool."
                 },
                 "art_9": {
-                    "title": "Old Story Page 5",
-                    "desc": "The fifth page from the story."
+                    "title": "Old Page 5",
+                    "desc": "The White Queen's hand was huge!"
                 },
                 "art_10": {
-                    "title": "",
-                    "desc": ""
+                    "title": "Dinah's sketch",
+                    "desc": "An attempt to draw a cat playing..."
                 },
                 "art_11": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_12": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_13": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_14": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_15": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
                 },
                 "art_16": {
-                    "title": "",
-                    "desc": ""
+                    "title": "blim",
+                    "desc": "blim"
+                },
+                "art_17": {
+                    "title": "Rabbit Version 1",
+                    "desc": "His face always makes me want to laugh, haha..."
+                },
+                "art_18": {
+                    "title": "'Beginner' Achievement",
+                    "desc": "She's so cute when she laughs..."
+                },
+                "art_19": {
+                    "title": "'Mad as a Hatter' Achievement",
+                    "desc": "The Hatter was totally wiped out, haha."
+                },
+                "art_20": {
+                    "title": "'The New Queen' Achievement",
+                    "desc": "This Queen Alice is so badass!"
+                },
+                "art_21": {
+                    "title": "'Strategy' Achievement",
+                    "desc": "Scientist skin, haha!"
+                },
+                "art_22": {
+                    "title": "'Consolation Prize' Achievement",
+                    "desc": "The serious White Queen gives me chills!"
                 }
             }
         },
