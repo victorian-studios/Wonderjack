@@ -104,8 +104,8 @@
                 }
             },
             "art_gallery": {
-                "tittle_default": "Waiting...",
-                "desc_default": "Waiting...",
+                "tittle_default": "Aguardando...",
+                "desc_default": "Nenhuma arte selecionada...",
                 "art_0": {
                     "title": "Bunny",
                     "desc": "A possible bunny for Alice."
@@ -192,12 +192,12 @@
             "page_5" : "Alice sorriu enquanto seus olhos cintilavam com tanto entusiasmo.\n\n'Isso é exatamente o que eu estava esperando. Conta comigo!'\n\nA Rainha Branca suspirou de alívio.\n\n'Maravilha! E antes que você vá... a Rainha tem se tornado cada vez mais impiedosa ultimamente.'\n\n[b]'Você gostaria de jogar comigo para que eu possa te ensinar?'[/b]",
             "btn_yes": "SIM",
             "btn_no": "NÃO",
-            "page_6": "Tudo se apaga, e Alice permanece sozinha no quarto da Rainha de Copas\n\nApesar de estar confusa, ela permanece em pé, pensativa.\n\n‘Bem…Até que essa batalha com a rainha foi divertida…e lutei contra oponentes bem interessantes…’, pensou a garota.\n\n‘Mas agora…estou exausta…queria um bolo, uma xícara de chá, qualquer coisa…’\n\nAo fundo, Alice escuta um som estranho.",
-            "page_7": "",
-            "page_8": "",
-            "page_9": "",
-            "page_10": "",
-            "page_11": ""
+            "page_6": "Tudo se apaga, e Alice permanece sozinha no quarto da Rainha de Copas\n\nApesar de estar confusa, ela permanece em pé, pensativa.\n\n'Bem...Até que essa batalha com a rainha foi divertida...e lutei contra oponentes bem interessantes...', pensou a garota.\n\n'Mas agora...estou exausta...queria um bolo, uma xícara de chá, qualquer coisa...'\n\nAo fundo, Alice escuta um som estranho.",
+            "page_7": "O barulho vai ficando cada vez mais alto a medida que o tempo passa, até que subitamente um conhecido aparece de forma apressada à frente de Alice.\n\n'Coelho? O que faz aqui?', perguntou Alice.\n\n'O-olá minha amiga, não estou com muito tempo mas vim te avisar que ainda resta um inimigo a ser derrotado! Um bem perigoso inclusive...', disse o coelho olhando nervosamente para seu relógio.",
+            "page_8": "Assim que concluiu o aviso, o animal saiu correndo, deixando a garota sozinha novamente.\n\nPensativa, Alice imaginou quem seria o novo oponente, e mesmo cansada tentou recuperar suas energias.\n\n'Bem, parece que vou ficar mais um tempo por aqui não é mesmo?', disse a garota retornando por onde veio em busca de respostas...",
+            "page_9": "Novamente, tudo se escurece, e a garota está novamente só.\n\nAlice suspira, exausta dessa vez.\n\n'Ufa! Essa batalha com o Jaguadarte foi demorada...será que agora estou livre?', Alice se perguntou.\n\n'Porque...' bocejou, 'Estou começando a ficar bem cansada...'\n\nAo fundo, Alice escuta um som familiar.",
+            "page_10": "Eram as batidas do relógio do coelho novamente, mas estavam estranhas. Ele corre apressado e para novamente em frente à menina.\n\n'A-Alice! Você chegou novamente, preciso te falar algo rap-'\n\nAntes que pudesse concluir sua frase, a garota interrompeu o animal, retrucando.\n\n'Coelho, eu já estou cansada de jogar! Preciso retornar para casa!'\n\nO coelho olhou surpreso para Alice, ficou imóvel por um tempo e assentiu com a cabeça, levemente triste. O animal desapareceu devagar e pouco a pouco as batidas do relógio se tornaram...miados?",
+            "page_11": "De repente, Alice começa a sentir leves arranhadas em sua bochecha.\n\nEla abre os olhos e percebe que sua gata Dinah, estava tentando a muito custo, acordá-la.\n\n'Dinah!' Disse Alice abraçando sua gatinha. 'Desculpe falar que não te achava uma oponente interessante...Quero minha oponente previsível de volta! Na verdade, em vez de jogarmos, que tal lermos alguns livros lá dentro?'\n\n'Miau!', disse Dinah concordando e se aconchegando nos braços de sua dona enquanto as duas retornavam para casa."
         },
         "tutorial": {
             "page_1": "[u][b]Capítulo 1[/b][/u]\n\n[b]O Objetivo[/b]\n\nO objetivo do jogo é ganhar duas rodadas chegando a 21 ou o mais perto possível com as cartas numéricas somadas.",
