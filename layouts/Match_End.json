@@ -1,5 +1,5 @@
 {
-	"name": "Demo_End",
+	"name": "Match_End",
 	"layers": [
 		{
 			"name": "Bkg",
@@ -142,7 +142,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
-						"initial-frame": 0,
+						"initial-frame": 2,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -161,10 +161,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 990,
-						"y": 540,
-						"width": 1280,
-						"height": 613,
+						"x": 950,
+						"y": 515,
+						"width": 1820,
+						"height": 1080,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -197,8 +197,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 990.5,
-						"y": 727,
+						"x": 653,
+						"y": 930,
 						"width": 516.4145002746877,
 						"height": 135.94394269534615,
 						"originX": 0.5,
@@ -216,10 +216,10 @@
 				{
 					"type": "Text_Static_Generic",
 					"properties": {
-						"text": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, powers, and extras await you in the full game!\n\nIf you enjoyed the demo, don't forget to add the game to your wishlist by clicking the button below!",
+						"text": "You Won!",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
-						"size": 39,
+						"size": 61,
 						"line-height": 0,
 						"bold": true,
 						"italic": false,
@@ -230,7 +230,7 @@
 							1
 						],
 						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,
@@ -281,10 +281,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 405,
-						"y": 290,
-						"width": 1172,
-						"height": 364.20929839391374,
+						"x": 380,
+						"y": 33,
+						"width": 1113,
+						"height": 117.20929839391374,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -317,10 +317,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 990,
-						"y": 936,
-						"width": 270,
-						"height": 101,
+						"x": 1249,
+						"y": 930,
+						"width": 516.4145,
+						"height": 135.943943,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -336,7 +336,7 @@
 				{
 					"type": "Text_Static_Generic",
 					"properties": {
-						"text": "Adicione na lista!",
+						"text": "New Match",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
 						"size": 39,
@@ -363,7 +363,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"my_id": 0,
-						"my_txt": "demo.wishlist"
+						"my_txt": "match_end.new_match"
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -401,8 +401,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 776.3127518612116,
-						"y": 696,
+						"x": 439,
+						"y": 899,
 						"width": 429.325114404754,
 						"height": 66.20929839391374,
 						"originX": 0,
@@ -420,7 +420,7 @@
 				{
 					"type": "Text_Static_Generic",
 					"properties": {
-						"text": "Back",
+						"text": "Main Menu",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
 						"size": 39,
@@ -447,7 +447,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"my_id": 0,
-						"my_txt": "menu.btn_back"
+						"my_txt": "match_end.menu"
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -485,9 +485,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 875.5825359668677,
-						"y": 903,
-						"width": 226.93953468156042,
+						"x": 1033,
+						"y": 897,
+						"width": 429.325114,
 						"height": 66.20929839391374,
 						"originX": 0,
 						"originY": 0,

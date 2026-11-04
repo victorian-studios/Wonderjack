@@ -2511,12 +2511,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 3864,
-						"y": 1342,
-						"width": 410.42446043165467,
-						"height": 547.2149344096872,
-						"originX": 0.5,
-						"originY": 1,
+						"x": 3778,
+						"y": 1376,
+						"width": 433.21445060350123,
+						"height": 617.5050978011726,
+						"originX": 0.5195007800312013,
+						"originY": 0.9485213581599132,
 						"color": [
 							1,
 							1,
@@ -3752,6 +3752,75 @@
 						"height": 681.0761150510734,
 						"originX": 0.3511205976520811,
 						"originY": 0.8494868871151653,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Enemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "White Rabbit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 408,
+					"sid": 301298088972100,
+					"tags": "",
+					"instanceVariables": {
+						"SpecialPower": 0
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 6,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 4242,
+						"y": 1408,
+						"width": 578.2083943071374,
+						"height": 673.8852621670943,
+						"originX": 0.3483652762119504,
+						"originY": 0.9990319457889641,
 						"color": [
 							1,
 							1,

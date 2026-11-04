@@ -1802,7 +1802,7 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
+								"initial-animation": "lock",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
@@ -1826,8 +1826,8 @@
 							"world": {
 								"x": 328,
 								"y": 439,
-								"width": 252.24054447069557,
-								"height": 233.42808377196786,
+								"width": 191.96388468089464,
+								"height": 191.9638846808946,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -1886,8 +1886,8 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 2,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -1910,8 +1910,8 @@
 							"world": {
 								"x": 465,
 								"y": 966,
-								"width": 343.06958116025663,
-								"height": 232.70012795022163,
+								"width": 135.92297193354065,
+								"height": 135.92297193354065,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2435,8 +2435,8 @@
 							"type": "Gallery_Arts_Small",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 10,
+								"initial-animation": "lock",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -2459,8 +2459,8 @@
 							"world": {
 								"x": 470,
 								"y": 706,
-								"width": 440.1228855909694,
-								"height": 230.09028458954984,
+								"width": 143.2691684866437,
+								"height": 143.26916848664374,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -3622,7 +3622,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "eat_me",
-								"initial-frame": 0,
+								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3676,7 +3676,7 @@
 								"width": 122,
 								"height": 122,
 								"originX": 0.5,
-								"originY": 0.45081967213114754,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -3832,7 +3832,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "tea",
-								"initial-frame": 0,
+								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -3902,7 +3902,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "watch",
-								"initial-frame": 0,
+								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -4964,8 +4964,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 1,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5029,8 +5029,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 2,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5549,8 +5549,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 10,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5614,8 +5614,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 11,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -5939,8 +5939,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 16,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -6069,8 +6069,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Front",
-								"initial-frame": 18,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -6329,8 +6329,8 @@
 							"type": "Card_Power",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "Front",
-								"initial-frame": 22,
+								"initial-animation": "Unknown",
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -6430,7 +6430,7 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Codex",
+								"initial-animation": "Codex_Lock",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
@@ -6477,7 +6477,7 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Codex",
+								"initial-animation": "Codex_Lock",
 								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
@@ -6571,7 +6571,7 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Codex",
+								"initial-animation": "Codex_Lock",
 								"initial-frame": 6,
 								"enable-collisions": true,
 								"live-preview": false
@@ -6618,7 +6618,7 @@
 							"type": "Quadro_Turns_Shadow",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Codex",
+								"initial-animation": "Codex_Lock",
 								"initial-frame": 10,
 								"enable-collisions": true,
 								"live-preview": false

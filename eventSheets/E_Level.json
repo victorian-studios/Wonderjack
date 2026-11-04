@@ -12776,13 +12776,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 948959100674325,
+											"sid": 968091014843066,
 											"parameters": {
 												"audio-file": {
 													"path": "Characters/BONG Bell Timer Hit Deep 03"
 												},
 												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -24 + ( Vol_Sfx * 0.24 ) : -100",
+												"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.3 ) : -100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -12871,13 +12871,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 853777611655167,
+											"sid": 468793711546996,
 											"parameters": {
 												"audio-file": {
 													"path": "Characters/BONG Bell Timer Hit Deep 03"
 												},
 												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -24 + ( Vol_Sfx * 0.24 ) : -100",
+												"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.3 ) : -100",
 												"stereo-pan": "0",
 												"tag-optional": "\"\""
 											}
@@ -16497,24 +16497,6 @@
 														{
 															"callFunction": "Shuffle_Number",
 															"sid": 520183975302163
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 663647908056960,
-															"parameters": {
-																"seconds": "0.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-boolean-eventvar",
-															"objectClass": "System",
-															"sid": 697021315424981,
-															"parameters": {
-																"variable": "PowerDone",
-																"value": "true"
-															}
 														}
 													],
 													"sid": 340930197402478
@@ -16574,24 +16556,6 @@
 														{
 															"callFunction": "Shuffle_Number",
 															"sid": 520200122882974
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 286062535683739,
-															"parameters": {
-																"seconds": "0.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-boolean-eventvar",
-															"objectClass": "System",
-															"sid": 933984224384613,
-															"parameters": {
-																"variable": "PowerDone",
-																"value": "true"
-															}
 														}
 													],
 													"sid": 329210088433304
@@ -16817,6 +16781,10 @@
 															}
 														},
 														{
+															"callFunction": "Order_Numb_Cards",
+															"sid": 595064866401119
+														},
+														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
 															"sid": 457874674886646,
@@ -16986,6 +16954,10 @@
 															}
 														},
 														{
+															"callFunction": "Order_Numb_Cards",
+															"sid": 556270283133536
+														},
+														{
 															"id": "set-boolean-eventvar",
 															"objectClass": "System",
 															"sid": 841806076696828,
@@ -17153,6 +17125,10 @@
 																"seconds": "2 - Opt_FastMode_Secs",
 																"use-timescale": true
 															}
+														},
+														{
+															"callFunction": "Order_Numb_Cards",
+															"sid": 567598090749996
 														},
 														{
 															"id": "set-boolean-eventvar",
@@ -21338,7 +21314,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Menu Power",
+					"title": "Menu Power (Player)",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -25693,10 +25669,10 @@
 												{
 													"id": "log",
 													"objectClass": "Browser",
-													"sid": 659410387998256,
+													"sid": 480488109199891,
 													"parameters": {
 														"type": "log",
-														"message": "\"Passando o turno após o poder\""
+														"message": "\"Passando o turno do player após o poder\""
 													}
 												},
 												{
@@ -25802,10 +25778,10 @@
 												{
 													"id": "log",
 													"objectClass": "Browser",
-													"sid": 476878459585610,
+													"sid": 260393755581502,
 													"parameters": {
 														"type": "log",
-														"message": "\"Passando o turno após o poder\""
+														"message": "\"Passando o turno do enemyapós o poder\""
 													}
 												},
 												{
@@ -40330,13 +40306,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 113676138325331,
+															"sid": 368311180325963,
 															"parameters": {
 																"audio-file": {
 																	"path": "bell"
 																},
 																"loop": "not-looping",
-																"volume": "Vol_Sfx > 0 ? -24 + ( Vol_Sfx * 0.24) : -100",
+																"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.3 ) : -100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -40382,13 +40358,13 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 899578651597032,
+															"sid": 149586472498133,
 															"parameters": {
 																"audio-file": {
 																	"path": "bell"
 																},
 																"loop": "not-looping",
-																"volume": "Vol_Sfx > 0 ? -24 + ( Vol_Sfx * 0.24) : -100",
+																"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.3 ) : -100",
 																"stereo-pan": "0",
 																"tag-optional": "\"\""
 															}
@@ -40509,13 +40485,13 @@
 												{
 													"id": "play",
 													"objectClass": "Audio",
-													"sid": 843085404827579,
+													"sid": 541425678037544,
 													"parameters": {
 														"audio-file": {
 															"path": "bell"
 														},
 														"loop": "not-looping",
-														"volume": "Vol_Sfx > 0 ? -24 + ( Vol_Sfx * 0.24) : -100",
+														"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.3 ) : -100",
 														"stereo-pan": "0",
 														"tag-optional": "\"\""
 													}
@@ -40561,13 +40537,13 @@
 												{
 													"id": "play",
 													"objectClass": "Audio",
-													"sid": 893478558593463,
+													"sid": 105029823107441,
 													"parameters": {
 														"audio-file": {
 															"path": "bell"
 														},
 														"loop": "not-looping",
-														"volume": "Vol_Sfx > 0 ? -24 + ( Vol_Sfx * 0.24) : -100",
+														"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.3 ) : -100",
 														"stereo-pan": "0",
 														"tag-optional": "\"\""
 													}
@@ -44731,13 +44707,13 @@
 												{
 													"id": "play",
 													"objectClass": "Audio",
-													"sid": 118796682360748,
+													"sid": 231066776025052,
 													"parameters": {
 														"audio-file": {
 															"path": "bell"
 														},
 														"loop": "not-looping",
-														"volume": "Vol_Sfx > 0 ? -24 + ( Vol_Sfx * 0.24) : -100",
+														"volume": "Vol_Sfx > 0 ? -30 + ( Vol_Sfx * 0.3 ) : -100",
 														"stereo-pan": "0",
 														"tag-optional": "\"\""
 													}
@@ -49698,6 +49674,15 @@
 															}
 														},
 														{
+															"id": "move-to-object",
+															"objectClass": "Effect_Smoke",
+															"sid": 850201437695153,
+															"parameters": {
+																"where": "behind",
+																"object": "Card_Power"
+															}
+														},
+														{
 															"id": "tween-one-property",
 															"objectClass": "Txt_auto_math",
 															"sid": 333304805084338,
@@ -49769,6 +49754,15 @@
 																"y": "0",
 																"create-hierarchy": false,
 																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "move-to-object",
+															"objectClass": "Effect_Smoke",
+															"sid": 329971278611036,
+															"parameters": {
+																"where": "behind",
+																"object": "Card_Power"
 															}
 														},
 														{
@@ -58220,7 +58214,8 @@
 									}
 								}
 							],
-							"sid": 767058408602948
+							"sid": 767058408602948,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -58255,7 +58250,8 @@
 									}
 								}
 							],
-							"sid": 707140556602119
+							"sid": 707140556602119,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -58290,7 +58286,8 @@
 									}
 								}
 							],
-							"sid": 302156601228058
+							"sid": 302156601228058,
+							"disabled": true
 						},
 						{
 							"eventType": "comment",
@@ -58333,7 +58330,8 @@
 									}
 								}
 							],
-							"sid": 137113698669269
+							"sid": 137113698669269,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -58372,7 +58370,8 @@
 									}
 								}
 							],
-							"sid": 737656821086964
+							"sid": 737656821086964,
+							"disabled": true
 						},
 						{
 							"eventType": "comment",
@@ -58590,7 +58589,8 @@
 									}
 								}
 							],
-							"sid": 196019493467566
+							"sid": 196019493467566,
+							"disabled": true
 						}
 					]
 				},

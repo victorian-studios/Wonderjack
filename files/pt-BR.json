@@ -183,20 +183,20 @@
                     "desc": "Ela fica tão fofa quando ri..."
                 },
                 "art_19": {
+                    "title": "Conquista 'Prêmio de consolação'",
+                    "desc": "A Rainha Branca séria me dá arrepios!"
+                },
+                "art_20": {
                     "title": "Conquista 'Louco como ele'",
                     "desc": "Chapeleiro ficou acabado haha."
                 },
-                "art_20": {
+                "art_21": {
                     "title": "Conquista 'Nova rainha'",
                     "desc": "Essa rainha Alice ficou badass!"
                 },
-                "art_21": {
+                "art_22": {
                     "title": "Conquista 'O conceito de estratégia'",
                     "desc": "Skin de cientista haha!"
-                },
-                "art_22": {
-                    "title": "Conquista 'Prêmio de consolação'",
-                    "desc": "A Rainha Branca séria me dá arrepios!"
                 }
             }
         },
@@ -279,6 +279,10 @@
                 "empty_deck": "Bem... não tem mais nenhum carta sobrando.",
                 "full_card_table": "Já tem cartas de mais nesta mesa."
             }
+        },
+        "match_end": {
+            "new_match": "Nova Partida",
+            "menu": "Menu Principal"
         },
         "options": {
             "title": "OPÇÕES",

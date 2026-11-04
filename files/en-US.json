@@ -183,21 +183,22 @@
                     "desc": "She's so cute when she laughs..."
                 },
                 "art_19": {
+                    "title": "'Consolation Prize' Achievement",
+                    "desc": "The serious White Queen gives me chills!"
+                },
+                "art_20": {
                     "title": "'Mad as a Hatter' Achievement",
                     "desc": "The Hatter was totally wiped out, haha."
                 },
-                "art_20": {
+                "art_21": {
                     "title": "'The New Queen' Achievement",
                     "desc": "This Queen Alice is so badass!"
                 },
-                "art_21": {
+                "art_22": {
                     "title": "'Strategy' Achievement",
                     "desc": "Scientist skin, haha!"
                 },
-                "art_22": {
-                    "title": "'Consolation Prize' Achievement",
-                    "desc": "The serious White Queen gives me chills!"
-                }
+                
             }
         },
         "credits": {
@@ -279,6 +280,10 @@
                 "empty_deck": "Well... there're no more cards left.",
                 "full_card_table": "There're too many cards in this table."
             }
+        },
+        "match_end": {
+            "new_match": "New Match",
+            "menu": "Main Menu"
         },
         "options": {
             "title": "OPTIONS",
@@ -578,7 +583,7 @@
         "demo": {
             "end": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, power cards, and extras await you in the full game!",
             "wishlist": "Wishlist now!",
-            "sorry": "This feature is unavailable in this demo."
+            "sorry": "This feature will be available soon."
         }
     }
 }
