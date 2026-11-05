@@ -30,70 +30,70 @@
                         "mind": "Cautelosa",
                         "stage": "Tutorial",
                         "special": "Nenhum",
-                        "desc": "..."
+                        "desc": "Uma rainha um pouco estabanada mas de bom coração. Gosta de ensinar as pessoas a jogar Blackjack e fica contente ao ver que suas aulas geraram frutos."
                     },
                     "Mad Hatter": {
                         "name": "Chapeleiro Maluco",
                         "mind": "Cauteloso",
                         "stage": "Nível 1",
                         "special": "Começa a partida com uma carta de número aleatória.",
-                        "desc": "..."
+                        "desc": "Um antigo conhecido da Alice. Adora festas de aniversário, chás e...Blackjack. Acha divertido seguir sua própria regra para se beneficiar nas partidas. Só tira seu chapéu para oponentes formidáveis..."
                     },
                     "March Hare": {
                         "name": "Lebre de Março",
                         "mind": "Cautelosa",
                         "stage": "Nível 1",
                         "special": "Começa a partida com uma carta de poder aleatória.",
-                        "desc": "..."
+                        "desc": "Amigo inseparável do chapeleiro. Sempre desconfiado e alerta, gosta de esconder truques embaixo da manga como forma de se precaver e evitar problemas. E se aproveita disso para ganhar vantagens no Blackjack."
                     },
                     "The Tweedles": {
                         "name": "Os Tweedles",
                         "mind": "Cautelosos",
                         "stage": "Stage 2",
                         "special": "Every 2 turns they switch places, changing the main strategy.",
-                        "desc": "..."
+                        "desc": "Os irmãos Tweedle nunca se entenderam...E mesmo assim formaram um time para jogar Blackjack! Juntos, eles pensam que tem o dobro de chance de ganhar...apesar de que na maioria das vezes eles só brigam entre si..."
                     },
                     "Caterpillar": {
                         "name": "Lagarta",
                         "mind": "Cautelosa",
                         "stage": "Nível 2",
                         "special": "Cria aletoriamente uma nuvem de fumaça sobre as cartas do jogador por um turno.",
-                        "desc": "..."
+                        "desc": "Um ser que adora filosofia e fumar no seu tempo livre. Encontrou no Backjack uma nova forma de pensar e adora bolar estratégias para vencer seu adversário...Mesmo que precise do seu narguilé para isso..."
                     },
                     "Cheshire Cat": {
                         "name": "Gato de Cheshire",
                         "mind": "Cauteloso",
                         "stage": "Nível 3",
                         "special": "Desaparece aleatoriamente, fazendo com que todas suas cartas de número fiquem ocultas por 1 turno.",
-                        "desc": "..."
+                        "desc": "Um ser icônico do País das Maravilhas. Adora desaparecer quando quer, deixando apenas seu sorriso enigmático pairando no ar...Joga Blackjack com a certeza da vitória, sempre planejando a próxima jogada."
                     },
                     "General of Cards": {
                         "name": "General Carta",
                         "mind": "Cautious",
                         "stage": "Stage 3",
-                        "special": "Starts every round with protection for 3 turns.",
-                        "desc": "..."
+                        "special": "Começa cada rodada com proteção por 3 turnos.",
+                        "desc": "O guarda-costas oficial da rainha! Ficou noites sem dormir tentando aprender Blackjack para proporcionar partidas divertidas para sua alteza. Apesar do cansaço, conseguiu dominar todos os fundamentos do jogo."
                     },
                     "Dodo": {
-                        "name": "Dodo",
+                        "name": "Dodô",
                         "mind": "Cautious",
                         "stage": "Secret",
-                        "special": "Randomly gives the first number card for the player.",
-                        "desc": "..."
+                        "special": "Dá aleatoriamente para o jogador a primeira carta de número.",
+                        "desc": "Uma ave que não está extinta no País das Maravilhas! Seus hobbys incluem apostar corridas e jogar Blackjack, é claro. Também adora prêmios, mas não sabe diferenciar os bons dos ruins..."
                     },
                     "Red Queen": {
-                        "name": "Red Queen",
+                        "name": "Rainha de Copas",
                         "mind": "Cautious",
                         "stage": "Stage 4",
-                        "special": "Randomly removes 1 number card from the player for the rest of the round.",
-                        "desc": "..."
+                        "special": "Remove aleatoriamente 1 carta de número do jogador para o resto da rodada.",
+                        "desc": "A rainha soberana do País das Maravilhas. Tem um gosto peculiar por cortar cabeças e corações. Há um tempo substituiu suas tardes de cricket por partidas de Blackjack com suas cartas-guarda. Mas ela já está entediada..."
                     },
                     "Jabberwock": {
-                        "name": "Jabberwock",
-                        "mind": "Cautious",
+                        "name": "Jaguadarte",
+                        "mind": "Cauteloso",
                         "stage": "Stage 4",
-                        "special": "Starts the match with a special candlestick contaning 5 candles.",
-                        "desc": "..."
+                        "special": "Começa a partida com um candelabro especial contendo 5 velas.",
+                        "desc": "Uma lenda antiga do País das Maravilhas. Jaguadarte só era conhecido por meio de uma cantiga, e por isso deixou de ser tão temido. Tomado pela busca de ter seu poder reconhecido, começou a jogar Blackjack e desafiar qualquer um a sua frente."
                     }
                 },
                 "powers": {
@@ -330,39 +330,39 @@
                 },
                 "White Rabbit": {
                     "name": "White Rabbit",
-                    "first_time_1": "",
-                    "first_time_2": "",
-                    "first_time_3": "",
-                    "first_time_4": "",
-                    "first_time_5": "",
-                    "first_time_6": "",
-                    "first_time_7": "",
-                    "first_time_8": "",
-                    "first_time_9": "",
-                    "first_time_10": "",
-                    "first_time_11": "",
-                    "first_time_12": "",
-                    "rng_talk_1": "",
-                    "rng_talk_2": "",
-                    "rng_talk_3": "",
-                    "rng_talk_4": "",
-                    "rng_talk_5": "",
-                    "rng_talk_6": "",
-                    "rng_talk_7": "",
-                    "rng_talk_8": "",
-                    "rng_talk_9": "",
-                    "rng_talk_10": "",
-                    "rng_talk_11": "",
-                    "rng_talk_12": "",
-                    "rng_talk_13": "",
-                    "rng_talk_14": "",
-                    "rng_talk_15": "",
-                    "rng_talk_16": "",
-                    "rng_talk_17": "",
-                    "rng_talk_18": "",
-                    "rng_talk_19": "",
-                    "rng_talk_20": "",
-                    "rng_talk_21": ""
+                    "first_time_1": "Oh! Alice! Quanto tempo que não te vejo!",
+                    "first_time_2": "Verdade! O que faz por aqui?",
+                    "first_time_3": "Ótima pergunta! Tentarei ser breve pois estou com um pouco de pressa...",
+                    "first_time_4": "Tudo bem.",
+                    "first_time_5": "A Rainha Branca comentou com você sobre uma recompensa espcial, certo?",
+                    "first_time_6": "Então, eu fico andando por ai e sempre encontro objetos espalhados e perdidos.",
+                    "first_time_7": "E como eu gosto das coisas limpas e organizadas...",
+                    "first_time_8": "Guardei tudo nessa caixa de achados e perdidos, mas até agora ninguém apareceu pra pegar de volta.",
+                    "first_time_9": "Será que eu deixei cair alguma coisa quando acordei aqui?",
+                    "first_time_10": "Não mesmo, passei por lá agora pouco.",
+                    "first_time_11": "De qualquer modo, estou doando alguns dos objetos mais antigos que estão pegando poeira.",
+                    "first_time_12": "Por que não escolhe um para você?",
+                    "rng_talk_1": "Oh! Você venceu!",
+                    "rng_talk_2": "Apresse-se!",
+                    "rng_talk_3": "Você foi muito bem.",
+                    "rng_talk_4": "Oh meu Deus! O tempo está passando!",
+                    "rng_talk_5": "Já viu que horas são?",
+                    "rng_talk_6": "Tenho mais alguns objetos esquecidos para você.",
+                    "rng_talk_7": "Escolha bem hein.",
+                    "rng_talk_8": "Anime-se Alice! Você consegue.",
+                    "rng_talk_9": "Espero que algo lhe interesse...",
+                    "rng_talk_10": "Encontrei mais algumas coisas!",
+                    "rng_talk_11": "Trago mais itens perdidos!",
+                    "rng_talk_12": "Vamos Alice! O tempo não para!",
+                    "rng_talk_13": "Tic-tac...",
+                    "rng_talk_14": "Tenho mais achados e perdidos para doar!",
+                    "rng_talk_15": "Está cansada? Vou te animar!",
+                    "rng_talk_16": "Olá Alice! Olhe o que trouxe para você!",
+                    "rng_talk_17": "Sentiu minha falta? Haha!",
+                    "rng_talk_18": "Que partida foi essa, hein?",
+                    "rng_talk_19": "Doações chegando!",
+                    "rng_talk_20": "Estou cansado... mas trago bons achados!",
+                    "rng_talk_21": "Cheguei!"
                 },
                 "Mad Hatter": {
                     "name": "Chapeleiro Maluco",

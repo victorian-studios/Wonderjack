@@ -30,70 +30,70 @@
                         "mind": "Cautious",
                         "stage": "Tutorial",
                         "special": "None",
-                        "desc": "..."
+                        "desc": "A slightly clumsy queen with a heart of gold. She loves teaching people how to play Blackjack and is delighted to see her lessons pay off."
                     },
                     "Mad Hatter": {
                         "name": "Mad Hatter",
                         "mind": "Cautious",
                         "stage": "Stage 1",
                         "special": "Starts the match with a random number card.",
-                        "desc": "..."
+                        "desc": "An old acquaintance of Alice's. He adores birthday parties, tea and... Blackjack. He gets a kick out of playing by his own rules to get an edge in every match. He only tips his hat to formidable opponents..."
                     },
                     "March Hare": {
                         "name": "March Hare",
                         "mind": "Cautious",
                         "stage": "Stage 1",
                         "special": "Starts the match with a random power card.",
-                        "desc": "..."
+                        "desc": "The Hatter's inseparable friend. Always suspicious and on his toes, he likes to keep a few tricks up his sleeve to play it safe and stay out of trouble. And he makes the most of them to get the upper hand in Blackjack."
                     },
                     "The Tweedles": {
                         "name": "The Tweedles",
                         "mind": "Cautious",
                         "stage": "Stage 2",
                         "special": "Every 2 turns they switch places, changing the main strategy.",
-                        "desc": "..."
+                        "desc": "The Tweedle brothers have never seen eye to eye... And yet they teamed up to play Blackjack! Together, they think they've got twice the chance of winning... even though most of the time they just end up squabbling with each other..."
                     },
                     "Caterpillar": {
                         "name": "Caterpillar",
                         "mind": "Cautious",
                         "stage": "Stage 2",
                         "special": "Randomly creates a smoke cloud above the player's cards for 1 turn.",
-                        "desc": "..."
+                        "desc": "A creature who loves philosophy and smoking in its spare time. It found in Blackjack a whole new way of thinking and loves cooking up strategies to beat its opponents... even if it needs its hookah to do so..."
                     },
                     "Cheshire Cat": {
                         "name": "Cheshire Cat",
                         "mind": "Cautious",
                         "stage": "Stage 3",
                         "special": "Randomly desappears making all ther number cards hidden for 1 turn.",
-                        "desc": "..."
+                        "desc": "An iconic figure of Wonderland. He loves vanishing whenever he pleases, leaving nothing behind but his enigmatic grin hanging in the air... He plays Blackjack as if victory were already in the bag, always thinking one move ahead."
                     },
                     "General of Cards": {
                         "name": "General of Cards",
                         "mind": "Cautious",
                         "stage": "Stage 3",
                         "special": "Starts every round with protection for 3 turns.",
-                        "desc": "..."
+                        "desc": "The Queen's official bodyguard! He pulled countless all-nighters learning Blackjack so he could give Her Majesty some fun matches. Exhausted as he is, he's managed to master all the fundamentals of the game."
                     },
                     "Dodo": {
                         "name": "Dodo",
                         "mind": "Cautious",
                         "stage": "Secret",
                         "special": "Randomly gives the first number card for the player.",
-                        "desc": "..."
+                        "desc": "A bird that's far from extinct in Wonderland! Its hobbies include racing and, of course, playing Blackjack. It also loves prizes, but can't tell the good ones from the bad..."
                     },
                     "Red Queen": {
                         "name": "Red Queen",
                         "mind": "Cautious",
                         "stage": "Stage 4",
                         "special": "Randomly removes 1 number card from the player for the rest of the round.",
-                        "desc": "..."
+                        "desc": "The sovereign ruler of Wonderland. She has a peculiar taste for chopping off heads... and hearts. A while ago, she swapped her afternoons of croquet for Blackjack matches with her card guards. But she's already bored stiff..."
                     },
                     "Jabberwock": {
                         "name": "Jabberwock",
                         "mind": "Cautious",
                         "stage": "Stage 4",
                         "special": "Starts the match with a special candlestick contaning 5 candles.",
-                        "desc": "..."
+                        "desc": "An ancient Wonderland legend. The Jabberwock was known only through an old rhyme, and so it gradually stopped being feared. Driven by a hunger to have its power recognized, it took up Blackjack and began challenging anyone who crossed its path."
                     }
                 },
                 "powers": {
@@ -329,39 +329,39 @@
                 },
                 "White Rabbit": {
                     "name": "White Rabbit",
-                    "first_time_1": "",
-                    "first_time_2": "",
-                    "first_time_3": "",
-                    "first_time_4": "",
-                    "first_time_5": "",
-                    "first_time_6": "",
-                    "first_time_7": "",
-                    "first_time_8": "",
-                    "first_time_9": "",
-                    "first_time_10": "",
-                    "first_time_11": "",
-                    "first_time_12": "",
-                    "rng_talk_1": "",
-                    "rng_talk_2": "",
-                    "rng_talk_3": "",
-                    "rng_talk_4": "",
-                    "rng_talk_5": "",
-                    "rng_talk_6": "",
-                    "rng_talk_7": "",
-                    "rng_talk_8": "",
-                    "rng_talk_9": "",
-                    "rng_talk_10": "",
-                    "rng_talk_11": "",
-                    "rng_talk_12": "",
-                    "rng_talk_13": "",
-                    "rng_talk_14": "",
-                    "rng_talk_15": "",
-                    "rng_talk_16": "",
-                    "rng_talk_17": "",
-                    "rng_talk_18": "",
-                    "rng_talk_19": "",
-                    "rng_talk_20": "",
-                    "rng_talk_21": ""
+                    "first_time_1": "Oh! Alice! It's been so long since I've seen you!",
+                    "first_time_2": "That's true! What are you doing around here?",
+                    "first_time_3": "Good question! I'll try to keep it short because I'm in a bit of a hurry...",
+                    "first_time_4": "Okay.",
+                    "first_time_5": "The White Queen mentioned something to you about a special reward, right?",
+                    "first_time_6": "Well, I walk around here and always find objects scattered about and lost.",
+                    "first_time_7": "And since I like everything clean and organized...",
+                    "first_time_8": "I've kept it all in this lost-and-found box, but so far no one has shown up to claim it.",
+                    "first_time_9": "Perhaps I dropped something when I woke up here?",
+                    "first_time_10": "Not at all! I just passed by there a little while ago.",
+                    "first_time_11": "Anyway, I'm giving away some of the older items that are just gathering dust.",
+                    "first_time_12": "Why don't you pick one for yourself?",
+                    "rng_talk_1": "Oh! You won!",
+                    "rng_talk_2": "Hurry up!",
+                    "rng_talk_3": "You did great.",
+                    "rng_talk_4": "Oh my gosh! Time is running out!",
+                    "rng_talk_5": "Have you seen what time it is?",
+                    "rng_talk_6": "I have a few more forgotten items for you.",
+                    "rng_talk_7": "Choose wisely, okay?",
+                    "rng_talk_8": "Cheer up, Alice! You can do it.",
+                    "rng_talk_9": "I hope something catches your eye...",
+                    "rng_talk_10": "I found a few more things!",
+                    "rng_talk_11": "I've brought more lost items!",
+                    "rng_talk_12": "Come on, Alice! Time doesn't stop!",
+                    "rng_talk_13": "Tic-tac...",
+                    "rng_talk_14": "I have more lost and found items to donate!",
+                    "rng_talk_15": "Are you tired? I'll cheer you up!",
+                    "rng_talk_16": "Hi, Alice! Look what I brought you!",
+                    "rng_talk_17": "Did you miss me? Haha!",
+                    "rng_talk_18": "What a match, huh?",
+                    "rng_talk_19": "Donations are coming!",
+                    "rng_talk_20": "I'm tired... but I've brought some great finds!",
+                    "rng_talk_21": "I'm here!"
                 },
                 "Mad Hatter": {
                     "name": "Mad Hatter",
