@@ -617,6 +617,10 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "Fullscreen"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -662,6 +666,10 @@
 							"sid": 447837327671627
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Performance"
 				},
 				{
 					"eventType": "block",
@@ -719,6 +727,10 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "Auto math"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -762,25 +774,9 @@
 								},
 								{
 									"id": "tween-one-property",
-									"objectClass": "Txt_auto_math",
-									"sid": 891405093091016,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetOpacity",
-										"end-value": "100",
-										"time": "Opt_FastMode = 1 ? 0.5 : 1",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "tween-one-property",
 									"objectClass": "Bkg_Auto_math",
 									"sid": 535624287534421,
+									"disabled": true,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"\"",
@@ -793,11 +789,32 @@
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Bkg_Auto_math",
+									"sid": 238212289188315,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetX",
+										"end-value": "100",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
 								}
 							],
 							"sid": 603726903495958
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Fast Mode"
 				},
 				{
 					"eventType": "block",
@@ -899,6 +916,156 @@
 			"sid": 887126297207774
 		},
 		{
+			"functionName": "Confirm_Exit",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 441624246237422,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 923054925470207,
+							"parameters": {
+								"layer": "\"Exit\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "demo_end",
+							"sid": 580443941732667,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"up_1\"",
+								"property": "offsetY",
+								"end-value": "560",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 151163115067428,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 894390427129509,
+									"parameters": {
+										"layer": "\"Pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 806133668973280,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"interactive": true
+									}
+								}
+							],
+							"sid": 822437676724805
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 237154554862633
+						}
+					],
+					"actions": [],
+					"sid": 482398619171083,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 706563245446661,
+									"parameters": {
+										"layer": "\"Pause\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 997658750801999,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"interactive": false
+									}
+								}
+							],
+							"sid": 772269242538632
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 364663551087423,
+									"parameters": {
+										"object": "demo_end",
+										"expression": "demo_end.LayerName",
+										"comparison": 0,
+										"value": "\"Exit\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "demo_end",
+									"sid": 907202302524968,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"down_1\"",
+										"property": "offsetY",
+										"end-value": "560",
+										"time": "0.5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 424352291760113
+						}
+					]
+				}
+			]
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -929,156 +1096,6 @@
 				}
 			],
 			"sid": 652131119396277
-		},
-		{
-			"functionName": "Confirm_Exit",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [],
-			"sid": 847023287092381,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "layer-is-visible",
-							"objectClass": "System",
-							"sid": 711021318451588,
-							"parameters": {
-								"layer": "\"Exit\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "demo_end",
-							"sid": 285291838772888,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"up_1\"",
-								"property": "offsetY",
-								"end-value": "560",
-								"time": "0.2",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						}
-					],
-					"sid": 268983129442921,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 676661374400384,
-									"parameters": {
-										"layer": "\"Pause\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-interactive",
-									"objectClass": "System",
-									"sid": 794268088967001,
-									"parameters": {
-										"layer": "\"Pause\"",
-										"interactive": true
-									}
-								}
-							],
-							"sid": 531805780229324
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 126099156380820
-						}
-					],
-					"actions": [],
-					"sid": 176829915104720,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 889337584774656,
-									"parameters": {
-										"layer": "\"Pause\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-interactive",
-									"objectClass": "System",
-									"sid": 933869818401833,
-									"parameters": {
-										"layer": "\"Pause\"",
-										"interactive": false
-									}
-								}
-							],
-							"sid": 232698165676141
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-comparison",
-									"objectClass": "System",
-									"sid": 513923837524839,
-									"parameters": {
-										"object": "demo_end",
-										"expression": "demo_end.LayerName",
-										"comparison": 0,
-										"value": "\"Exit\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "tween-one-property",
-									"objectClass": "demo_end",
-									"sid": 475824277358489,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"down_1\"",
-										"property": "offsetY",
-										"end-value": "560",
-										"time": "0.5",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								}
-							],
-							"sid": 774587349828418
-						}
-					]
-				}
-			]
 		},
 		{
 			"eventType": "block",
@@ -3866,6 +3883,24 @@
 									}
 								},
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 915587770305590,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 176113536493757,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"value": "0"
+									}
+								},
+								{
 									"id": "go-to-layout",
 									"objectClass": "System",
 									"sid": 326029231652501,
@@ -5902,13 +5937,14 @@
 												},
 												{
 													"id": "tween-one-property",
-													"objectClass": "Txt_auto_math",
-													"sid": 839423835285887,
+													"objectClass": "Bkg_Auto_math",
+													"sid": 909240488176540,
+													"disabled": true,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"\"",
 														"property": "offsetOpacity",
-														"end-value": "100",
+														"end-value": "70",
 														"time": "Opt_FastMode = 1 ? 0.5 : 1",
 														"ease": "default",
 														"destroy-on-complete": "no",
@@ -5920,13 +5956,13 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "Bkg_Auto_math",
-													"sid": 909240488176540,
+													"sid": 845262385084091,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"\"",
-														"property": "offsetOpacity",
-														"end-value": "70",
-														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"property": "offsetX",
+														"end-value": "100",
+														"time": "0.2",
 														"ease": "default",
 														"destroy-on-complete": "no",
 														"loop": "no",
@@ -5989,8 +6025,9 @@
 												},
 												{
 													"id": "tween-one-property",
-													"objectClass": "Txt_auto_math",
-													"sid": 536942219280603,
+													"objectClass": "Bkg_Auto_math",
+													"sid": 587206195030897,
+													"disabled": true,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"\"",
@@ -6007,13 +6044,13 @@
 												{
 													"id": "tween-one-property",
 													"objectClass": "Bkg_Auto_math",
-													"sid": 803161892234659,
+													"sid": 368541437353092,
 													"behaviorType": "Tween",
 													"parameters": {
 														"tags": "\"\"",
-														"property": "offsetOpacity",
-														"end-value": "0",
-														"time": "Opt_FastMode = 1 ? 0.5 : 1",
+														"property": "offsetX",
+														"end-value": "-108",
+														"time": "0.2",
 														"ease": "default",
 														"destroy-on-complete": "no",
 														"loop": "no",

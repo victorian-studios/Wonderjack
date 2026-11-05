@@ -1,7 +1,6 @@
 {
     "c2dictionary": true,
     "data": {
-        "21": "",
         "BEGINNER": "0/1",
         "MAD": "0/1",
         "UNBIRTHDAY": "0/1",
@@ -22,6 +21,7 @@
         "NEWQUEEN": "0/1",
         "SURPRISE": "0/1",
         "STRATEGY": "0/1",
-        "KEY": "0/3"
+        "KEY": "0/3",
+        "WR_Talks": 0
     }
 }

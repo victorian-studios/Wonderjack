@@ -197,7 +197,7 @@
                 "art_22": {
                     "title": "'Strategy' Achievement",
                     "desc": "Scientist skin, haha!"
-                },
+                }
                 
             }
         },
@@ -326,6 +326,42 @@
                     "talk_lose": "",
                     "talk_thinking_1": "",
                     "talk_thinking_2": ""
+                },
+                "White Rabbit": {
+                    "name": "White Rabbit",
+                    "first_time_1": "",
+                    "first_time_2": "",
+                    "first_time_3": "",
+                    "first_time_4": "",
+                    "first_time_5": "",
+                    "first_time_6": "",
+                    "first_time_7": "",
+                    "first_time_8": "",
+                    "first_time_9": "",
+                    "first_time_10": "",
+                    "first_time_11": "",
+                    "first_time_12": "",
+                    "rng_talk_1": "",
+                    "rng_talk_2": "",
+                    "rng_talk_3": "",
+                    "rng_talk_4": "",
+                    "rng_talk_5": "",
+                    "rng_talk_6": "",
+                    "rng_talk_7": "",
+                    "rng_talk_8": "",
+                    "rng_talk_9": "",
+                    "rng_talk_10": "",
+                    "rng_talk_11": "",
+                    "rng_talk_12": "",
+                    "rng_talk_13": "",
+                    "rng_talk_14": "",
+                    "rng_talk_15": "",
+                    "rng_talk_16": "",
+                    "rng_talk_17": "",
+                    "rng_talk_18": "",
+                    "rng_talk_19": "",
+                    "rng_talk_20": "",
+                    "rng_talk_21": ""
                 },
                 "Mad Hatter": {
                     "name": "Mad Hatter",
@@ -550,7 +586,7 @@
 
         },
         "powers": {
-            "card": "[u]Card {0}[/u]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
+            "card": "[icon=heart] [u]Card {0}[/u] [icon=heart]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
             "card_tip": "This card is not in the main deck...",
             "protect": "[u]Protect[/u]\n\n\nProtect you from power cards that change your numbers for [color=#f5fe05]3[/color] turns.",
             "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck.",

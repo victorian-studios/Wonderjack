@@ -87,8 +87,8 @@
 					"world": {
 						"x": 947.559814453125,
 						"y": 514.3635864257812,
-						"width": 1955,
-						"height": 1142,
+						"width": 7038,
+						"height": 2832.16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -216,7 +216,7 @@
 				{
 					"type": "Text_Static_Generic",
 					"properties": {
-						"text": "You Won!",
+						"text": "You won this run!",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
 						"size": 61,

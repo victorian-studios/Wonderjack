@@ -50846,6 +50846,110 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"functionName": "Show_White_Rabbit",
+					"functionDescription": "",
+					"functionCategory": "Match",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 422800803632364,
+							"parameters": {
+								"animation": "\"White Rabbit\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Enemy",
+							"sid": 234290139009270,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "Opt_FastMode = 1 ? 0.4 : 1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 320558497351446,
+							"parameters": {
+								"seconds": "Opt_FastMode = 1 ? 0.5 : 1.1",
+								"use-timescale": true
+							}
+						}
+					],
+					"sid": 853911031760621,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "primeiro encontro com o coelho"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "D_Save",
+									"sid": 414952896589592,
+									"parameters": {
+										"key": "\"WR_Talks\"",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 721135547919887,
+									"parameters": {
+										"key": "\"WR_Talks\"",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "Talk",
+									"sid": 560544900270591,
+									"parameters": [
+										"\"White Rabbit\"",
+										"\"commom.enemies.White_Rabbit.first_time_1\"",
+										"0",
+										false
+									]
+								}
+							],
+							"sid": 277448961307947
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 590912933217324
+								}
+							],
+							"actions": [],
+							"sid": 457923653338242
+						}
+					]
+				},
+				{
 					"functionName": "Get Relics",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -58712,6 +58816,51 @@
 						}
 					],
 					"sid": 175449534738887
+				},
+				{
+					"eventType": "comment",
+					"text": "Para o coelho piscar de maneira mais natural e economizar frames desnecessários"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 695737918021967,
+							"parameters": {
+								"interval-seconds": "choose( 5, 3)"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Enemy",
+							"sid": 102881097695080,
+							"parameters": {
+								"animation": "\"White Rabbit\""
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Enemy",
+							"sid": 998405260359401,
+							"parameters": {
+								"comparison": 0,
+								"number": "13"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "start-animation",
+							"objectClass": "Enemy",
+							"sid": 780839495243291,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 507505523385815
 				},
 				{
 					"eventType": "block",

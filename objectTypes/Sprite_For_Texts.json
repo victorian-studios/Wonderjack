@@ -1,0 +1,56 @@
+{
+	"name": "Sprite_For_Texts",
+	"plugin-id": "Sprite",
+	"sid": 830515671391526,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8075018,
+						"collisionPoly": {
+							"points": [
+								0.502,
+								0.056,
+								0.918,
+								0.12,
+								0.748,
+								0.794,
+								0.482,
+								0.978,
+								0.252,
+								0.794,
+								0.082,
+								0.118
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": "heart"
+					}
+				],
+				"sid": 673795333450048,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
