@@ -368,25 +368,25 @@
                     "talk_win": "Hum... Mad as a Hatter...",
                     "talk_lose": "I tip my hat to you.",
                     "talk_thinking_1": "I need to finish this game because it's almost tea time!",
-                    "talk_thinking_2": "I’d love to offer you a cup of tea, but my hands are full.",
-                    "talk_thinking_3": "Why is a raven like a writing-desk? — I haven’t the slightest idea.",
+                    "talk_thinking_2": "I'd love to offer you a cup of tea, but my hands are full.",
+                    "talk_thinking_3": "Why is a raven like a writing-desk? — I haven't the slightest idea.",
                     "special": "What if my the next card is hidden?"
                 },
                 "March Hare": {
                     "name": "March Hare",
                     "talk_win": "Are you leaving already? You haven't even had a cup of tea!",
                     "talk_lose": "Well, I guess tea time is over!",
-                    "talk_thinking_1": "I’d offer you some wine if I had any...",
+                    "talk_thinking_1": "I'd offer you some wine if I had any...",
                     "talk_thinking_2": "I've impressive cards... do you wanna see? Haha!",
-                    "special": "I’ll start with a card for myself. After all, it’s my unbirthday!"
+                    "special": "I'll start with a card for myself. After all, it's my unbirthday!"
                 },
                 "Cheshire Cat": {
                     "name": "Cheshire Cat",
                     "talk_win": "That's too bad... Are you going somewhere?",
                     "talk_lose": "It looks like you've found the direction you need to go...",
-                    "talk_thinking_1": "Remember... we’re all mad here. I’m mad. You’re mad.",
+                    "talk_thinking_1": "Remember... we're all mad here. I'm mad. You're mad.",
                     "talk_thinking_2": "If you need to leave... I can show you the exit...",
-                    "special": "What’s wrong? Can’t see?"
+                    "special": "What's wrong? Can't see?"
                 },
                 "Caterpillar": {
                     "name": "Caterpillar",
@@ -398,16 +398,16 @@
                 },
                 "General of Cards": {
                     "name": "General of Cards",
-                    "talk_win": "Alice... what a stupid name! It must mean “loser,” haha!",
-                    "talk_lose": "My shell... is broken.",
-                    "talk_thinking_1": "You think you're so great calling me an egg, huh? Just you wait!",
-                    "talk_thinking_2": "",
-                    "special": "Ignore the cracks, my shell still sturdy."
+                    "talk_win": "Looks like I'M the toughest one here.",
+                    "talk_lose": "Torn... right in half.",
+                    "talk_thinking_1": "I'm exhausted... I need to wrap this up.",
+                    "talk_thinking_2": "Feeling confident? I hope not.",
+                    "special": "Don't judge a card by its cover! I'm tougher than I look."
                 },
                 "The Tweedles": {
                     "name": "The Tweedles",
                     "talk_win": "We, the TWEEDLE brothers, have won again!",
-                    "talk_lose": "You win. We’ve no objection. Contrariwise.",
+                    "talk_lose": "You win. We've no objection. Contrariwise.",
                     "talk_thinking_1": "Hey brother, this card is mine!",
                     "talk_thinking_2": "",
                     "special": "My turn! Move it!"
@@ -423,25 +423,25 @@
                 "Red Queen": {
                     "name": "Queen of Hearts",
                     "talk_win": "Off with her head!",
-                    "talk_lose": "You may have won this battle... But you won’t win the war...",
+                    "talk_lose": "You may have won this battle... But you won't win the war...",
                     "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
                     "talk_thinking_2": "",
                     "special": "I'm gonna slice this card!"
                 },
                 "Jabberwock": {
                     "name": "Jabberwock",
-                    "talk_win": "Finally, I’ll be able to sharpen my fangs a little!",
+                    "talk_win": "Finally, I'll be able to sharpen my fangs a little!",
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
                     "talk_thinking_2": "",
                     "special": "Alice! Best of three? What do you think?"
                 }
             },
-            "bell": "[u]The Bell[/u] \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
-            "power": "[u]The Power Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round.",
-            "power_hand_limit": "[u]The Power Deck[/u] \n\nYou [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
-            "number": "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
-            "number_easy": "[u]The Number Deck[/u] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",
+            "bell": "[icon=heart] The Bell [icon=heart] \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
+            "power": "[icon=heart] The Power Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round.",
+            "power_hand_limit": "[icon=heart] The Power Deck [icon=heart] \n\nYou [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
+            "number": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
+            "number_easy": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",
             "tut_start": "Rabbit Hole",
             "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color].\n{3} [color=#f5fe05]won[/color] this round!",
             "player_turn": "Alice's Turn",
@@ -466,7 +466,7 @@
             "cat_eye": {
                 "title": "Cat's Eye",
                 "flavor_txt": "Smile!",
-                "desc": "On the [color=#f5fe05]3° round[/color], your opponent’s hidden card will be revealed on the [color=#f5fe05]1° turn[/color]."
+                "desc": "On the [color=#f5fe05]3° round[/color], your opponent's hidden card will be revealed on the [color=#f5fe05]1° turn[/color]."
             },
             "watch": {
                 "title": "Pocket Watch",
@@ -486,7 +486,7 @@
             "spear": {
                 "title": "Heart Spear",
                 "flavor_txt": "Intruder!",
-                "desc": "Reduces your opponents’ power hand limit by [color=#f5fe05]1[/color]."
+                "desc": "Reduces your opponents' power hand limit by [color=#f5fe05]1[/color]."
             },
             "tea": {
                 "title": "Tea Cup",
@@ -586,35 +586,35 @@
 
         },
         "powers": {
-            "card": "[icon=heart] [u]Card {0}[/u] [icon=heart]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
+            "card": "[icon=heart] Card {0} [icon=heart]\n\n\nGet the card [color=#f5fe05]{0}[/color] if it's in the deck.",
             "card_tip": "This card is not in the main deck...",
-            "protect": "[u]Protect[/u]\n\n\nProtect you from power cards that change your numbers for [color=#f5fe05]3[/color] turns.",
-            "impulse": "[u]Impulse[/u]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck.",
-            "gift": "[u]Gift[/u]\n\n\nGive the [color=#f5fe05]highest[/color] card number from the deck to your opponent.",
-            "return": "[u]Return[/u]\n\n\nDiscard your [color=#f5fe05]last face-up[/color] number card to the end of the deck.",
-            "compel": "[u]Compel[/u]\n\n\nForces [color=#f5fe05]your opponent[/color] to discard their [color=#f5fe05]last face-up[/color] number card to the end of the deck.",
+            "protect": "[icon=heart] Protect [icon=heart]\n\n\nProtect you from power cards that change your numbers for [color=#f5fe05]3[/color] turns.",
+            "impulse": "[icon=heart] Impulse [icon=heart]\n\n\nGet the [color=#f5fe05]highest[/color] card number from the deck.",
+            "gift": "[icon=heart] Gift [icon=heart]\n\n\nGive the [color=#f5fe05]highest[/color] card number from the deck to your opponent.",
+            "return": "[icon=heart] Return [icon=heart]\n\n\nDiscard your [color=#f5fe05]last face-up[/color] number card to the end of the deck.",
+            "compel": "[icon=heart] Compel [icon=heart]\n\n\nForces [color=#f5fe05]your opponent[/color] to discard their [color=#f5fe05]last face-up[/color] number card to the end of the deck.",
             "compel_error1": "{0} mistakely tried discard your hidden card.",
             "compel_error2": "You can't discard your hidden card.",
             "compel_error3": "You can't make {0} discard it's own hidden card",
             "compel_error4": "{0} mistakely tried to discard it's hidden card.",
-            "exchange": "[u]Exchange[/u]\n\n\nChoose a [color=#f5fe05]face-up[/color] card to switch with your opponent.",
+            "exchange": "[icon=heart] Exchange [icon=heart]\n\n\nChoose a [color=#f5fe05]face-up[/color] card to switch with your opponent.",
             "exchange_tip_1": "[u]Select an opponent card:[/u]",
             "exchange_tip_2": "[u]Select your card to switch:[/u]",
-            "secretexchange": "[u]Secret Exchange[/u]\n\n\nBoth players switch their [color=#f5fe05]first hidden[/color] card with each other.",
-            "menu": "[u]Menu[/u]\n\nSee the next [color=#f5fe05]3[/color] cards from the number deck and choose [color=#f5fe05]1[/color] to draw. Then, the number deck is [color=#fa1c03]shuffled[/color].",
+            "secretexchange": "[icon=heart] Secret Exchange [icon=heart]\n\n\nBoth players switch their [color=#f5fe05]first hidden[/color] card with each other.",
+            "menu": "[icon=heart] Menu [icon=heart]\n\nSee the next [color=#f5fe05]3[/color] cards from the number deck and choose [color=#f5fe05]1[/color] to draw. Then, the number deck is [color=#fa1c03]shuffled[/color].",
             "menu_tip": "[u]Select a card to draw:[/u]",
-            "hurricane": "[u]Hurricane[/u]\n\nBoth players discard all their [color=#f5fe05]face-up[/color] number cards. [color=#fa1c03]Can't be used in the last turn![/color]",
-            "secret": "[u]Hidden Card[/u]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent.\n[color=#fa1c03]Doesn't work with power cards.[/color]",
-            "clairvoyance": "[u]Clairvoyance[/u]\n\n\nSee the next [color=#f5fe05]3[/color] cards from of the number deck.",
+            "hurricane": "[icon=heart] Hurricane [icon=heart]\n\nBoth players discard all their [color=#f5fe05]face-up[/color] number cards. [color=#fa1c03]Can't be used in the last turn![/color]",
+            "secret": "[icon=heart] Hidden Card [icon=heart]\n\n\nThe next number card you draw will be [color=#f5fe05]hidden[/color] to the opponent.\n[color=#fa1c03]Doesn't work with power cards.[/color]",
+            "clairvoyance": "[icon=heart] Clairvoyance [icon=heart]\n\n\nSee the next [color=#f5fe05]3[/color] cards from of the number deck.",
             "clairvoyance_player": "The next numbers are: [color=#f5fe05]{0}[/color], [color=#f5fe05]{1}[/color] and then [color=#f5fe05]{2}[/color]",
             "clairvoyance_cpu": "{0} had a nice view of the next [color=#f5fe05]3[/color] cards...",
-            "baby": "[u]Baby[/u]\n\nGet the [color=#f5fe05]lowest[/color] card number from the deck.",
-            "lasso": "[u]Lasso[/u]\n\nChoose and [color=#f5fe05]steal[/color] a [color=#f5fe05]face-up[/color] card from the opponent.",
-            "cardA": "[u]Ace Card[/u]\n\nCreate a temporary [color=#f5fe05]Ace[/color] card worth [color=#f5fe05]1[/color] or [color=#f5fe05]11[/color].",
-            "duplicate": "[u]Duplicate[/u]\n\nCreate a temporary [color=#f5fe05]copy[/color] from one of your [color=#f5fe05]face-up[/color] cards.",
+            "baby": "[icon=heart] Baby [icon=heart]\n\nGet the [color=#f5fe05]lowest[/color] card number from the deck.",
+            "lasso": "[icon=heart] Lasso [icon=heart]\n\nChoose and [color=#f5fe05]steal[/color] a [color=#f5fe05]face-up[/color] card from the opponent.",
+            "cardA": "[icon=heart] Ace Card [icon=heart]\n\nCreate a temporary [color=#f5fe05]Ace[/color] card worth [color=#f5fe05]1[/color] or [color=#f5fe05]11[/color].",
+            "duplicate": "[icon=heart] Duplicate [icon=heart]\n\nCreate a temporary [color=#f5fe05]copy[/color] from one of your [color=#f5fe05]face-up[/color] cards.",
             "duplicate_tip_1": "[u]Select your card to duplicate:[/u]",
-            "silence": "[u]Silence[/u]\n\nSilence the opponent for [color=#f5fe05]2[/color] turns: they cannot play power cards.",
-            "investigate": "[u]Investigate[/u]\n\nChoose and [color=#f5fe05]reveal[/color] a [color=#f5fe05]hidden[/color] card from the opponent in [color=#f5fe05]this[/color] turn."
+            "silence": "[icon=heart] Silence [icon=heart]\n\nSilence the opponent for [color=#f5fe05]2[/color] turns: they cannot play power cards.",
+            "investigate": "[icon=heart] Investigate [icon=heart]\n\nChoose and [color=#f5fe05]reveal[/color] a [color=#f5fe05]hidden[/color] card from the opponent in [color=#f5fe05]this[/color] turn."
         },
         "demo": {
             "end": "And that's the end of the demo!\n\nBut Alice's adventure is far from over...\n\nMore characters, levels, relics, power cards, and extras await you in the full game!",
