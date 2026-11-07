@@ -905,6 +905,28 @@
 							],
 							"subfolders": [],
 							"name": "Story Tutorial"
+						},
+						{
+							"items": [
+								{
+									"name": "3 - Whispers of the Abyss (loop).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 748073659595912,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "3 - Whispers of the Abyss (intro).webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 560699969701237,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Shop"
 						}
 					],
 					"name": "In Game"

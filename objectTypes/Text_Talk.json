@@ -4,7 +4,15 @@
 	"sid": 475301969171760,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "WR_Relics",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 773071338980423
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",

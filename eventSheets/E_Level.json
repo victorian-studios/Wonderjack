@@ -863,7 +863,8 @@
 								"Enemy.AnimationName",
 								"\"tutorial.white_queen.\" & str(Tut_Talk)",
 								"0",
-								true
+								true,
+								false
 							]
 						}
 					],
@@ -10684,6 +10685,125 @@
 						}
 					],
 					"sid": 396258469099855
+				},
+				{
+					"functionName": "Clear_Power_Hands",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 258840843771730,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 240208215977946,
+									"parameters": {
+										"object": "Card_Power"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card_Power",
+									"sid": 407970099802417,
+									"parameters": {
+										"instance-variable": "Demo",
+										"value": "true"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Card_Power",
+									"sid": 254223014794620,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"bye\"",
+										"property": "position",
+										"end-x": "Deck_Power_Sprite.X",
+										"end-y": "Deck_Power_Sprite.Y",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 846675415244158
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 119561184729901,
+									"parameters": {
+										"object": "Card_Power_Enemy"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Card_Power_Enemy",
+									"sid": 724031843918182,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"bye\"",
+										"property": "position",
+										"end-x": "Deck_Power_Sprite.X",
+										"end-y": "Deck_Power_Sprite.Y",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "delete",
+									"objectClass": "A_EnemyPowers",
+									"sid": 973723805921499,
+									"parameters": {
+										"index": "0",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "delete",
+									"objectClass": "A_EnemyPowers",
+									"sid": 497675482948694,
+									"parameters": {
+										"index": "1",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "delete",
+									"objectClass": "A_EnemyPowers",
+									"sid": 645109347829761,
+									"parameters": {
+										"index": "2",
+										"axis": "x"
+									}
+								}
+							],
+							"sid": 439348441583807
+						}
+					]
 				},
 				{
 					"functionName": "Draw_Power",
@@ -26172,6 +26292,7 @@
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																"0",
+																false,
 																false
 															]
 														},
@@ -27067,6 +27188,7 @@
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
+																		false,
 																		false
 																	]
 																}
@@ -27217,6 +27339,7 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
 																		"1",
+																		false,
 																		false
 																	]
 																},
@@ -27467,6 +27590,7 @@
 																"Enemy.AnimationName",
 																"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																"0",
+																false,
 																false
 															]
 														}
@@ -27913,7 +28037,8 @@
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
-																		true
+																		true,
+																		false
 																	]
 																},
 																{
@@ -28057,6 +28182,7 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_lose\"",
 																		"0",
+																		false,
 																		false
 																	]
 																},
@@ -28266,26 +28392,63 @@
 																	}
 																},
 																{
-																	"id": "log",
-																	"objectClass": "Browser",
-																	"sid": 755752288039754,
-																	"parameters": {
-																		"type": "log",
-																		"message": "\"- - - - ESCOLHENDO RELÍQUIAS - - - -\""
-																	}
+																	"callFunction": "Get Relics",
+																	"sid": 375871116386551,
+																	"disabled": true
 																},
 																{
-																	"callFunction": "Get Relics",
-																	"sid": 375871116386551
+																	"callFunction": "Clear_Power_Hands",
+																	"sid": 343628447053538
+																},
+																{
+																	"id": "tween-value",
+																	"objectClass": "Relic_card",
+																	"sid": 852118959683229,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"opacity-fade\"",
+																		"start-value": "100",
+																		"end-value": "0",
+																		"time": "0.3",
+																		"ease": "default",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
 																},
 																{
 																	"id": "set-layer-visible",
 																	"objectClass": "System",
-																	"sid": 715031055074429,
+																	"sid": 436349872968890,
 																	"parameters": {
 																		"layer": "\"Luz Fase - Mesa\"",
 																		"visibility": "invisible"
 																	}
+																},
+																{
+																	"id": "fade-volume",
+																	"objectClass": "Audio",
+																	"sid": 193371972820380,
+																	"parameters": {
+																		"tag": "\"music\"",
+																		"db": "-100",
+																		"duration": "2 - Opt_FastMode_Secs",
+																		"ending": "stop"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 674854693595994,
+																	"parameters": {
+																		"seconds": "2 - Opt_FastMode_Secs",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"callFunction": "Show_White_Rabbit",
+																	"sid": 541390544579093
 																}
 															],
 															"sid": 917810277696645
@@ -28680,7 +28843,8 @@
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																				"1  - Opt_FastMode_Secs",
-																				true
+																				true,
+																				false
 																			]
 																		},
 																		{
@@ -28726,7 +28890,8 @@
 																				"Enemy.AnimationName",
 																				"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																				"1 - Opt_FastMode_Secs",
-																				true
+																				true,
+																				false
 																			]
 																		},
 																		{
@@ -29319,7 +29484,8 @@
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.\" & str(Tut_Talk)",
 																		"0",
-																		true
+																		true,
+																		false
 																	]
 																},
 																{
@@ -29477,6 +29643,7 @@
 																		"Enemy.AnimationName",
 																		"\"common.enemies.\" & Enemy.AnimationName & \".talk_win\"",
 																		"1",
+																		false,
 																		false
 																	]
 																},
@@ -32527,6 +32694,7 @@
 																"EnemyName",
 																"\"common.enemies.\" & EnemyName & \".special\"",
 																"1  - Opt_FastMode_Secs",
+																false,
 																false
 															]
 														},
@@ -32608,7 +32776,8 @@
 																"\"Alice\"",
 																"\"common.enemies.Alice.talk_march_hare\"",
 																"0 - Opt_FastMode_Secs",
-																true
+																true,
+																false
 															]
 														}
 													],
@@ -32789,9 +32958,9 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 393187160632657,
+											"sid": 326220724046679,
 											"parameters": {
-												"seconds": "0.5",
+												"seconds": "Opt_FastMode = 1 ? 1.1 : 2",
 												"use-timescale": true
 											}
 										},
@@ -33891,6 +34060,7 @@
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
 																				"-0.5",
+																				false,
 																				false
 																			]
 																		}
@@ -34224,6 +34394,7 @@
 																				"EnemyName",
 																				"\"common.enemies.\" & EnemyName & \".special\"",
 																				"0",
+																				false,
 																				false
 																			]
 																		}
@@ -36588,6 +36759,7 @@
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_stop\"",
 																"1",
+																false,
 																false
 															]
 														},
@@ -36779,6 +36951,7 @@
 																"Enemy.AnimationName",
 																"\"tutorial.white_queen.tip_stop2\"",
 																"1",
+																false,
 																false
 															]
 														},
@@ -37229,6 +37402,7 @@
 														"\"Alice\"",
 														"\"tutorial.alice_self_warning.empty_deck\"",
 														"0",
+														false,
 														false
 													]
 												}
@@ -37266,6 +37440,7 @@
 														"\"Alice\"",
 														"\"tutorial.alice_self_warning.full_card_table\"",
 														"0",
+														false,
 														false
 													]
 												}
@@ -37879,6 +38054,7 @@
 																		"Enemy.AnimationName",
 																		"\"tutorial.white_queen.tip_power\"",
 																		"0",
+																		false,
 																		false
 																	]
 																},
@@ -40050,6 +40226,7 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.block_stop\"",
 														"0",
+														false,
 														false
 													]
 												},
@@ -40167,6 +40344,7 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.tip_power2\"",
 														"0",
+														false,
 														false
 													]
 												},
@@ -49615,6 +49793,7 @@
 												"EnemyName",
 												"\"common.enemies.\" & EnemyName & \".special\"",
 												"1  - Opt_FastMode_Secs",
+												false,
 												false
 											]
 										}
@@ -49952,6 +50131,7 @@
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
 														"1  - Opt_FastMode_Secs",
+														false,
 														false
 													]
 												},
@@ -50441,6 +50621,7 @@
 														"EnemyName",
 														"\"common.enemies.\" & EnemyName & \".special\"",
 														"1  - Opt_FastMode_Secs",
+														false,
 														false
 													]
 												},
@@ -50537,6 +50718,7 @@
 										"EnemyName",
 										"\"common.enemies.\" & EnemyName & \".talk_thinking_\" & str(choose(1,2))",
 										"1",
+										false,
 										false
 									]
 								}
@@ -50652,9 +50834,35 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 321607911617420,
+									"sid": 505889724393201,
 									"parameters": {
-										"seconds": "0.6",
+										"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Enemy",
+									"sid": 122128799224336,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 311745403653837,
+									"parameters": {
+										"seconds": "Opt_FastMode = 1 ? 0.6 : 1",
 										"use-timescale": true
 									}
 								},
@@ -50834,6 +51042,36 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-ended",
+							"objectClass": "Audio",
+							"sid": 611433854712051,
+							"parameters": {
+								"tag": "\"music\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 119966166053744,
+							"parameters": {
+								"audio-file": {
+									"path": "In Game/Shop/3 - Whispers of the Abyss (loop)"
+								},
+								"loop": "looping",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 199276771291347
 				}
 			],
 			"sid": 208504328403946
@@ -50866,6 +51104,42 @@
 							}
 						},
 						{
+							"id": "set-size",
+							"objectClass": "Enemy",
+							"sid": 654594565504630,
+							"parameters": {
+								"width": "551",
+								"height": "641"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Enemy",
+							"sid": 377799692070431,
+							"parameters": {
+								"x": "956",
+								"y": "657"
+							}
+						},
+						{
+							"id": "set-cycle-position",
+							"objectClass": "Enemy",
+							"sid": 845712670763670,
+							"behaviorType": "Sine",
+							"parameters": {
+								"cycle-position": "0"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 363050008705797,
+							"parameters": {
+								"layer": "\"Luz Inimigo\"",
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "tween-one-property",
 							"objectClass": "Enemy",
 							"sid": 234290139009270,
@@ -50880,15 +51154,6 @@
 								"loop": "no",
 								"ping-pong": "no",
 								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 320558497351446,
-							"parameters": {
-								"seconds": "Opt_FastMode = 1 ? 0.5 : 1.1",
-								"use-timescale": true
 							}
 						}
 					],
@@ -50914,6 +51179,29 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 420755364419468,
+									"parameters": {
+										"audio-file": {
+											"path": "In Game/Shop/3 - Whispers of the Abyss (intro)"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 837037335938229,
+									"parameters": {
+										"seconds": "Opt_FastMode = 1 ? 0.5 : 1.1",
+										"use-timescale": true
+									}
+								},
+								{
 									"id": "set-key",
 									"objectClass": "D_Save",
 									"sid": 721135547919887,
@@ -50924,11 +51212,12 @@
 								},
 								{
 									"callFunction": "Talk",
-									"sid": 560544900270591,
+									"sid": 837510019333760,
 									"parameters": [
 										"\"White Rabbit\"",
-										"\"commom.enemies.White_Rabbit.first_time_1\"",
+										"\"common.enemies.White Rabbit.first_time_1\"",
 										"0",
+										true,
 										false
 									]
 								}
@@ -50944,7 +51233,42 @@
 									"sid": 590912933217324
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 441359969693569,
+									"parameters": {
+										"audio-file": {
+											"path": "In Game/Shop/3 - Whispers of the Abyss (loop)"
+										},
+										"loop": "looping",
+										"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"music\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 722984645845324,
+									"parameters": {
+										"seconds": "Opt_FastMode = 1 ? 0.5 : 1.1",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "Talk",
+									"sid": 886618657624729,
+									"parameters": [
+										"\"White Rabbit\"",
+										"\"common.enemies.White Rabbit.rng_talk_\" & str(int(random(1,22)))",
+										"0",
+										false,
+										true
+									]
+								}
+							],
 							"sid": 457923653338242
 						}
 					]
@@ -50961,37 +51285,20 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 631111411264400,
+							"parameters": {
+								"type": "log",
+								"message": "\"- - - - ESCOLHENDO RELÍQUIAS - - - -\""
+							}
+						},
+						{
 							"callFunction": "Count_Numbers",
 							"sid": 119569009141503,
 							"parameters": [
 								false
 							]
-						},
-						{
-							"id": "tween-value",
-							"objectClass": "Relic_card",
-							"sid": 852118959683229,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"opacity-fade\"",
-								"start-value": "100",
-								"end-value": "0",
-								"time": "0.3",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 972771167358644,
-							"parameters": {
-								"seconds": "0.3",
-								"use-timescale": true
-							}
 						},
 						{
 							"id": "set-layer-visible",
@@ -51066,49 +51373,6 @@
 					],
 					"sid": 533924914228371,
 					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 761062020850590,
-									"parameters": {
-										"object": "Card_Power"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Card_Power",
-									"sid": 664146158643040,
-									"parameters": {
-										"instance-variable": "Demo",
-										"value": "true"
-									}
-								},
-								{
-									"id": "tween-two-properties",
-									"objectClass": "Card_Power",
-									"sid": 886490376323052,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"bye\"",
-										"property": "position",
-										"end-x": "Deck_Power_Sprite.X",
-										"end-y": "Deck_Power_Sprite.Y",
-										"time": "0.2",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								}
-							],
-							"sid": 662701428606113
-						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -51260,67 +51524,6 @@
 									"sid": 773416407087558
 								}
 							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 686566663261575,
-									"parameters": {
-										"object": "Card_Power_Enemy"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "tween-two-properties",
-									"objectClass": "Card_Power_Enemy",
-									"sid": 530737056667471,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"bye\"",
-										"property": "position",
-										"end-x": "Deck_Power_Sprite.X",
-										"end-y": "Deck_Power_Sprite.Y",
-										"time": "0.2",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "delete",
-									"objectClass": "A_EnemyPowers",
-									"sid": 690275761840272,
-									"parameters": {
-										"index": "0",
-										"axis": "x"
-									}
-								},
-								{
-									"id": "delete",
-									"objectClass": "A_EnemyPowers",
-									"sid": 382151347004223,
-									"parameters": {
-										"index": "1",
-										"axis": "x"
-									}
-								},
-								{
-									"id": "delete",
-									"objectClass": "A_EnemyPowers",
-									"sid": 586640474019489,
-									"parameters": {
-										"index": "2",
-										"axis": "x"
-									}
-								}
-							],
-							"sid": 373862715211713
 						}
 					]
 				},
@@ -54351,6 +54554,16 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "WR_Talks",
+					"type": "number",
+					"initialValue": "1",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 281195489769302
+				},
+				{
 					"functionName": "Talk",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -54376,7 +54589,7 @@
 							"name": "Time_Var",
 							"type": "number",
 							"initialValue": "0",
-							"comment": "somar ou subtrair de 3 segundos",
+							"comment": "somar ou subtrair de 3 segundos do fadeout",
 							"sid": 845531457186272
 						},
 						{
@@ -54385,6 +54598,13 @@
 							"initialValue": "false",
 							"comment": "true - não some com a caixa de texto (usado para conversas)",
 							"sid": 591956580276840
+						},
+						{
+							"name": "Get_Relics",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "true - chama o Get_Relics após a fala",
+							"sid": 570392218218112
 						}
 					],
 					"eventType": "function-block",
@@ -54405,6 +54625,15 @@
 							"parameters": {
 								"text": "Internationalization.Lookup(Loc_Txt)",
 								"duration": "1.5 + ( Time_Var / 4)"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Text_Talk",
+							"sid": 436817176496239,
+							"parameters": {
+								"instance-variable": "WR_Relics",
+								"value": "false"
 							}
 						},
 						{
@@ -54540,6 +54769,31 @@
 								}
 							],
 							"sid": 106219202326513
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 547723338812837,
+									"parameters": {
+										"variable": "Get_Relics"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Text_Talk",
+									"sid": 730603780703860,
+									"parameters": {
+										"instance-variable": "WR_Relics",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 762692138664944
 						}
 					]
 				},
@@ -54845,6 +55099,10 @@
 									"text": "Specific talks"
 								},
 								{
+									"eventType": "comment",
+									"text": "Lebre de Março"
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -54865,11 +55123,193 @@
 												"EnemyName",
 												"\"common.enemies.\" & EnemyName & \".special\"",
 												"1 - Opt_FastMode_Secs",
+												false,
 												false
 											]
 										}
 									],
 									"sid": 829551937067796
+								},
+								{
+									"eventType": "comment",
+									"text": "Coelho Branco"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 535878704709657
+										},
+										{
+											"id": "compare-text",
+											"objectClass": "Text_Talk",
+											"sid": 894634557761060,
+											"parameters": {
+												"text-to-compare": "Internationalization.Lookup(\"common.enemies.White Rabbit.first_time_\" & str(WR_Talks) )",
+												"case-sensitivity": "ignore-case"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 610678182723088,
+											"parameters": {
+												"variable": "WR_Talks",
+												"comparison": 1,
+												"value": "12"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 611466184596110,
+											"parameters": {
+												"variable": "WR_Talks",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 716353657242739,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Falas da Alice"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 771883499242695,
+													"parameters": {
+														"variable": "WR_Talks",
+														"comparison": 0,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 396338184520066,
+													"parameters": {
+														"variable": "WR_Talks",
+														"comparison": 0,
+														"value": "4"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 727013501288634,
+													"parameters": {
+														"variable": "WR_Talks",
+														"comparison": 0,
+														"value": "9"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Talk",
+													"sid": 477907322151343,
+													"parameters": [
+														"\"Alice\"",
+														"\"common.enemies.White Rabbit.first_time_\" & WR_Talks",
+														"0",
+														true,
+														false
+													]
+												}
+											],
+											"sid": 725758201330441,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "comment",
+											"text": "Falas da Coelho"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 748312566436537
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 289930913831626,
+													"parameters": {
+														"variable": "WR_Talks",
+														"comparison": 1,
+														"value": "12"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Talk",
+													"sid": 487757748087201,
+													"parameters": [
+														"\"White Rabbit\"",
+														"\"common.enemies.White Rabbit.first_time_\" & WR_Talks",
+														"0",
+														true,
+														false
+													]
+												}
+											],
+											"sid": 809735650552013
+										},
+										{
+											"eventType": "comment",
+											"text": "Fim da conversa com o Coelho"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 390203065144501
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 233411884641874,
+													"parameters": {
+														"variable": "WR_Talks",
+														"comparison": 0,
+														"value": "12"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Talk",
+													"sid": 750426392377697,
+													"parameters": [
+														"\"White Rabbit\"",
+														"\"common.enemies.White Rabbit.first_time_\" & WR_Talks",
+														"1 - Opt_FastMode",
+														false,
+														true
+													]
+												}
+											],
+											"sid": 426375670711010
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Lebre de Março - Fim"
 								},
 								{
 									"eventType": "block",
@@ -54977,6 +55417,125 @@
 										}
 									],
 									"sid": 481393466938847
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 341123901213762
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Text_Talk",
+											"sid": 338702744554336,
+											"parameters": {
+												"instance-variable": "WR_Relics"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Text_Talk",
+											"sid": 672619071290004,
+											"parameters": {
+												"instance-variable": "WR_Relics",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-fade-in-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 995430863414985,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-in-time": "0"
+											}
+										},
+										{
+											"id": "set-wait-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 687010196940150,
+											"behaviorType": "Fade",
+											"parameters": {
+												"wait-time": "0"
+											}
+										},
+										{
+											"id": "set-fade-out-time",
+											"objectClass": "Bkg_Talk",
+											"sid": 587112982306767,
+											"behaviorType": "Fade",
+											"parameters": {
+												"fade-out-time": "0.25"
+											}
+										},
+										{
+											"id": "restart-fade",
+											"objectClass": "Bkg_Talk",
+											"sid": 686908083158356,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Talk_Name",
+											"sid": 390943495623401,
+											"parameters": {
+												"text": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Talk",
+											"sid": 260931729562782,
+											"parameters": {
+												"text": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 249993028091322,
+											"parameters": {
+												"seconds": "0.25",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 698115132093614,
+											"parameters": {
+												"layer": "\"Talking\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 463755047984457,
+											"parameters": {
+												"group-name": "\"Player's Turn / Actions\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 662226767035479,
+											"parameters": {
+												"group-name": "\"Player's Feedback\"",
+												"state": "activated"
+											}
+										},
+										{
+											"callFunction": "Get Relics",
+											"sid": 444913928966170
+										}
+									],
+									"sid": 549764869490015
 								},
 								{
 									"eventType": "block",
@@ -55177,6 +55736,7 @@
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
 												"0",
+												false,
 												false
 											]
 										},
@@ -55263,6 +55823,7 @@
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
 												"0",
+												false,
 												false
 											]
 										},
@@ -56054,7 +56615,8 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true
+														true,
+														false
 													]
 												}
 											],
@@ -57164,7 +57726,8 @@
 												"Enemy.AnimationName",
 												"\"tutorial.white_queen.\" & str(Tut_Talk)",
 												"0",
-												true
+												true,
+												false
 											]
 										},
 										{
@@ -57240,7 +57803,8 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true
+														true,
+														false
 													]
 												},
 												{
@@ -57343,7 +57907,8 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true
+														true,
+														false
 													]
 												},
 												{
@@ -57445,7 +58010,8 @@
 														"Enemy.AnimationName",
 														"\"tutorial.white_queen.\" & str(Tut_Talk)",
 														"0",
-														true
+														true,
+														false
 													]
 												},
 												{

@@ -358,75 +358,6 @@
 					}
 				},
 				{
-					"type": "Enemy",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "White Rabbit",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 418,
-					"sid": 626947418304129,
-					"tags": "",
-					"instanceVariables": {
-						"SpecialPower": 0
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 6,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 10,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0,
-								"wait-time": 0,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Timer": {
-							"properties": {}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 956,
-						"y": 657,
-						"width": 512.1200782922522,
-						"height": 596.8612296515518,
-						"originX": 0.3483652762119504,
-						"originY": 0.9990319457889641,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "mesa",
 					"properties": {
 						"initially-visible": true,
@@ -1608,7 +1539,7 @@
 				{
 					"type": "Txt_auto_math",
 					"properties": {
-						"text": "? + 99\n-----\n99",
+						"text": "? + 99\n[icon=line1][icon=line2]\n99",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
 						"size": 45,
@@ -1625,7 +1556,7 @@
 						"vertical-alignment": "center",
 						"wrapping": "word",
 						"text-direction": "ltr",
-						"icon-set": -1,
+						"icon-set": 830515671391526,
 						"initially-visible": true,
 						"origin": "top-left",
 						"read-aloud": false
@@ -3285,7 +3216,7 @@
 							"world": {
 								"x": 959.6130324842668,
 								"y": 232.32180509439908,
-								"width": 809.9919859754573,
+								"width": 809.9919859754572,
 								"height": 226.05314138451996,
 								"originX": 0.5,
 								"originY": 0.5,
@@ -4412,7 +4343,9 @@
 							"uid": 196,
 							"sid": 983752564469033,
 							"tags": "",
-							"instanceVariables": {},
+							"instanceVariables": {
+								"WR_Relics": false
+							},
 							"behaviors": {
 								"Pin": {
 									"properties": {

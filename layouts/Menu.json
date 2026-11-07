@@ -6835,7 +6835,7 @@
 							"world": {
 								"x": 1416,
 								"y": 544,
-								"width": 157,
+								"width": 148,
 								"height": 183,
 								"originX": 0.5,
 								"originY": 0.5,
@@ -8424,7 +8424,9 @@
 					"uid": 102,
 					"sid": 618073857038425,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"WR_Relics": false
+					},
 					"behaviors": {
 						"Pin": {
 							"properties": {

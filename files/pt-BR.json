@@ -329,12 +329,12 @@
                     "talk_thinking_2": ""
                 },
                 "White Rabbit": {
-                    "name": "White Rabbit",
+                    "name": "Coelho Branco",
                     "first_time_1": "Oh! Alice! Quanto tempo que não te vejo!",
                     "first_time_2": "Verdade! O que faz por aqui?",
                     "first_time_3": "Ótima pergunta! Tentarei ser breve pois estou com um pouco de pressa...",
                     "first_time_4": "Tudo bem.",
-                    "first_time_5": "A Rainha Branca comentou com você sobre uma recompensa espcial, certo?",
+                    "first_time_5": "A Rainha Branca comentou com você sobre uma recompensa especial, certo?",
                     "first_time_6": "Então, eu fico andando por ai e sempre encontro objetos espalhados e perdidos.",
                     "first_time_7": "E como eu gosto das coisas limpas e organizadas...",
                     "first_time_8": "Guardei tudo nessa caixa de achados e perdidos, mas até agora ninguém apareceu pra pegar de volta.",
@@ -342,6 +342,8 @@
                     "first_time_10": "Não mesmo, passei por lá agora pouco.",
                     "first_time_11": "De qualquer modo, estou doando alguns dos objetos mais antigos que estão pegando poeira.",
                     "first_time_12": "Por que não escolhe um para você?",
+                    "talk_relic_1": "Espero que isso não seja pra mim...",
+                    "talk_relic_2": "Me senti atacado...",
                     "rng_talk_1": "Oh! Você venceu!",
                     "rng_talk_2": "Apresse-se!",
                     "rng_talk_3": "Você foi muito bem.",
