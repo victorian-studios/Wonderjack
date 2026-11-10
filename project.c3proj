@@ -114,6 +114,15 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "easy_mask",
+			"name": "easyMask",
+			"author": "mOOnpunk",
+			"bundled": false,
+			"version": "1.0.0.3",
+			"sdkVersion": 2
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -261,7 +270,7 @@
 			"A_Relics",
 			"Relic_Slot",
 			"Text_Ai_Da_Vida",
-			"AliceMenu",
+			"Sprite_AliceMenu_Old",
 			"Candle_Flame",
 			"Icon_Hand_Point",
 			"Bkg_Power_Tip_Txt",
@@ -363,7 +372,17 @@
 			"A_zOptions_Config",
 			"Scroll_Codex_Relics",
 			"D_Save",
-			"Sprite_For_Texts"
+			"Sprite_For_Texts",
+			"A_zCodex",
+			"Icon_Brain",
+			"Icon_Map",
+			"Icon_Star",
+			"Btn_Arrow_Codex_right",
+			"Btn_Arrow_Codex_left",
+			"Text_Codex_Info",
+			"Btn_Back_Flag2",
+			"easyMask",
+			"card_enemy2"
 		],
 		"subfolders": []
 	},
@@ -1127,6 +1146,14 @@
 					"name": "Options_Config.json",
 					"type": "application/json",
 					"sid": 289551843438857,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Codex.json",
+					"type": "application/json",
+					"sid": 430341875574715,
 					"file-info": {
 						"purpose": "none"
 					}

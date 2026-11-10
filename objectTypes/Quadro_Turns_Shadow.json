@@ -6,11 +6,18 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "ID",
+			"name": "Frame_ID",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 106946787991032
+		},
+		{
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 980097302567883
 		}
 	],
 	"behaviorTypes": [

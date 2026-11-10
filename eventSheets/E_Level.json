@@ -1075,9 +1075,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 867845044934352,
+									"sid": 593498691128626,
 									"parameters": {
-										"text": "\"? + \" & Table_CPU.Visible_Count & newline & \"\" & \"-----\" & newline & \"\" & PlayerNumbers & \"\""
+										"text": "\"? + \" & Table_CPU.Visible_Count & newline & \"\" & \"[icon=line1][icon=line2]\" & newline & \"\" & PlayerNumbers & \"\""
 									}
 								}
 							],
@@ -1115,9 +1115,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 758194426966346,
+									"sid": 776912200101848,
 									"parameters": {
-										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\" & newline & \"\" & PlayerNumbers & \"\""
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"[icon=line1][icon=line2]\" & newline & \"\" & PlayerNumbers & \"\""
 									}
 								}
 							],
@@ -1155,9 +1155,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 314057566373698,
+									"sid": 316765436764842,
 									"parameters": {
-										"text": "\"? + \"&Table_CPU.Visible_Count & \"\" & newline &\"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"? + \"&Table_CPU.Visible_Count & \"\" & newline &\"[icon=line1][icon=line2]\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
@@ -1195,9 +1195,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 751590108602225,
+									"sid": 247216131797086,
 									"parameters": {
-										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline & \"-----\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline & \"[icon=line1][icon=line2]\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
@@ -1235,9 +1235,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 454248520340240,
+									"sid": 427240417344441,
 									"parameters": {
-										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"[color=#ff0000]? + \"&Table_CPU.Visible_Count & \"[/color]\" & newline&\"[icon=line1][icon=line2]\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
@@ -1275,9 +1275,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Txt_auto_math",
-									"sid": 351511324241366,
+									"sid": 430200700589959,
 									"parameters": {
-										"text": "\"? + \"&Table_CPU.Visible_Count & \"[/outline]\" & newline &\"-----\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
+										"text": "\"? + \"&Table_CPU.Visible_Count & \"[/outline]\" & newline &\"[icon=line1][icon=line2]\" & newline & \"[color=#ff0000]\" & PlayerNumbers & \"[/color]\""
 									}
 								}
 							],
@@ -50160,32 +50160,6 @@
 														"ping-pong": "no",
 														"repeat-count": "1"
 													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 970960931475571,
-													"parameters": {
-														"seconds": "0.25",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "tween-one-property",
-													"objectClass": "Enemy",
-													"sid": 409737790698501,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"\"",
-														"property": "offsetX",
-														"end-value": "Self.X - 25",
-														"time": "0.25",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
 												}
 											],
 											"sid": 818891340911560,
@@ -50231,6 +50205,32 @@
 																"where": "in-front",
 																"object": "Enemy_Extra_Anim"
 															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 169889879495640,
+															"parameters": {
+																"seconds": "0.25",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Enemy",
+															"sid": 214440190100614,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"\"",
+																"property": "offsetX",
+																"end-value": "Self.X - 25",
+																"time": "0.25",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
 														}
 													],
 													"sid": 209251289996563
@@ -50273,9 +50273,35 @@
 															}
 														},
 														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 771142569233170,
+															"parameters": {
+																"seconds": "0.25",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Enemy",
+															"sid": 992726437853456,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"\"",
+																"property": "offsetX",
+																"end-value": "Self.X - 25",
+																"time": "0.25",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
+														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
-															"sid": 549242119258178,
+															"sid": 673190600924400,
 															"parameters": {
 																"variable": "Enemy_RNG",
 																"value": "int ( random ( 1, 101) )"
@@ -58441,7 +58467,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Conquistas",
+			"title": "Conquistas e Progressão",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -58565,7 +58591,129 @@
 									}
 								}
 							],
-							"sid": 460614400586011
+							"sid": 460614400586011,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia nome e foto no Codex"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 202440650742833,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 602195179908037,
+											"parameters": {
+												"x": "1",
+												"y": "2",
+												"z": "0",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 159823717790463
+								},
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia atributos no Codex"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 704576062428405,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 385397842780798,
+											"parameters": {
+												"x": "1",
+												"y": "2",
+												"z": "0",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 961590641930129
+								},
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia descrição no Codex"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 511609413628552,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 444912743751516,
+											"parameters": {
+												"x": "1",
+												"y": "2",
+												"z": "0",
+												"value": "3"
+											}
+										}
+									],
+									"sid": 216728274934390
+								},
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a reliquia Cartola Verde"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 850596260391342,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "5"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 464983745099002
+								}
+							]
 						},
 						{
 							"eventType": "block",

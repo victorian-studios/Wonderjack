@@ -27,7 +27,7 @@
 			"actions": [
 				{
 					"id": "tween-value",
-					"objectClass": "AliceMenu",
+					"objectClass": "Sprite_AliceMenu_Old",
 					"sid": 847356100157411,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -341,6 +341,69 @@
 						}
 					],
 					"sid": 339759150262036
+				},
+				{
+					"eventType": "comment",
+					"text": "Preencher Arrays de Poderes e Relíquias"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 614853658368955,
+							"parameters": {
+								"count": "22"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 700328891391439,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-xyz",
+									"objectClass": "A_zCodex",
+									"sid": 203737139924518,
+									"parameters": {
+										"x": "loopindex",
+										"y": "1",
+										"z": "1",
+										"comparison": 5,
+										"value": "1"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 901186840382783,
+									"parameters": {
+										"unique-id": "168  + loopindex"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 649209240795120
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 428742132848069,
+							"parameters": {
+								"count": "22"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 287369060987333
 				}
 			]
 		},
@@ -379,7 +442,7 @@
 			"conditions": [
 				{
 					"id": "is-playing",
-					"objectClass": "AliceMenu",
+					"objectClass": "Sprite_AliceMenu_Old",
 					"sid": 413241179475841,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -394,7 +457,7 @@
 					"sid": 810994859307374,
 					"parameters": {
 						"layer": "\"Black\"",
-						"opacity": "AliceMenu.Tween.Value(\"black\")"
+						"opacity": "Sprite_AliceMenu_Old.Tween.Value(\"black\")"
 					}
 				}
 			],
@@ -405,7 +468,7 @@
 			"conditions": [
 				{
 					"id": "is-playing",
-					"objectClass": "AliceMenu",
+					"objectClass": "Sprite_AliceMenu_Old",
 					"sid": 126135696631334,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -420,7 +483,7 @@
 					"sid": 793607729143159,
 					"parameters": {
 						"layer": "\"Black\"",
-						"opacity": "AliceMenu.Tween.Value(\"black1\")"
+						"opacity": "Sprite_AliceMenu_Old.Tween.Value(\"black1\")"
 					}
 				}
 			],
@@ -431,7 +494,7 @@
 			"conditions": [
 				{
 					"id": "is-playing",
-					"objectClass": "AliceMenu",
+					"objectClass": "Sprite_AliceMenu_Old",
 					"sid": 181867858985268,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -446,7 +509,7 @@
 					"sid": 502025842276078,
 					"parameters": {
 						"layer": "\"Black\"",
-						"opacity": "AliceMenu.Tween.Value(\"reset\")"
+						"opacity": "Sprite_AliceMenu_Old.Tween.Value(\"reset\")"
 					}
 				}
 			],
@@ -457,7 +520,7 @@
 			"conditions": [
 				{
 					"id": "on-tweens-finished",
-					"objectClass": "AliceMenu",
+					"objectClass": "Sprite_AliceMenu_Old",
 					"sid": 424959965162149,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -491,7 +554,7 @@
 			"conditions": [
 				{
 					"id": "on-tweens-finished",
-					"objectClass": "AliceMenu",
+					"objectClass": "Sprite_AliceMenu_Old",
 					"sid": 868212688413315,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -893,7 +956,7 @@
 							"actions": [
 								{
 									"id": "tween-value",
-									"objectClass": "AliceMenu",
+									"objectClass": "Sprite_AliceMenu_Old",
 									"sid": 385866441620142,
 									"behaviorType": "Tween",
 									"parameters": {
@@ -928,6 +991,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 658085679033892,
+									"parameters": {
+										"layer": "\"Main\"",
+										"interactive": false
+									}
+								},
 								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
@@ -1066,7 +1138,7 @@
 							"actions": [
 								{
 									"id": "tween-value",
-									"objectClass": "AliceMenu",
+									"objectClass": "Sprite_AliceMenu_Old",
 									"sid": 609970883327538,
 									"behaviorType": "Tween",
 									"parameters": {
@@ -1137,6 +1209,15 @@
 									"sid": 767592895661409,
 									"disabled": true,
 									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 352773677255564,
+									"parameters": {
+										"layer": "\"Main\"",
+										"interactive": false
+									}
 								},
 								{
 									"id": "set-layer-visible",
@@ -1356,6 +1437,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 699053185449935,
+									"parameters": {
+										"layer": "\"Main\"",
+										"interactive": false
+									}
+								},
 								{
 									"callFunction": "Confirm_Exit",
 									"sid": 831662708153917
@@ -2414,7 +2504,7 @@
 					"parameters": {
 						"mouse-button": "right",
 						"click-type": "clicked",
-						"object-clicked": "AliceMenu"
+						"object-clicked": "Sprite_AliceMenu_Old"
 					}
 				}
 			],
@@ -3140,6 +3230,15 @@
 					"sid": 552507040413627
 				},
 				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 412896058838026,
+					"parameters": {
+						"layer": "\"Main\"",
+						"interactive": true
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 505225490821725,
@@ -3377,6 +3476,111 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "variable",
+					"name": "Opponent_Carrousel",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 603399318345817
+				},
+				{
+					"eventType": "comment",
+					"text": "Repeti o Start of Layout para melhor organizar a parte de desbloqueio e atualização dos itens e informações do codex"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 651594893543145
+						}
+					],
+					"actions": [],
+					"sid": 898011615674600,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Opponenets"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 902912674743749,
+									"parameters": {
+										"count": "10"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 762656842395017,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 166713972649837,
+											"parameters": {
+												"x": "1",
+												"y": "loopindex + 1",
+												"z": "0",
+												"comparison": 5,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 207903287709642,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Revela"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Quadro_Turns_Shadow",
+													"sid": 233356187236869,
+													"parameters": {
+														"unique-id": "168  + loopindex"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Quadro_Turns_Shadow",
+													"sid": 966138228890650,
+													"parameters": {
+														"animation": "\"Codex\"",
+														"from": "current-frame"
+													}
+												}
+											],
+											"sid": 927373630258523
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 349058003155850
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -3953,6 +4157,15 @@
 							}
 						},
 						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 719552993804804,
+							"parameters": {
+								"layer": "\"Main\"",
+								"interactive": true
+							}
+						},
+						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 197938569459280,
@@ -3985,6 +4198,24 @@
 							"sid": 728309105934643,
 							"parameters": {
 								"layer": "\"enemies\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 144750545201852,
+							"parameters": {
+								"layer": "\"enemies2\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 829210540654188,
+							"parameters": {
+								"layer": "\"enemies2\"",
 								"interactive": false
 							}
 						},
@@ -4115,6 +4346,1426 @@
 							"sid": 681088622129989
 						}
 					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Opponent List",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "Update_Opponent_Info",
+							"functionDescription": "",
+							"functionCategory": "Menu",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy_Extra_Anim",
+									"sid": 219829851360580
+								},
+								{
+									"id": "set-mask-enabled",
+									"objectClass": "easyMask",
+									"sid": 201667399983365,
+									"parameters": {
+										"enabled": true
+									}
+								},
+								{
+									"id": "set-mask-shape",
+									"objectClass": "easyMask",
+									"sid": 758949979477486,
+									"parameters": {
+										"mask-class": "card_enemy2"
+									}
+								},
+								{
+									"id": "add-object",
+									"objectClass": "easyMask",
+									"sid": 742798609490353,
+									"parameters": {
+										"object-class": "Enemy"
+									}
+								},
+								{
+									"id": "set-mask-mode",
+									"objectClass": "easyMask",
+									"sid": 732291946853963,
+									"parameters": {
+										"mode": "mask"
+									}
+								},
+								{
+									"id": "move-to-object",
+									"objectClass": "card_enemy",
+									"sid": 309727024257861,
+									"disabled": true,
+									"parameters": {
+										"where": "behind",
+										"object": "Enemy"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "Btn_Back_Flag2",
+									"sid": 143666706057571,
+									"disabled": true,
+									"parameters": {
+										"layer": "\"enemies2\""
+									}
+								},
+								{
+									"id": "move-to-bottom",
+									"objectClass": "Btn_Back_Flag2",
+									"sid": 828050219008467
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text_Codex_Info",
+									"sid": 364392371673714,
+									"parameters": {
+										"text": "\"? ? ?\""
+									}
+								}
+							],
+							"sid": 753554189404402,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Se o oponente não foi encontrado, não revela nada"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 355832432371861,
+											"parameters": {
+												"x": "1",
+												"y": "Opponent_Carrousel",
+												"z": "0",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 747999904983345,
+											"parameters": {
+												"animation": "\"Locked\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Enemy",
+											"sid": 388361954976917,
+											"parameters": {
+												"width": "389",
+												"height": "389"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Enemy",
+											"sid": 404553752865363,
+											"parameters": {
+												"x": "1370",
+												"y": "516"
+											}
+										},
+										{
+											"id": "update-initial-state",
+											"objectClass": "Enemy",
+											"sid": 939163017672586,
+											"behaviorType": "Sine"
+										},
+										{
+											"id": "set-cycle-position",
+											"objectClass": "Enemy",
+											"sid": 214049768529321,
+											"behaviorType": "Sine",
+											"parameters": {
+												"cycle-position": "0"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Enemy",
+											"sid": 712495315064088,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										}
+									],
+									"sid": 936116453809927
+								},
+								{
+									"eventType": "comment",
+									"text": "Caso contrário mostra algumas informações"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 358209310734558
+										}
+									],
+									"actions": [
+										{
+											"id": "set-active",
+											"objectClass": "Enemy",
+											"sid": 293413032942316,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "inactive"
+											}
+										}
+									],
+									"sid": 124828574132258,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 813439560331872,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 482850210923262,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"White Queen\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 618815836679827,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 414493580650752,
+													"parameters": {
+														"width": "432",
+														"height": "552"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 965704400742429,
+													"parameters": {
+														"x": "1576",
+														"y": "808"
+													}
+												}
+											],
+											"sid": 994475348778840
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 899740423730636,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 707236814701476,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Mad Hatter\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 790392199250230,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 947131736906211,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 795923243218744,
+													"parameters": {
+														"x": "1576",
+														"y": "808"
+													}
+												}
+											],
+											"sid": 215821977443226
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 218967193710208,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 245075411634820,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"March Hare\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 354394176891876,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 617339369387961,
+													"parameters": {
+														"width": "456",
+														"height": "560"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 121836773402476,
+													"parameters": {
+														"x": "1360",
+														"y": "776"
+													}
+												}
+											],
+											"sid": 851363569819070
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 870558478859243,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "4"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 572192470853035,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"The Tweedles\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 359614090248909,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 628117229039387,
+													"parameters": {
+														"width": "388.6",
+														"height": "579.1"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 466555824006075,
+													"parameters": {
+														"x": "1344",
+														"y": "792"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 387578634974109,
+													"parameters": {
+														"object-to-create": "Enemy_Extra_Anim",
+														"layer": "\"enemies2\"",
+														"x": "1344",
+														"y": "800",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 170420401669412,
+													"parameters": {
+														"animation": "\"Brother\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 940245345864926,
+													"parameters": {
+														"width": "266.7",
+														"height": "408"
+													}
+												}
+											],
+											"sid": 734035376824627
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 198225977696127,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "5"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 605356917822120,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Caterpillar\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 261846074602620,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 306668740955693,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 250296291326746,
+													"parameters": {
+														"x": "1576",
+														"y": "808"
+													}
+												}
+											],
+											"sid": 959584966253876
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 531746785247690,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "6"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 697647249882451,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Cheshire Cat\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 785235828363932,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 356803349730859,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 465230122029215,
+													"parameters": {
+														"x": "1576",
+														"y": "808"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 416579809758070,
+													"parameters": {
+														"object-to-create": "Enemy_Extra_Anim",
+														"layer": "\"enemies2\"",
+														"x": "1394.31",
+														"y": "484.82",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 329045640214383,
+													"parameters": {
+														"animation": "\"Cat_Eyes\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 730112729828892,
+													"parameters": {
+														"width": "142.15",
+														"height": "32.78"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 571537625050301,
+													"parameters": {
+														"object-to-create": "Enemy_Extra_Anim",
+														"layer": "\"enemies2\"",
+														"x": "1364.3",
+														"y": "555.65",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 899341774637482,
+													"parameters": {
+														"animation": "\"Tail\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy_Extra_Anim",
+													"sid": 106769628725978,
+													"parameters": {
+														"width": "222",
+														"height": "207"
+													}
+												}
+											],
+											"sid": 661401841273498
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 389847287359951,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "7"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 874876036199739,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"General of Cards\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 581058927003019,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 679286682219679,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 443294785905161,
+													"parameters": {
+														"x": "1576",
+														"y": "808"
+													}
+												}
+											],
+											"sid": 229619815400807
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 714057428210624,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "8"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 290899418659996,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Dodo\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 947092367434868,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 987464900110745,
+													"parameters": {
+														"width": "433.7",
+														"height": "617.8"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 890461223061004,
+													"parameters": {
+														"x": "1365",
+														"y": "781"
+													}
+												}
+											],
+											"sid": 859429101336122
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 740934917727826,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "9"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 369206858342993,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Red Queen\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 164221010386611,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 347914216731487,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 751623076975154,
+													"parameters": {
+														"x": "1576",
+														"y": "808"
+													}
+												}
+											],
+											"sid": 408863539189300
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 422344798892574,
+													"parameters": {
+														"variable": "Opponent_Carrousel",
+														"comparison": 0,
+														"value": "10"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 874574347662501,
+													"parameters": {
+														"variable": "EnemyName",
+														"value": "\"Jabberwock\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 175265596788475,
+													"parameters": {
+														"animation": "EnemyName",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 962598183783277,
+													"parameters": {
+														"width": "592.8",
+														"height": "654.3"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 605625342392208,
+													"parameters": {
+														"x": "1360",
+														"y": "796"
+													}
+												}
+											],
+											"sid": 362365734468336
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 397947346704724,
+											"parameters": {
+												"layer": "\"enemies2\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 184967500858155,
+											"parameters": {
+												"layer": "\"enemies2\"",
+												"interactive": true
+											}
+										}
+									],
+									"sid": 384945686637923,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Text_Codex_Info",
+													"sid": 415048765035260,
+													"parameters": {
+														"instance-variable": "ID",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Codex_Info",
+													"sid": 736324046920546,
+													"parameters": {
+														"text": "Internationalization.Lookup(\"menu.codex.enemies.\" & EnemyName & \".name\")"
+													}
+												}
+											],
+											"sid": 996635222293561
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Text_Codex_Info",
+													"sid": 367224875902987,
+													"parameters": {
+														"instance-variable": "ID",
+														"comparison": 0,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-at-xyz",
+													"objectClass": "A_zCodex",
+													"sid": 884710899747344,
+													"parameters": {
+														"x": "1",
+														"y": "Opponent_Carrousel",
+														"z": "0",
+														"comparison": 5,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Codex_Info",
+													"sid": 495474756182259,
+													"parameters": {
+														"text": "Internationalization.Lookup(\"menu.codex.enemies.\" & EnemyName & \".mind\")"
+													}
+												}
+											],
+											"sid": 653173292896377
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Text_Codex_Info",
+													"sid": 702513530787725,
+													"parameters": {
+														"instance-variable": "ID",
+														"comparison": 0,
+														"value": "3"
+													}
+												},
+												{
+													"id": "compare-at-xyz",
+													"objectClass": "A_zCodex",
+													"sid": 900022735050889,
+													"parameters": {
+														"x": "1",
+														"y": "Opponent_Carrousel",
+														"z": "0",
+														"comparison": 5,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Codex_Info",
+													"sid": 380844581488735,
+													"parameters": {
+														"text": "Internationalization.Lookup(\"menu.codex.enemies.\" & EnemyName & \".stage\")"
+													}
+												}
+											],
+											"sid": 477869801817063
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Text_Codex_Info",
+													"sid": 359953514253359,
+													"parameters": {
+														"instance-variable": "ID",
+														"comparison": 0,
+														"value": "4"
+													}
+												},
+												{
+													"id": "compare-at-xyz",
+													"objectClass": "A_zCodex",
+													"sid": 271905771098541,
+													"parameters": {
+														"x": "1",
+														"y": "Opponent_Carrousel",
+														"z": "0",
+														"comparison": 5,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Codex_Info",
+													"sid": 994219736555401,
+													"parameters": {
+														"text": "Internationalization.Lookup(\"menu.codex.enemies.\" & EnemyName & \".special\")"
+													}
+												}
+											],
+											"sid": 334250979764728
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Text_Codex_Info",
+													"sid": 751702705227103,
+													"parameters": {
+														"instance-variable": "ID",
+														"comparison": 0,
+														"value": "5"
+													}
+												},
+												{
+													"id": "compare-at-xyz",
+													"objectClass": "A_zCodex",
+													"sid": 490074200935083,
+													"parameters": {
+														"x": "1",
+														"y": "Opponent_Carrousel",
+														"z": "0",
+														"comparison": 5,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "Text_Codex_Info",
+													"sid": 261555695898390,
+													"parameters": {
+														"text": "Internationalization.Lookup(\"menu.codex.enemies.\" & EnemyName & \".desc\")"
+													}
+												}
+											],
+											"sid": 159264409877242
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 290640807096282,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Btn_Arrow_Codex_right"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 490941914222408,
+									"parameters": {
+										"layer": "\"enemies2\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 847473842204870,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 119915385383087,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"comparison": 0,
+												"value": "10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 319293719710110,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"value": "1"
+											}
+										},
+										{
+											"callFunction": "Update_Opponent_Info",
+											"sid": 551253426896146
+										}
+									],
+									"sid": 351620645726516
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 184252003443938
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 253653277639534,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"value": "1"
+											}
+										},
+										{
+											"callFunction": "Update_Opponent_Info",
+											"sid": 775034619876794
+										}
+									],
+									"sid": 196586469518872
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 729427339627410,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Btn_Arrow_Codex_left"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 316500301353687,
+									"parameters": {
+										"layer": "\"enemies2\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 422373703130258,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 721095083273695,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 573168106527595,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"value": "10"
+											}
+										},
+										{
+											"callFunction": "Update_Opponent_Info",
+											"sid": 980117002433138
+										}
+									],
+									"sid": 355649155745802
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 521975629698063
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 724926686178622,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"value": "1"
+											}
+										},
+										{
+											"callFunction": "Update_Opponent_Info",
+											"sid": 948438360009238
+										}
+									],
+									"sid": 292586032031068
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 753165041386167,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Quadro_Turns_Shadow"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 939112782308937,
+									"parameters": {
+										"layer": "\"enemies\""
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 769850519843028,
+									"parameters": {
+										"layer": "\"enemies2\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 757756255132042,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Quadro_Turns_Shadow",
+											"sid": 867620915857423,
+											"parameters": {
+												"animation": "\"Codex\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 111655567705162,
+											"parameters": {
+												"layer": "\"enemies\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 460289416345640,
+											"parameters": {
+												"layer": "\"enemies\"",
+												"interactive": false
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 640802951472100,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"value": "Quadro_Turns_Shadow.ID"
+											}
+										},
+										{
+											"callFunction": "Update_Opponent_Info",
+											"sid": 483309976231965
+										}
+									],
+									"sid": 404592365188094
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 631746055315851,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Btn_Back_Flag2"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 305787003562134,
+									"parameters": {
+										"layer": "\"enemies2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 934083564546279,
+									"parameters": {
+										"layer": "\"enemies2\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 520764497532244,
+									"parameters": {
+										"layer": "\"enemies2\"",
+										"interactive": false
+									}
+								}
+							],
+							"sid": 729883038443906,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 459160882937085,
+											"parameters": {
+												"object": "Btn_Codex"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Btn_Codex",
+											"sid": 243849790276213,
+											"parameters": {
+												"animation": "\"Default\"",
+												"from": "current-frame"
+											}
+										}
+									],
+									"sid": 426794675579655
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "Btn_Codex",
+											"sid": 302796269300626,
+											"parameters": {
+												"comparison": 0,
+												"number": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Btn_Codex",
+											"sid": 601526106314992,
+											"parameters": {
+												"animation": "\"Selected\"",
+												"from": "current-frame"
+											}
+										}
+									],
+									"sid": 614207109530774
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 456359520580824,
+											"parameters": {
+												"object": "Text_Static_Generic",
+												"expression": "Text_Static_Generic.UID",
+												"comparison": 0,
+												"value": "165"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Text_Static_Generic",
+											"sid": 437736578611754,
+											"parameters": {
+												"instance-variable": "my_txt",
+												"value": "\"menu.codex.enemies.title\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text_Static_Generic",
+											"sid": 752332228103311,
+											"parameters": {
+												"text": "Internationalization.Lookup(Self.my_txt)"
+											}
+										}
+									],
+									"sid": 761049346080390
+								}
+							]
+						}
+					],
+					"sid": 806081637484981
 				}
 			],
 			"sid": 443576521096051
@@ -4163,6 +5814,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 841728402573618,
+							"parameters": {
+								"layer": "\"Main\"",
+								"interactive": true
+							}
+						},
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",

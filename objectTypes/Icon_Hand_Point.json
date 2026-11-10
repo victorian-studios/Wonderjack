@@ -187,6 +187,94 @@
 			{
 				"frames": [
 					{
+						"width": 134,
+						"height": 182,
+						"originX": 0.7164179104477614,
+						"originY": 1.0000000000000002,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5315373,
+						"collisionPoly": {
+							"points": [
+								0.5338846308995562,
+								0,
+								0.9776119402985075,
+								0.17331306010551295,
+								0.9392900363049616,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0.38180477803119317,
+								0,
+								0.1836800516045799,
+								0.23336022589753935,
+								0.05582048978275393
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 863923132835462,
+				"name": "The Tweedles",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 92,
+						"height": 174,
+						"originX": 0.576086956521739,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1965226,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0.1004753207803036,
+								1,
+								1,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.9782307903939438,
+								0,
+								0.8327647238666361
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 757653868415929,
+				"name": "Caterpillar",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
 						"width": 153,
 						"height": 184,
 						"originX": 0.5,
@@ -250,6 +338,31 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1420179,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 159319121441329,
+				"name": "General of Cards",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			},
 			{
 				"frames": [
@@ -378,94 +491,6 @@
 			{
 				"frames": [
 					{
-						"width": 134,
-						"height": 182,
-						"originX": 0.7164179104477614,
-						"originY": 1.0000000000000002,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 5315373,
-						"collisionPoly": {
-							"points": [
-								0.5338846308995562,
-								0,
-								0.9776119402985075,
-								0.17331306010551295,
-								0.9392900363049616,
-								1,
-								0,
-								1,
-								0,
-								1,
-								0,
-								0.38180477803119317,
-								0,
-								0.1836800516045799,
-								0.23336022589753935,
-								0.05582048978275393
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					}
-				],
-				"sid": 863923132835462,
-				"name": "The Tweedles",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 0
-			},
-			{
-				"frames": [
-					{
-						"width": 92,
-						"height": 174,
-						"originX": 0.576086956521739,
-						"originY": 1,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 1965226,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0.1004753207803036,
-								1,
-								1,
-								1,
-								1,
-								0,
-								1,
-								0,
-								0.9782307903939438,
-								0,
-								0.8327647238666361
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					}
-				],
-				"sid": 757653868415929,
-				"name": "Caterpillar",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 0
-			},
-			{
-				"frames": [
-					{
 						"width": 124,
 						"height": 196,
 						"originX": 0.709677419354839,
@@ -513,6 +538,31 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7442005,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 959962565318979,
+				"name": "Dodo",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []

@@ -8120,6 +8120,18 @@
 			"sid": 448126374251785,
 			"tags": "",
 			"instanceVariables": {}
+		},
+		{
+			"type": "A_zCodex",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 418,
+			"sid": 563943512509461,
+			"tags": "",
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],

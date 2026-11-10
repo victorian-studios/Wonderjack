@@ -30,70 +30,70 @@
                         "mind": "Cautious",
                         "stage": "Tutorial",
                         "special": "None",
-                        "desc": "A slightly clumsy queen with a heart of gold. She loves teaching people how to play Blackjack and is delighted to see her lessons pay off."
+                        "desc": "A slightly clumsy queen with a heart of gold. She loves teaching people how to play Wonderjack and is delighted to see her lessons pay off."
                     },
                     "Mad Hatter": {
                         "name": "Mad Hatter",
-                        "mind": "Cautious",
+                        "mind": "Fearless",
                         "stage": "Stage 1",
                         "special": "Starts the match with a random number card.",
-                        "desc": "An old acquaintance of Alice's. He adores birthday parties, tea and... Blackjack. He gets a kick out of playing by his own rules to get an edge in every match. He only tips his hat to formidable opponents..."
+                        "desc": "An old acquaintance of Alice's. He adores birthday parties, tea and... Wonderjack. He gets a kick out of playing by his own rules to get an edge in every match. He only tips his hat to formidable opponents..."
                     },
                     "March Hare": {
                         "name": "March Hare",
-                        "mind": "Cautious",
+                        "mind": "Fearless",
                         "stage": "Stage 1",
                         "special": "Starts the match with a random power card.",
-                        "desc": "The Hatter's inseparable friend. Always suspicious and on his toes, he likes to keep a few tricks up his sleeve to play it safe and stay out of trouble. And he makes the most of them to get the upper hand in Blackjack."
+                        "desc": "The Hatter's inseparable friend. Always suspicious and on his toes, he likes to keep a few tricks up his sleeve to play it safe and stay out of trouble. And he makes the most of them to get the upper hand in Wonderjack."
                     },
                     "The Tweedles": {
                         "name": "The Tweedles",
-                        "mind": "Cautious",
+                        "mind": "Mixed",
                         "stage": "Stage 2",
                         "special": "Every 2 turns they switch places, changing the main strategy.",
-                        "desc": "The Tweedle brothers have never seen eye to eye... And yet they teamed up to play Blackjack! Together, they think they've got twice the chance of winning... even though most of the time they just end up squabbling with each other..."
+                        "desc": "The Tweedle brothers have never seen eye to eye... And yet they teamed up to play Wonderjack! Together, they think they've got twice the chance of winning... even though most of the time they just end up squabbling with each other..."
                     },
                     "Caterpillar": {
                         "name": "Caterpillar",
-                        "mind": "Cautious",
+                        "mind": "Fearless",
                         "stage": "Stage 2",
                         "special": "Randomly creates a smoke cloud above the player's cards for 1 turn.",
-                        "desc": "A creature who loves philosophy and smoking in its spare time. It found in Blackjack a whole new way of thinking and loves cooking up strategies to beat its opponents... even if it needs its hookah to do so..."
+                        "desc": "A creature who loves philosophy and smoking in its spare time. It found in Wonderjack a whole new way of thinking and loves cooking up strategies to beat its opponents... even if it needs its hookah to do so..."
                     },
                     "Cheshire Cat": {
                         "name": "Cheshire Cat",
-                        "mind": "Cautious",
+                        "mind": "Fearless",
                         "stage": "Stage 3",
                         "special": "Randomly desappears making all ther number cards hidden for 1 turn.",
-                        "desc": "An iconic figure of Wonderland. He loves vanishing whenever he pleases, leaving nothing behind but his enigmatic grin hanging in the air... He plays Blackjack as if victory were already in the bag, always thinking one move ahead."
+                        "desc": "An iconic figure of Wonderland. He loves vanishing whenever he pleases, leaving nothing behind but his enigmatic grin hanging in the air... He plays Wonderjack as if victory were already in the bag, always thinking one move ahead."
                     },
                     "General of Cards": {
                         "name": "General of Cards",
                         "mind": "Cautious",
                         "stage": "Stage 3",
                         "special": "Starts every round with protection for 3 turns.",
-                        "desc": "The Queen's official bodyguard! He pulled countless all-nighters learning Blackjack so he could give Her Majesty some fun matches. Exhausted as he is, he's managed to master all the fundamentals of the game."
+                        "desc": "The Queen's official bodyguard! He pulled countless all-nighters learning Wonderjack so he could give Her Majesty some fun matches. Exhausted as he is, he's managed to master all the fundamentals of the game."
                     },
                     "Dodo": {
                         "name": "Dodo",
                         "mind": "Cautious",
                         "stage": "Secret",
                         "special": "Randomly gives the first number card for the player.",
-                        "desc": "A bird that's far from extinct in Wonderland! Its hobbies include racing and, of course, playing Blackjack. It also loves prizes, but can't tell the good ones from the bad..."
+                        "desc": "A bird that's far from extinct in Wonderland! Its hobbies include racing and, of course, playing Wonderjack. It also loves prizes, but can't tell the good ones from the bad..."
                     },
                     "Red Queen": {
                         "name": "Red Queen",
                         "mind": "Cautious",
                         "stage": "Stage 4",
                         "special": "Randomly removes 1 number card from the player for the rest of the round.",
-                        "desc": "The sovereign ruler of Wonderland. She has a peculiar taste for chopping off heads... and hearts. A while ago, she swapped her afternoons of croquet for Blackjack matches with her card guards. But she's already bored stiff..."
+                        "desc": "The sovereign ruler of Wonderland. She has a peculiar taste for chopping off heads... and hearts. A while ago, she swapped her afternoons of croquet for Wonderjack matches with her card guards. But she's already bored stiff..."
                     },
                     "Jabberwock": {
                         "name": "Jabberwock",
                         "mind": "Cautious",
                         "stage": "Stage 4",
                         "special": "Starts the match with a special candlestick contaning 5 candles.",
-                        "desc": "An ancient Wonderland legend. The Jabberwock was known only through an old rhyme, and so it gradually stopped being feared. Driven by a hunger to have its power recognized, it took up Blackjack and began challenging anyone who crossed its path."
+                        "desc": "An ancient Wonderland legend. The Jabberwock was known only through an old rhyme, and so it gradually stopped being feared. Driven by a hunger to have its power recognized, it took up Wonderjack and began challenging anyone who crossed its path."
                     }
                 },
                 "powers": {
@@ -205,8 +205,8 @@
             "name_1": "Ana Barata\nArtist",
             "name_2": "Vitor Cirilo\nProgrammer",
             "name_3": "Ana Luiza\nArtist",
-            "name_4": "Game Testers:\nArthur Barroso\nMarcelo Campos\nThuan Martins\nVitoria Peres",
-            "name_5": "Music and Sound:\n\nfreesound.org",
+            "name_4": "[size=44]Game Testers:[/size]\n\nArthur Barroso | Marcelo Campos\nPaula Erthal | Thuan Martins\nVitoria Peres",
+            "name_5": "Music and Sounds:\n\nGothic Roguelike (@alkakrab)\nfreesound.org",
             "bye": "Thanks for playing our game!"
         },
         "story": {
@@ -231,7 +231,7 @@
             "page_4": "[u][b]Chapter 4[/b][/u]\n\n[b]The Loser[/b]\n\nYou lose the round if the total value of your cards exceeds 21, or if your opponent obtains a higher sum than yours.",
             "page_5": "[u][b]Chapter 5[/b][/u]\n\n[b]The Tie[/b]\n\nWhen there's a tie or both players exceed 21, no point is awarded, and a new round starts.",
             "white_queen": {
-                "1": "So Alice, this is different version from the classic ''21'' or blackjack card game.",
+                "1": "So Alice, Wonderjack is different version from the classic ''21'' or Wonderjack card game.",
                 "2": "The goal is the same, try to reach [b]21[/b] by drawing numeric cards from that [color=#005eff]blue[/color] deck on your right.",
                 "3": "But don't worry too much if you can't get exactly [b]21[/b]. It's hard, since you don't know the next number you're gonna draw from the deck.",
                 "4": "Just avoid exceeding [b]21[/b], or you'll lose the round. The [color=#005eff]blue[/color] deck contain [b]12[/b] cards from [b]1 up to 12[/b].",
@@ -382,13 +382,13 @@
                     "talk_thinking_2": "I've impressive cards... do you wanna see? Haha!",
                     "special": "I'll start with a card for myself. After all, it's my unbirthday!"
                 },
-                "Cheshire Cat": {
-                    "name": "Cheshire Cat",
-                    "talk_win": "That's too bad... Are you going somewhere?",
-                    "talk_lose": "It looks like you've found the direction you need to go...",
-                    "talk_thinking_1": "Remember... we're all mad here. I'm mad. You're mad.",
-                    "talk_thinking_2": "If you need to leave... I can show you the exit...",
-                    "special": "What's wrong? Can't see?"
+                "The Tweedles": {
+                    "name": "The Tweedles",
+                    "talk_win": "We, the TWEEDLE brothers, have won again!",
+                    "talk_lose": "You win. We've no objection. Contrariwise.",
+                    "talk_thinking_1": "Hey brother, this card is mine!",
+                    "talk_thinking_2": "",
+                    "special": "My turn! Move it!"
                 },
                 "Caterpillar": {
                     "name": "Caterpillar",
@@ -398,6 +398,14 @@
                     "talk_thinking_2": "Cough cough. I've good options, what about you?",
                     "special": "Oh my, the smoke is everywhere..."
                 },
+                "Cheshire Cat": {
+                    "name": "Cheshire Cat",
+                    "talk_win": "That's too bad... Are you going somewhere?",
+                    "talk_lose": "It looks like you've found the direction you need to go...",
+                    "talk_thinking_1": "Remember... we're all mad here. I'm mad. You're mad.",
+                    "talk_thinking_2": "If you need to leave... I can show you the exit...",
+                    "special": "What's wrong? Can't see?"
+                },
                 "General of Cards": {
                     "name": "General of Cards",
                     "talk_win": "Looks like I'M the toughest one here.",
@@ -405,14 +413,6 @@
                     "talk_thinking_1": "I'm exhausted... I need to wrap this up.",
                     "talk_thinking_2": "Feeling confident? I hope not.",
                     "special": "Don't judge a card by its cover! I'm tougher than I look."
-                },
-                "The Tweedles": {
-                    "name": "The Tweedles",
-                    "talk_win": "We, the TWEEDLE brothers, have won again!",
-                    "talk_lose": "You win. We've no objection. Contrariwise.",
-                    "talk_thinking_1": "Hey brother, this card is mine!",
-                    "talk_thinking_2": "",
-                    "special": "My turn! Move it!"
                 },
                 "Dodo": {
                     "name": "Dodo",

@@ -229,6 +229,14 @@
 					}
 				},
 				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 779127873962438,
+					"parameters": {
+						"key": "\"my_codex\""
+					}
+				},
+				{
 					"id": "tween-value",
 					"objectClass": "TiledBackground",
 					"sid": 330069632066365,
@@ -942,268 +950,12 @@
 			]
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 698948190692337,
-					"parameters": {
-						"tag": "\"numb_deck\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "A_Deck_Numb",
-					"sid": 305871306994842,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 216119071533337,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 509042138941674
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 106179987700902,
-					"parameters": {
-						"tag": "\"power_deck\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "A_Deck_Power",
-					"sid": 519611507728053,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "shuffle",
-					"objectClass": "A_Deck_Power",
-					"sid": 764781462622552,
-					"parameters": {
-						"axis": "x"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 108556824809946,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 602586750167918
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 113067294045577,
-					"parameters": {
-						"tag": "\"relics\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "A_Relics",
-					"sid": 520745355632834,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "shuffle",
-					"objectClass": "A_Relics",
-					"sid": 605565602101957,
-					"parameters": {
-						"axis": "x"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 798961616639824,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 534584866449232
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 128320422426815,
-					"parameters": {
-						"tag": "\"card_pos\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "A_zCard_Pos",
-					"sid": 339253443638848,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 944074409357410,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 149951770329315
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 150518810585231,
-					"parameters": {
-						"tag": "\"opt_conf\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "A_zOptions_Config",
-					"sid": 639082026363581,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 636737745758248,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 597629355529283
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 508792985886977,
-					"parameters": {
-						"variable": "Vol_Mus",
-						"value": "A_zOptions_Config.At(1,1)"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 625213785536735,
-					"parameters": {
-						"variable": "Vol_Sfx",
-						"value": "A_zOptions_Config.At(1,2)"
-					}
-				},
-				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 928243585023545,
-					"parameters": {
-						"key": "\"my_config\"",
-						"value": "A_zOptions_Config.AsJSON"
-					}
-				}
-			],
-			"sid": 330942892984093
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 379776454988439,
-					"parameters": {
-						"tag": "\"save\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "D_Save",
-					"sid": 755744657498976,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 863911261694441
-				},
-				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 465329961690959,
-					"parameters": {
-						"key": "\"my_save\"",
-						"value": "D_Save.AsJSON"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 295213308229668,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 428056911066088
+			"eventType": "comment",
+			"text": "Local Storage Missing"
 		},
 		{
 			"eventType": "comment",
-			"text": "Local Storage Missing"
+			"text": "Se não tiver um save, pega o arquivo padrão"
 		},
 		{
 			"eventType": "block",
@@ -1231,127 +983,6 @@
 				}
 			],
 			"sid": 525099539488098
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-item-exists",
-					"objectClass": "LocalStorage",
-					"sid": 638651878523600,
-					"parameters": {
-						"key": "\"my_lang\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "get-item",
-					"objectClass": "LocalStorage",
-					"sid": 193695271625826,
-					"parameters": {
-						"key": "\"my_lang\""
-					}
-				}
-			],
-			"sid": 865818273005886
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-item-get",
-					"objectClass": "LocalStorage",
-					"sid": 328924601026284,
-					"parameters": {
-						"key": "\"my_lang\""
-					}
-				}
-			],
-			"actions": [],
-			"sid": 764930936001220,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 172790494215941,
-							"parameters": {
-								"first-value": "LocalStorage.ItemValue",
-								"comparison": 0,
-								"second-value": "\"en-US\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "request-project-file",
-							"objectClass": "AJAX",
-							"sid": 760730403391899,
-							"parameters": {
-								"tag": "\"en-US\"",
-								"file": {
-									"path": "en-US.json"
-								}
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 763928418840324,
-							"parameters": {
-								"variable": "Language",
-								"value": "\"en-US\""
-							}
-						}
-					],
-					"sid": 133336090997448
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 271977152920657,
-							"parameters": {
-								"first-value": "LocalStorage.ItemValue",
-								"comparison": 0,
-								"second-value": "\"pt-BR\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "request-project-file",
-							"objectClass": "AJAX",
-							"sid": 864504077834343,
-							"parameters": {
-								"tag": "\"pt-BR\"",
-								"file": {
-									"path": "pt-BR.json"
-								}
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 720058474309733,
-							"parameters": {
-								"variable": "Language",
-								"value": "\"pt-BR\""
-							}
-						}
-					],
-					"sid": 447584994912916
-				}
-			]
-		},
-		{
-			"eventType": "comment",
-			"text": "Se não tiver um save, pega o arquivo padrão"
 		},
 		{
 			"eventType": "block",
@@ -1408,8 +1039,59 @@
 			"sid": 448731409977580
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 560761519667069,
+					"parameters": {
+						"key": "\"my_codex\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 800752926811575,
+					"parameters": {
+						"tag": "\"codex\"",
+						"file": {
+							"path": "Codex.json"
+						}
+					}
+				}
+			],
+			"sid": 457020716351247
+		},
+		{
 			"eventType": "comment",
 			"text": "Local Storage Exist"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 520417272832616,
+					"parameters": {
+						"key": "\"my_lang\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 786168510200765,
+					"parameters": {
+						"key": "\"my_lang\""
+					}
+				}
+			],
+			"sid": 671307092583558
 		},
 		{
 			"eventType": "block",
@@ -1460,8 +1142,125 @@
 			"sid": 287715278759965
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 874120849486554,
+					"parameters": {
+						"key": "\"my_codex\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 122453386279474,
+					"parameters": {
+						"key": "\"my_codex\""
+					}
+				}
+			],
+			"sid": 380276635695026
+		},
+		{
 			"eventType": "comment",
 			"text": "Local Storage Get"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 368781205936668,
+					"parameters": {
+						"key": "\"my_lang\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 546027497246983,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 456370636823348,
+							"parameters": {
+								"first-value": "LocalStorage.ItemValue",
+								"comparison": 0,
+								"second-value": "\"en-US\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 194693870631104,
+							"parameters": {
+								"tag": "\"en-US\"",
+								"file": {
+									"path": "en-US.json"
+								}
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 592852763784945,
+							"parameters": {
+								"variable": "Language",
+								"value": "\"en-US\""
+							}
+						}
+					],
+					"sid": 550219533124749
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 399766379835821,
+							"parameters": {
+								"first-value": "LocalStorage.ItemValue",
+								"comparison": 0,
+								"second-value": "\"pt-BR\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 864260588422046,
+							"parameters": {
+								"tag": "\"pt-BR\"",
+								"file": {
+									"path": "pt-BR.json"
+								}
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 409026304487830,
+							"parameters": {
+								"variable": "Language",
+								"value": "\"pt-BR\""
+							}
+						}
+					],
+					"sid": 347990140886200
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1556,6 +1355,355 @@
 				}
 			],
 			"sid": 377952480402390
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 449350965997781,
+					"parameters": {
+						"key": "\"my_codex\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_zCodex",
+					"sid": 705423968802969,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 398632185299383
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 463978435894676,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 310161251458954
+		},
+		{
+			"eventType": "comment",
+			"text": "Carregamentos do AJAX"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 719030002725690,
+					"parameters": {
+						"tag": "\"numb_deck\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_Deck_Numb",
+					"sid": 775549282721482,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 265873844459952,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 418170352485135
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 479352937602290,
+					"parameters": {
+						"tag": "\"power_deck\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_Deck_Power",
+					"sid": 333641619818592,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "shuffle",
+					"objectClass": "A_Deck_Power",
+					"sid": 214540282125878,
+					"parameters": {
+						"axis": "x"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 579357454429808,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 226826658360529
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 250265134377939,
+					"parameters": {
+						"tag": "\"relics\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_Relics",
+					"sid": 641048363318995,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "shuffle",
+					"objectClass": "A_Relics",
+					"sid": 409108891598630,
+					"parameters": {
+						"axis": "x"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 833638156450725,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 987516020879816
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 311169600689256,
+					"parameters": {
+						"tag": "\"card_pos\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_zCard_Pos",
+					"sid": 458216629464702,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 414592230353415,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 717955613420986
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 700612337767564,
+					"parameters": {
+						"tag": "\"opt_conf\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_zOptions_Config",
+					"sid": 362570330758668,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 667645968214756,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 301177290398237
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 152551711429482,
+					"parameters": {
+						"variable": "Vol_Mus",
+						"value": "A_zOptions_Config.At(1,1)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 950287244701871,
+					"parameters": {
+						"variable": "Vol_Sfx",
+						"value": "A_zOptions_Config.At(1,2)"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 385839526760936,
+					"parameters": {
+						"key": "\"my_config\"",
+						"value": "A_zOptions_Config.AsJSON"
+					}
+				}
+			],
+			"sid": 104215896936953
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 994562251878106,
+					"parameters": {
+						"tag": "\"save\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "D_Save",
+					"sid": 887345100909761,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 892756152015059
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 794638634374763,
+					"parameters": {
+						"key": "\"my_save\"",
+						"value": "D_Save.AsJSON"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 666995035364581,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 258611168347164
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 266198908863702,
+					"parameters": {
+						"tag": "\"codex\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "A_zCodex",
+					"sid": 566370302375688,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 917428568051661
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 694697556357181,
+					"parameters": {
+						"key": "\"my_codex\"",
+						"value": "A_zCodex.AsJSON"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 158582698099952,
+					"parameters": {
+						"variable": "Loaded_AJAX",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 645553051525142
 		},
 		{
 			"eventType": "block",

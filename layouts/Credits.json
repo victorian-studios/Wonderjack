@@ -1020,10 +1020,10 @@
 				{
 					"type": "Text_Static_Generic",
 					"properties": {
-						"text": "Game Testers:\n\nSussa\nThuan Martins\nVitória Peres",
+						"text": "[size=44]Testadores:[/size]\n\nArthur Barroso | Marcelo Campos\nPaula Erthal | Thuan Martins\nVitoria Peres",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
-						"size": 41,
+						"size": 37,
 						"line-height": 0,
 						"bold": true,
 						"italic": false,
@@ -1104,10 +1104,10 @@
 				{
 					"type": "Text_Static_Generic",
 					"properties": {
-						"text": "Music and Sounds:\n\nfreesound.org",
+						"text": "Música e Sons:\n\nGothic Roguelike (@alkakrab)\nfreesound.org",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
-						"size": 41,
+						"size": 37,
 						"line-height": 0,
 						"bold": true,
 						"italic": false,

@@ -1,52 +1,70 @@
 {
-	"name": "AliceMenu",
+	"name": "Btn_Arrow_Codex_left",
 	"plugin-id": "Sprite",
-	"sid": 997428122752797,
+	"sid": 495969734106628,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 133167012891898
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 1920,
-						"height": 1080,
-						"originX": 0,
-						"originY": 0,
+						"width": 116,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8114334,
+						"imageSpriteId": 4108038,
+						"collisionPoly": {
+							"points": [
+								1,
+								1,
+								0,
+								1,
+								0,
+								0,
+								1,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					},
 					{
-						"width": 444,
-						"height": 738,
-						"originX": -0.7995495495495496,
-						"originY": -0.3170731707317073,
+						"width": 116,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3619436,
+						"imageSpriteId": 9744149,
+						"collisionPoly": {
+							"points": [
+								1,
+								1,
+								0,
+								1,
+								0,
+								0,
+								1,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 330251871095695,
+				"sid": 420559197935500,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

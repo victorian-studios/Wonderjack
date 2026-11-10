@@ -30,70 +30,70 @@
                         "mind": "Cautelosa",
                         "stage": "Tutorial",
                         "special": "Nenhum",
-                        "desc": "Uma rainha um pouco estabanada mas de bom coração. Gosta de ensinar as pessoas a jogar Blackjack e fica contente ao ver que suas aulas geraram frutos."
+                        "desc": "Uma rainha um pouco estabanada mas de bom coração. Gosta de ensinar as pessoas a jogar Wonderjack e fica contente ao ver que suas aulas geraram frutos."
                     },
                     "Mad Hatter": {
                         "name": "Chapeleiro Maluco",
-                        "mind": "Cauteloso",
-                        "stage": "Nível 1",
-                        "special": "Começa a partida com uma carta de número aleatória.",
-                        "desc": "Um antigo conhecido da Alice. Adora festas de aniversário, chás e...Blackjack. Acha divertido seguir sua própria regra para se beneficiar nas partidas. Só tira seu chapéu para oponentes formidáveis..."
+                        "mind": "Destemido",
+                        "stage": "Sala 1",
+                        "special": "[b]Início da partida:[/b]\nA próxima carta de número que comprar será oculta.",
+                        "desc": "Um antigo conhecido da Alice. Adora festas de aniversário, chás e... Wonderjack. Acha divertido seguir sua própria regra para se beneficiar nas partidas. Só tira seu chapéu para oponentes formidáveis..."
                     },
                     "March Hare": {
                         "name": "Lebre de Março",
-                        "mind": "Cautelosa",
-                        "stage": "Nível 1",
-                        "special": "Começa a partida com uma carta de poder aleatória.",
-                        "desc": "Amigo inseparável do chapeleiro. Sempre desconfiado e alerta, gosta de esconder truques embaixo da manga como forma de se precaver e evitar problemas. E se aproveita disso para ganhar vantagens no Blackjack."
+                        "mind": "Destemido",
+                        "stage": "Sala 1",
+                        "special": "[b]Início da partida:[/b]\nCompra uma carta de poder aleatória.",
+                        "desc": "Amigo inseparável do chapeleiro. Sempre desconfiado e alerta, gosta de esconder truques embaixo da manga como forma de se precaver e evitar problemas. E se aproveita disso para ganhar vantagens no Wonderjack."
                     },
                     "The Tweedles": {
                         "name": "Os Tweedles",
-                        "mind": "Cautelosos",
-                        "stage": "Stage 2",
-                        "special": "Every 2 turns they switch places, changing the main strategy.",
-                        "desc": "Os irmãos Tweedle nunca se entenderam...E mesmo assim formaram um time para jogar Blackjack! Juntos, eles pensam que tem o dobro de chance de ganhar...apesar de que na maioria das vezes eles só brigam entre si..."
+                        "mind": "Mista",
+                        "stage": "Sala 2",
+                        "special": "[size=26][b]No início do turno:[/b]\nTrocam de posição, mudando de estratégia e tem 40% de chance de ganhar 1 turno extra.[/size].",
+                        "desc": "Os irmãos Tweedle nunca se entenderam...E mesmo assim formaram um time para jogar Wonderjack! Juntos, eles pensam que tem o dobro de chance de ganhar...apesar de que na maioria das vezes eles só brigam entre si..."
                     },
                     "Caterpillar": {
                         "name": "Lagarta",
-                        "mind": "Cautelosa",
-                        "stage": "Nível 2",
+                        "mind": "Destemida",
+                        "stage": "Sala 2",
                         "special": "Cria aletoriamente uma nuvem de fumaça sobre as cartas do jogador por um turno.",
                         "desc": "Um ser que adora filosofia e fumar no seu tempo livre. Encontrou no Backjack uma nova forma de pensar e adora bolar estratégias para vencer seu adversário...Mesmo que precise do seu narguilé para isso..."
                     },
                     "Cheshire Cat": {
                         "name": "Gato de Cheshire",
                         "mind": "Cauteloso",
-                        "stage": "Nível 3",
+                        "stage": "Sala 3",
                         "special": "Desaparece aleatoriamente, fazendo com que todas suas cartas de número fiquem ocultas por 1 turno.",
-                        "desc": "Um ser icônico do País das Maravilhas. Adora desaparecer quando quer, deixando apenas seu sorriso enigmático pairando no ar...Joga Blackjack com a certeza da vitória, sempre planejando a próxima jogada."
+                        "desc": "Um ser icônico do País das Maravilhas. Adora desaparecer quando quer, deixando apenas seu sorriso enigmático pairando no ar...Joga Wonderjack com a certeza da vitória, sempre planejando a próxima jogada."
                     },
                     "General of Cards": {
                         "name": "General Carta",
-                        "mind": "Cautious",
-                        "stage": "Stage 3",
+                        "mind": "Cauteloso",
+                        "stage": "Sala 3",
                         "special": "Começa cada rodada com proteção por 3 turnos.",
-                        "desc": "O guarda-costas oficial da rainha! Ficou noites sem dormir tentando aprender Blackjack para proporcionar partidas divertidas para sua alteza. Apesar do cansaço, conseguiu dominar todos os fundamentos do jogo."
+                        "desc": "O guarda-costas oficial da rainha! Ficou noites sem dormir tentando aprender Wonderjack para proporcionar partidas divertidas para sua alteza. Apesar do cansaço, conseguiu dominar todos os fundamentos do jogo."
                     },
                     "Dodo": {
                         "name": "Dodô",
                         "mind": "Cautious",
-                        "stage": "Secret",
+                        "stage": "Sala Secreta",
                         "special": "Dá aleatoriamente para o jogador a primeira carta de número.",
-                        "desc": "Uma ave que não está extinta no País das Maravilhas! Seus hobbys incluem apostar corridas e jogar Blackjack, é claro. Também adora prêmios, mas não sabe diferenciar os bons dos ruins..."
+                        "desc": "Uma ave que não está extinta no País das Maravilhas! Seus hobbys incluem apostar corridas e jogar Wonderjack, é claro. Também adora prêmios, mas não sabe diferenciar os bons dos ruins..."
                     },
                     "Red Queen": {
                         "name": "Rainha de Copas",
                         "mind": "Cautious",
-                        "stage": "Stage 4",
+                        "stage": "Sala Final",
                         "special": "Remove aleatoriamente 1 carta de número do jogador para o resto da rodada.",
-                        "desc": "A rainha soberana do País das Maravilhas. Tem um gosto peculiar por cortar cabeças e corações. Há um tempo substituiu suas tardes de cricket por partidas de Blackjack com suas cartas-guarda. Mas ela já está entediada..."
+                        "desc": "A rainha soberana do País das Maravilhas. Tem um gosto peculiar por cortar cabeças e corações. Há um tempo substituiu suas tardes de cricket por partidas de Wonderjack com suas cartas-guarda. Mas ela já está entediada..."
                     },
                     "Jabberwock": {
                         "name": "Jaguadarte",
                         "mind": "Cauteloso",
-                        "stage": "Stage 4",
+                        "stage": "Sala Final",
                         "special": "Começa a partida com um candelabro especial contendo 5 velas.",
-                        "desc": "Uma lenda antiga do País das Maravilhas. Jaguadarte só era conhecido por meio de uma cantiga, e por isso deixou de ser tão temido. Tomado pela busca de ter seu poder reconhecido, começou a jogar Blackjack e desafiar qualquer um a sua frente."
+                        "desc": "Uma lenda antiga do País das Maravilhas. Jaguadarte só era conhecido por meio de uma cantiga, e por isso deixou de ser tão temido. Tomado pela busca de ter seu poder reconhecido, começou a jogar Wonderjack e desafiar qualquer um a sua frente."
                     }
                 },
                 "powers": {
@@ -204,8 +204,8 @@
             "name_1": "Ana Barata\nArtista",
             "name_2": "Vitor Cirilo\nProgramador",
             "name_3": "Ana Luiza\nArtista",
-            "name_4": "Testadores:\nArthur Barroso\nMarcelo Campos\nThuan Martins\nVitoria Peres",
-            "name_5": "Música e Sons:\n\nfreesound.org",
+            "name_4": "[size=44]Testadores:[/size]\n\nArthur Barroso | Marcelo Campos\nPaula Erthal | Thuan Martins\nVitoria Peres",
+            "name_5": "Música e Sons:\n\nGothic Roguelike (@alkakrab)\nfreesound.org",
             "bye": "Obrigada por jogar nosso jogo!"
         },
         "story": {
@@ -230,7 +230,7 @@
             "page_4": "[u][b]Capítulo 4[/b][/u]\n\n[b]O Perdedor[/b]\n\nVocê perde a rodada se o valor total das suas cartas somadas exceder em 21, ou se seu oponente obter uma soma maior que a sua.",
             "page_5": "[u][b]Capítulo 5[/b][/u]\n\n[b]O Empate[/b]\n\nQuando tem um empate ou ambos os jogadores excedem 21, ninguém pontua e uma nova rodada começa.",
             "white_queen": {
-                "1": "Então Alice, esse jogo é uma versão diferente do clássico ''21'' ou blackjack.",
+                "1": "Então Alice, Wonderjack é uma versão diferente do clássico ''21'' ou blackjack.",
                 "2": "O objetivo é o mesmo, tentar chegar a [b]21[/b] comprando cartas do baralho [color=#005eff]azul[/color] a sua direita.",
                 "3": "Mas não se preocupe tanto se não chegar exatamente a [b]21[/b]. É difícil, já que você não sabe o próximo número que vai comprar do baralho.",
                 "4": "Apenas evite de exceder [b]21[/b], ou você perderá a rodada. O baralho [color=#005eff]azul[/color] contém [b]12[/b] cartas de [b]1 até 12[/b].",
@@ -460,7 +460,7 @@
             "revive": "Você conseguiu uma [color=#f5fe05]segunda chance[/color]! Mas sua relíquia foi destruída."
         },
 		"relics": {
-            "choose": "Choose a relic:",
+            "choose": "Escolha uma relíquia:",
             "card_13": {
                 "title": "Carta 13",
                 "flavor_txt": "Número da sorte!",

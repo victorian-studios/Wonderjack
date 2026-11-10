@@ -1510,7 +1510,7 @@
 									"objectClass": "Quadro_Turns_Shadow",
 									"sid": 877675646303699,
 									"parameters": {
-										"frame-number": "Self.ID + 1"
+										"frame-number": "Self.Frame_ID + 1"
 									}
 								}
 							],
@@ -1531,7 +1531,7 @@
 									"objectClass": "Quadro_Turns_Shadow",
 									"sid": 971557870536814,
 									"parameters": {
-										"frame-number": "Self.ID"
+										"frame-number": "Self.Frame_ID"
 									}
 								}
 							],

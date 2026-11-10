@@ -35,6 +35,9 @@
 		"Btn_Confirm",
 		"Btn_Deny",
 		"Btn_Next",
-		"Btn_Back_2"
+		"Btn_Back_2",
+		"Btn_Arrow_Codex_left",
+		"Btn_Arrow_Codex_right",
+		"Btn_Back_Flag2"
 	]
 }

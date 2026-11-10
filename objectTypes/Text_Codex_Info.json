@@ -1,0 +1,24 @@
+{
+	"name": "Text_Codex_Info",
+	"plugin-id": "Text",
+	"sid": 512164443107607,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 295838527220844
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 291368829968629
+		}
+	],
+	"effectTypes": []
+}

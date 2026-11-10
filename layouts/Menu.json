@@ -41,7 +41,7 @@
 					}
 				},
 				{
-					"type": "AliceMenu",
+					"type": "Sprite_AliceMenu_Old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3251,10 +3251,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 960,
-								"y": 536,
-								"width": 7038,
-								"height": 2832.16,
+								"x": 1005,
+								"y": 531.9200000000001,
+								"width": 2248,
+								"height": 1272,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6439,7 +6439,8 @@
 							"sid": 285892016879880,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 0
+								"Frame_ID": 0,
+								"ID": 1
 							},
 							"behaviors": {
 								"Fade": {
@@ -6457,7 +6458,7 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 752,
+								"x": 744,
 								"y": 544,
 								"width": 166,
 								"height": 186,
@@ -6486,6 +6487,7 @@
 							"sid": 360961558964803,
 							"tags": "",
 							"instanceVariables": {
+								"Frame_ID": 2,
 								"ID": 2
 							},
 							"behaviors": {
@@ -6533,7 +6535,8 @@
 							"sid": 933787236549606,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 4
+								"Frame_ID": 4,
+								"ID": 3
 							},
 							"behaviors": {
 								"Fade": {
@@ -6580,7 +6583,8 @@
 							"sid": 683749862266596,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 6
+								"Frame_ID": 6,
+								"ID": 4
 							},
 							"behaviors": {
 								"Fade": {
@@ -6619,7 +6623,7 @@
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Codex_Lock",
-								"initial-frame": 10,
+								"initial-frame": 8,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -6627,7 +6631,56 @@
 							"sid": 309106314055190,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 10
+								"Frame_ID": 8,
+								"ID": 5
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0.5,
+										"wait-time": 0,
+										"fade-out-time": 0.5,
+										"destroy": true,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1416,
+								"y": 552,
+								"width": 148,
+								"height": 183,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Quadro_Turns_Shadow",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Codex_Lock",
+								"initial-frame": 10,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 173,
+							"sid": 575639612750213,
+							"tags": "",
+							"instanceVariables": {
+								"Frame_ID": 10,
+								"ID": 6
 							},
 							"behaviors": {
 								"Fade": {
@@ -6670,11 +6723,12 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 173,
-							"sid": 575639612750213,
+							"uid": 174,
+							"sid": 898102105726571,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 12
+								"Frame_ID": 12,
+								"ID": 7
 							},
 							"behaviors": {
 								"Fade": {
@@ -6692,8 +6746,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 895.6285714285714,
-								"y": 729.7319587628866,
+								"x": 912,
+								"y": 728,
 								"width": 168,
 								"height": 188,
 								"originX": 0.5,
@@ -6717,11 +6771,12 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 174,
-							"sid": 898102105726571,
+							"uid": 175,
+							"sid": 871611064975403,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 14
+								"Frame_ID": 14,
+								"ID": 8
 							},
 							"behaviors": {
 								"Fade": {
@@ -6739,8 +6794,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1063.5142857142857,
-								"y": 727.1752577319587,
+								"x": 1088,
+								"y": 728,
 								"width": 182,
 								"height": 183,
 								"originX": 0.5,
@@ -6764,58 +6819,12 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 175,
-							"sid": 871611064975403,
-							"tags": "",
-							"instanceVariables": {
-								"ID": 16
-							},
-							"behaviors": {
-								"Fade": {
-									"properties": {
-										"fade-in-time": 0.5,
-										"wait-time": 0,
-										"fade-out-time": 0.5,
-										"destroy": true,
-										"enabled": false,
-										"live-preview": false
-									}
-								}
-							},
-							"materialSurfaceType": "smooth",
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 1240,
-								"y": 728,
-								"width": 168,
-								"height": 182,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"z": 0,
-								"angle": 0
-							}
-						},
-						{
-							"type": "Quadro_Turns_Shadow",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Codex_Lock",
-								"initial-frame": 8,
-								"enable-collisions": true,
-								"live-preview": false
-							},
 							"uid": 176,
 							"sid": 336116337915519,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 8
+								"Frame_ID": 16,
+								"ID": 9
 							},
 							"behaviors": {
 								"Fade": {
@@ -6833,10 +6842,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 1416,
-								"y": 544,
-								"width": 148,
-								"height": 183,
+								"x": 1248,
+								"y": 728,
+								"width": 168,
+								"height": 182,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -6862,7 +6871,8 @@
 							"sid": 515491921162478,
 							"tags": "",
 							"instanceVariables": {
-								"ID": 18
+								"Frame_ID": 18,
+								"ID": 10
 							},
 							"behaviors": {
 								"Fade": {
@@ -7242,7 +7252,7 @@
 				{
 					"type": "Text_Static_Generic",
 					"properties": {
-						"text": "Back",
+						"text": "Menu",
 						"enable-bbcode": true,
 						"font": "Alice-Regular",
 						"size": 38,
@@ -7269,7 +7279,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"my_id": 0,
-						"my_txt": "menu.btn_back"
+						"my_txt": "options.menu"
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -7427,12 +7437,152 @@
 			"overriden": 0,
 			"subLayers": [
 				{
-					"name": "enemies2",
+					"name": "relics2",
 					"overriden": 0,
 					"subLayers": [],
+					"instances": [],
+					"sid": 105010788819108,
+					"effectTypes": [],
+					"isInitiallyVisible": false,
+					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						0.3686274509803922,
+						0.3686274509803922,
+						0.3686274509803922,
+						1
+					],
+					"isTransparent": true,
+					"sampling": "auto",
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "enemies2",
+					"overriden": 0,
+					"subLayers": [
+						{
+							"name": "bkkg",
+							"overriden": 0,
+							"subLayers": [],
+							"instances": [
+								{
+									"type": "card_enemy",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Default",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 227,
+									"sid": 759596697205788,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {},
+									"materialSurfaceType": "smooth",
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 966,
+										"y": 547,
+										"width": 1300,
+										"height": 771,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0
+									}
+								},
+								{
+									"type": "Btn_Back_Flag2",
+									"properties": {
+										"initially-visible": true,
+										"initial-animation": "Default",
+										"initial-frame": 0,
+										"enable-collisions": true,
+										"live-preview": false
+									},
+									"uid": 432,
+									"sid": 508856881966724,
+									"tags": "",
+									"instanceVariables": {},
+									"behaviors": {},
+									"materialSurfaceType": "smooth",
+									"showing": true,
+									"locked": false,
+									"world": {
+										"x": 1712,
+										"y": 344,
+										"width": 226,
+										"height": 73,
+										"originX": 0.5,
+										"originY": 0.5,
+										"color": [
+											1,
+											1,
+											1,
+											1
+										],
+										"z": 0,
+										"angle": 0
+									}
+								}
+							],
+							"sid": 693481186892876,
+							"effectTypes": [],
+							"isInitiallyVisible": true,
+							"isInitiallyInteractive": true,
+							"isHTMLElementsLayer": false,
+							"color": [
+								1,
+								1,
+								1,
+								1
+							],
+							"backgroundColor": [
+								0.3686274509803922,
+								0.3686274509803922,
+								0.3686274509803922,
+								1
+							],
+							"isTransparent": true,
+							"sampling": "auto",
+							"parallaxX": 1,
+							"parallaxY": 1,
+							"scaleRate": 1,
+							"forceOwnTexture": false,
+							"renderingMode": "3d",
+							"drawOrder": "z-order",
+							"useRenderCells": false,
+							"blendMode": "normal",
+							"zElevation": 0,
+							"global": false
+						}
+					],
 					"instances": [
 						{
-							"type": "card_enemy",
+							"type": "card_enemy2",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Default",
@@ -7440,8 +7590,8 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 227,
-							"sid": 759596697205788,
+							"uid": 430,
+							"sid": 224833166399560,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
@@ -7455,6 +7605,669 @@
 								"height": 771,
 								"originX": 0.5,
 								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Icon_Brain",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 419,
+							"sid": 319515933473061,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 392,
+								"y": 408,
+								"width": 119,
+								"height": 113,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Icon_Map",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 420,
+							"sid": 884872855874067,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 752,
+								"y": 408,
+								"width": 71,
+								"height": 123,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Icon_Star",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 421,
+							"sid": 715553200528972,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 400,
+								"y": 576,
+								"width": 122,
+								"height": 112,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Btn_Arrow_Codex_right",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 423,
+							"sid": 386705063992428,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1544,
+								"y": 872,
+								"width": 116,
+								"height": 96,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Btn_Arrow_Codex_left",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Default",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 424,
+							"sid": 233247851233991,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1176,
+								"y": 872,
+								"width": 116,
+								"height": 96,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Text_Codex_Info",
+							"properties": {
+								"text": "General of Cards",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 72,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 425,
+							"sid": 135100827695333,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 1
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 328,
+								"y": 184,
+								"width": 774,
+								"height": 120,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Text_Codex_Info",
+							"properties": {
+								"text": "Cauteloso\nDestemido",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 37,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 426,
+							"sid": 788264562806486,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 2
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 456,
+								"y": 344,
+								"width": 240,
+								"height": 120,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Text_Codex_Info",
+							"properties": {
+								"text": "Sala Secreta",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 42,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 427,
+							"sid": 729849228777990,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 3
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 792,
+								"y": 344,
+								"width": 312,
+								"height": 128,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Text_Codex_Info",
+							"properties": {
+								"text": "[size=26][b]No início do turno:[/b]\nTrocam de posição, mudando de estratégia e tem 40% de chance de ganhar 1 turno extra[/size]",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 32,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 428,
+							"sid": 486931180090416,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 4
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 464,
+								"y": 504,
+								"width": 640,
+								"height": 152,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Text_Codex_Info",
+							"properties": {
+								"text": "Uma lenda antiga do País das Maravilhas. Jaguadarte só era conhecido por meio de uma cantiga, e por isso deixou de ser tão temido. Tomado pela busca de ter seu poder reconhecido, começou a jogar Blackjack e desafiar qualquer um a sua frente.",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 27,
+								"line-height": 0,
+								"bold": false,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "center",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 429,
+							"sid": 256601429242724,
+							"tags": "",
+							"instanceVariables": {
+								"ID": 5
+							},
+							"behaviors": {
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 336,
+								"y": 680,
+								"width": 768,
+								"height": 240,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "Text_Static_Generic",
+							"properties": {
+								"text": "Back",
+								"enable-bbcode": true,
+								"font": "Alice-Regular",
+								"size": 38,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "center",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"text-direction": "ltr",
+								"icon-set": -1,
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 431,
+							"sid": 666537151520066,
+							"tags": "",
+							"instanceVariables": {
+								"my_id": 0,
+								"my_txt": "options.back"
+							},
+							"behaviors": {},
+							"materialSurfaceType": "smooth",
+							"sceneGraphData": {
+								"parent-uid": null,
+								"uid": 431,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"de": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZ": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformD": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformSZ": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1608,
+								"y": 304,
+								"width": 199.42429337375938,
+								"height": 66.20929839391374,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
+						},
+						{
+							"type": "easyMask",
+							"properties": {},
+							"uid": 434,
+							"sid": 551614415445276,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 551,
+								"y": 1685,
+								"width": 100,
+								"height": 100,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						},
+						{
+							"type": "Enemy",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Red Queen",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 422,
+							"sid": 945715040073063,
+							"tags": "",
+							"instanceVariables": {
+								"SpecialPower": 0
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 5,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 20,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								},
+								"Fade": {
+									"properties": {
+										"fade-in-time": 0,
+										"wait-time": 0,
+										"fade-out-time": 0,
+										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Timer": {
+									"properties": {}
+								},
+								"Tween": {
+									"properties": {
+										"enabled": true
+									}
+								}
+							},
+							"materialSurfaceType": "smooth",
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 1360,
+								"y": 796,
+								"width": 592.8169118042433,
+								"height": 654.3994905418988,
+								"originX": 0.386986301369863,
+								"originY": 0.9431230610134437,
 								"color": [
 									1,
 									1,
