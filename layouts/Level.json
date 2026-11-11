@@ -1092,7 +1092,7 @@
 									"h": false,
 									"de": false,
 									"a": false,
-									"o": true,
+									"o": false,
 									"v": false,
 									"d": true,
 									"sm": "normal"
@@ -1594,7 +1594,7 @@
 							"h": false,
 							"de": false,
 							"a": false,
-							"o": true,
+							"o": false,
 							"v": false,
 							"d": true,
 							"sm": "normal"
@@ -7937,6 +7937,101 @@
 						"height": 82,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Sprite_Queen_Axe",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 433,
+					"sid": 985791891840279,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0.5,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2352,
+						"y": -688,
+						"width": 302.2813259200773,
+						"height": 201.5208839467182,
+						"originX": 0.3482905982905983,
+						"originY": 0.5224358974358975,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Sprite_Queen_Corte",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "New",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 435,
+					"sid": 277759998651185,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0.25,
+								"destroy": true,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2621,
+						"y": -484,
+						"width": 156,
+						"height": 227,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

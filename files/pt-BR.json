@@ -23,6 +23,9 @@
             "codex": {
                 "name": "O Codex",
                 "info_lock": "???",
+                "mind_cautious": "[b]Estratégia: Cauteloso[/b]\n\nEvita se arriscar ao comprar números e prefere jogar poderes quando a mão está cheia.",
+                "mind_fearless": "[b]Estratégia: Destemido[/b]\n\nSe arrisca ao comprar números e joga poderes frequentemente.",
+                "mind_mixed": "[b]Estratégia: Mista[/b]\n\nMuda a forma de jogar durante a rodada. Alternando entre cauteloso ou destemido.",
                 "enemies": {
                     "title": "Oponentes",
                     "White Queen": {
@@ -43,56 +46,56 @@
                         "name": "Lebre de Março",
                         "mind": "Destemido",
                         "stage": "Sala 1",
-                        "special": "[b]Início da partida:[/b]\nCompra uma carta de poder aleatória.",
+                        "special": "[b]Início da partida:[/b]\nCompra uma carta de poder.",
                         "desc": "Amigo inseparável do chapeleiro. Sempre desconfiado e alerta, gosta de esconder truques embaixo da manga como forma de se precaver e evitar problemas. E se aproveita disso para ganhar vantagens no Wonderjack."
                     },
                     "The Tweedles": {
                         "name": "Os Tweedles",
                         "mind": "Mista",
                         "stage": "Sala 2",
-                        "special": "[size=26][b]No início do turno:[/b]\nTrocam de posição, mudando de estratégia e tem 40% de chance de ganhar 1 turno extra.[/size].",
+                        "special": "[size=26][b]No primeiro turno:[/b]\nTrocam de posição, mudando de estratégia e tem 40% de chance de realizar 1 turno extra (1 vez por rodada).[/size]",
                         "desc": "Os irmãos Tweedle nunca se entenderam...E mesmo assim formaram um time para jogar Wonderjack! Juntos, eles pensam que tem o dobro de chance de ganhar...apesar de que na maioria das vezes eles só brigam entre si..."
                     },
                     "Caterpillar": {
                         "name": "Lagarta",
                         "mind": "Destemida",
                         "stage": "Sala 2",
-                        "special": "Cria aletoriamente uma nuvem de fumaça sobre as cartas do jogador por um turno.",
+                        "special": "[b]No início do turno:[/b] 40% de chance de criar núvens de fumaça sobre as cartas do jogador por 3 turnos (1 vez por rodada).",
                         "desc": "Um ser que adora filosofia e fumar no seu tempo livre. Encontrou no Backjack uma nova forma de pensar e adora bolar estratégias para vencer seu adversário...Mesmo que precise do seu narguilé para isso..."
                     },
                     "Cheshire Cat": {
                         "name": "Gato de Cheshire",
                         "mind": "Cauteloso",
                         "stage": "Sala 3",
-                        "special": "Desaparece aleatoriamente, fazendo com que todas suas cartas de número fiquem ocultas por 1 turno.",
+                        "special": "[b]No início do turno:[/b]\n25% de chance de desaparecer um objeto da mesa por 1 turno.",
                         "desc": "Um ser icônico do País das Maravilhas. Adora desaparecer quando quer, deixando apenas seu sorriso enigmático pairando no ar...Joga Wonderjack com a certeza da vitória, sempre planejando a próxima jogada."
                     },
                     "General of Cards": {
                         "name": "General Carta",
                         "mind": "Cauteloso",
                         "stage": "Sala 3",
-                        "special": "Começa cada rodada com proteção por 3 turnos.",
+                        "special": "[b]No início da rodada:[/b]\nGanha proteção por 3 turnos.",
                         "desc": "O guarda-costas oficial da rainha! Ficou noites sem dormir tentando aprender Wonderjack para proporcionar partidas divertidas para sua alteza. Apesar do cansaço, conseguiu dominar todos os fundamentos do jogo."
                     },
                     "Dodo": {
                         "name": "Dodô",
                         "mind": "Cautious",
                         "stage": "Sala Secreta",
-                        "special": "Dá aleatoriamente para o jogador a primeira carta de número.",
+                        "special": "[b]No início do turno:[/b]\n30% de chance de comprar uma carta de número para o jogador.",
                         "desc": "Uma ave que não está extinta no País das Maravilhas! Seus hobbys incluem apostar corridas e jogar Wonderjack, é claro. Também adora prêmios, mas não sabe diferenciar os bons dos ruins..."
                     },
                     "Red Queen": {
                         "name": "Rainha de Copas",
                         "mind": "Cautious",
                         "stage": "Sala Final",
-                        "special": "Remove aleatoriamente 1 carta de número do jogador para o resto da rodada.",
+                        "special": "[b]No início do turno:[/b]\n40% de chance de escolher e remover 1 carta de número visível do jogador para o resto da rodada.",
                         "desc": "A rainha soberana do País das Maravilhas. Tem um gosto peculiar por cortar cabeças e corações. Há um tempo substituiu suas tardes de cricket por partidas de Wonderjack com suas cartas-guarda. Mas ela já está entediada..."
                     },
                     "Jabberwock": {
                         "name": "Jaguadarte",
                         "mind": "Cauteloso",
                         "stage": "Sala Final",
-                        "special": "Começa a partida com um candelabro especial contendo 5 velas.",
+                        "special": "[size=26][b]Passivo:[/b] Troca o candelabro para 5 velas.\n[b]No início da rodada:[/b]\nComeça jogando primeiro.[/size]",
                         "desc": "Uma lenda antiga do País das Maravilhas. Jaguadarte só era conhecido por meio de uma cantiga, e por isso deixou de ser tão temido. Tomado pela busca de ter seu poder reconhecido, começou a jogar Wonderjack e desafiar qualquer um a sua frente."
                     }
                 },
@@ -208,7 +211,7 @@
             "name_1": "Ana Barata\nArtista",
             "name_2": "Vitor Cirilo\nProgramador",
             "name_3": "Ana Luiza\nArtista",
-            "name_4": "[size=44]Testadores:[/size]\n\nArthur Barroso | Marcelo Campos\nPaula Erthal | Thuan Martins\nVitoria Peres",
+            "name_4": "[size=44]Testadores:[/size]\n\nArthur Barroso | Marcelo Campos\nPaula Erthal | Thuan Martins\nVitória Peres",
             "name_5": "Música e Sons:\n\nGothic Roguelike (@alkakrab)\nfreesound.org",
             "bye": "Obrigada por jogar nosso jogo!"
         },
@@ -323,7 +326,9 @@
             "enemies" : {
                 "Alice": {
                     "name": "Alice",
-                    "talk_march_hare": "Ei, esse é meu turno!"
+                    "talk_march_hare": "Ei, esse é meu turno!",
+                    "talk_jabberwock_1": "Jaguadarte!? Você também está participando?",
+                    "talk_jabberwock_2": "Humm... tudo bem. Manda ver!"
                 },
                 "White Queen": {
                     "name": "Rainha Branca",
@@ -433,7 +438,7 @@
                     "talk_lose": "Você pode ter ganhado esta batalha... Mas não ganhou a guerra...",
                     "talk_thinking_1": "Calado! Estou pensando na minha estratégia!",
                     "talk_thinking_2": "Isolente! Você realmente pensa que pode me vencer",
-                    "special": "Eu irei cortar esta carta!"
+                    "special": "Agora eu declaro essa carta ilegal!"
                 },
                 "Jabberwock": {
                     "name": "Jaguadarte",
@@ -441,7 +446,9 @@
                     "talk_lose": "Arghhh!!! Como se atreve?!",
                     "talk_thinking_1": "Com esse movimento, eu vou te despedaçar... hehe",
                     "talk_thinking_2": "Minhas presas estão coçando com essa partida...",
-                    "special": "Alice! Melhor de três? O que você acha?"
+                    "special_1": "Algum problema Alice? O que acha de jogar uma partida de melhor de três?",
+                    "special_2": "Gosto da sua ousadia... Eu começo então.",
+                    "special_3": "Eu começo!"
                 }
             },
             "bell": "[icon=heart] O Sino [icon=heart] \n\nToque o sino para [color=#fa1c03]encerrar seu turno[/color]. Seu oponente terá [color=#fa1c03]só mais um turno[/color] antes do fim da rodada.\nNada acontece se for usado no último turno.",
@@ -534,7 +541,7 @@
             "key": {
                 "title": "Chave",
                 "flavor_txt": "Abra-te Sésamo!",
-                "desc":"Libera acesso a um estágio [color=#f5fe05]secreto[/color]."
+                "desc":"Libera acesso a um quarto [color=#f5fe05]secreto[/color]."
             },
             "picnic": {
                 "title": "Cesta de Pequinique",
@@ -579,7 +586,7 @@
             "trap": {
                 "title": "Armadilha de Coelho",
                 "flavor_txt": "Te peguei!",
-                "desc": "Quando receber uma carta de número e passar da meta, [color=#f5fe05]discarte[/color] a carta para o final do baralho (uma vez por partida)."
+                "desc": "Quando receber uma carta de número e passar da meta, [color=#f5fe05]descarte[/color] a carta para o final do baralho (uma vez por partida)."
             },
             "lucky": {
                 "title": "Pé de Coelho",

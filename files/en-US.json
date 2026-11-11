@@ -23,6 +23,9 @@
             "codex": {
                 "name": "The Codex",
                 "info_lock": "???",
+                "mind_cautious": "[b]Strategy: Cautious[/b]\n\nAvoids taking risks when drawing numbers and prefers to play powers when their hand is full.",
+                "mind_fearless": "[b]Strategy: Fearless[/b]\n\nTakes risks when drawing numbers and plays powers frequently.",
+                "mind_mixed": "[b]Strategy: Mixed[/b]\n\nChanges its playstyle during the round, alternating between cautious and fearless.",
                 "enemies": {
                     "title": "Opponents",
                     "White Queen": {
@@ -35,64 +38,64 @@
                     "Mad Hatter": {
                         "name": "Mad Hatter",
                         "mind": "Fearless",
-                        "stage": "Stage 1",
-                        "special": "Starts the match with a random number card.",
+                        "stage": "Room 1",
+                        "special": "[b]On match start:[/b]\nThe next card draw will be hidden.",
                         "desc": "An old acquaintance of Alice's. He adores birthday parties, tea and... Wonderjack. He gets a kick out of playing by his own rules to get an edge in every match. He only tips his hat to formidable opponents..."
                     },
                     "March Hare": {
                         "name": "March Hare",
                         "mind": "Fearless",
-                        "stage": "Stage 1",
-                        "special": "Starts the match with a random power card.",
+                        "stage": "Room 1",
+                        "special": "[b]On match start:[/b]\nDraw a power card.",
                         "desc": "The Hatter's inseparable friend. Always suspicious and on his toes, he likes to keep a few tricks up his sleeve to play it safe and stay out of trouble. And he makes the most of them to get the upper hand in Wonderjack."
                     },
                     "The Tweedles": {
                         "name": "The Tweedles",
                         "mind": "Mixed",
-                        "stage": "Stage 2",
-                        "special": "Every 2 turns they switch places, changing the main strategy.",
+                        "stage": "Room 2",
+                        "special": "[size=26][b]On the first turn:[/b]\nThey switch positions, changing their strategy, and have a 40% chance to take 1 extra turn (once per round).",
                         "desc": "The Tweedle brothers have never seen eye to eye... And yet they teamed up to play Wonderjack! Together, they think they've got twice the chance of winning... even though most of the time they just end up squabbling with each other..."
                     },
                     "Caterpillar": {
                         "name": "Caterpillar",
                         "mind": "Fearless",
-                        "stage": "Stage 2",
-                        "special": "Randomly creates a smoke cloud above the player's cards for 1 turn.",
+                        "stage": "Room 2",
+                        "special": "[b]At the start of the turn:[/b] 40% chance to create clouds of smoke over the player's cards for 3 turns (once per round).",
                         "desc": "A creature who loves philosophy and smoking in its spare time. It found in Wonderjack a whole new way of thinking and loves cooking up strategies to beat its opponents... even if it needs its hookah to do so..."
                     },
                     "Cheshire Cat": {
                         "name": "Cheshire Cat",
                         "mind": "Fearless",
-                        "stage": "Stage 3",
-                        "special": "Randomly desappears making all ther number cards hidden for 1 turn.",
+                        "stage": "Room 3",
+                        "special": "[b]At the start of the turn:[/b]\n25% chance to make an object disappear from the table for 1 turn.",
                         "desc": "An iconic figure of Wonderland. He loves vanishing whenever he pleases, leaving nothing behind but his enigmatic grin hanging in the air... He plays Wonderjack as if victory were already in the bag, always thinking one move ahead."
                     },
                     "General of Cards": {
                         "name": "General of Cards",
                         "mind": "Cautious",
-                        "stage": "Stage 3",
-                        "special": "Starts every round with protection for 3 turns.",
+                        "stage": "Room 3",
+                        "special": "[b]At the start of the round:[/b]\nGain protection for 3 turns.",
                         "desc": "The Queen's official bodyguard! He pulled countless all-nighters learning Wonderjack so he could give Her Majesty some fun matches. Exhausted as he is, he's managed to master all the fundamentals of the game."
                     },
                     "Dodo": {
                         "name": "Dodo",
                         "mind": "Cautious",
-                        "stage": "Secret",
-                        "special": "Randomly gives the first number card for the player.",
+                        "stage": "Secret Room",
+                        "special": "[b]At the start of the turn:[/b]\n30% chance to draw a number card for the player.",
                         "desc": "A bird that's far from extinct in Wonderland! Its hobbies include racing and, of course, playing Wonderjack. It also loves prizes, but can't tell the good ones from the bad..."
                     },
                     "Red Queen": {
                         "name": "Red Queen",
                         "mind": "Cautious",
-                        "stage": "Stage 4",
-                        "special": "Randomly removes 1 number card from the player for the rest of the round.",
+                        "stage": "Final Room",
+                        "special": "[b]At the start of the turn:[/b]\n40% chance to choose and remove 1 visible number card from the player for the rest of the round.",
                         "desc": "The sovereign ruler of Wonderland. She has a peculiar taste for chopping off heads... and hearts. A while ago, she swapped her afternoons of croquet for Wonderjack matches with her card guards. But she's already bored stiff..."
                     },
                     "Jabberwock": {
                         "name": "Jabberwock",
                         "mind": "Cautious",
-                        "stage": "Stage 4",
-                        "special": "Starts the match with a special candlestick contaning 5 candles.",
+                        "stage": "Final Room",
+                        "special": "[size=26][b]Passive:[/b] Changes the chandelier to 5 candles.\n[b]At the start of the round:[/b]\nPlays first.[/size]",
                         "desc": "An ancient Wonderland legend. The Jabberwock was known only through an old rhyme, and so it gradually stopped being feared. Driven by a hunger to have its power recognized, it took up Wonderjack and began challenging anyone who crossed its path."
                     }
                 },
@@ -209,7 +212,7 @@
             "name_1": "Ana Barata\nArtist",
             "name_2": "Vitor Cirilo\nProgrammer",
             "name_3": "Ana Luiza\nArtist",
-            "name_4": "[size=44]Game Testers:[/size]\n\nArthur Barroso | Marcelo Campos\nPaula Erthal | Thuan Martins\nVitoria Peres",
+            "name_4": "[size=44]Game Testers:[/size]\n\nArthur Barroso | Marcelo Campos\nPaula Erthal | Thuan Martins\nVitória Peres",
             "name_5": "Music and Sounds:\n\nGothic Roguelike (@alkakrab)\nfreesound.org",
             "bye": "Thanks for playing our game!"
         },
@@ -249,7 +252,7 @@
                 "12": "Now let's start playing it!",
                 "13": "Well, I'm not drawing anymore cards. So I'll stop!",
                 "14": "Fantastic! You won the first round Alice.",
-                "15": "When you win a round, a [color=#005eff]blue[/color] flame lights up on the candlestick.",
+                "15": "When you win a round, a [color=#005eff]blue[/color] flame lights up on the chandelier.",
                 "16": "But when you opponent wins, a [color=#ff0000]red[/color] flame lights up.",
                 "17": "The first player to win 2 rounds is the winner of the match!",
                 "18": "Now lets focus that special deck on your left to use some [color=#ffff00]power[/color] cards this time.",
@@ -322,7 +325,9 @@
             "enemies": {
                 "Alice": {
                     "name": "Alice",
-                    "talk_march_hare": "Hey, it's my turn!"
+                    "talk_march_hare": "Hey, it's my turn!",
+                    "talk_jabberwock_1": "Jabberwock!? You're also participating?",
+                    "talk_jabberwock_2": "Humm... sure. Bring it on!"
                 },
                 "White Queen": {
                     "name": "White Queen",
@@ -440,7 +445,9 @@
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
                     "talk_thinking_2": "My fangs are itching for this game...",
-                    "special": "Alice! Best of three? What do you think?"
+                    "special": "What's the matter, Alice? How about a best-of-three match?",
+                    "special_2": "I like your boldness... I'll go first, then!",
+                    "special_3": "I'll go first!"
                 }
             },
             "bell": "[icon=heart] The Bell [icon=heart] \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",

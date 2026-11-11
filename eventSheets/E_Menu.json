@@ -147,6 +147,15 @@
 					}
 				},
 				{
+					"id": "set-animation",
+					"objectClass": "Banner_fundo",
+					"sid": 455857346755816,
+					"parameters": {
+						"animation": "Language",
+						"from": "current-frame"
+					}
+				},
+				{
 					"id": "pin-to-object-properties",
 					"objectClass": "Gallery_Arts_Small",
 					"sid": 977831892390877,
@@ -212,6 +221,10 @@
 						"type": "log",
 						"message": "\" I I I I I I I  M E N U  I I I I I I I\""
 					}
+				},
+				{
+					"callFunction": "Save_Game",
+					"sid": 985478249763072
 				}
 			],
 			"sid": 156210455576702,
@@ -3256,6 +3269,47 @@
 			"sid": 833294580989244
 		},
 		{
+			"functionName": "Save_Game",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 695833998230913,
+					"parameters": {
+						"key": "\"my_codex\"",
+						"value": "A_zCodex.AsJSON"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 921712438697456,
+					"parameters": {
+						"key": "\"my_config\"",
+						"value": "A_zOptions_Config.AsJSON"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 276232695389607,
+					"parameters": {
+						"key": "\"my_save\"",
+						"value": "D_Save.AsJSON"
+					}
+				}
+			],
+			"sid": 985803520855543
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Tutorial_Old",
@@ -4366,6 +4420,24 @@
 							"conditions": [],
 							"actions": [
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 541672426436209,
+									"parameters": {
+										"variable": "EnemyName",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Icon_Brain",
+									"sid": 127419800948027,
+									"parameters": {
+										"animation": "\"unknown\"",
+										"from": "beginning"
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "Enemy_Extra_Anim",
 									"sid": 219829851360580
@@ -4572,15 +4644,6 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 414493580650752,
-													"parameters": {
-														"width": "432",
-														"height": "552"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 965704400742429,
@@ -4588,9 +4651,49 @@
 														"x": "1576",
 														"y": "808"
 													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 680394059566396,
+													"parameters": {
+														"width": "432",
+														"height": "552"
+													}
 												}
 											],
-											"sid": 994475348778840
+											"sid": 994475348778840,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 620994272476580,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 878189386305265,
+															"parameters": {
+																"animation": "\"mind_cautious\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 400328759054097
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -4626,15 +4729,6 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 947131736906211,
-													"parameters": {
-														"width": "424",
-														"height": "600"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 795923243218744,
@@ -4642,9 +4736,49 @@
 														"x": "1576",
 														"y": "808"
 													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 810770594460466,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
 												}
 											],
-											"sid": 215821977443226
+											"sid": 215821977443226,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 618279293146872,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 631883062258367,
+															"parameters": {
+																"animation": "\"mind_fearless\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 227373497846775
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -4680,15 +4814,6 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 617339369387961,
-													"parameters": {
-														"width": "456",
-														"height": "560"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 121836773402476,
@@ -4696,9 +4821,49 @@
 														"x": "1360",
 														"y": "776"
 													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 410172326201764,
+													"parameters": {
+														"width": "456",
+														"height": "560"
+													}
 												}
 											],
-											"sid": 851363569819070
+											"sid": 851363569819070,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 942736155682826,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 647542632742241,
+															"parameters": {
+																"animation": "\"mind_cautious\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 699159853567878
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -4734,21 +4899,21 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 628117229039387,
-													"parameters": {
-														"width": "388.6",
-														"height": "579.1"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 466555824006075,
 													"parameters": {
 														"x": "1344",
 														"y": "792"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 357024744238149,
+													"parameters": {
+														"width": "388.6",
+														"height": "579.1"
 													}
 												},
 												{
@@ -4783,7 +4948,38 @@
 													}
 												}
 											],
-											"sid": 734035376824627
+											"sid": 734035376824627,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 393114100680054,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 746980683062780,
+															"parameters": {
+																"animation": "\"mind_mixed\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 363643183214542
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -4819,15 +5015,6 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 306668740955693,
-													"parameters": {
-														"width": "424",
-														"height": "600"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 250296291326746,
@@ -4835,9 +5022,49 @@
 														"x": "1576",
 														"y": "808"
 													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 254521147271118,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
 												}
 											],
-											"sid": 959584966253876
+											"sid": 959584966253876,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 545871185826584,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 136534468283003,
+															"parameters": {
+																"animation": "\"mind_fearless\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 429370604554375
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -4873,21 +5100,21 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 356803349730859,
-													"parameters": {
-														"width": "424",
-														"height": "600"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 465230122029215,
 													"parameters": {
 														"x": "1576",
 														"y": "808"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 862257174981019,
+													"parameters": {
+														"width": "424",
+														"height": "600"
 													}
 												},
 												{
@@ -4953,7 +5180,38 @@
 													}
 												}
 											],
-											"sid": 661401841273498
+											"sid": 661401841273498,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 760172008764118,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 591122941893877,
+															"parameters": {
+																"animation": "\"mind_cautious\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 542661066317627
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -4989,15 +5247,6 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 679286682219679,
-													"parameters": {
-														"width": "424",
-														"height": "600"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 443294785905161,
@@ -5005,9 +5254,49 @@
 														"x": "1576",
 														"y": "808"
 													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 869359206203280,
+													"parameters": {
+														"width": "424",
+														"height": "600"
+													}
 												}
 											],
-											"sid": 229619815400807
+											"sid": 229619815400807,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 730167130288781,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 975549694631389,
+															"parameters": {
+																"animation": "\"mind_cautious\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 709720260268936
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -5043,15 +5332,6 @@
 													}
 												},
 												{
-													"id": "set-size",
-													"objectClass": "Enemy",
-													"sid": 987464900110745,
-													"parameters": {
-														"width": "433.7",
-														"height": "617.8"
-													}
-												},
-												{
 													"id": "set-position",
 													"objectClass": "Enemy",
 													"sid": 890461223061004,
@@ -5059,9 +5339,49 @@
 														"x": "1365",
 														"y": "781"
 													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 447460225219397,
+													"parameters": {
+														"width": "433.7",
+														"height": "617.8"
+													}
 												}
 											],
-											"sid": 859429101336122
+											"sid": 859429101336122,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 379314413769918,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 343088605685385,
+															"parameters": {
+																"animation": "\"mind_cautious\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 954769144518711
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -5097,25 +5417,56 @@
 													}
 												},
 												{
-													"id": "set-size",
+													"id": "set-position",
 													"objectClass": "Enemy",
-													"sid": 347914216731487,
+													"sid": 159990208518707,
 													"parameters": {
-														"width": "424",
-														"height": "600"
+														"x": "1360",
+														"y": "796"
 													}
 												},
 												{
-													"id": "set-position",
+													"id": "set-size",
 													"objectClass": "Enemy",
-													"sid": 751623076975154,
+													"sid": 163981464069680,
 													"parameters": {
-														"x": "1576",
-														"y": "808"
+														"width": "592.8",
+														"height": "654.3"
 													}
 												}
 											],
-											"sid": 408863539189300
+											"sid": 408863539189300,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 744955422511851,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 139821808867184,
+															"parameters": {
+																"animation": "\"mind_cautious\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 590731918486832
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -5151,9 +5502,20 @@
 													}
 												},
 												{
+													"id": "set-position",
+													"objectClass": "Enemy",
+													"sid": 605625342392208,
+													"disabled": true,
+													"parameters": {
+														"x": "1360",
+														"y": "796"
+													}
+												},
+												{
 													"id": "set-size",
 													"objectClass": "Enemy",
-													"sid": 962598183783277,
+													"sid": 693588220273465,
+													"disabled": true,
 													"parameters": {
 														"width": "592.8",
 														"height": "654.3"
@@ -5162,14 +5524,54 @@
 												{
 													"id": "set-position",
 													"objectClass": "Enemy",
-													"sid": 605625342392208,
+													"sid": 921508126367927,
 													"parameters": {
-														"x": "1360",
-														"y": "796"
+														"x": "1576",
+														"y": "808"
+													}
+												},
+												{
+													"id": "set-size",
+													"objectClass": "Enemy",
+													"sid": 998171575220430,
+													"parameters": {
+														"width": "424",
+														"height": "600"
 													}
 												}
 											],
-											"sid": 362365734468336
+											"sid": 362365734468336,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xyz",
+															"objectClass": "A_zCodex",
+															"sid": 675208351206540,
+															"parameters": {
+																"x": "1",
+																"y": "Opponent_Carrousel",
+																"z": "0",
+																"comparison": 5,
+																"value": "2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation",
+															"objectClass": "Icon_Brain",
+															"sid": 142915519075218,
+															"parameters": {
+																"animation": "\"mind_cautious\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 227079519390183
+												}
+											]
 										}
 									]
 								},
@@ -5208,6 +5610,18 @@
 													"parameters": {
 														"instance-variable": "ID",
 														"comparison": 0,
+														"value": "1"
+													}
+												},
+												{
+													"id": "compare-at-xyz",
+													"objectClass": "A_zCodex",
+													"sid": 759307360822071,
+													"parameters": {
+														"x": "1",
+														"y": "Opponent_Carrousel",
+														"z": "0",
+														"comparison": 5,
 														"value": "1"
 													}
 												}
@@ -5386,6 +5800,90 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
+									"sid": 449634943877368,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Btn_Arrow_Codex_left"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 642126792963661,
+									"parameters": {
+										"layer": "\"enemies2\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 996828516687790,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 816534143325029,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 608748523200917,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"value": "10"
+											}
+										},
+										{
+											"callFunction": "Update_Opponent_Info",
+											"sid": 732664709444819
+										}
+									],
+									"sid": 515369469883379
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 760068910865882
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 500410830665500,
+											"parameters": {
+												"variable": "Opponent_Carrousel",
+												"value": "1"
+											}
+										},
+										{
+											"callFunction": "Update_Opponent_Info",
+											"sid": 777637290527559
+										}
+									],
+									"sid": 296091843460266
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
 									"sid": 290640807096282,
 									"parameters": {
 										"mouse-button": "left",
@@ -5461,90 +5959,6 @@
 										}
 									],
 									"sid": 196586469518872
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 729427339627410,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "Btn_Arrow_Codex_left"
-									}
-								},
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 316500301353687,
-									"parameters": {
-										"layer": "\"enemies2\""
-									}
-								}
-							],
-							"actions": [],
-							"sid": 422373703130258,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 721095083273695,
-											"parameters": {
-												"variable": "Opponent_Carrousel",
-												"comparison": 0,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 573168106527595,
-											"parameters": {
-												"variable": "Opponent_Carrousel",
-												"value": "10"
-											}
-										},
-										{
-											"callFunction": "Update_Opponent_Info",
-											"sid": 980117002433138
-										}
-									],
-									"sid": 355649155745802
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 521975629698063
-										}
-									],
-									"actions": [
-										{
-											"id": "subtract-from-eventvar",
-											"objectClass": "System",
-											"sid": 724926686178622,
-											"parameters": {
-												"variable": "Opponent_Carrousel",
-												"value": "1"
-											}
-										},
-										{
-											"callFunction": "Update_Opponent_Info",
-											"sid": 948438360009238
-										}
-									],
-									"sid": 292586032031068
 								}
 							]
 						},
@@ -5635,6 +6049,96 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 902071626888606,
+									"parameters": {
+										"object": "Icon_Brain"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Icon_Brain",
+									"sid": 596528594529411,
+									"parameters": {
+										"animation": "\"unknown\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 796535458200103,
+									"parameters": {
+										"layer": "\"enemies2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Bkg_Codex_Tip",
+									"sid": 609952110162606,
+									"parameters": {
+										"x": "Mouse.X + 30",
+										"y": "Mouse.Y"
+									}
+								}
+							],
+							"sid": 994734313721619,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Text_Static_Generic",
+											"sid": 228934881338500,
+											"parameters": {
+												"unique-id": "437"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Text_Static_Generic",
+											"sid": 196509891290877,
+											"parameters": {
+												"text": "Internationalization.Lookup(\"menu.codex.\" & Icon_Brain.AnimationName)"
+											}
+										}
+									],
+									"sid": 873051232304486
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 967210732641238
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Bkg_Codex_Tip",
+									"sid": 558607008698150,
+									"parameters": {
+										"x": "-1000",
+										"y": "-1000"
+									}
+								}
+							],
+							"sid": 250985368709610
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
 									"sid": 631746055315851,
@@ -5670,6 +6174,24 @@
 									"parameters": {
 										"layer": "\"enemies2\"",
 										"interactive": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 749740026685066,
+									"parameters": {
+										"layer": "\"enemies\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 938254813624266,
+									"parameters": {
+										"layer": "\"enemies\"",
+										"interactive": true
 									}
 								}
 							],

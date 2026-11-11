@@ -382,7 +382,10 @@
 			"Text_Codex_Info",
 			"Btn_Back_Flag2",
 			"easyMask",
-			"card_enemy2"
+			"card_enemy2",
+			"Sprite_Queen_Axe",
+			"Sprite_Queen_Corte",
+			"Bkg_Codex_Tip"
 		],
 		"subfolders": []
 	},
@@ -603,6 +606,30 @@
 					"name": "735618__geoff-bremner-audio__small-whip-9.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 637013152414578,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "864778__arkturusg__single-sword-strikes-sfx-with-gore_3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 395915758120470,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "864778__arkturusg__single-sword-strikes-sfx-with-gore_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 621618460679998,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "864778__arkturusg__single-sword-strikes-sfx-with-gore_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 622083319724868,
 					"file-info": {
 						"purpose": "none"
 					}

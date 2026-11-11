@@ -4073,6 +4073,33 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
+											"sid": 174084928395119,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"Menu\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Banner_fundo",
+											"sid": 590605029196720,
+											"parameters": {
+												"animation": "Language",
+												"from": "current-frame"
+											}
+										}
+									],
+									"sid": 858000688134089
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
 											"sid": 604685677073130,
 											"parameters": {
 												"first-value": "LayoutName",

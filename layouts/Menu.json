@@ -1671,10 +1671,10 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 960,
-								"y": 536,
-								"width": 7038,
-								"height": 2832.16,
+								"x": 979.1172067651842,
+								"y": 556.5820841591482,
+								"width": 2269.746696467495,
+								"height": 1330.2407450791957,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -7619,7 +7619,7 @@
 							"type": "Icon_Brain",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Default",
+								"initial-animation": "mind_fearless",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
@@ -7788,10 +7788,10 @@
 						{
 							"type": "Text_Codex_Info",
 							"properties": {
-								"text": "General of Cards",
+								"text": "Chapeleiro Maluco",
 								"enable-bbcode": true,
 								"font": "Alice-Regular",
-								"size": 72,
+								"size": 69,
 								"line-height": 0,
 								"bold": true,
 								"italic": false,
@@ -7977,7 +7977,7 @@
 						{
 							"type": "Text_Codex_Info",
 							"properties": {
-								"text": "[size=26][b]No início do turno:[/b]\nTrocam de posição, mudando de estratégia e tem 40% de chance de ganhar 1 turno extra[/size]",
+								"text": "[size=26][b]No primeiro turno:[/b]\nTrocam de posição, mudando de estratégia e tem 40% de chance de realizar 1 turno extra (1 vez por rodada).[/size]",
 								"enable-bbcode": true,
 								"font": "Alice-Regular",
 								"size": 32,
@@ -8310,7 +8310,175 @@
 					"global": false
 				}
 			],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Bkg_Codex_Tip",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 436,
+					"sid": 696905257982805,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 436,
+						"children": [
+							{
+								"uid": 437,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": false,
+									"h": false,
+									"de": false,
+									"a": false,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"de": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZ": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformD": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformSZ": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 891,
+						"y": 1342.5,
+						"width": 461.9101295078248,
+						"height": 323.2047558831682,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Text_Static_Generic",
+					"properties": {
+						"text": "[b]Strategy: Cautious[/b]\n\nAvoids taking risks when drawing numbers and prefers to play powers when their hand is full.",
+						"enable-bbcode": true,
+						"font": "Alice-Regular",
+						"size": 27,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 437,
+					"sid": 257553398127358,
+					"tags": "",
+					"instanceVariables": {
+						"my_id": 0,
+						"my_txt": "relics.choose"
+					},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"sceneGraphData": {
+						"parent-uid": 436,
+						"uid": 437,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": false,
+							"h": false,
+							"de": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZ": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformD": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformSZ": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 925,
+						"y": 1366,
+						"width": 400,
+						"height": 277.20929839391374,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
 			"sid": 220469327584101,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
