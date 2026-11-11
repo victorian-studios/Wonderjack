@@ -151,28 +151,28 @@
                     "desc": "Uma tentativa de desenhar um gato brincando..."
                 },
                 "art_11": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Esboço do gato",
+                    "desc": "Eu acho que eu vi um gatinho! Ou três..."
                 },
                 "art_12": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Esboços da Rainha de Copas",
+                    "desc": "Ela viu coisas..."
                 },
                 "art_13": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "LOGO BLIM",
+                    "desc": "LOGO BLIM"
                 },
                 "art_14": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Esboço do Humpty Dumpty",
+                    "desc": "Desenhei tanto ovo que tive pesadelos."
                 },
                 "art_15": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Lagarta antiga",
+                    "desc": "Ao infinito e além!"
                 },
                 "art_16": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "NAIPES BLIM",
+                    "desc": "NAIPES BLIM"
                 },
                 "art_17": {
                     "title": "Versão 1 do Coelho",
@@ -197,6 +197,10 @@
                 "art_22": {
                     "title": "Conquista 'O conceito de estratégia'",
                     "desc": "Skin de cientista haha!"
+                },
+                "art_23": {
+                    "title": "Esboço da Lebre de Março",
+                    "desc": "Shakespeare, se ele fosse louco eu acho."
                 }
             }
         },
@@ -427,16 +431,16 @@
                     "name": "Rainha de Copas",
                     "talk_win": "Cortem a cabeça!",
                     "talk_lose": "Você pode ter ganhado esta batalha... Mas não ganhou a guerra...",
-                    "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
-                    "talk_thinking_2": "",
-                    "special": "I'm gonna slice this card!"
+                    "talk_thinking_1": "Calado! Estou pensando na minha estratégia!",
+                    "talk_thinking_2": "Isolente! Você realmente pensa que pode me vencer",
+                    "special": "Eu irei cortar esta carta!"
                 },
                 "Jabberwock": {
                     "name": "Jaguadarte",
-                    "talk_win": "Finally, I’ll be able to sharpen my fangs a little!",
-                    "talk_lose": "Arghhh!!! How dare you?!",
-                    "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
-                    "talk_thinking_2": "",
+                    "talk_win": "Finalmente poderei afiar minhas presas um pouco!",
+                    "talk_lose": "Arghhh!!! Como se atreve?!",
+                    "talk_thinking_1": "Com esse movimento, eu vou te despedaçar... hehe",
+                    "talk_thinking_2": "Minhas presas estão coçando com essa partida...",
                     "special": "Alice! Melhor de três? O que você acha?"
                 }
             },

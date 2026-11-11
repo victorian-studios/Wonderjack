@@ -151,28 +151,28 @@
                     "desc": "An attempt to draw a cat playing..."
                 },
                 "art_11": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Cat's sketch",
+                    "desc": "I taw a puddy-tat! Or maybe three..."
                 },
                 "art_12": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Red Queen's sketches",
+                    "desc": "She saw things..."
                 },
                 "art_13": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "LOGO BLIM",
+                    "desc": "LOGO BLIM"
                 },
                 "art_14": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Humpty Dumpty's sketch",
+                    "desc": "Desenhei tanto ovo que tive pesadelos."
                 },
                 "art_15": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "Old Caterpillar",
+                    "desc": "To infinity and beyond!"
                 },
                 "art_16": {
-                    "title": "blim",
-                    "desc": "blim"
+                    "title": "NAIPES BLIM",
+                    "desc": "NAIPES BLIM"
                 },
                 "art_17": {
                     "title": "Rabbit Version 1",
@@ -197,6 +197,10 @@
                 "art_22": {
                     "title": "'Strategy' Achievement",
                     "desc": "Scientist skin, haha!"
+                },
+                "art_23": {
+                    "title": "Mad Hare's sketch",
+                    "desc": "Shakespeare, if he was crazy probably."
                 }
                 
             }
@@ -427,7 +431,7 @@
                     "talk_win": "Off with her head!",
                     "talk_lose": "You may have won this battle... But you won't win the war...",
                     "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
-                    "talk_thinking_2": "",
+                    "talk_thinking_2": "How dare you! Do you really think you can beat me?",
                     "special": "I'm gonna slice this card!"
                 },
                 "Jabberwock": {
@@ -435,7 +439,7 @@
                     "talk_win": "Finally, I'll be able to sharpen my fangs a little!",
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
-                    "talk_thinking_2": "",
+                    "talk_thinking_2": "My fangs are itching for this game...",
                     "special": "Alice! Best of three? What do you think?"
                 }
             },
