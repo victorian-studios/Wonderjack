@@ -315,7 +315,7 @@
 					"type": "Banner_fundo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "en-us",
 						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false

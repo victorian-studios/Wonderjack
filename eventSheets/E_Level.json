@@ -50720,6 +50720,128 @@
 										}
 									],
 									"sid": 981482667161159
+								},
+								{
+									"eventType": "comment",
+									"text": "Special Power - Dodo"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 460100110095254,
+											"parameters": {
+												"variable": "EnemyName",
+												"comparison": 0,
+												"value": "\"Dodo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Talk",
+											"sid": 615445370376498,
+											"parameters": [
+												"EnemyName",
+												"\"common.enemies.\" & EnemyName & \".special\"",
+												"1  - Opt_FastMode_Secs",
+												false,
+												false
+											]
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 307184679802558,
+											"parameters": {
+												"seconds": "3 - Opt_FastMode_Secs",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 149864456932405,
+											"parameters": {
+												"variable": "EnemyAI_SpecialUsed",
+												"value": "false"
+											}
+										},
+										{
+											"callFunction": "Draw_Number",
+											"sid": 204125715444952,
+											"parameters": [
+												"1",
+												false,
+												"0",
+												false,
+												false
+											]
+										}
+									],
+									"sid": 948623325281666
+								},
+								{
+									"eventType": "comment",
+									"text": "Special Power - Queen of Hearts"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 919455886717524,
+											"parameters": {
+												"variable": "EnemyName",
+												"comparison": 0,
+												"value": "\"Red Queen\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Talk",
+											"sid": 814740108667366,
+											"parameters": [
+												"EnemyName",
+												"\"common.enemies.\" & EnemyName & \".special\"",
+												"1  - Opt_FastMode_Secs",
+												false,
+												false
+											]
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 201690606088146,
+											"parameters": {
+												"seconds": "3 - Opt_FastMode_Secs",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 350443878976205,
+											"parameters": {
+												"variable": "EnemyAI_SpecialUsed",
+												"value": "true"
+											}
+										},
+										{
+											"callFunction": "Apply_Buff",
+											"sid": 880089362764216,
+											"parameters": [
+												"\"protect\"",
+												"3",
+												"2"
+											]
+										}
+									],
+									"sid": 630650353366648
 								}
 							]
 						},
