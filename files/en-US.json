@@ -289,8 +289,23 @@
             }
         },
         "match_end": {
+            "unlock": "Unlocked",
+            "title_win": "Congratulations! You've won!",
+            "title_lose": "That's unfortunate! You've lost.",
+            "match_info": "Time: {0}:{1}\nTotal rounds: {2}\nPerfect rounds: {3}\nPowers played: {4}\nNumbers drawn: {5}",
+            "opponents": "Opponents:",
+            "relics": "Relics used:",
+            "codex": {
+                "one": "Codex: {0} discovery", 
+                "other": "Codex: {0} discoveries"
+            },
+            "gallery": {
+                "one": "Gallery: {0} new art",
+                "other": "Gallery: {0} new arts"
+            },
             "new_match": "New Match",
-            "menu": "Main Menu"
+            "menu": "Main Menu",
+            "continue": "Continue"
         },
         "options": {
             "title": "OPTIONS",
@@ -341,7 +356,7 @@
                     "first_time_1": "Oh! Alice! It's been so long since I've seen you!",
                     "first_time_2": "That's true! What are you doing around here?",
                     "first_time_3": "Good question! I'll try to keep it short because I'm in a bit of a hurry...",
-                    "first_time_4": "Okay.",
+                    "first_time_4": "Okay. Go ahead.",
                     "first_time_5": "The White Queen mentioned something to you about a special reward, right?",
                     "first_time_6": "Well, I walk around here and always find objects scattered about and lost.",
                     "first_time_7": "And since I like everything clean and organized...",

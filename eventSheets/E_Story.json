@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Actual_Story",
+			"type": "string",
+			"initialValue": "Intro",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 174690133146899
+		},
+		{
+			"eventType": "variable",
 			"name": "Tut_Talk",
 			"type": "number",
 			"initialValue": "0",
@@ -60,6 +70,15 @@
 						"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
 						"stereo-pan": "0",
 						"tag-optional": "\"music\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Book_Pages",
+					"sid": 251689571120154,
+					"parameters": {
+						"animation": "Actual_Story",
+						"from": "current-frame"
 					}
 				}
 			],
@@ -891,7 +910,50 @@
 									}
 								}
 							],
-							"sid": 795705336392928
+							"sid": 795705336392928,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Se for algum dos finais do jogo, depois da 3° e última página, vai pra tela de detalhes da partida"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 670756650008408,
+											"parameters": {
+												"variable": "Actual_Story",
+												"comparison": 0,
+												"value": "\"End_1\""
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 905471923451243,
+											"parameters": {
+												"variable": "Actual_Story",
+												"comparison": 0,
+												"value": "\"End_2\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 783803783071129,
+											"parameters": {
+												"layout": "Match_End"
+											}
+										}
+									],
+									"sid": 700816152938944,
+									"isOrBlock": true
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1039,18 +1101,92 @@
 								"layer": "\"Pages_1\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_1\")"
 							}
-						},
-						{
-							"id": "typewriter-text",
-							"objectClass": "Text_Story",
-							"sid": 669891992323291,
-							"parameters": {
-								"text": "Internationalization.Lookup(\"story.page_1\")",
-								"duration": "3"
-							}
 						}
 					],
-					"sid": 144235806552720
+					"sid": 144235806552720,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 742754796656120,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"Intro\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 306353027545220,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_1\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 621449604721973
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 153156905801823,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"End_1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 774032809977690,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_6\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 185763429193423
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 194620994303310,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"End_2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 577955072666816,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_9\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 637483735005535
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1074,18 +1210,92 @@
 								"layer": "\"Pages_2\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_2\")"
 							}
-						},
-						{
-							"id": "typewriter-text",
-							"objectClass": "Text_Story",
-							"sid": 473131374371893,
-							"parameters": {
-								"text": "Internationalization.Lookup(\"story.page_2\")",
-								"duration": "3"
-							}
 						}
 					],
-					"sid": 140887475685121
+					"sid": 140887475685121,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 368454855048524,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"Intro\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 941348637985102,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_2\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 456199971878906
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 134520266567072,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"End_1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 892180099704255,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_7\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 913118466209579
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 896183959279863,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"End_2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 591264897178223,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_10\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 710335833751049
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1109,18 +1319,92 @@
 								"layer": "\"Pages_3\"",
 								"opacity": "Btn_Story_Next.Tween.Value(\"fade_3\")"
 							}
-						},
-						{
-							"id": "typewriter-text",
-							"objectClass": "Text_Story",
-							"sid": 825347529593803,
-							"parameters": {
-								"text": "Internationalization.Lookup(\"story.page_3\")",
-								"duration": "3"
-							}
 						}
 					],
-					"sid": 759487201323661
+					"sid": 759487201323661,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 881068443967111,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"Intro\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 914937982504493,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_3\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 748302414007474
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 739080815897356,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"End_1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 448198836742484,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_8\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 846526934341061
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 187263009555128,
+									"parameters": {
+										"variable": "Actual_Story",
+										"comparison": 0,
+										"value": "\"End_2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text_Story",
+									"sid": 772799116907282,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"story.page_11\")",
+										"duration": "3"
+									}
+								}
+							],
+							"sid": 385557404324696
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1148,7 +1432,7 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "Text_Story",
-							"sid": 827584793342473,
+							"sid": 148682505977137,
 							"parameters": {
 								"text": "Internationalization.Lookup(\"story.page_4\")",
 								"duration": "3"

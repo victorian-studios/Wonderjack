@@ -288,8 +288,23 @@
             }
         },
         "match_end": {
+            "unlock": "Desbloqueado",
+            "title_win": "Parabéns! Você venceu!",
+            "title_lose": "Que pena! Você perdeu.",
+            "match_info": "Tempo: {0}:{1}\nRodadas totais: {2}\nRodadas perfeitas: {3}\nPoderes jogados: {4}\nNúmeros comprados: {5}",
+            "opponents": "Oponentes:",
+            "relics": "Relíquias usadas:",
+            "codex": {
+                "one": "Codex: {0} descoberta", 
+                "other": "Codex: {0} descobertas"
+            },
+            "gallery": {
+                "one": "Gallery: {0} nova arte",
+                "other": "Gallery: {0} novas artes"
+            },
             "new_match": "Nova Partida",
-            "menu": "Menu Principal"
+            "menu": "Menu Principal",
+            "continue": "Continuar"
         },
         "options": {
             "title": "OPÇÕES",
@@ -342,7 +357,7 @@
                     "first_time_1": "Oh! Alice! Quanto tempo que não te vejo!",
                     "first_time_2": "Verdade! O que faz por aqui?",
                     "first_time_3": "Ótima pergunta! Tentarei ser breve pois estou com um pouco de pressa...",
-                    "first_time_4": "Tudo bem.",
+                    "first_time_4": "Tudo bem. Vá em frente.",
                     "first_time_5": "A Rainha Branca comentou com você sobre uma recompensa especial, certo?",
                     "first_time_6": "Então, eu fico andando por ai e sempre encontro objetos espalhados e perdidos.",
                     "first_time_7": "E como eu gosto das coisas limpas e organizadas...",

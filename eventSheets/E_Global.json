@@ -346,8 +346,23 @@
 			"sid": 625864370784634,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Reset dos conteudos da partida"
+				},
+				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 208322338577263,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Menu\""
+							}
+						}
+					],
 					"actions": [
 						{
 							"callFunction": "Reset Number Deck",
@@ -376,14 +391,31 @@
 							}
 						},
 						{
+							"callFunction": "Reset Relics",
+							"sid": 207520627640472
+						},
+						{
 							"id": "request-project-file",
 							"objectClass": "AJAX",
-							"sid": 712767705499992,
+							"sid": 348805599951163,
 							"parameters": {
-								"tag": "\"relics\"",
+								"tag": "\"match\"",
 								"file": {
-									"path": "Relics.json"
+									"path": "Match_info.json"
 								}
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 957891190955796
+						},
+						{
+							"id": "load",
+							"objectClass": "A_Match_Info",
+							"sid": 641131346312815,
+							"parameters": {
+								"json": "AJAX.LastData"
 							}
 						}
 					],
@@ -914,6 +946,40 @@
 				}
 			],
 			"sid": 887126297207774
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 505418027156902,
+					"parameters": {
+						"object": "Text_Static_Generic"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Text_Static_Generic",
+					"sid": 828819718727299,
+					"parameters": {
+						"instance-variable": "my_txt",
+						"comparison": 1,
+						"value": "\"\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text_Static_Generic",
+					"sid": 819553929960699,
+					"parameters": {
+						"text": "Internationalization.Lookup( Self.my_txt )"
+					}
+				}
+			],
+			"sid": 641633073280649
 		},
 		{
 			"functionName": "Confirm_Exit",
@@ -5503,40 +5569,6 @@
 						}
 					],
 					"sid": 383220876513421
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 605115869180040,
-							"parameters": {
-								"object": "Text_Static_Generic"
-							}
-						},
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Text_Static_Generic",
-							"sid": 372430495671109,
-							"parameters": {
-								"instance-variable": "my_txt",
-								"comparison": 1,
-								"value": "\"\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "Text_Static_Generic",
-							"sid": 189317724890256,
-							"parameters": {
-								"text": "Internationalization.Lookup( Self.my_txt )"
-							}
-						}
-					],
-					"sid": 543391907332645
 				},
 				{
 					"eventType": "block",

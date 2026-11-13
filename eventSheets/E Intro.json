@@ -58,28 +58,6 @@
 				{
 					"id": "request-project-file",
 					"objectClass": "AJAX",
-					"sid": 709225368500355,
-					"parameters": {
-						"tag": "\"power_deck\"",
-						"file": {
-							"path": "Power_Deck_Base.json"
-						}
-					}
-				},
-				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
-					"sid": 411826887774355,
-					"parameters": {
-						"tag": "\"relics\"",
-						"file": {
-							"path": "Relics.json"
-						}
-					}
-				},
-				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
 					"sid": 681475333327079,
 					"parameters": {
 						"tag": "\"card_pos\"",
@@ -305,11 +283,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 533387049594656,
+					"sid": 620195227811374,
 					"parameters": {
 						"variable": "Loaded_AJAX",
 						"comparison": 5,
-						"value": "4"
+						"value": "5"
 					}
 				}
 			],
@@ -1430,88 +1408,6 @@
 				}
 			],
 			"sid": 418170352485135
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 479352937602290,
-					"parameters": {
-						"tag": "\"power_deck\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "A_Deck_Power",
-					"sid": 333641619818592,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "shuffle",
-					"objectClass": "A_Deck_Power",
-					"sid": 214540282125878,
-					"parameters": {
-						"axis": "x"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 579357454429808,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 226826658360529
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-completed",
-					"objectClass": "AJAX",
-					"sid": 250265134377939,
-					"parameters": {
-						"tag": "\"relics\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load",
-					"objectClass": "A_Relics",
-					"sid": 641048363318995,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "shuffle",
-					"objectClass": "A_Relics",
-					"sid": 409108891598630,
-					"parameters": {
-						"axis": "x"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 833638156450725,
-					"parameters": {
-						"variable": "Loaded_AJAX",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 987516020879816
 		},
 		{
 			"eventType": "block",

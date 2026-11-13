@@ -393,10 +393,6 @@
 					}
 				},
 				{
-					"callFunction": "Reset Relics variables",
-					"sid": 207520627640472
-				},
-				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 527313078484939,
@@ -4314,7 +4310,18 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "A_Match_Info",
+									"sid": 559148555233434,
+									"parameters": {
+										"x": "6",
+										"y": "1",
+										"value": "Self.At(6,1) + 1"
+									}
+								}
+							],
 							"sid": 542501157146271,
 							"children": [
 								{
@@ -10776,37 +10783,151 @@
 						{
 							"id": "request-project-file",
 							"objectClass": "AJAX",
-							"sid": 248409210408765,
+							"sid": 509905641108105,
 							"parameters": {
 								"tag": "\"power_deck\"",
 								"file": {
-									"path": "Power_Deck_Base.json"
+									"path": "Empty_Array.json"
 								}
 							}
 						},
 						{
 							"id": "wait-for-previous-actions",
 							"objectClass": "System",
-							"sid": 652446338378947
+							"sid": 377688090772236
 						},
 						{
 							"id": "load",
 							"objectClass": "A_Deck_Power",
-							"sid": 896942110153231,
+							"sid": 257628726260274,
 							"parameters": {
 								"json": "AJAX.LastData"
 							}
-						},
-						{
-							"id": "shuffle",
-							"objectClass": "A_Deck_Power",
-							"sid": 143473422178430,
-							"parameters": {
-								"axis": "x"
-							}
 						}
 					],
-					"sid": 396258469099855
+					"sid": 396258469099855,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 323703051467284,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "1",
+										"end-index": "22"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 378132560473780,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 635939653808671,
+											"parameters": {
+												"x": "1",
+												"y": "loopindex",
+												"z": "1",
+												"comparison": 1,
+												"value": "-1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "push",
+											"objectClass": "A_Deck_Power",
+											"sid": 612921513070238,
+											"parameters": {
+												"where": "front",
+												"value": "A_zCodex.At(0, loopindex, 1)",
+												"axis": "x"
+											}
+										}
+									],
+									"sid": 522580627221259
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 468387037564895,
+											"parameters": {
+												"first-value": "loopindex",
+												"comparison": 0,
+												"second-value": "22"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 711421441788603,
+											"parameters": {
+												"seconds": "0.01",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "shuffle",
+											"objectClass": "A_Deck_Power",
+											"sid": 426064918479394,
+											"parameters": {
+												"axis": "x"
+											}
+										}
+									],
+									"sid": 278937591898006,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each-element",
+													"objectClass": "A_Deck_Power",
+													"sid": 186806033567406,
+													"parameters": {
+														"axes": "x"
+													}
+												},
+												{
+													"id": "compare-current-value",
+													"objectClass": "A_Deck_Power",
+													"sid": 379368728643030,
+													"parameters": {
+														"comparison": 0,
+														"value": "\"\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "delete",
+													"objectClass": "A_Deck_Power",
+													"sid": 327531892479305,
+													"parameters": {
+														"index": "Self.CurX",
+														"axis": "x"
+													}
+												}
+											],
+											"sid": 471052788116340
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
 					"functionName": "Clear_Power_Hands",
@@ -26165,6 +26286,16 @@
 							"conditions": [],
 							"actions": [
 								{
+									"id": "set-at-xy",
+									"objectClass": "A_Match_Info",
+									"sid": 259815512691052,
+									"parameters": {
+										"x": "5",
+										"y": "1",
+										"value": "Self.At( 5,1 ) + 1"
+									}
+								},
+								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
 									"sid": 524065600171135,
@@ -26425,6 +26556,10 @@
 																"\"SLAYER\"",
 																"1"
 															]
+														},
+														{
+															"callFunction": "Save Seconds",
+															"sid": 522559881322626
 														}
 													],
 													"sid": 923017490778651,
@@ -26482,9 +26617,64 @@
 															"sid": 920312586127376
 														},
 														{
+															"eventType": "comment",
+															"text": "Se não jogou poderes, então ganha o Blackjack"
+														},
+														{
 															"eventType": "block",
-															"conditions": [],
+															"conditions": [
+																{
+																	"id": "compare-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 974859700476366,
+																	"parameters": {
+																		"x": "1",
+																		"y": "5",
+																		"comparison": 0,
+																		"value": "0"
+																	}
+																}
+															],
 															"actions": [
+																{
+																	"callFunction": "Update_Achievement",
+																	"sid": 479264101095912,
+																	"parameters": [
+																		"\"BLACKJACK\"",
+																		"1"
+																	]
+																}
+															],
+															"sid": 807712712801128
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-value",
+																	"objectClass": "D_Save",
+																	"sid": 463602805439950,
+																	"parameters": {
+																		"key": "\"STORY\"",
+																		"comparison": 0,
+																		"value": "1"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-key",
+																	"objectClass": "D_Save",
+																	"sid": 516707131264177,
+																	"parameters": {
+																		"key": "\"STORY\"",
+																		"value": "2"
+																	}
+																},
+																{
+																	"callFunction": "Save_Game",
+																	"sid": 142764587666013
+																},
 																{
 																	"id": "wait",
 																	"objectClass": "System",
@@ -26495,15 +26685,58 @@
 																	}
 																},
 																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 612472139635118,
+																	"parameters": {
+																		"variable": "Actual_Story",
+																		"value": "\"End_2\""
+																	}
+																},
+																{
 																	"id": "go-to-layout",
 																	"objectClass": "System",
-																	"sid": 525567888020507,
+																	"sid": 802441990668558,
 																	"parameters": {
-																		"layout": "Credits"
+																		"layout": "Story"
 																	}
 																}
 															],
 															"sid": 372774088370751
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 131967954931288
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Save_Game",
+																	"sid": 498633713861100
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 953625475680428,
+																	"parameters": {
+																		"seconds": "3.5",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "go-to-layout",
+																	"objectClass": "System",
+																	"sid": 774682958176704,
+																	"parameters": {
+																		"layout": "Match_End"
+																	}
+																}
+															],
+															"sid": 569829404027897
 														}
 													]
 												}
@@ -27492,6 +27725,10 @@
 																	}
 																},
 																{
+																	"callFunction": "Save Seconds",
+																	"sid": 188945865605114
+																},
+																{
 																	"id": "wait",
 																	"objectClass": "System",
 																	"sid": 249882213148502,
@@ -27503,9 +27740,9 @@
 																{
 																	"id": "go-to-layout",
 																	"objectClass": "System",
-																	"sid": 400385360079267,
+																	"sid": 853179766599477,
 																	"parameters": {
-																		"layout": "Menu"
+																		"layout": "Match_End"
 																	}
 																}
 															],
@@ -27715,6 +27952,18 @@
 																false,
 																false
 															]
+														},
+														{
+															"callFunction": "Update_Achievement",
+															"sid": 898405198232944,
+															"parameters": [
+																"\"REIGN\"",
+																"1"
+															]
+														},
+														{
+															"callFunction": "Save Seconds",
+															"sid": 339065053282947
 														}
 													],
 													"sid": 300638403233843,
@@ -27772,21 +28021,111 @@
 															"sid": 519851707646035
 														},
 														{
+															"eventType": "comment",
+															"text": "Se não jogou poderes, então ganha o Blackjack"
+														},
+														{
 															"eventType": "block",
-															"conditions": [],
+															"conditions": [
+																{
+																	"id": "compare-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 665504379994632,
+																	"parameters": {
+																		"x": "1",
+																		"y": "5",
+																		"comparison": 0,
+																		"value": "0"
+																	}
+																}
+															],
 															"actions": [
 																{
 																	"callFunction": "Update_Achievement",
-																	"sid": 258245641352406,
+																	"sid": 635943609550434,
 																	"parameters": [
-																		"\"REIGN\"",
+																		"\"BLACKJACK\"",
 																		"1"
 																	]
+																}
+															],
+															"sid": 941777402228634
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-value",
+																	"objectClass": "D_Save",
+																	"sid": 778693991277014,
+																	"parameters": {
+																		"key": "\"STORY\"",
+																		"comparison": 0,
+																		"value": "0"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-key",
+																	"objectClass": "D_Save",
+																	"sid": 995138113111966,
+																	"parameters": {
+																		"key": "\"STORY\"",
+																		"value": "1"
+																	}
+																},
+																{
+																	"callFunction": "Save_Game",
+																	"sid": 735604224142281
 																},
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 106753482505225,
+																	"sid": 493941066917835,
+																	"parameters": {
+																		"seconds": "3.5",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 757346436986452,
+																	"parameters": {
+																		"variable": "Actual_Story",
+																		"value": "\"End_1\""
+																	}
+																},
+																{
+																	"id": "go-to-layout",
+																	"objectClass": "System",
+																	"sid": 781290370258954,
+																	"parameters": {
+																		"layout": "Story"
+																	}
+																}
+															],
+															"sid": 899630801509442
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 295404428409513
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "Save_Game",
+																	"sid": 633660637002947
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 686102888519767,
 																	"parameters": {
 																		"seconds": "3.5",
 																		"use-timescale": true
@@ -27795,13 +28134,13 @@
 																{
 																	"id": "go-to-layout",
 																	"objectClass": "System",
-																	"sid": 445992701262013,
+																	"sid": 408930852085187,
 																	"parameters": {
-																		"layout": "Credits"
+																		"layout": "Match_End"
 																	}
 																}
 															],
-															"sid": 282282741349089
+															"sid": 888820508865622
 														}
 													]
 												},
@@ -29836,6 +30175,10 @@
 																	}
 																},
 																{
+																	"callFunction": "Save Seconds",
+																	"sid": 572160458425208
+																},
+																{
 																	"id": "go-to-layout",
 																	"objectClass": "System",
 																	"sid": 787512661250101,
@@ -30478,7 +30821,37 @@
 											}
 										}
 									],
-									"sid": 692722678344527
+									"sid": 692722678344527,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 355290700868795,
+													"parameters": {
+														"variable": "PlayerNumbers",
+														"comparison": 0,
+														"value": "TheNumber"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_Match_Info",
+													"sid": 636475763067727,
+													"parameters": {
+														"x": "4",
+														"y": "1",
+														"value": "Self.At( 4,1 ) + 1"
+													}
+												}
+											],
+											"sid": 749769438090832
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -30551,7 +30924,37 @@
 											}
 										}
 									],
-									"sid": 178050074321769
+									"sid": 178050074321769,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 138915801254481,
+													"parameters": {
+														"variable": "PlayerNumbers",
+														"comparison": 0,
+														"value": "TheNumber"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_Match_Info",
+													"sid": 738037813071775,
+													"parameters": {
+														"x": "4",
+														"y": "1",
+														"value": "Self.At( 4,1 ) + 1"
+													}
+												}
+											],
+											"sid": 198052379425028
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -31843,9 +32246,9 @@
 										{
 											"id": "repeat",
 											"objectClass": "System",
-											"sid": 431015262013006,
+											"sid": 183217886941248,
 											"parameters": {
-												"count": "4"
+												"count": "3"
 											}
 										},
 										{
@@ -31866,19 +32269,104 @@
 												"x": "loopindex",
 												"value": "choose ( 1, 2 )"
 											}
-										},
-										{
-											"id": "set-at-x",
-											"objectClass": "A_TheRng",
-											"sid": 200209697007363,
-											"disabled": true,
-											"parameters": {
-												"x": "loopindex",
-												"value": "1"
-											}
 										}
 									],
-									"sid": 239619763610385
+									"sid": 239619763610385,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Obrigatoriamente é a rainha no inicio"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "D_Save",
+													"sid": 190780345425920,
+													"parameters": {
+														"key": "\"STORY\"",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-at-x",
+													"objectClass": "A_TheRng",
+													"sid": 155592255779127,
+													"parameters": {
+														"x": "3",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 300191278332952
+										},
+										{
+											"eventType": "comment",
+											"text": "Obrigatoriamente é o jaguadarte no final"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "D_Save",
+													"sid": 782735354996534,
+													"parameters": {
+														"key": "\"STORY\"",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-at-x",
+													"objectClass": "A_TheRng",
+													"sid": 878759278582577,
+													"parameters": {
+														"x": "3",
+														"value": "2"
+													}
+												}
+											],
+											"sid": 777716775429323
+										},
+										{
+											"eventType": "comment",
+											"text": "Depois, tanto faz quem é"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "D_Save",
+													"sid": 107548419178114,
+													"parameters": {
+														"key": "\"STORY\"",
+														"comparison": 0,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-at-x",
+													"objectClass": "A_TheRng",
+													"sid": 259503050250801,
+													"parameters": {
+														"x": "3",
+														"value": "choose( 1, 2 )"
+													}
+												}
+											],
+											"sid": 492379315824132
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -32629,6 +33117,16 @@
 														"variable": "EnemyAI_Special",
 														"value": "0"
 													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_Match_Info",
+													"sid": 500836803881493,
+													"parameters": {
+														"x": "1",
+														"y": "11",
+														"value": "2"
+													}
 												}
 											],
 											"sid": 193997192391484
@@ -32776,6 +33274,16 @@
 													"parameters": {
 														"variable": "EnemyAI_Special",
 														"value": "0"
+													}
+												},
+												{
+													"id": "set-at-xy",
+													"objectClass": "A_Match_Info",
+													"sid": 540229016113827,
+													"parameters": {
+														"x": "1",
+														"y": "11",
+														"value": "4"
 													}
 												}
 											],
@@ -33755,6 +34263,16 @@
 																		"variable": "EnemyAI_Special",
 																		"value": "50"
 																	}
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 784857101299260,
+																	"parameters": {
+																		"x": "2",
+																		"y": "11",
+																		"value": "6"
+																	}
 																}
 															],
 															"sid": 911584680798107
@@ -33875,6 +34393,16 @@
 																	"parameters": {
 																		"variable": "EnemyAI_Special",
 																		"value": "40"
+																	}
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 528171556380159,
+																	"parameters": {
+																		"x": "2",
+																		"y": "11",
+																		"value": "8"
 																	}
 																}
 															],
@@ -34145,6 +34673,16 @@
 																		"variable": "EnemyAI_Special",
 																		"value": "25"
 																	}
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 160697635718476,
+																	"parameters": {
+																		"x": "3",
+																		"y": "11",
+																		"value": "10"
+																	}
 																}
 															],
 															"sid": 890050441309061,
@@ -34266,6 +34804,16 @@
 																	"parameters": {
 																		"variable": "EnemyAI_Special",
 																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 395602667077001,
+																	"parameters": {
+																		"x": "3",
+																		"y": "11",
+																		"value": "12"
 																	}
 																}
 															],
@@ -34476,6 +35024,16 @@
 																		"variable": "EnemyAI_Special",
 																		"value": "0"
 																	}
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 894243774882776,
+																	"parameters": {
+																		"x": "4",
+																		"y": "11",
+																		"value": "16"
+																	}
 																}
 															],
 															"sid": 297846035206879,
@@ -34611,6 +35169,16 @@
 																	"parameters": {
 																		"variable": "EnemyAI_Special",
 																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 625568472227707,
+																	"parameters": {
+																		"x": "4",
+																		"y": "11",
+																		"value": "18"
 																	}
 																}
 															],
@@ -38558,12 +39126,13 @@
 																	]
 																},
 																{
-																	"id": "set-key",
-																	"objectClass": "D_Save",
-																	"sid": 996580125555491,
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 915871767815170,
 																	"parameters": {
-																		"key": "\"BLACKJACK\"",
-																		"value": "\"0/1\""
+																		"x": "5",
+																		"y": "1",
+																		"value": "Self.At( 5,1 ) + 1"
 																	}
 																}
 															],
@@ -39027,6 +39596,16 @@
 																				true,
 																				false
 																			]
+																		},
+																		{
+																			"id": "set-at-xy",
+																			"objectClass": "A_Match_Info",
+																			"sid": 527792645755536,
+																			"parameters": {
+																				"x": "5",
+																				"y": "1",
+																				"value": "Self.At( 5,1 ) + 1"
+																			}
 																		}
 																	],
 																	"sid": 177841112348396
@@ -39319,6 +39898,16 @@
 																		true,
 																		false
 																	]
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 431100561807582,
+																	"parameters": {
+																		"x": "5",
+																		"y": "1",
+																		"value": "Self.At( 5,1 ) + 1"
+																	}
 																}
 															],
 															"sid": 932321665424419
@@ -39609,6 +40198,16 @@
 																		true,
 																		false
 																	]
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 244735817736994,
+																	"parameters": {
+																		"x": "5",
+																		"y": "1",
+																		"value": "Self.At( 5,1 ) + 1"
+																	}
 																}
 															],
 															"sid": 222657536568379
@@ -39889,6 +40488,16 @@
 																		true,
 																		false
 																	]
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 660553194019455,
+																	"parameters": {
+																		"x": "5",
+																		"y": "1",
+																		"value": "Self.At( 5,1 ) + 1"
+																	}
 																}
 															],
 															"sid": 211434012167968
@@ -40179,6 +40788,16 @@
 																		true,
 																		false
 																	]
+																},
+																{
+																	"id": "set-at-xy",
+																	"objectClass": "A_Match_Info",
+																	"sid": 409118699836356,
+																	"parameters": {
+																		"x": "5",
+																		"y": "1",
+																		"value": "Self.At( 5,1 ) + 1"
+																	}
 																}
 															],
 															"sid": 871269598374912
@@ -40345,12 +40964,13 @@
 															]
 														},
 														{
-															"id": "set-key",
-															"objectClass": "D_Save",
-															"sid": 582782662696503,
+															"id": "set-at-xy",
+															"objectClass": "A_Match_Info",
+															"sid": 927994680339905,
 															"parameters": {
-																"key": "\"BLACKJACK\"",
-																"value": "\"0/1\""
+																"x": "5",
+																"y": "1",
+																"value": "Self.At( 5,1 ) + 1"
 															}
 														}
 													],
@@ -51928,6 +52548,202 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"functionName": "Reset Relics",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 345579988778675,
+							"parameters": {
+								"variable": "Relic_Card13",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 340588038209657,
+							"parameters": {
+								"variable": "Relic_Hat",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 525642262283290,
+							"parameters": {
+								"variable": "Relic_Tea",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 864792379285481,
+							"parameters": {
+								"variable": "Relic_Trap",
+								"value": "false"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 941001533380928,
+							"parameters": {
+								"tag": "\"relics\"",
+								"file": {
+									"path": "Empty_Array.json"
+								}
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 951054170129263
+						},
+						{
+							"id": "load",
+							"objectClass": "A_Relics",
+							"sid": 560550838133512,
+							"parameters": {
+								"json": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 195801663815559,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 703654023442932,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "1",
+										"end-index": "22"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 115434734751717,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 194906552299160,
+											"parameters": {
+												"x": "1",
+												"y": "loopindex",
+												"z": "2",
+												"comparison": 1,
+												"value": "-1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "push",
+											"objectClass": "A_Relics",
+											"sid": 188731620350281,
+											"parameters": {
+												"where": "front",
+												"value": "A_zCodex.At(0, loopindex, 2)",
+												"axis": "x"
+											}
+										}
+									],
+									"sid": 973978692712633
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 891130452336390,
+											"parameters": {
+												"first-value": "loopindex",
+												"comparison": 0,
+												"second-value": "22"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 253754251644629,
+											"parameters": {
+												"seconds": "0.01",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "shuffle",
+											"objectClass": "A_Relics",
+											"sid": 789971297580977,
+											"parameters": {
+												"axis": "x"
+											}
+										}
+									],
+									"sid": 619763603671361,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each-element",
+													"objectClass": "A_Relics",
+													"sid": 776444729549541,
+													"parameters": {
+														"axes": "x"
+													}
+												},
+												{
+													"id": "compare-current-value",
+													"objectClass": "A_Relics",
+													"sid": 750249085563003,
+													"parameters": {
+														"comparison": 0,
+														"value": "\"\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "delete",
+													"objectClass": "A_Relics",
+													"sid": 194291585227533,
+													"parameters": {
+														"index": "Self.CurX",
+														"axis": "x"
+													}
+												}
+											],
+											"sid": 689375718648591
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
 					"functionName": "Show_White_Rabbit",
 					"functionDescription": "",
 					"functionCategory": "Match",
@@ -52795,56 +53611,6 @@
 					]
 				},
 				{
-					"functionName": "Reset Relics variables",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 581105235317645,
-							"parameters": {
-								"variable": "Relic_Card13",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 591809995039271,
-							"parameters": {
-								"variable": "Relic_Hat",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 869371502333655,
-							"parameters": {
-								"variable": "Relic_Tea",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 711795342388334,
-							"parameters": {
-								"variable": "Relic_Trap",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 485633904561926
-				},
-				{
 					"functionName": "Relic Feedback",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -53288,6 +54054,13 @@
 						{
 							"callFunction": "Apply Relic Power",
 							"sid": 917879475883160,
+							"parameters": [
+								"Relic_card.AnimationName"
+							]
+						},
+						{
+							"callFunction": "Add Used Relics",
+							"sid": 433634381763204,
 							"parameters": [
 								"Relic_card.AnimationName"
 							]
@@ -55956,6 +56729,14 @@
 							"id": "on-any-click",
 							"objectClass": "Mouse",
 							"sid": 445816582864104
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 494636197805118,
+							"parameters": {
+								"object": "configuracoes"
+							}
 						},
 						{
 							"id": "layer-is-visible",
@@ -59782,109 +60563,18 @@
 									"parameters": {
 										"achievement": "ID"
 									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 606459138290669,
+									"parameters": [
+										"ID",
+										"2"
+									]
 								}
 							],
 							"sid": 460614400586011,
 							"children": [
-								{
-									"eventType": "comment",
-									"text": "Desbloqueia nome e foto no Codex"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 202440650742833,
-											"parameters": {
-												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
-												"comparison": 0,
-												"second-value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-at-xyz",
-											"objectClass": "A_zCodex",
-											"sid": 602195179908037,
-											"parameters": {
-												"x": "1",
-												"y": "2",
-												"z": "0",
-												"value": "1"
-											}
-										}
-									],
-									"sid": 159823717790463
-								},
-								{
-									"eventType": "comment",
-									"text": "Desbloqueia atributos no Codex"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 704576062428405,
-											"parameters": {
-												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
-												"comparison": 0,
-												"second-value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-at-xyz",
-											"objectClass": "A_zCodex",
-											"sid": 385397842780798,
-											"parameters": {
-												"x": "1",
-												"y": "2",
-												"z": "0",
-												"value": "2"
-											}
-										}
-									],
-									"sid": 961590641930129
-								},
-								{
-									"eventType": "comment",
-									"text": "Desbloqueia descrição no Codex"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 511609413628552,
-											"parameters": {
-												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
-												"comparison": 0,
-												"second-value": "3"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-at-xyz",
-											"objectClass": "A_zCodex",
-											"sid": 444912743751516,
-											"parameters": {
-												"x": "1",
-												"y": "2",
-												"z": "0",
-												"value": "3"
-											}
-										}
-									],
-									"sid": 216728274934390
-								},
 								{
 									"eventType": "comment",
 									"text": "Desbloqueia a reliquia Cartola Verde"
@@ -59895,16 +60585,36 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 850596260391342,
+											"sid": 276093136104273,
 											"parameters": {
 												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
 												"comparison": 0,
-												"second-value": "5"
+												"second-value": "6"
 											}
 										}
 									],
-									"actions": [],
-									"sid": 464983745099002
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 745678411010540,
+											"parameters": {
+												"x": "1",
+												"y": "9",
+												"z": "2",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 287680284471993,
+											"parameters": [
+												"\"hat\"",
+												false
+											]
+										}
+									],
+									"sid": 284843250600336
 								}
 							]
 						},
@@ -59939,9 +60649,60 @@
 									"parameters": {
 										"achievement": "ID"
 									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 527724192463404,
+									"parameters": [
+										"ID",
+										"3"
+									]
 								}
 							],
-							"sid": 352613970158390
+							"sid": 352613970158390,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a carta de poder Furacão"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 298329436215943,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "6"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 920665003382888,
+											"parameters": {
+												"x": "1",
+												"y": "14",
+												"z": "1",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 691576677214146,
+											"parameters": [
+												"\"14\"",
+												true
+											]
+										}
+									],
+									"sid": 462368079693592
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -59949,11 +60710,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 630726402457841,
+									"sid": 700425202995319,
 									"parameters": {
 										"variable": "ID",
 										"comparison": 0,
-										"value": "\"MISSING\""
+										"value": "\"RIVALRY\""
 									}
 								}
 							],
@@ -59961,7 +60722,7 @@
 								{
 									"id": "set-key",
 									"objectClass": "D_Save",
-									"sid": 986891186252010,
+									"sid": 282201067852174,
 									"parameters": {
 										"key": "ID",
 										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & \"/\" & tokenat(Self.Get(ID), 1, \"/\")"
@@ -59970,13 +60731,64 @@
 								{
 									"id": "get-achievement-info",
 									"objectClass": "Steamworks",
-									"sid": 120119049811994,
+									"sid": 770314000113301,
 									"parameters": {
 										"achievement": "ID"
 									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 477111313106908,
+									"parameters": [
+										"ID",
+										"4"
+									]
 								}
 							],
-							"sid": 491986784055150
+							"sid": 496676181509097,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a carta de poder Troca Oculta"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 655119911099093,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 380265255455521,
+											"parameters": {
+												"x": "1",
+												"y": "12",
+												"z": "1",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 455256609651170,
+											"parameters": [
+												"\"12\"",
+												true
+											]
+										}
+									],
+									"sid": 220834971457666
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -60009,9 +60821,60 @@
 									"parameters": {
 										"achievement": "ID"
 									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 308389761868760,
+									"parameters": [
+										"ID",
+										"5"
+									]
 								}
 							],
-							"sid": 342944371521611
+							"sid": 342944371521611,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a carta de poder Menu"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 233610883562286,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 300608102860497,
+											"parameters": {
+												"x": "1",
+												"y": "13",
+												"z": "1",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 667675796753178,
+											"parameters": [
+												"\"13\"",
+												true
+											]
+										}
+									],
+									"sid": 739553961743924
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -60019,11 +60882,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 841441068960221,
+									"sid": 568375323238701,
 									"parameters": {
 										"variable": "ID",
 										"comparison": 0,
-										"value": "\"RIVALRY\""
+										"value": "\"MISSING\""
 									}
 								}
 							],
@@ -60031,7 +60894,7 @@
 								{
 									"id": "set-key",
 									"objectClass": "D_Save",
-									"sid": 935793545840841,
+									"sid": 300750576790123,
 									"parameters": {
 										"key": "ID",
 										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & \"/\" & tokenat(Self.Get(ID), 1, \"/\")"
@@ -60040,13 +60903,64 @@
 								{
 									"id": "get-achievement-info",
 									"objectClass": "Steamworks",
-									"sid": 779068174087344,
+									"sid": 928407440294696,
 									"parameters": {
 										"achievement": "ID"
 									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 838916828774470,
+									"parameters": [
+										"ID",
+										"6"
+									]
 								}
 							],
-							"sid": 664926558219395
+							"sid": 541843757058529,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a reliquia Olho do Gato"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 726552286955992,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 310068490022189,
+											"parameters": {
+												"x": "1",
+												"y": "1",
+												"z": "2",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 777748998196968,
+											"parameters": [
+												"\"cat_eye\"",
+												false
+											]
+										}
+									],
+									"sid": 489233500783375
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -60079,9 +60993,146 @@
 									"parameters": {
 										"achievement": "ID"
 									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 966206171601859,
+									"parameters": [
+										"ID",
+										"7"
+									]
 								}
 							],
-							"sid": 994648307193883
+							"sid": 994648307193883,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a carta de poder Carta A"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 715926636665420,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 662934408967707,
+											"parameters": {
+												"x": "1",
+												"y": "19",
+												"z": "1",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 950465814915441,
+											"parameters": [
+												"\"19\"",
+												true
+											]
+										}
+									],
+									"sid": 707747170753187
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 512460847080962,
+									"parameters": {
+										"variable": "ID",
+										"comparison": 0,
+										"value": "\"PRIZEWINNER\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 741455816578968,
+									"parameters": {
+										"key": "ID",
+										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & \"/\" & tokenat(Self.Get(ID), 1, \"/\")"
+									}
+								},
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 711291571218063,
+									"parameters": {
+										"achievement": "ID"
+									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 667184296623959,
+									"parameters": [
+										"ID",
+										"8"
+									]
+								}
+							],
+							"sid": 888793413116526,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a carta de poder Presente"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 362765433265615,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 890432994513281,
+											"parameters": {
+												"x": "1",
+												"y": "8",
+												"z": "1",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 692764006023009,
+											"parameters": [
+												"\"8\"",
+												true
+											]
+										}
+									],
+									"sid": 487335851167082
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -60114,9 +61165,60 @@
 									"parameters": {
 										"achievement": "ID"
 									}
+								},
+								{
+									"callFunction": "Update_Codex",
+									"sid": 590627322805998,
+									"parameters": [
+										"ID",
+										"9"
+									]
 								}
 							],
-							"sid": 395912060485906
+							"sid": 395912060485906,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a reliquia Coroa da Rainha"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 976181287001058,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 306655279481961,
+											"parameters": {
+												"x": "1",
+												"y": "5",
+												"z": "2",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 863466653692615,
+											"parameters": [
+												"\"crown\"",
+												false
+											]
+										}
+									],
+									"sid": 875610871918089
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -60149,44 +61251,60 @@
 									"parameters": {
 										"achievement": "ID"
 									}
-								}
-							],
-							"sid": 949876568243902
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 673319971170154,
-									"parameters": {
-										"variable": "ID",
-										"comparison": 0,
-										"value": "\"PRIZEWINNER\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-key",
-									"objectClass": "D_Save",
-									"sid": 406933294432857,
-									"parameters": {
-										"key": "ID",
-										"value": "str(int(tokenat(Self.Get(ID), 0, \"/\")) + Value) & \"/\" & tokenat(Self.Get(ID), 1, \"/\")"
-									}
 								},
 								{
-									"id": "get-achievement-info",
-									"objectClass": "Steamworks",
-									"sid": 942899029622369,
-									"parameters": {
-										"achievement": "ID"
-									}
+									"callFunction": "Update_Codex",
+									"sid": 714916249359974,
+									"parameters": [
+										"ID",
+										"10"
+									]
 								}
 							],
-							"sid": 655340201306560
+							"sid": 949876568243902,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Desbloqueia a reliquia Armadilha de Coelho"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 622118005408941,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+												"comparison": 0,
+												"second-value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "A_zCodex",
+											"sid": 117704845902489,
+											"parameters": {
+												"x": "1",
+												"y": "20",
+												"z": "2",
+												"value": "0"
+											}
+										},
+										{
+											"callFunction": "Add Final Unlocks",
+											"sid": 119188294881386,
+											"parameters": [
+												"\"trap\"",
+												false
+											]
+										}
+									],
+									"sid": 544956506399079
+								}
+							]
 						},
 						{
 							"eventType": "comment",
@@ -60622,6 +61740,97 @@
 								}
 							],
 							"sid": 969465708334550
+						}
+					]
+				},
+				{
+					"functionName": "Update_Codex",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "ID",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 534051431163708
+						},
+						{
+							"name": "Codex_Y",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 542393352334401
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 440810033719407,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Desbloqueia nome e foto no Codex"
+						},
+						{
+							"eventType": "comment",
+							"text": "Desbloqueia atributos no Codex"
+						},
+						{
+							"eventType": "comment",
+							"text": "Desbloqueia descrição no Codex"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 982462390581896,
+									"parameters": {
+										"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+										"comparison": 5,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 519236155291963,
+									"parameters": {
+										"first-value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))",
+										"comparison": 3,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xyz",
+									"objectClass": "A_zCodex",
+									"sid": 810984489116313,
+									"parameters": {
+										"x": "1",
+										"y": "Codex_Y",
+										"z": "0",
+										"value": "int(tokenat(D_Save.Get(ID), 0, \"/\"))"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "A_Match_Info",
+									"sid": 117955798245425,
+									"parameters": {
+										"x": "1",
+										"y": "7",
+										"value": "Self.At(1,7) + 1"
+									}
+								}
+							],
+							"sid": 816864559246025
 						}
 					]
 				},
@@ -61088,6 +62297,90 @@
 						}
 					],
 					"sid": 608892035289769
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 187002022634681
+						}
+					],
+					"actions": [
+						{
+							"id": "start-timer",
+							"objectClass": "pendulo",
+							"sid": 950055939954281,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "60",
+								"type": "regular",
+								"tag": "\"seconds\""
+							}
+						}
+					],
+					"sid": 516156043258529
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "pendulo",
+							"sid": 151438010493364,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"seconds\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 599768896619576,
+							"parameters": {
+								"x": "1",
+								"y": "1",
+								"value": "Self.At(1,1) + 1"
+							}
+						}
+					],
+					"sid": 910087064913447
+				},
+				{
+					"functionName": "Save Seconds",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "stop-timer",
+							"objectClass": "pendulo",
+							"sid": 906521916307642,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"seconds\""
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 960192620052661,
+							"parameters": {
+								"x": "1",
+								"y": "2",
+								"value": "pendulo.Timer.CurrentTime(\"seconds\")"
+							}
+						}
+					],
+					"sid": 794257095326295
 				}
 			],
 			"sid": 357112366278544

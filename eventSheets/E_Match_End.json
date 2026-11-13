@@ -1,0 +1,940 @@
+{
+	"name": "E_Match_End",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "E_Global"
+		},
+		{
+			"eventType": "variable",
+			"name": "Match_Winner",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true - ganhou a partida / false - perdeu a partida",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 304204535147170
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 568426779555576
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "TiledBackground",
+					"sid": 976091793648593,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"loop\"",
+						"start-value": "-1085",
+						"end-value": "-5",
+						"time": "14",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "yes",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 810202951047747,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-100",
+						"duration": "0.5",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 690037986828567,
+					"parameters": {
+						"seconds": "0.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 962008124828343,
+					"parameters": {
+						"audio-file": {
+							"path": "Credits/18 - Phantom's Requiem (Loop)"
+						},
+						"loop": "not-looping",
+						"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 561007070870651,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Text_Static_Generic",
+							"sid": 106007860540884,
+							"parameters": {
+								"unique-id": "305"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 365942522931191,
+							"parameters": {
+								"text": "Match_Winner = 1 ? Internationalization.Lookup(\"match_end.title_win\") : Internationalization.Lookup(\"match_end.title_lose\")"
+							}
+						}
+					],
+					"sid": 734679197795386
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Text_Static_Generic",
+							"sid": 796265751359401,
+							"parameters": {
+								"unique-id": "438"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 684286481096784,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"match_end.match_info\", A_Match_Info.At(1,1), A_Match_Info.At(1,2), A_Match_Info.At(1,3), A_Match_Info.At(1,4), A_Match_Info.At(1,5), A_Match_Info.At(1,6))"
+							}
+						}
+					],
+					"sid": 439319931232431
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Text_Static_Generic",
+							"sid": 839579698296137,
+							"parameters": {
+								"unique-id": "448"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 263682555295811,
+							"parameters": {
+								"text": "Internationalization.LookupPlural(\"match_end.codex\", A_Match_Info.At(1,7))"
+							}
+						}
+					],
+					"sid": 430935513537500
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Text_Static_Generic",
+							"sid": 160826564305962,
+							"parameters": {
+								"unique-id": "455"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 783910593228861,
+							"parameters": {
+								"text": "Internationalization.LookupPlural(\"match_end.gallery\", A_Match_Info.At(1,8))"
+							}
+						}
+					],
+					"sid": 267705222080965
+				},
+				{
+					"eventType": "comment",
+					"text": "Se tem algo para desbloquear, então mostra a tela"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 741343564008229,
+							"parameters": {
+								"x": "1",
+								"y": "9",
+								"comparison": 1,
+								"value": "\"none\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-value",
+							"objectClass": "demo_end",
+							"sid": 932230525745850,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"unlock_opct\"",
+								"start-value": "1",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 790347913047255,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 803501126084721,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "1",
+										"end-index": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 383270995834188,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Se trata de uma carta de poder"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 836934990014464,
+											"parameters": {
+												"first-value": "tokenat(A_Match_Info.At(loopindex,9), 0, \"-\")",
+												"comparison": 0,
+												"second-value": "\"p\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 129271003680337,
+											"parameters": {
+												"object-to-create": "Card_Power",
+												"layer": "\"Unlocks\"",
+												"x": "544 + (176 * loopindex)",
+												"y": "528",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Card_Power",
+											"sid": 727105008340240,
+											"parameters": {
+												"animation": "\"Front\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Card_Power",
+											"sid": 685415530403655,
+											"parameters": {
+												"frame-number": "int(tokenat(A_Match_Info.At(loopindex,9), 1, \"-\"))"
+											}
+										}
+									],
+									"sid": 511027449614973
+								},
+								{
+									"eventType": "comment",
+									"text": "Se trata de uma relíquia"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 893558727226890,
+											"parameters": {
+												"first-value": "tokenat(A_Match_Info.At(loopindex,9), 0, \"-\")",
+												"comparison": 0,
+												"second-value": "\"r\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 212625257892615,
+											"parameters": {
+												"object-to-create": "Relics",
+												"layer": "\"Unlocks\"",
+												"x": "544 + (176 * loopindex)",
+												"y": "528",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Relics",
+											"sid": 318072433248710,
+											"parameters": {
+												"animation": "tokenat(A_Match_Info.At(loopindex,9), 1, \"-\")",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 812663137971544
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Lista de reliquias usadas na partida"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 904414369878521,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "1",
+								"end-index": "4"
+							}
+						},
+						{
+							"id": "compare-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 172654377457942,
+							"parameters": {
+								"x": "loopindex",
+								"y": "10",
+								"comparison": 1,
+								"value": "\"none\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 576774493840331,
+							"parameters": {
+								"object-to-create": "Relics",
+								"layer": "\"Game\"",
+								"x": "1216 + (128 * loopindex)",
+								"y": "448",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Relics",
+							"sid": 718479141214223,
+							"parameters": {
+								"animation": "A_Match_Info.At(loopindex,10)",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 837125494764600
+				},
+				{
+					"eventType": "comment",
+					"text": "Oponentes encontrados na partida"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 393445528729109,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "1",
+								"end-index": "4"
+							}
+						},
+						{
+							"id": "compare-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 739565532536926,
+							"parameters": {
+								"x": "loopindex",
+								"y": "11",
+								"comparison": 1,
+								"value": "\"none\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 747039901456857,
+							"parameters": {
+								"object-to-create": "Quadro_Turns_Shadow",
+								"layer": "\"Game\"",
+								"x": "656 + (128 * loopindex)",
+								"y": "448",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Quadro_Turns_Shadow",
+							"sid": 604413691205422,
+							"parameters": {
+								"animation": "\"Codex\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Quadro_Turns_Shadow",
+							"sid": 112809466443612,
+							"parameters": {
+								"frame-number": "int(A_Match_Info.At(loopindex,11))"
+							}
+						}
+					],
+					"sid": 152797260710627
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 691915373536801
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TiledBackground",
+					"sid": 968398573461029,
+					"parameters": {
+						"y": "Self.Tween.Value(\"loop\")"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 971320079849136,
+					"parameters": {
+						"layer": "\"Fade\"",
+						"opacity": "Demo_Fade_Sprite.Opacity"
+					}
+				}
+			],
+			"sid": 744094883420832,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "demo_end",
+							"sid": 178435496519674,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"unlock_opct\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 418973575931743,
+							"parameters": {
+								"layer": "\"Unlocks\"",
+								"opacity": "demo_end.Tween.Value(\"unlock_opct\")"
+							}
+						}
+					],
+					"sid": 864804062309695
+				}
+			]
+		},
+		{
+			"functionName": "Add Final Unlocks",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Item_ID",
+					"type": "string",
+					"initialValue": "",
+					"comment": "poderes exigem número / reliquias exigem string",
+					"sid": 209503874004195
+				},
+				{
+					"name": "IsPowerCard",
+					"type": "boolean",
+					"initialValue": "true",
+					"comment": "true - se trata de um poder / false - se trata de uma relíquia",
+					"sid": 736719765586665
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 470017791377599,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 394975122830003,
+							"parameters": {
+								"variable": "IsPowerCard"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 980376382483032,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 220593710474495,
+									"parameters": {
+										"name": "\"check_unlocks\"",
+										"start-index": "1",
+										"end-index": "4"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "A_Match_Info",
+									"sid": 290493103451729,
+									"parameters": {
+										"x": "loopindex(\"check_unlocks\")",
+										"y": "9",
+										"comparison": 0,
+										"value": "\"none\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-loop",
+									"objectClass": "System",
+									"sid": 368466123154909
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "A_Match_Info",
+									"sid": 702804614282938,
+									"parameters": {
+										"x": "1",
+										"y": "loopindex(\"check_unlocks\")",
+										"value": "\"p-\" & Item_ID"
+									}
+								}
+							],
+							"sid": 663964975909438
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 285154078256805
+						}
+					],
+					"actions": [],
+					"sid": 678505913122352,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 983993530934733,
+									"parameters": {
+										"name": "\"check_unlocks\"",
+										"start-index": "1",
+										"end-index": "4"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "A_Match_Info",
+									"sid": 104534363725634,
+									"parameters": {
+										"x": "loopindex(\"check_unlocks\")",
+										"y": "9",
+										"comparison": 0,
+										"value": "\"none\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-loop",
+									"objectClass": "System",
+									"sid": 893759883826653
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "A_Match_Info",
+									"sid": 498904302117216,
+									"parameters": {
+										"x": "1",
+										"y": "loopindex(\"check_unlocks\")",
+										"value": "\"r-\" & Item_ID"
+									}
+								}
+							],
+							"sid": 394838958386478
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "Add Used Relics",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Relic_ID",
+					"type": "string",
+					"initialValue": "",
+					"comment": "reliquias exigem string",
+					"sid": 578840203869520
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 285097800249677,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 589294189041107,
+							"parameters": {
+								"name": "\"check_unlocks\"",
+								"start-index": "1",
+								"end-index": "4"
+							}
+						},
+						{
+							"id": "compare-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 478906534186780,
+							"parameters": {
+								"x": "loopindex(\"check_unlocks\")",
+								"y": "10",
+								"comparison": 0,
+								"value": "\"none\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-loop",
+							"objectClass": "System",
+							"sid": 541568474450377
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 871560282128624,
+							"parameters": {
+								"x": "1",
+								"y": "loopindex(\"check_unlocks\")",
+								"value": "Relic_ID"
+							}
+						}
+					],
+					"sid": 747466685808748
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 700219774477246,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Back_2"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 762159719966959,
+					"parameters": {
+						"layer": "\"Unlocks\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Save_Game",
+					"sid": 188065696219643
+				}
+			],
+			"sid": 711544242719074,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Btn_Back_2",
+							"sid": 693796781755673,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 944302412749253,
+							"parameters": {
+								"layout": "Level"
+							}
+						}
+					],
+					"sid": 264634751649504
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 912362624529229
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 620808456710719,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 382936955799558
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 487487732452879,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Back_2"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 132283242459959,
+					"parameters": {
+						"layer": "\"Unlocks\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 632375475569977,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "demo_end",
+							"sid": 797179950897045,
+							"parameters": {
+								"unique-id": "462"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "demo_end",
+							"sid": 568168577370789,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "-800",
+								"time": "0.8",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 772109293086812
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "demo_end",
+					"sid": 388492316093987,
+					"parameters": {
+						"comparison": 0,
+						"y-co-ordinate": "-800"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 821080858161657,
+					"parameters": {
+						"layer": "\"Unlocks\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "demo_end",
+					"sid": 728797158555129,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"unlock_opct\"",
+						"start-value": "100",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 222073345412170
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-layer-opacity",
+					"objectClass": "System",
+					"sid": 391673885167494,
+					"parameters": {
+						"layer": "\"Unlocks\"",
+						"comparison": 0,
+						"opacity": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 772906207223851,
+					"parameters": {
+						"layer": "\"Unlocks\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 588561991720984
+		}
+	],
+	"sid": 271661542900715
+}

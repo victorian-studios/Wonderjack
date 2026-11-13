@@ -385,7 +385,8 @@
 			"card_enemy2",
 			"Sprite_Queen_Axe",
 			"Sprite_Queen_Corte",
-			"Bkg_Codex_Tip"
+			"Bkg_Codex_Tip",
+			"A_Match_Info"
 		],
 		"subfolders": []
 	},
@@ -431,7 +432,7 @@
 			"Test",
 			"E Intro",
 			"E_Story",
-			"E_Demo_End"
+			"E_Match_End"
 		],
 		"subfolders": []
 	},
@@ -1122,7 +1123,7 @@
 					}
 				},
 				{
-					"name": "Power_Deck_Base.json",
+					"name": "Empty_Array.json",
 					"type": "application/json",
 					"sid": 857063601346542,
 					"file-info": {
@@ -1181,6 +1182,14 @@
 					"name": "Codex.json",
 					"type": "application/json",
 					"sid": 430341875574715,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Match_info.json",
+					"type": "application/json",
+					"sid": 484806780288183,
 					"file-info": {
 						"purpose": "none"
 					}
