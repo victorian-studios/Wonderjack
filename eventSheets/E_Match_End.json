@@ -52,32 +52,6 @@
 						"duration": "0.5",
 						"ending": "stop"
 					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 690037986828567,
-					"parameters": {
-						"seconds": "0.5",
-						"use-timescale": true
-					}
-				},
-				{
-					"id": "tween-one-property",
-					"objectClass": "Demo_Fade_Sprite",
-					"sid": 988348964153521,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "offsetOpacity",
-						"end-value": "0",
-						"time": "0.5",
-						"ease": "default",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no",
-						"repeat-count": "1"
-					}
 				}
 			],
 			"sid": 561007070870651,
@@ -498,12 +472,12 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 576774493840331,
+							"sid": 601692037735521,
 							"parameters": {
 								"object-to-create": "Relics",
 								"layer": "\"Game\"",
 								"x": "1216 + (128 * loopindex)",
-								"y": "448",
+								"y": "464",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -553,12 +527,12 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 747039901456857,
+							"sid": 299720377484740,
 							"parameters": {
 								"object-to-create": "Quadro_Turns_Shadow",
 								"layer": "\"Game\"",
 								"x": "656 + (128 * loopindex)",
-								"y": "448",
+								"y": "464",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -591,6 +565,39 @@
 						}
 					],
 					"sid": 152797260710627
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 652287306213303,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Demo_Fade_Sprite",
+							"sid": 879746208042442,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 671486125163076
 				}
 			]
 		},

@@ -361,19 +361,69 @@
 								"comparison": 0,
 								"second-value": "\"Menu\""
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 725163437170665,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level\""
+							}
 						}
 					],
 					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 541125690929832,
+							"parameters": {
+								"group-name": "\"Player's Turn / Actions\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"callFunction": "Reset Relics",
+							"sid": 601745280275146
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 717279038422035,
+							"disabled": true,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 903185357043579,
+							"parameters": {
+								"tag": "\"relic\""
+							}
+						},
 						{
 							"callFunction": "Reset Number Deck",
 							"sid": 234599940121651
 						},
 						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 193718850328581,
+							"parameters": {
+								"tag": "\"numb\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 458853895829621,
+							"sid": 322389214811722,
+							"disabled": true,
 							"parameters": {
-								"seconds": "0.1",
+								"seconds": "0.3",
 								"use-timescale": true
 							}
 						},
@@ -382,17 +432,22 @@
 							"sid": 490085774992524
 						},
 						{
-							"id": "wait",
+							"id": "wait-for-signal",
 							"objectClass": "System",
-							"sid": 108644014070884,
+							"sid": 719894057259822,
 							"parameters": {
-								"seconds": "0.1",
-								"use-timescale": true
+								"tag": "\"power\""
 							}
 						},
 						{
-							"callFunction": "Reset Relics",
-							"sid": 207520627640472
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 133204838635924,
+							"disabled": true,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
 						},
 						{
 							"id": "request-project-file",
@@ -417,9 +472,37 @@
 							"parameters": {
 								"json": "AJAX.LastData"
 							}
+						},
+						{
+							"id": "delete",
+							"objectClass": "A_EnemyPowers",
+							"sid": 383647442507130,
+							"parameters": {
+								"index": "2",
+								"axis": "x"
+							}
+						},
+						{
+							"id": "delete",
+							"objectClass": "A_EnemyPowers",
+							"sid": 579065009775878,
+							"parameters": {
+								"index": "1",
+								"axis": "x"
+							}
+						},
+						{
+							"id": "delete",
+							"objectClass": "A_EnemyPowers",
+							"sid": 264816515804899,
+							"parameters": {
+								"index": "0",
+								"axis": "x"
+							}
 						}
 					],
-					"sid": 106532783466379
+					"sid": 106532783466379,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "comment",
@@ -897,6 +980,15 @@
 									"parameters": {
 										"variable": "Opt_FastMode_Secs",
 										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 797800259291140,
+									"parameters": {
+										"variable": "Opt_FastMode",
+										"value": "true"
 									}
 								}
 							],
@@ -6237,11 +6329,11 @@
 												{
 													"id": "set-at-xy",
 													"objectClass": "A_zOptions_Config",
-													"sid": 753356537937534,
+													"sid": 220180958533186,
 													"parameters": {
 														"x": "3",
 														"y": "2",
-														"value": "0"
+														"value": "1"
 													}
 												}
 											],
@@ -6299,11 +6391,11 @@
 												{
 													"id": "set-at-xy",
 													"objectClass": "A_zOptions_Config",
-													"sid": 719700555671858,
+													"sid": 896293864028487,
 													"parameters": {
 														"x": "3",
 														"y": "2",
-														"value": "1"
+														"value": "0"
 													}
 												}
 											],

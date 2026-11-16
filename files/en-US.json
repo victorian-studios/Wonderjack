@@ -19,7 +19,7 @@
             "btn_credits": "Credits",
             "btn_back": "Back",
             "discord_join": "Join now!",
-            "exit_question": "Are you sure?",
+            "exit_question": "Are you s ure?",
             "codex": {
                 "name": "The Codex",
                 "info_lock": "???",
@@ -30,7 +30,7 @@
                     "title": "Opponents",
                     "White Queen": {
                         "name": "White Queen",
-                        "mind": "Cautious",
+                        "mind": "Fearless",
                         "stage": "Tutorial",
                         "special": "None",
                         "desc": "A slightly clumsy queen with a heart of gold. She loves teaching people how to play Wonderjack and is delighted to see her lessons pay off."
@@ -604,7 +604,7 @@
             "lucky": {
                 "title": "Rabbit's Foot",
                 "flavor_txt": "Lucky!",
-                "desc": "When reaching [color=#f5fe05]{0}[/color] with your number cards, gain a [color=#f5fe05]power[/color] card (once per round)."
+                "desc": "When reaching the match goal ([color=#f5fe05]{0}[/color]) with your number cards, gain a [color=#f5fe05]power[/color] card (once per round)."
             },
             "armor": {
                 "title": "Vaporium Armor",

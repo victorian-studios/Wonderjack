@@ -4685,9 +4685,9 @@
 														{
 															"id": "set-animation",
 															"objectClass": "Icon_Brain",
-															"sid": 878189386305265,
+															"sid": 917308143777688,
 															"parameters": {
-																"animation": "\"mind_cautious\"",
+																"animation": "\"mind_fearless\"",
 																"from": "beginning"
 															}
 														}
@@ -7021,9 +7021,9 @@
 								{
 									"id": "show-overlay-url",
 									"objectClass": "Steamworks",
-									"sid": 455857981879037,
+									"sid": 250518079346192,
 									"parameters": {
-										"url": "\"https://store.steampowered.com/news/app/4922040/view/690899232979157618\"",
+										"url": "\"https://store.steampowered.com/news/app/4922040/view/655997268258717790\"",
 										"modal": false
 									}
 								}
@@ -7560,20 +7560,20 @@
 							],
 							"actions": [
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 446629411054262,
+									"parameters": {
+										"variable": "Ach_ID",
+										"value": "D_Save.CurrentKey"
+									}
+								},
+								{
 									"id": "get-achievement-info",
 									"objectClass": "Steamworks",
 									"sid": 535778915071893,
 									"parameters": {
 										"achievement": "D_Save.CurrentKey"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 949002094738257,
-									"parameters": {
-										"variable": "Ach_ID",
-										"value": "D_Save.CurrentKey"
 									}
 								}
 							],

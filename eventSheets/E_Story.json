@@ -42,6 +42,51 @@
 			],
 			"actions": [
 				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 761494246943687,
+					"parameters": {
+						"layer": "\"Pages_1\"",
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 743484498687731,
+					"parameters": {
+						"layer": "\"Pages_2\"",
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 419577244901252,
+					"parameters": {
+						"layer": "\"Pages_3\"",
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 993362609591153,
+					"parameters": {
+						"layer": "\"Pages_4\"",
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 995032706882146,
+					"parameters": {
+						"layer": "\"Pages_5\"",
+						"opacity": "0"
+					}
+				},
+				{
 					"id": "tween-value",
 					"objectClass": "TiledBackground",
 					"sid": 159362608967773,
