@@ -8266,8 +8266,8 @@
 								"y": 796,
 								"width": 592.8169118042433,
 								"height": 654.3994905418988,
-								"originX": 0.386986301369863,
-								"originY": 0.9431230610134437,
+								"originX": 0.384703196347032,
+								"originY": 0.9348500517063082,
 								"color": [
 									1,
 									1,
@@ -8660,6 +8660,11 @@
 								"destroy": false,
 								"enabled": true,
 								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},

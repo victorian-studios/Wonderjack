@@ -1537,8 +1537,8 @@
 						"y": 618,
 						"width": 718.5022288261514,
 						"height": 792,
-						"originX": 0.386986301369863,
-						"originY": 0.9431230610134437,
+						"originX": 0.384703196347032,
+						"originY": 0.9348500517063082,
 						"color": [
 							1,
 							1,
@@ -3979,6 +3979,6 @@
 	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
-	"projection": "orthographic",
+	"projection": "perspective",
 	"eventSheet": "Test"
 }

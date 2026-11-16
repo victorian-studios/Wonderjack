@@ -1589,6 +1589,14 @@
 									"id": "else",
 									"objectClass": "System",
 									"sid": 574832326928118
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 873058141420954,
+									"parameters": {
+										"layer": "\"Codex\""
+									}
 								}
 							],
 							"actions": [

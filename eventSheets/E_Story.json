@@ -59,6 +59,26 @@
 					}
 				},
 				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 822771242058551,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-100",
+						"duration": "0.3",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 691613297327958,
+					"parameters": {
+						"seconds": "0.3",
+						"use-timescale": true
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 531329179976351,
@@ -910,50 +930,7 @@
 									}
 								}
 							],
-							"sid": 795705336392928,
-							"children": [
-								{
-									"eventType": "comment",
-									"text": "Se for algum dos finais do jogo, depois da 3° e última página, vai pra tela de detalhes da partida"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 670756650008408,
-											"parameters": {
-												"variable": "Actual_Story",
-												"comparison": 0,
-												"value": "\"End_1\""
-											}
-										},
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 905471923451243,
-											"parameters": {
-												"variable": "Actual_Story",
-												"comparison": 0,
-												"value": "\"End_2\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 783803783071129,
-											"parameters": {
-												"layout": "Match_End"
-											}
-										}
-									],
-									"sid": 700816152938944,
-									"isOrBlock": true
-								}
-							]
+							"sid": 795705336392928
 						},
 						{
 							"eventType": "block",
@@ -993,7 +970,50 @@
 									}
 								}
 							],
-							"sid": 813511007921115
+							"sid": 813511007921115,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Se for algum dos finais do jogo, depois da 3° e última página, vai pra tela de detalhes da partida"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 546002207029021,
+											"parameters": {
+												"variable": "Actual_Story",
+												"comparison": 0,
+												"value": "\"End_1\""
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 517938765970712,
+											"parameters": {
+												"variable": "Actual_Story",
+												"comparison": 0,
+												"value": "\"End_2\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 817626376669125,
+											"parameters": {
+												"layout": "Match_End"
+											}
+										}
+									],
+									"sid": 728758335371299,
+									"isOrBlock": true
+								}
+							]
 						},
 						{
 							"eventType": "block",

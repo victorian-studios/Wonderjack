@@ -243,7 +243,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"my_id": 0,
-						"my_txt": "matc_end.title_lose"
+						"my_txt": ""
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -571,7 +571,7 @@
 					"world": {
 						"x": 96,
 						"y": 288,
-						"width": 672,
+						"width": 736,
 						"height": 384,
 						"originX": 0,
 						"originY": 0,
@@ -754,71 +754,6 @@
 					}
 				},
 				{
-					"type": "Card_Power",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 454,
-					"sid": 238491353295290,
-					"tags": "",
-					"instanceVariables": {
-						"myID": "",
-						"my_pos_x": 0,
-						"my_pos_y": 0,
-						"hand_position": 0,
-						"FromPlayer": false,
-						"Highlight": false,
-						"CloseToMouse": false,
-						"Selected": false,
-						"ToUse": false,
-						"Demo": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 320,
-						"y": 1456,
-						"width": 96,
-						"height": 160,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "Text_Static_Generic",
 					"properties": {
 						"text": "Relíquias usadas:",
@@ -887,7 +822,7 @@
 					"locked": false,
 					"world": {
 						"x": 1296,
-						"y": 304,
+						"y": 288,
 						"width": 528,
 						"height": 96,
 						"originX": 0,
@@ -1275,70 +1210,6 @@
 									"d": true,
 									"sm": "normal"
 								}
-							},
-							{
-								"uid": 450,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"de": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 451,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"de": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 452,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"de": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
-								"uid": 453,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"de": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
 							}
 						],
 						"flags": {
@@ -1473,400 +1344,6 @@
 					}
 				},
 				{
-					"type": "Card_Power",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 450,
-					"sid": 298072099486454,
-					"tags": "",
-					"instanceVariables": {
-						"myID": "",
-						"my_pos_x": 0,
-						"my_pos_y": 0,
-						"hand_position": 0,
-						"FromPlayer": false,
-						"Highlight": false,
-						"CloseToMouse": false,
-						"Selected": false,
-						"ToUse": false,
-						"Demo": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"sceneGraphData": {
-						"parent-uid": 462,
-						"uid": 450,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"de": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZ": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformD": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformSZ": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 720,
-						"y": 528,
-						"width": 96,
-						"height": 160,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Relics",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "cat_eye",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 451,
-					"sid": 837322557979087,
-					"tags": "",
-					"instanceVariables": {
-						"ID": "3",
-						"Uses": 0,
-						"Used": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Fade": {
-							"properties": {
-								"fade-in-time": 1,
-								"wait-time": 0,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"effects": {
-						"Tint": {
-							"isEnabled": false,
-							"parameters": {
-								"color": [
-									0.3137254901960784,
-									0.3137254901960784,
-									0.3137254901960784,
-									1
-								]
-							}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"sceneGraphData": {
-						"parent-uid": 462,
-						"uid": 451,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"de": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZ": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformD": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformSZ": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 896,
-						"y": 528,
-						"width": 122,
-						"height": 122,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Card_Power",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Front",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 452,
-					"sid": 377291500474591,
-					"tags": "",
-					"instanceVariables": {
-						"myID": "",
-						"my_pos_x": 0,
-						"my_pos_y": 0,
-						"hand_position": 0,
-						"FromPlayer": false,
-						"Highlight": false,
-						"CloseToMouse": false,
-						"Selected": false,
-						"ToUse": false,
-						"Demo": false
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 3,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"sceneGraphData": {
-						"parent-uid": 462,
-						"uid": 452,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"de": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZ": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformD": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformSZ": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1072,
-						"y": 528,
-						"width": 96,
-						"height": 160,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Relics",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "cat_eye",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 453,
-					"sid": 843625919807470,
-					"tags": "",
-					"instanceVariables": {
-						"ID": "3",
-						"Uses": 0,
-						"Used": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Flash": {
-							"properties": {}
-						},
-						"Fade": {
-							"properties": {
-								"fade-in-time": 1,
-								"wait-time": 0,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"effects": {
-						"Tint": {
-							"isEnabled": false,
-							"parameters": {
-								"color": [
-									0.3137254901960784,
-									0.3137254901960784,
-									0.3137254901960784,
-									1
-								]
-							}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"sceneGraphData": {
-						"parent-uid": 462,
-						"uid": 453,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"de": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZ": 0,
-							"transformW": 0,
-							"transformH": 0,
-							"transformD": 0,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformSZ": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1248,
-						"y": 528,
-						"width": 122,
-						"height": 122,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "Btn_Back_2",
 					"properties": {
 						"initially-visible": true,
@@ -1976,6 +1453,54 @@
 						"height": 66.20929839391374,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Quadro_Turns_Shadow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "None",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 440,
+					"sid": 803285804462362,
+					"tags": "",
+					"instanceVariables": {
+						"Frame_ID": 0,
+						"ID": 0
+					},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0.5,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -416,
+						"y": 1520,
+						"width": 184,
+						"height": 146,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -2135,7 +1660,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"my_id": 0,
-						"my_txt": "relics.choose"
+						"my_txt": ""
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -2386,6 +1911,11 @@
 								"enabled": true,
 								"live-preview": false
 							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"materialSurfaceType": "smooth",
@@ -2450,6 +1980,6 @@
 	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
-	"projection": "orthographic",
+	"projection": "perspective",
 	"eventSheet": "E_Match_End"
 }

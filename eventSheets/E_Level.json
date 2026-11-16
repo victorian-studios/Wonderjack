@@ -4314,11 +4314,11 @@
 								{
 									"id": "set-at-xy",
 									"objectClass": "A_Match_Info",
-									"sid": 559148555233434,
+									"sid": 355864006988074,
 									"parameters": {
-										"x": "6",
-										"y": "1",
-										"value": "Self.At(6,1) + 1"
+										"x": "1",
+										"y": "6",
+										"value": "Self.At(1,6) + 1"
 									}
 								}
 							],
@@ -4902,6 +4902,7 @@
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Table_Player",
 											"sid": 926753020621159,
+											"disabled": true,
 											"parameters": {
 												"instance-variable": "Next_Hidden"
 											},
@@ -8389,61 +8390,9 @@
 																false,
 																false
 															]
-														},
-														{
-															"callFunction": "Count_Numbers",
-															"sid": 682671812745909,
-															"parameters": [
-																false
-															]
 														}
 													],
-													"sid": 203355877960278,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-boolean-eventvar",
-																	"objectClass": "System",
-																	"sid": 716084855600391,
-																	"parameters": {
-																		"variable": "Relic"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"callFunction": "Relic Feedback",
-																	"sid": 248511761598635,
-																	"parameters": [
-																		"\"watch\"",
-																		true,
-																		false,
-																		true
-																	]
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 687163805420853,
-																	"parameters": {
-																		"seconds": "1.0",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"callFunction": "Count_Numbers",
-																	"sid": 110211059490333,
-																	"parameters": [
-																		false
-																	]
-																}
-															],
-															"sid": 874788869185314,
-															"disabled": true
-														}
-													]
+													"sid": 203355877960278
 												}
 											]
 										}
@@ -8530,6 +8479,29 @@
 									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 615645076907368,
+									"parameters": {
+										"seconds": "0.45",
+										"use-timescale": true
+									}
+								},
+								{
+									"callFunction": "Count_Numbers",
+									"sid": 738502121139496,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 703544573438297
 						}
 					]
 				},
@@ -11477,6 +11449,11 @@
 									"sid": 477862289655616
 								},
 								{
+									"id": "move-to-top",
+									"objectClass": "degrade",
+									"sid": 883953194656999
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 160162838336008,
@@ -12257,6 +12234,11 @@
 													"id": "move-to-top",
 													"objectClass": "mesa",
 													"sid": 991629744851224
+												},
+												{
+													"id": "move-to-top",
+													"objectClass": "degrade",
+													"sid": 221882006469666
 												}
 											],
 											"sid": 557987473729413
@@ -26288,11 +26270,11 @@
 								{
 									"id": "set-at-xy",
 									"objectClass": "A_Match_Info",
-									"sid": 259815512691052,
+									"sid": 306710769385866,
 									"parameters": {
-										"x": "5",
-										"y": "1",
-										"value": "Self.At( 5,1 ) + 1"
+										"x": "1",
+										"y": "3",
+										"value": "Self.At( 1,3 ) + 1"
 									}
 								},
 								{
@@ -26676,21 +26658,30 @@
 																	"sid": 142764587666013
 																},
 																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 982462551620797,
+																	"parameters": {
+																		"variable": "Actual_Story",
+																		"value": "\"End_2\""
+																	}
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 658621955260713,
+																	"parameters": {
+																		"variable": "Match_Winner",
+																		"value": "true"
+																	}
+																},
+																{
 																	"id": "wait",
 																	"objectClass": "System",
 																	"sid": 967696680869203,
 																	"parameters": {
 																		"seconds": "3.5",
 																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 612472139635118,
-																	"parameters": {
-																		"variable": "Actual_Story",
-																		"value": "\"End_2\""
 																	}
 																},
 																{
@@ -26717,6 +26708,15 @@
 																{
 																	"callFunction": "Save_Game",
 																	"sid": 498633713861100
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 399752961468439,
+																	"parameters": {
+																		"variable": "Match_Winner",
+																		"value": "true"
+																	}
 																},
 																{
 																	"id": "wait",
@@ -27729,6 +27729,15 @@
 																	"sid": 188945865605114
 																},
 																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 268873490085394,
+																	"parameters": {
+																		"variable": "Match_Winner",
+																		"value": "false"
+																	}
+																},
+																{
 																	"id": "wait",
 																	"objectClass": "System",
 																	"sid": 249882213148502,
@@ -28080,21 +28089,30 @@
 																	"sid": 735604224142281
 																},
 																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 954492997010130,
+																	"parameters": {
+																		"variable": "Actual_Story",
+																		"value": "\"End_1\""
+																	}
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 801822967538993,
+																	"parameters": {
+																		"variable": "Match_Winner",
+																		"value": "true"
+																	}
+																},
+																{
 																	"id": "wait",
 																	"objectClass": "System",
 																	"sid": 493941066917835,
 																	"parameters": {
 																		"seconds": "3.5",
 																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "set-eventvar-value",
-																	"objectClass": "System",
-																	"sid": 757346436986452,
-																	"parameters": {
-																		"variable": "Actual_Story",
-																		"value": "\"End_1\""
 																	}
 																},
 																{
@@ -28121,6 +28139,15 @@
 																{
 																	"callFunction": "Save_Game",
 																	"sid": 633660637002947
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 695609518722844,
+																	"parameters": {
+																		"variable": "Match_Winner",
+																		"value": "true"
+																	}
 																},
 																{
 																	"id": "wait",
@@ -30166,24 +30193,33 @@
 																	}
 																},
 																{
+																	"callFunction": "Save Seconds",
+																	"sid": 572160458425208
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 175976303883679,
+																	"parameters": {
+																		"variable": "Match_Winner",
+																		"value": "false"
+																	}
+																},
+																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 916237610294292,
+																	"sid": 584432281440034,
 																	"parameters": {
 																		"seconds": "0.5",
 																		"use-timescale": true
 																	}
 																},
 																{
-																	"callFunction": "Save Seconds",
-																	"sid": 572160458425208
-																},
-																{
 																	"id": "go-to-layout",
 																	"objectClass": "System",
-																	"sid": 787512661250101,
+																	"sid": 647582874122974,
 																	"parameters": {
-																		"layout": "Menu"
+																		"layout": "Match_End"
 																	}
 																}
 															],
@@ -30197,11 +30233,7 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "Reliíquia cat_eye"
-								},
-								{
-									"eventType": "comment",
-									"text": "RESET DE RELICS - COOLDOWN",
+									"text": "RESET DE RELICS - COOLDOWN (A CADA RODADA)",
 									"text-color": [
 										1,
 										0.9686274509803922,
@@ -30258,44 +30290,6 @@
 												}
 											],
 											"sid": 486015386245731
-										},
-										{
-											"eventType": "comment",
-											"text": "Watch"
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-animation-playing",
-													"objectClass": "Relics",
-													"sid": 649980252147758,
-													"parameters": {
-														"animation": "\"watch\""
-													}
-												},
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Relics",
-													"sid": 566793065543198,
-													"parameters": {
-														"instance-variable": "Used"
-													}
-												}
-											],
-											"actions": [
-												{
-													"callFunction": "Relic Feedback",
-													"sid": 432678344916303,
-													"parameters": [
-														"Relics.AnimationName",
-														false,
-														true,
-														false
-													]
-												}
-											],
-											"sid": 925317418020041
 										},
 										{
 											"eventType": "comment",
@@ -30841,11 +30835,11 @@
 												{
 													"id": "set-at-xy",
 													"objectClass": "A_Match_Info",
-													"sid": 636475763067727,
+													"sid": 199106833858129,
 													"parameters": {
-														"x": "4",
-														"y": "1",
-														"value": "Self.At( 4,1 ) + 1"
+														"x": "1",
+														"y": "4",
+														"value": "Self.At( 1,4 ) + 1"
 													}
 												}
 											],
@@ -30944,11 +30938,11 @@
 												{
 													"id": "set-at-xy",
 													"objectClass": "A_Match_Info",
-													"sid": 738037813071775,
+													"sid": 738663954775874,
 													"parameters": {
-														"x": "4",
-														"y": "1",
-														"value": "Self.At( 4,1 ) + 1"
+														"x": "1",
+														"y": "4",
+														"value": "Self.At( 1,4 ) + 1"
 													}
 												}
 											],
@@ -35468,7 +35462,7 @@
 								},
 								{
 									"eventType": "comment",
-									"text": "RESET DE RELICS - COOLDOWN",
+									"text": "RESET DE RELICS - COOLDOWN (A CADA PARTIDA)",
 									"text-color": [
 										1,
 										0.9686274509803922,
@@ -39128,11 +39122,11 @@
 																{
 																	"id": "set-at-xy",
 																	"objectClass": "A_Match_Info",
-																	"sid": 915871767815170,
+																	"sid": 888437406718183,
 																	"parameters": {
-																		"x": "5",
-																		"y": "1",
-																		"value": "Self.At( 5,1 ) + 1"
+																		"x": "1",
+																		"y": "5",
+																		"value": "Self.At( 1,5 ) + 1"
 																	}
 																}
 															],
@@ -39600,11 +39594,11 @@
 																		{
 																			"id": "set-at-xy",
 																			"objectClass": "A_Match_Info",
-																			"sid": 527792645755536,
+																			"sid": 425053189114568,
 																			"parameters": {
-																				"x": "5",
-																				"y": "1",
-																				"value": "Self.At( 5,1 ) + 1"
+																				"x": "1",
+																				"y": "5",
+																				"value": "Self.At( 1,5 ) + 1"
 																			}
 																		}
 																	],
@@ -39902,11 +39896,11 @@
 																{
 																	"id": "set-at-xy",
 																	"objectClass": "A_Match_Info",
-																	"sid": 431100561807582,
+																	"sid": 332023037345872,
 																	"parameters": {
-																		"x": "5",
-																		"y": "1",
-																		"value": "Self.At( 5,1 ) + 1"
+																		"x": "1",
+																		"y": "5",
+																		"value": "Self.At( 1,5 ) + 1"
 																	}
 																}
 															],
@@ -40202,11 +40196,11 @@
 																{
 																	"id": "set-at-xy",
 																	"objectClass": "A_Match_Info",
-																	"sid": 244735817736994,
+																	"sid": 107917420599635,
 																	"parameters": {
-																		"x": "5",
-																		"y": "1",
-																		"value": "Self.At( 5,1 ) + 1"
+																		"x": "1",
+																		"y": "5",
+																		"value": "Self.At( 1,5 ) + 1"
 																	}
 																}
 															],
@@ -40492,11 +40486,11 @@
 																{
 																	"id": "set-at-xy",
 																	"objectClass": "A_Match_Info",
-																	"sid": 660553194019455,
+																	"sid": 329965995107106,
 																	"parameters": {
-																		"x": "5",
-																		"y": "1",
-																		"value": "Self.At( 5,1 ) + 1"
+																		"x": "1",
+																		"y": "5",
+																		"value": "Self.At( 1,5 ) + 1"
 																	}
 																}
 															],
@@ -40792,11 +40786,11 @@
 																{
 																	"id": "set-at-xy",
 																	"objectClass": "A_Match_Info",
-																	"sid": 409118699836356,
+																	"sid": 549944489343944,
 																	"parameters": {
-																		"x": "5",
-																		"y": "1",
-																		"value": "Self.At( 5,1 ) + 1"
+																		"x": "1",
+																		"y": "5",
+																		"value": "Self.At( 1,5 ) + 1"
 																	}
 																}
 															],
@@ -40966,10 +40960,10 @@
 														{
 															"id": "set-at-xy",
 															"objectClass": "A_Match_Info",
-															"sid": 927994680339905,
+															"sid": 561355516960253,
 															"parameters": {
-																"x": "5",
-																"y": "1",
+																"x": "1",
+																"y": "5",
 																"value": "Self.At( 5,1 ) + 1"
 															}
 														}
@@ -47276,18 +47270,114 @@
 															}
 														}
 													],
-													"actions": [
+													"actions": [],
+													"sid": 730711415265085,
+													"children": [
 														{
-															"callFunction": "Enemy Use Power",
-															"sid": 650261826479916,
-															"parameters": [
-																"the_id",
-																"0",
-																"0"
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-overlapping-another-object",
+																	"objectClass": "Card_Numb",
+																	"sid": 473279324163939,
+																	"parameters": {
+																		"object": "Table_CPU"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 389938394297616,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-nearestfurthest",
+																			"objectClass": "Card_Numb",
+																			"sid": 534989737059167,
+																			"parameters": {
+																				"which": "nearest",
+																				"x": "Deck_Numb_Sprite.X",
+																				"y": "Deck_Numb_Sprite.Y",
+																				"z": "0",
+																				"pick-all-tied": false
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 298918326209616,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "is-boolean-instance-variable-set",
+																					"objectClass": "Card_Numb",
+																					"sid": 108174795618892,
+																					"parameters": {
+																						"instance-variable": "Enemy_Hidden"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "log",
+																					"objectClass": "Browser",
+																					"sid": 256587409677895,
+																					"parameters": {
+																						"type": "log",
+																						"message": "\"Isso seria contra as regras da carta\""
+																					}
+																				},
+																				{
+																					"callFunction": "Enemy Check Powers",
+																					"sid": 792174279348812,
+																					"parameters": [
+																						"\"\""
+																					]
+																				}
+																			],
+																			"sid": 254153691798751
+																		},
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "else",
+																					"objectClass": "System",
+																					"sid": 849961848153691
+																				}
+																			],
+																			"actions": [
+																				{
+																					"callFunction": "Enemy Use Power",
+																					"sid": 155645699399039,
+																					"parameters": [
+																						"the_id",
+																						"0",
+																						"0"
+																					]
+																				}
+																			],
+																			"sid": 733820300150857
+																		}
+																	]
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "else",
+																			"objectClass": "System",
+																			"sid": 132251310675470
+																		}
+																	],
+																	"actions": [],
+																	"sid": 232003230793132
+																}
 															]
 														}
-													],
-													"sid": 730711415265085
+													]
 												},
 												{
 													"eventType": "comment",
@@ -50983,12 +51073,26 @@
 											"sid": 776002274880616
 										},
 										{
+											"eventType": "comment",
+											"text": "Se não for o turno final, então joga normalmente"
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "else",
 													"objectClass": "System",
 													"sid": 876822393130149
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 525173948374194,
+													"parameters": {
+														"variable": "LastTurnCount",
+														"comparison": 0,
+														"value": "-1"
+													}
 												}
 											],
 											"actions": [
@@ -51220,6 +51324,30 @@
 													"sid": 334607904513303
 												}
 											]
+										},
+										{
+											"eventType": "comment",
+											"text": "Caso contrário, passa vez e impede o turno extra"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 230022166989566
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Change Turn",
+													"sid": 357142852217499,
+													"parameters": [
+														"1"
+													]
+												}
+											],
+											"sid": 790578303203264
 										}
 									]
 								},
@@ -52592,6 +52720,15 @@
 							"parameters": {
 								"variable": "Relic_Trap",
 								"value": "false"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 993042677918712,
+							"parameters": {
+								"seconds": "0.01",
+								"use-timescale": true
 							}
 						},
 						{
@@ -56719,6 +56856,35 @@
 								}
 							],
 							"sid": 306718159864286
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Text_Talk",
+									"sid": 630686426215758,
+									"parameters": {
+										"instance-variable": "WR_Relics"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Text_Talk",
+									"sid": 534464080068132,
+									"parameters": {
+										"instance-variable": "WR_Relics",
+										"value": "false"
+									}
+								},
+								{
+									"callFunction": "Get Relics",
+									"sid": 998552221349587
+								}
+							],
+							"sid": 755681149733574
 						}
 					]
 				},
@@ -56736,7 +56902,8 @@
 							"sid": 494636197805118,
 							"parameters": {
 								"object": "configuracoes"
-							}
+							},
+							"isInverted": true
 						},
 						{
 							"id": "layer-is-visible",
@@ -61846,20 +62013,30 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 325961646543506,
+							"parameters": {
+								"type": "log",
+								"message": "\"Informação pega com sucesso. \" & \"O save diz: \" & D_Save.Get(Ach_ID)"
+							}
+						}
+					],
 					"sid": 918243544540481,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-value",
-									"objectClass": "D_Save",
-									"sid": 440920013078575,
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 651730793777784,
 									"parameters": {
-										"key": "Ach_ID",
+										"first-value": "int(tokenat(D_Save.Get(Ach_ID), 0, \"/\"))",
 										"comparison": 5,
-										"value": "int(tokenat(Self.Get(Ach_ID), 1, \"/\"))"
+										"second-value": "int(tokenat(D_Save.Get(Ach_ID), 1, \"/\"))"
 									}
 								},
 								{
@@ -61882,6 +62059,28 @@
 							"sid": 975943238914335
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-get-achievement-info-error",
+							"objectClass": "Steamworks",
+							"sid": 332859494843482
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 575727702541725,
+							"parameters": {
+								"type": "error",
+								"message": "\"Steam achievement info error: \" & Steamworks.Achievement"
+							}
+						}
+					],
+					"sid": 760290093039040
 				}
 			],
 			"sid": 951123975079310
@@ -62294,6 +62493,19 @@
 								"where": "behind",
 								"object": "Candle_Flame"
 							}
+						},
+						{
+							"callFunction": "Save Seconds",
+							"sid": 195202864098221
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 105786752712586,
+							"parameters": {
+								"type": "log",
+								"message": "\"Tempo: \" & pendulo.Timer.CurrentTime(\"seconds\")"
+							}
 						}
 					],
 					"sid": 608892035289769
@@ -62361,22 +62573,22 @@
 					"conditions": [],
 					"actions": [
 						{
-							"id": "stop-timer",
-							"objectClass": "pendulo",
-							"sid": 906521916307642,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"seconds\""
-							}
-						},
-						{
 							"id": "set-at-xy",
 							"objectClass": "A_Match_Info",
-							"sid": 960192620052661,
+							"sid": 961133992398318,
 							"parameters": {
 								"x": "1",
 								"y": "2",
-								"value": "pendulo.Timer.CurrentTime(\"seconds\")"
+								"value": "(round(pendulo.Timer.CurrentTime(\"seconds\")* 10) / 10)\n"
+							}
+						},
+						{
+							"id": "stop-timer",
+							"objectClass": "pendulo",
+							"sid": 909826189898104,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"seconds\""
 							}
 						}
 					],

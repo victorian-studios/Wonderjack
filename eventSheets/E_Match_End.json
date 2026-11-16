@@ -63,17 +63,20 @@
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 962008124828343,
+					"id": "tween-one-property",
+					"objectClass": "Demo_Fade_Sprite",
+					"sid": 988348964153521,
+					"behaviorType": "Tween",
 					"parameters": {
-						"audio-file": {
-							"path": "Credits/18 - Phantom's Requiem (Loop)"
-						},
-						"loop": "not-looping",
-						"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
-						"stereo-pan": "0",
-						"tag-optional": "\"music\""
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				}
 			],
@@ -83,25 +86,119 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "pick-by-unique-id",
-							"objectClass": "Text_Static_Generic",
-							"sid": 106007860540884,
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 105527567873787,
 							"parameters": {
-								"unique-id": "305"
+								"variable": "Match_Winner"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-text",
-							"objectClass": "Text_Static_Generic",
-							"sid": 365942522931191,
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 577626131001253,
 							"parameters": {
-								"text": "Match_Winner = 1 ? Internationalization.Lookup(\"match_end.title_win\") : Internationalization.Lookup(\"match_end.title_lose\")"
+								"audio-file": {
+									"path": "In Game/End/14 - Abyssal Echoes (Loop)"
+								},
+								"loop": "looping",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
 							}
 						}
 					],
-					"sid": 734679197795386
+					"sid": 418490217006468,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Text_Static_Generic",
+									"sid": 306114103791469,
+									"parameters": {
+										"unique-id": "305"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 494916678968389,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"match_end.title_win\")"
+									}
+								}
+							],
+							"sid": 331358386112326
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 189043545387346
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 833421084319849,
+							"parameters": {
+								"audio-file": {
+									"path": "Credits/18 - Phantom's Requiem (Loop)"
+								},
+								"loop": "not-looping",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 761947823962828,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Text_Static_Generic",
+									"sid": 438212908977066,
+									"parameters": {
+										"unique-id": "305"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text_Static_Generic",
+									"sid": 346899278737387,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"match_end.title_lose\")"
+									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 385786825014111,
+									"parameters": {
+										"type": "log",
+										"message": "\"DEBUGS: \" & Internationalization.Lookup(\"match_end.title_lose\")"
+									}
+								}
+							],
+							"sid": 951781240057794
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -280,6 +377,24 @@
 											"parameters": {
 												"frame-number": "int(tokenat(A_Match_Info.At(loopindex,9), 1, \"-\"))"
 											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "demo_end",
+											"sid": 436620622138631,
+											"parameters": {
+												"child": "Card_Power",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": true,
+												"transform-visibility": false,
+												"destroy-with-parent": false
+											}
 										}
 									],
 									"sid": 511027449614973
@@ -323,6 +438,24 @@
 											"parameters": {
 												"animation": "tokenat(A_Match_Info.At(loopindex,9), 1, \"-\")",
 												"from": "beginning"
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "demo_end",
+											"sid": 587770552310339,
+											"parameters": {
+												"child": "Relics",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-z-elevation": false,
+												"transform-w": false,
+												"transform-h": false,
+												"transform-d": false,
+												"transform-a": false,
+												"transform-o": true,
+												"transform-visibility": false,
+												"destroy-with-parent": false
 											}
 										}
 									],
@@ -428,6 +561,15 @@
 								"y": "448",
 								"create-hierarchy": false,
 								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-fade-out-time",
+							"objectClass": "Quadro_Turns_Shadow",
+							"sid": 798185098464082,
+							"behaviorType": "Fade",
+							"parameters": {
+								"fade-out-time": "0"
 							}
 						},
 						{
@@ -714,10 +856,10 @@
 						{
 							"id": "set-at-xy",
 							"objectClass": "A_Match_Info",
-							"sid": 871560282128624,
+							"sid": 750580500500099,
 							"parameters": {
-								"x": "1",
-								"y": "loopindex(\"check_unlocks\")",
+								"x": "loopindex(\"check_unlocks\")",
+								"y": "10",
 								"value": "Relic_ID"
 							}
 						}
@@ -934,6 +1076,169 @@
 				}
 			],
 			"sid": 588561991720984
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 597318277736959,
+					"parameters": {
+						"object": "Relics"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Bkg_Codex_Tip",
+					"sid": 179004674631031,
+					"parameters": {
+						"x": "Mouse.X - 494",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 739004910758127,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Text_Static_Generic",
+							"sid": 340857987845978,
+							"parameters": {
+								"unique-id": "460"
+							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 497597005842563,
+							"parameters": {
+								"text-to-compare": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".title\", Relics.Uses ) & newline & newline & Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".desc\", Relics.Uses )",
+								"case-sensitivity": "ignore-case"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-finish",
+							"objectClass": "Text_Static_Generic",
+							"sid": 650708107172065
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 458860873075628,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".title\", Relics.Uses ) & newline & newline & Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".desc\", Relics.Uses )",
+								"duration": "0.75"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "Text_Static_Generic",
+							"sid": 509371928431955
+						}
+					],
+					"sid": 227319390084953
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 422439702488944
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 465433846605686,
+					"parameters": {
+						"object": "Card_Power"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 535756415758800,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Text_Static_Generic",
+							"sid": 220352167330636,
+							"parameters": {
+								"unique-id": "460"
+							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 821650793750560,
+							"parameters": {
+								"text-to-compare": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".title\", Relics.Uses ) & newline & newline & Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".desc\", Relics.Uses )",
+								"case-sensitivity": "ignore-case"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "typewriter-finish",
+							"objectClass": "Text_Static_Generic",
+							"sid": 929849599879446
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "Text_Static_Generic",
+							"sid": 236850407406686,
+							"parameters": {
+								"text": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".title\", Relics.Uses ) & newline & newline & Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".desc\", Relics.Uses )",
+								"duration": "0.75"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "Text_Static_Generic",
+							"sid": 362546607894435
+						}
+					],
+					"sid": 786479385570034,
+					"disabled": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 302868434649587
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Bkg_Codex_Tip",
+					"sid": 132771321663794,
+					"parameters": {
+						"x": "-100",
+						"y": "-1000"
+					}
+				}
+			],
+			"sid": 639777407273888
 		}
 	],
 	"sid": 271661542900715

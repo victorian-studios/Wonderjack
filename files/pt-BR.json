@@ -280,7 +280,7 @@
                 "tip_stop": "Se você está perto de chegar a [b]21[/b], é melhor você parar e evitar se arriscar. Pressione o sino para parar esta rodada.",
                 "tip_stop2": "Se a sua soma é 21 ou mais, é melhor não comprar mais cartas de número e parar esta rodada.",
                 "tip_power": "Pense de novo Alice, jogar este [color=#ffff00]poder[/color] não seria muito inteligente.",
-                "tip_power2": "Acalme-se Alice, tente comprar uma carta de [color=#ffff00]poder[/color] do baralho à sua esquerda?"
+                "tip_power2": "Acalme-se Alice, tente comprar uma carta de [color=#ffff00]poder[/color] do baralho à sua esquerda."
             },
             "alice_self_warning": {
                 "empty_deck": "Bem... não tem mais nenhum carta sobrando.",
@@ -649,7 +649,7 @@
         "demo": {
             "end": "E aqui é o fim da demo!\n\nMas a aventura de Alice está longe de acabar...\n\nMais oponentes, níveis, relíquias, cartas de poder e extras te esperam no jogo completo!",
             "wishlist": "Adicione na lista!",
-            "sorry": "Esta opção não está disponível na demo..."
+            "sorry": "Esta opção será disponibilizada em breve..."
         }
     }
 }
