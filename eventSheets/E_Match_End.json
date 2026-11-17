@@ -256,7 +256,7 @@
 						{
 							"id": "compare-at-xy",
 							"objectClass": "A_Match_Info",
-							"sid": 741343564008229,
+							"sid": 546242029132615,
 							"parameters": {
 								"x": "1",
 								"y": "9",
@@ -281,6 +281,15 @@
 								"loop": "no",
 								"ping-pong": "no",
 								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 881294472124695,
+							"parameters": {
+								"layer": "\"Game\"",
+								"interactive": false
 							}
 						}
 					],
@@ -313,9 +322,9 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 836934990014464,
+											"sid": 322891808572692,
 											"parameters": {
-												"first-value": "tokenat(A_Match_Info.At(loopindex,9), 0, \"-\")",
+												"first-value": "tokenat(A_Match_Info.At(loopindex, 9), 0, \"-\")",
 												"comparison": 0,
 												"second-value": "\"p\""
 											}
@@ -325,12 +334,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 129271003680337,
+											"sid": 653174002354301,
 											"parameters": {
 												"object-to-create": "Card_Power",
 												"layer": "\"Unlocks\"",
 												"x": "544 + (176 * loopindex)",
-												"y": "528",
+												"y": "550",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -347,31 +356,67 @@
 										{
 											"id": "set-animation-frame",
 											"objectClass": "Card_Power",
-											"sid": 685415530403655,
+											"sid": 872131745759540,
 											"parameters": {
-												"frame-number": "int(tokenat(A_Match_Info.At(loopindex,9), 1, \"-\"))"
+												"frame-number": "int(tokenat(A_Match_Info.At(loopindex, 9), 1, \"-\"))"
 											}
 										},
 										{
-											"id": "add-child",
-											"objectClass": "demo_end",
-											"sid": 436620622138631,
+											"id": "set-size",
+											"objectClass": "Card_Power",
+											"sid": 411500675007463,
 											"parameters": {
-												"child": "Card_Power",
-												"transform-x": true,
-												"transform-y": true,
-												"transform-z-elevation": false,
-												"transform-w": false,
-												"transform-h": false,
-												"transform-d": false,
-												"transform-a": false,
-												"transform-o": true,
-												"transform-visibility": false,
-												"destroy-with-parent": false
+												"width": "154",
+												"height": "250"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Card_Power",
+											"sid": 982312496766527,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
 											}
 										}
 									],
-									"sid": 511027449614973
+									"sid": 511027449614973,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "demo_end",
+													"sid": 529912243565072,
+													"parameters": {
+														"unique-id": "462"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-child",
+													"objectClass": "demo_end",
+													"sid": 383873626307993,
+													"parameters": {
+														"child": "Card_Power",
+														"transform-x": true,
+														"transform-y": true,
+														"transform-z-elevation": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-d": false,
+														"transform-a": false,
+														"transform-o": true,
+														"transform-visibility": false,
+														"destroy-with-parent": false
+													}
+												}
+											],
+											"sid": 987703801042201
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -383,9 +428,9 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 893558727226890,
+											"sid": 558598233614942,
 											"parameters": {
-												"first-value": "tokenat(A_Match_Info.At(loopindex,9), 0, \"-\")",
+												"first-value": "tokenat(A_Match_Info.At(loopindex, 9), 0, \"-\")",
 												"comparison": 0,
 												"second-value": "\"r\""
 											}
@@ -395,12 +440,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 212625257892615,
+											"sid": 551972851571194,
 											"parameters": {
 												"object-to-create": "Relics",
 												"layer": "\"Unlocks\"",
 												"x": "544 + (176 * loopindex)",
-												"y": "528",
+												"y": "550",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -408,32 +453,59 @@
 										{
 											"id": "set-animation",
 											"objectClass": "Relics",
-											"sid": 318072433248710,
+											"sid": 483905933437146,
 											"parameters": {
-												"animation": "tokenat(A_Match_Info.At(loopindex,9), 1, \"-\")",
+												"animation": "tokenat(A_Match_Info.At(loopindex, 9), 1, \"-\")",
 												"from": "beginning"
 											}
 										},
 										{
-											"id": "add-child",
-											"objectClass": "demo_end",
-											"sid": 587770552310339,
+											"id": "set-active",
+											"objectClass": "Relics",
+											"sid": 423311856190234,
+											"behaviorType": "Sine",
 											"parameters": {
-												"child": "Relics",
-												"transform-x": true,
-												"transform-y": true,
-												"transform-z-elevation": false,
-												"transform-w": false,
-												"transform-h": false,
-												"transform-d": false,
-												"transform-a": false,
-												"transform-o": true,
-												"transform-visibility": false,
-												"destroy-with-parent": false
+												"state": "active"
 											}
 										}
 									],
-									"sid": 812663137971544
+									"sid": 812663137971544,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "demo_end",
+													"sid": 612828769816620,
+													"parameters": {
+														"unique-id": "462"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-child",
+													"objectClass": "demo_end",
+													"sid": 906070509038884,
+													"parameters": {
+														"child": "Relics",
+														"transform-x": true,
+														"transform-y": true,
+														"transform-z-elevation": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-d": false,
+														"transform-a": false,
+														"transform-o": true,
+														"transform-visibility": false,
+														"destroy-with-parent": false
+													}
+												}
+											],
+											"sid": 410726806315354
+										}
+									]
 								}
 							]
 						}
@@ -514,7 +586,18 @@
 						{
 							"id": "compare-at-xy",
 							"objectClass": "A_Match_Info",
-							"sid": 739565532536926,
+							"sid": 546734304650407,
+							"parameters": {
+								"x": "loopindex",
+								"y": "11",
+								"comparison": 1,
+								"value": "\"?\""
+							}
+						},
+						{
+							"id": "compare-at-xy",
+							"objectClass": "A_Match_Info",
+							"sid": 583026295990204,
 							"parameters": {
 								"x": "loopindex",
 								"y": "11",
@@ -556,6 +639,14 @@
 							}
 						},
 						{
+							"id": "set-scale",
+							"objectClass": "Quadro_Turns_Shadow",
+							"sid": 592418544551358,
+							"parameters": {
+								"scale": "0.751"
+							}
+						},
+						{
 							"id": "set-animation-frame",
 							"objectClass": "Quadro_Turns_Shadow",
 							"sid": 112809466443612,
@@ -581,8 +672,8 @@
 						},
 						{
 							"id": "tween-one-property",
-							"objectClass": "Demo_Fade_Sprite",
-							"sid": 879746208042442,
+							"objectClass": "Fade_Sprite",
+							"sid": 430934511760283,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -617,15 +708,6 @@
 					"sid": 968398573461029,
 					"parameters": {
 						"y": "Self.Tween.Value(\"loop\")"
-					}
-				},
-				{
-					"id": "set-layer-opacity",
-					"objectClass": "System",
-					"sid": 971320079849136,
-					"parameters": {
-						"layer": "\"Fade\"",
-						"opacity": "Demo_Fade_Sprite.Opacity"
 					}
 				}
 			],
@@ -736,10 +818,10 @@
 								{
 									"id": "set-at-xy",
 									"objectClass": "A_Match_Info",
-									"sid": 702804614282938,
+									"sid": 329772544749377,
 									"parameters": {
-										"x": "1",
-										"y": "loopindex(\"check_unlocks\")",
+										"x": "loopindex(\"check_unlocks\")",
+										"y": "9",
 										"value": "\"p-\" & Item_ID"
 									}
 								}
@@ -794,10 +876,10 @@
 								{
 									"id": "set-at-xy",
 									"objectClass": "A_Match_Info",
-									"sid": 498904302117216,
+									"sid": 234329826398222,
 									"parameters": {
-										"x": "1",
-										"y": "loopindex(\"check_unlocks\")",
+										"x": "loopindex(\"check_unlocks\")",
+										"y": "9",
 										"value": "\"r-\" & Item_ID"
 									}
 								}
@@ -912,22 +994,21 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "Btn_Back_2",
-							"sid": 693796781755673,
+							"sid": 260863417017790,
 							"parameters": {
 								"instance-variable": "ID",
 								"comparison": 0,
-								"value": "0"
+								"value": "1"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 944302412749253,
-							"parameters": {
-								"layout": "Level"
-							}
+							"callFunction": "Start Layout Transition",
+							"sid": 943528226757402,
+							"parameters": [
+								"\"Level\""
+							]
 						}
 					],
 					"sid": 264634751649504
@@ -936,19 +1017,23 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 912362624529229
+							"id": "compare-instance-variable",
+							"objectClass": "Btn_Back_2",
+							"sid": 115820306845739,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "2"
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 620808456710719,
-							"parameters": {
-								"layout": "Menu"
-							}
+							"callFunction": "Start Layout Transition",
+							"sid": 332542151808063,
+							"parameters": [
+								"\"Menu\""
+							]
 						}
 					],
 					"sid": 382936955799558
@@ -969,6 +1054,16 @@
 					}
 				},
 				{
+					"id": "compare-instance-variable",
+					"objectClass": "Btn_Back_2",
+					"sid": 961739639174014,
+					"parameters": {
+						"instance-variable": "ID",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
 					"id": "layer-is-visible",
 					"objectClass": "System",
 					"sid": 132283242459959,
@@ -977,7 +1072,17 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 634217672615237,
+					"parameters": {
+						"layer": "\"Game\"",
+						"interactive": true
+					}
+				}
+			],
 			"sid": 632375475569977,
 			"children": [
 				{
@@ -996,13 +1101,13 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "demo_end",
-							"sid": 568168577370789,
+							"sid": 850191688577423,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
 								"property": "offsetY",
 								"end-value": "-800",
-								"time": "0.8",
+								"time": "0.4",
 								"ease": "default",
 								"destroy-on-complete": "no",
 								"loop": "no",
@@ -1173,9 +1278,18 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Bkg_Codex_Tip",
+					"sid": 999551694961380,
+					"parameters": {
+						"x": "Mouse.X - 494",
+						"y": "Mouse.Y"
+					}
+				}
+			],
 			"sid": 535756415758800,
-			"disabled": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -1191,9 +1305,9 @@
 						{
 							"id": "compare-text",
 							"objectClass": "Text_Static_Generic",
-							"sid": 821650793750560,
+							"sid": 634463442337222,
 							"parameters": {
-								"text-to-compare": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".title\", Relics.Uses ) & newline & newline & Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".desc\", Relics.Uses )",
+								"text-to-compare": "Internationalization.Lookup(\"powers.\" & Card_Power.AnimationFrameTag )",
 								"case-sensitivity": "ignore-case"
 							},
 							"isInverted": true
@@ -1208,9 +1322,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "Text_Static_Generic",
-							"sid": 236850407406686,
+							"sid": 599714895017739,
 							"parameters": {
-								"text": "Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".title\", Relics.Uses ) & newline & newline & Internationalization.Lookup(\"relics.\" & Relics.AnimationName & \".desc\", Relics.Uses )",
+								"text": "Internationalization.Lookup(\"powers.\" & Card_Power.AnimationFrameTag )",
 								"duration": "0.75"
 							}
 						},
@@ -1220,8 +1334,7 @@
 							"sid": 362546607894435
 						}
 					],
-					"sid": 786479385570034,
-					"disabled": true
+					"sid": 786479385570034
 				}
 			]
 		},

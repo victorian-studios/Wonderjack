@@ -1043,6 +1043,31 @@
 					"sid": 978226095505945
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Relics",
+							"sid": 640964068181409,
+							"parameters": {
+								"animation": "\"lucky\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Relics",
+							"sid": 778066968249428,
+							"parameters": {
+								"instance-variable": "Uses",
+								"value": "TheNumber"
+							}
+						}
+					],
+					"sid": 303376056492436
+				},
+				{
 					"eventType": "comment",
 					"text": "Auto math"
 				},
@@ -26421,9 +26446,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Text_Round_Numb",
-											"sid": 715365738926631,
+											"sid": 129248349229492,
 											"parameters": {
-												"text": "GameRound"
+												"text": "\"[i]\" & GameRound & \"[/i]\""
 											}
 										},
 										{
@@ -29339,6 +29364,15 @@
 															"sid": 589295366528444,
 															"parameters": {
 																"instance-variable": "Protect_Turns",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Hand_CPU",
+															"sid": 842724516407404,
+															"parameters": {
+																"instance-variable": "Silence_Turns",
 																"value": "0"
 															}
 														},
@@ -39830,9 +39864,9 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Table_Player",
-																	"sid": 348719522719387,
+																	"sid": 671071479984183,
 																	"parameters": {
-																		"instance-variable": "Visible_Count",
+																		"instance-variable": "Cards",
 																		"comparison": 0,
 																		"value": "7"
 																	}
@@ -49722,6 +49756,15 @@
 											}
 										},
 										{
+											"id": "set-size",
+											"objectClass": "Card_Power",
+											"sid": 862922346574841,
+											"parameters": {
+												"width": "154",
+												"height": "250"
+											}
+										},
+										{
 											"id": "tween-one-property",
 											"objectClass": "Card_Power",
 											"sid": 782653129820133,
@@ -53012,34 +53055,7 @@
 									}
 								}
 							],
-							"sid": 167473908740650,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-animation-playing",
-											"objectClass": "Relics",
-											"sid": 226988042465284,
-											"parameters": {
-												"animation": "\"lucky\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "Relics",
-											"sid": 983512183789449,
-											"parameters": {
-												"instance-variable": "Uses",
-												"value": "TheNumber"
-											}
-										}
-									],
-									"sid": 307244729495831
-								}
-							]
+							"sid": 167473908740650
 						},
 						{
 							"eventType": "block",
@@ -53066,34 +53082,7 @@
 									}
 								}
 							],
-							"sid": 282935712373452,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-animation-playing",
-											"objectClass": "Relics",
-											"sid": 355572731882073,
-											"parameters": {
-												"animation": "\"lucky\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "Relics",
-											"sid": 321836183216790,
-											"parameters": {
-												"instance-variable": "Uses",
-												"value": "TheNumber"
-											}
-										}
-									],
-									"sid": 481221229066458
-								}
-							]
+							"sid": 282935712373452
 						},
 						{
 							"eventType": "block",
@@ -53439,34 +53428,7 @@
 									}
 								}
 							],
-							"sid": 970441690569327,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-animation-playing",
-											"objectClass": "Relics",
-											"sid": 640964068181409,
-											"parameters": {
-												"animation": "\"lucky\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "add-to-instvar",
-											"objectClass": "Relics",
-											"sid": 658254923424236,
-											"parameters": {
-												"instance-variable": "Uses",
-												"value": "TheNumber"
-											}
-										}
-									],
-									"sid": 303376056492436
-								}
-							]
+							"sid": 970441690569327
 						}
 					]
 				},
@@ -61946,37 +61908,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-opacity",
-							"objectClass": "Bkg_Round_Txt",
-							"sid": 248413932599446,
-							"parameters": {
-								"comparison": 0,
-								"opacity": "0"
-							}
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 280761121928327
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "Text_Round",
-							"sid": 835832059387893,
-							"parameters": {
-								"text": "\"\""
-							}
-						}
-					],
-					"sid": 191264731835373,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-created",
 							"objectClass": "Quadro_Turns",
 							"sid": 984410356661442
@@ -62006,24 +61937,83 @@
 							"id": "on-created",
 							"objectClass": "Quadro_Turns_Shadow",
 							"sid": 416506541208398
+						}
+					],
+					"actions": [],
+					"sid": 414754615965362,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 557284797262461,
+									"parameters": {
+										"variable": "Tutorial_Enabled"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 676446992026809
+								}
+							],
+							"sid": 157049106561703
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 388921992570021,
-							"parameters": {
-								"variable": "Tutorial_Enabled"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 959805033848815
+								}
+							],
+							"actions": [
+								{
+									"id": "set-size",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 549024254382475,
+									"parameters": {
+										"width": "184",
+										"height": "146"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Quadro_Turns_Shadow",
+									"sid": 908454098540776,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 296343615709506
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-frame-changed",
+							"objectClass": "Quadro_Turns_Shadow",
+							"sid": 240173851398735
 						}
 					],
 					"actions": [
 						{
-							"id": "destroy",
+							"id": "set-size",
 							"objectClass": "Quadro_Turns_Shadow",
-							"sid": 175019534161632
+							"sid": 624373185813182,
+							"parameters": {
+								"width": "184",
+								"height": "146"
+							}
 						}
 					],
-					"sid": 414754615965362
+					"sid": 621589622608835
 				},
 				{
 					"eventType": "block",

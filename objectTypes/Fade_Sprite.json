@@ -1,16 +1,11 @@
 {
-	"name": "Demo_Fade_Sprite",
+	"name": "Fade_Sprite",
 	"plugin-id": "Sprite",
 	"sid": 809204462754699,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
-		{
-			"behaviorId": "Fade",
-			"name": "Fade",
-			"sid": 917294287217480
-		},
 		{
 			"behaviorId": "Tween",
 			"name": "Tween",

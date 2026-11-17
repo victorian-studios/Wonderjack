@@ -90,13 +90,13 @@
 					"behaviors": {
 						"Sine": {
 							"properties": {
-								"movement": "horizontal",
+								"movement": "angle",
 								"wave": "sine",
-								"period": 0.2,
+								"period": 2,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 3,
+								"magnitude": 5,
 								"magnitude-random": 0,
 								"enabled": false,
 								"live-preview": false
@@ -112,8 +112,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 758,
-						"y": 356,
+						"x": 696,
+						"y": 361,
 						"width": 154,
 						"height": 250,
 						"originX": 0.5,
@@ -433,6 +433,20 @@
 								"fade-out-time": 0,
 								"destroy": false,
 								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": false,
 								"live-preview": false
 							}
 						}

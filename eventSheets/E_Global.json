@@ -93,6 +93,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Opt_FileDebug",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "ativar o sistema de geração de arquivos para debug",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 784884040146915
+		},
+		{
+			"eventType": "variable",
 			"name": "MuteAll",
 			"type": "boolean",
 			"initialValue": "false",
@@ -120,6 +130,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 247123034531860
+		},
+		{
+			"eventType": "variable",
+			"name": "Layout_To_Go",
+			"type": "string",
+			"initialValue": "",
+			"comment": "layout que será carregado após o fade",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 658885728317552
 		},
 		{
 			"eventType": "block",
@@ -307,6 +327,24 @@
 					"sid": 940082376883865,
 					"parameters": {
 						"variable": "Relic_Card13",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 558669135273520,
+					"parameters": {
+						"variable": "BlackFade_Ended",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 912138628845375,
+					"parameters": {
+						"variable": "Load_Completed",
 						"value": "false"
 					}
 				},
@@ -1035,6 +1073,15 @@
 						"y": "2",
 						"value": "Vol_Sfx"
 					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 324518814378815,
+					"parameters": {
+						"layer": "\"Black\"",
+						"opacity": "Fade_Sprite.Opacity"
+					}
 				}
 			],
 			"sid": 887126297207774
@@ -1406,6 +1453,175 @@
 				}
 			],
 			"sid": 985281392629781
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Layout Transition",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "Start Layout Transition",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Name",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 481526693031144
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 987751710889834,
+							"parameters": {
+								"variable": "Layout_To_Go",
+								"value": "Name"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Fade_Sprite",
+							"sid": 949119627093268,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade-out\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "0.3",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "load-layout-images-by-name",
+							"objectClass": "System",
+							"sid": 695007923426432,
+							"parameters": {
+								"layout": "Name"
+							}
+						}
+					],
+					"sid": 261399575556923
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Fade_Sprite",
+							"sid": 371855579640160,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fade-out\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 340872959465391,
+							"parameters": {
+								"variable": "BlackFade_Ended",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 465422984630059
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-image-loading-complete",
+							"objectClass": "System",
+							"sid": 414784632092784
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 420182174524168,
+							"parameters": {
+								"variable": "Load_Completed",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 477180006317047
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 728674682510192,
+							"parameters": {
+								"variable": "BlackFade_Ended"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 363813993305484,
+							"parameters": {
+								"variable": "Load_Completed"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 909693159838318
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 504202116953079,
+							"parameters": {
+								"variable": "BlackFade_Ended",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 383070679364600,
+							"parameters": {
+								"variable": "Load_Completed",
+								"value": "false"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 325090381389047,
+							"parameters": {
+								"layout": "Layout_To_Go"
+							}
+						}
+					],
+					"sid": 682334719264928
+				}
+			],
+			"sid": 461103939781897
 		},
 		{
 			"eventType": "group",
@@ -6402,6 +6618,133 @@
 											"sid": 763154674759811
 										}
 									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Debug"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Toggle_Options_Numbers",
+											"sid": 986383947301165,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 753868736612234,
+											"parameters": {
+												"audio-file": {
+													"path": "button_select_sfx"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 776588976945710,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 867184477244401,
+													"parameters": {
+														"comparison": 0,
+														"number": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 191898909793853,
+													"parameters": {
+														"seconds": "0",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 442659505451089,
+													"parameters": {
+														"frame-number": "1"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 687624613865755,
+													"parameters": {
+														"variable": "Opt_FileDebug",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 782776220073982,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 659299082722899,
+													"parameters": {
+														"comparison": 0,
+														"number": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 952431920372475,
+													"parameters": {
+														"seconds": "0",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Toggle_Options_Numbers",
+													"sid": 246867903948324,
+													"parameters": {
+														"frame-number": "0"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 256667192893156,
+													"parameters": {
+														"variable": "Opt_FileDebug",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 498821219041856,
+											"disabled": true
+										}
+									]
 								}
 							]
 						}
@@ -6409,6 +6752,62 @@
 				}
 			],
 			"sid": 551110451978455
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Debugs",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 161757102071657,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Text_Ai_Da_Vida"
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 656575945591008,
+							"parameters": {
+								"layer": "\"Save\""
+							}
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 703965125881314,
+							"parameters": {
+								"layer": "\"Pause\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "write-text-file",
+							"objectClass": "FileSystem",
+							"sid": 630276313335622,
+							"parameters": {
+								"picker-tag": "\"<documents>\"",
+								"folder-path": "\"wj_debug.txt\"",
+								"file-tag": "\"\"",
+								"text": "\"D_Save: \" & newline & D_Save.AsJSON & newline & newline & newline & \"A_zCodex: \" & A_zCodex.AsJSON",
+								"mode": "overwrite"
+							}
+						}
+					],
+					"sid": 726622080943858
+				}
+			],
+			"sid": 717969140589932
 		}
 	],
 	"sid": 466221253102104

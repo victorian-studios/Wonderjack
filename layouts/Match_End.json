@@ -190,7 +190,7 @@
 					"sid": 876029049822807,
 					"tags": "",
 					"instanceVariables": {
-						"ID": 0
+						"ID": 1
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -310,7 +310,7 @@
 					"sid": 777963963592094,
 					"tags": "",
 					"instanceVariables": {
-						"ID": 1
+						"ID": 2
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -1462,59 +1462,11 @@
 						"z": 0,
 						"angle": 0
 					}
-				},
-				{
-					"type": "Quadro_Turns_Shadow",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "None",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 440,
-					"sid": 803285804462362,
-					"tags": "",
-					"instanceVariables": {
-						"Frame_ID": 0,
-						"ID": 0
-					},
-					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0.5,
-								"wait-time": 0,
-								"fade-out-time": 0,
-								"destroy": false,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -416,
-						"y": 1520,
-						"width": 184,
-						"height": 146,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
 				}
 			],
 			"sid": 589089843543281,
 			"effectTypes": [],
-			"isInitiallyVisible": false,
+			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [
@@ -1884,12 +1836,12 @@
 			"global": false
 		},
 		{
-			"name": "Fade",
+			"name": "Black",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Demo_Fade_Sprite",
+					"type": "Fade_Sprite",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1902,16 +1854,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
-						"Fade": {
-							"properties": {
-								"fade-in-time": 0,
-								"wait-time": 0,
-								"fade-out-time": 1,
-								"destroy": true,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
 						"Tween": {
 							"properties": {
 								"enabled": true

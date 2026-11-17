@@ -26,6 +26,26 @@
 			"sid": 298583257270385
 		},
 		{
+			"eventType": "variable",
+			"name": "BlackFade_Ended",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 467636861362438
+		},
+		{
+			"eventType": "variable",
+			"name": "Load_Completed",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 220203958413768
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -317,15 +337,6 @@
 								"seconds": "0.01",
 								"use-timescale": true
 							}
-						},
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 463509227953783,
-							"disabled": true,
-							"parameters": {
-								"layout": "Story"
-							}
 						}
 					],
 					"sid": 909629324094416,
@@ -356,12 +367,11 @@
 									}
 								},
 								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 736255941115302,
-									"parameters": {
-										"layout": "Menu"
-									}
+									"callFunction": "Start Layout Transition",
+									"sid": 587526220785034,
+									"parameters": [
+										"\"Menu\""
+									]
 								}
 							],
 							"sid": 102979384957305
@@ -377,12 +387,11 @@
 							],
 							"actions": [
 								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 513428495776121,
-									"parameters": {
-										"layout": "Menu"
-									}
+									"callFunction": "Start Layout Transition",
+									"sid": 682839132310634,
+									"parameters": [
+										"\"Menu\""
+									]
 								}
 							],
 							"sid": 827699274439092
@@ -478,12 +487,11 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 531737336355613,
-					"parameters": {
-						"layout": "Story"
-					}
+					"callFunction": "Start Layout Transition",
+					"sid": 552932632318783,
+					"parameters": [
+						"\"Story\""
+					]
 				}
 			],
 			"sid": 918180277258219

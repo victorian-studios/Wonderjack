@@ -3372,6 +3372,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -3439,6 +3453,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -3512,6 +3540,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -3579,6 +3621,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -3652,6 +3708,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -3719,6 +3789,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -3792,6 +3876,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -3859,6 +3957,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -3932,6 +4044,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -3999,6 +4125,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -4072,6 +4212,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -4139,6 +4293,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -4212,6 +4380,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -4279,6 +4461,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -4352,6 +4548,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -4419,6 +4629,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -4492,6 +4716,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -4559,6 +4797,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -4632,6 +4884,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -4699,6 +4965,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -4772,6 +5052,20 @@
 										"enabled": true,
 										"live-preview": false
 									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
 								}
 							},
 							"effects": {
@@ -4839,6 +5133,20 @@
 										"wait-time": 0,
 										"fade-out-time": 0,
 										"destroy": false,
+										"enabled": true,
+										"live-preview": false
+									}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 5,
+										"magnitude-random": 0,
 										"enabled": true,
 										"live-preview": false
 									}
@@ -4987,13 +5295,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5052,13 +5360,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5117,13 +5425,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5182,13 +5490,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5247,13 +5555,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5312,13 +5620,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5377,13 +5685,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5442,13 +5750,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5507,13 +5815,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5572,13 +5880,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5637,13 +5945,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5702,13 +6010,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5767,13 +6075,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5832,13 +6140,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5897,13 +6205,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -5962,13 +6270,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -6027,13 +6335,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -6092,13 +6400,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -6157,13 +6465,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -6222,13 +6530,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -6287,13 +6595,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -6352,13 +6660,13 @@
 							"behaviors": {
 								"Sine": {
 									"properties": {
-										"movement": "horizontal",
+										"movement": "angle",
 										"wave": "sine",
-										"period": 0.2,
+										"period": 2,
 										"period-random": 0,
 										"period-offset": 0,
 										"period-offset-random": 0,
-										"magnitude": 3,
+										"magnitude": 5,
 										"magnitude-random": 0,
 										"enabled": false,
 										"live-preview": false
@@ -8639,7 +8947,7 @@
 					}
 				},
 				{
-					"type": "Demo_Fade_Sprite",
+					"type": "Fade_Sprite_Warning",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -8647,8 +8955,8 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 344,
-					"sid": 858520646102437,
+					"uid": 443,
+					"sid": 423757759329454,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
@@ -8672,8 +8980,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 319,
-						"y": -211,
+						"x": 444,
+						"y": -216,
 						"width": 90,
 						"height": 99,
 						"originX": 0.5,
@@ -10094,7 +10402,48 @@
 			"name": "Black",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Fade_Sprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 344,
+					"sid": 858520646102437,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 319,
+						"y": -211,
+						"width": 90,
+						"height": 99,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
 			"sid": 458295053061416,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -10104,7 +10453,7 @@
 				1,
 				1,
 				1,
-				0
+				1
 			],
 			"backgroundColor": [
 				0,

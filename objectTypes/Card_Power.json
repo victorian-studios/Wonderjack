@@ -143,7 +143,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "card"
 					},
 					{
 						"width": 444,
@@ -247,7 +247,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "card"
 					},
 					{
 						"width": 444,
@@ -325,7 +325,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "gift"
 					},
 					{
 						"width": 444,
@@ -429,7 +429,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "secretexchange"
 					},
 					{
 						"width": 444,
@@ -455,7 +455,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "menu"
 					},
 					{
 						"width": 444,
@@ -481,7 +481,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "hurricane"
 					},
 					{
 						"width": 444,
@@ -629,7 +629,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "cardA"
 					},
 					{
 						"width": 444,
@@ -719,7 +719,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "investigate"
 					}
 				],
 				"sid": 789654503741328,

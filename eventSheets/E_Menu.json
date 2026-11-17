@@ -43,6 +43,23 @@
 					}
 				},
 				{
+					"id": "tween-one-property",
+					"objectClass": "Fade_Sprite",
+					"sid": 698275465225165,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "set-time-scale",
 					"objectClass": "System",
 					"sid": 694202107305331,
@@ -280,37 +297,6 @@
 						{
 							"id": "is-tag-playing",
 							"objectClass": "Audio",
-							"sid": 196266186384683,
-							"parameters": {
-								"tag": "\"music\""
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 374908410514568,
-							"parameters": {
-								"audio-file": {
-									"path": "Menu/16 - Lament of the Damned (Loop)"
-								},
-								"loop": "looping",
-								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
-								"stereo-pan": "0",
-								"tag-optional": "\"music\""
-							}
-						}
-					],
-					"sid": 172243147882523
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-tag-playing",
-							"objectClass": "Audio",
 							"sid": 400261514404451,
 							"parameters": {
 								"tag": "\"music\""
@@ -354,6 +340,33 @@
 						}
 					],
 					"sid": 339759150262036
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 862097058229884
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 272728354447651,
+							"parameters": {
+								"audio-file": {
+									"path": "Menu/16 - Lament of the Damned (Loop)"
+								},
+								"loop": "looping",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 937707254740756
 				},
 				{
 					"eventType": "comment",
@@ -441,178 +454,14 @@
 				{
 					"id": "set-layer-opacity",
 					"objectClass": "System",
-					"sid": 934540411126209,
+					"sid": 556238999176993,
 					"parameters": {
 						"layer": "\"Warning\"",
-						"opacity": "Demo_Fade_Sprite.Opacity"
+						"opacity": "Fade_Sprite_Warning.Opacity"
 					}
 				}
 			],
 			"sid": 476022451573073
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-playing",
-					"objectClass": "Sprite_AliceMenu_Old",
-					"sid": 413241179475841,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"black\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-opacity",
-					"objectClass": "System",
-					"sid": 810994859307374,
-					"parameters": {
-						"layer": "\"Black\"",
-						"opacity": "Sprite_AliceMenu_Old.Tween.Value(\"black\")"
-					}
-				}
-			],
-			"sid": 415037697833950
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-playing",
-					"objectClass": "Sprite_AliceMenu_Old",
-					"sid": 126135696631334,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"black1\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-opacity",
-					"objectClass": "System",
-					"sid": 793607729143159,
-					"parameters": {
-						"layer": "\"Black\"",
-						"opacity": "Sprite_AliceMenu_Old.Tween.Value(\"black1\")"
-					}
-				}
-			],
-			"sid": 734221113884497
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-playing",
-					"objectClass": "Sprite_AliceMenu_Old",
-					"sid": 181867858985268,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"reset\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-opacity",
-					"objectClass": "System",
-					"sid": 502025842276078,
-					"parameters": {
-						"layer": "\"Black\"",
-						"opacity": "Sprite_AliceMenu_Old.Tween.Value(\"reset\")"
-					}
-				}
-			],
-			"sid": 552093049705432
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "Sprite_AliceMenu_Old",
-					"sid": 424959965162149,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"black\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 122731482924116,
-					"parameters": {
-						"layer": "\"Mouse\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 997846707402825,
-					"parameters": {
-						"layout": "Level"
-					}
-				}
-			],
-			"sid": 363066709791390
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tweens-finished",
-					"objectClass": "Sprite_AliceMenu_Old",
-					"sid": 868212688413315,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"black1\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 176756344577786,
-					"parameters": {
-						"layer": "\"Mouse\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 715088508713895,
-					"parameters": {
-						"variable": "Tutorial_Enabled",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 285010163766398,
-					"parameters": {
-						"variable": "Tut_Talk",
-						"value": "1"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 219061264421231,
-					"parameters": {
-						"layout": "Level"
-					}
-				}
-			],
-			"sid": 655446470891410
 		},
 		{
 			"eventType": "block",
@@ -968,21 +817,11 @@
 							],
 							"actions": [
 								{
-									"id": "tween-value",
-									"objectClass": "Sprite_AliceMenu_Old",
-									"sid": 385866441620142,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"black\"",
-										"start-value": "0",
-										"end-value": "100",
-										"time": "0.5",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
+									"callFunction": "Start Layout Transition",
+									"sid": 843865647407631,
+									"parameters": [
+										"\"Level\""
+									]
 								}
 							],
 							"sid": 550723608920048
@@ -1046,7 +885,7 @@
 								},
 								{
 									"id": "set-fade-in-time",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 512460305051307,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -1055,7 +894,7 @@
 								},
 								{
 									"id": "set-wait-time",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 453920768499385,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -1064,7 +903,7 @@
 								},
 								{
 									"id": "set-fade-out-time",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 162454805766495,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -1073,7 +912,7 @@
 								},
 								{
 									"id": "restart-fade",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 416381857965591,
 									"behaviorType": "Fade"
 								}
@@ -1150,21 +989,29 @@
 							],
 							"actions": [
 								{
-									"id": "tween-value",
-									"objectClass": "Sprite_AliceMenu_Old",
-									"sid": 609970883327538,
-									"behaviorType": "Tween",
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 797526071825323,
 									"parameters": {
-										"tags": "\"black1\"",
-										"start-value": "0",
-										"end-value": "100",
-										"time": "0.5",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
+										"variable": "Tutorial_Enabled",
+										"value": "true"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 595679156414685,
+									"parameters": {
+										"variable": "Tut_Talk",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "Start Layout Transition",
+									"sid": 591740609369911,
+									"parameters": [
+										"\"Level\""
+									]
 								}
 							],
 							"sid": 425667549730324
@@ -1237,7 +1084,7 @@
 								},
 								{
 									"id": "set-fade-in-time",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 115820837296756,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -1246,7 +1093,7 @@
 								},
 								{
 									"id": "set-wait-time",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 434431287523926,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -1255,7 +1102,7 @@
 								},
 								{
 									"id": "set-fade-out-time",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 153163518096229,
 									"behaviorType": "Fade",
 									"parameters": {
@@ -1264,7 +1111,7 @@
 								},
 								{
 									"id": "restart-fade",
-									"objectClass": "Demo_Fade_Sprite",
+									"objectClass": "Fade_Sprite_Warning",
 									"sid": 442077839724812,
 									"behaviorType": "Fade"
 								}
@@ -1507,7 +1354,7 @@
 									"conditions": [
 										{
 											"id": "compare-opacity",
-											"objectClass": "Demo_Fade_Sprite",
+											"objectClass": "Fade_Sprite_Warning",
 											"sid": 771846527881995,
 											"parameters": {
 												"comparison": 1,
@@ -1518,7 +1365,7 @@
 									"actions": [
 										{
 											"id": "set-fade-in-time",
-											"objectClass": "Demo_Fade_Sprite",
+											"objectClass": "Fade_Sprite_Warning",
 											"sid": 701630209976201,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -1527,7 +1374,7 @@
 										},
 										{
 											"id": "set-wait-time",
-											"objectClass": "Demo_Fade_Sprite",
+											"objectClass": "Fade_Sprite_Warning",
 											"sid": 196249864327817,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -1536,7 +1383,7 @@
 										},
 										{
 											"id": "set-fade-out-time",
-											"objectClass": "Demo_Fade_Sprite",
+											"objectClass": "Fade_Sprite_Warning",
 											"sid": 198323044704442,
 											"behaviorType": "Fade",
 											"parameters": {
@@ -1545,7 +1392,7 @@
 										},
 										{
 											"id": "restart-fade",
-											"objectClass": "Demo_Fade_Sprite",
+											"objectClass": "Fade_Sprite_Warning",
 											"sid": 795571154052055,
 											"behaviorType": "Fade"
 										}
@@ -6935,16 +6782,6 @@
 					]
 				},
 				{
-					"eventType": "comment",
-					"text": "TESTAR SE ESTÁ FUNCIONANDO COM O STEAMWORKS ! ! !",
-					"text-color": [
-						1,
-						0,
-						0,
-						1
-					]
-				},
-				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -7021,9 +6858,9 @@
 								{
 									"id": "show-overlay-url",
 									"objectClass": "Steamworks",
-									"sid": 250518079346192,
+									"sid": 443917728002264,
 									"parameters": {
-										"url": "\"https://store.steampowered.com/news/app/4922040/view/655997268258717790\"",
+										"url": "\"https://store.steampowered.com/news/app/4922040\"",
 										"modal": false
 									}
 								}
@@ -7519,11 +7356,21 @@
 			"children": [
 				{
 					"eventType": "variable",
+					"name": "wait_time",
+					"type": "number",
+					"initialValue": "0.1",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 137326799792918
+				},
+				{
+					"eventType": "variable",
 					"name": "Ach_ID",
 					"type": "string",
 					"initialValue": "",
 					"comment": "",
-					"isStatic": false,
+					"isStatic": true,
 					"isConstant": false,
 					"sid": 829005705486527
 				},
@@ -7534,50 +7381,88 @@
 							"id": "on-start-of-layout",
 							"objectClass": "System",
 							"sid": 638175664011426
-						},
-						{
-							"id": "for-each-key",
-							"objectClass": "D_Save",
-							"sid": 188496262860011
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 247062920972528,
+							"parameters": {
+								"variable": "wait_time",
+								"value": "0"
+							}
+						}
+					],
 					"sid": 765223580287922,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 979414432550644,
-									"parameters": {
-										"first-value": "int(tokenat(D_Save.CurrentValue, 0, \"/\"))",
-										"comparison": 5,
-										"second-value": "int(tokenat(D_Save.CurrentValue, 1, \"/\"))"
-									}
+									"id": "for-each-key",
+									"objectClass": "D_Save",
+									"sid": 256043071396006
 								}
 							],
 							"actions": [
 								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 191061363629728,
+									"parameters": {
+										"seconds": "wait_time",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 975075049358724,
+									"parameters": {
+										"variable": "wait_time",
+										"value": "0.1"
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 446629411054262,
+									"sid": 712984694489771,
 									"parameters": {
 										"variable": "Ach_ID",
 										"value": "D_Save.CurrentKey"
 									}
-								},
-								{
-									"id": "get-achievement-info",
-									"objectClass": "Steamworks",
-									"sid": 535778915071893,
-									"parameters": {
-										"achievement": "D_Save.CurrentKey"
-									}
 								}
 							],
-							"sid": 218574112519765
+							"sid": 557663980476492,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 953381989904913,
+											"parameters": {
+												"first-value": "int(tokenat(D_Save.Get(Ach_ID), 0, \"/\"))",
+												"comparison": 5,
+												"second-value": "int(tokenat(D_Save.Get(Ach_ID), 1, \"/\"))"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "get-achievement-info",
+											"objectClass": "Steamworks",
+											"sid": 896211394535248,
+											"parameters": {
+												"achievement": "Ach_ID"
+											}
+										}
+									],
+									"sid": 699903590601753
+								}
+							]
 						}
 					]
 				},
