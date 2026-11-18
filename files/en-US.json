@@ -339,20 +339,20 @@
         "common": {
             "enemies": {
                 "Alice": {
-                    "name": "Alice",
+                    "name": "[color=#19317b]Alice[/color]",
                     "talk_march_hare": "Hey, it's my turn!",
                     "talk_jabberwock_1": "Jabberwock!? You're also participating?",
                     "talk_jabberwock_2": "Humm... sure. Bring it on!"
                 },
                 "White Queen": {
-                    "name": "White Queen",
+                    "name": "[color=#285716]White Queen[/color]",
                     "talk_win": "",
                     "talk_lose": "",
                     "talk_thinking_1": "",
                     "talk_thinking_2": ""
                 },
                 "White Rabbit": {
-                    "name": "White Rabbit",
+                    "name": "[color=#285716]White Rabbit[/color]",
                     "first_time_1": "Oh! Alice! It's been so long since I've seen you!",
                     "first_time_2": "That's true! What are you doing around here?",
                     "first_time_3": "Good question! I'll try to keep it short because I'm in a bit of a hurry...",
@@ -390,7 +390,7 @@
                     "rng_talk_21": "I'm here!"
                 },
                 "Mad Hatter": {
-                    "name": "Mad Hatter",
+                    "name": "[color=#921520]Mad Hatter[/color]",
                     "talk_win": "Hum... Mad as a Hatter...",
                     "talk_lose": "I tip my hat to you.",
                     "talk_thinking_1": "I need to finish this game because it's almost tea time!",
@@ -399,7 +399,7 @@
                     "special": "What if my the next card is hidden?"
                 },
                 "March Hare": {
-                    "name": "March Hare",
+                    "name": "[color=#921520]March Hare[/color]",
                     "talk_win": "Are you leaving already? You haven't even had a cup of tea!",
                     "talk_lose": "Well, I guess tea time is over!",
                     "talk_thinking_1": "I'd offer you some wine if I had any...",
@@ -407,7 +407,7 @@
                     "special": "I'll start with a card for myself. After all, it's my unbirthday!"
                 },
                 "The Tweedles": {
-                    "name": "The Tweedles",
+                    "name": "[color=#921520]The Tweedles[/color]",
                     "talk_win": "We, the TWEEDLE brothers, have won again!",
                     "talk_lose": "You win. We've no objection. Contrariwise.",
                     "talk_thinking_1": "Hey brother, this card is mine!",
@@ -415,7 +415,7 @@
                     "special": "My turn! Move it!"
                 },
                 "Caterpillar": {
-                    "name": "Caterpillar",
+                    "name": "[color=#921520]Caterpillar[/color]",
                     "talk_win": "It seems like you haven't changed a bit...",
                     "talk_lose": "Who... are... you?",
                     "talk_thinking_1": "Keep your temper.",
@@ -423,7 +423,7 @@
                     "special": "Oh my, the smoke is everywhere..."
                 },
                 "Cheshire Cat": {
-                    "name": "Cheshire Cat",
+                    "name": "[color=#921520]Cheshire Cat[/color]",
                     "talk_win": "That's too bad... Are you going somewhere?",
                     "talk_lose": "It looks like you've found the direction you need to go...",
                     "talk_thinking_1": "Remember... we're all mad here. I'm mad. You're mad.",
@@ -431,7 +431,7 @@
                     "special": "What's wrong? Can't see?"
                 },
                 "General of Cards": {
-                    "name": "General of Cards",
+                    "name": "[color=#921520]General of Cards[/color]",
                     "talk_win": "Looks like I'M the toughest one here.",
                     "talk_lose": "Torn... right in half.",
                     "talk_thinking_1": "I'm exhausted... I need to wrap this up.",
@@ -439,7 +439,7 @@
                     "special": "Don't judge a card by its cover! I'm tougher than I look."
                 },
                 "Dodo": {
-                    "name": "Dodo",
+                    "name": "[color=#921520]Dodo[/color]",
                     "talk_win": "Where is my prize?",
                     "talk_lose": "I lost... You can keep the prize then...",
                     "talk_thinking_1": "So many options...",
@@ -447,7 +447,7 @@
                     "special": "Do you want a prize?"
                 },
                 "Red Queen": {
-                    "name": "Queen of Hearts",
+                    "name": "[color=#921520]Queen of Hearts[/color]",
                     "talk_win": "Off with her head!",
                     "talk_lose": "You may have won this battle... But you won't win the war...",
                     "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
@@ -455,7 +455,7 @@
                     "special": "I'm gonna slice this card!"
                 },
                 "Jabberwock": {
-                    "name": "Jabberwock",
+                    "name": "[color=#921520]Jabberwock[/color]",
                     "talk_win": "Finally, I'll be able to sharpen my fangs a little!",
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",

@@ -340,20 +340,20 @@
         "common": {
             "enemies" : {
                 "Alice": {
-                    "name": "Alice",
+                    "name": "[color=#19317b]Alice[/color]",
                     "talk_march_hare": "Ei, esse é meu turno!",
                     "talk_jabberwock_1": "Jaguadarte!? Você também está participando?",
                     "talk_jabberwock_2": "Humm... tudo bem. Manda ver!"
                 },
                 "White Queen": {
-                    "name": "Rainha Branca",
+                    "name": "[color=#285716]Rainha Branca[/color]",
                     "talk_win": "",
                     "talk_lose": "",
                     "talk_thinking_1": "",
                     "talk_thinking_2": ""
                 },
                 "White Rabbit": {
-                    "name": "Coelho Branco",
+                    "name": "[color=#285716]Coelho Branco[/color]",
                     "first_time_1": "Oh! Alice! Quanto tempo que não te vejo!",
                     "first_time_2": "Verdade! O que faz por aqui?",
                     "first_time_3": "Ótima pergunta! Tentarei ser breve pois estou com um pouco de pressa...",
@@ -391,7 +391,7 @@
                     "rng_talk_21": "Cheguei!"
                 },
                 "Mad Hatter": {
-                    "name": "Chapeleiro Maluco",
+                    "name": "[color=#921520]Chapeleiro Maluco[/color]",
                     "talk_win": "Hum... louca que nem eu...",
                     "talk_lose": "Eu tiro meu chapéu para você.",
                     "talk_thinking_1": "Eu preciso terminar este jogo porque está quase na hora do chá!",
@@ -400,7 +400,7 @@
                     "special": "E se minha próxima carta estiver oculta?"
                 },
                 "March Hare": {
-                    "name": "Lebre de Março",
+                    "name": "[color=#921520]Lebre de Março[/color]",
                     "talk_win": "Já está de saída? Você nem tomou uma xícara de chá!",
                     "talk_lose": "Bem, eu acho que a hora do chá acabou!",
                     "talk_thinking_1": "Eu te ofereceria um pouco de vinho que eu tivesse...",
@@ -408,7 +408,7 @@
                     "special": "Vou começar com uma carta pra mim. Afinal é meu desaniversário!"
                 },
                 "The Tweedles": {
-                    "name": "Os Tweedles",
+                    "name": "[color=#921520]Os Tweedles[/color]",
                     "talk_win": "Nós, os irmãos TWEEDLE, ganhamos de novo!",
                     "talk_lose": "Você ganhou. Não temos objeções. Pelo contrário.",
                     "talk_thinking_1": "Hey irmão, essa carta é minha!",
@@ -416,7 +416,7 @@
                     "special": "Meu turno! Sai fora!"
                 },
                 "Caterpillar": {
-                    "name": "Lagarta",
+                    "name": "[color=#921520]Lagarta[/color]",
                     "talk_win": "Parece que você não mudou nada...",
                     "talk_lose": "Quem... é... você?",
                     "talk_thinking_1": "Mantenha a calma.",
@@ -424,7 +424,7 @@
                     "special": "Nossa, a fumaça está por toda a parte..."
                 },
                 "Cheshire Cat": {
-                    "name": "Gato de Cheshire",
+                    "name": "[color=#921520]Gato de Cheshire[/color]",
                     "talk_win": "Que pena... Você está indo a algum lugar?",
                     "talk_lose": "Parece que você encontrou a direção que precisava ir...",
                     "talk_thinking_1": "Lembre-se... todos nós somos loucos aqui. Eu sou louco. Você é louca",
@@ -432,7 +432,7 @@
                     "special": "O que foi? Não está enxergando direito?"
                 },
                 "General of Cards": {
-                    "name": "General Carta",
+                    "name": "[color=#921520]General Carta[/color]",
                     "talk_win": "Parece que EU sou o mais resistente aqui.",
                     "talk_lose": "Fui rasgado...ao meio.",
                     "talk_thinking_1": "Estou cansado...Tenho que ganhar logo.",
@@ -440,7 +440,7 @@
                     "special": "Não me julgue pela aparência! Sou bem resistente."
                 },
                 "Dodo": {
-                    "name": "Dodô",
+                    "name": "[color=#921520]Dodô[/color]",
                     "talk_win": "Onde está meu prêmio?",
                     "talk_lose": "Eu perdi... Você pode ficar com o prêmio então...",
                     "talk_thinking_1": "Tantas opções...",
@@ -448,7 +448,7 @@
                     "special": "Você quer um prêmio?"
                 },
                 "Red Queen": {
-                    "name": "Rainha de Copas",
+                    "name": "[color=#921520]Rainha de Copas[/color]",
                     "talk_win": "Cortem a cabeça!",
                     "talk_lose": "Você pode ter ganhado esta batalha... Mas não ganhou a guerra...",
                     "talk_thinking_1": "Calado! Estou pensando na minha estratégia!",
@@ -456,7 +456,7 @@
                     "special": "Agora eu declaro essa carta ilegal!"
                 },
                 "Jabberwock": {
-                    "name": "Jaguadarte",
+                    "name": "[color=#921520]Jaguadarte[/color]",
                     "talk_win": "Finalmente poderei afiar minhas presas um pouco!",
                     "talk_lose": "Arghhh!!! Como se atreve?!",
                     "talk_thinking_1": "Com esse movimento, eu vou te despedaçar... hehe",
