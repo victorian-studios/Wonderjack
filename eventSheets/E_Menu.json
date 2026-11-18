@@ -6895,6 +6895,36 @@
 								}
 							],
 							"sid": 297911066451525
+						},
+						{
+							"eventType": "comment",
+							"text": "Social Media"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Banner_fundo",
+									"sid": 633710848657958,
+									"parameters": {
+										"comparison": 0,
+										"number": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "show-overlay-url",
+									"objectClass": "Steamworks",
+									"sid": 533112574291538,
+									"parameters": {
+										"url": "\"https://linktr.ee/VictorianStudio\"",
+										"modal": false
+									}
+								}
+							],
+							"sid": 913615798401016
 						}
 					]
 				},

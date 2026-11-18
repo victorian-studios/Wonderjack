@@ -280,6 +280,114 @@
 						"z": 0,
 						"angle": 0
 					}
+				},
+				{
+					"type": "Sprite_Plushies",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 447,
+					"sid": 171568674765852,
+					"tags": "",
+					"instanceVariables": {
+						"ID": 3
+					},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1278.0303955078125,
+						"y": 634.33154296875,
+						"width": 120,
+						"height": 125,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Sprite_Plushies",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Default",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 450,
+					"sid": 282282964414535,
+					"tags": "",
+					"instanceVariables": {
+						"ID": 2
+					},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1173.249267578125,
+						"y": 704.0902709960938,
+						"width": 141,
+						"height": 215,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Sprite_Plushies",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Default",
+						"initial-frame": 2,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 451,
+					"sid": 294963035954441,
+					"tags": "",
+					"instanceVariables": {
+						"ID": 1
+					},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1044,
+						"y": 721,
+						"width": 150,
+						"height": 179,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
 				}
 			],
 			"sid": 838898855318149,
@@ -459,7 +567,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 945.5,
+						"x": 929.5,
 						"y": 889.5,
 						"width": 32,
 						"height": 32,
@@ -501,7 +609,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1009.5,
+						"x": 993.5,
 						"y": 889.5,
 						"width": 32,
 						"height": 32,
@@ -543,7 +651,49 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1072,
+						"x": 1056,
+						"y": 888,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Banner_bolinha",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 452,
+					"sid": 150523948214786,
+					"tags": "",
+					"instanceVariables": {
+						"ID": 3
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1120,
 						"y": 888,
 						"width": 32,
 						"height": 32,
@@ -2436,7 +2586,7 @@
 							"properties": {
 								"initially-visible": false,
 								"initial-animation": "Default",
-								"initial-frame": 3,
+								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
 							},
@@ -2457,8 +2607,8 @@
 							"world": {
 								"x": 1411,
 								"y": 586,
-								"width": 915.629276,
-								"height": 515.578528,
+								"width": 915.6292760000001,
+								"height": 515.5785279999999,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [

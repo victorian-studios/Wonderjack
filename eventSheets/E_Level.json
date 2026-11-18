@@ -503,29 +503,11 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "Hand_Player",
-					"sid": 162472034995330,
+					"objectClass": "Table_CPU",
+					"sid": 298787321592847,
 					"parameters": {
-						"instance-variable": "Protect_Turns",
+						"instance-variable": "Visible_Count",
 						"value": "0"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Hand_Player",
-					"sid": 542082929404121,
-					"parameters": {
-						"instance-variable": "PowerHandLimit",
-						"value": "2"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Hand_Player",
-					"sid": 928908201783153,
-					"parameters": {
-						"instance-variable": "PowerLimit_Rounds",
-						"value": "PlayerPowerLimit_Rounds"
 					}
 				},
 				{
@@ -553,6 +535,42 @@
 					"parameters": {
 						"instance-variable": "PowerLimit_Rounds",
 						"value": "EnemyPowerLimit_Rounds"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Table_Player",
+					"sid": 339329894018279,
+					"parameters": {
+						"instance-variable": "Visible_Count",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_Player",
+					"sid": 420637000040280,
+					"parameters": {
+						"instance-variable": "Protect_Turns",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_Player",
+					"sid": 781126640322390,
+					"parameters": {
+						"instance-variable": "PowerHandLimit",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Hand_Player",
+					"sid": 614783247339263,
+					"parameters": {
+						"instance-variable": "PowerLimit_Rounds",
+						"value": "PlayerPowerLimit_Rounds"
 					}
 				},
 				{
