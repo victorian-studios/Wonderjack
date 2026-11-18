@@ -1513,6 +1513,32 @@
 							"parameters": {
 								"layout": "Name"
 							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Sprite_Ponteiro",
+							"sid": 386046412902659,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Sprite_Ponteiro",
+							"sid": 543166279187332,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Sprite_Ponteiro",
+							"sid": 774389929370809,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "enabled"
+							}
 						}
 					],
 					"sid": 261399575556923

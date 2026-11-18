@@ -841,7 +841,7 @@
 							}
 						},
 						{
-							"callFunction": "Transition",
+							"callFunction": "Match_Transition",
 							"sid": 362123973586929,
 							"parameters": [
 								true,
@@ -934,7 +934,7 @@
 							}
 						},
 						{
-							"callFunction": "Transition",
+							"callFunction": "Match_Transition",
 							"sid": 583810993476225,
 							"parameters": [
 								true,
@@ -990,6 +990,11 @@
 					"id": "move-to-top",
 					"objectClass": "Bkg_Extra",
 					"sid": 762768789530627
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "degrade",
+					"sid": 883953194656999
 				}
 			],
 			"sid": 403715614006273,
@@ -1070,6 +1075,10 @@
 				{
 					"eventType": "comment",
 					"text": "Auto math"
+				},
+				{
+					"eventType": "comment",
+					"text": "Se as cartas não estiverem visíveis, mostra uma ? ao invés da soma completa do oponente"
 				},
 				{
 					"eventType": "block",
@@ -1330,6 +1339,10 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "Se as cartas estiverem visíveis, mostra a soma completa do oponente"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -1588,6 +1601,46 @@
 								}
 							],
 							"sid": 287776358301159
+						},
+						{
+							"eventType": "comment",
+							"text": "Verde - Verde"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 857818657295401,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"comparison": 0,
+										"value": "TheNumber"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 596978620796864,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"comparison": 0,
+										"value": "TheNumber"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Txt_auto_math",
+									"sid": 460091553192372,
+									"parameters": {
+										"text": "\"[color=#23fc01]\" & EnemyNumbers & \"[/color]\" & newline & \"[icon=line1][icon=line2]\" & newline & \"[color=#23fc01]\" & PlayerNumbers & \"[/color]\""
+									}
+								}
+							],
+							"sid": 236231847656635
 						}
 					]
 				}
@@ -11508,16 +11561,6 @@
 									}
 								},
 								{
-									"id": "move-to-top",
-									"objectClass": "mesa",
-									"sid": 477862289655616
-								},
-								{
-									"id": "move-to-top",
-									"objectClass": "degrade",
-									"sid": 883953194656999
-								},
-								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 160162838336008,
@@ -11588,6 +11631,15 @@
 									"parameters": {
 										"seconds": "0.3",
 										"use-timescale": true
+									}
+								},
+								{
+									"id": "move-to-object",
+									"objectClass": "Card_Power_Enemy",
+									"sid": 216198879460808,
+									"parameters": {
+										"where": "behind",
+										"object": "mesa"
 									}
 								},
 								{
@@ -12295,14 +12347,13 @@
 													}
 												},
 												{
-													"id": "move-to-top",
-													"objectClass": "mesa",
-													"sid": 991629744851224
-												},
-												{
-													"id": "move-to-top",
-													"objectClass": "degrade",
-													"sid": 221882006469666
+													"id": "move-to-object",
+													"objectClass": "Card_Power_Enemy",
+													"sid": 820940416151102,
+													"parameters": {
+														"where": "behind",
+														"object": "mesa"
+													}
 												}
 											],
 											"sid": 557987473729413
@@ -24616,9 +24667,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "Text_Turn2",
-													"sid": 707787012794858,
+													"sid": 276184597709005,
 													"parameters": {
-														"text": "Internationalization.Lookup(\"common.player_turn\")"
+														"text": "Internationalization.Lookup(\"common.player_turn\", Internationalization.Lookup(\"common.enemies.Alice.name\"))"
 													}
 												},
 												{
@@ -26546,9 +26597,9 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text_Round",
-									"sid": 278863556203674,
+									"sid": 353833199458853,
 									"parameters": {
-										"text": "Internationalization.Lookup(\"common.points\", PlayerPoints, EnemyNameTurns, EnemyPoints)",
+										"text": "Internationalization.Lookup(\"common.points\", Internationalization.Lookup(\"common.enemies.Alice.name\"), PlayerPoints, EnemyNameTurns, EnemyPoints)",
 										"duration": "1.5"
 									}
 								}
@@ -29102,13 +29153,12 @@
 																	}
 																},
 																{
-																	"callFunction": "Get Relics",
-																	"sid": 375871116386551,
-																	"disabled": true
+																	"callFunction": "Clear_Power_Hands",
+																	"sid": 343628447053538
 																},
 																{
 																	"callFunction": "Clear_Power_Hands",
-																	"sid": 343628447053538
+																	"sid": 789501010234353
 																},
 																{
 																	"id": "tween-value",
@@ -29709,13 +29759,8 @@
 																			}
 																		},
 																		{
-																			"callFunction": "Apply_Buff",
-																			"sid": 402138521102792,
-																			"parameters": [
-																				"\"protect\"",
-																				"3",
-																				"2"
-																			]
+																			"callFunction": "Enemy Special Power",
+																			"sid": 160248564959395
 																		}
 																	],
 																	"sid": 744396042463389
@@ -31297,9 +31342,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Text_Round",
-											"sid": 209742610371411,
+											"sid": 147389769505502,
 											"parameters": {
-												"text": "Internationalization.Lookup(\"common.tie\", PlayerNumbers, EnemyNameTurns, EnemyNumbers)"
+												"text": "Internationalization.Lookup(\"common.tie\", Internationalization.Lookup(\"common.enemies.Alice.name\"), PlayerNumbers, EnemyNameTurns, EnemyNumbers)"
 											}
 										},
 										{
@@ -31331,9 +31376,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "Text_Round",
-											"sid": 606364707020239,
+											"sid": 462524736167357,
 											"parameters": {
-												"text": "Internationalization.Lookup(\"common.round_result\", PlayerNumbers, EnemyNameTurns, EnemyNumbers, winner)"
+												"text": "Internationalization.Lookup(\"common.round_result\", Internationalization.Lookup(\"common.enemies.Alice.name\"), PlayerNumbers, EnemyNameTurns, EnemyNumbers, winner)"
 											}
 										},
 										{
@@ -31564,6 +31609,10 @@
 							]
 						},
 						{
+							"eventType": "comment",
+							"text": "Inicia a partida"
+						},
+						{
 							"bookmark": true,
 							"eventType": "block",
 							"conditions": [
@@ -31770,11 +31819,11 @@
 											"actions": [
 												{
 													"callFunction": "Talk",
-													"sid": 259856091167189,
+													"sid": 867044279358512,
 													"parameters": [
 														"EnemyName",
-														"\"common.enemies.\" & EnemyName & \".special_3\"",
-														"0  - Opt_FastMode_Secs",
+														"\"common.enemies.\" & EnemyName & choose( \".special_3\", \".special_4\", \".special_5\")",
+														"-1  - Opt_FastMode_Secs",
 														false,
 														false
 													]
@@ -32323,7 +32372,7 @@
 							"text": "Reativação de reliquias está aqui dentro ! ! !"
 						},
 						{
-							"functionName": "Transition",
+							"functionName": "Match_Transition",
 							"functionDescription": "",
 							"functionCategory": "",
 							"functionReturnType": "none",
@@ -32411,10 +32460,28 @@
 										},
 										{
 											"id": "set-instvar-value",
+											"objectClass": "Table_CPU",
+											"sid": 842867072162305,
+											"parameters": {
+												"instance-variable": "Visible_Count",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
 											"objectClass": "Table_Player",
 											"sid": 214539077468512,
 											"parameters": {
 												"instance-variable": "Cards",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Table_Player",
+											"sid": 965353440925427,
+											"parameters": {
+												"instance-variable": "Visible_Count",
 												"value": "0"
 											}
 										}
@@ -34052,6 +34119,16 @@
 														"animation": "\"Level_\"&Match",
 														"from": "beginning"
 													}
+												},
+												{
+													"id": "move-to-top",
+													"objectClass": "mesa",
+													"sid": 477862289655616
+												},
+												{
+													"id": "move-to-top",
+													"objectClass": "degrade",
+													"sid": 883953194656999
 												}
 											],
 											"sid": 732250333283954
@@ -35094,26 +35171,15 @@
 																		{
 																			"id": "wait",
 																			"objectClass": "System",
-																			"sid": 903538044867855,
+																			"sid": 602991653907701,
 																			"parameters": {
-																				"seconds": "7 - Opt_FastMode",
+																				"seconds": "8 - Opt_FastMode",
 																				"use-timescale": true
 																			}
 																		},
 																		{
 																			"callFunction": "Enemy Special Power",
 																			"sid": 113511024142232
-																		},
-																		{
-																			"callFunction": "Talk",
-																			"sid": 340770230241402,
-																			"parameters": [
-																				"EnemyName",
-																				"\"common.enemies.\" & EnemyName & \".special\"",
-																				"-0.5",
-																				false,
-																				false
-																			]
 																		}
 																	],
 																	"sid": 513764151685365
@@ -50367,10 +50433,10 @@
 									"actions": [
 										{
 											"callFunction": "Talk",
-											"sid": 893172766895660,
+											"sid": 397168853517410,
 											"parameters": [
 												"EnemyName",
-												"\"common.enemies.\" & EnemyName & \".special\"",
+												"\"common.enemies.\" & EnemyName & choose(\".special_1\", \".special_2\", \".special_3\")",
 												"1  - Opt_FastMode_Secs",
 												false,
 												false
@@ -50716,43 +50782,6 @@
 														"variable": "EnemyAI_SpecialUsed",
 														"value": "true"
 													}
-												},
-												{
-													"callFunction": "Talk",
-													"sid": 857713667804385,
-													"parameters": [
-														"EnemyName",
-														"\"common.enemies.\" & EnemyName & \".special\"",
-														"1  - Opt_FastMode_Secs",
-														false,
-														false
-													]
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 951679060910469,
-													"parameters": {
-														"seconds": "0.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "tween-one-property",
-													"objectClass": "Enemy",
-													"sid": 700562028166618,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"\"",
-														"property": "offsetX",
-														"end-value": "Self.X + 25",
-														"time": "0.25",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
 												}
 											],
 											"sid": 818891340911560,
@@ -50772,6 +50801,43 @@
 														}
 													],
 													"actions": [
+														{
+															"callFunction": "Talk",
+															"sid": 692990297123417,
+															"parameters": [
+																"EnemyName",
+																"\"common.enemies.\" & EnemyName & choose(\".special_1\", \".special_2\", \".special_big_1\", \".special_big_2\")",
+																"0  - Opt_FastMode_Secs",
+																false,
+																false
+															]
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 188014781640622,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Enemy",
+															"sid": 379322148470514,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"\"",
+																"property": "offsetX",
+																"end-value": "Self.X + 25",
+																"time": "0.25",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
@@ -50838,6 +50904,43 @@
 														}
 													],
 													"actions": [
+														{
+															"callFunction": "Talk",
+															"sid": 924928614440522,
+															"parameters": [
+																"EnemyName",
+																"\"common.enemies.\" & EnemyName & choose(\".special_1\", \".special_2\", \".special_small_1\", \".special_small_2\")",
+																"0  - Opt_FastMode_Secs",
+																false,
+																false
+															]
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 738331211014077,
+															"parameters": {
+																"seconds": "0.5",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "tween-one-property",
+															"objectClass": "Enemy",
+															"sid": 196491303730612,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"\"",
+																"property": "offsetX",
+																"end-value": "Self.X + 25",
+																"time": "0.25",
+																"ease": "default",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no",
+																"repeat-count": "1"
+															}
+														},
 														{
 															"id": "set-eventvar-value",
 															"objectClass": "System",
@@ -51259,10 +51362,10 @@
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 255970403102906,
+													"sid": 193903984826522,
 													"parameters": [
 														"EnemyName",
-														"\"common.enemies.\" & EnemyName & \".special\"",
+														"\"common.enemies.\" & EnemyName & choose( \".special_1\", \".special_2\", \".special_3\" )",
 														"1  - Opt_FastMode_Secs",
 														false,
 														false
@@ -51325,18 +51428,100 @@
 												"variable": "EnemyAI_SpecialUsed",
 												"value": "false"
 											}
-										},
-										{
-											"callFunction": "Apply_Buff",
-											"sid": 142066493279017,
-											"parameters": [
-												"\"protect\"",
-												"3",
-												"2"
-											]
 										}
 									],
-									"sid": 981482667161159
+									"sid": 981482667161159,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 968900713983262,
+													"parameters": {
+														"variable": "GameRound",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Talk",
+													"sid": 218307581158644,
+													"parameters": [
+														"EnemyName",
+														"\"common.enemies.\" & EnemyName & \".special_1\"",
+														"0",
+														false,
+														false
+													]
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 325738921783661,
+													"parameters": {
+														"seconds": "1 - Opt_FastMode_Secs",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Apply_Buff",
+													"sid": 347957184507523,
+													"parameters": [
+														"\"protect\"",
+														"3",
+														"2"
+													]
+												}
+											],
+											"sid": 699269034338917
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 230428237838700
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Talk",
+													"sid": 209574471464899,
+													"parameters": [
+														"EnemyName",
+														"\"common.enemies.\" & EnemyName & choose(\".special_2\", \"special_3\", \".special_4\")",
+														"0",
+														false,
+														false
+													]
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 850842128846131,
+													"parameters": {
+														"seconds": "1 - Opt_FastMode_Secs",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Apply_Buff",
+													"sid": 453489568993863,
+													"parameters": [
+														"\"protect\"",
+														"3",
+														"2"
+													]
+												}
+											],
+											"sid": 906272567245685
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -51597,10 +51782,10 @@
 												},
 												{
 													"callFunction": "Talk",
-													"sid": 197498011663175,
+													"sid": 534855838359243,
 													"parameters": [
 														"EnemyName",
-														"\"common.enemies.\" & EnemyName & \".special\"",
+														"\"common.enemies.\" & EnemyName & choose(\".special_1\", \".special_2\", \".special_3\")",
 														"0  - Opt_FastMode_Secs",
 														false,
 														false
@@ -51852,433 +52037,6 @@
 				}
 			],
 			"sid": 102085091901159
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Music & Sounds",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"functionName": "Audio Sequence",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "id",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"sid": 647965274338632
-						}
-					],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 509902011393239,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 137811457728136,
-									"parameters": {
-										"variable": "id",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 555342051163009,
-									"parameters": {
-										"audio-file": {
-											"path": "Novos/SQUEAK Creaking 01"
-										},
-										"loop": "not-looping",
-										"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 505889724393201,
-									"parameters": {
-										"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "Enemy",
-									"sid": 122128799224336,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"\"",
-										"property": "offsetOpacity",
-										"end-value": "0",
-										"time": "0.3",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 311745403653837,
-									"parameters": {
-										"seconds": "Opt_FastMode = 1 ? 0.6 : 1",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 854805326236638,
-									"parameters": {
-										"audio-file": {
-											"path": "Novos/FOOTSTEPS (A) Walking Loop 01"
-										},
-										"loop": "not-looping",
-										"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.2 ) : - 100",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 839764011600819
-						}
-					]
-				},
-				{
-					"functionName": "Play_RNG_Audio",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "Name",
-							"type": "string",
-							"initialValue": "",
-							"comment": "",
-							"sid": 944542915234294
-						}
-					],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 152432806512155,
-					"children": [
-						{
-							"eventType": "variable",
-							"name": "RNG_Audio",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 590064703717167
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 928045321217166,
-									"parameters": {
-										"variable": "Name",
-										"comparison": 0,
-										"value": "\"shuffle\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 692467085683869,
-									"parameters": {
-										"variable": "RNG_Audio",
-										"value": "choose ( 1,2,3)"
-									}
-								}
-							],
-							"sid": 808038403965867,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 661317970245746,
-											"parameters": {
-												"variable": "RNG_Audio",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 732490471655293,
-											"parameters": {
-												"audio-file": {
-													"path": "card-deck-shuffle-1"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
-									"sid": 286789807534353
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 348569750720146,
-											"parameters": {
-												"variable": "RNG_Audio",
-												"comparison": 0,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 655264829354947,
-											"parameters": {
-												"audio-file": {
-													"path": "card-deck-shuffle-2"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
-									"sid": 591202982620857
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 651113952925788,
-											"parameters": {
-												"variable": "RNG_Audio",
-												"comparison": 0,
-												"value": "3"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 422217368506131,
-											"parameters": {
-												"audio-file": {
-													"path": "card-deck-shuffle-3"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
-									"sid": 516109565466173
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 782756214614387,
-									"parameters": {
-										"variable": "Name",
-										"comparison": 0,
-										"value": "\"slice\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 266486903379803,
-									"parameters": {
-										"variable": "RNG_Audio",
-										"value": "choose ( 1,2,3)"
-									}
-								}
-							],
-							"sid": 499532096115140,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 387202130927657,
-											"parameters": {
-												"variable": "RNG_Audio",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 406440047603150,
-											"parameters": {
-												"audio-file": {
-													"path": "864778__arkturusg__single-sword-strikes-sfx-with-gore_1"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
-									"sid": 606570602029991
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 582993938276077,
-											"parameters": {
-												"variable": "RNG_Audio",
-												"comparison": 0,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 672108542514767,
-											"parameters": {
-												"audio-file": {
-													"path": "864778__arkturusg__single-sword-strikes-sfx-with-gore_2"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
-									"sid": 338723583031800
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 959013248191292,
-											"parameters": {
-												"variable": "RNG_Audio",
-												"comparison": 0,
-												"value": "3"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 659184441414863,
-											"parameters": {
-												"audio-file": {
-													"path": "864778__arkturusg__single-sword-strikes-sfx-with-gore_3"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
-									"sid": 635455217568859
-								}
-							]
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-ended",
-							"objectClass": "Audio",
-							"sid": 611433854712051,
-							"parameters": {
-								"tag": "\"music\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 119966166053744,
-							"parameters": {
-								"audio-file": {
-									"path": "In Game/Shop/3 - Whispers of the Abyss (loop)"
-								},
-								"loop": "looping",
-								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
-								"stereo-pan": "0",
-								"tag-optional": "\"music\""
-							}
-						}
-					],
-					"sid": 199276771291347
-				}
-			],
-			"sid": 208504328403946
 		},
 		{
 			"eventType": "group",
@@ -54247,7 +54005,7 @@
 									}
 								},
 								{
-									"callFunction": "Transition",
+									"callFunction": "Match_Transition",
 									"sid": 217437980550714,
 									"parameters": [
 										false,
@@ -56046,6 +55804,433 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Music & Sounds",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "Audio Sequence",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "id",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 647965274338632
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 174196509757303,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 434838419756604,
+									"parameters": {
+										"variable": "id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 388098766885113,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/SQUEAK Creaking 01"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 620818000063706,
+									"parameters": {
+										"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Enemy",
+									"sid": 226614012931124,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "0.3",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 367913415272192,
+									"parameters": {
+										"seconds": "Opt_FastMode = 1 ? 0.6 : 1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 591384988773459,
+									"parameters": {
+										"audio-file": {
+											"path": "Novos/FOOTSTEPS (A) Walking Loop 01"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.2 ) : - 100",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 280311741925364
+						}
+					]
+				},
+				{
+					"functionName": "Play_RNG_Audio",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Name",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 944542915234294
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 908553673730744,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "RNG_Audio",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 110362347828130
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 201471665900796,
+									"parameters": {
+										"variable": "Name",
+										"comparison": 0,
+										"value": "\"shuffle\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 273787626239202,
+									"parameters": {
+										"variable": "RNG_Audio",
+										"value": "choose ( 1,2,3)"
+									}
+								}
+							],
+							"sid": 699523660067130,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 666959025811157,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 900445655494585,
+											"parameters": {
+												"audio-file": {
+													"path": "card-deck-shuffle-1"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 897561510985374
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 448366286033568,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 981071991547553,
+											"parameters": {
+												"audio-file": {
+													"path": "card-deck-shuffle-2"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 800229891607546
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 518145563650269,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 788767909265733,
+											"parameters": {
+												"audio-file": {
+													"path": "card-deck-shuffle-3"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 970109456852936
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 366912314928903,
+									"parameters": {
+										"variable": "Name",
+										"comparison": 0,
+										"value": "\"slice\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 154919698847479,
+									"parameters": {
+										"variable": "RNG_Audio",
+										"value": "choose ( 1,2,3)"
+									}
+								}
+							],
+							"sid": 875721460668955,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 999808637143067,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 758836461328735,
+											"parameters": {
+												"audio-file": {
+													"path": "864778__arkturusg__single-sword-strikes-sfx-with-gore_1"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 337149836443899
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 309684312641595,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 255012295193421,
+											"parameters": {
+												"audio-file": {
+													"path": "864778__arkturusg__single-sword-strikes-sfx-with-gore_2"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 345885834128378
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 645650114405118,
+											"parameters": {
+												"variable": "RNG_Audio",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 487202504791575,
+											"parameters": {
+												"audio-file": {
+													"path": "864778__arkturusg__single-sword-strikes-sfx-with-gore_3"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -15 + ( Vol_Sfx * 0.15 ) : - 100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 939856979180120
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-ended",
+							"objectClass": "Audio",
+							"sid": 339486233187417,
+							"parameters": {
+								"tag": "\"music\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 349551987650838,
+							"parameters": {
+								"audio-file": {
+									"path": "In Game/Shop/3 - Whispers of the Abyss (loop)"
+								},
+								"loop": "looping",
+								"volume": "Vol_Mus > 0 ? -40 + ( Vol_Mus * 0.4 ) : -100",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 110476474038827
+				}
+			],
+			"sid": 861321380437438
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Talk System",
 			"description": "",
 			"isActiveOnStart": true,
@@ -56110,9 +56295,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text_Talk_Name",
-							"sid": 532716675465681,
+							"sid": 533972937585757,
 							"parameters": {
-								"text": "\"[u]\" & Internationalization.Lookup( \"common.enemies.\" & Name & \".name\") & \"[/u]\""
+								"text": "Internationalization.Lookup( \"common.enemies.\" & Name & \".name\")"
 							}
 						},
 						{
@@ -62184,40 +62369,27 @@
 					],
 					"actions": [
 						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 127359175551420,
-							"disabled": true,
-							"parameters": {
-								"object-to-create": "Effect_Particle_Candle_Flame_Blue",
-								"layer": "\"Bkg\"",
-								"x": "40",
-								"y": "40",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
 							"id": "move-to-object",
-							"objectClass": "Effect_Particle_Candle_Flame_Blue",
-							"sid": 344926392599516,
+							"objectClass": "mesa",
+							"sid": 269944940933166,
 							"disabled": true,
 							"parameters": {
 								"where": "behind",
-								"object": "Candle_Flame"
+								"object": "degrade"
 							}
 						},
 						{
-							"callFunction": "Save Seconds",
-							"sid": 195202864098221
+							"id": "move-to-top",
+							"objectClass": "mesa",
+							"sid": 477862289655616
 						},
 						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 105786752712586,
+							"id": "move-to-object",
+							"objectClass": "degrade",
+							"sid": 370165912825938,
 							"parameters": {
-								"type": "log",
-								"message": "\"Tempo: \" & pendulo.Timer.CurrentTime(\"seconds\")"
+								"where": "in-front",
+								"object": "mesa"
 							}
 						}
 					],

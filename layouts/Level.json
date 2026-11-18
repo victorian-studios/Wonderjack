@@ -2742,9 +2742,9 @@
 							"locked": false,
 							"world": {
 								"x": 960,
-								"y": 529,
+								"y": 532.5,
 								"width": 1998,
-								"height": 281,
+								"height": 256,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -2803,9 +2803,9 @@
 							"locked": false,
 							"world": {
 								"x": 3,
-								"y": 458,
+								"y": 442,
 								"width": 1926,
-								"height": 143,
+								"height": 176,
 								"originX": 0,
 								"originY": 0,
 								"color": [

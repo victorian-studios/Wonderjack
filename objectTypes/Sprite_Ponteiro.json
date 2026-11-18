@@ -1,0 +1,89 @@
+{
+	"name": "Sprite_Ponteiro",
+	"plugin-id": "Sprite",
+	"sid": 956938045674556,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 981801574379208
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 646908204973509
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 46,
+						"height": 157,
+						"originX": 0.4782608695652174,
+						"originY": 0.9681528662420382,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8136710,
+						"collisionPoly": {
+							"points": [
+								0.021739130434782608,
+								0.006369426751592357,
+								0.9782608695652174,
+								0.006369426751592357,
+								0.9782608695652174,
+								1,
+								0.021739130434782608,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 42,
+						"height": 95,
+						"originX": 0.4880952380952381,
+						"originY": 0.9315789473684211,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5094692,
+						"collisionPoly": {
+							"points": [
+								0.023809523809523808,
+								0.010526315789473684,
+								0.9761904761904762,
+								0.010526315789473684,
+								0.9761904761904762,
+								0.9894736842105263,
+								0.023809523809523808,
+								0.9894736842105263
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 408067654775626,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

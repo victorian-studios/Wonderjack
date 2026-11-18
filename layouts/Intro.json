@@ -125,8 +125,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 2112,
-						"y": 1216,
+						"x": -192,
+						"y": -128,
 						"width": 90,
 						"height": 99,
 						"originX": 0.5,
@@ -790,7 +790,7 @@
 		},
 		{
 			"name": "Black",
-			"overriden": 0,
+			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
 			"sid": 578419618854736,
@@ -802,7 +802,7 @@
 				1,
 				1,
 				1,
-				0
+				1
 			],
 			"backgroundColor": [
 				0,

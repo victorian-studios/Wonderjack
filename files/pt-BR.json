@@ -410,34 +410,46 @@
                 "The Tweedles": {
                     "name": "[color=#921520]Os Tweedles[/color]",
                     "talk_win": "Nós, os irmãos TWEEDLE, ganhamos de novo!",
-                    "talk_lose": "Você ganhou. Não temos objeções. Pelo contrário.",
-                    "talk_thinking_1": "Hey irmão, essa carta é minha!",
-                    "talk_thinking_2": "",
-                    "special": "Meu turno! Sai fora!"
+                    "talk_lose": "Não olha pra mim, a culpa foi dele!",
+                    "talk_thinking_1": "Ei irmão, acha melhor parar?",
+                    "talk_thinking_2": "Pensando bem... é melhor não fazer isso.",
+                    "special_1": "Meu turno! Sai fora!",
+                    "special_2": "É a minha vez, esqueceu?",
+                    "special_big_1": "Vaza maninho!",
+                    "special_big_2": "Sai seu medroso!",
+                    "special_small_1": "Para de arriscar! Faz assim...",
+                    "special_small_2": "Seja mais cauteloso, ok?"
                 },
                 "Caterpillar": {
                     "name": "[color=#921520]Lagarta[/color]",
-                    "talk_win": "Parece que você não mudou nada...",
+                    "talk_win": "Você precisa relaxar um pouco...",
                     "talk_lose": "Quem... é... você?",
-                    "talk_thinking_1": "Mantenha a calma.",
-                    "talk_thinking_2": "Cof-cof, tenho boas opões, e você?",
-                    "special": "Nossa, a fumaça está por toda a parte..."
+                    "talk_thinking_1": "Mantenha a calma...",
+                    "talk_thinking_2": "Cof-cof, tenho boas opções, e você?",
+                    "special_1": "A fumaça está por toda a parte...",
+                    "special_2": "Cof-cof... Acho que exagerei...",
+                    "special_3": "Está um pouco difícil ver..."
                 },
                 "Cheshire Cat": {
                     "name": "[color=#921520]Gato de Cheshire[/color]",
-                    "talk_win": "Que pena... Você está indo a algum lugar?",
+                    "talk_win": "Eu levarei você até a Lebre e o Chapeleiro...",
                     "talk_lose": "Parece que você encontrou a direção que precisava ir...",
                     "talk_thinking_1": "Lembre-se... todos nós somos loucos aqui. Eu sou louco. Você é louca",
                     "talk_thinking_2": "Se precisar sair... posso te indicar uma direção...",
-                    "special": "O que foi? Não está enxergando direito?"
+                    "special_1": "O que foi? Não está enxergando direito?",
+                    "special_2": "Acho que você está vendo coisas...",
+                    "special_3": "Damos mais valor quando as coisas desaparecem."
                 },
                 "General of Cards": {
                     "name": "[color=#921520]General Carta[/color]",
-                    "talk_win": "Parece que EU sou o mais resistente aqui.",
-                    "talk_lose": "Fui rasgado...ao meio.",
-                    "talk_thinking_1": "Estou cansado...Tenho que ganhar logo.",
-                    "talk_thinking_2": "Confiante? Espero que não.",
-                    "special": "Não me julgue pela aparência! Sou bem resistente."
+                    "talk_win": "Guardas! Já podem tirar ela daqui.",
+                    "talk_lose": "Regras são regras, você pode passar.",
+                    "talk_thinking_1": "Deixe eu ajustar meu capacete.",
+                    "talk_thinking_2": "A rainha precisa mudar algumas regras...",
+                    "special_1": "Alto lá! Não passará tão fácil por mim.",
+                    "special_2": "Nem pense em mexer comigo!",
+                    "special_3": "Não toque nas minhas cartas!",
+                    "special_4": "Cuidado pra não se espetar."
                 },
                 "Dodo": {
                     "name": "[color=#921520]Dodô[/color]",
@@ -453,7 +465,9 @@
                     "talk_lose": "Você pode ter ganhado esta batalha... Mas não ganhou a guerra...",
                     "talk_thinking_1": "Calado! Estou pensando na minha estratégia!",
                     "talk_thinking_2": "Isolente! Você realmente pensa que pode me vencer",
-                    "special": "Agora eu declaro essa carta ilegal!"
+                    "special_1": "Agora eu declaro essa carta ilegal!",
+                    "special_2": "Decreto esta carta proibida!",
+                    "speical_3": "Que ultraje, tire essa carta daqui!"
                 },
                 "Jabberwock": {
                     "name": "[color=#921520]Jaguadarte[/color]",
@@ -463,7 +477,9 @@
                     "talk_thinking_2": "Minhas presas estão coçando com essa partida...",
                     "special_1": "Algum problema Alice? O que acha de jogar uma partida de melhor de três?",
                     "special_2": "Gosto da sua ousadia... Eu começo então.",
-                    "special_3": "Eu começo!"
+                    "special_3": "Eu começo!",
+                    "special_4": "Minha vez!",
+                    "special_5": "Eu vou primeiro!"
                 }
             },
             "bell": "[icon=heart] O Sino [icon=heart] \n\nToque o sino para [color=#fa1c03]encerrar seu turno[/color]. Seu oponente terá [color=#fa1c03]só mais um turno[/color] antes do fim da rodada.\nNada acontece se for usado no último turno.",
@@ -472,18 +488,19 @@
             "number" : "[icon=heart] O Baralho de Número [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.",
             "number_easy" : "[icon=heart] O Baralho de Número [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.\nTem [color=#f5fe05]{0}[/color] cartas restantes neste baralho.",
             "tut_start": "Toca do Coelho",
-            "round_result": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color].\n{3} [color=#f5fe05]ganhou[/color] esta rodada!",
-            "player_turn": "Turno da Alice",
-            "enemy_turn": "Turno de {0}",
-            "points": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color]",
+            "round_result": "[outlineback=#ffffff]{0}[/outlineback]: [outlineback=#ffffff][color=#19317b]{1}[/color][/outlineback] / [outlineback=#ffffff]{2}[/outlineback]: [outlineback=#ffffff][color=#921520]{3}[/color][/outlineback].\n[outlineback=#ffffff]{4}[/outlineback] ganhou esta rodada!",
+            "player_turn": "Turno da [outlineback=#ffffff]{0}[/outlineback]",
+            "enemy_turn": "Turno de [outlineback=#ffffff]{0}[/outlineback]",
+            "points": "[outlineback=#ffffff]{0}[/outlineback]: [outlineback=#ffffff][color=#19317b]{1}[/color][/outlineback] / [outlineback=#ffffff]{2}[/outlineback]: [outlineback=#ffffff][color=#921520]{3}[/color][/outlineback]",
             "new_round": "Rodada [color=#f5fe05]{0}[/color] começa agora!",
-            "new_match": "Um novo oponente aparece: [color=#f5fe05]{0}[/color]",
-            "new_boss": "Um novo chefão aparece: [color=#fa1c03]{0}[/color]",
-            "tie": "Alice: [color=#f5fe05]{0}[/color] / {1}: [color=#f5fe05]{2}[/color].\nNinguém ganhou esta rodada.",
+            "new_match": "Um novo oponente aparece: [outlineback=#ffffff]{0}[/outlineback]",
+            "new_boss": "Um novo [color=#fa1c03]chefão[/color] aparece: [outlineback=#ffffff]{0}[/outlineback]",
+            "tie": "[outlineback=#ffffff]{0}[/outlineback]: [outlineback=#ffffff][color=#19317b]{1}[/color][/outlineback] / [outlineback=#ffffff]{2}[/outlineback]: [outlineback=#ffffff][color=#921520]{3}[/color][/outlineback].\nNinguém ganhou esta rodada.",
             "looser": "Você [color=#fa1c03]perdeu[/color] esta partida... que pena.",
             "winner": "Você [color=#f5fe05]ganhou[/color] esta partida. Continue assim!",
             "end": "Você [color=#f5fe05]ganhou[/color] de todos os 4 oponentes! Parabéns!",
-            "revive": "Você conseguiu uma [color=#f5fe05]segunda chance[/color]! Mas sua relíquia foi destruída."
+            "revive": "Você conseguiu uma [color=#f5fe05]segunda chance[/color]! Mas sua relíquia foi destruída.",
+            "colors": "vermelho escuro - 921520 / azul escuro - 19317b / amarelo - f5fe05 / branco - ffffff / preto - 000000"
         },
 		"relics": {
             "choose": "Escolha uma relíquia:",
@@ -636,7 +653,7 @@
             "secret": "[icon=heart] Carta oculta [icon=heart]\n\n\nA próxima carta de número que você comprar será [color=#f5fe05]oculta[/color] para o oponente.\n[color=#fa1c03]Não funciona com cartas de poder.[/color]",
             "clairvoyance" : "[icon=heart] Clarividência [icon=heart]\n\n\nVeja as próximas [color=#f5fe05]3[/color] cartas do baralho de número.",
             "clairvoyance_player": "As próximas cartas de número são: [color=#f5fe05]{0}[/color], [color=#f5fe05]{1}[/color] e [color=#f5fe05]{2}[/color]",
-            "clairvoyance_cpu": "{0} viu as próximas [color=#f5fe05]3[/color] cartas...",
+            "clairvoyance_cpu": "[outlineback=#ffffff]{0}[/outlineback] viu as próximas [color=#f5fe05]3[/color] cartas...",
             "baby": "[icon=heart] Bebê [icon=heart]\n\nPegue a [color=#f5fe05]menor[/color] carta de número do baralho.",
             "lasso": "[icon=heart] Laçar [icon=heart]\n\nEscolha e [color=#f5fe05]roube[/color] uma carta de número [color=#f5fe05]visível[/color] do oponente.",
             "cardA": "[icon=heart] Carta Ás [icon=heart]\n\nCrie uma carta [color=#f5fe05]curinga[/color] temporária que vale [color=#f5fe05]1[/color] ou [color=#f5fe05]11[/color].",

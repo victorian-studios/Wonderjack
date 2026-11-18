@@ -1252,12 +1252,11 @@
 							],
 							"actions": [
 								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 724371301900191,
-									"parameters": {
-										"layout": "Credits"
-									}
+									"callFunction": "Start Layout Transition",
+									"sid": 403497741950724,
+									"parameters": [
+										"\"Credits\""
+									]
 								}
 							],
 							"sid": 381440495081512
