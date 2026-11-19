@@ -490,6 +490,14 @@
                     "special_3": "I'll go first!"
                 }
             },
+            "tips": {
+                "1": "Is the game running slowly? Enable FAST MODE in the settings!",
+                "2": "Tired of adding things up? Enable AUTO MATH in the settings!",
+                "3": "Power cards stay with you between rounds, so use them wisely!",
+                "4": "Use your active relics whenever possible.",
+                "5": "Win against opponents a certain number of times to unlock powers and relics.",
+                "6": "Each opponent has a special power and plays either cautiously or fearlessly."
+            },
             "bell": "[icon=heart] The Bell [icon=heart] \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
             "power": "[icon=heart] The Power Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round.",
             "power_hand_limit": "[icon=heart] The Power Deck [icon=heart] \n\nYou [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",

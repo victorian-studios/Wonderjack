@@ -40764,11 +40764,11 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 438379477920160,
+													"sid": 122300237956362,
 													"parameters": {
 														"variable": "LastTurnCount",
 														"comparison": 0,
-														"value": "1"
+														"value": "0"
 													}
 												}
 											],
