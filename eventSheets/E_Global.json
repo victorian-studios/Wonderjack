@@ -142,6 +142,16 @@
 			"sid": 658885728317552
 		},
 		{
+			"eventType": "variable",
+			"name": "Ponteiros",
+			"type": "string",
+			"initialValue": "0-0",
+			"comment": "angulo dos ponteiros",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 294373944153081
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -543,6 +553,39 @@
 					"isOrBlock": true
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Text_Ai_Da_Vida",
+							"sid": 912086215398929,
+							"parameters": {
+								"unique-id": "65"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text_Ai_Da_Vida",
+							"sid": 702403175931712,
+							"disabled": true,
+							"parameters": {
+								"text": "D_Save.Get(\"STORY\")"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text_Ai_Da_Vida",
+							"sid": 198254943231606,
+							"parameters": {
+								"text": "VERSAO"
+							}
+						}
+					],
+					"sid": 715700069821212
+				},
+				{
 					"eventType": "comment",
 					"text": "Salvar as configurações no Local Storage"
 				},
@@ -898,7 +941,17 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 424975731768118,
+							"parameters": {
+								"variable": "Opt_EasyMath",
+								"value": "true"
+							}
+						}
+					],
 					"sid": 327866922781491,
 					"children": [
 						{
@@ -1033,6 +1086,56 @@
 							"sid": 249492939993025
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Sprite_Ponteiro",
+							"sid": 458411770553458,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Sprite_Ponteiro",
+							"sid": 926940820464342,
+							"parameters": {
+								"angle": "int(tokenat(Ponteiros, 0, \"-\"))"
+							}
+						}
+					],
+					"sid": 562382102249790
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Sprite_Ponteiro",
+							"sid": 912180052828351,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Sprite_Ponteiro",
+							"sid": 591869125800423,
+							"parameters": {
+								"angle": "int(tokenat(Ponteiros, 1, \"-\"))"
+							}
+						}
+					],
+					"sid": 568849195727616
 				}
 			]
 		},
@@ -1483,6 +1586,15 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
+							"sid": 481842374543108,
+							"parameters": {
+								"variable": "Ponteiros",
+								"value": "\"0-0\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
 							"sid": 987751710889834,
 							"parameters": {
 								"variable": "Layout_To_Go",
@@ -1515,33 +1627,41 @@
 							}
 						},
 						{
-							"id": "set-enabled",
-							"objectClass": "Sprite_Ponteiro",
-							"sid": 386046412902659,
-							"behaviorType": "Rotate",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
 							"id": "set-angle",
 							"objectClass": "Sprite_Ponteiro",
-							"sid": 543166279187332,
+							"sid": 489253951234771,
 							"parameters": {
 								"angle": "0"
 							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Sprite_Ponteiro",
-							"sid": 774389929370809,
-							"behaviorType": "Rotate",
-							"parameters": {
-								"state": "enabled"
-							}
 						}
 					],
-					"sid": 261399575556923
+					"sid": 261399575556923,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Text_Ai_Da_Vida",
+									"sid": 803372470667021,
+									"parameters": {
+										"unique-id": "473"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text_Ai_Da_Vida",
+									"sid": 407565861238090,
+									"parameters": {
+										"text": "Internationalization.Lookup(\"common.tips.\" & str(int(random(1,7))) )"
+									}
+								}
+							],
+							"sid": 528817235044842
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1634,17 +1754,78 @@
 								"variable": "Load_Completed",
 								"value": "false"
 							}
-						},
-						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 325090381389047,
-							"parameters": {
-								"layout": "Layout_To_Go"
-							}
 						}
 					],
-					"sid": 682334719264928
+					"sid": 682334719264928,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Sprite_Ponteiro",
+									"sid": 782660501906191,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 541761634323834,
+									"parameters": {
+										"variable": "Ponteiros",
+										"value": "Sprite_Ponteiro.Angle & \"-\" & tokenat(Ponteiros, 1, \"-\")"
+									}
+								}
+							],
+							"sid": 734184363255238
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Sprite_Ponteiro",
+									"sid": 591151216720328,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 243239195469530,
+									"parameters": {
+										"variable": "Ponteiros",
+										"value": "tokenat(Ponteiros, 0, \"-\") & \"-\" & Sprite_Ponteiro.Angle"
+									}
+								}
+							],
+							"sid": 422779448276989
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 687140074094010,
+									"parameters": {
+										"layout": "Layout_To_Go"
+									}
+								}
+							],
+							"sid": 328680216540756
+						}
+					]
 				}
 			],
 			"sid": 461103939781897
@@ -5402,6 +5583,14 @@
 										"click-type": "clicked",
 										"object-clicked": "Btn_Music"
 									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 524846109826631,
+									"parameters": {
+										"layer": "\"Audio\""
+									}
 								}
 							],
 							"actions": [],
@@ -5502,6 +5691,14 @@
 										"mouse-button": "left",
 										"click-type": "clicked",
 										"object-clicked": "Btn_Sound"
+									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 958817172871782,
+									"parameters": {
+										"layer": "\"Audio\""
 									}
 								}
 							],
@@ -6808,6 +7005,27 @@
 				}
 			],
 			"sid": 717969140589932
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Relics",
+					"sid": 137614039145122
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Relics",
+					"sid": 392280073504928,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 804893949485868
 		}
 	],
 	"sid": 466221253102104

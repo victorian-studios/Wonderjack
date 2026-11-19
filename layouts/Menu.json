@@ -3945,7 +3945,8 @@
 							"instanceVariables": {
 								"ID": "card_13",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4029,7 +4030,8 @@
 							"instanceVariables": {
 								"ID": "cat_eye",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4113,7 +4115,8 @@
 							"instanceVariables": {
 								"ID": "crown",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4197,7 +4200,8 @@
 							"instanceVariables": {
 								"ID": "drink_me",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4281,7 +4285,8 @@
 							"instanceVariables": {
 								"ID": "eat-me",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4365,7 +4370,8 @@
 							"instanceVariables": {
 								"ID": "hat",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4449,7 +4455,8 @@
 							"instanceVariables": {
 								"ID": "spear",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4533,7 +4540,8 @@
 							"instanceVariables": {
 								"ID": "tea",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4617,7 +4625,8 @@
 							"instanceVariables": {
 								"ID": "watch",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4701,7 +4710,8 @@
 							"instanceVariables": {
 								"ID": "key",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4785,7 +4795,8 @@
 							"instanceVariables": {
 								"ID": "match",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4869,7 +4880,8 @@
 							"instanceVariables": {
 								"ID": "picnic",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -4953,7 +4965,8 @@
 							"instanceVariables": {
 								"ID": "mussel",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5037,7 +5050,8 @@
 							"instanceVariables": {
 								"ID": "pocket",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5121,7 +5135,8 @@
 							"instanceVariables": {
 								"ID": "ticket",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5205,7 +5220,8 @@
 							"instanceVariables": {
 								"ID": "tornado",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5289,7 +5305,8 @@
 							"instanceVariables": {
 								"ID": "trap",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5373,7 +5390,8 @@
 							"instanceVariables": {
 								"ID": "box",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5457,7 +5475,8 @@
 							"instanceVariables": {
 								"ID": "egg",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5541,7 +5560,8 @@
 							"instanceVariables": {
 								"ID": "medal",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5625,7 +5645,8 @@
 							"instanceVariables": {
 								"ID": "lucky",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -5709,7 +5730,8 @@
 							"instanceVariables": {
 								"ID": "armor",
 								"Uses": 0,
-								"Used": false
+								"Used": false,
+								"Active": false
 							},
 							"behaviors": {
 								"Tween": {
@@ -11118,6 +11140,56 @@
 						"height": 35.286490236930504,
 						"originX": 0.4880952380952381,
 						"originY": 0.9315789473684211,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Text_Ai_Da_Vida",
+					"properties": {
+						"text": "",
+						"enable-bbcode": true,
+						"font": "Alice-Regular",
+						"size": 34,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 473,
+					"sid": 862095537384822,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 43,
+						"y": 915,
+						"width": 1677,
+						"height": 135.24875350044385,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

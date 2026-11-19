@@ -2,6 +2,10 @@
 	"name": "E_Story",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "E_Global"
+		},
+		{
 			"eventType": "variable",
 			"name": "Tutorial_Enabled",
 			"type": "boolean",
@@ -352,9 +356,17 @@
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 787886667337096,
+					"disabled": true,
 					"parameters": {
 						"layout": "Level"
 					}
+				},
+				{
+					"callFunction": "Start Layout Transition",
+					"sid": 859484043856298,
+					"parameters": [
+						"\"Level\""
+					]
 				}
 			],
 			"sid": 153444943313409
@@ -408,9 +420,17 @@
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 461835810841736,
+					"disabled": true,
 					"parameters": {
 						"layout": "Menu"
 					}
+				},
+				{
+					"callFunction": "Start Layout Transition",
+					"sid": 878253320966432,
+					"parameters": [
+						"\"Menu\""
+					]
 				}
 			],
 			"sid": 928809303330769
@@ -1050,9 +1070,17 @@
 											"id": "go-to-layout",
 											"objectClass": "System",
 											"sid": 817626376669125,
+											"disabled": true,
 											"parameters": {
 												"layout": "Match_End"
 											}
+										},
+										{
+											"callFunction": "Start Layout Transition",
+											"sid": 480556191306862,
+											"parameters": [
+												"\"Match_End\""
+											]
 										}
 									],
 									"sid": 728758335371299,

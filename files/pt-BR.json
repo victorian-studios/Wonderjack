@@ -480,11 +480,11 @@
                     "name": "[outline=#921520][color=#d9606c]Rainha de Copas[/color][/outline]",
                     "talk_win": "Cortem a cabeça!",
                     "talk_lose": "Você pode ter ganhado esta batalha... Mas não ganhou a guerra...",
-                    "talk_thinking_1": "Calado! Estou pensando na minha estratégia!",
+                    "talk_thinking_1": "Calada! Estou pensando na minha estratégia!",
                     "talk_thinking_2": "Isolente! Você realmente pensa que pode me vencer",
                     "special_1": "Agora eu declaro essa carta ilegal!",
                     "special_2": "Decreto esta carta proibida!",
-                    "speical_3": "Que ultraje, tire essa carta daqui!"
+                    "special_3": "Que ultraje, tire essa carta daqui!"
                 },
                 "Jabberwock": {
                     "name": "[outline=#921520][color=#d9606c]Jaguadarte[/color][/outline]",
@@ -508,7 +508,10 @@
                 "6": "Cada oponente tem um poder especial e joga de maneira cautelosa ou destemida."
             },
             "bell": "[icon=heart] O Sino [icon=heart] \n\nToque o sino para [color=#fa1c03]encerrar seu turno[/color]. Seu oponente terá [color=#fa1c03]só mais um turno[/color] antes do fim da rodada.\nNada acontece se for usado no último turno.",
-            "power": "[icon=heart] O Baralho de Poder [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê pode comprar [color=#f5fe05]{0}[/color] cartas nessa rodada.",
+            "power": {
+                "one": "[icon=heart] O Baralho de Poder [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê pode comprar mais [color=#f5fe05]{0}[/color] carta nessa rodada.",
+                "other": "[icon=heart] O Baralho de Poder [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê pode comprar mais [color=#f5fe05]{0}[/color] cartas nessa rodada."
+            },
             "power_hand_limit": "[icon=heart] O Baralho de Poder [icon=heart] \n\nVocê [color=#fa1c03]não pode comprar cartas de poder[/color] por conta do limite da sua mão ([color=#f5fe05]{0}[/color] cartas).",
             "number" : "[icon=heart] O Baralho de Número [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.",
             "number_easy" : "[icon=heart] O Baralho de Número [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.\nTem [color=#f5fe05]{0}[/color] cartas restantes neste baralho.",
@@ -516,7 +519,7 @@
             "round_result": "{0}: {1} / {2}: {3}.\n{4} ganhou esta rodada!",
             "player_turn": "Turno da {0}",
             "enemy_turn": "Turno de {0}",
-            "points": "{0}: [color=#19317b]{1}[/color] / {2}: [color=#921520]{3}[/color]",
+            "points": "{0}: [color=#f5fe05]{1}[/color] / {2}: [color=#f5fe05]{3}[/color]",
             "new_round": "Rodada [color=#f5fe05]{0}[/color] começa agora!",
             "new_match": "Um novo oponente aparece: {0}",
             "new_boss": "Um novo [color=#fa1c03]chefão[/color] aparece: {0}",
@@ -664,10 +667,10 @@
             "gift": "[icon=heart] Presente [icon=heart]\n\n\nDê a [color=#f5fe05]maior[/color] carta de número do baralho para seu oponente.",
             "return": "[icon=heart] Devolução [icon=heart]\n\n\nDescarte a sua [color=#f5fe05]última[/color] carta de número [color=#f5fe05]visível[/color] para o fim do baralho.",
             "compel": "[icon=heart] Obrigar [icon=heart]\n\n\nObrigue o [color=#f5fe05]seu oponente[/color] a descartar a [color=#f5fe05]última[/color] carta de número [color=#f5fe05]visível[/color] para o fim do baralho.",
-            "compel_error1": "{0} tentou descartar sua carta escondida sem querer.",
-            "compel_error2": "Você não pode descartar sua carta escondida.",
-            "compel_error3": "Você não pode obrigar {0} descartar sua própria carta escondida.",
-            "compel_error4": "{0} tentou descartar a própria carta escondida.",
+            "compel_error1": "{0} tentou descartar sua carta oculta sem querer.",
+            "compel_error2": "Você não pode descartar sua carta oculta.",
+            "compel_error3": "Você não pode obrigar {0} descartar sua própria carta oculta.",
+            "compel_error4": "{0} tentou descartar a própria carta oculta.",
             "exchange": "[icon=heart] Troca [icon=heart]\n\n\nEscolha uma carta [color=#f5fe05]visível[/color] para trocar com o seu oponente.",
             "exchange_tip_1": "[u]Escolha uma carta do oponente:[/u]",
             "exchange_tip_2": "[u]Escolha sua carta para trocar:[/u]",

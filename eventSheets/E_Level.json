@@ -386,6 +386,16 @@
 			"sid": 297374264019086
 		},
 		{
+			"eventType": "variable",
+			"name": "VERSAO",
+			"type": "string",
+			"initialValue": "v. 1.1.0",
+			"comment": "versao atual do jogo (mude sempre que atualizar)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 275894015684954
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -7537,11 +7547,11 @@
 											}
 										},
 										{
-											"id": "is-boolean-instance-variable-set",
+											"id": "is-animation-playing",
 											"objectClass": "Card_Numb",
-											"sid": 915458813441783,
+											"sid": 694869558210033,
 											"parameters": {
-												"instance-variable": "Original_Hidden"
+												"animation": "\"Back\""
 											},
 											"isInverted": true
 										}
@@ -7712,11 +7722,11 @@
 											}
 										},
 										{
-											"id": "is-boolean-instance-variable-set",
+											"id": "is-animation-playing",
 											"objectClass": "Card_Numb",
-											"sid": 546160672193433,
+											"sid": 654411642861924,
 											"parameters": {
-												"instance-variable": "Original_Hidden"
+												"animation": "\"Back\""
 											},
 											"isInverted": true
 										}
@@ -8217,11 +8227,11 @@
 											}
 										},
 										{
-											"id": "is-boolean-instance-variable-set",
+											"id": "is-animation-playing",
 											"objectClass": "Card_Numb",
-											"sid": 143404465059950,
+											"sid": 137040870864956,
 											"parameters": {
-												"instance-variable": "Original_Hidden"
+												"animation": "\"Back\""
 											}
 										}
 									],
@@ -9310,6 +9320,36 @@
 												}
 											],
 											"sid": 683329366047506
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 990657932354256
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Card_Numb",
+													"sid": 399098278093716,
+													"parameters": {
+														"animation": "\"Back\"",
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Card_Numb",
+													"sid": 516265679789568,
+													"parameters": {
+														"frame-number": "x_p"
+													}
+												}
+											],
+											"sid": 960115668910422
 										}
 									]
 								},
@@ -9380,6 +9420,36 @@
 												}
 											],
 											"sid": 193209694377808
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 138906278554319
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Card_Numb",
+													"sid": 571345190028449,
+													"parameters": {
+														"animation": "\"Back\"",
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "Card_Numb",
+													"sid": 818910060279517,
+													"parameters": {
+														"frame-number": "x_cpu"
+													}
+												}
+											],
+											"sid": 299615212350770
 										}
 									]
 								}
@@ -32744,6 +32814,15 @@
 												"x": "loopindex",
 												"value": "choose ( 1, 2 )"
 											}
+										},
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 900596510205700,
+											"parameters": {
+												"type": "warn",
+												"message": "\"AQUI ESTA O STORY: \" & D_Save.Get(\"STORY\")"
+											}
 										}
 									],
 									"sid": 239619763610385,
@@ -32758,7 +32837,7 @@
 												{
 													"id": "compare-value",
 													"objectClass": "D_Save",
-													"sid": 190780345425920,
+													"sid": 116163224198468,
 													"parameters": {
 														"key": "\"STORY\"",
 														"comparison": 0,
@@ -32774,6 +32853,15 @@
 													"parameters": {
 														"x": "3",
 														"value": "1"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 239279067038488,
+													"parameters": {
+														"type": "warn",
+														"message": "\"CONDIÇÃO DO STORY 0 FOI\""
 													}
 												}
 											],
@@ -32806,6 +32894,15 @@
 														"x": "3",
 														"value": "2"
 													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 609427997366122,
+													"parameters": {
+														"type": "warn",
+														"message": "\"CONDIÇÃO DO STORY 1 FOI\""
+													}
 												}
 											],
 											"sid": 777716775429323
@@ -32820,10 +32917,10 @@
 												{
 													"id": "compare-value",
 													"objectClass": "D_Save",
-													"sid": 107548419178114,
+													"sid": 483307846015148,
 													"parameters": {
 														"key": "\"STORY\"",
-														"comparison": 0,
+														"comparison": 5,
 														"value": "2"
 													}
 												}
@@ -32836,6 +32933,15 @@
 													"parameters": {
 														"x": "3",
 														"value": "choose( 1, 2 )"
+													}
+												},
+												{
+													"id": "log",
+													"objectClass": "Browser",
+													"sid": 231781830206746,
+													"parameters": {
+														"type": "warn",
+														"message": "\"CONDIÇÃO DO STORY 2+ FOI\""
 													}
 												}
 											],
@@ -35364,7 +35470,17 @@
 															}
 														}
 													],
-													"actions": [],
+													"actions": [
+														{
+															"id": "log",
+															"objectClass": "Browser",
+															"sid": 502537096900776,
+															"parameters": {
+																"type": "log",
+																"message": "\"O próximo oponente será: \" & A_TheRng.At(3)"
+															}
+														}
+													],
 													"sid": 929394566525096,
 													"children": [
 														{
@@ -37483,9 +37599,9 @@
 														{
 															"id": "set-text",
 															"objectClass": "Text_Power",
-															"sid": 672634860064006,
+															"sid": 313558441106972,
 															"parameters": {
-																"text": "Internationalization.Lookup(\"common.power\", Hand_Player.PowerLimit_Rounds)"
+																"text": "Internationalization.LookupPlural(\"common.power\", Hand_Player.PowerLimit_Rounds)"
 															}
 														}
 													],
@@ -39734,6 +39850,347 @@
 																		}
 																	],
 																	"sid": 177841112348396
+																}
+															]
+														}
+													]
+												},
+												{
+													"eventType": "comment",
+													"text": "Se o jogador não tiver cartas visíveis, impede de usar o poder"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 931843320701204
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Card_Power",
+															"sid": 807616449949109,
+															"parameters": {
+																"instance-variable": "myID",
+																"comparison": 0,
+																"value": "\"10-compel\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 927551333600741,
+													"disabled": true,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "Se não tiver nenhuma carta visível, não deixa usar"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Table_Player",
+																	"sid": 950637296978046,
+																	"parameters": {
+																		"instance-variable": "Visible_Count",
+																		"comparison": 3,
+																		"value": "0"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-rate",
+																	"objectClass": "Particle_Arrow",
+																	"sid": 892137760673799,
+																	"parameters": {
+																		"rate": "0"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 750061605158659,
+																	"parameters": {
+																		"audio-file": {
+																			"path": "494768__alderman2k__error"
+																		},
+																		"loop": "not-looping",
+																		"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.20 ) : - 100",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "Card_Power",
+																	"sid": 835410172063240,
+																	"parameters": {
+																		"instance-variable": "Selected",
+																		"value": "false"
+																	}
+																},
+																{
+																	"id": "set-animation",
+																	"objectClass": "Card_Power",
+																	"sid": 367358345172672,
+																	"parameters": {
+																		"animation": "\"Front\"",
+																		"from": "current-frame"
+																	}
+																},
+																{
+																	"id": "set-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 483510675246644,
+																	"parameters": {
+																		"variable": "Holding_Card",
+																		"value": "false"
+																	}
+																},
+																{
+																	"id": "tween-two-properties",
+																	"objectClass": "Card_Power",
+																	"sid": 782064713791057,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"return\"",
+																		"property": "position",
+																		"end-x": "Self.my_pos_x",
+																		"end-y": "Self.my_pos_y",
+																		"time": "0.1",
+																		"ease": "default",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no",
+																		"repeat-count": "1"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 497573111706241,
+																	"parameters": {
+																		"seconds": "0.1",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"callFunction": "Order_Hand_Powers",
+																	"sid": 817302624685395,
+																	"parameters": [
+																		true,
+																		false
+																	]
+																}
+															],
+															"sid": 146826575459761,
+															"disabled": true,
+															"isOrBlock": true
+														},
+														{
+															"eventType": "comment",
+															"text": "Se a última carta for oculta, não deixa usar"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-overlapping-another-object",
+																	"objectClass": "Card_Numb",
+																	"sid": 409008452595217,
+																	"parameters": {
+																		"object": "Table_Player"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 202936148820046,
+															"disabled": true,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-nearestfurthest",
+																			"objectClass": "Card_Numb",
+																			"sid": 902294724955629,
+																			"parameters": {
+																				"which": "nearest",
+																				"x": "Deck_Numb_Sprite.X",
+																				"y": "Deck_Numb_Sprite.Y",
+																				"z": "0",
+																				"pick-all-tied": false
+																			}
+																		},
+																		{
+																			"id": "is-boolean-instance-variable-set",
+																			"objectClass": "Card_Numb",
+																			"sid": 522888504291438,
+																			"parameters": {
+																				"instance-variable": "Player_Hidden"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-rate",
+																			"objectClass": "Particle_Arrow",
+																			"sid": 464974006574649,
+																			"parameters": {
+																				"rate": "0"
+																			}
+																		},
+																		{
+																			"id": "play",
+																			"objectClass": "Audio",
+																			"sid": 416861599502179,
+																			"parameters": {
+																				"audio-file": {
+																					"path": "494768__alderman2k__error"
+																				},
+																				"loop": "not-looping",
+																				"volume": "Vol_Sfx > 0 ? -20 + ( Vol_Sfx * 0.20 ) : - 100",
+																				"stereo-pan": "0",
+																				"tag-optional": "\"\""
+																			}
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Card_Power",
+																			"sid": 403612300425011,
+																			"parameters": {
+																				"instance-variable": "Selected",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Card_Power",
+																			"sid": 614615716210167,
+																			"parameters": {
+																				"animation": "\"Front\"",
+																				"from": "current-frame"
+																			}
+																		},
+																		{
+																			"id": "set-boolean-eventvar",
+																			"objectClass": "System",
+																			"sid": 862180113626712,
+																			"parameters": {
+																				"variable": "Holding_Card",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "tween-two-properties",
+																			"objectClass": "Card_Power",
+																			"sid": 191121214575287,
+																			"behaviorType": "Tween",
+																			"parameters": {
+																				"tags": "\"return\"",
+																				"property": "position",
+																				"end-x": "Self.my_pos_x",
+																				"end-y": "Self.my_pos_y",
+																				"time": "0.1",
+																				"ease": "default",
+																				"destroy-on-complete": "no",
+																				"loop": "no",
+																				"ping-pong": "no",
+																				"repeat-count": "1"
+																			}
+																		},
+																		{
+																			"id": "wait",
+																			"objectClass": "System",
+																			"sid": 603794345464918,
+																			"parameters": {
+																				"seconds": "0.1",
+																				"use-timescale": true
+																			}
+																		},
+																		{
+																			"callFunction": "Order_Hand_Powers",
+																			"sid": 301440628815095,
+																			"parameters": [
+																				true,
+																				false
+																			]
+																		}
+																	],
+																	"sid": 538499404308007,
+																	"disabled": true
+																}
+															]
+														},
+														{
+															"eventType": "comment",
+															"text": "Se existem cartas visíveis e justamente a última carta está visível, então pode usar"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Table_Player",
+																	"sid": 310427217042336,
+																	"parameters": {
+																		"instance-variable": "Visible_Count",
+																		"comparison": 4,
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "is-overlapping-another-object",
+																	"objectClass": "Card_Numb",
+																	"sid": 798898502548062,
+																	"parameters": {
+																		"object": "Table_Player"
+																	}
+																}
+															],
+															"actions": [],
+															"sid": 483384444575332,
+															"disabled": true,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "pick-nearestfurthest",
+																			"objectClass": "Card_Numb",
+																			"sid": 858035551525719,
+																			"parameters": {
+																				"which": "nearest",
+																				"x": "Deck_Numb_Sprite.X",
+																				"y": "Deck_Numb_Sprite.Y",
+																				"z": "0",
+																				"pick-all-tied": false
+																			}
+																		},
+																		{
+																			"id": "is-boolean-instance-variable-set",
+																			"objectClass": "Card_Numb",
+																			"sid": 347005150767953,
+																			"parameters": {
+																				"instance-variable": "Player_Hidden"
+																			},
+																			"isInverted": true
+																		}
+																	],
+																	"actions": [
+																		{
+																			"callFunction": "Player Use Power Card",
+																			"sid": 753030767880930,
+																			"parameters": [
+																				"Card_Power.myID"
+																			]
+																		}
+																	],
+																	"sid": 964785494170993,
+																	"disabled": true
 																}
 															]
 														}
@@ -51692,10 +52149,10 @@
 											"actions": [
 												{
 													"callFunction": "Talk",
-													"sid": 209574471464899,
+													"sid": 919271360921273,
 													"parameters": [
 														"EnemyName",
-														"\"common.enemies.\" & EnemyName & choose(\".special_2\", \"special_3\", \".special_4\")",
+														"\"common.enemies.\" & EnemyName & choose(\".special_2\", \".special_3\", \".special_4\")",
 														"0",
 														false,
 														false
@@ -52021,6 +52478,15 @@
 													"parameters": {
 														"seconds": "Opt_FastMode = 1 ? 0.75 : 1.5",
 														"use-timescale": true
+													}
+												},
+												{
+													"id": "delete",
+													"objectClass": "A_Enemy_Choices",
+													"sid": 261870821335232,
+													"parameters": {
+														"index": "A_Enemy_Choices.IndexOf(Card_Numb.myID)",
+														"axis": "x"
 													}
 												},
 												{
@@ -53057,7 +53523,17 @@
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 971356968293142,
+							"parameters": {
+								"type": "log",
+								"message": "relic_id"
+							}
+						}
+					],
 					"sid": 161326757368936,
 					"children": [
 						{
@@ -53285,7 +53761,43 @@
 									}
 								}
 							],
-							"sid": 496747612488424
+							"sid": 496747612488424,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relics",
+											"sid": 131626209788967,
+											"parameters": {
+												"animation": "relic_id"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Relics",
+											"sid": 887697808791715,
+											"parameters": {
+												"instance-variable": "Active",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Relics",
+											"sid": 662429888207201,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										}
+									],
+									"sid": 917285258727636
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -53368,7 +53880,65 @@
 									}
 								}
 							],
-							"sid": 569656058153565
+							"sid": 569656058153565,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relics",
+											"sid": 161231560385940,
+											"parameters": {
+												"animation": "relic_id"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Relics",
+											"sid": 484020376091684,
+											"parameters": {
+												"instance-variable": "Active",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Relics",
+											"sid": 690572155305635,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										}
+									],
+									"sid": 763920966899309
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 731666499222119
+										}
+									],
+									"actions": [
+										{
+											"id": "log",
+											"objectClass": "Browser",
+											"sid": 995943745883256,
+											"parameters": {
+												"type": "log",
+												"message": "\"Nao ta playing\""
+											}
+										}
+									],
+									"sid": 547219763515499
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -53431,7 +54001,96 @@
 									}
 								}
 							],
-							"sid": 700028236341726
+							"sid": 700028236341726,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relics",
+											"sid": 503915253122219,
+											"parameters": {
+												"animation": "relic_id"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Relics",
+											"sid": 748821575223041,
+											"parameters": {
+												"instance-variable": "Active",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Relics",
+											"sid": 883152232885896,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										}
+									],
+									"sid": 635008869876119
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 540054370893079,
+									"parameters": {
+										"variable": "relic_id",
+										"comparison": 0,
+										"value": "\"tornado\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 224950538004682,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Relics",
+											"sid": 166892469321617,
+											"parameters": {
+												"animation": "relic_id"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Relics",
+											"sid": 790290340807266,
+											"parameters": {
+												"instance-variable": "Active",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Relics",
+											"sid": 949638894692092,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										}
+									],
+									"sid": 395413300505905
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -53574,7 +54233,34 @@
 									}
 								}
 							],
-							"sid": 426931629317758
+							"sid": 426931629317758,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Relics",
+											"sid": 626108312409084,
+											"parameters": {
+												"instance-variable": "Active"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-active",
+											"objectClass": "Relics",
+											"sid": 648150617897679,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										}
+									],
+									"sid": 526553032035398
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -53728,6 +54414,39 @@
 										}
 									],
 									"sid": 410888276321386
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Relics",
+											"sid": 941712845811856,
+											"parameters": {
+												"instance-variable": "Active"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-active",
+											"objectClass": "Relics",
+											"sid": 584942596727301,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "inactive"
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Relics",
+											"sid": 123687332005277,
+											"parameters": {
+												"angle": "0"
+											}
+										}
+									],
+									"sid": 572382741674395
 								}
 							]
 						},
@@ -53929,20 +54648,6 @@
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
-						},
-						{
-							"callFunction": "Apply Relic Power",
-							"sid": 917879475883160,
-							"parameters": [
-								"Relic_card.AnimationName"
-							]
-						},
-						{
-							"callFunction": "Add Used Relics",
-							"sid": 433634381763204,
-							"parameters": [
-								"Relic_card.AnimationName"
-							]
 						}
 					],
 					"sid": 189971686619307,
@@ -54044,7 +54749,7 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Relic_Slot",
-											"sid": 121886253431167,
+											"sid": 479228524740009,
 											"parameters": {
 												"instance-variable": "HasRelic",
 												"value": "true"
@@ -54053,7 +54758,7 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 526903111717231,
+											"sid": 167009368111054,
 											"parameters": {
 												"object-to-create": "Relics",
 												"layer": "\"Game\"",
@@ -54066,16 +54771,24 @@
 										{
 											"id": "set-animation",
 											"objectClass": "Relics",
-											"sid": 901928579705560,
+											"sid": 691796809140134,
 											"parameters": {
 												"animation": "Relic_card.AnimationName",
 												"from": "beginning"
 											}
 										},
 										{
+											"id": "set-animation-frame",
+											"objectClass": "Relics",
+											"sid": 207755774009262,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
 											"id": "spawn-another-object",
 											"objectClass": "Relics",
-											"sid": 293456181127146,
+											"sid": 604477463537129,
 											"parameters": {
 												"object": "Effect_Light",
 												"layer": "\"ESCURO\"",
@@ -54087,7 +54800,7 @@
 										{
 											"id": "set-size",
 											"objectClass": "Effect_Light",
-											"sid": 441429639696451,
+											"sid": 610345388055462,
 											"parameters": {
 												"width": "400",
 												"height": "400"
@@ -54096,7 +54809,7 @@
 										{
 											"id": "add-child",
 											"objectClass": "Relics",
-											"sid": 217424290942258,
+											"sid": 791019625336530,
 											"parameters": {
 												"child": "Effect_Light",
 												"transform-x": true,
@@ -54110,92 +54823,28 @@
 												"transform-visibility": false,
 												"destroy-with-parent": true
 											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 563864135804860
+										},
+										{
+											"callFunction": "Apply Relic Power",
+											"sid": 879248305502459,
+											"parameters": [
+												"Relic_card.AnimationName"
+											]
+										},
+										{
+											"callFunction": "Add Used Relics",
+											"sid": 507237931278101,
+											"parameters": [
+												"Relic_card.AnimationName"
+											]
 										}
 									],
 									"sid": 339782181204709
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 745164517559890
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Relic_Slot",
-											"sid": 502763225331007,
-											"parameters": {
-												"instance-variable": "HasRelic",
-												"value": "true"
-											}
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 876479719139117,
-											"parameters": {
-												"object-to-create": "Relics",
-												"layer": "\"Game\"",
-												"x": "1642",
-												"y": "506",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Relics",
-											"sid": 561328605766063,
-											"parameters": {
-												"animation": "Relic_card.AnimationName",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Relics",
-											"sid": 606714122623332,
-											"parameters": {
-												"object": "Effect_Light",
-												"layer": "\"ESCURO\"",
-												"image-point": "0",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "Effect_Light",
-											"sid": 350154630067276,
-											"parameters": {
-												"width": "400",
-												"height": "400"
-											}
-										},
-										{
-											"id": "add-child",
-											"objectClass": "Relics",
-											"sid": 580690849670495,
-											"parameters": {
-												"child": "Effect_Light",
-												"transform-x": true,
-												"transform-y": true,
-												"transform-z-elevation": false,
-												"transform-w": false,
-												"transform-h": false,
-												"transform-d": false,
-												"transform-a": false,
-												"transform-o": false,
-												"transform-visibility": false,
-												"destroy-with-parent": true
-											}
-										}
-									],
-									"sid": 382879204967178
 								}
 							]
 						},
@@ -59324,27 +59973,57 @@
 													"text": "O baralho de cartas foi alterado propositalmente para que a segunda rodada seja perfeita para a IA vencer"
 												},
 												{
+													"callFunction": "Reset Number Deck",
+													"sid": 450839923234918
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 274697015000463,
+													"parameters": {
+														"seconds": "0.5",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "Reset Power Deck",
+													"sid": 545075594646038
+												},
+												{
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Power",
-													"sid": 760040525282551,
+													"sid": 940697267287877,
+													"disabled": true,
 													"parameters": {
 														"x": "0",
-														"value": "\"0-card-1\""
+														"value": "\"1-card-1\""
 													}
 												},
 												{
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Power",
-													"sid": 665899170664638,
+													"sid": 329614120045993,
+													"disabled": true,
 													"parameters": {
 														"x": "1",
-														"value": "\"2-card-3\""
+														"value": "\"3-card-3\""
 													}
 												},
 												{
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Power",
 													"sid": 475056721032364,
+													"disabled": true,
+													"parameters": {
+														"x": "2",
+														"value": "\"13-menu\""
+													}
+												},
+												{
+													"id": "set-at-x",
+													"objectClass": "A_Deck_Power",
+													"sid": 960451459892574,
+													"disabled": true,
 													"parameters": {
 														"x": "2",
 														"value": "\"13-menu\""
@@ -59354,6 +60033,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 223643317384270,
+													"disabled": true,
 													"parameters": {
 														"x": "0",
 														"value": "7"
@@ -59363,6 +60043,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 348778639733599,
+													"disabled": true,
 													"parameters": {
 														"x": "1",
 														"value": "4"
@@ -59372,6 +60053,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 584137136236267,
+													"disabled": true,
 													"parameters": {
 														"x": "3",
 														"value": "5"
@@ -59381,6 +60063,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 808138994169696,
+													"disabled": true,
 													"parameters": {
 														"x": "10",
 														"value": "6"
@@ -59390,6 +60073,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 336851789192709,
+													"disabled": true,
 													"parameters": {
 														"x": "6",
 														"value": "8"
@@ -59399,6 +60083,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 386456714637792,
+													"disabled": true,
 													"parameters": {
 														"x": "5",
 														"value": "2"
@@ -59408,6 +60093,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 972064824927051,
+													"disabled": true,
 													"parameters": {
 														"x": "4",
 														"value": "9"
@@ -59417,6 +60103,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 999059884936642,
+													"disabled": true,
 													"parameters": {
 														"x": "2",
 														"value": "12"
@@ -59426,6 +60113,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 853014774700028,
+													"disabled": true,
 													"parameters": {
 														"x": "9",
 														"value": "10"
@@ -59435,6 +60123,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 578915653926367,
+													"disabled": true,
 													"parameters": {
 														"x": "11",
 														"value": "11"
@@ -59444,6 +60133,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 408748267262358,
+													"disabled": true,
 													"parameters": {
 														"x": "8",
 														"value": "1"
@@ -59453,6 +60143,7 @@
 													"id": "set-at-x",
 													"objectClass": "A_Deck_Numb",
 													"sid": 412404864780341,
+													"disabled": true,
 													"parameters": {
 														"x": "7",
 														"value": "3"
@@ -62522,17 +63213,25 @@
 							}
 						},
 						{
-							"id": "move-to-top",
-							"objectClass": "mesa",
-							"sid": 477862289655616
+							"callFunction": "Draw_Number",
+							"sid": 513314105076165,
+							"disabled": true,
+							"parameters": [
+								"2",
+								false,
+								"0",
+								false,
+								false
+							]
 						},
 						{
-							"id": "move-to-object",
-							"objectClass": "degrade",
-							"sid": 370165912825938,
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 374449106153589,
+							"disabled": true,
 							"parameters": {
-								"where": "in-front",
-								"object": "mesa"
+								"variable": "PlayerPoints",
+								"value": "2"
 							}
 						}
 					],

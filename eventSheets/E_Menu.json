@@ -7090,313 +7090,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Debug",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 640138341902228,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "logo"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 761619262341148,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-animation-frame",
-									"objectClass": "logo",
-									"sid": 240689271547893,
-									"parameters": {
-										"comparison": 0,
-										"number": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "logo",
-									"sid": 823618486927581,
-									"parameters": {
-										"frame-number": "0"
-									}
-								},
-								{
-									"id": "set-size",
-									"objectClass": "logo",
-									"sid": 721180965757722,
-									"parameters": {
-										"width": "592",
-										"height": "430"
-									}
-								}
-							],
-							"sid": 708937708210819,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 253625406797112
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "logo",
-									"sid": 900266268432685,
-									"parameters": {
-										"frame-number": "1"
-									}
-								},
-								{
-									"id": "set-size",
-									"objectClass": "logo",
-									"sid": 477826214422210,
-									"parameters": {
-										"width": "592",
-										"height": "430"
-									}
-								}
-							],
-							"sid": 754399222970770,
-							"disabled": true
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 569394438597905,
-							"parameters": {
-								"key": 81
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "clear-storage",
-							"objectClass": "LocalStorage",
-							"sid": 489445036167818,
-							"disabled": true
-						}
-					],
-					"sid": 797509039956671
-				},
-				{
-					"eventType": "comment",
-					"text": "Compatibilidade com outros jogos- APARENTEMENTE FUNCIONA MESMO ! ! !",
-					"text-color": [
-						0,
-						0,
-						0,
-						0
-					],
-					"background-color": [
-						0.0196078431372549,
-						1,
-						0.08627450980392157,
-						1
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-dlc-installed-check-complete",
-							"objectClass": "Steamworks",
-							"sid": 400711296192128
-						}
-					],
-					"actions": [],
-					"sid": 601435633566194,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-dlc-installed",
-									"objectClass": "Steamworks",
-									"sid": 979154986431831,
-									"parameters": {
-										"app-id": "3186200"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "log",
-									"objectClass": "Browser",
-									"sid": 436078668998265,
-									"parameters": {
-										"type": "log",
-										"message": "\"Jogo Survivor Story identificado no usuário atual\""
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 878378676047714,
-									"parameters": {
-										"audio-file": {
-											"path": "bell"
-										},
-										"loop": "not-looping",
-										"volume": "-5",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 755636099604361,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-dlc-installed",
-									"objectClass": "Steamworks",
-									"sid": 996713208351109,
-									"parameters": {
-										"app-id": "3805000"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "log",
-									"objectClass": "Browser",
-									"sid": 583161758466718,
-									"parameters": {
-										"type": "log",
-										"message": "\"Jogo Steam & Clicks identificado no usuário atual\""
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 305359504969197,
-									"parameters": {
-										"audio-file": {
-											"path": "card-deck-shuffle-1"
-										},
-										"loop": "not-looping",
-										"volume": "-5",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 338364964802404,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 128424383946340
-								}
-							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 219921760123275,
-									"parameters": {
-										"audio-file": {
-											"path": "494768__alderman2k__error"
-										},
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 948092323953935,
-									"parameters": {
-										"seconds": "1.0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 374357425290293,
-									"parameters": {
-										"audio-file": {
-											"path": "494768__alderman2k__error"
-										},
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
-							"sid": 259136439207228,
-							"disabled": true
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-available",
-							"objectClass": "Steamworks",
-							"sid": 445278250481522
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 663172638060067
-						}
-					],
-					"actions": [
-						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 134700950470974,
-							"parameters": {
-								"type": "log",
-								"message": "\"Steamworks ativo\""
-							}
-						}
-					],
-					"sid": 916587240983856
-				}
-			],
-			"sid": 428121772240145
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "Unlocks",
 			"description": "",
 			"isActiveOnStart": true,
@@ -8141,6 +7834,313 @@
 				}
 			],
 			"sid": 247848447036156
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 678344600922125,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "logo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 781382425957738,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "logo",
+									"sid": 133764459490148,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "logo",
+									"sid": 176955065039994,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "logo",
+									"sid": 136402079636289,
+									"parameters": {
+										"width": "592",
+										"height": "430"
+									}
+								}
+							],
+							"sid": 356190330613462,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 279382948880579
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "logo",
+									"sid": 538392349832114,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "logo",
+									"sid": 639485960022262,
+									"parameters": {
+										"width": "592",
+										"height": "430"
+									}
+								}
+							],
+							"sid": 563474959326934,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 448566289307826,
+							"parameters": {
+								"key": 81
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear-storage",
+							"objectClass": "LocalStorage",
+							"sid": 892748880677021,
+							"disabled": true
+						}
+					],
+					"sid": 797028992783084
+				},
+				{
+					"eventType": "comment",
+					"text": "Compatibilidade com outros jogos- APARENTEMENTE FUNCIONA MESMO ! ! !",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.0196078431372549,
+						1,
+						0.08627450980392157,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-dlc-installed-check-complete",
+							"objectClass": "Steamworks",
+							"sid": 907273339085727
+						}
+					],
+					"actions": [],
+					"sid": 577783323671931,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-dlc-installed",
+									"objectClass": "Steamworks",
+									"sid": 395868390593325,
+									"parameters": {
+										"app-id": "3186200"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 280408175296624,
+									"parameters": {
+										"type": "log",
+										"message": "\"Jogo Survivor Story identificado no usuário atual\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 963399457208206,
+									"parameters": {
+										"audio-file": {
+											"path": "bell"
+										},
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 446193971553620,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-dlc-installed",
+									"objectClass": "Steamworks",
+									"sid": 436045879529722,
+									"parameters": {
+										"app-id": "3805000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 795604571954919,
+									"parameters": {
+										"type": "log",
+										"message": "\"Jogo Steam & Clicks identificado no usuário atual\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 484889724607501,
+									"parameters": {
+										"audio-file": {
+											"path": "card-deck-shuffle-1"
+										},
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 177026582795779,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 694529372287923
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 422285192888131,
+									"parameters": {
+										"audio-file": {
+											"path": "494768__alderman2k__error"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 956722461664750,
+									"parameters": {
+										"seconds": "1.0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 816152292133778,
+									"parameters": {
+										"audio-file": {
+											"path": "494768__alderman2k__error"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 248886464185591,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-available",
+							"objectClass": "Steamworks",
+							"sid": 633140720178128
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 662329809122820
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 368719659281315,
+							"parameters": {
+								"type": "log",
+								"message": "\"Steamworks ativo\""
+							}
+						}
+					],
+					"sid": 297311612597935
+				}
+			],
+			"sid": 971507658577203
 		}
 	],
 	"sid": 468746933081532

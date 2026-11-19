@@ -489,9 +489,27 @@
 				{
 					"callFunction": "Start Layout Transition",
 					"sid": 552932632318783,
+					"disabled": true,
 					"parameters": [
 						"\"Story\""
 					]
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 447992901945644,
+					"parameters": {
+						"layer": "\"Black\"",
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 893068106538454,
+					"parameters": {
+						"layout": "Story"
+					}
 				}
 			],
 			"sid": 918180277258219
@@ -1751,7 +1769,8 @@
 					}
 				}
 			],
-			"sid": 380228039518719
+			"sid": 380228039518719,
+			"disabled": true
 		}
 	],
 	"sid": 364052280707711

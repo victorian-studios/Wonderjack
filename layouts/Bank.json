@@ -415,7 +415,8 @@
 					"instanceVariables": {
 						"ID": "",
 						"Uses": 0,
-						"Used": false
+						"Used": false,
+						"Active": false
 					},
 					"behaviors": {
 						"Tween": {
@@ -438,13 +439,13 @@
 						},
 						"Sine": {
 							"properties": {
-								"movement": "horizontal",
+								"movement": "angle",
 								"wave": "sine",
-								"period": 4,
+								"period": 2,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 50,
+								"magnitude": 5,
 								"magnitude-random": 0,
 								"enabled": false,
 								"live-preview": false

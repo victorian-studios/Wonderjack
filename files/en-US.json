@@ -474,20 +474,24 @@
                 "Red Queen": {
                     "name": "[outline=#921520][color=#d9606c]Queen of Hearts[/color][/outline]",
                     "talk_win": "Off with her head!",
-                    "talk_lose": "You may have won this battle... But you won't win the war...",
-                    "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
-                    "talk_thinking_2": "How dare you! Do you really think you can beat me?",
-                    "special": "I'm gonna slice this card!"
+                    "talk_lose": "You may have won this battle... But you haven't won the war...",
+                    "talk_thinking_1": "Silence! I'm thinking of my strategy!",
+                    "talk_thinking_2": "Insolent! Do you really think you can beat me?",
+                    "special_1": "I hereby declare this card illegal!",
+                    "special_2": "I decree this card forbidden!",
+                    "special_3": "What an outrage! Get this card out of here!"
                 },
                 "Jabberwock": {
                     "name": "[outline=#921520][color=#d9606c]Jabberwocky[/color][/outline]",
-                    "talk_win": "Finally, I'll be able to sharpen my fangs a little!",
+                    "talk_win": "At last, I can sharpen my fangs a little!",
                     "talk_lose": "Arghhh!!! How dare you?!",
-                    "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
-                    "talk_thinking_2": "My fangs are itching for this game...",
-                    "special": "What's the matter, Alice? How about a best-of-three match?",
-                    "special_2": "I like your boldness... I'll go first, then!",
-                    "special_3": "I'll go first!"
+                    "talk_thinking_1": "With this move, I'll tear you to pieces... hehe",
+                    "talk_thinking_2": "My fangs are itching for this match...",
+                    "special_1": "Something wrong, Alice? How about a best-of-three match?",
+                    "special_2": "I like your boldness... I'll go first, then.",
+                    "special_3": "I'll start!",
+                    "special_4": "My turn!",
+                    "special_5": "I'll go first!"
                 }
             },
             "tips": {
@@ -499,7 +503,10 @@
                 "6": "Each opponent has a special power and plays either cautiously or fearlessly."
             },
             "bell": "[icon=heart] The Bell [icon=heart] \n\nPlay the bell to finish your turn. Then, your oponement can [color=#fa1c03]only play once[/color] before the round ends. When used in the last turn, just skip it.",
-            "power": "[icon=heart] The Power Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round.",
+            "power": {
+                "one": "[icon=heart] The Power Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] card in this round.",
+                "other": "[icon=heart] The Power Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round."
+            },
             "power_hand_limit": "[icon=heart] The Power Deck [icon=heart] \n\nYou [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
             "number": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
             "number_easy": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",
