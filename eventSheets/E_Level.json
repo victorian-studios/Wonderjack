@@ -376,6 +376,16 @@
 			"sid": 798891432693223
 		},
 		{
+			"eventType": "variable",
+			"name": "Last_Turn_Power_Played",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "true - jogou um poder no ultimo turno e venceu",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 297374264019086
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -4330,6 +4340,40 @@
 								}
 							],
 							"sid": 996601683774606
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 418394709701212,
+									"parameters": {
+										"object": "Card_Numb"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Card_Numb",
+									"sid": 597557592126795,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"bye\"",
+										"property": "position",
+										"end-x": "Deck_Numb_Sprite.X",
+										"end-y": "Deck_Numb_Sprite.Y",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 556890029031074
 						}
 					]
 				},
@@ -31079,10 +31123,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 478723358703690,
+											"sid": 413520450197378,
 											"parameters": {
 												"variable": "winner",
-												"value": "\"Alice\""
+												"value": "Internationalization.Lookup(\"common.enemies.Alice.name\")"
 											}
 										},
 										{
@@ -31112,6 +31156,10 @@
 									"sid": 692722678344527,
 									"children": [
 										{
+											"eventType": "comment",
+											"text": "Partida perfeita"
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
@@ -31138,6 +31186,43 @@
 												}
 											],
 											"sid": 749769438090832
+										},
+										{
+											"eventType": "comment",
+											"text": "Conquista - STRATEGY"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 522923217706237,
+													"parameters": {
+														"variable": "Last_Turn_Power_Played"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Update_Achievement",
+													"sid": 836472567250359,
+													"parameters": [
+														"\"STRATEGY\"",
+														"1"
+													]
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 319684556165631,
+													"parameters": {
+														"variable": "Last_Turn_Power_Played",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 237393004748226
 										}
 									]
 								},
@@ -31182,10 +31267,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 252000510364951,
+											"sid": 490573862670420,
 											"parameters": {
 												"variable": "winner",
-												"value": "\"Alice\""
+												"value": "Internationalization.Lookup(\"common.enemies.Alice.name\")"
 											}
 										},
 										{
@@ -31215,12 +31300,16 @@
 									"sid": 178050074321769,
 									"children": [
 										{
+											"eventType": "comment",
+											"text": "Partida perfeita"
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 138915801254481,
+													"sid": 620147822241622,
 													"parameters": {
 														"variable": "PlayerNumbers",
 														"comparison": 0,
@@ -31232,7 +31321,7 @@
 												{
 													"id": "set-at-xy",
 													"objectClass": "A_Match_Info",
-													"sid": 738663954775874,
+													"sid": 503032790829083,
 													"parameters": {
 														"x": "1",
 														"y": "4",
@@ -31240,7 +31329,44 @@
 													}
 												}
 											],
-											"sid": 198052379425028
+											"sid": 620584602601369
+										},
+										{
+											"eventType": "comment",
+											"text": "Conquista - STRATEGY"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 134242386260964,
+													"parameters": {
+														"variable": "Last_Turn_Power_Played"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Update_Achievement",
+													"sid": 248621495975999,
+													"parameters": [
+														"\"STRATEGY\"",
+														"1"
+													]
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 340944025891387,
+													"parameters": {
+														"variable": "Last_Turn_Power_Played",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 977390444135466
 										}
 									]
 								},
@@ -32431,6 +32557,24 @@
 									"parameters": {
 										"layer": "\"ESCURO\"",
 										"opacity": "45"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 703184434165611,
+									"parameters": {
+										"variable": "EnemyNumbers",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 910645840845896,
+									"parameters": {
+										"variable": "PlayerNumbers",
+										"value": "0"
 									}
 								}
 							],
@@ -40427,7 +40571,17 @@
 							],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 875381992981534,
+									"parameters": {
+										"variable": "Last_Turn_Power_Played",
+										"value": "false"
+									}
+								}
+							],
 							"sid": 759176963339364,
 							"children": [
 								{
@@ -40602,7 +40756,36 @@
 											}
 										}
 									],
-									"sid": 583673877451087
+									"sid": 583673877451087,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 438379477920160,
+													"parameters": {
+														"variable": "LastTurnCount",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 160576414124727,
+													"parameters": {
+														"variable": "Last_Turn_Power_Played",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 830233445276840
+										}
+									]
 								}
 							]
 						},
@@ -52064,6 +52247,16 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "delete_rng",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 936475256926417
+				},
+				{
 					"functionName": "Reset Relics",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -52151,6 +52344,15 @@
 							"parameters": {
 								"json": "AJAX.LastData"
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 825906772886391,
+							"parameters": {
+								"variable": "delete_rng",
+								"value": "choose( 1, 2 )"
+							}
 						}
 					],
 					"sid": 195801663815559,
@@ -52188,19 +52390,98 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 973978692712633,
+									"children": [
 										{
-											"id": "push",
-											"objectClass": "A_Relics",
-											"sid": 188731620350281,
-											"parameters": {
-												"where": "front",
-												"value": "A_zCodex.At(0, loopindex, 2)",
-												"axis": "x"
-											}
+											"eventType": "comment",
+											"text": "Especificamente não adiciona a relíquia bolo"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 482913891609545,
+													"parameters": {
+														"variable": "delete_rng",
+														"comparison": 0,
+														"value": "1"
+													}
+												},
+												{
+													"id": "compare-at-xyz",
+													"objectClass": "A_zCodex",
+													"sid": 296112602378770,
+													"parameters": {
+														"x": "0",
+														"y": "loopindex",
+														"z": "2",
+														"comparison": 1,
+														"value": "\"eat_me\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "push",
+													"objectClass": "A_Relics",
+													"sid": 356982715128916,
+													"parameters": {
+														"where": "front",
+														"value": "A_zCodex.At(0, loopindex, 2)",
+														"axis": "x"
+													}
+												}
+											],
+											"sid": 934466784042429
+										},
+										{
+											"eventType": "comment",
+											"text": "Especificamente não adiciona a relíquia frasco"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 115245555354988,
+													"parameters": {
+														"variable": "delete_rng",
+														"comparison": 0,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-at-xyz",
+													"objectClass": "A_zCodex",
+													"sid": 154497111519155,
+													"parameters": {
+														"x": "0",
+														"y": "loopindex",
+														"z": "2",
+														"comparison": 1,
+														"value": "\"drink_me\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "push",
+													"objectClass": "A_Relics",
+													"sid": 690094913989942,
+													"parameters": {
+														"where": "front",
+														"value": "A_zCodex.At(0, loopindex, 2)",
+														"axis": "x"
+													}
+												}
+											],
+											"sid": 886699247980142
 										}
-									],
-									"sid": 973978692712633
+									]
 								},
 								{
 									"eventType": "block",
@@ -54134,180 +54415,100 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 663522295541921,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "Relics"
-							}
+							"id": "on-created",
+							"objectClass": "Relics",
+							"sid": 124798467329856
 						}
 					],
 					"actions": [
 						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 287882323726678,
+							"id": "tween-two-properties",
+							"objectClass": "Relics",
+							"sid": 511351690350503,
+							"behaviorType": "Tween",
 							"parameters": {
-								"audio-file": {
-									"path": "button_select_sfx"
-								},
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tags": "\"grow\"",
+								"property": "scale",
+								"end-x": "1.2",
+								"end-y": "1.2",
+								"time": "0.25",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "yes",
+								"repeat-count": "3"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 596904201777004,
+							"parameters": {
+								"seconds": "0.03",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Relics",
+							"sid": 711195642414872,
+							"parameters": {
+								"object": "Effect_Light",
+								"layer": "\"ESCURO\"",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Relics",
+							"sid": 495868859172386,
+							"parameters": {
+								"child": "Effect_Light",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-z-elevation": false,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-d": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-visibility": false,
+								"destroy-with-parent": true
 							}
 						}
 					],
-					"sid": 352813228127705,
-					"disabled": true,
+					"sid": 504160152959589,
 					"children": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-comparison",
-									"objectClass": "System",
-									"sid": 591895701098640,
-									"parameters": {
-										"object": "Relic_card",
-										"expression": "Relic_card.Order",
-										"comparison": 0,
-										"value": "4"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "Relic_card",
-									"sid": 313131755623270,
-									"parameters": {
-										"comparison": 0,
-										"y-co-ordinate": "-222"
-									}
-								},
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 289973044516902,
-									"parameters": {
-										"layer": "\"Pause\""
-									},
-									"isInverted": true
-								},
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 324985214993384,
-									"parameters": {
-										"layer": "\"Turn\""
-									},
-									"isInverted": true
-								},
-								{
-									"id": "layer-is-visible",
-									"objectClass": "System",
-									"sid": 395169619729298,
-									"parameters": {
-										"layer": "\"Choose_Relics\""
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 412435719288930,
-									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Relic_card",
-									"sid": 187201785787381,
-									"parameters": {
-										"animation": "Relics.AnimationName",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "Relic_card",
-									"sid": 217612693626696,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"down\"",
-										"property": "offsetY",
-										"end-value": "222",
-										"time": "0.2",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
-									}
-								}
-							],
-							"sid": 352540689785063,
-							"disabled": true
+							"eventType": "comment",
+							"text": "Fósforo - Match (valor real)"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-by-comparison",
-									"objectClass": "System",
-									"sid": 856465433968588,
+									"id": "is-animation-playing",
+									"objectClass": "Relics",
+									"sid": 143028661818770,
 									"parameters": {
-										"object": "Relic_card",
-										"expression": "Relic_card.Order",
-										"comparison": 0,
-										"value": "4"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "Relic_card",
-									"sid": 165495020033137,
-									"parameters": {
-										"comparison": 0,
-										"y-co-ordinate": "222"
+										"animation": "\"match\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 651705886868577,
+									"id": "set-instvar-value",
+									"objectClass": "Relics",
+									"sid": 515335083652942,
 									"parameters": {
-										"seconds": "0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "tween-one-property",
-									"objectClass": "Relic_card",
-									"sid": 500090227404988,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"up\"",
-										"property": "offsetY",
-										"end-value": "-222",
-										"time": "0.1",
-										"ease": "default",
-										"destroy-on-complete": "no",
-										"loop": "no",
-										"ping-pong": "no",
-										"repeat-count": "1"
+										"instance-variable": "Uses",
+										"value": "3"
 									}
 								}
 							],
-							"sid": 413341374381476,
-							"disabled": true
+							"sid": 400010177109706
 						}
 					]
 				},
@@ -54339,27 +54540,9 @@
 								"layer": "\"Turn\""
 							},
 							"isInverted": true
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 743380586182799,
-							"parameters": {
-								"variable": "RelicPhase"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 738297088460359,
-							"parameters": {
-								"layer": "\"Choose_Relics\"",
-								"visibility": "visible"
-							}
-						},
 						{
 							"id": "set-visible",
 							"objectClass": "Bkg_Relic_Info_Txt",
@@ -54380,6 +54563,32 @@
 					],
 					"sid": 160526803130944,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 838272498555048,
+									"parameters": {
+										"variable": "RelicPhase"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 583485280572802,
+									"parameters": {
+										"layer": "\"Choose_Relics\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 856125716451364
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -54429,31 +54638,13 @@
 							"parameters": {
 								"layer": "\"Choose_Relics\""
 							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 692006974280682,
-							"parameters": {
-								"variable": "RelicPhase"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 418124384305753,
-							"parameters": {
-								"layer": "\"Choose_Relics\"",
-								"visibility": "invisible"
-							}
-						},
-						{
 							"id": "set-visible",
 							"objectClass": "Bkg_Relic_Info_Txt",
-							"sid": 714732052882956,
+							"sid": 606019882775923,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -54485,6 +54676,32 @@
 								}
 							],
 							"sid": 807417126442393
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 128716446103116,
+									"parameters": {
+										"variable": "RelicPhase"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 669642856837164,
+									"parameters": {
+										"layer": "\"Choose_Relics\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 214600554679273
 						}
 					]
 				},
@@ -54553,107 +54770,6 @@
 								}
 							],
 							"sid": 751622839946740
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "Relics",
-							"sid": 303060748144126
-						}
-					],
-					"actions": [
-						{
-							"id": "tween-two-properties",
-							"objectClass": "Relics",
-							"sid": 396366649378219,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"grow\"",
-								"property": "scale",
-								"end-x": "1.2",
-								"end-y": "1.2",
-								"time": "0.25",
-								"ease": "default",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "yes",
-								"repeat-count": "3"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 352808331353409,
-							"parameters": {
-								"seconds": "0.03",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "Relics",
-							"sid": 520715504694345,
-							"parameters": {
-								"object": "Effect_Light",
-								"layer": "\"ESCURO\"",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "add-child",
-							"objectClass": "Relics",
-							"sid": 475043473670635,
-							"parameters": {
-								"child": "Effect_Light",
-								"transform-x": true,
-								"transform-y": true,
-								"transform-z-elevation": false,
-								"transform-w": false,
-								"transform-h": false,
-								"transform-d": false,
-								"transform-a": false,
-								"transform-o": false,
-								"transform-visibility": false,
-								"destroy-with-parent": true
-							}
-						}
-					],
-					"sid": 303332164016955,
-					"children": [
-						{
-							"eventType": "comment",
-							"text": "Fósforo - Match (valor real)"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-animation-playing",
-									"objectClass": "Relics",
-									"sid": 519608383796727,
-									"parameters": {
-										"animation": "\"match\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Relics",
-									"sid": 315149706388797,
-									"parameters": {
-										"instance-variable": "Uses",
-										"value": "3"
-									}
-								}
-							],
-							"sid": 990734269638889
 						}
 					]
 				},
@@ -61731,6 +61847,15 @@
 									"sid": 841219928280806,
 									"parameters": {
 										"achievement": "ID"
+									}
+								},
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 665051452956284,
+									"parameters": {
+										"type": "warn",
+										"message": "\"STRATEGY ATIVADOOO\""
 									}
 								}
 							],

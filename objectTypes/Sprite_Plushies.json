@@ -13,7 +13,13 @@
 			"sid": 631306170504304
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 708633695483774
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -43,6 +49,32 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 5599502,
+						"collisionPoly": {
+							"points": [
+								0.5177304964539007,
+								0,
+								0.723404255319149,
+								0.018604651162790697,
+								0.9787234042553191,
+								0.8093023255813954,
+								0.8723404255319149,
+								0.8976744186046511,
+								0.48936170212765956,
+								0.9953488372093023,
+								0.4397163120567376,
+								1,
+								0.19148936170212766,
+								0.9953488372093023,
+								0.14893617021276595,
+								0.9674418604651163,
+								0,
+								0.7627906976744186,
+								0.12056737588652482,
+								0.39069767441860465,
+								0.20567375886524822,
+								0.25116279069767444
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -57,6 +89,50 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 6266574,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 209,
+						"height": 159,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6080036,
+						"collisionPoly": {
+							"points": [
+								0.3062200956937799,
+								0.006289308176100629,
+								0.9952153110047847,
+								0.7295597484276729,
+								0.8181818181818182,
+								0.9937106918238994,
+								0.4354066985645933,
+								0.8490566037735849,
+								0.023923444976076555,
+								0.39622641509433965,
+								0.004784688995215311,
+								0.2830188679245283
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 141,
+						"height": 215,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9468754,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

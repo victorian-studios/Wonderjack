@@ -2060,7 +2060,7 @@
 								},
 								{
 									"id": "is-visible",
-									"objectClass": "Clickable",
+									"objectClass": "Holdable",
 									"sid": 864847699713501
 								},
 								{
@@ -2134,7 +2134,8 @@
 								{
 									"id": "is-visible",
 									"objectClass": "Clickable",
-									"sid": 557837677068185
+									"sid": 557837677068185,
+									"disabled": true
 								},
 								{
 									"id": "layer-is-visible",
@@ -4072,6 +4073,24 @@
 												"layer": "\"Main\"",
 												"interactive": true
 											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 537416261405885,
+											"parameters": {
+												"layer": "\"Banner\"",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 420320089676928,
+											"parameters": {
+												"layer": "\"Bkg\"",
+												"interactive": true
+											}
 										}
 									],
 									"sid": 659766362287987,
@@ -5934,7 +5953,22 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 882653367523560,
+							"parameters": {
+								"audio-file": {
+									"path": "button_select_sfx"
+								},
+								"loop": "not-looping",
+								"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
 					"sid": 279603231082730,
 					"children": [
 						{
@@ -5970,22 +6004,7 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 920051587686128,
-											"parameters": {
-												"audio-file": {
-													"path": "button_select_sfx"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
+									"actions": [],
 									"sid": 617793524219307,
 									"children": [
 										{
@@ -6110,22 +6129,7 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 797726739162345,
-											"parameters": {
-												"audio-file": {
-													"path": "button_select_sfx"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
+									"actions": [],
 									"sid": 785830537957772,
 									"children": [
 										{
@@ -6287,22 +6291,7 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 193715060394197,
-											"parameters": {
-												"audio-file": {
-													"path": "button_select_sfx"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
+									"actions": [],
 									"sid": 497677087083874,
 									"children": [
 										{
@@ -6501,22 +6490,7 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 554742383182371,
-											"parameters": {
-												"audio-file": {
-													"path": "button_select_sfx"
-												},
-												"loop": "not-looping",
-												"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
+									"actions": [],
 									"sid": 976980702332620,
 									"children": [
 										{

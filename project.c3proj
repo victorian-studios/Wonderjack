@@ -398,7 +398,8 @@
 			"Fade_Sprite_Warning",
 			"Sprite_Relogio",
 			"Sprite_Ponteiro",
-			"Sprite_Plushies"
+			"Sprite_Plushies",
+			"Sprites_Menu"
 		],
 		"subfolders": []
 	},
@@ -850,6 +851,60 @@
 					],
 					"subfolders": [],
 					"name": "Characters"
+				},
+				{
+					"items": [
+						{
+							"name": "toy_release_3.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 980679685912129,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "toy_press_3.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 727190602104841,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "toy_release_2.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 493127966595294,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "toy_press_2.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 798276593463003,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "toy_release_1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 909916550402883,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "toy_press_1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 816816425185942,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Toys"
 				}
 			]
 		},

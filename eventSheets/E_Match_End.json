@@ -982,6 +982,20 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 829268531740297,
+					"parameters": {
+						"audio-file": {
+							"path": "button_select_sfx"
+						},
+						"loop": "not-looping",
+						"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"callFunction": "Save_Game",
 					"sid": 188065696219643
 				}
@@ -1073,6 +1087,20 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 986968053362618,
+					"parameters": {
+						"audio-file": {
+							"path": "button_select_sfx"
+						},
+						"loop": "not-looping",
+						"volume": "Vol_Sfx > 0 ? -25 + ( Vol_Sfx * 0.25 ) : - 100",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "set-layer-interactive",
 					"objectClass": "System",

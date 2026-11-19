@@ -965,6 +965,24 @@
 									}
 								},
 								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 716311903337865,
+									"parameters": {
+										"layer": "\"Banner\"",
+										"interactive": false
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 570820546790817,
+									"parameters": {
+										"layer": "\"Bkg\"",
+										"interactive": false
+									}
+								},
+								{
 									"callFunction": "Open_Pause_Screen",
 									"sid": 419057947708548
 								}
@@ -7375,6 +7393,602 @@
 				}
 			],
 			"sid": 428121772240145
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Unlocks",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "sound_rng",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 218109405135367
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 959460426882430,
+							"parameters": {
+								"object": "Sprite_Plushies"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 360647287339180,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "D_Save",
+									"sid": 558007268376756,
+									"parameters": {
+										"key": "\"STORY\"",
+										"comparison": 5,
+										"value": "Sprite_Plushies.ID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Sprite_Plushies",
+									"sid": 366008711019625,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 698897121123531
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "D_Save",
+									"sid": 957958126812676,
+									"parameters": {
+										"key": "\"WR_Talks\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Sprite_Plushies",
+									"sid": 370541591055534,
+									"parameters": {
+										"instance-variable": "ID",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Sprite_Plushies",
+									"sid": 782594601978341,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 360608950046116
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 128193327599455,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Sprite_Plushies"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Sprite_Plushies",
+							"sid": 100212194118517
+						},
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 217860856835969,
+							"parameters": {
+								"tag": "\"toy\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 828962134863083,
+							"parameters": {
+								"variable": "sound_rng",
+								"value": "choose( 1, 2, 3)"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Sprite_Plushies",
+							"sid": 690926063279959,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "0.9",
+								"end-y": "0.9",
+								"time": "0.035",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 826483279854153,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 910320318330039,
+									"parameters": {
+										"variable": "sound_rng",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 394437442317556,
+									"parameters": {
+										"audio-file": {
+											"path": "Toys/toy_press_1"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"toy\""
+									}
+								}
+							],
+							"sid": 352870055488678
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 745456589765829,
+									"parameters": {
+										"variable": "sound_rng",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 645922826685709,
+									"parameters": {
+										"audio-file": {
+											"path": "Toys/toy_press_2"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"toy\""
+									}
+								}
+							],
+							"sid": 336290192624891
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 450202147973143,
+									"parameters": {
+										"variable": "sound_rng",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 379306531280906,
+									"parameters": {
+										"audio-file": {
+											"path": "Toys/toy_press_3"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"toy\""
+									}
+								}
+							],
+							"sid": 388994816556626
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 502409465560288,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 545458730514231,
+							"parameters": {
+								"object": "Sprite_Plushies"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Sprite_Plushies",
+							"sid": 789693307223950
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 474287424584875,
+							"parameters": {
+								"variable": "sound_rng",
+								"value": "choose( 1, 2, 3)"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Sprite_Plushies",
+							"sid": 300320712588488,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1",
+								"end-y": "1",
+								"time": "0.035",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 473698508440190,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 180285874620423,
+									"parameters": {
+										"tag": "\"toy\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 764971181947497,
+									"parameters": {
+										"tag": "\"toy_end\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 886079169092886,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 970007436920988,
+											"parameters": {
+												"variable": "sound_rng",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 675167822715462,
+											"parameters": {
+												"audio-file": {
+													"path": "Toys/toy_release_1"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+												"stereo-pan": "0",
+												"tag-optional": "\"toy_end\""
+											}
+										}
+									],
+									"sid": 466765498348945
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 822745033811131,
+											"parameters": {
+												"variable": "sound_rng",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 570122886287213,
+											"parameters": {
+												"audio-file": {
+													"path": "Toys/toy_release_2"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+												"stereo-pan": "0",
+												"tag-optional": "\"toy_end\""
+											}
+										}
+									],
+									"sid": 367293602345115
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 721592018499479,
+											"parameters": {
+												"variable": "sound_rng",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 634666685481168,
+											"parameters": {
+												"audio-file": {
+													"path": "Toys/toy_release_3"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+												"stereo-pan": "0",
+												"tag-optional": "\"toy_end\""
+											}
+										}
+									],
+									"sid": 611239967350429
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-ended",
+							"objectClass": "Audio",
+							"sid": 538023631902011,
+							"parameters": {
+								"tag": "\"toy\""
+							}
+						},
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Mouse",
+							"sid": 704869625079765,
+							"parameters": {
+								"mouse-button": "left"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 728068990099570,
+							"parameters": {
+								"tag": "\"toy_end\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 446542502747599,
+							"parameters": {
+								"variable": "sound_rng",
+								"value": "choose( 1, 2, 3)"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Sprite_Plushies",
+							"sid": 434629586258119,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "scale",
+								"end-x": "1",
+								"end-y": "1",
+								"time": "0.035",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 660789901304696,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 699384062478064,
+									"parameters": {
+										"variable": "sound_rng",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 185647050904136,
+									"parameters": {
+										"audio-file": {
+											"path": "Toys/toy_release_1"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"toy_end\""
+									}
+								}
+							],
+							"sid": 518212727567524
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 698187071078414,
+									"parameters": {
+										"variable": "sound_rng",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 851770387333742,
+									"parameters": {
+										"audio-file": {
+											"path": "Toys/toy_release_2"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"toy_end\""
+									}
+								}
+							],
+							"sid": 212597675973903
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 910849791909004,
+									"parameters": {
+										"variable": "sound_rng",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 224199379310569,
+									"parameters": {
+										"audio-file": {
+											"path": "Toys/toy_release_3"
+										},
+										"loop": "not-looping",
+										"volume": "Vol_Sfx > 0 ? -25 + (Vol_Sfx * 0.25) : -100",
+										"stereo-pan": "0",
+										"tag-optional": "\"toy_end\""
+									}
+								}
+							],
+							"sid": 662179109508680
+						}
+					]
+				}
+			],
+			"sid": 473326230933493
 		},
 		{
 			"eventType": "group",

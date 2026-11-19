@@ -352,7 +352,7 @@
         "common": {
             "enemies": {
                 "Alice": {
-                    "name": "[color=#19317b]Alice[/color]",
+                    "name": "[outline=#19317b][color=#638bd1]Alice[/color][/outline]",
                     "talk_march_hare": "Hey, it's my turn!",
                     "talk_jabberwock_1": "Jabberwocky!? You're also participating?",
                     "talk_jabberwock_2": "Humm... sure. Bring it on!"
@@ -496,14 +496,14 @@
             "number": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
             "number_easy": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",
             "tut_start": "Rabbit Hole",
-            "round_result": "[outlineback=#ffffff]{0}[/outlineback]: [outlineback=#ffffff][color=#19317b]{1}[/color][/outlineback] / [outlineback=#ffffff]{2}[/outlineback]: [outlineback=#ffffff][color=#921520]{3}[/color][/outlineback].\n[outlineback=#ffffff]{4}[/outlineback] won this round!",
-            "player_turn": "[outlineback=#ffffff]{0}[/outlineback]'s Turn",
-            "enemy_turn": "[outlineback=#ffffff]{0}[/outlineback]'s Turn",
-            "points": "[outlineback=#ffffff]{0}[/outlineback]: [outlineback=#ffffff][color=#19317b]{1}[/color][/outlineback] / [outlineback=#ffffff]{2}[/outlineback]: [outlineback=#ffffff][color=#921520]{3}[/color][/outlineback]",
+            "round_result": "{0}: [color=#19317b]{1}[/color] / {2}: [color=#921520]{3}[/color].\n{4} won this round!",
+            "player_turn": "{0}'s Turn",
+            "enemy_turn": "{0}'s Turn",
+            "points": "{0}: [color=#19317b]{1}[/color] / {2}: [color=#921520]{3}[/color]",
             "new_round": "Round [color=#f5fe05]{0}[/color] starting now!",
-            "new_match": "New opponent appears: [outlineback=#ffffff]{0}[/outlineback]",
-            "new_boss": "New [color=#fa1c03]boss[/color] appears: [outlineback=#ffffff]{0}[/outlineback]",
-            "tie": "[outlineback=#ffffff]{0}[/outlineback]: [outlineback=#ffffff][color=#19317b]{1}[/color][/outlineback] / [outlineback=#ffffff]{2}[/outlineback]: [outlineback=#ffffff][color=#921520]{3}[/color][/outlineback].\nNobody won this round.",
+            "new_match": "New opponent appears: {0}",
+            "new_boss": "New [color=#fa1c03]boss[/color] appears: {0}",
+            "tie": "{0}: [color=#19317b]{1}[/color] / {2}: [color=#921520]{3}[/color].\nNobody won this round.",
             "looser": "You [color=#fa1c03]lost[/color] this match... that's unfortunate.",
             "winner": "You [color=#f5fe05]won[/color] this match. Keep going!",
             "end": "You've [color=#f5fe05]won[/color] all the 4 opponents! Congratulations!",
