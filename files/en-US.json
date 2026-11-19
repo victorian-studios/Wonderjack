@@ -352,20 +352,20 @@
         "common": {
             "enemies": {
                 "Alice": {
-                    "name": "[outline=#638bd1][color=#19317b]Alice[/color][/outline]",
+                    "name": "[outline=#19317b][color=#638bd1]Alice[/color][/outline]",
                     "talk_march_hare": "Hey, it's my turn!",
                     "talk_jabberwock_1": "Jabberwocky!? You're also participating?",
                     "talk_jabberwock_2": "Humm... sure. Bring it on!"
                 },
                 "White Queen": {
-                    "name": "[outline=#61ab45][color=#285716]White Queen[/color][/outline]",
+                    "name": "[outline=#285716][color=#61ab45]White Queen[/color][/outline]",
                     "talk_win": "",
                     "talk_lose": "",
                     "talk_thinking_1": "",
                     "talk_thinking_2": ""
                 },
                 "White Rabbit": {
-                    "name": "[outline=#61ab45][color=#285716]White Rabbit[/color][/outline]",
+                    "name": "[outline=#285716][color=#61ab45]White Rabbit[/color][/outline]",
                     "first_time_1": "Oh! Alice! It's been so long since I've seen you!",
                     "first_time_2": "That's true! What are you doing around here?",
                     "first_time_3": "Good question! I'll try to keep it short because I'm in a bit of a hurry...",
@@ -403,7 +403,7 @@
                     "rng_talk_21": "I'm here!"
                 },
                 "Mad Hatter": {
-                    "name": "[outline=#d9606c][color=#921520]Mad Hatter[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]Mad Hatter[/color][/outline]",
                     "talk_win": "Hum... Mad as a Hatter...",
                     "talk_lose": "I tip my hat to you.",
                     "talk_thinking_1": "I need to finish this game because it's almost tea time!",
@@ -412,7 +412,7 @@
                     "special": "What if my the next card is hidden?"
                 },
                 "March Hare": {
-                    "name": "[outline=#d9606c][color=#921520]March Hare[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]March Hare[/color][/outline]",
                     "talk_win": "Are you leaving already? You haven't even had a cup of tea!",
                     "talk_lose": "Well, I guess tea time is over!",
                     "talk_thinking_1": "I'd offer you some wine if I had any...",
@@ -420,7 +420,7 @@
                     "special": "I'll start with a card for myself. After all, it's my unbirthday!"
                 },
                 "The Tweedles": {
-                    "name": "[outline=#d9606c][color=#921520]The Tweedles[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]The Tweedles[/color][/outline]",
                     "talk_win": "We, the TWEEDLE brothers, have won again!",
                     "talk_lose": "Don't look at me, it was his fault!",
                     "talk_thinking_1": "Hey bro, think we should stop?",
@@ -433,7 +433,7 @@
                     "special_small_2": "Be more careful, okay?"
                 },
                 "Caterpillar": {
-                    "name": "[outline=#d9606c][color=#921520]Caterpillar[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]Caterpillar[/color][/outline]",
                     "talk_win": "You need to relax a little...",
                     "talk_lose": "Who... are... you?",
                     "talk_thinking_1": "Stay calm...",
@@ -443,7 +443,7 @@
                     "special_3": "It's getting a little hard to see..."
                 },
                 "Cheshire Cat": {
-                    "name": "[outline=#d9606c][color=#921520]Cheshire Cat[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]Cheshire Cat[/color][/outline]",
                     "talk_win": "I'll take you to the Hare and the Hatter...",
                     "talk_lose": "Looks like you've found the direction you needed to go...",
                     "talk_thinking_1": "Remember... we're all mad here. I'm mad. You're mad.",
@@ -453,7 +453,7 @@
                     "special_3": "We value things more once they've disappeared."
                 },
                 "General of Cards": {
-                    "name": "[outline=#d9606c][color=#921520]General of Cards[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]General of Cards[/color][/outline]",
                     "talk_win": "Guards! You may escort her out now.",
                     "talk_lose": "Rules are rules. You may pass.",
                     "talk_thinking_1": "Let me adjust my helmet.",
@@ -464,7 +464,7 @@
                     "special_4": "Careful, you might get poked."
                 },
                 "Dodo": {
-                    "name": "[outline=#d9606c][color=#921520]Dodo[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]Dodo[/color][/outline]",
                     "talk_win": "Where is my prize?",
                     "talk_lose": "I lost... You can keep the prize then...",
                     "talk_thinking_1": "So many options...",
@@ -472,7 +472,7 @@
                     "special": "Do you want a prize?"
                 },
                 "Red Queen": {
-                    "name": "[outline=#d9606c][color=#921520]Queen of Hearts[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]Queen of Hearts[/color][/outline]",
                     "talk_win": "Off with her head!",
                     "talk_lose": "You may have won this battle... But you won't win the war...",
                     "talk_thinking_1": "Quiet! I'm thinking about my strategy!",
@@ -480,7 +480,7 @@
                     "special": "I'm gonna slice this card!"
                 },
                 "Jabberwock": {
-                    "name": "[outline=#d9606c][color=#921520]Jabberwocky[/color][/outline]",
+                    "name": "[outline=#921520][color=#d9606c]Jabberwocky[/color][/outline]",
                     "talk_win": "Finally, I'll be able to sharpen my fangs a little!",
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
