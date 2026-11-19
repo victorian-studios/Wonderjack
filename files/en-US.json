@@ -352,7 +352,7 @@
         "common": {
             "enemies": {
                 "Alice": {
-                    "name": "[outline=#19317b][color=#638bd1]Alice[/color][/outline]",
+                    "name": "[outline=#638bd1][color=#19317b]Alice[/color][/outline]",
                     "talk_march_hare": "Hey, it's my turn!",
                     "talk_jabberwock_1": "Jabberwocky!? You're also participating?",
                     "talk_jabberwock_2": "Humm... sure. Bring it on!"
