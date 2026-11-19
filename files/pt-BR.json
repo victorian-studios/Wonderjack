@@ -110,101 +110,118 @@
                 "tittle_default": "Aguardando...",
                 "desc_default": "Nenhuma arte selecionada...",
                 "art_0": {
-                    "title": "Esboço do Coelho de Pelúcia",
-                    "desc": "O coelhinho de pelúcia da Alice! Fofo né?"
-                },
-                "art_1": {
-                    "title": "Esboço da Alice",
-                    "desc": "Ela está tão magrinha no esboço haha!"
-                },
-                "art_2": {
-                    "title": "Esboço Alice e Rainha Branca",
-                    "desc": "Até que ficou uma bela composição!"
-                },
-                "art_3": {
                     "title": "Menu antigo",
                     "desc": "A primeira versão do menu feito para a GameJamPlus."
                 },
-                "art_4": {
+                "art_1": {
                     "title": "Fase da demo antiga",
                     "desc": "Primeira versão da fase feita para a GameJamPlus."
                 },
-                "art_5": {
+                "art_2": {
                     "title": "Página antiga 1",
                     "desc": "Deu um trabalho pra ajustar essa pose da Alice..e ainda ficou estranho..."
                 },
-                "art_6": {
+                "art_3": {
                     "title": "Página antiga 2",
                     "desc": "Não achei essa pose tão natural...parece que ela quebrou o braço haha!"
                 },
-                "art_7": {
+                "art_4": {
                     "title": "Página antiga 3",
                     "desc": "Foi complexo desenhar a Alice nesse ângulo..."
                 },
-                "art_8": {
+                "art_5": {
                     "title": "Página antiga 4",
                     "desc": "Fiz um estudo de luz e sombra..ficou bacana até."
                 },
-                "art_9": {
+                "art_6": {
                     "title": "Página antiga 5",
                     "desc": "A mão da rainha Branca estava enorme!"
+                },
+                "art_7": {
+                    "title": "Esboço do Coelho de Pelúcia",
+                    "desc": "O coelhinho de pelúcia da Alice! Fofo né?"
+                },
+                "art_8": {
+                    "title": "Esboço da Alice",
+                    "desc": "Ela está tão magrinha no esboço haha!"
+                },
+                "art_9": {
+                    "title": "Esboço Alice e Rainha Branca",
+                    "desc": "Até que ficou uma bela composição!"
                 },
                 "art_10": {
                     "title": "Esboço da Dinah",
                     "desc": "Uma tentativa de desenhar um gato brincando..."
                 },
                 "art_11": {
-                    "title": "Esboço do gato",
-                    "desc": "Eu acho que eu vi um gatinho! Ou três..."
-                },
-                "art_12": {
-                    "title": "Esboços da Rainha de Copas",
-                    "desc": "Ela viu coisas..."
-                },
-                "art_13": {
-                    "title": "LOGO BLIM",
-                    "desc": "LOGO BLIM"
-                },
-                "art_14": {
                     "title": "Esboço do Humpty Dumpty",
                     "desc": "Desenhei tanto ovo que tive pesadelos."
                 },
+                "art_12": {
+                    "title": "Esboço da Lebre de Março",
+                    "desc": "Shakespeare, se ele fosse louco eu acho."
+                },
+                "art_13": {
+                    "title": "Esboço do Dodô",
+                    "desc": "Esse eu acertei o design de primeira!"
+                },
+                "art_14": {
+                    "title": "Esboço do Jaguadarte",
+                    "desc": "Adorei desenhar o pescoço e odiei tentar animar ele."
+                },
                 "art_15": {
+                    "title": "Esboços da Carta General",
+                    "desc": "Como eu poderia escolher um só?"
+                },
+                "art_16": {
+                    "title": "Esboço do gato",
+                    "desc": "Eu acho que eu vi um gatinho! Ou três..."
+                },
+                "art_17": {
+                    "title": "Esboços da Logo",
+                    "desc": "Muitas ideias do nosso time mas no final não usamos nenhuma dessas haha..."
+                },
+                "art_18": {
+                    "title": "Esboço da Rainha de Copas",
+                    "desc": "Ela viu coisas..."
+                },
+                "art_19": {
+                    "title": "Esboços da Rainha de Copas",
+                    "desc": "Quantos corações eu consigo por em um personagem...?"
+                },
+                "art_20": {
+                    "title": "Humpty Dumpty",
+                    "desc": "Esse ovinho podre..."
+                },
+                "art_21": {
                     "title": "Lagarta antiga",
                     "desc": "Ao infinito e além!"
                 },
-                "art_16": {
-                    "title": "NAIPES BLIM",
-                    "desc": "NAIPES BLIM"
-                },
-                "art_17": {
+                "art_22": {
                     "title": "Versão 1 do Coelho",
                     "desc": "Essa cara dele sempre me faz querer rir haha."
                 },
-                "art_18": {
+                "art_23": {
                     "title": "Conquista 'Iniciante'",
                     "desc": "Ela fica tão fofa quando ri..."
                 },
-                "art_19": {
+                "art_24": {
                     "title": "Conquista 'Prêmio de consolação'",
                     "desc": "A Rainha Branca séria me dá arrepios!"
                 },
-                "art_20": {
+                "art_25": {
                     "title": "Conquista 'Louco como ele'",
                     "desc": "Chapeleiro ficou acabado haha."
                 },
-                "art_21": {
+                "art_26": {
                     "title": "Conquista 'Nova rainha'",
                     "desc": "Essa rainha Alice ficou badass!"
                 },
-                "art_22": {
+                "art_27": {
                     "title": "Conquista 'O conceito de estratégia'",
                     "desc": "Skin de cientista haha!"
-                },
-                "art_23": {
-                    "title": "Esboço da Lebre de Março",
-                    "desc": "Shakespeare, se ele fosse louco eu acho."
                 }
+                
             }
         },
         "credits": {

@@ -92,11 +92,11 @@
                         "desc": "The sovereign ruler of Wonderland. She has a peculiar taste for chopping off heads... and hearts. A while ago, she swapped her afternoons of croquet for Wonderjack matches with her card guards. But she's already bored stiff..."
                     },
                     "Jabberwock": {
-                        "name": "Jabberwock",
+                        "name": "Jabberwocky",
                         "mind": "Cautious",
                         "stage": "Final Room",
                         "special": "[size=26][b]Passive:[/b] Changes the chandelier to 5 candles.\n[b]At the start of the round:[/b]\nPlays first.[/size]",
-                        "desc": "An ancient Wonderland legend. The Jabberwock was known only through an old rhyme, and so it gradually stopped being feared. Driven by a hunger to have its power recognized, it took up Wonderjack and began challenging anyone who crossed its path."
+                        "desc": "An ancient Wonderland legend. The Jabberwocky was known only through an old rhyme, and so it gradually stopped being feared. Driven by a hunger to have its power recognized, it took up Wonderjack and began challenging anyone who crossed its path."
                     }
                 },
                 "powers": {
@@ -110,102 +110,115 @@
                 "tittle_default": "Waiting...",
                 "desc_default": "No art selected...",
                 "art_0": {
-                    "title": "Plush bunny's sketch",
-                    "desc": "Alice's little plush bunny! Cute, right?"
-                },
-                "art_1": {
-                    "title": "Alice's sketch",
-                    "desc": "She looks a little skinny in the sketch, haha!"
-                },
-                "art_2": {
-                    "title": "Alice and The White Queen's sketch",
-                    "desc": "It actually turned out to be a nice composition!"
-                },
-                "art_3": {
                     "title": "Old Menu",
                     "desc": "The first version of the menu made for GameJamPlus."
                 },
-                "art_4": {
+                "art_1": {
                     "title": "Old Demo level",
                     "desc": "First version of the level made for GameJamPlus."
                 },
-                "art_5": {
+                "art_2": {
                     "title": "Old Page 1",
                     "desc": "It took a lot of work to get Alice's pose right... and it still looks weird..."
                 },
-                "art_6": {
+                "art_3": {
                     "title": "Old Page 2",
                     "desc": "I didn't think this pose looked very natural.. it looks like she broke her arm, haha!"
                 },
-                "art_7": {
+                "art_4": {
                     "title": "Old Page 3",
                     "desc": "It was complex to draw Alice from this angle..."
                 },
-                "art_8": {
+                "art_5": {
                     "title": "Old Page 4",
                     "desc": "I did a light-and-shadow study..it actually turned out pretty cool."
                 },
-                "art_9": {
+                "art_6": {
                     "title": "Old Page 5",
                     "desc": "The White Queen's hand was huge!"
+                },
+                "art_7": {
+                    "title": "Plush bunny's sketch",
+                    "desc": "Alice's little plush bunny! Cute, right?"
+                },
+                "art_8": {
+                    "title": "Alice's sketch",
+                    "desc": "She looks a little skinny in the sketch, haha!"
+                },
+                "art_9": {
+                    "title": "Alice and The White Queen's sketch",
+                    "desc": "It actually turned out to be a nice composition!"
                 },
                 "art_10": {
                     "title": "Dinah's sketch",
                     "desc": "An attempt to draw a cat playing..."
                 },
                 "art_11": {
+                    "title": "Humpty Dumpty's sketch",
+                    "desc": "I drew so many eggs I had nightmares."                    
+                },
+                "art_12": {
+                    "title": "Mad Hare's sketch",
+                    "desc": "Shakespeare, if he was crazy probably."            
+                },
+                "art_13": {
+                    "title": "Dodo's sketch",
+                    "desc": "Nailed the design on the first try!"
+                },
+                "art_14": {
+                    "title": "Jabberwocky's sketch",
+                    "desc": "Nailed the design on the first try!"
+                },
+                "art_15": {
+                    "title": "General of Cards's sketch",
+                    "desc": "How could I choose only one?"                    
+                },
+                "art_16": {
                     "title": "Cat's sketch",
                     "desc": "I taw a puddy-tat! Or maybe three..."
                 },
-                "art_12": {
-                    "title": "Red Queen's sketches",
-                    "desc": "She saw things..."
-                },
-                "art_13": {
-                    "title": "LOGO BLIM",
-                    "desc": "LOGO BLIM"
-                },
-                "art_14": {
-                    "title": "Humpty Dumpty's sketch",
-                    "desc": "Desenhei tanto ovo que tive pesadelos."
-                },
-                "art_15": {
-                    "title": "Old Caterpillar",
-                    "desc": "To infinity and beyond!"
-                },
-                "art_16": {
-                    "title": "NAIPES BLIM",
-                    "desc": "NAIPES BLIM"
-                },
                 "art_17": {
-                    "title": "Rabbit Version 1",
-                    "desc": "His face always makes me want to laugh, haha..."
+                    "title": "Logo's sketch",
+                    "desc": "Many ideas from our team and we used none of them lol"
                 },
                 "art_18": {
+                    "title": "Red Queen's sketch",
+                    "desc": "She saw things..."                    
+                },
+                "art_19": {
+                    "title": "Red Queen's sketches",
+                    "desc": "How many hearts can I put in a character...?"                    
+                },
+                "art_20": {
+                    "title": "Humpty Dumpty",
+                    "desc": "What a bag egg..."                    
+                },
+                "art_21": {
+                    "title": "Old Caterpillar",
+                    "desc": "To infinity and beyond!"                    
+                },
+                "art_22": {
+                    "title": "Rabbit Version 1",
+                    "desc": "His face always makes me want to laugh, haha..."                    
+                },
+                "art_23": {
                     "title": "'Beginner' Achievement",
                     "desc": "She's so cute when she laughs..."
                 },
-                "art_19": {
+                "art_24": {
                     "title": "'Consolation Prize' Achievement",
                     "desc": "The serious White Queen gives me chills!"
                 },
-                "art_20": {
+                "art_25": {
                     "title": "'Mad as a Hatter' Achievement",
                     "desc": "The Hatter was totally wiped out, haha."
-                },
-                "art_21": {
+                },"art_26": {
                     "title": "'The New Queen' Achievement",
                     "desc": "This Queen Alice is so badass!"
-                },
-                "art_22": {
+                },"art_27": {
                     "title": "'Strategy' Achievement",
                     "desc": "Scientist skin, haha!"
-                },
-                "art_23": {
-                    "title": "Mad Hare's sketch",
-                    "desc": "Shakespeare, if he was crazy probably."
-                }
-                
+                }                
             }
         },
         "credits": {
@@ -227,7 +240,7 @@
             "page_6": "Everything turns black, and Alice is left alone in the Queen of Hearts' room.\n\nAlthough she's confused, she remains standing, lost in her thoughts.\n\n'Well... That battle with the Queen was actually kind of fun... and I fought some really interesting opponents...,” the girl thought.\n\n'But now... I'm exhausted... I'd love some cake, a cup of tea, anything...”\n\nIn the distance, Alice hears a strange sound.",
             "page_7": "The noise grows louder and louder as time goes by, until suddenly an acquaintance appears in a hurry right in front of Alice.\n\n'Rabbit? What are you doing here?', asked Alice.\n\n'H-hello, my friend, I don't have much time, but I came to warn you that there's still one oppnent left to defeat! A very dangerous one, at that...,' said the rabbit, glancing nervously at his watch.",
             "page_8": "As soon as he finished his warning, the rabbit ran off, leaving the girl alone again.\n\nLost in thought, Alice wondered who the new opponent might be, and even though she was tired, she tried to regain her strength.\n\n‘Well, it looks like I’ll be staying around here a while longer, won't I?' said the girl, heading back the way she came in search of answers…",
-            "page_9": "Once again, everything goes dark, and the girl is alone once more.\n\nAlice sighs, exhausted this time.\n\n'Phew! That battle with the Jabberwock took a long time… I wonder if I'm free now?' Alice wondered.\n\n'Because...' she yawned, 'I'm starting to get really tired...'\n\nIn the distance, Alice hears a familiar sound.",
+            "page_9": "Once again, everything goes dark, and the girl is alone once more.\n\nAlice sighs, exhausted this time.\n\n'Phew! That battle with the Jabberwocky took a long time… I wonder if I'm free now?' Alice wondered.\n\n'Because...' she yawned, 'I'm starting to get really tired...'\n\nIn the distance, Alice hears a familiar sound.",
             "page_10": "It was the ticking of the rabbit's clock again, but it sounded strange. He ran hurriedly and stopped once more in front of the girl.\n\n'A-Alice! You're here again-I need to tell you something qu-'\n\nBefore he could finish his sentence, the girl interrupted him.\n\n'Rabbit, I'm tired of playing already! I need to go home!'\n\nThe rabbit looked at Alice in surprise, but nodded, slightly sad. The rabbit disappeared, and little by little, the ticking of the clock turned into... meows?",
             "page_11": "Suddenly, Alice begins to feel light scratches on her cheek.\n\nShe opens her eyes and realizes that her cat, Dinah, has been trying very hard to wake her up.\n\n'Dinah!' said Alice, hugging her little cat. 'I'm sorry for saying I didn't think you were an interesting opponent… I want my predictable opponent back! Actually, instead of playing, how about we read some books inside?‘\n\n'Meow!' said Dinah, agreeing and snuggling into her owner's arms as the two of them headed back home."
         },
@@ -341,7 +354,7 @@
                 "Alice": {
                     "name": "[color=#19317b]Alice[/color]",
                     "talk_march_hare": "Hey, it's my turn!",
-                    "talk_jabberwock_1": "Jabberwock!? You're also participating?",
+                    "talk_jabberwock_1": "Jabberwocky!? You're also participating?",
                     "talk_jabberwock_2": "Humm... sure. Bring it on!"
                 },
                 "White Queen": {
@@ -467,7 +480,7 @@
                     "special": "I'm gonna slice this card!"
                 },
                 "Jabberwock": {
-                    "name": "[color=#921520]Jabberwock[/color]",
+                    "name": "[color=#921520]Jabberwocky[/color]",
                     "talk_win": "Finally, I'll be able to sharpen my fangs a little!",
                     "talk_lose": "Arghhh!!! How dare you?!",
                     "talk_thinking_1": "With this move, I'm going to tear you apart... hehe",
