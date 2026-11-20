@@ -7799,6 +7799,58 @@
 									"sid": 699903590601753
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 472537894089704,
+									"parameters": {
+										"first-value": "int(tokenat(D_Save.Get(\"SLAYER\"), 0, \"/\"))",
+										"comparison": 5,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 692160179001425,
+									"parameters": {
+										"achievement": "\"SLAYER\""
+									}
+								}
+							],
+							"sid": 940431446778353
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 301502937850504,
+									"parameters": {
+										"first-value": "int(tokenat(D_Save.Get(\"REIGN\"), 0, \"/\"))",
+										"comparison": 5,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "get-achievement-info",
+									"objectClass": "Steamworks",
+									"sid": 338906902068127,
+									"parameters": {
+										"achievement": "\"REIGN\""
+									}
+								}
+							],
+							"sid": 621009046619244
 						}
 					]
 				},
@@ -7808,9 +7860,9 @@
 						{
 							"id": "on-get-achievement-info-success",
 							"objectClass": "Steamworks",
-							"sid": 788488541664704,
+							"sid": 963401723862947,
 							"parameters": {
-								"achievement": "Ach_ID"
+								"achievement": "\"SLAYER\""
 							}
 						},
 						{
@@ -7824,13 +7876,73 @@
 						{
 							"id": "unlock-achievement",
 							"objectClass": "Steamworks",
-							"sid": 495508745932195,
+							"sid": 115800649254393,
+							"parameters": {
+								"achievement": "\"SLAYER\""
+							}
+						}
+					],
+					"sid": 982475848156935
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-get-achievement-info-success",
+							"objectClass": "Steamworks",
+							"sid": 437123246330821,
+							"parameters": {
+								"achievement": "\"REIGN\""
+							}
+						},
+						{
+							"id": "achievement-is-achieved",
+							"objectClass": "Steamworks",
+							"sid": 630435075401326,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "unlock-achievement",
+							"objectClass": "Steamworks",
+							"sid": 993344173411341,
+							"parameters": {
+								"achievement": "\"REIGN\""
+							}
+						}
+					],
+					"sid": 641796236319629
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-get-achievement-info-success",
+							"objectClass": "Steamworks",
+							"sid": 313506553242889,
+							"parameters": {
+								"achievement": "Ach_ID"
+							}
+						},
+						{
+							"id": "achievement-is-achieved",
+							"objectClass": "Steamworks",
+							"sid": 133988505352704,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "unlock-achievement",
+							"objectClass": "Steamworks",
+							"sid": 197356458248813,
 							"parameters": {
 								"achievement": "Ach_ID"
 							}
 						}
 					],
-					"sid": 982475848156935
+					"sid": 123235489911495
 				}
 			],
 			"sid": 247848447036156

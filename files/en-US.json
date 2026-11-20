@@ -507,6 +507,10 @@
                 "one": "[icon=heart] The Power Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] card in this round.",
                 "other": "[icon=heart] The Power Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on your hand.\nYou can draw [color=#f5fe05]{0}[/color] cards in this round."
             },
+            "power_draw_limit": {
+                "one": "[icon=heart] The Power Deck [icon=heart] \n\nYou've already drawn [color=#f5fe05]{0}[/color] card in this round.",
+                "other": "[icon=heart] The Power Deck [icon=heart] \n\nYou've already drawn [color=#f5fe05]{0}[/color] cards in this round."
+            },
             "power_hand_limit": "[icon=heart] The Power Deck [icon=heart] \n\nYou [color=#fa1c03]can't draw power cards[/color] due to your hand limit ([color=#f5fe05]{0}[/color] cards).",
             "number": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.",
             "number_easy": "[icon=heart] The Number Deck [icon=heart] \n\nDraw [color=#f5fe05]1[/color] card and place it on the board.\nThere're [color=#f5fe05]{0}[/color] cards left in this deck.",

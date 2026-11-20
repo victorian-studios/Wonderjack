@@ -389,7 +389,7 @@
 			"eventType": "variable",
 			"name": "VERSAO",
 			"type": "string",
-			"initialValue": "v. 1.1.0",
+			"initialValue": "v. 1.1.2",
 			"comment": "versao atual do jogo (mude sempre que atualizar)",
 			"isStatic": false,
 			"isConstant": false,
@@ -20039,6 +20039,32 @@
 					]
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 183485423736854,
+							"parameters": {
+								"object": "Card_Power"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 886580389269470,
+							"parameters": {
+								"variable": "Holding_Card",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 401840738542366
+				},
+				{
 					"eventType": "comment",
 					"text": "Destroi a cópia da carta de Poder"
 				},
@@ -23093,129 +23119,108 @@
 											"parameters": {
 												"y": "Table_Player.Y"
 											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 382637577139322,
+											"parameters": {
+												"seconds": "Opt_FastMode = 1 ? 0.5 : 1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Card_Numb",
+											"sid": 555688738272133,
+											"parameters": {
+												"animation": "\"Front_\" & Table_CPU.Cards + 1",
+												"from": "current-frame"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 914686873413496,
+											"parameters": {
+												"audio-file": {
+													"path": "735618__geoff-bremner-audio__small-whip-9"
+												},
+												"loop": "not-looping",
+												"volume": "Vol_Sfx > 0 ? -18 + ( Vol_Sfx * 0.18) : -100",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 825098486590415,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"switch\"",
+												"property": "position",
+												"end-x": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 0, \"-\"))",
+												"end-y": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 1, \"-\"))",
+												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Card_Numb",
+											"sid": 633539035465174,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"switch\"",
+												"property": "scale",
+												"end-x": "0.72",
+												"end-y": "0.72",
+												"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Table_Player",
+											"sid": 108715151624065,
+											"parameters": {
+												"instance-variable": "Cards",
+												"value": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 638960149729061,
+											"parameters": {
+												"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "Order_Numb_Cards",
+											"sid": 275467746486128
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 354293920265895,
+											"parameters": {
+												"variable": "PowerDone",
+												"value": "true"
+											}
 										}
 									],
-									"sid": 211977029675233,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "pick-by-comparison",
-													"objectClass": "System",
-													"sid": 532774907070054,
-													"parameters": {
-														"object": "Card_Numb",
-														"expression": "Card_Numb.X",
-														"comparison": 0,
-														"value": "Icon_Hand_Point.X"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 768834562758263,
-													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 0.5 : 1.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Card_Numb",
-													"sid": 957019984365425,
-													"parameters": {
-														"animation": "\"Front_\" & Table_CPU.Cards + 1",
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 897445758714275,
-													"parameters": {
-														"audio-file": {
-															"path": "735618__geoff-bremner-audio__small-whip-9"
-														},
-														"loop": "not-looping",
-														"volume": "Vol_Sfx > 0 ? -18 + ( Vol_Sfx * 0.18) : -100",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "tween-two-properties",
-													"objectClass": "Card_Numb",
-													"sid": 554344848976645,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"switch\"",
-														"property": "position",
-														"end-x": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 0, \"-\"))",
-														"end-y": "int(tokenat(A_zCard_Pos.At(Table_CPU.Cards + 1, 1), 1, \"-\"))",
-														"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
-												},
-												{
-													"id": "tween-two-properties",
-													"objectClass": "Card_Numb",
-													"sid": 740296678302774,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"switch\"",
-														"property": "scale",
-														"end-x": "0.72",
-														"end-y": "0.72",
-														"time": "Opt_FastMode = 1 ? 0.25 : 0.5",
-														"ease": "default",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
-												},
-												{
-													"id": "subtract-from-instvar",
-													"objectClass": "Table_Player",
-													"sid": 348692706535446,
-													"parameters": {
-														"instance-variable": "Cards",
-														"value": "1"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 165034281045053,
-													"parameters": {
-														"seconds": "Opt_FastMode = 1 ? 0.5 : 1",
-														"use-timescale": true
-													}
-												},
-												{
-													"callFunction": "Order_Numb_Cards",
-													"sid": 549572942955921
-												},
-												{
-													"id": "set-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 904176932582631,
-													"parameters": {
-														"variable": "PowerDone",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 279181690852983
-										}
-									]
+									"sid": 211977029675233
 								}
 							]
 						}
@@ -23902,11 +23907,11 @@
 										},
 										{
 											"callFunction": "Enemy Use Power",
-											"sid": 450584140073516,
+											"sid": 572325845643992,
 											"parameters": [
 												"\"20-duplicate\"",
-												"0",
-												"The_Choosen_Card"
+												"The_Choosen_Card",
+												"0"
 											]
 										}
 									],
@@ -24244,6 +24249,13 @@
 										"type": "log",
 										"message": "\"passando o turno: \" & Who"
 									}
+								},
+								{
+									"callFunction": "Count_Numbers",
+									"sid": 646350014182105,
+									"parameters": [
+										false
+									]
 								}
 							],
 							"sid": 392810647887606,
@@ -35811,13 +35823,23 @@
 																				"comparison": 0,
 																				"value": "\"Jabberwock\""
 																			}
+																		},
+																		{
+																			"id": "compare-two-values",
+																			"objectClass": "System",
+																			"sid": 968098269205476,
+																			"parameters": {
+																				"first-value": "D_Save.Get(\"JABB_Talks\")",
+																				"comparison": 0,
+																				"second-value": "0"
+																			}
 																		}
 																	],
 																	"actions": [
 																		{
 																			"id": "wait",
 																			"objectClass": "System",
-																			"sid": 142889185638542,
+																			"sid": 524426548548531,
 																			"parameters": {
 																				"seconds": "7",
 																				"use-timescale": true
@@ -35825,7 +35847,7 @@
 																		},
 																		{
 																			"callFunction": "Talk",
-																			"sid": 516205074010902,
+																			"sid": 563533502202448,
 																			"parameters": [
 																				"\"Alice\"",
 																				"\"common.enemies.Alice.talk_jabberwock_1\"",
@@ -37581,6 +37603,41 @@
 														}
 													],
 													"sid": 648922051537450
+												},
+												{
+													"eventType": "comment",
+													"text": "Se o jogador já tiver alcançado o limite de compra de poderes na rodada, o jogo avisa através da descrição deste pop up"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 135659041817463
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Hand_Player",
+															"sid": 914499897404397,
+															"parameters": {
+																"instance-variable": "PowerLimit_Rounds",
+																"comparison": 0,
+																"value": "0"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-text",
+															"objectClass": "Text_Power",
+															"sid": 568516580847006,
+															"parameters": {
+																"text": "Internationalization.LookupPlural(\"common.power_draw_limit\", PlayerPowerLimit_Rounds)"
+															}
+														}
+													],
+													"sid": 485946137852473
 												},
 												{
 													"eventType": "comment",
@@ -41226,6 +41283,16 @@
 														"variable": "LastTurnCount",
 														"comparison": 0,
 														"value": "0"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 888763504430103,
+													"parameters": {
+														"variable": "PlayerNumbers",
+														"comparison": 4,
+														"value": "TheNumber"
 													}
 												}
 											],
@@ -50151,17 +50218,7 @@
 															}
 														}
 													],
-													"actions": [
-														{
-															"callFunction": "Enemy Use Power",
-															"sid": 342469485823074,
-															"parameters": [
-																"the_id",
-																"0",
-																"0"
-															]
-														}
-													],
+													"actions": [],
 													"sid": 809656563996853,
 													"children": [
 														{
@@ -57506,6 +57563,15 @@
 										"variable": "MatchReady",
 										"value": "false"
 									}
+								},
+								{
+									"id": "set-key",
+									"objectClass": "D_Save",
+									"sid": 314335665722697,
+									"parameters": {
+										"key": "\"JABB_Talks\"",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 306718159864286
@@ -63202,6 +63268,15 @@
 						}
 					],
 					"actions": [
+						{
+							"callFunction": "Draw_Power",
+							"sid": 398879461914539,
+							"parameters": [
+								"2",
+								true,
+								"\"\""
+							]
+						},
 						{
 							"id": "move-to-object",
 							"objectClass": "mesa",

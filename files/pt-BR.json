@@ -500,8 +500,8 @@
                 }
             },
             "tips": {
-                "1": "O jogo está lento? Ative o modo rápido nas configurações!",
-                "2": "Com preguiça de somar? Ative a soma automática nas configurações!",
+                "1": "O jogo está lento? Ative o MODO RÁPIDO nas configurações!",
+                "2": "Com preguiça de somar? Ative a SOMA AUTOMÁTICA nas configurações!",
                 "3": "As cartas de poder se mantém entre as rodadas, use sabiamente!",
                 "4": "Use suas relíquias ativas sempre que possível.",
                 "5": "Vença oponentes um certo número de vezes para desbloquear poderes e relíquias.",
@@ -511,6 +511,10 @@
             "power": {
                 "one": "[icon=heart] O Baralho de Poder [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê pode comprar mais [color=#f5fe05]{0}[/color] carta nessa rodada.",
                 "other": "[icon=heart] O Baralho de Poder [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque na sua mão.\nVocê pode comprar mais [color=#f5fe05]{0}[/color] cartas nessa rodada."
+            },
+            "power_draw_limit": {
+                "one": "[icon=heart] O Baralho de Poder [icon=heart] \n\nVocê já comprou [color=#f5fe05]{0}[/color] carta nessa rodada.",
+                "other": "[icon=heart] O Baralho de Poder [icon=heart] \n\nVocê já comprou [color=#f5fe05]{0}[/color] cartas nessa rodada."
             },
             "power_hand_limit": "[icon=heart] O Baralho de Poder [icon=heart] \n\nVocê [color=#fa1c03]não pode comprar cartas de poder[/color] por conta do limite da sua mão ([color=#f5fe05]{0}[/color] cartas).",
             "number" : "[icon=heart] O Baralho de Número [icon=heart] \n\nCompre [color=#f5fe05]uma[/color] carta e coloque sobre a mesa.",
